@@ -4,102 +4,83 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<BaseLayout title={`About | ${siteConfig.title}`}>
-  <div class="zone-a genesis-stage" style="padding-top: 8rem; padding-bottom: 6rem;">
+<BaseLayout title={`Spec | ${siteConfig.title}`}>
+  <div class="zone-a registry-grid" style="padding-top: 10rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
     <div class="shell">
-      <h1 class="text-gradient">Architectural Profile</h1>
-      <p class="lead" style="max-width: 60ch;">Writing and building at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery.</p>
+      <div class="registry-annotation" style="margin-bottom: 1rem;">
+        <span class="registry-key">OBJECT_TYPE</span>: <span class="registry-value">IDENTITY_SPECIFICATION</span>
+      </div>
+      <h1 style="font-size: 4rem; font-weight: 800; letter-spacing: -0.04em;">JEARON WANG</h1>
+      <p class="lead" style="max-width: 50ch;">Protocol Architect for the Agent Era. Specializing in the engineering of reliable work delivery systems.</p>
     </div>
   </div>
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
-    <div class="shell about-split">
-      <!-- Left: Specs -->
-      <aside class="about-specs">
-        <div class="glass-panel-light" style="padding: 2.5rem; position: sticky; top: 8rem;">
-          <span class="eyebrow">Specifications</span>
-          <dl class="spec-list">
-            <div>
-              <dt>Identity</dt>
-              <dd>Jearon Wang</dd>
-            </div>
-            <div>
-              <dt>Role</dt>
-              <dd>Protocol Architect</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Agent Runtimes // Cognitive OS</dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>Remote // Async-Native</dd>
-            </div>
-          </dl>
+    <section class="shell">
+      <div class="registry-chassis spec-container" style="padding: 4rem; background-color: white;">
+        <div class="registry-annotation" style="margin-bottom: 3rem;">
+          <span class="registry-key">SPEC_VERSION</span>: <span class="registry-value">2026.04</span>
         </div>
-      </aside>
+        
+        <div class="spec-grid">
+          <div class="spec-section">
+            <h3 class="spec-label">CORE_THESIS</h3>
+            <p style="font-size: 1.25rem; font-weight: 700; line-height: 1.5;">AI agents must transition from "stochastic capabilities" to "deterministic work delivery" via protocol-level constraints.</p>
+          </div>
+          
+          <div class="spec-section">
+            <h3 class="spec-label">DOMAIN_AUTHORITY</h3>
+            <ul class="spec-list">
+              <li>Protocol Engineering</li>
+              <li>Agent Governance</li>
+              <li>Cognitive OS Architecture</li>
+              <li>Validation Systems</li>
+            </ul>
+          </div>
+        </div>
 
-      <!-- Right: Narrative -->
-      <article class="about-narrative">
-        <section class="narrative-section">
-          <h2>The Thesis</h2>
-          <p>The industry has spent the last two years solving for <em>capability</em>. We have models that can reason, tools that can execute, and agents that can plan. But we do not yet have <em>reliability</em>.</p>
-          <p>My work focuses on the protocol layer—the invisible structures that ensure autonomous work is auditable, governable, and bit-identical in its proof of delivery.</p>
-        </section>
-
-        <section class="narrative-section" style="margin-top: 4rem;">
-          <h2>Background</h2>
-          <p>I operate as a Protocol Architect. This means I don't just build agents; I build the runtimes that bound them. From the Machine Priority Legibility Protocol (MPLP) to the SoloCrew implementation apparatus, my focus is on the "how" of reliable delivery.</p>
-        </section>
-      </article>
-    </div>
+        <div class="narrative-section" style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--current-line);">
+          <h3 class="spec-label">OPERATIONAL_CONTEXT</h3>
+          <div class="prose" style="font-size: 1.15rem; line-height: 1.7; color: var(--current-muted); max-width: 65ch;">
+            <p>I build the infrastructure that allows autonomous systems to be audited, governed, and relied upon. My work centers on the intersection of system thinking and agentic execution.</p>
+            <p style="margin-top: 1.5rem;">The industry has spent the last two years solving for capability. We have models that can reason, tools that can execute, and agents that can plan. But we do not yet have reliability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
 <style>
-  .about-split {
+  .spec-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-signal);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .spec-grid {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 6rem;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
   }
   .spec-list {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .spec-list dt {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: var(--accent-electric);
-    margin-bottom: 0.25rem;
-  }
-  .spec-list dd {
+    list-style: none;
+    padding: 0;
     margin: 0;
+  }
+  .spec-list li {
     font-weight: 700;
-    font-size: 1.1rem;
-    color: #0f172a;
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--current-line);
+    color: var(--current-text);
   }
-  .about-narrative h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #0f172a;
-  }
-  .about-narrative p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #475569;
-  }
-
-  @media (max-width: 900px) {
-    .about-split {
+  @media (max-width: 768px) {
+    .spec-grid {
       grid-template-columns: 1fr;
-      gap: 4rem;
-    }
-    .about-specs {
-      order: 2;
     }
   }
 </style>

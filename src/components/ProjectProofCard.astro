@@ -9,66 +9,71 @@ interface Props {
 const { name, status, summary, proof } = Astro.props;
 ---
 
-<article class="structural-panel glass-panel-light">
-  <div class="panel-header">
-    <h3 class="project-title">{name}</h3>
-    <span class="badge tech-badge">{status}</span>
+<article class="registry-chassis evidence-record">
+  <div class="record-header">
+    <div class="registry-annotation">
+      <span class="registry-key">PROJECT_ID</span>: <span class="registry-value">{name.toUpperCase()}</span>
+    </div>
+    <div class="registry-annotation">
+      <span class="registry-key">STATUS</span>: <span class="registry-value">{status.toUpperCase()}</span>
+    </div>
   </div>
-  <p class="project-desc">{summary}</p>
-  <div class="project-proof">
-    <span class="proof-label">Proof Point</span>
-    <p class="proof-text">{proof}</p>
+  
+  <div class="record-content">
+    <h3 class="record-title">{name}</h3>
+    <p class="record-summary">{summary}</p>
+    
+    <div class="proof-block">
+      <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+        <span class="proof-signal-dot"></span>
+        <span class="registry-key">RECORD_PROOF</span>
+      </div>
+      <p class="proof-text">{proof}</p>
+    </div>
   </div>
 </article>
 
 <style>
-  .structural-panel {
-    background-color: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    border-radius: var(--radius-genesis);
-    padding: 3rem;
+  .evidence-record {
+    border-radius: var(--radius-module);
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    gap: 2rem;
+    background-color: var(--current-surface);
+    border: 1px solid var(--current-border);
   }
-  .structural-panel:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-    border-color: var(--accent-kinetic);
-  }
-  .panel-header {
+  .record-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--current-line);
   }
-  .project-title {
-    flex-direction: column;
-  }
-  @media (max-width: 768px) {
-    .module-content {
-      padding: 2rem;
-    }
-  }
-  .project-desc {
-    color: var(--current-muted);
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-    flex-grow: 1;
-  }
-  .project-proof {
-    padding-top: 2rem;
-    border-top: 1px solid var(--current-line);
-  }
-  .project-proof p {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0;
+  .record-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
     color: var(--current-text);
+  }
+  .record-summary {
+    font-size: 1.05rem;
+    color: var(--current-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 60ch;
+  }
+  .proof-block {
+    background-color: rgba(34, 211, 238, 0.03);
+    border: 1px solid rgba(34, 211, 238, 0.1);
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+  .proof-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--current-text);
+    margin: 0;
+    line-height: 1.5;
   }
 </style>

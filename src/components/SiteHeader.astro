@@ -1,56 +1,63 @@
 ---
-import { primaryNav, siteConfig } from "../data/site";
+import { siteConfig } from "../data/site";
+
+const navItems = [
+  { href: "/essays", label: "REGISTRY" },
+  { href: "/theory-clusters", label: "BLUEPRINT" },
+  { href: "/playbooks", label: "METHODS" },
+  { href: "/projects", label: "LEDGER" },
+  { href: "/about", label: "SPEC" }
+];
 ---
 
-<header class="site-header-container">
-  <div class="shell header-shell glass-panel">
+<header class="site-monitor-container">
+  <div class="shell monitor-shell registry-chassis">
     <div class="logo">
       <a href="/" class="logo-link">
-        <span class="logo-name">{siteConfig.author.name}</span>
+        <div class="registry-annotation">
+          <span class="registry-key">SITE_ID</span>: <span class="registry-value">ARCHITECT.OS</span>
+        </div>
       </a>
     </div>
     
     <nav class="nav-desktop">
       <ul class="nav-list">
-        {primaryNav.map(item => (
+        {navItems.map(item => (
           <li class="nav-item">
-            <a href={item.href} class="nav-link">{item.label}</a>
+            <a href={item.href} class="nav-link registry-annotation">
+              <span class="registry-value">{item.label}</span>
+            </a>
           </li>
         ))}
       </ul>
     </nav>
 
     <div class="nav-actions">
-      <a href="/contact" class="nav-cta">Connect</a>
+      <a href="/contact" class="nav-cta registry-annotation">
+        <span class="registry-key">CMD</span>: <span class="registry-value">CONNECT</span>
+      </a>
     </div>
   </div>
 </header>
 
 <style>
-  .site-header-container {
+  .site-monitor-container {
     position: fixed;
     top: 1.5rem;
     left: 0;
     right: 0;
     z-index: 1000;
   }
-  .header-shell {
+  .monitor-shell {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 2rem;
-    background: rgba(15, 23, 42, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-registry);
   }
   
-  .logo-name {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-  }
-
   .nav-list {
     display: flex;
     list-style: none;
@@ -60,34 +67,25 @@ import { primaryNav, siteConfig } from "../data/site";
   }
   
   .nav-link {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    transition: color 0.2s ease;
+    transition: opacity 0.2s ease;
   }
   
   .nav-link:hover {
-    color: var(--accent-kinetic);
+    opacity: 0.7;
   }
 
   .nav-cta {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--accent-kinetic);
-    border: 1px solid var(--accent-kinetic);
     padding: 0.4rem 1rem;
-    border-radius: var(--radius-genesis);
+    border: 1px solid var(--accent-signal);
+    border-radius: var(--radius-module);
     transition: all 0.2s ease;
   }
   .nav-cta:hover {
-    background: var(--accent-kinetic);
-    color: var(--bg-genesis);
+    background: var(--accent-signal);
+    color: white;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .nav-desktop {
       display: none;
     }

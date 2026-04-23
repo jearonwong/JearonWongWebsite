@@ -4,14 +4,19 @@
 ---
 
 <div class="portrait-anchor">
-  <div class="portrait-panel glass-panel">
-    <div class="glow-effect"></div>
+  <div class="portrait-panel registry-chassis">
+    <div class="registry-grid" style="position: absolute; inset: 0; opacity: 0.1;"></div>
     <div class="monogram-lockup">
+      <div class="registry-annotation" style="margin-bottom: 1rem;">
+        <span class="registry-key">ROLE_ID</span>: <span class="registry-value">ARCHITECT_01</span>
+      </div>
       <span class="monogram">JW</span>
       <span class="monogram-subtitle">PROTOCOL ARCHITECT</span>
     </div>
     <div class="portrait-footer">
-      <span class="architect-plaque">Portrait Pending // V.03</span>
+      <div class="registry-annotation architect-plaque">
+        <span class="registry-key">V</span>: <span class="registry-value">0.4.0</span> // <span class="registry-key">STATUS</span>: <span class="registry-value">ACTIVE</span>
+      </div>
     </div>
   </div>
 </div>
@@ -34,50 +39,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.9));
+    background-color: var(--current-surface);
+    border: 1px solid var(--current-border);
   }
-  .glow-effect {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.1), transparent 70%);
-    pointer-events: none;
+  .monogram-lockup {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .monogram {
     font-family: var(--font-display);
     font-size: clamp(8rem, 12vw, 12rem);
     font-weight: 800;
-    color: white;
+    color: var(--current-text);
     letter-spacing: -0.08em;
     line-height: 0.8;
-    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.3));
   }
   .monogram-subtitle {
     font-family: var(--font-mono);
     font-size: 0.65rem;
     font-weight: 600;
-    color: var(--accent-kinetic);
+    color: var(--accent-signal);
     letter-spacing: 0.3em;
     margin-top: 1rem;
     text-transform: uppercase;
   }
   .portrait-footer {
     position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--current-line);
   }
   .architect-plaque {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background: rgba(139, 92, 246, 0.2);
-    color: white;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 4px;
-    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
   }
 </style>

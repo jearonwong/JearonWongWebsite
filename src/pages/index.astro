@@ -14,22 +14,32 @@ const essays = (await getCollection("essays"))
 ---
 
 <BaseLayout title={siteConfig.title} description={siteConfig.description}>
-  <!-- 1. The Genesis Stage -> Zone A Hero -->
-  <div class="zone-a genesis-stage hero-wrapper">
+  <!-- 1. The Architectural Stage -> Command Center -->
+  <div class="zone-a registry-grid hero-wrapper" style="border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
     
     <section class="shell hero-section">
       <div class="split-layout">
         <div class="hero-content">
-          <span class="eyebrow" style="color: var(--accent-kinetic);">{siteConfig.author.name}</span>
-          <h1 class="hero-role">PROTOCOL <span class="text-gradient">ARCHITECT</span> FOR THE AGENT ERA</h1>
-          <p class="lead" style="max-width: 46ch; color: var(--text-muted);">{siteConfig.thesis}</p>
-          <div class="hero-ctas">
-            <a href="#ideas" class="button button-primary">Read the Thesis</a>
-            <a href="#proof" class="button button-outline">Explore Projects</a>
+          <div class="registry-annotation" style="margin-bottom: 1.5rem;">
+            <span class="registry-key">INIT_SEQUENCE</span>: <span class="registry-value">PROTOCOL_ARCHITECT_CORE</span>
           </div>
-          <!-- 3. Immediate Proof Signal -->
-          <div class="glass-panel" style="margin-top: 4rem; padding: 2rem; border-left: 4px solid var(--accent-kinetic);">
+          <h1 class="hero-role">JEARON WANG</h1>
+          <div class="registry-annotation" style="font-size: 1.1rem; margin-bottom: 2rem;">
+            <span class="registry-key">PROPOSITION</span>: <span class="registry-value">DEFINING_RELIABLE_WORK_DELIVERY</span>
+          </div>
+          <p class="lead" style="max-width: 46ch; color: var(--text-registry-muted);">{siteConfig.thesis}</p>
+          
+          <div class="hero-ctas">
+            <a href="#ledger" class="button button-primary">INSPECT_LEDGER</a>
+            <a href="#blueprint" class="button button-outline">OPEN_BLUEPRINT</a>
+          </div>
+
+          <div class="registry-chassis" style="margin-top: 4rem; padding: 1.5rem; background-color: rgba(0,0,0,0.3);">
+            <div class="registry-annotation" style="margin-bottom: 1rem;">
+              <span class="proof-signal-dot"></span>
+              <span class="registry-key">ACTIVE_EVIDENCE_STREAM</span>
+            </div>
             <ImmediateProofSignal />
           </div>
         </div>
@@ -40,13 +50,15 @@ const essays = (await getCollection("essays"))
     </section>
   </div>
 
-  <!-- 2. The Drop -> Zone B Content Area -->
-  <div class="zone-b page-body" style="padding-top: 4rem;">
+  <!-- 2. The Proposition -> Blueprint Zone -->
+  <div class="zone-b page-body" style="padding-top: 6rem;">
     
-    <section id="ideas" class="shell section-rhythm">
-      <div class="section-header" style="margin-bottom: 4rem;">
-        <span class="eyebrow">Signature Ideas</span>
-        <h2 class="text-gradient" style="max-width: 18ch;">Protocol architecture applied to autonomous agents.</h2>
+    <section id="blueprint" class="shell section-rhythm">
+      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--accent-signal); padding-left: 2rem;">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">MODULE</span>: <span class="registry-value">CONCEPTUAL_FRAMEWORK</span>
+        </div>
+        <h2 style="max-width: 20ch; font-weight: 800; letter-spacing: -0.03em;">Protocol architecture applied to autonomous agents.</h2>
       </div>
       <div class="card-grid">
         {theoryClusters.map(cluster => (
@@ -55,25 +67,31 @@ const essays = (await getCollection("essays"))
       </div>
     </section>
 
-    <!-- 3. The Pressure -> Narrative Band -->
-    <section class="genesis-stage narrative-band section-rhythm" style="margin: 4rem 0;">
-      <div class="shell" style="max-width: 900px; text-align: center;">
-        <span class="eyebrow" style="color: var(--accent-kinetic)">Why Now</span>
-        <h2 class="narrative-lead" style="color: var(--text-primary);">
-          The industry focused on models, prompts, and tools. 
-          <br/>The missing layer is <span class="text-gradient">reliable work delivery</span>.
+    <!-- 3. The Narrative -> System State -->
+    <section class="zone-a registry-grid narrative-band" style="padding: 8rem 0; margin: 6rem 0; border-top: 1px solid var(--border-registry); border-bottom: 1px solid var(--border-registry);">
+      <div class="shell" style="max-width: 900px; text-align: left;">
+        <div class="registry-annotation" style="margin-bottom: 2rem;">
+          <span class="registry-key">SYSTEM_OBSERVATION</span>: <span class="registry-value">MARKET_GAP_ANALYSIS</span>
+        </div>
+        <h2 class="narrative-lead" style="font-size: 3rem; margin-bottom: 3rem;">
+          The industry focused on models and tools. 
+          <br/>The missing layer is <span style="color: var(--accent-proof);">reliable work delivery</span>.
         </h2>
-        <p class="lead" style="margin: 0 auto; color: var(--text-muted); max-width: 58ch;">
-          Prompt Engineering controls expression. Context Engineering controls what models see. Protocol Engineering controls reliable work delivery.
-        </p>
+        <div class="registry-chassis" style="padding: 2rem; border-left: 2px solid var(--accent-proof);">
+          <p class="lead" style="margin: 0; color: var(--text-registry-muted);">
+            Prompt Engineering controls expression. Context Engineering controls what models see. Protocol Engineering controls the evidence of delivery.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- 4. The Proof -> Expanded Proof -->
-    <section id="proof" class="shell section-rhythm">
-      <div class="section-header" style="margin-bottom: 4rem;">
-        <span class="eyebrow">Expanded Proof</span>
-        <h2>Evidence of thinking made concrete.</h2>
+    <!-- 4. The Ledger -> Evidence Room -->
+    <section id="ledger" class="shell section-rhythm">
+      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--accent-proof); padding-left: 2rem;">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">MODULE</span>: <span class="registry-value">EVIDENCE_LEDGER</span>
+        </div>
+        <h2 style="font-weight: 800; letter-spacing: -0.02em;">Thinking made concrete.</h2>
       </div>
       <div class="card-grid">
         {projects.map(project => (

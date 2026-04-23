@@ -5,12 +5,15 @@ import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
 import { theoryClusters, siteConfig } from "../data/site";
 ---
 
-<BaseLayout title={`Ideas | ${siteConfig.title}`}>
-  <div class="zone-a genesis-stage" style="padding-top: 8rem; padding-bottom: 6rem;">
+<BaseLayout title={`Blueprint | ${siteConfig.title}`}>
+  <div class="zone-a registry-grid" style="padding-top: 10rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
     <div class="shell">
-      <h1 class="text-gradient">Conceptual Blueprint</h1>
-      <p class="lead" style="max-width: 50ch;">The core framework for autonomous agent work delivery. Three pillars of protocol engineering.</p>
+      <div class="registry-annotation" style="margin-bottom: 1rem;">
+        <span class="registry-key">OBJECT_TYPE</span>: <span class="registry-value">CONCEPTUAL_BLUEPRINT</span>
+      </div>
+      <h1 style="font-size: 4rem; font-weight: 800; letter-spacing: -0.04em;">SYSTEM PILLARS</h1>
+      <p class="lead" style="max-width: 50ch;">The core framework for autonomous agent work delivery. Structured as three auditable system modules.</p>
     </div>
   </div>
 

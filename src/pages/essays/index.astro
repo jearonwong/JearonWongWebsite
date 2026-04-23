@@ -2,123 +2,97 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SiteHeader from "../../components/SiteHeader.astro";
+import { siteConfig } from "../../data/site";
 
 const essays = (await getCollection("essays")).sort(
   (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
 );
 ---
 
-<BaseLayout
-  title="Essays"
-  description="Essays about governance, interface, and proof-oriented project design."
->
-  <div class="zone-a">
+<BaseLayout title={`Registry | ${siteConfig.title}`}>
+  <div class="zone-a registry-grid" style="padding-top: 10rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
-    <section class="shell page-header">
-      <span class="eyebrow">Essays</span>
-      <h1 class="page-title">Arguments that turn into operating choices.</h1>
-      <p class="lead">
-        These essays are meant to be durable enough to reference during future projects, not just consumed once in a feed.
-      </p>
-    </section>
+    <div class="shell">
+      <div class="registry-annotation" style="margin-bottom: 1rem;">
+        <span class="registry-key">OBJECT_TYPE</span>: <span class="registry-value">REGISTRY_LOGBOOK</span>
+      </div>
+      <h1 style="font-size: 4rem; font-weight: 800; letter-spacing: -0.04em;">THOUGHT REGISTRY</h1>
+      <p class="lead" style="max-width: 50ch;">A linear log of protocol iterations, system observations, and architectural decisions.</p>
+    </div>
   </div>
 
-  <div class="zone-b page-body">
-    <section class="shell section-rhythm">
-      <div class="essay-list">
-        {
-          essays.map((essay) => (
-            <article class="essay-row">
-              <span class="essay-date">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</span>
-              <div class="essay-content">
-                <h3><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-                <p class="muted">{essay.data.description}</p>
-                <div class="essay-tags">
-                  <span class="badge">{essay.data.cluster}</span>
-                  <span class="badge">{essay.data.projectProof}</span>
-                </div>
-                <a href={`/essays/${essay.slug}/`} class="essay-link">Read essay &rarr;</a>
+  <div class="zone-b page-body" style="padding: 6rem 0;">
+    <section class="shell">
+      <div class="registry-log">
+        {essays.map(essay => (
+          <article class="log-entry">
+            <div class="log-metadata">
+              <div class="registry-annotation">
+                <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
               </div>
-            </article>
-          ))
-        }
+              <div class="registry-annotation">
+                <span class="registry-key">ID</span>: <span class="registry-value">{essay.slug.toUpperCase()}</span>
+              </div>
+            </div>
+            <div class="log-content">
+              <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+              <p class="log-desc">{essay.data.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   </div>
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-  }
-  .page-title {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1;
-    margin-bottom: 1.5rem;
-    max-width: 16ch;
-    letter-spacing: -0.04em;
-  }
-  /* Registry formatting */
-  .essay-list {
+  .registry-log {
     display: flex;
     flex-direction: column;
-    border-top: 2px solid var(--zone-b-line);
+    border: 1px solid var(--current-line);
   }
-  .essay-row {
+  .log-entry {
     display: grid;
-    grid-template-columns: 120px 1fr 200px;
-    gap: 2rem;
-    padding: 2rem 0;
-    border-bottom: 1px solid var(--zone-b-line);
-    align-items: start;
+    grid-template-columns: 280px 1fr;
+    padding: 3rem;
+    border-bottom: 1px solid var(--current-line);
     transition: background-color 0.2s ease;
   }
-  .essay-row:hover {
-    background-color: rgba(0,0,0,0.02);
+  .log-entry:last-child {
+    border-bottom: none;
   }
-  .essay-date {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--zone-b-muted);
-    padding-top: 0.25rem;
+  .log-entry:hover {
+    background-color: rgba(59, 130, 246, 0.02);
   }
-  .essay-content {
+  .log-metadata {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
-  .essay-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+  .log-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
   }
-  .essay-content h3 a {
+  .log-title a {
+    color: var(--current-text);
     text-decoration: none;
-    color: var(--zone-b-text);
   }
-  .essay-content p {
-    margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+  .log-title a:hover {
+    color: var(--accent-signal);
   }
-  .essay-tags {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-end;
-  }
-  .essay-link {
-    display: none; /* Hide link, make title clickable */
+  .log-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--current-muted);
+    max-width: 60ch;
   }
   @media (max-width: 900px) {
-    .essay-row {
+    .log-entry {
       grid-template-columns: 1fr;
-      gap: 1rem;
-      padding: 1.5rem 0;
-    }
-    .essay-tags {
-      flex-direction: row;
-      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem;
     }
   }
 </style>

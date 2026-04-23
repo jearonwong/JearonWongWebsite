@@ -1,55 +1,62 @@
 :root {
-  /* Genesis v0.3: Deep Space / Kinetic Palette */
-  --bg-genesis: #020617;
-  --surface-genesis: #0f172a;
-  --glass-genesis: rgba(15, 23, 42, 0.65);
-  --border-genesis: rgba(255, 255, 255, 0.1);
-  --line-genesis: rgba(255, 255, 255, 0.05);
+  /* Architectural Registry v0.4: Monolithic & Precise */
+  --bg-monolith: #111111;
+  --surface-registry: #1a1a1a;
+  --border-registry: rgba(255, 255, 255, 0.08);
+  --line-registry: rgba(255, 255, 255, 0.04);
   
-  /* Text */
-  --text-primary: #f8fafc;
-  --text-muted: #94a3b8;
+  /* Text: High contrast & disciplined */
+  --text-registry-primary: #f1f5f9;
+  --text-registry-muted: #64748b;
   
-  /* Kinetic Accents */
-  --accent-kinetic: #22d3ee;
-  --accent-electric: #8b5cf6;
-  --gradient-kinetic: linear-gradient(135deg, var(--accent-kinetic), var(--accent-electric));
+  /* Signal Accents: Functional, not decorative */
+  --accent-signal: #3b82f6; /* Registry Blue */
+  --accent-proof: #22d3ee;  /* Evidence Cyan */
+  --accent-caution: #f59e0b; /* System Amber */
   
-  /* Typography Roles */
+  /* Typography: Technical Precision */
   --font-display: 'Outfit', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Architectural Geometry */
-  --radius-genesis: 12px;
+  /* Architectural Geometry: Hardened */
+  --radius-registry: 0px; /* Rigidity first */
+  --radius-module: 2px;
   --inner-shell: 1160px;
   
-  /* Effects */
-  --glass-blur: blur(20px);
-  --shadow-genesis: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* Effects: Reduced for restraint */
+  --shadow-registry: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Zone Adaptation */
+/* Zone Adaptation: Monolith First */
 .zone-a {
-  background-color: var(--bg-genesis);
-  color: var(--text-primary);
-  --current-bg: var(--bg-genesis);
-  --current-surface: var(--surface-genesis);
-  --current-border: var(--border-genesis);
-  --current-muted: var(--text-muted);
-  --current-line: var(--line-genesis);
-  --current-text: var(--text-primary);
+  background-color: var(--bg-monolith);
+  color: var(--text-registry-primary);
+  --current-bg: var(--bg-monolith);
+  --current-surface: var(--surface-registry);
+  --current-border: var(--border-registry);
+  --current-muted: var(--text-registry-muted);
+  --current-line: var(--line-registry);
+  --current-text: var(--text-registry-primary);
 }
 
 .zone-b {
-  background-color: #f8fafc;
-  color: #0f172a;
-  --current-bg: #f8fafc;
+  background-color: #fefefe;
+  color: #111111;
+  --current-bg: #fefefe;
   --current-surface: #ffffff;
-  --current-border: rgba(15, 23, 42, 0.1);
-  --current-muted: #64748b;
-  --current-line: rgba(15, 23, 42, 0.05);
-  --current-text: #0f172a;
+  --current-border: rgba(17, 17, 17, 0.08);
+  --current-muted: #666666;
+  --current-line: rgba(17, 17, 17, 0.04);
+  --current-text: #111111;
+}
+
+/* Registry Grid Overlay */
+.registry-grid {
+  background-image: 
+    linear-gradient(var(--line-registry) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-registry) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Structural Layout */
@@ -102,50 +109,70 @@
   background-color: rgba(255,255,255,0.04);
 }
 
-/* Genesis Utilities */
-.genesis-stage {
-  background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.15) 0%, transparent 40%),
-              radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
-              var(--bg-genesis);
+/* Registry Utilities */
+.registry-chassis {
+  background-color: var(--current-surface);
+  border: 1px solid var(--current-border);
+  border-radius: var(--radius-module);
   position: relative;
   overflow: hidden;
 }
 
-.glass-panel {
-  background: var(--glass-genesis);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border-genesis);
-  border-radius: var(--radius-genesis);
-  box-shadow: var(--shadow-genesis);
+.registry-annotation {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--current-muted);
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.glass-panel-light {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  border-radius: var(--radius-genesis);
+.registry-key {
+  color: var(--accent-signal);
+  font-weight: 700;
 }
 
-.text-gradient {
-  background: var(--gradient-kinetic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.registry-value {
+  color: var(--current-text);
 }
 
-/* Update structural-panel to Genesis */
+.proof-signal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-proof);
+  display: inline-block;
+}
+
+/* Update structural-panel to Registry */
 .structural-panel {
   background-color: var(--current-surface);
   border: 1px solid var(--current-border);
-  border-radius: var(--radius-genesis);
-  padding: 2.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-registry);
+  padding: 3rem;
+  transition: border-color 0.2s ease;
 }
 
 .structural-panel:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-kinetic);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-signal);
+}
+
+/* Text & Identity Primitives */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--current-muted);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--current-muted);
 }

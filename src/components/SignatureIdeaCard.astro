@@ -8,69 +8,61 @@ interface Props {
 const { name, description, prompt } = Astro.props;
 ---
 
-<article class="structural-panel glass-panel-light">
-  <div class="panel-header">
-    <h3 class="idea-title">{name}</h3>
+<article class="registry-chassis system-pillar">
+  <div class="pillar-header">
+    <div class="registry-annotation">
+      <span class="registry-key">PILLAR_ID</span>: <span class="registry-value">{name.toUpperCase().replace(/\s/g, '_')}</span>
+    </div>
   </div>
-  <div class="panel-body">
-    <p class="idea-desc">{description}</p>
-    <div class="idea-prompt">
-      <span class="prompt-label">Key Question</span>
-      <p class="prompt-text">{prompt}</p>
+  
+  <div class="pillar-content">
+    <h3 class="pillar-title">{name}</h3>
+    <p class="pillar-desc">{description}</p>
+    
+    <div class="focus-block">
+      <div class="registry-annotation" style="margin-bottom: 0.5rem;">
+        <span class="registry-key">FRAMEWORK_FOCUS</span>
+      </div>
+      <p class="focus-text">{prompt}</p>
     </div>
   </div>
 </article>
 
 <style>
-  .structural-panel {
-    background-color: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    border-radius: var(--radius-genesis);
-    padding: 3rem;
+  .system-pillar {
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background-color: var(--current-surface);
+    border: 1px solid var(--current-border);
   }
-  .structural-panel:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-    border-color: var(--accent-kinetic);
+  .pillar-header {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--current-line);
   }
-  .idea-title {
+  .pillar-title {
     font-size: 1.5rem;
-    margin: 0;
     font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #0f172a;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.01em;
+    color: var(--current-text);
   }
-  .idea-desc {
-    color: #475569;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+  .pillar-desc {
+    font-size: 1.05rem;
+    color: var(--current-muted);
     line-height: 1.6;
-    max-width: 65ch;
+    margin-bottom: 1.5rem;
   }
-  .idea-prompt {
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(15, 23, 42, 0.05);
+  .focus-block {
+    padding: 1.25rem;
+    border-left: 2px solid var(--accent-signal);
+    background-color: rgba(59, 130, 246, 0.03);
   }
-  .prompt-label {
-    margin-bottom: 0.75rem;
-    display: block;
-    color: var(--accent-electric);
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-  .prompt-text {
-    margin: 0;
-    font-family: var(--font-body);
-    font-weight: 700;
+  .focus-text {
     font-size: 1rem;
-    color: #0f172a;
+    font-weight: 600;
+    margin: 0;
+    color: var(--current-text);
   }
 </style>
