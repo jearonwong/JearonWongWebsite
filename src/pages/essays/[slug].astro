@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SiteHeader from "../../components/SiteHeader.astro";
+import { siteConfig } from "../../data/site";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
@@ -16,114 +17,75 @@ const { essay } = Astro.props;
 const { Content } = await essay.render();
 ---
 
-<BaseLayout title={essay.data.title} description={essay.data.description}>
-  <div class="zone-a">
+<BaseLayout title={`${essay.data.title} | ${siteConfig.title}`} description={essay.data.description}>
+  <div class="zone-a registry-grid" style="padding-top: 10rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
-    <section class="shell page-header">
-      <a href="/essays" class="back-link">&larr; Back to Logbook</a>
-      <p class="eyebrow date-eyebrow">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</p>
-      <h1 class="article-title">{essay.data.title}</h1>
-      <p class="lead" style="max-width: 60ch;">{essay.data.description}</p>
-      <div class="article-tags">
-        <span class="badge">{essay.data.cluster}</span>
-        <span class="badge">{essay.data.projectProof}</span>
+    <div class="shell">
+      <div class="registry-annotation" style="margin-bottom: 1.5rem;">
+        <span class="registry-key">ENTRY_ID</span>: <span class="registry-value">{essay.slug.toUpperCase()}</span> // 
+        <span class="registry-key">DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
       </div>
-    </section>
+      <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1.5rem;">{essay.data.title}</h1>
+      <p class="lead" style="max-width: 60ch; color: var(--text-registry-muted);">{essay.data.description}</p>
+    </div>
   </div>
 
-  <div class="zone-b page-body">
-    <article class="shell article-shell section-rhythm">
-      <div class="article-content">
+  <div class="zone-b page-body" style="padding: 6rem 0;">
+    <article class="shell article-shell">
+      <div class="article-content prose">
         <Content />
+      </div>
+      
+      <div class="registry-chassis" style="margin-top: 6rem; padding: 2rem; border-left: 2px solid var(--accent-signal);">
+        <div class="registry-annotation" style="margin-bottom: 0.5rem;">
+          <span class="registry-key">CROSS_REFERENCE</span>
+        </div>
+        <div class="registry-annotation">
+          <span class="registry-key">CLUSTER</span>: <span class="registry-value">{essay.data.cluster}</span> // 
+          <span class="registry-key">PROOF</span>: <span class="registry-value">{essay.data.projectProof}</span>
+        </div>
       </div>
     </article>
   </div>
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-    max-width: 800px;
-  }
-  .back-link {
-    display: inline-block;
-    margin-bottom: 3rem;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--zone-a-muted);
-    transition: color 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .back-link:hover {
-    color: var(--zone-a-text);
-  }
-  .date-eyebrow {
-    color: var(--zone-a-text);
-    opacity: 0.7;
-  }
-  .article-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
-  }
-  .article-tags {
-    margin-top: 2rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  
-  /* Article Content Styles */
   .article-shell {
-    max-width: 800px; /* Constrain for reading */
+    max-width: 800px;
     margin: 0 auto;
-    padding-top: 5rem;
   }
   .article-content {
     font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--zone-b-text);
+    line-height: 1.75;
+    color: var(--current-text);
   }
   .article-content :global(h2) {
-    margin-top: 4rem;
-    margin-bottom: 1.5rem;
     font-size: 2rem;
+    font-weight: 800;
+    margin: 4rem 0 1.5rem 0;
     letter-spacing: -0.02em;
-    border-bottom: 1px solid var(--zone-b-line);
+    border-bottom: 1px solid var(--current-line);
     padding-bottom: 0.5rem;
   }
   .article-content :global(h3) {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem 0;
   }
   .article-content :global(p) {
     margin-bottom: 1.8rem;
   }
-  .article-content :global(ul), .article-content :global(ol) {
-    margin-bottom: 1.8rem;
-    padding-left: 1.5rem;
-  }
-  .article-content :global(li) {
-    margin-bottom: 0.5rem;
-  }
   .article-content :global(blockquote) {
-    border-left: 4px solid var(--zone-b-border);
-    padding-left: 2rem;
-    margin: 2.5rem 0;
-    color: var(--zone-b-muted);
-    font-size: 1.25rem;
+    border-left: 2px solid var(--accent-signal);
+    background-color: rgba(59, 130, 246, 0.03);
+    padding: 2rem;
+    margin: 3rem 0;
     font-style: italic;
-    background-color: var(--zone-b-surface);
-    padding: 1.5rem 2rem;
+    color: var(--current-muted);
   }
   .article-content :global(a) {
-    color: var(--zone-b-text);
+    color: var(--accent-signal);
     text-decoration: underline;
-    text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
 </style>

@@ -1,58 +1,37 @@
 ---
+import { siteConfig } from "../data/site";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<BaseLayout title="Governance">
-  <div class="zone-a">
+<BaseLayout title={`Governance | ${siteConfig.title}`}>
+  <div class="zone-a registry-grid" style="padding-top: 10rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
-    <section class="shell page-header">
-      <span class="eyebrow">Governance</span>
-      <h1 class="page-title">Rules forming the substrate.</h1>
-    </section>
+    <div class="shell">
+      <div class="registry-annotation" style="margin-bottom: 1rem;">
+        <span class="registry-key">OBJECT_TYPE</span>: <span class="registry-value">SYSTEM_GOVERNANCE_APPENDIX</span>
+      </div>
+      <h1 style="font-size: 4rem; font-weight: 800; letter-spacing: -0.04em;">GOVERNANCE</h1>
+      <p class="lead" style="max-width: 50ch;">The fundamental operating procedures and compliance checks for the Cognitive OS.</p>
+    </div>
   </div>
 
-  <div class="zone-b page-body">
-    <section class="shell section-rhythm">
-      <div class="structural-panel">
-        <p class="lead">The fundamental operating procedures and compliance checks for the Cognitive OS.</p>
-        <div class="meta-list">
-          <span class="eyebrow">Status</span>
-          <span>Draft Phase</span>
+  <div class="zone-b page-body" style="padding: 6rem 0;">
+    <section class="shell">
+      <div class="registry-chassis" style="padding: 4rem;">
+        <div class="registry-annotation" style="margin-bottom: 2rem;">
+          <span class="registry-key">APPENDIX_ID</span>: <span class="registry-value">GOV_SUBSTRATE_01</span>
+        </div>
+        <div class="prose" style="max-width: 65ch; font-size: 1.1rem; line-height: 1.7; color: var(--current-muted);">
+          <p>Governance is the binding layer. It defines how autonomous agents are constrained, how they are audited, and how they report state changes back to the human architect.</p>
+          <div class="registry-chassis" style="margin-top: 3rem; padding: 2rem; border-left: 2px solid var(--accent-signal);">
+             <div class="registry-annotation" style="margin-bottom: 0.5rem;">
+               <span class="registry-key">STATUS</span>: <span class="registry-value">DRAFT_PHASE</span>
+             </div>
+             <p style="margin: 0;">Full governance specifications are currently being refined for the v0.4 release.</p>
+          </div>
         </div>
       </div>
     </section>
   </div>
 </BaseLayout>
-
-<style>
-  .page-header {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-  }
-  .page-title {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1;
-    margin-bottom: 1.5rem;
-    max-width: 16ch;
-    letter-spacing: -0.04em;
-  }
-  .structural-panel {
-    background-color: transparent;
-    border: 1px solid var(--current-border);
-    border-radius: var(--radius-sm);
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  .meta-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border-top: 1px solid var(--current-line);
-    padding-top: 1.5rem;
-    width: 100%;
-  }
-</style>
