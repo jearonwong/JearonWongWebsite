@@ -11,8 +11,7 @@ interface Props {
 
 const {
   title = siteConfig.title,
-  description = siteConfig.description,
-  ogType = "website"
+  description = siteConfig.description
 } = Astro.props;
 
 const pageTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.title}`;

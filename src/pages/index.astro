@@ -47,7 +47,7 @@ const essays = (await getCollection("essays"))
         <span class="eyebrow">Signature Ideas</span>
         <h2 style="max-width: 18ch;">Protocol architecture applied to autonomous agents.</h2>
       </div>
-      <div class="card-grid" style="margin-top: 4rem;">
+      <div class="stacked-panels" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 1px; background-color: var(--zone-b-border); border: 1px solid var(--zone-b-border);">
         {theoryClusters.map(cluster => (
           <SignatureIdeaCard {...cluster} />
         ))}
@@ -60,7 +60,7 @@ const essays = (await getCollection("essays"))
         <span class="eyebrow" style="color: var(--zone-a-muted)">Why Now</span>
         <h2 class="narrative-lead">
           The industry focused on models, prompts, tools, and demos. 
-          <br/>The missing layer is <em>reliable work delivery</em>.
+          <br/>The missing layer is <span class="highlight">reliable work delivery</span>.
         </h2>
         <p class="lead" style="margin: 0 auto; color: var(--zone-a-text); opacity: 0.85; max-width: 58ch;">
           Prompt Engineering controls expression. Context Engineering controls what models see. Harness Engineering controls working conditions. Protocol Engineering controls reliable work delivery.
@@ -74,7 +74,7 @@ const essays = (await getCollection("essays"))
         <span class="eyebrow">Expanded Proof</span>
         <h2>Evidence of thinking made concrete.</h2>
       </div>
-      <div class="card-grid" style="margin-top: 4rem;">
+      <div class="stacked-panels proof-panels" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 2rem;">
         {projects.map(project => (
           <ProjectProofCard {...project} />
         ))}
@@ -116,7 +116,8 @@ const essays = (await getCollection("essays"))
   .hero-role {
     /* Typographic Authority */
     text-transform: uppercase;
-    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    letter-spacing: -0.08em;
     line-height: 0.95;
     margin-bottom: 1.5rem;
     max-width: 14ch; /* Force line break for monumental stacking */
@@ -135,11 +136,18 @@ const essays = (await getCollection("essays"))
   }
 
   .narrative-lead {
-    font-size: clamp(2.2rem, 5vw, 4.2rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.08em;
     margin: 1.5rem 0 2.5rem;
     font-weight: 800; /* High pressure */
+    text-transform: uppercase;
+  }
+  .narrative-lead .highlight {
+    color: var(--zone-a-bg);
+    background-color: var(--zone-a-text);
+    padding: 0 0.2em;
+    display: inline-block;
   }
 
   .essay-list {
@@ -180,7 +188,7 @@ const essays = (await getCollection("essays"))
   /* Split layout control for hero */
   .split-layout {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Give more width to text declarations, keeping Portrait bound */
+    grid-template-columns: 1.4fr 0.8fr; /* Give more width to text declarations, keeping Portrait bound */
     gap: 6rem;
     align-items: center;
   }

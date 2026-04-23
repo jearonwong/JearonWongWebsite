@@ -12,46 +12,64 @@ const { name, description, prompt } = Astro.props;
   <div class="panel-header">
     <h3 class="idea-title">{name}</h3>
   </div>
-  <p class="idea-desc">{description}</p>
-  <div class="idea-prompt">
-    <span class="eyebrow prompt-label">Key Question</span>
-    <p class="prompt-text">{prompt}</p>
+  <div class="panel-body">
+    <p class="idea-desc">{description}</p>
+    <div class="idea-prompt">
+      <span class="eyebrow prompt-label">Key Question</span>
+      <p class="prompt-text">{prompt}</p>
+    </div>
   </div>
 </article>
 
 <style>
   .structural-panel {
-    background-color: transparent;
-    border: 1px solid var(--current-border);
-    border-radius: var(--radius-sm); /* Sharper border, removing cozy publication feel */
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    transition: border-color 0.2s ease;
+    background-color: var(--current-surface);
+    border: none;
+    border-radius: 0;
+    padding: 3.5rem 4rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: start;
+    transition: background-color 0.2s ease;
+  }
+  @media (max-width: 900px) {
+    .structural-panel {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2.5rem;
+    }
   }
   .structural-panel:hover {
-    border-color: var(--current-muted);
+    background-color: var(--zone-b-bg); /* subtle shift */
   }
   .panel-header {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   .idea-title {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     margin: 0;
     font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .panel-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   .idea-desc {
     color: var(--current-muted);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
     flex-grow: 1;
   }
   .idea-prompt {
-    padding-top: 1.25rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--current-line);
   }
   .prompt-label {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     display: block;
     color: var(--current-muted);
   }
@@ -59,7 +77,7 @@ const { name, description, prompt } = Astro.props;
     margin: 0;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--current-text);
   }
 </style>

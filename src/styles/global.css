@@ -1,9 +1,9 @@
 :root {
   /* Zone A: Hero / Identity Zone */
-  --zone-a-bg: #090b0d; /* Even deeper near black for higher gravity */
-  --zone-a-surface: #121519;
-  --zone-a-border: rgba(255, 255, 255, 0.15); /* Sharper lines */
-  --zone-a-line: rgba(255, 255, 255, 0.05);
+  --zone-a-bg: #030406; /* Deepened near black for extreme gravity */
+  --zone-a-surface: #0a0c0f;
+  --zone-a-border: rgba(255, 255, 255, 0.2); /* Sharper lines */
+  --zone-a-line: rgba(255, 255, 255, 0.08);
   --zone-a-text: #f4f6f8; 
   --zone-a-muted: #8494a3;
 

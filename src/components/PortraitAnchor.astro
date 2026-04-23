@@ -11,7 +11,7 @@
       <span class="monogram-subtitle">PROTOCOL ARCHITECT</span>
     </div>
     <div class="portrait-footer">
-      <span class="badge">Portrait Pending</span>
+      <span class="architect-plaque">Portrait Pending // V.01</span>
     </div>
   </div>
 </div>
@@ -23,7 +23,7 @@
     align-items: stretch; /* Stretch to occupy the split panel effectively */
     width: 100%;
     height: 100%;
-    min-height: 480px;
+    min-height: 700px;
   }
   .portrait-panel {
     position: relative;
@@ -31,14 +31,16 @@
     max-width: 440px;
     background-color: var(--zone-a-surface);
     border: 1px solid var(--zone-a-border);
-    border-radius: var(--radius-md); /* Harder radius */
+    border-radius: 0; /* Harder architectural sharp corners */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Subtle gravity, not generic soft hover shadow */
-    box-shadow: 0 16px 40px rgba(0,0,0,0.15); 
+    /* Removed soft shadow for more brutal architecture feel */
+  }
+  .bg-grid-overlay {
+    opacity: 0.25; /* Quieter internal noise */
   }
   .monogram-lockup {
     display: flex;
@@ -66,8 +68,21 @@
   }
   .portrait-footer {
     position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: 0;
+    right: 0;
     z-index: 2;
+  }
+  .architect-plaque {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: var(--zone-a-bg);
+    color: var(--zone-a-text);
+    border-top: 1px solid var(--zone-a-border);
+    border-left: 1px solid var(--zone-a-border);
   }
 </style>
