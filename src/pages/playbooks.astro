@@ -3,23 +3,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<BaseLayout title="Governance">
+<BaseLayout title="Playbooks">
   <div class="zone-a">
     <SiteHeader />
     <section class="shell page-header">
-      <span class="eyebrow">Governance</span>
-      <h1 class="page-title">Rules forming the substrate.</h1>
+      <span class="eyebrow">Playbooks</span>
+      <h1 class="page-title">Operating Methods.</h1>
+      <p class="lead">
+        Structured methods and repeatable frameworks for orchestrating AI agent systems.
+      </p>
     </section>
   </div>
-
   <div class="zone-b page-body">
     <section class="shell section-rhythm">
       <div class="structural-panel">
-        <p class="lead">The fundamental operating procedures and compliance checks for the Cognitive OS.</p>
-        <div class="meta-list">
-          <span class="eyebrow">Status</span>
-          <span>Draft Phase</span>
-        </div>
+        <p class="lead">Playbooks are currently being documented and refined inside the SoloCrew operational environment.</p>
+        <span class="badge">Checking in shortly</span>
       </div>
     </section>
   </div>
@@ -46,13 +45,5 @@ import SiteHeader from "../components/SiteHeader.astro";
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-  }
-  .meta-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border-top: 1px solid var(--current-line);
-    padding-top: 1.5rem;
-    width: 100%;
   }
 </style>

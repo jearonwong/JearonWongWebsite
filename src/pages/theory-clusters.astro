@@ -1,43 +1,43 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
 import { theoryClusters } from "../data/site";
-
-const essays = (await getCollection("essays")).sort(
-  (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
-);
-
-const clusters = theoryClusters.map((cluster) => ({
-  ...cluster,
-  essays: essays.filter((essay) => essay.data.cluster === cluster.slug)
-}));
 ---
 
-<BaseLayout
-  title="Theory Clusters"
-  description="Clusters that group essays by governing question instead of by timeline."
->
-  <section class="section">
-    <p class="section-kicker">Theory Clusters</p>
-    <h1 class="section-title">A map of the questions behind the writing.</h1>
-    <p class="lede">
-      The goal is not to publish endlessly. It is to keep related ideas close enough that future
-      projects can inherit the reasoning.
-    </p>
-  </section>
+<BaseLayout title="Ideas & Theory Clusters">
+  <div class="zone-a">
+    <SiteHeader />
+    <section class="shell page-header">
+      <span class="eyebrow">Ideas</span>
+      <h1 class="page-title">Protocol architecture applied.</h1>
+      <p class="lead" style="max-width: 50ch;">
+        Core mental models outlining how we govern, constrain, and direct autonomous agents.
+      </p>
+    </section>
+  </div>
 
-  <section class="cluster-grid">
-    {
-      clusters.map((cluster) => (
-        <article class="card">
-          <h2 class="cluster-name">{cluster.name}</h2>
-          <p class="card-copy">{cluster.description}</p>
-          <p class="cluster-prompt">{cluster.prompt}</p>
-          <div class="meta-list">
-            {cluster.essays.map((essay) => <span>{essay.data.title}</span>)}
-          </div>
-        </article>
-      ))
-    }
-  </section>
+  <div class="zone-b page-body">
+    <section class="shell section-rhythm">
+      <div class="stacked-panels" style="display: flex; flex-direction: column; gap: 0;">
+        {theoryClusters.map(cluster => (
+          <SignatureIdeaCard {...cluster} />
+        ))}
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  .page-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    max-width: 16ch;
+    letter-spacing: -0.04em;
+  }
+</style>

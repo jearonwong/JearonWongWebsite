@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
 
 const essays = (await getCollection("essays")).sort(
   (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
@@ -11,31 +12,113 @@ const essays = (await getCollection("essays")).sort(
   title="Essays"
   description="Essays about governance, interface, and proof-oriented project design."
 >
-  <section class="section">
-    <p class="section-kicker">Essays</p>
-    <h1 class="section-title">Arguments that turn into operating choices.</h1>
-    <p class="lede">
-      These essays are meant to be durable enough to reference during future projects, not just
-      consumed once in a feed.
-    </p>
-  </section>
+  <div class="zone-a">
+    <SiteHeader />
+    <section class="shell page-header">
+      <span class="eyebrow">Essays</span>
+      <h1 class="page-title">Arguments that turn into operating choices.</h1>
+      <p class="lead">
+        These essays are meant to be durable enough to reference during future projects, not just consumed once in a feed.
+      </p>
+    </section>
+  </div>
 
-  <section class="essay-grid">
-    {
-      essays.map((essay) => (
-        <article class="card">
-          <p class="essay-meta">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</p>
-          <h2 class="essay-title">{essay.data.title}</h2>
-          <p class="card-copy">{essay.data.description}</p>
-          <div class="meta-list">
-            <span>{essay.data.cluster}</span>
-            <span>{essay.data.projectProof}</span>
-          </div>
-          <p class="project-proof">
-            <a class="essay-link" href={`/essays/${essay.slug}/`}>Open essay</a>
-          </p>
-        </article>
-      ))
-    }
-  </section>
+  <div class="zone-b page-body">
+    <section class="shell section-rhythm">
+      <div class="essay-list">
+        {
+          essays.map((essay) => (
+            <article class="essay-row">
+              <span class="essay-date">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</span>
+              <div class="essay-content">
+                <h3><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+                <p class="muted">{essay.data.description}</p>
+                <div class="essay-tags">
+                  <span class="badge">{essay.data.cluster}</span>
+                  <span class="badge">{essay.data.projectProof}</span>
+                </div>
+                <a href={`/essays/${essay.slug}/`} class="essay-link">Read essay &rarr;</a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  .page-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    max-width: 16ch;
+    letter-spacing: -0.04em;
+  }
+  /* Registry formatting */
+  .essay-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--zone-b-line);
+  }
+  .essay-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--zone-b-line);
+    align-items: start;
+    transition: background-color 0.2s ease;
+  }
+  .essay-row:hover {
+    background-color: rgba(0,0,0,0.02);
+  }
+  .essay-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--zone-b-muted);
+    padding-top: 0.25rem;
+  }
+  .essay-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .essay-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .essay-content h3 a {
+    text-decoration: none;
+    color: var(--zone-b-text);
+  }
+  .essay-content p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .essay-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+  .essay-link {
+    display: none; /* Hide link, make title clickable */
+  }
+  @media (max-width: 900px) {
+    .essay-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
+    .essay-tags {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+</style>

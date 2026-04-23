@@ -1,31 +1,43 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import ProjectProofCard from "../components/ProjectProofCard.astro";
 import { projects } from "../data/site";
 ---
 
-<BaseLayout
-  title="Projects"
-  description="Projects presented as proof points for the operating thesis of the site."
->
-  <section class="section">
-    <p class="section-kicker">Projects</p>
-    <h1 class="section-title">Projects are proof points, not positioning theater.</h1>
-    <p class="lede">
-      Each project here exists to make one governance claim more concrete. The point is evidence,
-      not volume.
-    </p>
-  </section>
+<BaseLayout title="Projects & Proof">
+  <div class="zone-a">
+    <SiteHeader />
+    <section class="shell page-header">
+      <span class="eyebrow">Projects</span>
+      <h1 class="page-title">Evidence of thinking made concrete.</h1>
+      <p class="lead" style="max-width: 50ch;">
+        We do not build portfolios. We build proof that the protocol and cognitive architecture actually work in delivery.
+      </p>
+    </section>
+  </div>
 
-  <section class="projects-grid">
-    {
-      projects.map((project) => (
-        <article class="card">
-          <p class="project-status">{project.status}</p>
-          <h2 class="project-title">{project.name}</h2>
-          <p class="project-summary">{project.summary}</p>
-          <p class="project-proof">{project.proof}</p>
-        </article>
-      ))
-    }
-  </section>
+  <div class="zone-b page-body">
+    <section class="shell section-rhythm">
+      <div class="stacked-panels proof-panels" style="display: flex; flex-direction: column; gap: 2rem;">
+        {projects.map(project => (
+          <ProjectProofCard {...project} />
+        ))}
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  .page-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    max-width: 16ch;
+    letter-spacing: -0.04em;
+  }
+</style>

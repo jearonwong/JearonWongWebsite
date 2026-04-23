@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
@@ -15,20 +16,114 @@ const { essay } = Astro.props;
 const { Content } = await essay.render();
 ---
 
-<BaseLayout title={essay.data.title} description={essay.data.description} ogType="article">
-  <article class="article-shell">
-    <a href="/essays" class="back-link">← Back to essays</a>
-    <p class="eyebrow">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "long" })}</p>
-    <h1>{essay.data.title}</h1>
-    <p class="lede">{essay.data.description}</p>
-    <div class="meta-list">
-      <span>{essay.data.cluster}</span>
-      <span>{essay.data.projectProof}</span>
-    </div>
-    <p class="article-note">
-      This essay belongs to a theory cluster and names the kind of project evidence it is meant to
-      support.
-    </p>
-    <Content />
-  </article>
+<BaseLayout title={essay.data.title} description={essay.data.description}>
+  <div class="zone-a">
+    <SiteHeader />
+    <section class="shell page-header">
+      <a href="/essays" class="back-link">&larr; Back to Logbook</a>
+      <p class="eyebrow date-eyebrow">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</p>
+      <h1 class="article-title">{essay.data.title}</h1>
+      <p class="lead" style="max-width: 60ch;">{essay.data.description}</p>
+      <div class="article-tags">
+        <span class="badge">{essay.data.cluster}</span>
+        <span class="badge">{essay.data.projectProof}</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="zone-b page-body">
+    <article class="shell article-shell section-rhythm">
+      <div class="article-content">
+        <Content />
+      </div>
+    </article>
+  </div>
 </BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    max-width: 800px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--zone-a-muted);
+    transition: color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .back-link:hover {
+    color: var(--zone-a-text);
+  }
+  .date-eyebrow {
+    color: var(--zone-a-text);
+    opacity: 0.7;
+  }
+  .article-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+  .article-tags {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Article Content Styles */
+  .article-shell {
+    max-width: 800px; /* Constrain for reading */
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
+  .article-content {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--zone-b-text);
+  }
+  .article-content :global(h2) {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid var(--zone-b-line);
+    padding-bottom: 0.5rem;
+  }
+  .article-content :global(h3) {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .article-content :global(p) {
+    margin-bottom: 1.8rem;
+  }
+  .article-content :global(ul), .article-content :global(ol) {
+    margin-bottom: 1.8rem;
+    padding-left: 1.5rem;
+  }
+  .article-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  .article-content :global(blockquote) {
+    border-left: 4px solid var(--zone-b-border);
+    padding-left: 2rem;
+    margin: 2.5rem 0;
+    color: var(--zone-b-muted);
+    font-size: 1.25rem;
+    font-style: italic;
+    background-color: var(--zone-b-surface);
+    padding: 1.5rem 2rem;
+  }
+  .article-content :global(a) {
+    color: var(--zone-b-text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+</style>

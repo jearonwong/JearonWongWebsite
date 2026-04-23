@@ -25,9 +25,9 @@
   --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Consolas, Menlo, monospace;
 
   /* Architectural Geometry */
-  --radius-sm: 2px;
-  --radius-md: 4px; /* De-cozy: sharper edges */
-  --radius-lg: 4px; 
+  --radius-sm: 0;
+  --radius-md: 0; /* Strict architectural sharp edges */
+  --radius-lg: 0; 
   --spacing-base: 1rem;
   --inner-shell: 1120px;
   

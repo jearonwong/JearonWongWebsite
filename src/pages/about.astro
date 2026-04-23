@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+---
+
+<BaseLayout title="About">
+  <div class="zone-a">
+    <SiteHeader />
+    <section class="shell page-header">
+      <span class="eyebrow">About Jearon Wang</span>
+      <h1 class="page-title">Architecting the Agent Era.</h1>
+    </section>
+  </div>
+  <div class="zone-b page-body">
+    <section class="shell section-rhythm">
+      <div class="about-split">
+        <div class="about-specs">
+          <div class="spec-row">
+            <span class="spec-label">Identity</span>
+            <span class="spec-value">Protocol Architect</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Domain</span>
+            <span class="spec-value">Agent Systems</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Reliable Work Delivery</span>
+          </div>
+        </div>
+        <div class="about-narrative">
+          <p class="lead" style="color: var(--zone-b-text); font-size: 1.35rem; font-weight: 500; margin-bottom: 2rem;">
+            Jearon Wang is a Protocol Architect focusing on AI agent systems. 
+            His work exists at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery.
+          </p>
+          <p class="body-text" style="color: var(--zone-b-muted); font-size: 1.1rem; max-width: 65ch;">
+            The industry has spent years focusing on prompts, wrappers, and context windows. The critical missing layer is the protocol — the deterministic framework that governs how autonomous agents operate, interact, and deliver verifiable results in production.
+          </p>
+          <div style="margin-top: 4rem; display: flex; gap: 1rem;">
+            <a href="/essays" class="button button-outline" style="border-color: var(--zone-b-border); color: var(--zone-b-text);">Read Essays</a>
+            <a href="/projects" class="button button-primary" style="background-color: var(--zone-b-text); color: var(--zone-b-surface);">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  .page-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    max-width: 16ch;
+    letter-spacing: -0.04em;
+  }
+  .about-split {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-specs {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--zone-b-line);
+  }
+  .spec-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--zone-b-line);
+  }
+  .spec-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--zone-b-muted);
+    margin-bottom: 0.5rem;
+  }
+  .spec-value {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--zone-b-text);
+  }
+  @media (max-width: 768px) {
+    .about-split {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

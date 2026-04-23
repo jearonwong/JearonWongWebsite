@@ -12,7 +12,7 @@ export const siteConfig = {
 
 export const primaryNav = [
   { href: "/essays", label: "Essays" },
-  { href: "/theories", label: "Ideas" }, // Internal is theories, visible label is Ideas
+  { href: "/theory-clusters", label: "Ideas" },
   { href: "/playbooks", label: "Playbooks" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" }
