@@ -21,16 +21,17 @@ const essays = (await getCollection("essays"))
     <section class="shell hero-section">
       <div class="split-layout">
         <div class="hero-content">
-          <div class="registry-annotation" style="margin-bottom: 1.5rem;">
+          <div class="registry-annotation" style="margin-bottom: 2rem;">
             <span class="registry-key">INIT_SEQUENCE</span>: <span class="registry-value">PROTOCOL_ARCHITECT_CORE</span>
           </div>
           <h1 class="hero-role">
             <span class="firstname">JEARON</span>
             <span class="surname">WANG</span>
           </h1>
-          <div class="registry-annotation" style="font-size: 1.2rem; margin-bottom: 2.5rem; color: var(--accent-signal);">
+          <div class="registry-annotation" style="font-size: 1.25rem; margin-bottom: 3.5rem; color: var(--accent-signal); font-weight: 700;">
             <span class="registry-key">PROPOSITION</span>: <span class="registry-value">DEFINING_RELIABLE_WORK_DELIVERY</span>
           </div>
+          
           <p class="lead hero-lead">{siteConfig.thesis}</p>
           
           <div class="hero-ctas">
@@ -133,46 +134,51 @@ const essays = (await getCollection("essays"))
     overflow: hidden;
   }
   .hero-section {
-    padding-top: 6rem; /* Push hero down slightly for breathing room from header */
-    padding-bottom: 8rem; /* Large drop-off */
+    padding-top: 6rem;
+    padding-bottom: 8rem;
   }
   .hero-role {
     text-transform: uppercase;
-    font-size: clamp(4.5rem, 12vw, 8.5rem);
-    letter-spacing: -0.07em;
-    line-height: 0.8;
-    margin-bottom: 2.5rem;
-    font-weight: 900;
+    font-size: clamp(5rem, 14vw, 10rem);
+    letter-spacing: -0.09em;
+    line-height: 0.75;
+    margin-bottom: 3rem;
+    font-weight: 950;
     display: flex;
     flex-direction: column;
+    filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.05));
   }
   .hero-role span {
     display: block;
   }
   .hero-role .surname {
-    margin-left: 0.15em;
+    margin-left: 0.25em;
     color: var(--current-text);
   }
   .hero-role .firstname {
-    opacity: 0.8;
+    color: var(--current-text);
+    opacity: 0.75;
   }
   .hero-lead {
-    max-width: 45ch; 
+    max-width: 48ch; 
     color: var(--current-text); 
     opacity: 1;
-    font-size: 1.35rem;
-    line-height: 1.5;
+    font-size: 1.4rem;
+    line-height: 1.4;
     font-weight: 500;
-    margin-bottom: 3.5rem;
-    border-left: 2px solid var(--accent-signal);
-    padding-left: 1.5rem;
+    margin-bottom: 4rem;
+    border-left: 3px solid var(--accent-signal);
+    padding-left: 2rem;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.03) 0%, transparent 100%);
   }
   .proof-signal-band {
-    margin-top: 5rem; 
-    padding: 2rem; 
-    background-color: rgba(0,0,0,0.4);
+    margin-top: 6rem; 
+    padding: 2.5rem; 
+    background-color: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(10px);
     position: relative;
-    border-left: 2px solid var(--accent-signal);
+    border: 1px solid var(--border-registry);
+    border-left: 3px solid var(--accent-signal);
   }
   .hero-ctas {
     display: flex;
@@ -191,18 +197,11 @@ const essays = (await getCollection("essays"))
     line-height: 1.1;
     letter-spacing: -0.02em;
     margin: 1.5rem 0 2.5rem;
-    font-weight: 800; /* High pressure */
+    font-weight: 800;
   }
   .narrative-lead em {
     font-style: italic;
     color: var(--zone-a-text);
-  }
-  .hero-divider {
-    width: 100%;
-    max-width: 400px;
-    margin: 4rem 0 1.5rem 0;
-    border: none;
-    border-top: 1px solid var(--zone-a-border);
   }
 
   .card-grid {
@@ -236,21 +235,10 @@ const essays = (await getCollection("essays"))
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
   }
-  .essay-link {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--current-text);
-  }
   
-  /* Split layout control for hero */
   .split-layout {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Refined balance */
+    grid-template-columns: 1.2fr 1fr;
     gap: 8rem;
     align-items: center;
   }

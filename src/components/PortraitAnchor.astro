@@ -7,14 +7,16 @@
   <div class="portrait-panel registry-chassis">
     <div class="registry-grid" style="position: absolute; inset: 0; opacity: 0.1;"></div>
     <div class="monogram-lockup">
-      <div class="registry-annotation" style="margin-bottom: 0.5rem; font-size: 0.6rem;">
+      <div class="registry-annotation" style="margin-bottom: 0.75rem; font-size: 0.55rem; opacity: 0.7;">
         <span class="registry-key">ROLE_ID</span>: <span class="registry-value">ARCHITECT_01</span>
       </div>
       <span class="monogram">JW</span>
       <span class="monogram-subtitle">PROTOCOL ARCHITECT</span>
       
-      <div class="registry-annotation plaque-inline" style="margin-top: 2rem;">
-        <span class="registry-key">V</span>: <span class="registry-value">0.4.0</span> // <span class="registry-key">STATUS</span>: <span class="registry-value">ACTIVE</span>
+      <div class="plaque-inline-wrapper" style="margin-top: 2.5rem;">
+        <div class="registry-annotation plaque-inline">
+          <span class="registry-key">V</span>: <span class="registry-value">0.4.0</span> // <span class="registry-key">STATUS</span>: <span class="registry-value">ACTIVE</span>
+        </div>
       </div>
     </div>
   </div>
@@ -49,26 +51,36 @@
   }
   .monogram {
     font-family: var(--font-display);
-    font-size: clamp(6rem, 10vw, 9rem);
-    font-weight: 900;
+    font-size: clamp(8rem, 15vw, 12rem);
+    font-weight: 950;
     color: var(--current-text);
-    letter-spacing: -0.1em;
-    line-height: 0.8;
+    letter-spacing: -0.12em;
+    line-height: 0.75;
+    display: block;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.03));
   }
   .monogram-subtitle {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 800;
     color: var(--accent-signal);
-    letter-spacing: 0.4em;
-    margin-top: 0.75rem;
+    letter-spacing: 0.5em;
+    margin-top: 1rem;
     text-transform: uppercase;
-    opacity: 0.8;
+    opacity: 0.9;
+    display: block;
+  }
+  .plaque-inline-wrapper {
+    position: relative;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--accent-signal) 0%, transparent 40%);
+    display: inline-block;
   }
   .plaque-inline {
-    padding: 0.4rem 0.8rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-registry);
-    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+    background: var(--current-bg);
+    border: none;
+    font-size: 0.55rem;
+    font-weight: 700;
   }
 </style>
