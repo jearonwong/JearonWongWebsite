@@ -24,21 +24,25 @@ const essays = (await getCollection("essays"))
           <div class="registry-annotation" style="margin-bottom: 1.5rem;">
             <span class="registry-key">INIT_SEQUENCE</span>: <span class="registry-value">PROTOCOL_ARCHITECT_CORE</span>
           </div>
-          <h1 class="hero-role">JEARON WANG</h1>
-          <div class="registry-annotation" style="font-size: 1.1rem; margin-bottom: 2rem;">
+          <h1 class="hero-role">
+            <span class="firstname">JEARON</span>
+            <span class="surname">WANG</span>
+          </h1>
+          <div class="registry-annotation" style="font-size: 1.2rem; margin-bottom: 2.5rem; color: var(--accent-signal);">
             <span class="registry-key">PROPOSITION</span>: <span class="registry-value">DEFINING_RELIABLE_WORK_DELIVERY</span>
           </div>
-          <p class="lead" style="max-width: 46ch; color: var(--text-registry-muted);">{siteConfig.thesis}</p>
+          <p class="lead hero-lead">{siteConfig.thesis}</p>
           
           <div class="hero-ctas">
-            <a href="#ledger" class="button button-primary">INSPECT_LEDGER</a>
-            <a href="#blueprint" class="button button-outline">OPEN_BLUEPRINT</a>
+            <a href="#ledger" class="button button-primary">ACCESS_LEDGER</a>
+            <a href="#blueprint" class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">VIEW_BLUEPRINT</a>
           </div>
 
-          <div class="registry-chassis" style="margin-top: 4rem; padding: 1.5rem; background-color: rgba(0,0,0,0.3);">
-            <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <div class="registry-chassis proof-signal-band">
+            <div class="registry-grid" style="position: absolute; inset: 0; opacity: 0.05;"></div>
+            <div class="registry-annotation" style="margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
               <span class="proof-signal-dot"></span>
-              <span class="registry-key">ACTIVE_EVIDENCE_STREAM</span>
+              <span class="registry-key">SYSTEM_PROOFS</span>: <span class="registry-value">ACTIVE_STREAM</span>
             </div>
             <ImmediateProofSignal />
           </div>
@@ -99,24 +103,21 @@ const essays = (await getCollection("essays"))
         ))}
       </div>
     </section>
-
-  </div>
-</BaseLayout>
-
-    <!-- 5. Editorial Continuation -> Featured Writing -->
+    <!-- 5. Featured Writing -> Logbook Snippet -->
     <section class="shell section-rhythm" style="padding-top: 2rem;">
-      <div class="section-header">
-        <span class="eyebrow">Featured Writing</span>
-        <h2>Arguments about governance, memory, and proof.</h2>
+      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--current-line); padding-left: 2rem;">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">MODULE</span>: <span class="registry-value">REGISTRY_LOG_SUMMARY</span>
+        </div>
+        <h2 style="font-weight: 800; letter-spacing: -0.02em;">Arguments about governance, memory, and proof.</h2>
       </div>
-      <div class="essay-list" style="margin-top: 4rem;">
+      <div class="essay-list">
         {essays.map(essay => (
           <article class="essay-row">
             <span class="essay-date">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</span>
             <div class="essay-content">
               <h3><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
               <p class="muted">{essay.data.description}</p>
-              <a href={`/essays/${essay.slug}/`} class="essay-link">Read essay &rarr;</a>
             </div>
           </article>
         ))}
@@ -136,20 +137,47 @@ const essays = (await getCollection("essays"))
     padding-bottom: 8rem; /* Large drop-off */
   }
   .hero-role {
-    /* Typographic Authority */
     text-transform: uppercase;
-    font-size: clamp(3.2rem, 7vw, 5rem);
-    letter-spacing: -0.05em;
-    line-height: 0.95;
-    margin-bottom: 1.5rem;
-    max-width: 10ch; /* Forces the exact wrapping */
-    font-weight: 800;
+    font-size: clamp(4.5rem, 12vw, 8.5rem);
+    letter-spacing: -0.07em;
+    line-height: 0.8;
+    margin-bottom: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-role span {
+    display: block;
+  }
+  .hero-role .surname {
+    margin-left: 0.15em;
+    color: var(--current-text);
+  }
+  .hero-role .firstname {
+    opacity: 0.8;
+  }
+  .hero-lead {
+    max-width: 45ch; 
+    color: var(--current-text); 
+    opacity: 1;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+    border-left: 2px solid var(--accent-signal);
+    padding-left: 1.5rem;
+  }
+  .proof-signal-band {
+    margin-top: 5rem; 
+    padding: 2rem; 
+    background-color: rgba(0,0,0,0.4);
+    position: relative;
+    border-left: 2px solid var(--accent-signal);
   }
   .hero-ctas {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2.5rem;
+    gap: 1.5rem;
   }
   
   .section-header h2 {
@@ -222,9 +250,15 @@ const essays = (await getCollection("essays"))
   /* Split layout control for hero */
   .split-layout {
     display: grid;
-    grid-template-columns: 1.4fr 0.8fr; /* Give more width to text declarations, keeping Portrait bound */
-    gap: 6rem;
+    grid-template-columns: 1.2fr 1fr; /* Refined balance */
+    gap: 8rem;
     align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .split-layout {
+      gap: 4rem;
+    }
   }
 
   @media (max-width: 900px) {

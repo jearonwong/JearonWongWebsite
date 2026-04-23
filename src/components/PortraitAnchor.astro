@@ -7,14 +7,13 @@
   <div class="portrait-panel registry-chassis">
     <div class="registry-grid" style="position: absolute; inset: 0; opacity: 0.1;"></div>
     <div class="monogram-lockup">
-      <div class="registry-annotation" style="margin-bottom: 1rem;">
+      <div class="registry-annotation" style="margin-bottom: 0.5rem; font-size: 0.6rem;">
         <span class="registry-key">ROLE_ID</span>: <span class="registry-value">ARCHITECT_01</span>
       </div>
       <span class="monogram">JW</span>
       <span class="monogram-subtitle">PROTOCOL ARCHITECT</span>
-    </div>
-    <div class="portrait-footer">
-      <div class="registry-annotation architect-plaque">
+      
+      <div class="registry-annotation plaque-inline" style="margin-top: 2rem;">
         <span class="registry-key">V</span>: <span class="registry-value">0.4.0</span> // <span class="registry-key">STATUS</span>: <span class="registry-value">ACTIVE</span>
       </div>
     </div>
@@ -50,32 +49,26 @@
   }
   .monogram {
     font-family: var(--font-display);
-    font-size: clamp(8rem, 12vw, 12rem);
-    font-weight: 800;
+    font-size: clamp(6rem, 10vw, 9rem);
+    font-weight: 900;
     color: var(--current-text);
-    letter-spacing: -0.08em;
+    letter-spacing: -0.1em;
     line-height: 0.8;
   }
   .monogram-subtitle {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 600;
+    font-size: 0.6rem;
+    font-weight: 700;
     color: var(--accent-signal);
-    letter-spacing: 0.3em;
-    margin-top: 1rem;
+    letter-spacing: 0.4em;
+    margin-top: 0.75rem;
     text-transform: uppercase;
+    opacity: 0.8;
   }
-  .portrait-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-top: 1px solid var(--current-line);
-  }
-  .architect-plaque {
-    display: flex;
-    justify-content: center;
+  .plaque-inline {
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-registry);
+    font-size: 0.6rem;
   }
 </style>

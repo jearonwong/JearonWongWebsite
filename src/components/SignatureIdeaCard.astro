@@ -16,12 +16,15 @@ const { name, description, prompt } = Astro.props;
   </div>
   
   <div class="pillar-content">
+    <div class="registry-annotation" style="margin-bottom: 0.5rem;">
+      <span class="registry-key">PILLAR_NAME</span>
+    </div>
     <h3 class="pillar-title">{name}</h3>
     <p class="pillar-desc">{description}</p>
     
     <div class="focus-block">
-      <div class="registry-annotation" style="margin-bottom: 0.5rem;">
-        <span class="registry-key">FRAMEWORK_FOCUS</span>
+      <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+        <span class="registry-key">SPECIFICATION_FOCUS</span>
       </div>
       <p class="focus-text">{prompt}</p>
     </div>
@@ -42,27 +45,29 @@ const { name, description, prompt } = Astro.props;
     border-bottom: 1px solid var(--current-line);
   }
   .pillar-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 0 0 1rem 0;
-    letter-spacing: -0.01em;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: -0.03em;
     color: var(--current-text);
   }
   .pillar-desc {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--current-muted);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
   .focus-block {
-    padding: 1.25rem;
-    border-left: 2px solid var(--accent-signal);
-    background-color: rgba(59, 130, 246, 0.03);
+    padding: 1.5rem;
+    border: 1px solid var(--border-registry);
+    background-color: rgba(255, 255, 255, 0.02);
   }
   .focus-text {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
     margin: 0;
     color: var(--current-text);
+    opacity: 0.8;
   }
 </style>
