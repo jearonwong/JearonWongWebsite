@@ -4,5 +4,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://jearonwong.com",
   output: "static",
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+  server: {
+    allowedHosts: ["mortgage-assists-unable-scholarship.trycloudflare.com"]
+  }
 });
