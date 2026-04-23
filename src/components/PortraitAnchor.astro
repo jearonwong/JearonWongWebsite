@@ -1,0 +1,73 @@
+---
+// Portrait Anchor Component
+// Implements the Architectural Anchor identity requirement.
+---
+
+<div class="portrait-anchor">
+  <div class="portrait-panel">
+    <div class="bg-grid-overlay"></div>
+    <div class="monogram-lockup">
+      <span class="monogram">JW</span>
+      <span class="monogram-subtitle">PROTOCOL ARCHITECT</span>
+    </div>
+    <div class="portrait-footer">
+      <span class="badge">Portrait Pending</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .portrait-anchor {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch; /* Stretch to occupy the split panel effectively */
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+  }
+  .portrait-panel {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--zone-a-surface);
+    border: 1px solid var(--zone-a-border);
+    border-radius: var(--radius-md); /* Harder radius */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Subtle gravity, not generic soft hover shadow */
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15); 
+  }
+  .monogram-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    user-select: none;
+    opacity: 0.9;
+  }
+  .monogram {
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 10vw, 10rem);
+    font-weight: 800;
+    color: var(--zone-a-text);
+    letter-spacing: -0.06em;
+    line-height: 1;
+  }
+  .monogram-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--zone-a-muted);
+    letter-spacing: 0.25em;
+    margin-top: 0.5rem;
+  }
+  .portrait-footer {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+  }
+</style>

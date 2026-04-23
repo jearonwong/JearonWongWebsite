@@ -1,0 +1,69 @@
+---
+import { primaryNav, siteConfig } from "../data/site";
+
+const currentPath =
+  Astro.url.pathname.length > 1 && Astro.url.pathname.endsWith("/")
+    ? Astro.url.pathname.slice(0, -1)
+    : Astro.url.pathname;
+---
+
+<header class="shell site-header">
+  <div class="site-mark">
+    <a href="/" class="site-title">{siteConfig.title}</a>
+  </div>
+  <nav aria-label="Primary" class="primary-nav">
+    {
+      primaryNav.map((item) => {
+        const normalizedHref =
+          item.href.length > 1 && item.href.endsWith("/") ? item.href.slice(0, -1) : item.href;
+        const isActive = currentPath === normalizedHref;
+
+        return (
+          <a href={item.href} class:list={[{ active: isActive }]}>
+            {item.label}
+          </a>
+        );
+      })
+    }
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  .site-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--current-text);
+  }
+  .primary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .primary-nav a {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--current-muted);
+  }
+  .primary-nav a:hover,
+  .primary-nav a.active {
+    color: var(--current-text);
+  }
+  @media (max-width: 640px) {
+    .site-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
+  }
+</style>

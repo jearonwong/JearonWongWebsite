@@ -1,0 +1,24 @@
+{
+  "name": "jearonwong-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "lint": "eslint . --ext .js,.mjs,.astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.7.12"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "eslint": "^9.25.1",
+    "eslint-plugin-astro": "^1.3.1",
+    "typescript": "^5.8.3"
+  }
+}

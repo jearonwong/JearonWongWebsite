@@ -1,0 +1,62 @@
+---
+import { secondaryNav, siteConfig } from "../data/site";
+---
+
+<footer class="shell site-footer zone-b">
+  <div class="footer-core">
+    <p class="footer-title">{siteConfig.author.name}</p>
+    <p class="footer-meta">Protocol Architect for the Agent Era</p>
+    <p class="footer-copy muted">&copy; {new Date().getFullYear()} All rights reserved.</p>
+  </div>
+  <nav aria-label="Secondary" class="secondary-nav">
+    {secondaryNav.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 4rem 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: end;
+    border-top: 1px solid var(--zone-b-line);
+    margin-top: 4rem;
+  }
+  .footer-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    margin: 0;
+    color: var(--zone-b-text);
+  }
+  .footer-meta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--zone-b-muted);
+    margin: 0.25rem 0 0.5rem;
+  }
+  .footer-copy {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .secondary-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .secondary-nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--zone-b-muted);
+  }
+  .secondary-nav a:hover {
+    color: var(--zone-b-text);
+  }
+  @media (max-width: 640px) {
+    .site-footer {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+  }
+</style>

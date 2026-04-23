@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects } from "../data/site";
+---
+
+<BaseLayout
+  title="Projects"
+  description="Projects presented as proof points for the operating thesis of the site."
+>
+  <section class="section">
+    <p class="section-kicker">Projects</p>
+    <h1 class="section-title">Projects are proof points, not positioning theater.</h1>
+    <p class="lede">
+      Each project here exists to make one governance claim more concrete. The point is evidence,
+      not volume.
+    </p>
+  </section>
+
+  <section class="projects-grid">
+    {
+      projects.map((project) => (
+        <article class="card">
+          <p class="project-status">{project.status}</p>
+          <h2 class="project-title">{project.name}</h2>
+          <p class="project-summary">{project.summary}</p>
+          <p class="project-proof">{project.proof}</p>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

@@ -1,0 +1,69 @@
+---
+interface Props {
+  name: string;
+  status: string;
+  summary: string;
+  proof: string;
+}
+
+const { name, status, summary, proof } = Astro.props;
+---
+
+<article class="structural-panel proof-panel">
+  <div class="panel-header">
+    <h3 class="project-title">{name}</h3>
+    <span class="badge tech-badge">{status}</span>
+  </div>
+  <p class="project-desc">{summary}</p>
+  <div class="project-proof">
+    <span class="eyebrow">Proof Point</span>
+    <p>{proof}</p>
+  </div>
+</article>
+
+<style>
+  .structural-panel {
+    background-color: transparent;
+    border: 1px solid var(--current-border);
+    border-radius: var(--radius-sm); /* De-cozy: sharper edges */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease;
+  }
+  .structural-panel:hover {
+    border-color: var(--current-muted);
+  }
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .project-desc {
+    color: var(--current-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+  }
+  .project-proof {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .project-proof p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--current-text);
+  }
+  .tech-badge {
+    background-color: transparent;
+    border: 1px solid var(--current-border);
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const essays = (await getCollection("essays")).sort(
+  (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
+);
+---
+
+<BaseLayout
+  title="Essays"
+  description="Essays about governance, interface, and proof-oriented project design."
+>
+  <section class="section">
+    <p class="section-kicker">Essays</p>
+    <h1 class="section-title">Arguments that turn into operating choices.</h1>
+    <p class="lede">
+      These essays are meant to be durable enough to reference during future projects, not just
+      consumed once in a feed.
+    </p>
+  </section>
+
+  <section class="essay-grid">
+    {
+      essays.map((essay) => (
+        <article class="card">
+          <p class="essay-meta">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</p>
+          <h2 class="essay-title">{essay.data.title}</h2>
+          <p class="card-copy">{essay.data.description}</p>
+          <div class="meta-list">
+            <span>{essay.data.cluster}</span>
+            <span>{essay.data.projectProof}</span>
+          </div>
+          <p class="project-proof">
+            <a class="essay-link" href={`/essays/${essay.slug}/`}>Open essay</a>
+          </p>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

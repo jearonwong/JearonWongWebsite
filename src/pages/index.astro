@@ -1,0 +1,206 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import PortraitAnchor from "../components/PortraitAnchor.astro";
+import ImmediateProofSignal from "../components/ImmediateProofSignal.astro";
+import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
+import ProjectProofCard from "../components/ProjectProofCard.astro";
+import { siteConfig, theoryClusters, projects } from "../data/site";
+
+const essays = (await getCollection("essays"))
+  .sort((left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime())
+  .slice(0, 3);
+---
+
+<BaseLayout title={siteConfig.title} description={siteConfig.description}>
+  <!-- 1. The Declaration -> Zone A Hero -->
+  <div class="zone-a hero-wrapper">
+    <SiteHeader />
+    <div class="bg-grid-overlay"></div>
+    
+    <section class="shell hero-section">
+      <div class="split-layout">
+        <div class="hero-content">
+          <span class="eyebrow">{siteConfig.author.name}</span>
+          <h1 class="hero-role">{siteConfig.author.role}</h1>
+          <p class="lead" style="max-width: 46ch;">{siteConfig.thesis}</p>
+          <div class="hero-ctas">
+            <a href="#ideas" class="button button-primary">Read the Thesis</a>
+            <a href="#proof" class="button button-outline">Explore Projects</a>
+          </div>
+          <!-- 3. Immediate Proof Signal -->
+          <ImmediateProofSignal />
+        </div>
+        <div class="hero-visual">
+          <PortraitAnchor />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 2. The Drop -> Zone B Content Area -->
+  <div class="zone-b page-body">
+    
+    <section id="ideas" class="shell section-rhythm drop-zone">
+      <div class="section-header">
+        <span class="eyebrow">Signature Ideas</span>
+        <h2 style="max-width: 18ch;">Protocol architecture applied to autonomous agents.</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 4rem;">
+        {theoryClusters.map(cluster => (
+          <SignatureIdeaCard {...cluster} />
+        ))}
+      </div>
+    </section>
+
+    <!-- 3. The Pressure -> Narrative Band returning to Zone A styling -->
+    <section class="zone-a narrative-band section-rhythm">
+      <div class="shell" style="max-width: 900px; text-align: center;">
+        <span class="eyebrow" style="color: var(--zone-a-muted)">Why Now</span>
+        <h2 class="narrative-lead">
+          The industry focused on models, prompts, tools, and demos. 
+          <br/>The missing layer is <em>reliable work delivery</em>.
+        </h2>
+        <p class="lead" style="margin: 0 auto; color: var(--zone-a-text); opacity: 0.85; max-width: 58ch;">
+          Prompt Engineering controls expression. Context Engineering controls what models see. Harness Engineering controls working conditions. Protocol Engineering controls reliable work delivery.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. The Proof -> Expanded Proof -->
+    <section id="proof" class="shell section-rhythm">
+      <div class="section-header">
+        <span class="eyebrow">Expanded Proof</span>
+        <h2>Evidence of thinking made concrete.</h2>
+      </div>
+      <div class="card-grid" style="margin-top: 4rem;">
+        {projects.map(project => (
+          <ProjectProofCard {...project} />
+        ))}
+      </div>
+    </section>
+
+    <!-- 5. Editorial Continuation -> Featured Writing -->
+    <section class="shell section-rhythm" style="padding-top: 2rem;">
+      <div class="section-header">
+        <span class="eyebrow">Featured Writing</span>
+        <h2>Arguments about governance, memory, and proof.</h2>
+      </div>
+      <div class="essay-list" style="margin-top: 4rem;">
+        {essays.map(essay => (
+          <article class="essay-row">
+            <span class="essay-date">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</span>
+            <div class="essay-content">
+              <h3><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+              <p class="muted">{essay.data.description}</p>
+              <a href={`/essays/${essay.slug}/`} class="essay-link">Read essay &rarr;</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section {
+    padding-top: 6rem; /* Push hero down slightly for breathing room from header */
+    padding-bottom: 8rem; /* Large drop-off */
+  }
+  .hero-role {
+    /* Typographic Authority */
+    text-transform: uppercase;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+    max-width: 14ch; /* Force line break for monumental stacking */
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .narrative-lead {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 1.5rem 0 2.5rem;
+    font-weight: 800; /* High pressure */
+  }
+
+  .essay-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .essay-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--zone-b-line);
+  }
+  .essay-row:last-child {
+    border-bottom: 1px solid var(--zone-b-line);
+  }
+  .essay-date {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--zone-b-muted);
+    padding-top: 0.4rem;
+  }
+  .essay-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .essay-link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--current-text);
+  }
+  
+  /* Split layout control for hero */
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Give more width to text declarations, keeping Portrait bound */
+    gap: 6rem;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    .hero-section {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .essay-row {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 2rem 0;
+    }
+  }
+</style>
