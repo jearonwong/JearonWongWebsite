@@ -1,7 +1,7 @@
 :root {
   /* Zone A: Hero / Identity Zone */
-  --zone-a-bg: #030406; /* Deepened near black for extreme gravity */
-  --zone-a-surface: #0a0c0f;
+  --zone-a-bg: #101215;
+  --zone-a-surface: #181b20;
   --zone-a-border: rgba(255, 255, 255, 0.2); /* Sharper lines */
   --zone-a-line: rgba(255, 255, 255, 0.08);
   --zone-a-text: #f4f6f8; 
@@ -141,8 +141,8 @@ p {
   padding: 0.8rem 1.8rem;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  border-radius: 0; /* Sharp corners */
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -151,7 +151,7 @@ p {
 
 .zone-a .button-primary {
   background-color: var(--zone-a-text);
-  color: var(--zone-a-bg);
+  color: #000;
 }
 .zone-a .button-primary:hover {
   background-color: white;

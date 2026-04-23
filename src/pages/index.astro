@@ -29,6 +29,7 @@ const essays = (await getCollection("essays"))
             <a href="#ideas" class="button button-primary">Read the Thesis</a>
             <a href="#proof" class="button button-outline">Explore Projects</a>
           </div>
+          <hr class="hero-divider" />
           <!-- 3. Immediate Proof Signal -->
           <ImmediateProofSignal />
         </div>
@@ -43,11 +44,13 @@ const essays = (await getCollection("essays"))
   <div class="zone-b page-body">
     
     <section id="ideas" class="shell section-rhythm drop-zone">
-      <div class="section-header">
-        <span class="eyebrow">Signature Ideas</span>
-        <h2 style="max-width: 18ch;">Protocol architecture applied to autonomous agents.</h2>
+      <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+        <span class="eyebrow" style="margin-bottom: 1rem;">Signature Ideas</span>
+        <h2 style="max-width: 15ch; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.02em; line-height: 1.1;">
+          Protocol architecture<br/>applied to autonomous<br/>agents.
+        </h2>
       </div>
-      <div class="stacked-panels" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 1px; background-color: var(--zone-b-border); border: 1px solid var(--zone-b-border);">
+      <div class="stacked-panels" style="display: flex; flex-direction: column; gap: 0;">
         {theoryClusters.map(cluster => (
           <SignatureIdeaCard {...cluster} />
         ))}
@@ -58,12 +61,12 @@ const essays = (await getCollection("essays"))
     <section class="zone-a narrative-band section-rhythm">
       <div class="shell" style="max-width: 900px; text-align: center;">
         <span class="eyebrow" style="color: var(--zone-a-muted)">Why Now</span>
-        <h2 class="narrative-lead">
-          The industry focused on models, prompts, tools, and demos. 
-          <br/>The missing layer is <span class="highlight">reliable work delivery</span>.
+        <h2 class="narrative-lead" style="margin: 0 0 2.5rem; max-width: 25ch; margin-inline: auto;">
+          The industry focused on<br/>models, prompts, tools, and<br/>demos.<br/>
+          The missing layer is <em>reliable<br/>work delivery.</em>
         </h2>
-        <p class="lead" style="margin: 0 auto; color: var(--zone-a-text); opacity: 0.85; max-width: 58ch;">
-          Prompt Engineering controls expression. Context Engineering controls what models see. Harness Engineering controls working conditions. Protocol Engineering controls reliable work delivery.
+        <p class="lead" style="margin: 0 auto; color: var(--zone-a-text); opacity: 0.85; max-width: 58ch; font-size: 1rem;">
+          Prompt Engineering controls expression. Context Engineering controls what<br/>models see. Harness Engineering controls working conditions. Protocol<br/>Engineering controls reliable work delivery.
         </p>
       </div>
     </section>
@@ -116,11 +119,11 @@ const essays = (await getCollection("essays"))
   .hero-role {
     /* Typographic Authority */
     text-transform: uppercase;
-    font-size: clamp(4.5rem, 8vw, 8rem);
-    letter-spacing: -0.08em;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    letter-spacing: -0.04em;
     line-height: 0.95;
     margin-bottom: 1.5rem;
-    max-width: 14ch; /* Force line break for monumental stacking */
+    max-width: 9ch; /* Forces the exact 4-line wrapping seen in screenshot */
   }
   .hero-ctas {
     display: flex;
@@ -136,18 +139,22 @@ const essays = (await getCollection("essays"))
   }
 
   .narrative-lead {
-    font-size: clamp(4.5rem, 8vw, 8rem);
-    line-height: 0.95;
-    letter-spacing: -0.08em;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin: 1.5rem 0 2.5rem;
     font-weight: 800; /* High pressure */
-    text-transform: uppercase;
   }
-  .narrative-lead .highlight {
-    color: var(--zone-a-bg);
-    background-color: var(--zone-a-text);
-    padding: 0 0.2em;
-    display: inline-block;
+  .narrative-lead em {
+    font-style: italic;
+    color: var(--zone-a-text);
+  }
+  .hero-divider {
+    width: 100%;
+    max-width: 400px;
+    margin: 4rem 0 1.5rem 0;
+    border: none;
+    border-top: 1px solid var(--zone-a-border);
   }
 
   .essay-list {

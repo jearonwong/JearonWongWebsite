@@ -20,15 +20,15 @@
   .portrait-anchor {
     display: flex;
     justify-content: flex-end;
-    align-items: stretch; /* Stretch to occupy the split panel effectively */
+    align-items: center; /* Center the panel vertically if the left side is taller */
     width: 100%;
     height: 100%;
-    min-height: 700px;
   }
   .portrait-panel {
     position: relative;
     width: 100%;
     max-width: 440px;
+    aspect-ratio: 1 / 1; /* Square ratio */
     background-color: var(--zone-a-surface);
     border: 1px solid var(--zone-a-border);
     border-radius: 0; /* Harder architectural sharp corners */
@@ -37,7 +37,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Removed soft shadow for more brutal architecture feel */
   }
   .bg-grid-overlay {
     opacity: 0.25; /* Quieter internal noise */

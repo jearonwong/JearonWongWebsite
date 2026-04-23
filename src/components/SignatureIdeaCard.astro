@@ -24,45 +24,39 @@ const { name, description, prompt } = Astro.props;
 <style>
   .structural-panel {
     background-color: var(--current-surface);
-    border: none;
+    border: 1px solid var(--current-border);
     border-radius: 0;
-    padding: 3.5rem 4rem;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 4rem;
-    align-items: start;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: -1px; /* collapse borders */
     transition: background-color 0.2s ease;
   }
-  @media (max-width: 900px) {
-    .structural-panel {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 2.5rem;
-    }
+  .structural-panel:last-child {
+    margin-bottom: 0;
   }
   .structural-panel:hover {
-    background-color: var(--zone-b-bg); /* subtle shift */
+    background-color: var(--zone-b-bg);
   }
   .panel-header {
     margin-bottom: 0;
   }
   .idea-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
   .panel-body {
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
   .idea-desc {
     color: var(--current-muted);
-    font-size: 1.15rem;
-    margin-bottom: 3rem;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
-    flex-grow: 1;
   }
   .idea-prompt {
     padding-top: 1.5rem;
@@ -75,7 +69,7 @@ const { name, description, prompt } = Astro.props;
   }
   .prompt-text {
     margin: 0;
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.05rem;
     color: var(--current-text);
