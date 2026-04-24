@@ -20,6 +20,23 @@ const {
 
 const pageTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.title}`;
 const canonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const websiteJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteConfig.siteUrl}#website`,
+  url: siteConfig.siteUrl,
+  name: siteConfig.title,
+  description: siteConfig.description
+});
+const personJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteConfig.siteUrl}#person`,
+  name: siteConfig.author.name,
+  url: siteConfig.siteUrl,
+  jobTitle: siteConfig.author.role,
+  description: siteConfig.author.bio
+});
 ---
 
 <!doctype html>
@@ -31,6 +48,14 @@ const canonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#111418" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteConfig.title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,6 +71,8 @@ const canonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="alternate" type="application/rss+xml" title={`${siteConfig.title} RSS`} href="/rss.xml" />
+    <script is:inline type="application/ld+json" set:html={websiteJsonLd}></script>
+    <script is:inline type="application/ld+json" set:html={personJsonLd}></script>
   </head>
   <body class="zone-b">
     <main class="page-content">
