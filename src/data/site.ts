@@ -21,7 +21,8 @@ export const primaryNav = [
 export const secondaryNav = [
   { href: "/governance/", label: "Governance" },
   { href: "/newsletter/", label: "Newsletter" },
-  { href: "/contact/", label: "Contact" }
+  { href: "/contact/", label: "Contact" },
+  { href: "/rss.xml", label: "RSS" }
 ];
 
 export const theoryClusters = [
