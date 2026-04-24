@@ -24,9 +24,10 @@ const essays = (await getCollection("essays"))
           <div class="registry-annotation" style="margin-bottom: 2rem;">
             <span class="registry-key">INIT_SEQUENCE</span>: <span class="registry-value">PROTOCOL_ARCHITECT_CORE</span>
           </div>
+          <p class="hero-nameplate">{siteConfig.author.name}</p>
           <h1 class="hero-role">
-            <span class="firstname">JEARON</span>
-            <span class="surname">WANG</span>
+            <span class="firstname">PROTOCOL ARCHITECT</span>
+            <span class="surname">FOR THE AGENT ERA</span>
           </h1>
           <div class="registry-annotation" style="font-size: 1.25rem; margin-bottom: 3.5rem; color: var(--accent-signal); font-weight: 700;">
             <span class="registry-key">PROPOSITION</span>: <span class="registry-value">DEFINING_RELIABLE_WORK_DELIVERY</span>
@@ -137,27 +138,35 @@ const essays = (await getCollection("essays"))
     padding-top: 6rem;
     padding-bottom: 8rem;
   }
+  .hero-nameplate {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    color: var(--text-registry-primary);
+    opacity: 0.95;
+  }
   .hero-role {
     text-transform: uppercase;
-    font-size: clamp(5rem, 14vw, 10rem);
+    font-size: clamp(4rem, 12vw, 8rem);
     letter-spacing: -0.09em;
-    line-height: 0.75;
-    margin-bottom: 3rem;
+    line-height: 0.82;
+    margin-bottom: 2.25rem;
     font-weight: 950;
     display: flex;
     flex-direction: column;
     filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.05));
+    max-width: 10ch;
   }
   .hero-role span {
     display: block;
   }
   .hero-role .surname {
-    margin-left: 0.25em;
     color: var(--current-text);
   }
   .hero-role .firstname {
     color: var(--current-text);
-    opacity: 0.75;
+    opacity: 1;
   }
   .hero-lead {
     max-width: 48ch; 
