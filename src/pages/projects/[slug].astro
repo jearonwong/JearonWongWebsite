@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { getProjectBySlug, getTheoryClusterName, homepageActions } from "../../data/site";
+import { getProjectBySlug, getProjectGraphPosition, getTheoryClusterName, homepageActions } from "../../data/site";
 
 export async function getStaticPaths() {
   return ["mplp", "cognitive-os", "solocrew", "validation-lab"].map((slug) => ({
@@ -23,6 +23,9 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
   if (adjacent) acc.push(adjacent);
   return acc;
 }, []);
+const graphPosition = getProjectGraphPosition(project.slug);
+const previousProof = graphPosition.previous;
+const nextProof = graphPosition.next;
 ---
 
 <BaseLayout title={`${project.name} Proof Surface`} description={project.summary}>
@@ -104,12 +107,22 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
         <div class="link-stack">
           <a href={homepageActions.thesis.href} class="chain-link">Return to the flagship thesis essay</a>
           <a href="/projects/" class="chain-link">Back to the proof room</a>
-          {adjacentProofs[0] && (
-            <a href={`/projects/${adjacentProofs[0].slug}/`} class="chain-link">
-              Continue to {adjacentProofs[0].name}
+          {previousProof && (
+            <a href={`/projects/${previousProof.slug}/`} class="chain-link">
+              Previous proof: {previousProof.name}
+            </a>
+          )}
+          {nextProof && (
+            <a href={`/projects/${nextProof.slug}/`} class="chain-link">
+              Next proof: {nextProof.name}
             </a>
           )}
         </div>
+        {(previousProof || nextProof) && (
+          <p class="next-step-note">
+            The proof graph is easier to read in sequence: protocol layer, runtime substrate, application projection, then evidence surface.
+          </p>
+        )}
       </section>
     </article>
   </div>
@@ -199,6 +212,13 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
     color: var(--current-text);
   }
 
+  .next-step-note {
+    margin: 1rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--current-muted);
+  }
+
   @media (max-width: 900px) {
     .proof-grid {
       grid-template-columns: 1fr;
@@ -218,6 +238,10 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
     .proof-claim-text,
     .chain-link {
       font-size: 0.95rem;
+    }
+
+    .next-step-note {
+      font-size: 0.9rem;
     }
   }
 </style>

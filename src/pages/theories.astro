@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
-import { pageRegistry, theoryClusters } from "../data/site";
+import { homepageActions, pageRegistry, theoryClusters } from "../data/site";
 ---
 
 <BaseLayout title="Ideas" canonicalPath="/theories">
@@ -15,6 +15,19 @@ import { pageRegistry, theoryClusters } from "../data/site";
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
     <section class="shell">
+      <div class="registry-chassis ideas-guidance">
+        <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+          <span class="registry-key">START_HERE</span>: <span class="registry-value">IDEAS_TO_ESSAY_TO_PROOF</span>
+        </div>
+        <p class="ideas-guidance__copy">
+          These ideas explain the map. The flagship essay makes the main argument. The proof room shows how that argument becomes evidence.
+        </p>
+        <div class="ideas-guidance__links">
+          <a href={homepageActions.startHere.href} class="ideas-guidance__link">{homepageActions.startHere.label}</a>
+          <a href={homepageActions.proof.href} class="ideas-guidance__link">Then inspect the proof room</a>
+        </div>
+      </div>
+
       <div class="spec-stack">
         {theoryClusters.map((cluster) => (
           <div class="spec-panel-wrapper" id={cluster.slug}>
@@ -27,6 +40,39 @@ import { pageRegistry, theoryClusters } from "../data/site";
 </BaseLayout>
 
 <style>
+  .ideas-guidance {
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ideas-guidance__copy {
+    margin: 0;
+    max-width: 60ch;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--current-muted);
+  }
+
+  .ideas-guidance__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+    margin-top: 1.1rem;
+  }
+
+  .ideas-guidance__link {
+    color: var(--accent-signal);
+    font-size: 0.84rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .ideas-guidance__link:hover {
+    color: var(--current-text);
+  }
+
   .spec-stack {
     display: flex;
     flex-direction: column;
@@ -42,6 +88,16 @@ import { pageRegistry, theoryClusters } from "../data/site";
   }
 
   @media (max-width: 768px) {
+    .ideas-guidance {
+      padding: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .ideas-guidance__copy {
+      font-size: 0.95rem;
+    }
+    .ideas-guidance__link {
+      font-size: 0.76rem;
+    }
     .spec-stack {
       gap: 2.5rem;
     }

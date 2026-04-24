@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
-import { pageRegistry, projects } from "../data/site";
+import { homepageActions, pageRegistry, projects } from "../data/site";
 ---
 
 <BaseLayout title="Projects">
@@ -15,6 +15,19 @@ import { pageRegistry, projects } from "../data/site";
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
     <section class="shell">
+      <div class="registry-chassis proof-room-guidance">
+        <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+          <span class="registry-key">READING_PATH</span>: <span class="registry-value">THESIS_TO_PROOF</span>
+        </div>
+        <p class="proof-room-guidance__copy">
+          Start with the flagship essay if you want the full argument, then inspect the proof chain below in order. MPLP is the clearest first proof record.
+        </p>
+        <div class="proof-room-guidance__links">
+          <a href={homepageActions.startHere.href} class="proof-room-link">{homepageActions.startHere.label}</a>
+          <a href="/projects/mplp/" class="proof-room-link">Open the first proof: MPLP</a>
+        </div>
+      </div>
+
       <div class="evidence-ledger">
         {projects.map((project) => (
           <div class="ledger-item" id={project.slug}>
@@ -30,6 +43,39 @@ import { pageRegistry, projects } from "../data/site";
 </BaseLayout>
 
 <style>
+  .proof-room-guidance {
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .proof-room-guidance__copy {
+    margin: 0;
+    max-width: 62ch;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--current-muted);
+  }
+
+  .proof-room-guidance__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+    margin-top: 1.1rem;
+  }
+
+  .proof-room-link {
+    color: var(--accent-signal);
+    font-size: 0.84rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .proof-room-link:hover {
+    color: var(--current-text);
+  }
+
   .evidence-ledger {
     display: flex;
     flex-direction: column;
@@ -45,6 +91,16 @@ import { pageRegistry, projects } from "../data/site";
   }
 
   @media (max-width: 768px) {
+    .proof-room-guidance {
+      padding: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .proof-room-guidance__copy {
+      font-size: 0.95rem;
+    }
+    .proof-room-link {
+      font-size: 0.76rem;
+    }
     .evidence-ledger {
       gap: 2.5rem;
     }

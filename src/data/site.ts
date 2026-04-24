@@ -30,6 +30,10 @@ export const homepageActions = {
   proof: {
     href: "/projects/",
     label: "Open the proof room"
+  },
+  startHere: {
+    href: "/essays/from-prompt-engineering-to-protocol-engineering/",
+    label: "Start with the flagship essay"
   }
 };
 
@@ -60,13 +64,13 @@ export const pageRegistry = {
     title: "Projects",
     objectType: "PAGE_ROLE",
     objectValue: "EVIDENCE LEDGER",
-    lead: "The public proof chain. Each record shows a different layer of the architecture made concrete."
+    lead: "The public proof chain. Start with the thesis, then use this room to inspect how each proof object carries a different architectural claim."
   },
   ideas: {
     title: "Ideas",
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPTUAL BLUEPRINT",
-    lead: "The conceptual library behind reliable AI agent work delivery, Protocol Engineering, and Agent Governance."
+    lead: "The conceptual library behind reliable AI agent work delivery, Protocol Engineering, and Agent Governance. Use it as a map, then move into the flagship essay and proof pages."
   },
   ideasLegacy: {
     title: "Ideas",
@@ -204,12 +208,26 @@ export const projects = [
   }
 ];
 
+export const proofGraphOrder = ["mplp", "cognitive-os", "solocrew", "validation-lab"] as const;
+
 export function getProjectByName(name: string) {
   return projects.find((project) => project.name === name);
 }
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);
+}
+
+export function getProjectGraphPosition(slug: string) {
+  const index = proofGraphOrder.indexOf(slug as (typeof proofGraphOrder)[number]);
+  const previousSlug = index > 0 ? proofGraphOrder[index - 1] : null;
+  const nextSlug = index >= 0 && index < proofGraphOrder.length - 1 ? proofGraphOrder[index + 1] : null;
+
+  return {
+    index,
+    previous: previousSlug ? getProjectBySlug(previousSlug) : null,
+    next: nextSlug ? getProjectBySlug(nextSlug) : null
+  };
 }
 
 export const aboutSpecs = [
