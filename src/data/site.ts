@@ -143,33 +143,73 @@ export const projects = [
     slug: "mplp",
     status: "Protocol",
     summary: "Open lifecycle protocol for AI agent systems.",
-    proof: "Defines the protocol vocabulary for context, planning, confirmation, trace, and evidence."
+    proof: "Defines the protocol vocabulary for context, planning, confirmation, trace, and evidence.",
+    proofRole: "PROTOCOL LAYER",
+    whatItIs:
+      "MPLP is an open lifecycle protocol for agent systems. It gives teams a shared vocabulary for context, plan, confirm, trace, governance, and evidence.",
+    problem:
+      "Most agent systems still move from prompt to output without a disciplined way to describe lifecycle state, handoff boundaries, or completion artifacts.",
+    proves:
+      "MPLP proves that reliable work delivery needs a protocol layer, not just a better prompt layer. Without a lifecycle grammar, governance and traceability stay vague.",
+    relatedIdeas: ["protocol-engineering", "agent-governance"],
+    adjacentProofs: ["cognitive-os", "validation-lab"]
   },
   {
     name: "Cognitive OS",
     slug: "cognitive-os",
     status: "Runtime",
     summary: "Runtime substrate for protocol-aware agent work.",
-    proof: "Shows how runtime state and operating constraints enforce reliable delivery."
+    proof: "Shows how runtime state and operating constraints enforce reliable delivery.",
+    proofRole: "RUNTIME SUBSTRATE",
+    whatItIs:
+      "Cognitive OS is the runtime-state-first substrate for protocol-aware work. It focuses on the operating surface where delegated work is actually executed.",
+    problem:
+      "A protocol vocabulary alone does not keep agent work reliable if runtime state, permissions, and working conditions are still implicit or weakly controlled.",
+    proves:
+      "Cognitive OS proves that reliable delivery needs a runtime substrate that enforces conditions, not just a conceptual model that describes them.",
+    relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
+    adjacentProofs: ["mplp", "solocrew"]
   },
   {
     name: "SoloCrew",
     slug: "solocrew",
     status: "Implementation",
     summary: "Personal AI operating loop and product projection.",
-    proof: "Applies protocol and runtime ideas to one-person-company AI work."
+    proof: "Applies protocol and runtime ideas to one-person-company AI work.",
+    proofRole: "APPLICATION PROJECTION",
+    whatItIs:
+      "SoloCrew is the application-facing projection of the protocol/runtime thesis into one-person-company AI work.",
+    problem:
+      "Systems ideas can remain abstract unless they show up inside a real operating loop that someone can use, inspect, and iterate on day to day.",
+    proves:
+      "SoloCrew proves that protocol-aware work can move from theory into a concrete product/application surface without collapsing back into generic AI tooling.",
+    relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
+    adjacentProofs: ["cognitive-os", "validation-lab"]
   },
   {
     name: "Validation Lab",
     slug: "validation-lab",
     status: "Audit",
     summary: "Evidence-based evaluation surface for lifecycle guarantees.",
-    proof: "Evaluates lifecycle guarantees with evidence rather than claims."
+    proof: "Evaluates lifecycle guarantees with evidence rather than claims.",
+    proofRole: "EVIDENCE SURFACE",
+    whatItIs:
+      "Validation Lab is the evaluation and adjudication surface for lifecycle guarantees. It is where claims about reliability are tested against evidence.",
+    problem:
+      "Agent systems often make large claims about governance, reliability, or safety without offering a visible surface for checking what evidence supports those claims.",
+    proves:
+      "Validation Lab proves that reliable work delivery ultimately needs evidence surfaces, not just architectural language. Proof must be inspectable.",
+    relatedIdeas: ["agent-governance", "reliable-ai-agent-work-delivery"],
+    adjacentProofs: ["mplp", "solocrew"]
   }
 ];
 
 export function getProjectByName(name: string) {
   return projects.find((project) => project.name === name);
+}
+
+export function getProjectBySlug(slug: string) {
+  return projects.find((project) => project.slug === slug);
 }
 
 export const aboutSpecs = [

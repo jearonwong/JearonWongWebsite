@@ -18,7 +18,10 @@ import { pageRegistry, projects } from "../data/site";
       <div class="evidence-ledger">
         {projects.map((project) => (
           <div class="ledger-item" id={project.slug}>
-            <ProjectProofCard {...project} />
+            <ProjectProofCard
+              {...project}
+              href={`/projects/${project.slug}/`}
+            />
           </div>
         ))}
       </div>

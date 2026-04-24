@@ -106,7 +106,10 @@ const essays = (await getCollection("essays"))
       </div>
       <div class="card-grid">
         {projects.map(project => (
-          <ProjectProofCard {...project} />
+          <ProjectProofCard
+            {...project}
+            href={`/projects/${project.slug}/`}
+          />
         ))}
       </div>
     </section>

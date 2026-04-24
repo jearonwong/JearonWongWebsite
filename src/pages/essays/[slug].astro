@@ -36,6 +36,7 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
   if (project) acc.push(project);
   return acc;
 }, []);
+const proofProject = getProjectByName(essay.data.projectProof);
 ---
 
 <BaseLayout
@@ -85,7 +86,11 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
           </div>
           <div class="sidebar-line">
             <span class="registry-key">PROOF_CHAIN</span>
-            <span class="registry-value">{essay.data.projectProof}</span>
+            {proofProject ? (
+              <a href={`/projects/${proofProject.slug}/`} class="sidebar-link">{essay.data.projectProof}</a>
+            ) : (
+              <span class="registry-value">{essay.data.projectProof}</span>
+            )}
           </div>
         </aside>
 
@@ -116,7 +121,7 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
                   <p class="chain-label">Proof chain</p>
                   <div class="chain-links">
                     {relatedProjects.map((project) => (
-                      <a href={`/projects/#${project.slug}`} class="chain-link">
+                      <a href={`/projects/${project.slug}/`} class="chain-link">
                         {project.name}
                       </a>
                     ))}
@@ -195,6 +200,13 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
   .sidebar-line {
     display: grid;
     gap: 0.35rem;
+  }
+  .sidebar-link {
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+  .sidebar-link:hover {
+    color: var(--current-text);
   }
   .article-content {
     font-size: 1.15rem;

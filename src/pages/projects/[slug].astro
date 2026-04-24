@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import { getProjectBySlug, getTheoryClusterName, homepageActions } from "../../data/site";
+
+export async function getStaticPaths() {
+  return ["mplp", "cognitive-os", "solocrew", "validation-lab"].map((slug) => ({
+    params: { slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const project = slug ? getProjectBySlug(slug) : undefined;
+
+if (!project) {
+  throw new Error(`Unknown project proof surface: ${slug}`);
+}
+
+const adjacentProofs = (project.adjacentProofs ?? []).reduce<
+  Array<NonNullable<ReturnType<typeof getProjectBySlug>>>
+>((acc, relatedSlug) => {
+  const adjacent = getProjectBySlug(relatedSlug);
+  if (adjacent) acc.push(adjacent);
+  return acc;
+}, []);
+---
+
+<BaseLayout title={`${project.name} Proof Surface`} description={project.summary}>
+  <RegistryPageHero
+    title={project.name}
+    objectType="PROOF_ROLE"
+    objectValue={project.proofRole}
+    lead={project.summary}
+  >
+    <div class="project-hero-links">
+      <a href="/projects/" class="registry-annotation hero-link">
+        <span class="registry-key">BACK_TO</span>: <span class="registry-value">PROJECTS</span>
+      </a>
+      <a href={homepageActions.thesis.href} class="registry-annotation hero-link">
+        <span class="registry-key">THESIS</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body" style="padding: 6rem 0;">
+    <article class="shell proof-shell">
+      <section class="proof-grid proof-grid--top">
+        <article class="registry-chassis proof-panel">
+          <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+            <span class="registry-key">WHAT_THIS_IS</span>
+          </div>
+          <h2 class="proof-panel-title">{project.name} is a proof object in the site thesis chain.</h2>
+          <p class="proof-panel-body">{project.whatItIs}</p>
+        </article>
+
+        <article class="registry-chassis proof-panel">
+          <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+            <span class="registry-key">PROBLEM_ADDRESSED</span>
+          </div>
+          <h2 class="proof-panel-title">The problem it addresses is lifecycle weakness after the demo.</h2>
+          <p class="proof-panel-body">{project.problem}</p>
+        </article>
+      </section>
+
+      <section class="registry-chassis proof-claim">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">WHAT_THIS_PROVES</span>: <span class="registry-value">{project.proofRole}</span>
+        </div>
+        <p class="proof-claim-text">{project.proves}</p>
+      </section>
+
+      <section class="proof-grid">
+        <article class="registry-chassis proof-panel">
+          <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+            <span class="registry-key">RELATED_IDEAS</span>
+          </div>
+          <div class="link-stack">
+            {(project.relatedIdeas ?? []).map((ideaSlug) => (
+              <a href={`/theories/#${ideaSlug}`} class="chain-link">
+                {getTheoryClusterName(ideaSlug)}
+              </a>
+            ))}
+          </div>
+        </article>
+
+        <article class="registry-chassis proof-panel">
+          <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+            <span class="registry-key">ADJACENT_PROOFS</span>
+          </div>
+          <div class="link-stack">
+            {adjacentProofs.map((adjacent) => (
+              <a href={`/projects/${adjacent.slug}/`} class="chain-link">
+                {adjacent.name}
+              </a>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section class="registry-chassis next-step-panel">
+        <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+          <span class="registry-key">WHERE_TO_GO_NEXT</span>
+        </div>
+        <div class="link-stack">
+          <a href={homepageActions.thesis.href} class="chain-link">Return to the flagship thesis essay</a>
+          <a href="/projects/" class="chain-link">Back to the proof room</a>
+          {adjacentProofs[0] && (
+            <a href={`/projects/${adjacentProofs[0].slug}/`} class="chain-link">
+              Continue to {adjacentProofs[0].name}
+            </a>
+          )}
+        </div>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .project-hero-links {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+  }
+
+  .hero-link {
+    text-decoration: none;
+  }
+
+  .hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .proof-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .proof-grid--top {
+    align-items: stretch;
+  }
+
+  .proof-panel {
+    padding: 2rem;
+  }
+
+  .proof-panel-title {
+    margin: 0 0 0.9rem;
+    font-size: 1.4rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
+  }
+
+  .proof-panel-body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--current-muted);
+  }
+
+  .proof-claim {
+    padding: 2rem;
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .proof-claim-text {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--current-text);
+    max-width: 64ch;
+  }
+
+  .next-step-panel {
+    padding: 1.75rem;
+  }
+
+  .link-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+  }
+
+  .chain-link {
+    color: var(--accent-signal);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .chain-link:hover {
+    color: var(--current-text);
+  }
+
+  @media (max-width: 900px) {
+    .proof-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .proof-panel,
+    .proof-claim,
+    .next-step-panel {
+      padding: 1.5rem;
+    }
+
+    .proof-panel-title {
+      font-size: 1.22rem;
+    }
+
+    .proof-panel-body,
+    .proof-claim-text,
+    .chain-link {
+      font-size: 0.95rem;
+    }
+  }
+</style>

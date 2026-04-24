@@ -4,9 +4,11 @@ interface Props {
   status: string;
   summary: string;
   proof: string;
+  href?: string;
+  linkLabel?: string;
 }
 
-const { name, status, summary, proof } = Astro.props;
+const { name, status, summary, proof, href, linkLabel = "Open proof record" } = Astro.props;
 ---
 
 <article class="registry-chassis evidence-record">
@@ -30,6 +32,10 @@ const { name, status, summary, proof } = Astro.props;
       </div>
       <p class="proof-text">{proof}</p>
     </div>
+
+    {href && (
+      <a href={href} class="proof-link">{linkLabel}</a>
+    )}
   </div>
 </article>
 
@@ -102,8 +108,24 @@ const { name, status, summary, proof } = Astro.props;
       padding: 1rem;
     }
 
-    .proof-text {
-      font-size: 0.88rem;
-    }
+  .proof-text {
+    font-size: 0.88rem;
+  }
+
+  .proof-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+
+  .proof-link:hover {
+    color: var(--current-text);
+  }
   }
 </style>
