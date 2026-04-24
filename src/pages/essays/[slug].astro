@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { getProjectByName, getProjectGraphPosition, getTheoryClusterName } from "../../data/site";
+import { getProjectByName, getProjectGraphPosition, getTheoryClusterName, siteConfig } from "../../data/site";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
@@ -38,6 +38,21 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
 }, []);
 const proofProject = getProjectByName(essay.data.projectProof);
 const primaryProofNext = proofProject ? getProjectGraphPosition(proofProject.slug).next : null;
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: essay.data.title,
+  description: essay.data.description,
+  datePublished: essay.data.publishDate.toISOString(),
+  author: {
+    "@type": "Person",
+    name: siteConfig.author.name,
+    jobTitle: siteConfig.author.role
+  },
+  mainEntityOfPage: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
+  url: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
+  about: [ideaName, ...(essay.data.relatedProjects ?? [])]
+};
 ---
 
 <BaseLayout
@@ -46,6 +61,8 @@ const primaryProofNext = proofProject ? getProjectGraphPosition(proofProject.slu
   canonicalPath={`/essays/${canonicalSlug}/`}
   noindex={isLegacy}
   ogType="article"
+  jsonLd={[articleJsonLd]}
+  ogImageAlt={`${essay.data.title} — ${siteConfig.author.name}`}
 >
   <RegistryPageHero
     title={essay.data.title}

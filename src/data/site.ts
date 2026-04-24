@@ -1,7 +1,8 @@
 export const siteConfig = {
   title: "Jearon Wang",
-  description: "Defining how AI agents reliably deliver real work.",
+  description: "Protocol Architect for the Agent Era. Defining how AI agents reliably deliver real work.",
   siteUrl: "https://jearonwong.com",
+  socialImagePath: "/social-card.svg",
   thesis: "Defining how AI agents reliably deliver real work.", // Canonical Thesis
   author: {
     name: "Jearon Wang",
@@ -155,6 +156,8 @@ export const projects = [
       "Most agent systems still move from prompt to output without a disciplined way to describe lifecycle state, handoff boundaries, or completion artifacts.",
     proves:
       "MPLP proves that reliable work delivery needs a protocol layer, not just a better prompt layer. Without a lifecycle grammar, governance and traceability stay vague.",
+    shareDescription:
+      "MPLP is the protocol-layer proof surface in the thesis chain. It shows why reliable AI work needs a lifecycle vocabulary for context, planning, confirmation, trace, governance, and evidence.",
     relatedIdeas: ["protocol-engineering", "agent-governance"],
     adjacentProofs: ["cognitive-os", "validation-lab"]
   },
@@ -171,6 +174,8 @@ export const projects = [
       "A protocol vocabulary alone does not keep agent work reliable if runtime state, permissions, and working conditions are still implicit or weakly controlled.",
     proves:
       "Cognitive OS proves that reliable delivery needs a runtime substrate that enforces conditions, not just a conceptual model that describes them.",
+    shareDescription:
+      "Cognitive OS is the runtime-substrate proof surface in the thesis chain. It shows how state, permissions, and operating constraints make protocol-aware work real.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
     adjacentProofs: ["mplp", "solocrew"]
   },
@@ -187,6 +192,8 @@ export const projects = [
       "Systems ideas can remain abstract unless they show up inside a real operating loop that someone can use, inspect, and iterate on day to day.",
     proves:
       "SoloCrew proves that protocol-aware work can move from theory into a concrete product/application surface without collapsing back into generic AI tooling.",
+    shareDescription:
+      "SoloCrew is the application-projection proof surface in the thesis chain. It shows how protocol and runtime ideas become a concrete operating loop rather than a generic AI tool.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
     adjacentProofs: ["cognitive-os", "validation-lab"]
   },
@@ -203,6 +210,8 @@ export const projects = [
       "Agent systems often make large claims about governance, reliability, or safety without offering a visible surface for checking what evidence supports those claims.",
     proves:
       "Validation Lab proves that reliable work delivery ultimately needs evidence surfaces, not just architectural language. Proof must be inspectable.",
+    shareDescription:
+      "Validation Lab is the evidence-surface proof page in the thesis chain. It shows why lifecycle claims need inspectable evidence instead of abstract assurance language.",
     relatedIdeas: ["agent-governance", "reliable-ai-agent-work-delivery"],
     adjacentProofs: ["mplp", "solocrew"]
   }

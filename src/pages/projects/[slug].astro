@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { getProjectBySlug, getProjectGraphPosition, getTheoryClusterName, homepageActions } from "../../data/site";
+import { getProjectBySlug, getProjectGraphPosition, getTheoryClusterName, homepageActions, siteConfig } from "../../data/site";
 
 export async function getStaticPaths() {
   return ["mplp", "cognitive-os", "solocrew", "validation-lab"].map((slug) => ({
@@ -26,9 +26,28 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
 const graphPosition = getProjectGraphPosition(project.slug);
 const previousProof = graphPosition.previous;
 const nextProof = graphPosition.next;
+const projectMetaDescription = project.shareDescription ?? `${project.summary} ${project.proves}`;
+const projectJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: project.name,
+  description: projectMetaDescription,
+  url: `${siteConfig.siteUrl}/projects/${project.slug}/`,
+  author: {
+    "@type": "Person",
+    name: siteConfig.author.name,
+    jobTitle: siteConfig.author.role
+  },
+  about: [project.proofRole, ...(project.relatedIdeas ?? [])]
+};
 ---
 
-<BaseLayout title={`${project.name} Proof Surface`} description={project.summary}>
+<BaseLayout
+  title={`${project.name} | ${project.proofRole}`}
+  description={projectMetaDescription}
+  jsonLd={[projectJsonLd]}
+  ogImageAlt={`${project.name} proof surface — ${project.proofRole}`}
+>
   <RegistryPageHero
     title={project.name}
     objectType="PROOF_ROLE"
