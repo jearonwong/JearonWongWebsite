@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { pageRegistry } from "../data/site";
+import { pageRegistry, socialLinks, siteConfig } from "../data/site";
 ---
 
 <BaseLayout title="Contact">
@@ -13,29 +13,110 @@ import { pageRegistry } from "../data/site";
   />
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
-    <section class="shell">
-      <article class="registry-chassis appendix-panel">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">STATUS</span>: <span class="registry-value">MANUAL_ROUTING</span>
+    <section class="shell" style="max-width: 800px;">
+
+      <!-- Primary: Email -->
+      <article class="registry-chassis contact-block">
+        <div class="registry-annotation" style="margin-bottom: 1.25rem;">
+          <span class="registry-key">PRIMARY_CHANNEL</span>
         </div>
-        <p class="appendix-body">
-          Direct routing is still lightweight in this public version of the site. For now, contact
-          requests are handled manually rather than through a live backend form.
-        </p>
+        <a href={`mailto:${siteConfig.author.email}`} class="email-cta">
+          {siteConfig.author.email}
+        </a>
+        <p class="contact-note">For direct conversations about Protocol Engineering, agent governance, proof systems, or collaboration.</p>
       </article>
+
+      <!-- Social channels -->
+      <article class="registry-chassis contact-block" style="margin-top: 2rem;">
+        <div class="registry-annotation" style="margin-bottom: 1.25rem;">
+          <span class="registry-key">SOCIAL_CHANNELS</span>
+        </div>
+        <div class="channel-grid">
+          {socialLinks.map(link => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer" class="channel-row">
+              <span class="channel-key">{link.platform.toUpperCase()}</span>
+              <span class="channel-value">{link.label}</span>
+            </a>
+          ))}
+        </div>
+      </article>
+
     </section>
   </div>
 </BaseLayout>
 
 <style>
-  .appendix-panel {
+  .contact-block {
     padding: 2.5rem;
   }
-  .appendix-body {
-    max-width: 62ch;
-    margin: 0;
+  .email-cta {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent-signal);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--accent-signal);
+    border-radius: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .email-cta:hover {
+    background: var(--accent-signal);
+    color: white;
+  }
+  .contact-note {
+    margin: 1.5rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--current-muted);
-    line-height: 1.7;
-    font-size: 1.05rem;
+    max-width: 55ch;
+  }
+  .channel-grid {
+    display: grid;
+    gap: 0;
+  }
+  .channel-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--current-line);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .channel-row:first-child {
+    border-top: 1px solid var(--current-line);
+  }
+  .channel-row:hover {
+    background: rgba(59, 130, 246, 0.03);
+  }
+  .channel-key {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-signal);
+  }
+  .channel-value {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--current-muted);
+  }
+  @media (max-width: 768px) {
+    .contact-block {
+      padding: 1.75rem;
+    }
+    .email-cta {
+      font-size: 0.95rem;
+      padding: 0.65rem 1.1rem;
+    }
+    .channel-row {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      padding: 0.7rem 0;
+    }
   }
 </style>

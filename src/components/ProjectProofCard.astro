@@ -6,9 +6,15 @@ interface Props {
   proof: string;
   href?: string;
   linkLabel?: string;
+  evidence?: {
+    repo?: string;
+    repoLabel?: string;
+    website?: string;
+    docs?: string;
+  };
 }
 
-const { name, status, summary, proof, href, linkLabel = "Open proof record" } = Astro.props;
+const { name, status, summary, proof, href, linkLabel = "Open proof record", evidence } = Astro.props;
 ---
 
 <article class="registry-chassis evidence-record">
@@ -35,6 +41,31 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record" } = 
 
     {href && (
       <a href={href} class="proof-link">{linkLabel}</a>
+    )}
+
+    {evidence && (evidence.repo || evidence.website || evidence.docs) && (
+      <div class="evidence-surface">
+        <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+          <span class="registry-key">EVIDENCE_SURFACE</span>
+        </div>
+        <div class="evidence-links">
+          {evidence.repo && (
+            <a href={evidence.repo} target="_blank" rel="noopener noreferrer" class="evidence-pill">
+              <span class="evidence-pill-key">SOURCE</span> {evidence.repoLabel || "Repository"}
+            </a>
+          )}
+          {evidence.website && (
+            <a href={evidence.website} target="_blank" rel="noopener noreferrer" class="evidence-pill">
+              <span class="evidence-pill-key">SITE</span> {new URL(evidence.website).host}
+            </a>
+          )}
+          {evidence.docs && (
+            <a href={evidence.docs} target="_blank" rel="noopener noreferrer" class="evidence-pill">
+              <span class="evidence-pill-key">DOCS</span> {new URL(evidence.docs).host}
+            </a>
+          )}
+        </div>
+      </div>
     )}
   </div>
 </article>
@@ -127,5 +158,41 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record" } = 
   .proof-link:hover {
     color: var(--current-text);
   }
+  }
+
+  .evidence-surface {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    border-left: 3px solid var(--accent-signal);
+    background: rgba(59, 130, 246, 0.02);
+    border-radius: 0 4px 4px 0;
+  }
+  .evidence-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .evidence-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+    border: 1px solid var(--current-border);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .evidence-pill:hover {
+    border-color: var(--accent-signal);
+    color: var(--accent-signal);
+  }
+  .evidence-pill-key {
+    font-weight: 700;
+    color: var(--accent-signal);
   }
 </style>

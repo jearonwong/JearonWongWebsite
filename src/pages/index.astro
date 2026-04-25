@@ -4,9 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import PortraitAnchor from "../components/PortraitAnchor.astro";
 import ImmediateProofSignal from "../components/ImmediateProofSignal.astro";
-import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
-import { homepageActions, siteConfig, theoryClusters, projects } from "../data/site";
+import { homepageActions, siteConfig, projects, socialLinks } from "../data/site";
 
 const essays = (await getCollection("essays"))
   .sort((left, right) =>
@@ -14,41 +13,37 @@ const essays = (await getCollection("essays"))
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
   )
   .slice(0, 3);
+
+const flagshipEssay = essays.find(e => e.data.flagship) || essays[0];
+
+const writingTracks = [
+  { name: "Protocol Engineering", desc: "Lifecycle vocabulary, handoff semantics, and delivery grammar for agent systems." },
+  { name: "Reliable Agent Delivery", desc: "How agent systems complete real work — plannable, verifiable, and auditable." },
+  { name: "Agent Governance & Evidence", desc: "Oversight structures, compliance surfaces, and accountability frameworks for autonomous work." },
+  { name: "AI Programming & Delivery Systems", desc: "Runtime architecture, state management, and operating constraints for protocol-aware agents." },
+  { name: "Agent Stack Commentary", desc: "Analysis and perspective on the evolving agent infrastructure landscape." }
+];
 ---
 
 <BaseLayout title={siteConfig.title} description={siteConfig.description}>
-  <!-- 1. The Architectural Stage -> Command Center -->
+  <!-- 1. Person + Thesis (Hero) -->
   <div class="zone-a registry-grid hero-wrapper" style="border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />
     
     <section class="shell hero-section">
       <div class="split-layout">
         <div class="hero-content">
-          <div class="registry-annotation hero-sequence">
-            <span class="registry-key">INIT_SEQUENCE</span>: <span class="registry-value">PROTOCOL_ARCHITECT_CORE</span>
-          </div>
           <h1 class="hero-nameplate">{siteConfig.author.name}</h1>
-          <p class="hero-role">
-            <span class="firstname">PROTOCOL ARCHITECT</span>
-            <span class="surname">FOR THE AGENT ERA</span>
-          </p>
-          <div class="registry-annotation hero-proposition">
-            <span class="registry-key">PROPOSITION</span>: <span class="registry-value">DEFINING_RELIABLE_WORK_DELIVERY</span>
-          </div>
-          
-          <p class="lead hero-lead">{siteConfig.thesis}</p>
+          <p class="hero-thesis">{siteConfig.thesis}</p>
+          <p class="hero-role-line">{siteConfig.author.role}</p>
+          <p class="hero-support">{siteConfig.supportLine}</p>
           
           <div class="hero-ctas">
             <a href={homepageActions.thesis.href} class="button button-primary">{homepageActions.thesis.label}</a>
             <a href={homepageActions.projects.href} class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">{homepageActions.projects.label}</a>
           </div>
 
-          <div class="registry-chassis proof-signal-band">
-            <div class="registry-grid" style="position: absolute; inset: 0; opacity: 0.05;"></div>
-            <div class="registry-annotation" style="margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
-              <span class="proof-signal-dot"></span>
-              <span class="registry-key">SYSTEM_PROOFS</span>: <span class="registry-value">ACTIVE_STREAM</span>
-            </div>
+          <div class="proof-signal-band">
             <ImmediateProofSignal />
           </div>
         </div>
@@ -59,49 +54,28 @@ const essays = (await getCollection("essays"))
     </section>
   </div>
 
-  <!-- 2. The Proposition -> Blueprint Zone -->
-  <div class="zone-b page-body" style="padding-top: 6rem;">
-    
-    <section id="blueprint" class="shell section-rhythm">
-      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--accent-signal); padding-left: 2rem;">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">MODULE</span>: <span class="registry-value">CONCEPTUAL_FRAMEWORK</span>
-        </div>
-        <h2 style="max-width: 20ch; font-weight: 800; letter-spacing: -0.03em;">Protocol architecture applied to autonomous agents.</h2>
-        <a href={homepageActions.ideas.href} class="section-link">{homepageActions.ideas.label}</a>
+  <!-- 2. Why Now (Narrative Band) — standalone dark zone, not inside zone-b -->
+  <section class="zone-a registry-grid narrative-band">
+    <div class="shell" style="max-width: 900px; text-align: left;">
+      <h2 class="narrative-lead">
+        The industry focused on models and tools. 
+        <br/>The missing layer is <span style="color: var(--accent-proof);">reliable work delivery</span>.
+      </h2>
+      <div class="narrative-support">
+        <p class="lead" style="margin: 0; color: var(--text-registry-muted);">
+          Prompt Engineering controls expression. Context Engineering controls what models see. Protocol Engineering controls the evidence of delivery.
+        </p>
       </div>
-      <div class="card-grid">
-        {theoryClusters.map(cluster => (
-          <SignatureIdeaCard {...cluster} />
-        ))}
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 3. The Narrative -> System State -->
-    <section class="zone-a registry-grid narrative-band" style="padding: 8rem 0; margin: 6rem 0; border-top: 1px solid var(--border-registry); border-bottom: 1px solid var(--border-registry);">
-      <div class="shell" style="max-width: 900px; text-align: left;">
-        <div class="registry-annotation" style="margin-bottom: 2rem;">
-          <span class="registry-key">SYSTEM_OBSERVATION</span>: <span class="registry-value">MARKET_GAP_ANALYSIS</span>
-        </div>
-        <h2 class="narrative-lead" style="font-size: 3rem; margin-bottom: 3rem;">
-          The industry focused on models and tools. 
-          <br/>The missing layer is <span style="color: var(--accent-proof);">reliable work delivery</span>.
-        </h2>
-        <div class="registry-chassis" style="padding: 2rem; border-left: 2px solid var(--accent-proof);">
-          <p class="lead" style="margin: 0; color: var(--text-registry-muted);">
-            Prompt Engineering controls expression. Context Engineering controls what models see. Protocol Engineering controls the evidence of delivery.
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="zone-b page-body">
 
-    <!-- 4. The Ledger -> Evidence Room -->
-    <section id="ledger" class="shell section-rhythm">
-      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--accent-proof); padding-left: 2rem;">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">MODULE</span>: <span class="registry-value">EVIDENCE_LEDGER</span>
-        </div>
-        <h2 style="font-weight: 800; letter-spacing: -0.02em;">Thinking made concrete.</h2>
+    <!-- 3. Proof Chain -->
+    <section id="proof" class="shell section-rhythm">
+      <div class="section-header">
+        <h2>The proof chain.</h2>
+        <p class="section-desc">Each project carries a different architectural claim. Together they form an evidence chain for reliable agent delivery.</p>
         <a href={homepageActions.proof.href} class="section-link">{homepageActions.proof.label}</a>
       </div>
       <div class="card-grid">
@@ -113,25 +87,54 @@ const essays = (await getCollection("essays"))
         ))}
       </div>
     </section>
-    <!-- 5. Featured Writing -> Logbook Snippet -->
-    <section class="shell section-rhythm" style="padding-top: 2rem;">
-      <div class="section-header" style="margin-bottom: 5rem; border-left: 4px solid var(--current-line); padding-left: 2rem;">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">MODULE</span>: <span class="registry-value">REGISTRY_LOG_SUMMARY</span>
+
+    <!-- 4. Flagship Essay -->
+    {flagshipEssay && (
+      <section class="shell section-rhythm" style="padding-top: 2rem;">
+        <div class="section-header">
+          <h2>The thesis essay.</h2>
+          <p class="section-desc">The foundational argument — why the industry needs Protocol Engineering.</p>
         </div>
-        <h2 style="font-weight: 800; letter-spacing: -0.02em;">Arguments about governance, memory, and proof.</h2>
+        <article class="flagship-card">
+          <div class="flagship-content">
+            <h3><a href={`/essays/${flagshipEssay.slug}/`}>{flagshipEssay.data.title}</a></h3>
+            <p class="muted">{flagshipEssay.data.description}</p>
+            <a href={`/essays/${flagshipEssay.slug}/`} class="section-link">Read the full essay</a>
+          </div>
+        </article>
+      </section>
+    )}
+
+    <!-- 5. Writing Tracks -->
+    <section class="shell section-rhythm" style="padding-top: 2rem;">
+      <div class="section-header">
+        <h2>Writing tracks.</h2>
+        <p class="section-desc">Five lines of inquiry across protocols, governance, runtime, delivery, and product.</p>
         <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
       </div>
-      <div class="essay-list">
-        {essays.map(essay => (
-          <article class="essay-row">
-            <span class="essay-date">{essay.data.publishDate.toLocaleDateString("en-US", { dateStyle: "medium" })}</span>
-            <div class="essay-content">
-              <h3><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-              <p class="muted">{essay.data.description}</p>
-            </div>
-          </article>
+      <div class="tracks-grid">
+        {writingTracks.map(track => (
+          <div class="track-item">
+            <h4 class="track-name">{track.name}</h4>
+            <p class="track-desc">{track.desc}</p>
+          </div>
         ))}
+      </div>
+    </section>
+
+    <!-- 6. Contact / Signal -->
+    <section class="shell section-rhythm quiet-close" style="padding-top: 2rem;">
+      <div class="close-content">
+        <h2>Get in touch.</h2>
+        <p class="section-desc">For industry dialogue, advisory, collaboration, or media.</p>
+        <div class="close-actions">
+          <a href={`mailto:${siteConfig.author.email}`} class="button button-primary" style="background: #111; color: #fff;">{siteConfig.author.email}</a>
+          <div class="close-social">
+            {socialLinks.map(link => (
+              <a href={link.href} target="_blank" rel="noopener noreferrer" class="social-pill">{link.platform}</a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -139,75 +142,55 @@ const essays = (await getCollection("essays"))
 </BaseLayout>
 
 <style>
+  /* ── Hero ── */
   .hero-wrapper {
     position: relative;
     overflow: hidden;
   }
   .hero-section {
     padding-top: 4.85rem;
-    padding-bottom: 6.5rem;
-  }
-  .hero-sequence {
-    margin-bottom: 1rem;
-    font-size: 0.68rem;
+    padding-bottom: 5.5rem;
   }
   .hero-nameplate {
     font-size: clamp(2.35rem, 4.8vw, 3rem);
     font-weight: 820;
     letter-spacing: -0.05em;
     line-height: 0.96;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     color: var(--text-registry-primary);
     max-width: 12ch;
   }
-  .hero-role {
+  .hero-thesis {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    margin-bottom: 0.75rem;
+    color: var(--text-registry-primary);
+    max-width: 22ch;
+  }
+  .hero-role-line {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
     text-transform: uppercase;
-    font-size: clamp(1.7rem, 3vw, 2.35rem);
-    letter-spacing: -0.045em;
-    line-height: 0.98;
-    margin-bottom: 1.1rem;
-    font-weight: 780;
-    display: flex;
-    flex-direction: column;
-    gap: 0.08rem;
-    filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.04));
-    max-width: 18ch;
-    color: var(--current-text);
+    letter-spacing: 0.06em;
+    color: var(--text-registry-muted);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
   }
-  .hero-role span {
-    display: block;
-    white-space: nowrap;
-  }
-  .hero-role .surname {
-    color: inherit;
-  }
-  .hero-role .firstname {
-    color: inherit;
-  }
-  .hero-proposition {
-    margin-bottom: 1.35rem;
-    color: var(--accent-signal);
-    font-size: 0.72rem;
-    font-weight: 700;
-  }
-  .hero-lead {
-    max-width: 42ch; 
-    color: var(--current-text); 
-    opacity: 1;
-    font-size: 1.18rem;
-    line-height: 1.6;
-    font-weight: 500;
-    margin-bottom: 2.35rem;
-    border-left: 2px solid var(--accent-signal);
-    padding-left: 1.25rem;
-    background: linear-gradient(90deg, rgba(59, 130, 246, 0.03) 0%, transparent 100%);
+  .hero-support {
+    max-width: 44ch;
+    color: var(--text-registry-muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    font-weight: 400;
+    margin-bottom: 2.25rem;
   }
   .proof-signal-band {
-    margin-top: 2.6rem; 
-    padding: 1.45rem 1.5rem; 
+    margin-top: 2.25rem;
+    padding: 1.25rem 1.5rem;
     background-color: rgba(10, 10, 10, 0.6);
     backdrop-filter: blur(10px);
-    position: relative;
     border: 1px solid var(--border-registry);
     border-left: 3px solid var(--accent-signal);
     max-width: 34rem;
@@ -217,17 +200,26 @@ const essays = (await getCollection("essays"))
     flex-wrap: wrap;
     gap: 0.85rem;
   }
-  
+
+  /* ── Sections ── */
   .section-header h2 {
-    font-size: clamp(2rem, 3.8vw, 2.6rem);
+    font-size: clamp(1.8rem, 3.2vw, 2.35rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
   }
-
+  .section-desc {
+    font-size: 1rem;
+    color: var(--current-muted);
+    line-height: 1.6;
+    max-width: 55ch;
+    margin-bottom: 0.25rem;
+  }
   .section-link {
     display: inline-flex;
     align-items: center;
-    margin-top: 1.15rem;
+    margin-top: 0.9rem;
     font-family: var(--font-mono);
     font-size: 0.72rem;
     letter-spacing: 0.08em;
@@ -235,132 +227,156 @@ const essays = (await getCollection("essays"))
     color: var(--accent-signal);
     text-decoration: none;
   }
-
   .section-link:hover {
     color: var(--current-text);
   }
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
 
+  /* ── Narrative Band ── */
+  .narrative-band {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-registry);
+    border-bottom: 1px solid var(--border-registry);
+  }
   .narrative-lead {
-    font-size: clamp(2.2rem, 4.2vw, 3rem);
-    line-height: 1.06;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
     letter-spacing: -0.02em;
-    margin: 1.25rem 0 2rem;
+    margin: 0 0 2rem;
     font-weight: 800;
   }
-  .narrative-lead em {
-    font-style: italic;
-    color: var(--zone-a-text);
+  .narrative-support {
+    padding: 1.5rem;
+    border-left: 2px solid var(--accent-proof);
   }
 
+  /* ── Card Grid ── */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
   }
 
-  .essay-list {
-    display: flex;
-    flex-direction: column;
+  /* ── Flagship ── */
+  .flagship-card {
+    background: var(--current-surface);
+    border: 1px solid var(--current-border);
+    border-left: 4px solid var(--accent-signal);
+    border-radius: var(--radius-module);
+    padding: 2.5rem;
   }
-  .essay-row {
+  .flagship-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .flagship-content h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .flagship-content h3 a:hover {
+    color: var(--accent-signal);
+  }
+  .flagship-content .muted {
+    color: var(--current-muted);
+    line-height: 1.6;
+    max-width: 60ch;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Writing Tracks ── */
+  .tracks-grid {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 2rem;
-    padding: 3rem 0;
-    border-top: 1px solid var(--zone-b-line);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
   }
-  .essay-row:last-child {
-    border-bottom: 1px solid var(--zone-b-line);
+  .track-item {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    border-bottom: 1px solid var(--current-line);
   }
-  .essay-date {
+  .track-name {
     font-family: var(--font-mono);
     font-size: 0.82rem;
-    color: var(--zone-b-muted);
-    padding-top: 0.4rem;
-  }
-  .essay-content h3 {
-    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent-signal);
     margin-bottom: 0.5rem;
-    line-height: 1.15;
   }
-  
+  .track-desc {
+    font-size: 0.9rem;
+    color: var(--current-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── Quiet Close ── */
+  .quiet-close {
+    padding-bottom: 2rem;
+  }
+  .close-content h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .close-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .close-social {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .social-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--current-muted);
+    border: 1px solid var(--current-border);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .social-pill:hover {
+    border-color: var(--accent-signal);
+    color: var(--accent-signal);
+  }
+
+  /* ── Layout ── */
   .split-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
     gap: 5rem;
     align-items: start;
   }
-
   .hero-visual {
     justify-self: end;
     width: min(100%, 22rem);
     padding-top: 1.4rem;
   }
 
+  /* ── Responsive ── */
   @media (max-width: 1024px) {
     .split-layout {
       gap: 3rem;
       grid-template-columns: 1fr;
     }
-
     .hero-visual {
       justify-self: start;
       width: min(100%, 21rem);
       padding-top: 0;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero-section {
-      padding-top: 4.5rem;
-      padding-bottom: 5.5rem;
-    }
-
-    .hero-nameplate {
-      font-size: clamp(2rem, 9vw, 2.7rem);
-    }
-
-    .hero-role {
-      font-size: clamp(1.4rem, 6.8vw, 1.85rem);
-      max-width: 15ch;
-    }
-
-    .hero-role span {
-      white-space: normal;
-    }
-
-    .hero-lead {
-      font-size: 1rem;
-      max-width: 36ch;
-    }
-
-    .proof-signal-band {
-      margin-top: 2.5rem;
-      padding: 1.4rem 1.25rem;
-    }
-
-    .hero-visual {
-      width: min(100%, 18rem);
-    }
-
-    .section-header {
-      margin-bottom: 3rem !important;
-      padding-left: 1.25rem !important;
-    }
-
-    .section-link {
-      margin-top: 0.9rem;
-    }
-
-    .card-grid {
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-
-    .narrative-band {
-      padding: 5.5rem 0 !important;
-      margin: 4rem 0 !important;
     }
   }
 
@@ -371,15 +387,46 @@ const essays = (await getCollection("essays"))
     }
     .hero-section {
       padding-top: 4rem;
-      padding-bottom: 5rem;
+      padding-bottom: 4.5rem;
     }
   }
-  
+
   @media (max-width: 768px) {
-    .essay-row {
+    .hero-section {
+      padding-top: 4.5rem;
+      padding-bottom: 4rem;
+    }
+    .hero-nameplate {
+      font-size: clamp(2rem, 9vw, 2.7rem);
+    }
+    .hero-thesis {
+      font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+    }
+    .hero-support {
+      font-size: 0.95rem;
+      max-width: 36ch;
+    }
+    .proof-signal-band {
+      margin-top: 2rem;
+      padding: 1.1rem 1.25rem;
+    }
+    .hero-visual {
+      width: min(100%, 18rem);
+    }
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+    .card-grid {
+      gap: 1.25rem;
+    }
+    .narrative-band {
+      padding: 4.5rem 0;
+    }
+    .tracks-grid {
       grid-template-columns: 1fr;
-      gap: 0.75rem;
-      padding: 2rem 0;
+    }
+    .flagship-card {
+      padding: 1.75rem;
     }
   }
 </style>

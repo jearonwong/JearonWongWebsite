@@ -38,6 +38,36 @@ const currentPath =
         <span class="nav-cta-label">Contact</span>
       </a>
     </div>
+
+    <!-- Mobile hamburger toggle -->
+    <input type="checkbox" id="mobile-drawer-toggle" class="drawer-checkbox" aria-hidden="true" />
+    <label for="mobile-drawer-toggle" class="hamburger-btn" aria-label="Open navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </label>
+
+    <!-- Mobile drawer -->
+    <label for="mobile-drawer-toggle" class="drawer-backdrop" aria-hidden="true"></label>
+    <nav class="drawer-panel" aria-label="Mobile navigation">
+      <div class="drawer-header">
+        <span class="brand-name">Jearon Wang</span>
+        <label for="mobile-drawer-toggle" class="drawer-close" aria-label="Close navigation menu">&times;</label>
+      </div>
+      <ul class="drawer-list">
+        {primaryNav.map(item => (
+          <li>
+            <a
+              href={item.href}
+              class:list={["drawer-link", currentPath === item.href.slice(0, -1) && "is-active"]}
+            >{item.label}</a>
+          </li>
+        ))}
+        <li class="drawer-divider"></li>
+        <li><a href="/contact/" class="drawer-link drawer-link--accent">Contact</a></li>
+        <li><a href="/newsletter/" class="drawer-link">Newsletter</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -147,9 +177,136 @@ const currentPath =
     text-transform: uppercase;
   }
 
+  /* ── Mobile Hamburger ── */
+  .drawer-checkbox { display: none; }
+
+  .hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    align-items: center;
+    z-index: 1002;
+  }
+  .hamburger-line {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--text-registry-primary);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .drawer-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1001;
+  }
+
+  .drawer-panel {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100dvh;
+    background: var(--bg-monolith);
+    border-left: 1px solid var(--border-registry);
+    z-index: 1003;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    visibility: hidden;
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-registry);
+    margin-bottom: 1.5rem;
+  }
+  .drawer-header .brand-name {
+    font-size: 1rem;
+  }
+  .drawer-close {
+    color: var(--text-registry-primary);
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .drawer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .drawer-link {
+    display: block;
+    padding: 0.9rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-registry-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-registry);
+    transition: color 0.2s ease;
+  }
+  .drawer-link:hover,
+  .drawer-link.is-active {
+    color: var(--text-registry-primary);
+  }
+  .drawer-link--accent {
+    font-weight: 700;
+    color: var(--text-registry-primary);
+  }
+  .drawer-divider {
+    height: 0;
+    border-bottom: 1px solid var(--border-registry);
+    margin: 0.5rem 0;
+  }
+
+  /* ── Checkbox-driven state ── */
+  .drawer-checkbox:checked ~ .drawer-backdrop {
+    display: block;
+  }
+  .drawer-checkbox:checked ~ .drawer-panel {
+    right: 0;
+    visibility: visible;
+  }
+  .drawer-checkbox:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .drawer-checkbox:checked ~ .hamburger-btn .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .drawer-checkbox:checked ~ .hamburger-btn .hamburger-line:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
   @media (max-width: 900px) {
-    .nav-desktop {
+    .nav-desktop, .nav-actions {
       display: none;
+    }
+    .hamburger-btn {
+      display: flex;
+    }
+    .drawer-panel {
+      visibility: hidden;
     }
   }
 

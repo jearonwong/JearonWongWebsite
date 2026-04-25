@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { aboutSpecs, pageRegistry } from "../data/site";
+import { aboutSpecs, pageRegistry, socialLinks, siteConfig } from "../data/site";
 ---
 
 <BaseLayout title="About">
@@ -40,6 +40,24 @@ import { aboutSpecs, pageRegistry } from "../data/site";
               explicit, the frameworks are inspectable, and the writing exists to support a category
               definition rather than a generic personal brand story.
             </p>
+          </div>
+        </div>
+
+        <div class="external-verification">
+          <div class="registry-annotation" style="margin-bottom: 1.25rem;">
+            <span class="registry-key">EXTERNAL_VERIFICATION</span>
+          </div>
+          <div class="verification-grid">
+            {socialLinks.map(link => (
+              <a href={link.href} target="_blank" rel="noopener noreferrer" class="verification-row">
+                <span class="verification-key">{link.platform.toUpperCase()}</span>
+                <span class="verification-value">{link.label}</span>
+              </a>
+            ))}
+            <a href={`mailto:${siteConfig.author.email}`} class="verification-row">
+              <span class="verification-key">EMAIL</span>
+              <span class="verification-value">{siteConfig.author.email}</span>
+            </a>
           </div>
         </div>
       </div>
@@ -109,6 +127,52 @@ import { aboutSpecs, pageRegistry } from "../data/site";
     .spec-narrative .prose {
       font-size: 1rem;
       line-height: 1.65;
+    }
+  }
+
+  .external-verification {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .verification-grid {
+    display: grid;
+    gap: 0;
+  }
+  .verification-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--current-line);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .verification-row:first-child {
+    border-top: 1px solid var(--current-line);
+  }
+  .verification-row:hover {
+    background: rgba(59, 130, 246, 0.03);
+  }
+  .verification-key {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-signal);
+  }
+  .verification-value {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--current-muted);
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 768px) {
+    .verification-row {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+      padding: 0.85rem 1rem;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import SiteFooter from "../components/SiteFooter.astro";
-import { siteConfig } from "../data/site";
+import { siteConfig, socialLinks } from "../data/site";
 
 interface Props {
   title?: string;
@@ -41,9 +41,21 @@ const personJsonLd = JSON.stringify({
   "@type": "Person",
   "@id": `${siteConfig.siteUrl}#person`,
   name: siteConfig.author.name,
+  alternateName: "Jearon Wong",
   url: siteConfig.siteUrl,
   jobTitle: siteConfig.author.role,
-  description: siteConfig.author.bio
+  description: siteConfig.thesis,
+  knowsAbout: [
+    "AI agent reliability",
+    "reliable AI agent delivery",
+    "protocol engineering",
+    "agent governance",
+    "verifiable AI agents",
+    "agent evidence chain",
+    "AI agent lifecycle protocol",
+    "governable agent systems"
+  ],
+  sameAs: socialLinks.map(l => l.href)
 });
 ---
 

@@ -1,15 +1,24 @@
 export const siteConfig = {
   title: "Jearon Wang",
-  description: "Protocol Architect for the Agent Era. Defining how AI agents reliably deliver real work.",
+  description: "Defining what reliable delivery means for AI agents. Protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   siteUrl: "https://jearonwong.com",
   socialImagePath: "/social-card.svg",
-  thesis: "Defining how AI agents reliably deliver real work.", // Canonical Thesis
+  thesis: "Defining reliable delivery for AI agents.", // v1.0 Primary Headline
+  supportLine: "While the industry optimizes prompts and contexts, I build protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   author: {
     name: "Jearon Wang",
-    role: "Protocol Architect for the Agent Era", // Canonical Role Line
-    bio: "Writing and building at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery."
+    role: "Protocol Architect for the Agent Era", // Secondary role descriptor
+    bio: "Writing and building at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery.",
+    email: "contact@jearonwong.com"
   }
 };
+
+export const socialLinks = [
+  { platform: "GitHub", href: "https://github.com/Coregentis", label: "github.com/Coregentis" },
+  { platform: "LinkedIn", href: "https://www.linkedin.com/in/jearonwong/", label: "linkedin.com/in/jearonwong" },
+  { platform: "X", href: "https://x.com/jearonwong", label: "x.com/jearonwong" },
+  { platform: "Medium", href: "https://medium.com/@jearonwong", label: "medium.com/@jearonwong" }
+];
 
 export const homepageActions = {
   thesis: {
@@ -159,7 +168,13 @@ export const projects = [
     shareDescription:
       "MPLP is the protocol-layer proof surface in the thesis chain. It shows why reliable AI work needs a lifecycle vocabulary for context, planning, confirmation, trace, governance, and evidence.",
     relatedIdeas: ["protocol-engineering", "agent-governance"],
-    adjacentProofs: ["cognitive-os", "validation-lab"]
+    adjacentProofs: ["cognitive-os", "validation-lab"],
+    evidence: {
+      repo: "https://github.com/Coregentis/MPLP-Protocol",
+      repoLabel: "MPLP-Protocol",
+      website: "https://www.mplp.io",
+      docs: "https://docs.mplp.io"
+    }
   },
   {
     name: "Cognitive OS",
@@ -177,7 +192,11 @@ export const projects = [
     shareDescription:
       "Cognitive OS is the runtime-substrate proof surface in the thesis chain. It shows how state, permissions, and operating constraints make protocol-aware work real.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
-    adjacentProofs: ["mplp", "solocrew"]
+    adjacentProofs: ["mplp", "solocrew"],
+    evidence: {
+      repo: "https://github.com/Coregentis/Cognitive_OS",
+      repoLabel: "Cognitive_OS"
+    }
   },
   {
     name: "SoloCrew",
@@ -195,7 +214,11 @@ export const projects = [
     shareDescription:
       "SoloCrew is the application-projection proof surface in the thesis chain. It shows how protocol and runtime ideas become a concrete operating loop rather than a generic AI tool.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
-    adjacentProofs: ["cognitive-os", "validation-lab"]
+    adjacentProofs: ["cognitive-os", "validation-lab"],
+    evidence: {
+      repo: "https://github.com/Coregentis/SoloCrew",
+      repoLabel: "SoloCrew"
+    }
   },
   {
     name: "Validation Lab",
@@ -213,7 +236,12 @@ export const projects = [
     shareDescription:
       "Validation Lab is the evidence-surface proof page in the thesis chain. It shows why lifecycle claims need inspectable evidence instead of abstract assurance language.",
     relatedIdeas: ["agent-governance", "reliable-ai-agent-work-delivery"],
-    adjacentProofs: ["mplp", "solocrew"]
+    adjacentProofs: ["mplp", "solocrew"],
+    evidence: {
+      repo: "https://github.com/Coregentis/MPLP-Validation-Lab",
+      repoLabel: "MPLP-Validation-Lab",
+      website: "https://lab.mplp.io"
+    }
   }
 ];
 

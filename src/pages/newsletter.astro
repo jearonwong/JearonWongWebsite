@@ -13,29 +13,143 @@ import { pageRegistry } from "../data/site";
   />
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
-    <section class="shell">
-      <article class="registry-chassis appendix-panel">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">STATUS</span>: <span class="registry-value">PLACEHOLDER_ONLY</span>
+    <section class="shell" style="max-width: 700px;">
+
+      <!-- Subscribe form -->
+      <article class="registry-chassis subscribe-block">
+        <div class="registry-annotation" style="margin-bottom: 1.25rem;">
+          <span class="registry-key">SUBSCRIBE</span>
         </div>
-        <p class="appendix-body">
-          The newsletter route exists now as a stable subscription destination, but the delivery
-          mechanism remains intentionally lightweight in this static-first release.
+        <p class="subscribe-desc">
+          Get notified when new essays, proof records, or protocol updates are published.
+          No filler, no sponsor inserts.
         </p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/jearonwong"
+          method="post"
+          target="popupwindow"
+          class="subscribe-form"
+        >
+          <input
+            type="email"
+            name="email"
+            id="bd-email"
+            placeholder="your@email.com"
+            required
+            class="subscribe-input"
+          />
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+        <div class="registry-annotation" style="margin-top: 1.5rem;">
+          <span class="registry-key">FREQUENCY</span>: <span class="registry-value">WHEN THERE IS SUBSTANCE TO REPORT</span>
+        </div>
       </article>
+
+      <!-- RSS alternative -->
+      <article class="registry-chassis rss-block" style="margin-top: 2rem;">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">ALTERNATIVE</span>
+        </div>
+        <p class="rss-desc">Prefer RSS? Subscribe via your reader:</p>
+        <a href="/rss.xml" class="rss-link">RSS FEED</a>
+      </article>
+
     </section>
   </div>
 </BaseLayout>
 
 <style>
-  .appendix-panel {
+  .subscribe-block {
     padding: 2.5rem;
   }
-  .appendix-body {
-    max-width: 62ch;
-    margin: 0;
-    color: var(--current-muted);
-    line-height: 1.7;
+  .subscribe-desc {
+    margin: 0 0 2rem;
     font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--current-muted);
+    max-width: 50ch;
+  }
+  .subscribe-form {
+    display: flex;
+    gap: 0;
+  }
+  .subscribe-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    background: white;
+    color: #111;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .subscribe-input:focus {
+    border-color: var(--accent-signal);
+  }
+  .subscribe-input::placeholder {
+    color: #94a3b8;
+  }
+  .subscribe-btn {
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--accent-signal);
+    color: white;
+    border: 1px solid var(--accent-signal);
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .subscribe-btn:hover {
+    opacity: 0.85;
+  }
+  .rss-block {
+    padding: 2rem 2.5rem;
+  }
+  .rss-desc {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    color: var(--current-muted);
+  }
+  .rss-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--current-text);
+    border: 1px solid var(--current-border);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+  }
+  .rss-link:hover {
+    border-color: var(--accent-signal);
+    color: var(--accent-signal);
+  }
+  @media (max-width: 640px) {
+    .subscribe-block, .rss-block {
+      padding: 1.75rem;
+    }
+    .subscribe-form {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .subscribe-input {
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 2px;
+    }
+    .subscribe-btn {
+      border-radius: 2px;
+    }
   }
 </style>
