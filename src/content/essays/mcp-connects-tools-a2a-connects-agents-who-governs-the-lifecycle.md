@@ -109,7 +109,7 @@ These are not merely application engineering questions. They are protocol design
 
 ## MPLP: One Proposed Answer to This Missing Layer
 
-In late 2025, we froze version 1.0 of the Multi-Agent Lifecycle Protocol - MPLP - an open specification built specifically to define this governance layer. What follows is how MPLP addresses the four questions above. I offer it here as one proposed answer, not as the only possible one.
+In late 2025, we froze version 1.0 of the Multi-Agent Lifecycle Protocol (MPLP), an open specification built specifically to define this governance layer. What follows is how MPLP addresses the four questions above. I offer it here as one proposed answer, not as the only possible one.
 
 I want to be direct about what MPLP is not: it is not a replacement for MCP. It is not a competitor to A2A. You still need MCP to connect your agents to tools. You still need A2A to coordinate agents across vendors. MPLP sits above those layers. It defines what must be established before MCP and A2A begin their work - and what must remain traceable while they operate.
 
@@ -198,7 +198,7 @@ The specification is at [github.com/Coregentis/MPLP-Protocol](https://github.com
 
 ---
 
-*Jearon Wong is the founder of Coregentis and the primary author of the Multi-Agent Lifecycle Protocol - MPLP. He is building SoloCrew, a governed AI operating environment for solo founders, on top of the MPLP stack.*
+*Jearon Wong is the founder of Coregentis and the primary author of the Multi-Agent Lifecycle Protocol (MPLP). He is building SoloCrew, a governed AI operating environment for solo founders, on top of the MPLP stack.*
 
 ## References
 

@@ -22,6 +22,11 @@ const readingPathEntries = homepageContent.readingPath
   })
   .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 
+const agenticDeliveryFlowRows = [
+  homepageContent.coreThesis.agenticDeliveryFlow.slice(0, 4),
+  homepageContent.coreThesis.agenticDeliveryFlow.slice(4)
+];
+
 const writingTracks = [
   { name: "Protocol Engineering", desc: "Lifecycle vocabulary, handoff semantics, and delivery grammar for agent systems." },
   { name: "Reliable Agent Delivery", desc: "How agent systems complete real work — plannable, verifiable, and auditable." },
@@ -60,7 +65,12 @@ const writingTracks = [
     </section>
   </div>
 
-  <!-- 2. Core Thesis -->
+  <!-- 2. Stack Architecture -->
+  <div class="zone-b page-body page-body--stack">
+    <CoreArchitectureMap />
+  </div>
+
+  <!-- 3. Core Thesis -->
   <section class="zone-a registry-grid core-thesis-band">
     <div class="shell core-thesis-layout">
       <div class="core-thesis-copy">
@@ -87,12 +97,16 @@ const writingTracks = [
 
         <div class="compare-track compare-track--delivery">
           <span class="compare-label">{homepageContent.coreThesis.agenticDeliveryLabel}</span>
-          <div class="compare-flow">
-            {homepageContent.coreThesis.agenticDeliveryFlow.map((step, index) => (
-              <>
-                <span class="compare-step">{step}</span>
-                {index < homepageContent.coreThesis.agenticDeliveryFlow.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
-              </>
+          <div class="compare-flow compare-flow--delivery">
+            {agenticDeliveryFlowRows.map((row, rowIndex) => (
+              <div class:list={["compare-flow-row", rowIndex > 0 && "compare-flow-row--continuation"]}>
+                {row.map((step, index) => (
+                  <>
+                    <span class="compare-step">{step}</span>
+                    {index < row.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
+                  </>
+                ))}
+              </div>
             ))}
           </div>
         </div>
@@ -101,9 +115,6 @@ const writingTracks = [
   </section>
 
   <div class="zone-b page-body">
-    <!-- 3. Stack Architecture -->
-    <CoreArchitectureMap />
-
     <!-- 4. Proof Surfaces -->
     <section id="proof" class="shell section-rhythm">
       <div class="section-header">
@@ -316,19 +327,26 @@ const writingTracks = [
   }
 
   .thesis-compare {
-    padding: 1.45rem;
+    padding: 1.65rem 1.85rem;
     background-color: rgba(10, 10, 10, 0.54);
   }
 
+  .compare-track {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
   .compare-track + .compare-track {
-    margin-top: 1rem;
-    padding-top: 1rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--border-registry);
   }
 
   .compare-label {
     display: block;
-    margin-bottom: 0.8rem;
+    margin-top: 0.45rem;
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -346,6 +364,24 @@ const writingTracks = [
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
+    min-width: 0;
+  }
+
+  .compare-flow--delivery {
+    display: grid;
+    gap: 0.62rem;
+  }
+
+  .compare-flow-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .compare-flow-row--continuation {
+    padding-left: 0;
   }
 
   .compare-step {
@@ -357,6 +393,7 @@ const writingTracks = [
     font-size: 0.68rem;
     letter-spacing: 0.03em;
     white-space: nowrap;
+    text-align: center;
   }
 
   .compare-arrow {
@@ -568,6 +605,17 @@ const writingTracks = [
       grid-template-columns: 1fr;
       gap: 2rem;
     }
+    .thesis-compare {
+      padding: 1.35rem;
+    }
+    .compare-track {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    .compare-label {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     .tracks-grid {
       grid-template-columns: 1fr;
     }
@@ -579,6 +627,27 @@ const writingTracks = [
   @media (max-width: 620px) {
     .card-grid {
       grid-template-columns: 1fr;
+    }
+    .compare-flow--delivery {
+      gap: 0.5rem;
+    }
+    .compare-track--delivery .compare-flow-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+    .compare-track--delivery .compare-arrow {
+      display: none;
+    }
+    .compare-track--delivery .compare-step {
+      width: 100%;
+      min-height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .compare-flow-row--continuation .compare-step:last-child {
+      grid-column: 1 / -1;
     }
     .reading-path-card {
       grid-template-columns: 1fr;

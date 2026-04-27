@@ -5,7 +5,7 @@ Static-first Astro site for publishing essays, theory clusters, projects, and go
 ## What ships
 
 - Primary navigation: Home, Essays, Theory Clusters, Projects, Governance
-- Three initial essays with frontmatter-backed content collections
+- Current essays with frontmatter-backed content collections
 - Projects framed as proof points rather than a generic portfolio
 - Discovery assets: sitemap, robots, RSS, metadata baseline, and JSON-LD baseline
 - No auth, database, payments, or SaaS runtime requirements

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: "Jearon Wang",
+  title: "Jearon Wong",
   description: "Defining what reliable delivery means for AI agents. Protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   siteUrl: "https://jearonwong.com",
   socialImagePath: "/social-card.svg",
@@ -7,7 +7,7 @@ export const siteConfig = {
   supportLine: "While the industry optimizes prompts and contexts, I build protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   newsletterEndpoint: "https://buttondown.com/api/emails/embed-subscribe/jearonwong",
   author: {
-    name: "Jearon Wang",
+    name: "Jearon Wong",
     role: "Protocol Architect for the Agent Era", // Secondary role descriptor
     bio: "Writing and building at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery.",
     image: "/images/jearon-wong-avatar.jpg",
@@ -131,17 +131,17 @@ export const secondaryNav = [
 
 export const pageRegistry = {
   about: {
-    title: "Jearon Wang",
+    title: "Jearon Wong",
     subtitle: "Protocol Architect for the Agent Era",
     objectType: "PAGE_ROLE",
     objectValue: "IDENTITY SHEET",
-    lead: "A concise identity sheet for the thesis, category, and proof chain behind this site."
+    lead: "A concise identity sheet for the thesis, category, and stack proof behind this site."
   },
   projects: {
     title: "Projects",
     objectType: "PAGE_ROLE",
     objectValue: "EVIDENCE LEDGER",
-    lead: "The public proof chain. Start with the thesis, then use this room to inspect how each proof object carries a different architectural claim."
+    lead: "The public proof surfaces. Start with the thesis, then use this room to inspect how each proof object carries a different architectural claim."
   },
   ideas: {
     title: "Ideas",
@@ -183,7 +183,7 @@ export const pageRegistry = {
     title: "Newsletter",
     objectType: "PAGE_ROLE",
     objectValue: "SUBSCRIPTION PATH",
-    lead: "A future stream for essays, field notes, protocol updates, and proof-chain progress."
+    lead: "A future stream for essays, field notes, protocol updates, and proof-surface progress."
   }
 };
 
@@ -223,11 +223,11 @@ export const projects = [
     name: "MPLP",
     slug: "mplp",
     status: "Protocol",
-    summary: "Open lifecycle protocol for AI agent systems.",
+    summary: "Vendor-neutral lifecycle protocol for AI agent systems.",
     proof: "Defines the protocol vocabulary for context, planning, confirmation, trace, and evidence.",
     proofRole: "PROTOCOL LAYER",
     whatItIs:
-      "MPLP is an open lifecycle protocol for agent systems. It gives teams a shared vocabulary for context, plan, confirm, trace, governance, and evidence.",
+      "MPLP is a vendor-neutral lifecycle protocol for AI agent systems. It gives teams a shared vocabulary for context, plan, confirm, trace, governance, and evidence.",
     problem:
       "Most agent systems still move from prompt to output without a disciplined way to describe lifecycle state, handoff boundaries, or completion artifacts.",
     proves:
@@ -247,17 +247,17 @@ export const projects = [
     name: "Cognitive OS",
     slug: "cognitive-os",
     status: "Runtime",
-    summary: "Runtime substrate for protocol-aware agent work.",
+    summary: "Runtime foundation for protocol-aware agent work.",
     proof: "Shows how runtime state and operating constraints enforce reliable delivery.",
     proofRole: "RUNTIME FOUNDATION",
     whatItIs:
-      "Cognitive OS is the runtime-state-first substrate for protocol-aware work. It focuses on the operating surface where delegated work is actually executed.",
+      "Cognitive OS is the runtime foundation for protocol-aware work. It focuses on the operating surface where delegated work is actually executed.",
     problem:
       "A protocol vocabulary alone does not keep agent work reliable if runtime state, permissions, and working conditions are still implicit or weakly controlled.",
     proves:
-      "Cognitive OS proves that reliable delivery needs a runtime substrate that enforces conditions, not just a conceptual model that describes them.",
+      "Cognitive OS proves that reliable delivery needs a runtime foundation that enforces conditions, not just a conceptual model that describes them.",
     shareDescription:
-      "Cognitive OS is the runtime-substrate proof surface in the thesis chain. It shows how state, permissions, and operating constraints make protocol-aware work real.",
+      "Cognitive OS is the runtime-foundation proof surface in the thesis chain. It shows how state, permissions, and operating constraints make protocol-aware work real.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
     adjacentProofs: ["mplp", "solocrew"],
     evidence: {
@@ -269,17 +269,17 @@ export const projects = [
     name: "SoloCrew",
     slug: "solocrew",
     status: "Product",
-    summary: "Personal AI operating loop and product projection.",
+    summary: "Personal AI operating loop and product proof.",
     proof: "Applies protocol and runtime ideas to one-person-company AI work.",
     proofRole: "PRODUCT PROOF",
     whatItIs:
-      "SoloCrew is the application-facing projection of the protocol/runtime thesis into one-person-company AI work.",
+      "SoloCrew is the product proof of the protocol/runtime thesis in one-person-company AI work.",
     problem:
       "Systems ideas can remain abstract unless they show up inside a real operating loop that someone can use, inspect, and iterate on day to day.",
     proves:
       "SoloCrew proves that protocol-aware work can move from theory into a concrete product/application surface without collapsing back into generic AI tooling.",
     shareDescription:
-      "SoloCrew is the application-projection proof surface in the thesis chain. It shows how protocol and runtime ideas become a concrete operating loop rather than a generic AI tool.",
+      "SoloCrew is the product-proof surface in the thesis chain. It shows how protocol and runtime ideas become a concrete operating loop rather than a generic AI tool.",
     relatedIdeas: ["reliable-ai-agent-work-delivery", "protocol-engineering"],
     adjacentProofs: ["cognitive-os", "validation-lab"],
     evidence: {
@@ -299,7 +299,7 @@ export const projects = [
     problem:
       "Agent systems often make large claims about governance, reliability, or safety without offering a visible surface for checking what evidence supports those claims.",
     proves:
-      "Validation Lab proves that reliable work delivery ultimately needs evidence surfaces, not just architectural language. Proof must be inspectable.",
+      "Validation Lab verifies that reliable work delivery ultimately needs evidence surfaces, not just architectural language. Proof must be inspectable.",
     shareDescription:
       "Validation Lab is the evidence-surface proof page in the thesis chain. It shows why lifecycle claims need inspectable evidence instead of abstract assurance language.",
     relatedIdeas: ["agent-governance", "reliable-ai-agent-work-delivery"],
