@@ -62,6 +62,10 @@ const articleImages = (essay.data.images ?? []).map((image) => {
   };
 });
 const primaryArticleImage = articleImages[0];
+const essayShareTitle = essay.data.shareTitle ?? essay.data.title;
+const essayShareDescription = essay.data.shareDescription ?? essay.data.description;
+const essayShareImage = essay.data.shareImage ?? siteConfig.socialImagePath;
+const essayShareImageAlt = essay.data.shareImageAlt ?? `${essay.data.title} — ${siteConfig.author.name}`;
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -77,7 +81,7 @@ const articleJsonLd = {
   },
   mainEntityOfPage: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
   url: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
-  image: articleImages.length > 0 ? articleImages : new URL(siteConfig.socialImagePath, siteConfig.siteUrl).toString(),
+  image: articleImages.length > 0 ? articleImages : new URL(essayShareImage, siteConfig.siteUrl).toString(),
   thumbnailUrl: primaryArticleImage?.thumbnailUrl,
   associatedMedia: articleImages.length > 0 ? articleImages : undefined,
   about: [ideaName, ...(essay.data.relatedProjects ?? [])]
@@ -91,8 +95,10 @@ const articleJsonLd = {
   noindex={isLegacy}
   ogType="article"
   jsonLd={[articleJsonLd]}
-  ogImagePath={essay.data.ogImage ?? essay.data.images?.[0]?.thumbnailUrl ?? essay.data.images?.[0]?.url ?? siteConfig.socialImagePath}
-  ogImageAlt={primaryArticleImage?.name ?? `${essay.data.title} — ${siteConfig.author.name}`}
+  shareTitle={essayShareTitle}
+  shareDescription={essayShareDescription}
+  ogImagePath={essayShareImage}
+  ogImageAlt={essayShareImageAlt}
 >
   <RegistryPageHero
     title={essay.data.title}

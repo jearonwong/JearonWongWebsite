@@ -2,7 +2,8 @@ export const siteConfig = {
   title: "Jearon Wong",
   description: "Defining what reliable delivery means for AI agents. Protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   siteUrl: "https://jearonwong.com",
-  socialImagePath: "/social-card.svg",
+  socialImagePath: "/social/jearonwong-og.png",
+  xHandle: "@jearonwong",
   thesis: "Defining reliable delivery for AI agents.", // v1.0 Primary Headline
   supportLine: "While the industry optimizes prompts and contexts, I build protocols, runtime concepts, and products that make agent work plannable, verifiable, and governable.",
   newsletterEndpoint: "https://buttondown.com/api/emails/embed-subscribe/jearonwong",

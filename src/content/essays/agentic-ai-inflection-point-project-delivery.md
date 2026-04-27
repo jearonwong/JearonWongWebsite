@@ -4,6 +4,11 @@ titleLines:
   - "The Agentic AI Inflection Point:"
   - Project Delivery
 description: Agentic AI is moving from task execution to project delivery, where real work must be carried from human intent to accepted outcome.
+shareTitle: Agentic Delivery
+shareSubtitle: A task can be executed. Real work must be delivered.
+shareDescription: The next inflection point in Agentic AI is not better execution. It is reliable project delivery across a lifecycle.
+shareImage: /social/agentic-delivery-og.png
+shareImageAlt: Agentic Delivery — A task can be executed. Real work must be delivered.
 publishDate: 2026-04-27
 cluster: reliable-ai-agent-work-delivery
 projectProof: MPLP

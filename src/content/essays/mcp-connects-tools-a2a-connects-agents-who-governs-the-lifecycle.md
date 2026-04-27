@@ -5,6 +5,11 @@ titleLines:
   - A2A Connects Agents.
   - Who Governs the Lifecycle?
 description: Production AI agents need a vendor-neutral lifecycle governance layer above tool access and agent coordination.
+shareTitle: MCP Connects Tools. A2A Connects Agents.
+shareSubtitle: Who governs the lifecycle?
+shareDescription: Tool access and agent coordination solve real problems. Production AI agents still need a lifecycle layer for intent, confirmation, trace, and accountability.
+shareImage: /social/mcp-a2a-lifecycle-og.png
+shareImageAlt: MCP connects tools. A2A connects agents. Who governs the lifecycle?
 publishDate: 2026-04-26
 cluster: agent-governance
 projectProof: MPLP

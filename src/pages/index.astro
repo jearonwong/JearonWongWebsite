@@ -36,7 +36,14 @@ const writingTracks = [
 ];
 ---
 
-<BaseLayout title={siteConfig.title} description={siteConfig.description}>
+<BaseLayout
+  title={siteConfig.title}
+  description={siteConfig.description}
+  shareTitle="Jearon Wong — Agentic Delivery"
+  shareDescription="Jearon Wong builds the protocol, runtime, and product stack that moves AI agents from task execution to reliable project delivery."
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Jearon Wong — Agentic Delivery: protocol, runtime, and product stack for production-grade AI agents."
+>
   <!-- 1. Person + Thesis (Hero) -->
   <div class="zone-a registry-grid hero-wrapper" style="border-bottom: 1px solid var(--border-registry);">
     <SiteHeader />

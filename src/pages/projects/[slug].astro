@@ -45,8 +45,11 @@ const projectJsonLd = {
 <BaseLayout
   title={`${project.name} | ${project.proofRole}`}
   description={projectMetaDescription}
+  shareTitle={`${project.name} — ${project.proofRole}`}
+  shareDescription={project.shareDescription ?? projectMetaDescription}
   jsonLd={[projectJsonLd]}
-  ogImageAlt={`${project.name} proof surface — ${project.proofRole}`}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt={`${project.name} — ${project.proofRole} in the Agentic Delivery stack`}
 >
   <RegistryPageHero
     title={project.name}
