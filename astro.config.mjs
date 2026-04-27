@@ -9,9 +9,7 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         !page.endsWith("/theory-clusters/") &&
-        !page.endsWith("/theory-clusters") &&
-        !page.endsWith("/essays/projects-are-proof-not-portfolio/") &&
-        !page.endsWith("/essays/projects-are-proof-not-portfolio")
+        !page.endsWith("/theory-clusters")
     })
   ],
   server: {

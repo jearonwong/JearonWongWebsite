@@ -4,6 +4,7 @@ interface Props {
   status: string;
   summary: string;
   proof: string;
+  proofRole?: string;
   href?: string;
   linkLabel?: string;
   evidence?: {
@@ -12,12 +13,23 @@ interface Props {
     website?: string;
     docs?: string;
   };
+  compact?: boolean;
 }
 
-const { name, status, summary, proof, href, linkLabel = "Open proof record", evidence } = Astro.props;
+const {
+  name,
+  status,
+  summary,
+  proof,
+  proofRole,
+  href,
+  linkLabel = "Open proof record",
+  evidence,
+  compact = false
+} = Astro.props;
 ---
 
-<article class="registry-chassis evidence-record">
+<article class:list={["registry-chassis evidence-record", compact && "evidence-record--compact"]}>
   <div class="record-header">
     <div class="registry-annotation">
       <span class="registry-key">PROJECT_ID</span>: <span class="registry-value">{name.toUpperCase()}</span>
@@ -28,6 +40,11 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
   </div>
   
   <div class="record-content">
+    {proofRole && (
+      <div class="registry-annotation stack-layer-line">
+        <span class="registry-key">STACK_LAYER</span>: <span class="registry-value">{proofRole}</span>
+      </div>
+    )}
     <h3 class="record-title">{name}</h3>
     <p class="record-summary">{summary}</p>
     
@@ -51,17 +68,20 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
         <div class="evidence-links">
           {evidence.repo && (
             <a href={evidence.repo} target="_blank" rel="noopener noreferrer" class="evidence-pill">
-              <span class="evidence-pill-key">SOURCE</span> {evidence.repoLabel || "Repository"}
+              <span class="evidence-pill-key">SOURCE</span>
+              <span class="evidence-pill-value">{evidence.repoLabel || "Repository"}</span>
             </a>
           )}
           {evidence.website && (
             <a href={evidence.website} target="_blank" rel="noopener noreferrer" class="evidence-pill">
-              <span class="evidence-pill-key">SITE</span> {new URL(evidence.website).host}
+              <span class="evidence-pill-key">SITE</span>
+              <span class="evidence-pill-value">{new URL(evidence.website).host}</span>
             </a>
           )}
           {evidence.docs && (
             <a href={evidence.docs} target="_blank" rel="noopener noreferrer" class="evidence-pill">
-              <span class="evidence-pill-key">DOCS</span> {new URL(evidence.docs).host}
+              <span class="evidence-pill-key">DOCS</span>
+              <span class="evidence-pill-value">{new URL(evidence.docs).host}</span>
             </a>
           )}
         </div>
@@ -79,12 +99,17 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
     gap: 2rem;
     background-color: var(--current-surface);
     border: 1px solid var(--current-border);
+    min-width: 0;
   }
   .record-header {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--current-line);
+  }
+  .record-content {
+    min-width: 0;
   }
   .record-title {
     font-size: 1.5rem;
@@ -92,6 +117,9 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
     margin: 0 0 0.85rem 0;
     letter-spacing: -0.02em;
     color: var(--current-text);
+  }
+  .stack-layer-line {
+    margin-bottom: 0.7rem;
   }
   .record-summary {
     font-size: 1rem;
@@ -112,6 +140,102 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
     color: var(--current-text);
     margin: 0;
     line-height: 1.5;
+  }
+  .proof-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+  .proof-link:hover {
+    color: var(--current-text);
+  }
+  .evidence-record--compact {
+    padding: 1.25rem;
+    gap: 1.05rem;
+  }
+  .evidence-record--compact .record-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    padding-bottom: 0.85rem;
+  }
+  .evidence-record--compact .record-header .registry-annotation {
+    min-width: 0;
+    width: 100%;
+    gap: 0.35rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.045em;
+    white-space: nowrap;
+  }
+  .evidence-record--compact .record-title {
+    font-size: 1.08rem;
+    line-height: 1.15;
+    margin-bottom: 0.55rem;
+    white-space: nowrap;
+  }
+  .evidence-record--compact .stack-layer-line {
+    margin-bottom: 0.5rem;
+    font-size: 0.52rem;
+    white-space: nowrap;
+  }
+  .evidence-record--compact .record-summary {
+    min-height: 3.9rem;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+  .evidence-record--compact .proof-block {
+    padding: 0.8rem;
+  }
+  .evidence-record--compact .proof-block .registry-annotation {
+    margin-bottom: 0.55rem !important;
+    font-size: 0.52rem;
+    white-space: nowrap;
+  }
+  .evidence-record--compact .proof-text {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+  .evidence-record--compact .proof-link {
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+  }
+  .evidence-record--compact .evidence-surface {
+    margin-top: 1rem;
+    padding: 0.8rem;
+  }
+  .evidence-record--compact .evidence-surface .registry-annotation {
+    margin-bottom: 0.55rem !important;
+    font-size: 0.52rem;
+    white-space: nowrap;
+  }
+  .evidence-record--compact .evidence-links {
+    gap: 0.45rem;
+  }
+  .evidence-record--compact .evidence-pill {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 0.38rem 0.55rem;
+    gap: 0.32rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.03em;
+  }
+  .evidence-record--compact .evidence-pill-key,
+  .evidence-record--compact .evidence-pill-value {
+    white-space: nowrap;
+  }
+  .evidence-record--compact .evidence-pill-value {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   @media (max-width: 768px) {
@@ -142,22 +266,6 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
   .proof-text {
     font-size: 0.88rem;
   }
-
-  .proof-link {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1rem;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-signal);
-    text-decoration: none;
-  }
-
-  .proof-link:hover {
-    color: var(--current-text);
-  }
   }
 
   .evidence-surface {
@@ -186,6 +294,7 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
     border-radius: 2px;
     text-decoration: none;
     transition: border-color 0.2s ease, color 0.2s ease;
+    min-width: 0;
   }
   .evidence-pill:hover {
     border-color: var(--accent-signal);
@@ -194,5 +303,9 @@ const { name, status, summary, proof, href, linkLabel = "Open proof record", evi
   .evidence-pill-key {
     font-weight: 700;
     color: var(--accent-signal);
+    white-space: nowrap;
+  }
+  .evidence-pill-value {
+    min-width: 0;
   }
 </style>

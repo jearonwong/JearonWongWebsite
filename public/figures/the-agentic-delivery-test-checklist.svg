@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 2 — The Agentic Delivery Test</title>
+  <desc id="desc">A checklist for diagnosing whether a production agent system can explain project intent, constraints, plan, changes, authorization, evidence, acceptance, and replayability.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111111; }
+      .grid { stroke: rgba(255,255,255,0.06); stroke-width: 1; }
+      .title { fill: #f1f5f9; font: 800 42px "Outfit", Inter, sans-serif; }
+      .label { fill: #3b82f6; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; }
+      .text { fill: #e2e8f0; font: 650 24px "Inter", sans-serif; }
+      .muted { fill: #94a3b8; font: 500 18px "Inter", sans-serif; }
+      .brand { fill: #22d3ee; font: 700 16px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; }
+      .brand-muted { fill: #94a3b8; font: 600 14px "Inter", sans-serif; }
+      .card { fill: rgba(255,255,255,0.045); stroke: rgba(255,255,255,0.14); stroke-width: 1.4; }
+      .check { fill: #22d3ee; font: 800 24px "Inter", sans-serif; }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" class="bg"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <text x="80" y="80" class="label">FIGURE 2</text>
+  <text x="80" y="130" class="title">The Agentic Delivery Test</text>
+  <text x="80" y="166" class="muted">A production-grade agent system should be able to explain:</text>
+
+  <g transform="translate(80 220)">
+    <rect width="520" height="70" rx="3" class="card"/><text x="28" y="45" class="check">✓</text><text x="70" y="45" class="text">Original intent</text>
+    <rect y="86" width="520" height="70" rx="3" class="card"/><text x="28" y="131" class="check">✓</text><text x="70" y="131" class="text">Active constraints</text>
+    <rect y="172" width="520" height="70" rx="3" class="card"/><text x="28" y="217" class="check">✓</text><text x="70" y="217" class="text">Current plan</text>
+    <rect y="258" width="520" height="70" rx="3" class="card"/><text x="28" y="303" class="check">✓</text><text x="70" y="303" class="text">Material changes</text>
+  </g>
+
+  <g transform="translate(680 220)">
+    <rect width="520" height="70" rx="3" class="card"/><text x="28" y="45" class="check">✓</text><text x="70" y="45" class="text">Authorization boundaries</text>
+    <rect y="86" width="520" height="70" rx="3" class="card"/><text x="28" y="131" class="check">✓</text><text x="70" y="131" class="text">Evidence trail</text>
+    <rect y="172" width="520" height="70" rx="3" class="card"/><text x="28" y="217" class="check">✓</text><text x="70" y="217" class="text">Acceptance criteria</text>
+    <rect y="258" width="520" height="70" rx="3" class="card"/><text x="28" y="303" class="check">✓</text><text x="70" y="303" class="text">Replayability and recovery</text>
+  </g>
+
+  <rect x="80" y="610" width="1120" height="2" fill="#3b82f6" opacity="0.7"/>
+  <text x="80" y="642" class="muted">If the system cannot explain these, it may have executed a task, but it has not delivered accountable work.</text>
+  <text x="80" y="684" class="brand">@jearonwong</text>
+  <text x="250" y="684" class="brand-muted">jearonwong.com · Coregentis · The Agentic Delivery Test</text>
+</svg>

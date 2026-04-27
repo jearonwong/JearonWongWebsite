@@ -5,16 +5,22 @@ import SiteHeader from "../components/SiteHeader.astro";
 import PortraitAnchor from "../components/PortraitAnchor.astro";
 import ImmediateProofSignal from "../components/ImmediateProofSignal.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
-import { homepageActions, siteConfig, projects, socialLinks } from "../data/site";
+import CoreArchitectureMap from "../components/CoreArchitectureMap.astro";
+import { homepageActions, homepageContent, siteConfig, projects, socialLinks } from "../data/site";
 
-const essays = (await getCollection("essays"))
+const allEssays = (await getCollection("essays"))
   .sort((left, right) =>
     Number(right.data.flagship) - Number(left.data.flagship) ||
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
-  )
-  .slice(0, 3);
+  );
 
-const flagshipEssay = essays.find(e => e.data.flagship) || essays[0];
+const essaysBySlug = new Map(allEssays.map((essay) => [essay.slug, essay]));
+const readingPathEntries = homepageContent.readingPath
+  .map((entry, index) => {
+    const essay = essaysBySlug.get(entry.slug);
+    return essay ? { ...entry, essay, index } : null;
+  })
+  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 
 const writingTracks = [
   { name: "Protocol Engineering", desc: "Lifecycle vocabulary, handoff semantics, and delivery grammar for agent systems." },
@@ -34,9 +40,9 @@ const writingTracks = [
       <div class="split-layout">
         <div class="hero-content">
           <h1 class="hero-nameplate">{siteConfig.author.name}</h1>
-          <p class="hero-thesis">{siteConfig.thesis}</p>
-          <p class="hero-role-line">{siteConfig.author.role}</p>
-          <p class="hero-support">{siteConfig.supportLine}</p>
+          <p class="hero-thesis">{homepageContent.hero.thesis}</p>
+          <p class="hero-role-line">{homepageContent.hero.role}</p>
+          <p class="hero-support">{homepageContent.hero.support}</p>
           
           <div class="hero-ctas">
             <a href={homepageActions.thesis.href} class="button button-primary">{homepageActions.thesis.label}</a>
@@ -54,28 +60,55 @@ const writingTracks = [
     </section>
   </div>
 
-  <!-- 2. Why Now (Narrative Band) — standalone dark zone, not inside zone-b -->
-  <section class="zone-a registry-grid narrative-band">
-    <div class="shell" style="max-width: 900px; text-align: left;">
-      <h2 class="narrative-lead">
-        The industry focused on models and tools. 
-        <br/>The missing layer is <span style="color: var(--accent-proof);">reliable work delivery</span>.
-      </h2>
-      <div class="narrative-support">
-        <p class="lead" style="margin: 0; color: var(--text-registry-muted);">
-          Prompt Engineering controls expression. Context Engineering controls what models see. Protocol Engineering controls the evidence of delivery.
-        </p>
+  <!-- 2. Core Thesis -->
+  <section class="zone-a registry-grid core-thesis-band">
+    <div class="shell core-thesis-layout">
+      <div class="core-thesis-copy">
+        <div class="registry-annotation core-thesis-eyebrow">
+          <span class="registry-key">{homepageContent.coreThesis.eyebrow}</span>
+        </div>
+        <h2>{homepageContent.coreThesis.title}</h2>
+        <p><strong>Most agent systems optimize execution:</strong> {homepageContent.coreThesis.execution.replace("Most agent systems optimize execution: ", "")}</p>
+        <p><strong>My work starts from delivery:</strong> {homepageContent.coreThesis.delivery.replace("My work starts from delivery: ", "")}</p>
+      </div>
+
+      <div class="thesis-compare registry-chassis" aria-label="Task execution versus Agentic Delivery">
+        <div class="compare-track">
+          <span class="compare-label">{homepageContent.coreThesis.taskAgentLabel}</span>
+          <div class="compare-flow">
+            {homepageContent.coreThesis.taskAgentFlow.map((step, index) => (
+              <>
+                <span class="compare-step">{step}</span>
+                {index < homepageContent.coreThesis.taskAgentFlow.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
+              </>
+            ))}
+          </div>
+        </div>
+
+        <div class="compare-track compare-track--delivery">
+          <span class="compare-label">{homepageContent.coreThesis.agenticDeliveryLabel}</span>
+          <div class="compare-flow">
+            {homepageContent.coreThesis.agenticDeliveryFlow.map((step, index) => (
+              <>
+                <span class="compare-step">{step}</span>
+                {index < homepageContent.coreThesis.agenticDeliveryFlow.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
+              </>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="zone-b page-body">
+    <!-- 3. Stack Architecture -->
+    <CoreArchitectureMap />
 
-    <!-- 3. Proof Chain -->
+    <!-- 4. Proof Surfaces -->
     <section id="proof" class="shell section-rhythm">
       <div class="section-header">
-        <h2>The proof chain.</h2>
-        <p class="section-desc">Each project carries a different architectural claim. Together they form an evidence chain for reliable agent delivery.</p>
+        <h2>Proof Surfaces</h2>
+        <p class="section-desc">Each surface proves one layer of the Agentic Delivery stack.</p>
         <a href={homepageActions.proof.href} class="section-link">{homepageActions.proof.label}</a>
       </div>
       <div class="card-grid">
@@ -83,29 +116,35 @@ const writingTracks = [
           <ProjectProofCard
             {...project}
             href={`/projects/${project.slug}/`}
+            compact
           />
         ))}
       </div>
     </section>
 
-    <!-- 4. Flagship Essay -->
-    {flagshipEssay && (
+    <!-- 5. Reading Path -->
+    {readingPathEntries.length > 0 && (
       <section class="shell section-rhythm" style="padding-top: 2rem;">
         <div class="section-header">
-          <h2>The thesis essay.</h2>
-          <p class="section-desc">The foundational argument — why the industry needs Protocol Engineering.</p>
+          <h2>Reading Path</h2>
+          <p class="section-desc">Start with the public arguments that define the Agentic Delivery stack.</p>
         </div>
-        <article class="flagship-card">
-          <div class="flagship-content">
-            <h3><a href={`/essays/${flagshipEssay.slug}/`}>{flagshipEssay.data.title}</a></h3>
-            <p class="muted">{flagshipEssay.data.description}</p>
-            <a href={`/essays/${flagshipEssay.slug}/`} class="section-link">Read the full essay</a>
-          </div>
-        </article>
+        <div class="reading-path-list">
+          {readingPathEntries.map((entry) => (
+            <article class="reading-path-card">
+              <span class="reading-path-index">{String(entry.index + 1).padStart(2, "0")}</span>
+              <div class="reading-path-content">
+                <h3><a href={`/essays/${entry.essay.slug}/`}>{entry.essay.data.title}</a></h3>
+                <p>{entry.note}</p>
+                <a href={`/essays/${entry.essay.slug}/`} class="section-link">Read essay</a>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     )}
 
-    <!-- 5. Writing Tracks -->
+    <!-- 6. Writing Tracks -->
     <section class="shell section-rhythm" style="padding-top: 2rem;">
       <div class="section-header">
         <h2>Writing tracks.</h2>
@@ -122,7 +161,7 @@ const writingTracks = [
       </div>
     </section>
 
-    <!-- 6. Contact / Signal -->
+    <!-- 7. Contact / Signal -->
     <section class="shell section-rhythm quiet-close" style="padding-top: 2rem;">
       <div class="close-content">
         <h2>Get in touch.</h2>
@@ -213,7 +252,7 @@ const writingTracks = [
     font-size: 1rem;
     color: var(--current-muted);
     line-height: 1.6;
-    max-width: 55ch;
+    max-width: min(100%, 58rem);
     margin-bottom: 0.25rem;
   }
   .section-link {
@@ -234,57 +273,156 @@ const writingTracks = [
     margin-bottom: 3.5rem;
   }
 
-  /* ── Narrative Band ── */
-  .narrative-band {
+  /* ── Core Thesis ── */
+  .core-thesis-band {
     padding: 6rem 0;
     border-top: 1px solid var(--border-registry);
     border-bottom: 1px solid var(--border-registry);
   }
-  .narrative-lead {
+
+  .core-thesis-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .core-thesis-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .core-thesis-copy h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin: 0 0 2rem;
+    margin: 0 0 1.35rem;
     font-weight: 800;
   }
-  .narrative-support {
-    padding: 1.5rem;
-    border-left: 2px solid var(--accent-proof);
+
+  .core-thesis-copy p {
+    max-width: 42rem;
+    margin: 0;
+    color: var(--text-registry-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .core-thesis-copy p + p {
+    margin-top: 1rem;
+  }
+
+  .core-thesis-copy strong {
+    color: var(--text-registry-primary);
+  }
+
+  .thesis-compare {
+    padding: 1.45rem;
+    background-color: rgba(10, 10, 10, 0.54);
+  }
+
+  .compare-track + .compare-track {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-registry);
+  }
+
+  .compare-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+
+  .compare-track--delivery .compare-label {
+    color: var(--accent-proof);
+  }
+
+  .compare-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .compare-step {
+    padding: 0.42rem 0.62rem;
+    border: 1px solid var(--border-registry);
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--text-registry-primary);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .compare-arrow {
+    color: var(--text-registry-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
   }
 
   /* ── Card Grid ── */
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.1rem;
+    align-items: stretch;
+  }
+  .card-grid :global(.evidence-record) {
+    height: 100%;
   }
 
-  /* ── Flagship ── */
-  .flagship-card {
+  /* ── Reading Path ── */
+  .reading-path-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .reading-path-card {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: 1.25rem;
     background: var(--current-surface);
     border: 1px solid var(--current-border);
     border-left: 4px solid var(--accent-signal);
     border-radius: var(--radius-module);
-    padding: 2.5rem;
+    padding: 1.6rem 1.75rem;
   }
-  .flagship-content h3 {
+
+  .reading-path-index {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--accent-signal);
+  }
+
+  .reading-path-content h3 {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
+    line-height: 1.18;
   }
-  .flagship-content h3 a {
+
+  .reading-path-content h3 a {
     color: inherit;
     text-decoration: none;
   }
-  .flagship-content h3 a:hover {
+
+  .reading-path-content h3 a:hover {
     color: var(--accent-signal);
   }
-  .flagship-content .muted {
+
+  .reading-path-content p {
     color: var(--current-muted);
     line-height: 1.6;
     max-width: 60ch;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
   /* ── Writing Tracks ── */
@@ -380,6 +518,13 @@ const writingTracks = [
     }
   }
 
+  @media (max-width: 980px) {
+    .card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+  }
+
   @media (max-width: 900px) {
     .split-layout {
       grid-template-columns: 1fr;
@@ -416,17 +561,28 @@ const writingTracks = [
     .section-header {
       margin-bottom: 2.5rem;
     }
-    .card-grid {
-      gap: 1.25rem;
-    }
-    .narrative-band {
+    .core-thesis-band {
       padding: 4.5rem 0;
+    }
+    .core-thesis-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
     .tracks-grid {
       grid-template-columns: 1fr;
     }
-    .flagship-card {
+    .reading-path-card {
       padding: 1.75rem;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+    .reading-path-card {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
     }
   }
 </style>

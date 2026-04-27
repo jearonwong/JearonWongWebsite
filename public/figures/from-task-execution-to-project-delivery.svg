@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1 — From Task Execution to Agentic Project Delivery</title>
+  <desc id="desc">A comparison between execution-focused agent systems and lifecycle-focused agent systems.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .grid { stroke: #dbeafe; stroke-width: 1; opacity: 0.65; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
+      .panel-strong { fill: #eff6ff; stroke: #3b82f6; stroke-width: 2; }
+      .label { fill: #2563eb; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
+      .title { fill: #0f172a; font: 800 34px "Outfit", Inter, sans-serif; }
+      .text { fill: #334155; font: 600 21px "Inter", sans-serif; }
+      .muted { fill: #64748b; font: 500 17px "Inter", sans-serif; }
+      .brand { fill: #2563eb; font: 700 16px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; }
+      .brand-muted { fill: #64748b; font: 600 14px "Inter", sans-serif; }
+      .arrow { stroke: #64748b; stroke-width: 2.5; marker-end: url(#arrowhead); }
+      .accent { stroke: #22d3ee; stroke-width: 3; marker-end: url(#arrowheadAccent); }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" class="grid"/>
+    </pattern>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowheadAccent" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" class="bg"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <text x="80" y="80" class="label">FIGURE 1</text>
+  <text x="80" y="122" class="title">From Task Execution to Agentic Project Delivery</text>
+  <text x="80" y="154" class="muted">The design unit shifts from isolated runs to accountable work carried across a lifecycle.</text>
+
+  <rect x="80" y="210" width="480" height="380" rx="4" class="panel"/>
+  <text x="120" y="258" class="label">Execution-Focused</text>
+  <text x="120" y="296" class="title" font-size="28">Optimize the run</text>
+  <text x="120" y="348" class="text">Prompt</text>
+  <text x="120" y="390" class="text">Tool call</text>
+  <text x="120" y="432" class="text">Workflow run</text>
+  <text x="120" y="474" class="text">Trace</text>
+  <text x="120" y="516" class="text">Output</text>
+  <text x="120" y="558" class="text">Evaluation score</text>
+
+  <line x1="620" y1="400" x2="660" y2="400" class="accent"/>
+  <text x="595" y="370" class="label">INFLECTION</text>
+
+  <rect x="720" y="190" width="480" height="420" rx="4" class="panel panel-strong"/>
+  <text x="760" y="238" class="label">Lifecycle-Focused</text>
+  <text x="760" y="276" class="title" font-size="28">Deliver the project</text>
+  <text x="760" y="326" class="text">Intent</text>
+  <line x1="835" y1="320" x2="910" y2="320" class="arrow"/>
+  <text x="930" y="326" class="text">Context</text>
+  <text x="760" y="376" class="text">Plan</text>
+  <line x1="820" y1="370" x2="910" y2="370" class="arrow"/>
+  <text x="930" y="376" class="text">Confirmation</text>
+  <text x="760" y="426" class="text">Execution</text>
+  <line x1="865" y1="420" x2="910" y2="420" class="arrow"/>
+  <text x="930" y="426" class="text">Evidence</text>
+  <text x="760" y="476" class="text">Review</text>
+  <line x1="840" y1="470" x2="910" y2="470" class="arrow"/>
+  <text x="930" y="476" class="text">Accepted outcome</text>
+  <text x="760" y="526" class="text">Learning</text>
+  <text x="760" y="566" class="muted">Meaning, authority, and accountability</text>
+  <text x="760" y="592" class="muted">persist across time.</text>
+  <text x="80" y="666" class="brand">@jearonwong</text>
+  <text x="250" y="666" class="brand-muted">jearonwong.com · Coregentis · Agentic Project Delivery</text>
+</svg>

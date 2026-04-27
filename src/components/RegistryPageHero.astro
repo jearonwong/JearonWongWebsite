@@ -3,23 +3,30 @@ import SiteHeader from "./SiteHeader.astro";
 
 interface Props {
   title: string;
+  titleLines?: string[];
   subtitle?: string;
   objectType?: string;
   objectValue?: string;
   lead?: string;
+  leadLines?: string[];
   zone?: string;
   class?: string;
 }
 
 const {
   title,
+  titleLines,
   subtitle,
   objectType,
   objectValue,
   lead,
+  leadLines,
   zone = "zone-a",
   class: className = ""
 } = Astro.props;
+
+const displayTitleLines = titleLines?.length ? titleLines : null;
+const displayLeadLines = leadLines?.length ? leadLines : null;
 ---
 
 <div class:list={[zone, "registry-grid", "registry-page-hero", className]}>
@@ -30,31 +37,51 @@ const {
         <span class="registry-key">{objectType}</span>: <span class="registry-value">{objectValue}</span>
       </div>
     )}
-    <h1 class="registry-page-hero__title">{title}</h1>
+    <h1 class:list={["registry-page-hero__title", displayTitleLines && "has-title-lines"]}>
+      {displayTitleLines ? (
+        displayTitleLines.map((line) => <span class="registry-page-hero__title-line">{line}</span>)
+      ) : (
+        title
+      )}
+    </h1>
     {subtitle && <p class="registry-page-hero__subtitle">{subtitle}</p>}
-    {lead && <p class="lead registry-page-hero__lead">{lead}</p>}
+    {(lead || displayLeadLines) && (
+      <p class:list={["lead", "registry-page-hero__lead", displayLeadLines && "has-lead-lines"]}>
+        {displayLeadLines ? (
+          displayLeadLines.map((line) => <span class="registry-page-hero__lead-line">{line}</span>)
+        ) : (
+          lead
+        )}
+      </p>
+    )}
     <slot />
   </div>
 </div>
 
 <style>
   .registry-page-hero {
-    padding-top: 9rem;
-    padding-bottom: 5rem;
+    padding-top: clamp(7rem, 10vw, 8.25rem);
+    padding-bottom: clamp(4.4rem, 7vw, 5.25rem);
     border-bottom: 1px solid var(--border-registry);
   }
 
   .registry-page-hero__annotation {
-    margin-bottom: 1rem;
+    margin-bottom: 1.35rem;
   }
 
   .registry-page-hero__title {
-    font-size: clamp(2.15rem, 5vw, 3.4rem);
-    font-weight: 820;
-    letter-spacing: -0.04em;
-    line-height: 0.96;
-    margin-bottom: 0.75rem;
-    max-width: 13ch;
+    font-size: clamp(2.35rem, 4.15vw, 3.7rem);
+    font-weight: 760;
+    letter-spacing: -0.018em;
+    line-height: 1.08;
+    margin: 0 0 1.45rem;
+    max-width: min(100%, 17em);
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .registry-page-hero__title-line {
+    display: block;
   }
 
   .registry-page-hero__subtitle {
@@ -67,18 +94,23 @@ const {
   }
 
   .registry-page-hero__lead {
-    max-width: 54ch;
-    font-size: 1rem;
-    color: var(--text-registry-muted);
-    border-left: 2px solid var(--border-registry);
-    padding-left: 1.2rem;
-    line-height: 1.65;
+    width: min(100%, 62rem);
+    max-width: none;
+    font-size: clamp(1.05rem, 1.2vw, 1.18rem);
+    color: rgba(226, 232, 240, 0.68);
+    border-left: 2px solid rgba(59, 130, 246, 0.32);
+    padding-left: 1.35rem;
+    line-height: 1.62;
+  }
+
+  .registry-page-hero__lead-line {
+    display: block;
   }
 
   @media (max-width: 768px) {
     .registry-page-hero {
-      padding-top: 7.2rem;
-      padding-bottom: 3.6rem;
+      padding-top: 6.75rem;
+      padding-bottom: 3.5rem;
     }
 
     .registry-page-hero__annotation {
@@ -86,9 +118,10 @@ const {
     }
 
     .registry-page-hero__title {
-      font-size: clamp(1.85rem, 8vw, 2.45rem);
-      margin-bottom: 0.65rem;
-      max-width: 14ch;
+      font-size: clamp(1.85rem, 7.4vw, 2.35rem);
+      line-height: 1.1;
+      margin-bottom: 1.15rem;
+      max-width: 100%;
     }
 
     .registry-page-hero__subtitle {
@@ -97,9 +130,10 @@ const {
     }
 
     .registry-page-hero__lead {
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.6;
       padding-left: 1rem;
+      width: 100%;
     }
   }
 </style>

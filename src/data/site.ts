@@ -10,6 +10,7 @@ export const siteConfig = {
     name: "Jearon Wang",
     role: "Protocol Architect for the Agent Era", // Secondary role descriptor
     bio: "Writing and building at the intersection of Protocol Engineering, Agent Governance, and AI-native software delivery.",
+    image: "/images/jearon-wong-avatar.jpg",
     email: "contact@jearonwong.com"
   }
 };
@@ -23,7 +24,7 @@ export const socialLinks = [
 
 export const homepageActions = {
   thesis: {
-    href: "/essays/from-prompt-engineering-to-protocol-engineering/",
+    href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
     label: "Read the Thesis"
   },
   projects: {
@@ -43,9 +44,74 @@ export const homepageActions = {
     label: "Open the proof room"
   },
   startHere: {
-    href: "/essays/from-prompt-engineering-to-protocol-engineering/",
+    href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
     label: "Start with the flagship essay"
   }
+};
+
+export const homepageContent = {
+  hero: {
+    thesis: "Building the protocol, runtime, and product stack for Agentic Delivery.",
+    role: "Protocol Architect for Agentic Delivery",
+    support:
+      "I build protocol, runtime, and product systems that move AI agents from task execution to reliable project delivery."
+  },
+  coreThesis: {
+    eyebrow: "CORE_THESIS",
+    title: "From execution to delivery.",
+    execution:
+      "Most agent systems optimize execution: prompts, tool calls, workflow runs, traces, and evaluations.",
+    delivery:
+      "My work starts from delivery: how AI agents carry real work from human intent to accepted outcome across a project lifecycle.",
+    taskAgentLabel: "Task Agent",
+    taskAgentFlow: ["Prompt", "Tool call", "Output"],
+    agenticDeliveryLabel: "Agentic Delivery",
+    agenticDeliveryFlow: ["Intent", "Context", "Plan", "Confirm", "Execute", "Evidence", "Accepted Outcome"]
+  },
+  stackMap: {
+    headline: "The Stack Behind Agentic Delivery",
+    summary:
+      "Agentic Delivery is not one product. It is a stack: protocol, runtime, product proof, and evidence.",
+    core: {
+      label: "CORE THESIS",
+      title: "Project lifecycle, not isolated execution",
+      description: "Agentic AI must move from task execution to project delivery."
+    },
+    layers: [
+      {
+        projectSlug: "mplp",
+        verb: "Defines",
+        description: "Defines the lifecycle language."
+      },
+      {
+        projectSlug: "cognitive-os",
+        verb: "Runs",
+        description:
+          "Turns lifecycle semantics into runtime state, memory, evidence, and orchestration."
+      },
+      {
+        projectSlug: "solocrew",
+        verb: "Proves",
+        description: "Applies the stack to one-person company work."
+      },
+      {
+        projectSlug: "validation-lab",
+        verb: "Verifies",
+        description: "Verifies lifecycle evidence and adjudication."
+      }
+    ],
+    closingLine: "MPLP defines it. Cognitive OS runs it. SoloCrew proves it. Validation Lab verifies it."
+  },
+  readingPath: [
+    {
+      slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      note: "Protocol-stack gap: tool access and agent coordination still need lifecycle delivery."
+    },
+    {
+      slug: "agentic-ai-inflection-point-project-delivery",
+      note: "Core thesis: Agentic Delivery is the next layer after task execution."
+    }
+  ]
 };
 
 export const primaryNav = [
@@ -127,24 +193,24 @@ export const theoryClusters = [
     name: "Reliable AI Agent Work Delivery",
     description: "The core gap between experimental agent runs and production reliability.",
     prompt: "What must exist for an agent to be trusted out-of-loop?",
-    essayPath: "/essays/interface-as-institutional-memory/",
-    essayLabel: "Read the harness essay"
+    essayPath: "/essays/agentic-ai-inflection-point-project-delivery/",
+    essayLabel: "Read the project delivery essay"
   },
   {
     slug: "protocol-engineering",
     name: "Protocol Engineering",
     description: "Systems thinking applied to autonomous workflows.",
     prompt: "How do we structurally bound cognitive drift?",
-    essayPath: "/essays/from-prompt-engineering-to-protocol-engineering/",
-    essayLabel: "Start with the flagship essay"
+    essayPath: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
+    essayLabel: "Start with the core essay"
   },
   {
     slug: "agent-governance",
     name: "Agent Governance",
     description: "Frameworks for observability, auditability, and validation.",
     prompt: "Who signs off on the agent's definition of done?",
-    essayPath: "/essays/governance-before-growth/",
-    essayLabel: "Read the evidence essay"
+    essayPath: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
+    essayLabel: "Read the core essay"
   }
 ];
 
@@ -183,7 +249,7 @@ export const projects = [
     status: "Runtime",
     summary: "Runtime substrate for protocol-aware agent work.",
     proof: "Shows how runtime state and operating constraints enforce reliable delivery.",
-    proofRole: "RUNTIME SUBSTRATE",
+    proofRole: "RUNTIME FOUNDATION",
     whatItIs:
       "Cognitive OS is the runtime-state-first substrate for protocol-aware work. It focuses on the operating surface where delegated work is actually executed.",
     problem:
@@ -202,10 +268,10 @@ export const projects = [
   {
     name: "SoloCrew",
     slug: "solocrew",
-    status: "Implementation",
+    status: "Product",
     summary: "Personal AI operating loop and product projection.",
     proof: "Applies protocol and runtime ideas to one-person-company AI work.",
-    proofRole: "APPLICATION PROJECTION",
+    proofRole: "PRODUCT PROOF",
     whatItIs:
       "SoloCrew is the application-facing projection of the protocol/runtime thesis into one-person-company AI work.",
     problem:
@@ -224,7 +290,7 @@ export const projects = [
   {
     name: "Validation Lab",
     slug: "validation-lab",
-    status: "Audit",
+    status: "Evidence",
     summary: "Evidence-based evaluation surface for lifecycle guarantees.",
     proof: "Evaluates lifecycle guarantees with evidence rather than claims.",
     proofRole: "EVIDENCE SURFACE",

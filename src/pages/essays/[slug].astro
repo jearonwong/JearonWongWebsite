@@ -38,19 +38,48 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
 }, []);
 const proofProject = getProjectByName(essay.data.projectProof);
 const primaryProofNext = proofProject ? getProjectGraphPosition(proofProject.slug).next : null;
+const articleImages = (essay.data.images ?? []).map((image) => {
+  const imageUrl = new URL(image.url, siteConfig.siteUrl).toString();
+  const thumbnailUrl = image.thumbnailUrl ? new URL(image.thumbnailUrl, siteConfig.siteUrl).toString() : undefined;
+  return {
+    "@type": "ImageObject",
+    url: imageUrl,
+    contentUrl: imageUrl,
+    thumbnailUrl,
+    name: image.alt,
+    description: image.alt,
+    caption: image.caption ?? image.alt,
+    width: image.width,
+    height: image.height,
+    creator: {
+      "@id": `${siteConfig.siteUrl}#person`
+    },
+    creditText: `${siteConfig.author.name} / @jearonwong`,
+    copyrightHolder: {
+      "@id": `${siteConfig.siteUrl}#person`
+    },
+    copyrightNotice: `© ${siteConfig.author.name}`
+  };
+});
+const primaryArticleImage = articleImages[0];
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: essay.data.title,
   description: essay.data.description,
   datePublished: essay.data.publishDate.toISOString(),
+  dateModified: essay.data.publishDate.toISOString(),
   author: {
-    "@type": "Person",
-    name: siteConfig.author.name,
-    jobTitle: siteConfig.author.role
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
   },
   mainEntityOfPage: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
   url: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
+  image: articleImages.length > 0 ? articleImages : new URL(siteConfig.socialImagePath, siteConfig.siteUrl).toString(),
+  thumbnailUrl: primaryArticleImage?.thumbnailUrl,
+  associatedMedia: articleImages.length > 0 ? articleImages : undefined,
   about: [ideaName, ...(essay.data.relatedProjects ?? [])]
 };
 ---
@@ -62,13 +91,16 @@ const articleJsonLd = {
   noindex={isLegacy}
   ogType="article"
   jsonLd={[articleJsonLd]}
-  ogImageAlt={`${essay.data.title} — ${siteConfig.author.name}`}
+  ogImagePath={essay.data.ogImage ?? essay.data.images?.[0]?.thumbnailUrl ?? essay.data.images?.[0]?.url ?? siteConfig.socialImagePath}
+  ogImageAlt={primaryArticleImage?.name ?? `${essay.data.title} — ${siteConfig.author.name}`}
 >
   <RegistryPageHero
     title={essay.data.title}
+    titleLines={essay.data.titleLines}
     objectType="ENTRY_TYPE"
     objectValue={essay.data.flagship ? "FLAGSHIP THESIS" : "ESSAY RECORD"}
     lead={essay.data.summary ?? essay.data.description}
+    leadLines={essay.data.summaryLines}
   >
     <div class="article-hero-meta">
       <a href="/essays/" class="article-back-link registry-annotation">
@@ -161,10 +193,10 @@ const articleJsonLd = {
 
 <style>
   .article-hero-meta {
-    margin-top: 1.5rem;
+    margin-top: 2.15rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 1.35rem;
+    gap: 0.85rem 1.35rem;
   }
   .article-back-link {
     text-decoration: none;
@@ -258,6 +290,18 @@ const articleJsonLd = {
   .article-content :global(p) {
     margin-bottom: 1.8rem;
   }
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    margin: 0 0 2rem 1.35rem;
+    padding: 0;
+  }
+  .article-content :global(li) {
+    margin-bottom: 0.85rem;
+    padding-left: 0.35rem;
+  }
+  .article-content :global(li > p) {
+    margin-bottom: 0.8rem;
+  }
   .article-content :global(blockquote) {
     border-left: 2px solid var(--accent-signal);
     background-color: rgba(59, 130, 246, 0.03);
@@ -265,6 +309,142 @@ const articleJsonLd = {
     margin: 3rem 0;
     font-style: italic;
     color: var(--current-muted);
+  }
+  .article-content :global(pre) {
+    overflow-x: auto;
+    margin: 2.5rem 0;
+    padding: 1.35rem 1.5rem;
+    background: #111111;
+    color: #f1f5f9;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    line-height: 1.55;
+  }
+  .article-content :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+  .article-content :global(:not(pre) > code) {
+    padding: 0.12rem 0.28rem;
+    background: rgba(17, 17, 17, 0.06);
+    border-radius: var(--radius-module);
+  }
+  .article-content :global(hr) {
+    margin: 3.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--current-border);
+  }
+  .article-content :global(.article-figure) {
+    margin: 3rem 0;
+  }
+  .article-content :global(.article-figure img) {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+  }
+  .article-content :global(.article-figure figcaption) {
+    margin-top: 0.85rem;
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .article-content :global(.footnotes) {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--current-border);
+    font-size: 0.95rem;
+    color: var(--current-muted);
+  }
+  .article-content :global(.footnotes p) {
+    margin-bottom: 1rem;
+  }
+  .article-content :global(.citation) {
+    margin-left: 0.1rem;
+    font-size: 0.8em;
+    font-weight: 700;
+    vertical-align: super;
+    text-decoration: none;
+  }
+  .article-content :global(.protocol-stack-diagram) {
+    display: grid;
+    gap: 0.65rem;
+    margin: 3rem 0;
+    padding: 1.25rem;
+    background:
+      linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+      #111111;
+    background-size: 28px 28px;
+    border: 1px solid rgba(17, 17, 17, 0.18);
+    color: #f1f5f9;
+  }
+  .article-content :global(.protocol-layer) {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.9fr) minmax(0, 1.5fr);
+    align-items: center;
+    gap: 0.55rem 1.5rem;
+    padding: 1rem 1.15rem;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-left: 3px solid rgba(59, 130, 246, 0.8);
+  }
+  .article-content :global(.protocol-layer--governance) {
+    border-left-color: var(--accent-proof);
+    background: rgba(34, 211, 238, 0.08);
+  }
+  .article-content :global(.protocol-layer__label) {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+  .article-content :global(.protocol-layer--governance .protocol-layer__label) {
+    color: var(--accent-proof);
+  }
+  .article-content :global(.protocol-layer strong) {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .article-content :global(.protocol-layer span:not(.protocol-layer__label)),
+  .article-content :global(.protocol-layer small) {
+    grid-column: 2;
+    margin: 0;
+    color: rgba(241, 245, 249, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  .article-content :global(.reference-list) {
+    margin-top: 1.2rem;
+    color: var(--current-muted);
+    font-size: 1rem;
+  }
+  .article-content :global(.reference-list li) {
+    margin-bottom: 1rem;
+  }
+  .article-content :global(.concept-list) {
+    display: grid;
+    gap: 1rem;
+    margin: 2.5rem 0 2rem;
+    padding: 0;
+  }
+  .article-content :global(.concept-list div) {
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--current-border);
+    border-left: 3px solid var(--accent-signal);
+    background: rgba(59, 130, 246, 0.025);
+  }
+  .article-content :global(.concept-list dt) {
+    margin: 0 0 0.45rem;
+    font-weight: 800;
+    color: var(--current-text);
+  }
+  .article-content :global(.concept-list dd) {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.65;
   }
   .article-content :global(a) {
     color: var(--accent-signal);
@@ -274,6 +454,7 @@ const articleJsonLd = {
   @media (max-width: 900px) {
     .article-hero-meta {
       gap: 0.7rem 0.95rem;
+      align-items: flex-start;
     }
     .article-grid {
       grid-template-columns: 1fr;
@@ -290,9 +471,35 @@ const articleJsonLd = {
     .article-content :global(h2) {
       font-size: 1.7rem;
       margin: 3rem 0 1.2rem;
+      line-height: 1.2;
     }
     .article-content :global(h3) {
       font-size: 1.3rem;
+      line-height: 1.25;
+    }
+    .article-content :global(blockquote) {
+      margin: 2.4rem 0;
+      padding: 1.35rem;
+    }
+    .article-content :global(pre) {
+      margin: 2rem 0;
+      padding: 1rem;
+    }
+    .article-content :global(.article-figure) {
+      margin: 2.4rem 0;
+    }
+    .article-content :global(.protocol-stack-diagram) {
+      margin: 2.5rem 0;
+      padding: 0.9rem;
+    }
+    .article-content :global(.protocol-layer) {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+      padding: 0.95rem 1rem;
+    }
+    .article-content :global(.protocol-layer span:not(.protocol-layer__label)),
+    .article-content :global(.protocol-layer small) {
+      grid-column: 1;
     }
     .chain-block {
       margin-top: 3rem;

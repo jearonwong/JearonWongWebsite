@@ -44,6 +44,7 @@ const personJsonLd = JSON.stringify({
   alternateName: "Jearon Wong",
   url: siteConfig.siteUrl,
   jobTitle: siteConfig.author.role,
+  image: new URL(siteConfig.author.image, siteConfig.siteUrl).toString(),
   description: siteConfig.thesis,
   knowsAbout: [
     "AI agent reliability",

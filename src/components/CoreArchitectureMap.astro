@@ -1,0 +1,195 @@
+---
+import { getProjectBySlug, homepageContent } from "../data/site";
+
+const stackLayers = homepageContent.stackMap.layers
+  .map((layer) => {
+    const project = getProjectBySlug(layer.projectSlug);
+    return project ? { ...layer, project } : null;
+  })
+  .filter((layer): layer is NonNullable<typeof layer> => Boolean(layer));
+---
+
+<section class="shell section-rhythm stack-map-section" aria-labelledby="stack-map-title">
+  <div class="stack-map-layout">
+    <div class="stack-map-intro">
+      <div class="registry-annotation stack-map-eyebrow">
+        <span class="registry-key">SYSTEM_MAP</span>: <span class="registry-value">AGENTIC_DELIVERY_STACK</span>
+      </div>
+      <h2 id="stack-map-title">{homepageContent.stackMap.headline}</h2>
+      <p>{homepageContent.stackMap.summary}</p>
+      <p class="stack-map-close">{homepageContent.stackMap.closingLine}</p>
+    </div>
+
+    <div class="stack-map-diagram" aria-label="Agentic Delivery stack">
+      <article class="stack-node stack-node--core">
+        <span class="stack-node-label">{homepageContent.stackMap.core.label}</span>
+        <h3>{homepageContent.stackMap.core.title}</h3>
+        <p>{homepageContent.stackMap.core.description}</p>
+      </article>
+
+      <div class="stack-spine" aria-hidden="true"></div>
+
+      {stackLayers.map((layer) => (
+        <article class="stack-node">
+          <div class="stack-node-topline">
+            <span class="stack-node-label">{layer.project.proofRole}</span>
+            <span class="stack-node-verb">{layer.verb}</span>
+          </div>
+          <h3>{layer.project.name}</h3>
+          <p>{layer.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-map-section {
+    padding-bottom: 5.5rem;
+  }
+
+  .stack-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .stack-map-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .stack-map-intro h2 {
+    max-width: 12ch;
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 840;
+    color: var(--current-text);
+  }
+
+  .stack-map-intro p {
+    max-width: 40rem;
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .stack-map-intro p + p {
+    margin-top: 1.25rem;
+  }
+
+  .stack-map-close {
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-signal);
+    color: var(--current-text) !important;
+    font-weight: 750;
+  }
+
+  .stack-map-diagram {
+    position: relative;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .stack-spine {
+    width: 2px;
+    height: 1.4rem;
+    margin-left: 1.4rem;
+    background: linear-gradient(var(--accent-signal), var(--accent-proof));
+  }
+
+  .stack-node {
+    position: relative;
+    display: grid;
+    gap: 0.55rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--current-border);
+    border-left: 3px solid var(--accent-signal);
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.04), rgba(255, 255, 255, 0));
+    min-width: 0;
+  }
+
+  .stack-node--core {
+    border-left-color: var(--accent-proof);
+    background: rgba(34, 211, 238, 0.045);
+  }
+
+  .stack-node-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .stack-node-label,
+  .stack-node-verb {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .stack-node-label {
+    color: var(--accent-signal);
+  }
+
+  .stack-node--core .stack-node-label {
+    color: var(--accent-proof);
+  }
+
+  .stack-node-verb {
+    color: var(--current-muted);
+  }
+
+  .stack-node h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.12rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 800;
+  }
+
+  .stack-node p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .stack-map-section {
+      padding-bottom: 4.5rem;
+    }
+
+    .stack-map-layout {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+    }
+
+    .stack-map-intro h2 {
+      max-width: 16ch;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .stack-node {
+      padding: 1rem;
+    }
+
+    .stack-node-topline {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .stack-node-label,
+    .stack-node-verb {
+      font-size: 0.58rem;
+    }
+  }
+</style>

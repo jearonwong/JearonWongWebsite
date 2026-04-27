@@ -1,16 +1,23 @@
 ---
-import { projects } from "../data/site";
+import { getProjectBySlug, homepageContent } from "../data/site";
 // Immediate Proof Signal
 // Implements a strict architectural signal strip inside the first fold
+
+const signals = homepageContent.stackMap.layers
+  .map((layer) => {
+    const project = getProjectBySlug(layer.projectSlug);
+    return project ? { ...layer, project } : null;
+  })
+  .filter((layer): layer is NonNullable<typeof layer> => Boolean(layer));
 ---
 
 <div class="proof-signal">
-  <span class="eyebrow signal-label">Proof Signal</span>
+  <span class="eyebrow signal-label">Stack Signal</span>
   <div class="proof-grid">
-    {projects.map((project) => (
+    {signals.map((signal) => (
       <div class="proof-item">
-        <span class="proof-name">{project.name}</span>
-        <span class="proof-role">[{project.status}]</span>
+        <span class="proof-name">{signal.project.name}</span>
+        <span class="proof-role">[{signal.project.status}]</span>
       </div>
     ))}
   </div>
@@ -39,16 +46,19 @@ import { projects } from "../data/site";
     font-size: 0.82rem;
     font-family: var(--font-mono);
     opacity: 0.95;
+    min-width: 0;
   }
   .proof-name {
     color: var(--zone-a-text);
     font-family: var(--font-body);
     font-weight: 700;
     letter-spacing: 0.01em;
+    white-space: nowrap;
   }
   .proof-role {
     color: var(--zone-a-muted);
     font-size: 0.76rem;
+    white-space: nowrap;
   }
 
   @media (max-width: 640px) {
