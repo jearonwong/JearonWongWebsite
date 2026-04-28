@@ -67,7 +67,7 @@ export const homepageContent = {
     authorAnchor: "Jearon Wong",
     role: "Architecting production-grade AI agent systems.",
     support:
-      "I build protocol, runtime, and product systems for Agentic Delivery — moving AI agents from task execution to reliable project delivery across a lifecycle."
+      "I turn that thesis into protocol, runtime, product, and evidence surfaces: MPLP, Cognitive OS, SoloCrew, and Validation Lab."
   },
   coreThesis: {
     eyebrow: "CORE_THESIS",

@@ -1,6 +1,5 @@
 ---
 // Portrait Anchor Component
-// Implements the Architectural Anchor identity requirement.
 import { siteConfig } from "../data/site";
 
 const avatarWebp = "/images/jearon-wong-avatar.webp";
@@ -24,16 +23,6 @@ const avatarAlt = `${siteConfig.author.name} portrait`;
     </picture>
     <div class="portrait-shade"></div>
     <div class="registry-grid portrait-grid"></div>
-    <div class="portrait-meta">
-      <div class="registry-annotation portrait-role">
-        <span class="registry-key">ROLE_ID</span>: <span class="registry-value">ARCHITECT_01</span>
-      </div>
-      <div class="plaque-inline-wrapper">
-        <div class="registry-annotation plaque-inline">
-          <span class="registry-key">STATUS</span>: <span class="registry-value">ACTIVE</span>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -48,15 +37,20 @@ const avatarAlt = `${siteConfig.author.name} portrait`;
   .portrait-panel {
     position: relative;
     width: 100%;
-    max-width: 440px;
-    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    aspect-ratio: 0.82 / 1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--current-surface);
-    border: 1px solid var(--current-border);
+    background:
+      linear-gradient(145deg, rgba(59, 130, 246, 0.08), rgba(255, 255, 255, 0)),
+      var(--current-surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 28px 70px rgba(0, 0, 0, 0.38),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.025);
   }
   .portrait-picture,
   .portrait-image {
@@ -67,14 +61,14 @@ const avatarAlt = `${siteConfig.author.name} portrait`;
   }
   .portrait-image {
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: 50% 42%;
   }
   .portrait-shade {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(17, 17, 17, 0) 54%, rgba(17, 17, 17, 0.62) 100%),
-      linear-gradient(90deg, rgba(17, 17, 17, 0.12), rgba(17, 17, 17, 0));
+      linear-gradient(180deg, rgba(17, 17, 17, 0) 52%, rgba(17, 17, 17, 0.28) 100%),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0) 48%, rgba(17, 17, 17, 0.18));
     pointer-events: none;
   }
   .portrait-grid {
@@ -83,56 +77,24 @@ const avatarAlt = `${siteConfig.author.name} portrait`;
     opacity: 0.06;
     pointer-events: none;
   }
-  .portrait-meta {
-    position: absolute;
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1rem;
-  }
-  .portrait-role {
-    padding: 0.45rem 0.65rem;
-    background: rgba(17, 17, 17, 0.62);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(10px);
-  }
-  .plaque-inline-wrapper {
-    position: relative;
-    padding: 1px;
-    background: linear-gradient(135deg, var(--accent-signal) 0%, transparent 40%);
-    display: inline-block;
-  }
-  .plaque-inline {
-    padding: 0.5rem 1rem;
-    background: rgba(17, 17, 17, 0.72);
-    border: none;
-    font-size: 0.55rem;
-    font-weight: 700;
-    white-space: nowrap;
-    backdrop-filter: blur(10px);
-  }
   @media (max-width: 1024px) {
-    .portrait-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.45rem;
+    .portrait-anchor {
+      justify-content: flex-start;
+    }
+
+    .portrait-panel {
+      max-width: 440px;
+      aspect-ratio: 1.08 / 1;
     }
   }
   @media (max-width: 640px) {
-    .portrait-meta {
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: flex-end;
-      left: 0.75rem;
-      right: 0.75rem;
-      bottom: 0.75rem;
+    .portrait-panel {
+      max-width: 100%;
+      aspect-ratio: 1.25 / 1;
     }
-    .portrait-role {
-      display: none;
+
+    .portrait-image {
+      object-position: 50% 38%;
     }
   }
 </style>

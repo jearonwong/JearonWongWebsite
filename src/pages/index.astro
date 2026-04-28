@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import PortraitAnchor from "../components/PortraitAnchor.astro";
-import ImmediateProofSignal from "../components/ImmediateProofSignal.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
 import CoreArchitectureMap from "../components/CoreArchitectureMap.astro";
 import { homepageActions, homepageContent, siteConfig, projects, socialLinks } from "../data/site";
@@ -71,10 +70,6 @@ const writingTracks = [
           <div class="hero-ctas">
             <a href={homepageActions.thesis.href} class="button button-primary">{homepageActions.thesis.label}</a>
             <a href={homepageActions.projects.href} class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">{homepageActions.projects.label}</a>
-          </div>
-
-          <div class="proof-signal-band">
-            <ImmediateProofSignal />
           </div>
         </div>
         <div class="hero-visual">
@@ -217,74 +212,76 @@ const writingTracks = [
     overflow: hidden;
   }
   .hero-section {
-    padding-top: 4.85rem;
-    padding-bottom: 5.5rem;
+    padding-top: 5.2rem;
+    padding-bottom: 5.8rem;
   }
   .hero-technical-hook {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 1.3rem;
+    align-items: flex-start;
+    gap: 0.22rem;
+    margin-bottom: 1rem;
     color: var(--accent-signal);
+    font-size: 0.68rem;
+    line-height: 1.6;
+    max-width: min(100%, 46ch);
+  }
+  .hero-technical-hook span {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-wrap: balance;
   }
   .hero-nameplate {
-    font-size: clamp(2.85rem, 5.6vw, 4.45rem);
+    font-size: clamp(2.55rem, 4.15vw, 3.65rem);
     font-weight: 820;
-    letter-spacing: -0.05em;
-    line-height: 0.98;
-    margin: 0 0 1.65rem;
+    letter-spacing: -0.04em;
+    line-height: 1.06;
+    margin: 0 0 1.35rem;
     color: var(--text-registry-primary);
-    max-width: 18ch;
+    max-width: 22ch;
   }
   .hero-nameplate span {
     display: block;
   }
   .hero-thesis {
-    font-size: clamp(1.18rem, 2.2vw, 1.55rem);
+    font-size: clamp(1.16rem, 1.75vw, 1.42rem);
     font-weight: 650;
     letter-spacing: -0.01em;
-    line-height: 1.38;
-    margin: 0 0 1.65rem;
-    color: var(--text-registry-muted);
-    max-width: 54ch;
+    line-height: 1.45;
+    margin: 0 0 1.8rem;
+    color: rgba(241, 245, 249, 0.82);
+    max-width: 48ch;
   }
   .hero-author-anchor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem 0.85rem;
-    align-items: baseline;
-    margin-bottom: 1rem;
+    display: grid;
+    gap: 0.22rem;
+    margin-bottom: 1.15rem;
   }
   .hero-author-name {
     font-weight: 800;
     color: var(--text-registry-primary);
     letter-spacing: -0.01em;
+    font-size: 1rem;
   }
   .hero-role-line {
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
     color: var(--text-registry-muted);
     font-weight: 600;
     line-height: 1.55;
+    max-width: 42ch;
   }
   .hero-support {
-    max-width: 58ch;
+    max-width: 52ch;
     color: var(--text-registry-muted);
-    font-size: 1.05rem;
-    line-height: 1.65;
+    font-size: 0.98rem;
+    line-height: 1.68;
     font-weight: 400;
-    margin-bottom: 2.25rem;
-  }
-  .proof-signal-band {
-    margin-top: 2.25rem;
-    padding: 1.25rem 1.5rem;
-    background-color: rgba(10, 10, 10, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-registry);
-    border-left: 3px solid var(--accent-signal);
-    max-width: 34rem;
+    margin-bottom: 2rem;
   }
   .hero-ctas {
     display: flex;
@@ -573,14 +570,15 @@ const writingTracks = [
   /* ── Layout ── */
   .split-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
-    gap: 5rem;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.85fr);
+    gap: clamp(3rem, 5vw, 5rem);
+    align-items: center;
   }
   .hero-visual {
     justify-self: end;
-    width: min(100%, 22rem);
-    padding-top: 1.4rem;
+    align-self: stretch;
+    width: min(100%, 31rem);
+    padding-top: 0.35rem;
   }
 
   /* ── Responsive ── */
@@ -588,10 +586,11 @@ const writingTracks = [
     .split-layout {
       gap: 3rem;
       grid-template-columns: 1fr;
+      align-items: start;
     }
     .hero-visual {
       justify-self: start;
-      width: min(100%, 21rem);
+      width: min(100%, 30rem);
       padding-top: 0;
     }
   }
@@ -616,14 +615,17 @@ const writingTracks = [
 
   @media (max-width: 768px) {
     .hero-section {
-      padding-top: 4.5rem;
+      padding-top: 4.25rem;
       padding-bottom: 4rem;
     }
     .hero-nameplate {
-      font-size: clamp(2.35rem, 9vw, 3.6rem);
+      font-size: clamp(2.15rem, 8vw, 3.05rem);
+      line-height: 1.06;
+      max-width: 100%;
     }
     .hero-thesis {
-      font-size: clamp(1.08rem, 4.8vw, 1.35rem);
+      font-size: clamp(1.05rem, 4.4vw, 1.28rem);
+      max-width: 25ch;
     }
     .hero-role-line {
       max-width: 28ch;
@@ -632,12 +634,8 @@ const writingTracks = [
       font-size: 0.95rem;
       max-width: 36ch;
     }
-    .proof-signal-band {
-      margin-top: 2rem;
-      padding: 1.1rem 1.25rem;
-    }
     .hero-visual {
-      width: min(100%, 18rem);
+      width: min(100%, 22rem);
     }
     .section-header {
       margin-bottom: 2.5rem;
