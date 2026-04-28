@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: "Jearon Wong",
   description: "Architecting production-grade AI agent systems through protocol, runtime, and product work.",
-  siteUrl: "https://jearonwong.com",
+  siteUrl: "https://www.jearonwong.com",
   socialImagePath: "/social/jearonwong-og.png",
   xHandle: "@jearonwong",
   thesis: "Defining reliable delivery for AI agents.", // v1.0 Primary Headline

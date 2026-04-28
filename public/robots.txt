@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jearonwong.com/sitemap-index.xml
+Sitemap: https://www.jearonwong.com/sitemap-index.xml

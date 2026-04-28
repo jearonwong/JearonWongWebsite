@@ -28,6 +28,6 @@ npm run lint
 
 ## Notes
 
-- `astro.config.mjs` sets the production site URL to `https://jearonwong.com`
+- `astro.config.mjs` sets the production site URL to `https://www.jearonwong.com`
 - `public/robots.txt` points crawlers to the generated sitemap
 - `src/pages/rss.xml.ts` publishes the essays feed

@@ -666,4 +666,4 @@ Together, these concepts describe the same underlying transition:
 
 ---
 
-*Jearon Wong is the founder of Coregentis and the primary author of the Multi-Agent Lifecycle Protocol (MPLP), an open specification for agent lifecycle governance. He writes about production agent systems and protocol-layer infrastructure at jearonwong.com.*
+*Jearon Wong is the founder of Coregentis and the primary author of the Multi-Agent Lifecycle Protocol (MPLP), an open specification for agent lifecycle governance. He writes about production agent systems and protocol-layer infrastructure at www.jearonwong.com.*
