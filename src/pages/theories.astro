@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
-import { contentRouteRoles, homepageActions, pageRegistry, siteThesis, theoryClusters } from "../data/site";
+import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, siteThesis, theoryClusters } from "../data/site";
 ---
 
 <BaseLayout title="Ideas" description={pageRegistry.ideas.lead} canonicalPath="/theories">
@@ -26,6 +26,11 @@ import { contentRouteRoles, homepageActions, pageRegistry, siteThesis, theoryClu
         <div class="ideas-guidance__links">
           <a href={homepageActions.startHere.href} class="ideas-guidance__link">{homepageActions.startHere.label}</a>
           <a href={homepageActions.proof.href} class="ideas-guidance__link">Then inspect the proof room</a>
+        </div>
+        <div class="layer-preview" aria-label="AI Agent Lifecycle preview layers">
+          {aiAgentLifecycleColumn.previewLayers.map((layer) => (
+            <span>{layer}</span>
+          ))}
         </div>
       </div>
 
@@ -71,6 +76,23 @@ import { contentRouteRoles, homepageActions, pageRegistry, siteThesis, theoryClu
   }
 
   .ideas-guidance__link:hover {
+    color: var(--current-text);
+  }
+
+  .layer-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.25rem;
+  }
+
+  .layer-preview span {
+    padding: 0.42rem 0.62rem;
+    border: 1px solid var(--current-border);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--current-text);
   }
 

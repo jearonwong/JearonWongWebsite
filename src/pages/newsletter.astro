@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
+import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
 ---
 
 <BaseLayout title="Newsletter" description={pageRegistry.newsletter.lead}>
@@ -34,6 +34,14 @@ import { contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "
             <li>{topic}</li>
           ))}
         </ul>
+        <div class="column-note">
+          <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+            <span class="registry-key">COLUMN_SIGNAL</span>
+          </div>
+          <p>
+            Follow the {aiAgentLifecycleColumn.title} series. Essays will be published one at a time when the argument is ready, not as a high-frequency content feed.
+          </p>
+        </div>
         <form
           action={siteConfig.newsletterEndpoint}
           method="post"
@@ -122,6 +130,17 @@ import { contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "
     content: "";
     background: var(--accent-signal);
     border-radius: 999px;
+  }
+  .column-note {
+    margin: 0 0 2rem;
+    padding: 1rem;
+    border: 1px solid var(--current-line);
+  }
+  .column-note p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--current-muted);
   }
   .subscribe-form {
     display: flex;

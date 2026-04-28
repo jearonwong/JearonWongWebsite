@@ -38,6 +38,38 @@ export const siteThesis = {
   ]
 };
 
+export const aiAgentLifecycleColumn = {
+  title: "Defining the AI Agent Lifecycle",
+  subtitle:
+    "From execution frameworks to auditable, accountable, insurable, and task-completable agent systems.",
+  purpose:
+    "This series defines AI Agent Lifecycle as the missing system boundary behind Agentic Delivery: the continuity of agent identity, role, activation, responsibility, state, evidence, learning, and task progress across activations, processes, projects, and cross-project environments.",
+  relationToAgenticDelivery:
+    "Agentic Delivery names the shift. AI Agent Lifecycle explains the system boundary. Multi-Agent Lifecycle Protocol (MPLP) defines the protocol layer.",
+  publicationRule:
+    "Articles in this series are published one at a time after careful refinement. The series is not a content calendar dump.",
+  preludeEssays: [
+    {
+      slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      role: "Lifecycle governance gap / technical prelude"
+    },
+    {
+      slug: "agentic-ai-inflection-point-project-delivery",
+      role: "Agentic Delivery / project delivery prelude"
+    }
+  ],
+  nextEssay: {
+    title: "Agent Frameworks Manage Execution. They Don't Manage Lifecycle.",
+    status: "in development"
+  },
+  previewLayers: [
+    "Agent Activation Lifecycle",
+    "Engineering / Process Lifecycle",
+    "Project Lifecycle",
+    "Enterprise Cross-Project Lifecycle"
+  ]
+};
+
 export const contentRouteRoles = {
   homepage: {
     question: "What is the thesis?",
@@ -287,6 +319,17 @@ export const pageRegistry = {
 };
 
 export const theoryClusters = [
+  {
+    slug: "ai-agent-lifecycle",
+    name: "AI Agent Lifecycle",
+    description:
+      "The system boundary behind Agentic Delivery, spanning agent activation, engineering/process continuity, project lifecycle, and enterprise cross-project responsibility.",
+    prompt: "What must stay continuous for agent work to become auditable, accountable, insurable, and task-completable?",
+    essayPath: "/essays/#ai-agent-lifecycle-column",
+    essayLabel: "Open the column foundation",
+    proofPath: "/projects/mplp/",
+    proofLabel: "Open the protocol proof"
+  },
   {
     slug: "agentic-delivery",
     name: "Agentic Delivery",
