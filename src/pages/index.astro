@@ -5,7 +5,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import PortraitAnchor from "../components/PortraitAnchor.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
 import CoreArchitectureMap from "../components/CoreArchitectureMap.astro";
-import { homepageActions, homepageContent, siteConfig, projects, socialLinks } from "../data/site";
+import { aiAgentLifecycleColumn, homepageActions, homepageContent, siteConfig, projects, socialLinks } from "../data/site";
 
 const allEssays = (await getCollection("essays"))
   .sort((left, right) =>
@@ -129,7 +129,26 @@ const writingTracks = [
   </section>
 
   <div class="zone-b page-body">
-    <!-- 4. Proof Surfaces -->
+    <!-- 4. Lifecycle Protocol Category Bridge -->
+    <section class="shell section-rhythm lifecycle-category-bridge">
+      <div class="registry-chassis lifecycle-bridge-panel">
+        <div class="registry-annotation" style="margin-bottom: 0.85rem;">
+          <span class="registry-key">CATEGORY_ENTRY</span>: <span class="registry-value">AI AGENT LIFECYCLE PROTOCOL</span>
+        </div>
+        <div class="lifecycle-bridge-grid">
+          <div>
+            <h2>{aiAgentLifecycleColumn.categoryTitle}</h2>
+            <p class="section-desc">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+          </div>
+          <div class="lifecycle-bridge-copy">
+            <p>{aiAgentLifecycleColumn.categoryBridge}</p>
+            <a href={homepageActions.lifecycle.href} class="section-link">{homepageActions.lifecycle.label}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Proof Surfaces -->
     <section id="proof" class="shell section-rhythm">
       <div class="section-header">
         <h2>Proof Surfaces</h2>
@@ -147,7 +166,7 @@ const writingTracks = [
       </div>
     </section>
 
-    <!-- 5. Reading Path -->
+    <!-- 6. Reading Path -->
     {readingPathEntries.length > 0 && (
       <section class="shell section-rhythm" style="padding-top: 2rem;">
         <div class="section-header">
@@ -169,7 +188,7 @@ const writingTracks = [
       </section>
     )}
 
-    <!-- 6. Writing Tracks -->
+    <!-- 7. Writing Tracks -->
     <section class="shell section-rhythm" style="padding-top: 2rem;">
       <div class="section-header">
         <h2>Writing tracks.</h2>
@@ -186,7 +205,7 @@ const writingTracks = [
       </div>
     </section>
 
-    <!-- 7. Contact / Signal -->
+    <!-- 8. Contact / Signal -->
     <section class="shell section-rhythm quiet-close" style="padding-top: 2rem;">
       <div class="close-content">
         <h2>Get in touch.</h2>
@@ -323,6 +342,38 @@ const writingTracks = [
   }
   .section-header {
     margin-bottom: 3.5rem;
+  }
+
+  .lifecycle-category-bridge {
+    padding-top: 0;
+  }
+
+  .lifecycle-bridge-panel {
+    padding: 2rem;
+    border-left: 2px solid var(--accent-proof);
+  }
+
+  .lifecycle-bridge-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .lifecycle-bridge-grid h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
+  }
+
+  .lifecycle-bridge-copy p {
+    margin: 0;
+    max-width: 54rem;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   /* ── Core Thesis ── */
@@ -661,6 +712,13 @@ const writingTracks = [
     }
     .section-header {
       margin-bottom: 2.5rem;
+    }
+    .lifecycle-bridge-panel {
+      padding: 1.5rem;
+    }
+    .lifecycle-bridge-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
     }
     .core-thesis-band {
       padding: 4.5rem 0;

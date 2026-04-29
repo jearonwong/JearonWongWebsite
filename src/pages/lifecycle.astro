@@ -1,0 +1,372 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import { aiAgentLifecycleColumn, pageRegistry } from "../data/site";
+
+const essays = await getCollection("essays");
+const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
+const preludeEntries = aiAgentLifecycleColumn.preludeEssays
+  .map((entry) => {
+    const essay = essaysBySlug.get(entry.slug);
+    return essay ? { ...entry, essay } : null;
+  })
+  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
+---
+
+<BaseLayout title={pageRegistry.lifecycle.title} description={aiAgentLifecycleColumn.categoryStatement}>
+  <RegistryPageHero
+    title={aiAgentLifecycleColumn.categoryTitle}
+    subtitle={aiAgentLifecycleColumn.subtitle}
+    objectType="SERIES"
+    objectValue={aiAgentLifecycleColumn.seriesTitle}
+    lead={aiAgentLifecycleColumn.categoryStatement}
+  >
+    <div class="lifecycle-hero-links">
+      <a href="/essays/" class="registry-annotation lifecycle-hero-link">
+        <span class="registry-key">ESSAYS</span>: <span class="registry-value">PUBLIC ARGUMENTS</span>
+      </a>
+      <a href="/projects/mplp/" class="registry-annotation lifecycle-hero-link">
+        <span class="registry-key">MPLP</span>: <span class="registry-value">PROTOCOL EXPRESSION</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body" style="padding: 6rem 0;">
+    <div class="shell lifecycle-shell">
+      <section class="registry-chassis lifecycle-opening">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">CATEGORY_OPENING</span>
+        </div>
+        <div class="opening-grid">
+          <div>
+            <h2>Why this category exists</h2>
+            <p>{aiAgentLifecycleColumn.purpose}</p>
+          </div>
+          <div class="opening-notes">
+            <p>{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+            <p>{aiAgentLifecycleColumn.categoryBridge}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lifecycle-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">PREVIEW</span>: <span class="registry-value">FOUR LAYERS</span>
+          </div>
+          <h2>Four lifecycle layers.</h2>
+          <p class="section-desc">A short map of the system boundary. The full argument belongs in the series essays.</p>
+        </div>
+        <div class="lifecycle-card-grid">
+          {aiAgentLifecycleColumn.lifecycleLayers.map((layer) => (
+            <article class="registry-chassis lifecycle-card">
+              <h3>{layer.name}</h3>
+              <p>{layer.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="lifecycle-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">PREVIEW</span>: <span class="registry-value">PRODUCTION GUARANTEES</span>
+          </div>
+          <h2>What a lifecycle protocol makes assessable.</h2>
+          <p class="section-desc">These are production-readiness conditions, not adoption claims or certification claims.</p>
+        </div>
+        <div class="guarantee-grid">
+          {aiAgentLifecycleColumn.productionGuarantees.map((guarantee) => (
+            <article class="registry-chassis lifecycle-card">
+              <h3>{guarantee.name}</h3>
+              <p>{guarantee.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis lifecycle-opening">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">WHERE_MPLP_SITS</span>
+        </div>
+        <div class="opening-grid">
+          <div>
+            <h2>MPLP is not another framework.</h2>
+            <p>
+              Multi-Agent Lifecycle Protocol (MPLP) is a lifecycle protocol expression. It defines lifecycle semantics and responsibility boundaries for agent systems.
+            </p>
+          </div>
+          <div class="opening-notes">
+            <p>MPLP sits above execution frameworks, communication protocols, and observability tools. It does not replace MCP or A2A.</p>
+            <p>This page does not claim universal adoption, official standard status, or certification. It defines the category entry and points to the public proof surfaces.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lifecycle-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">SERIES_STATE</span>: <span class="registry-value">FOUNDATION</span>
+          </div>
+          <h2>{aiAgentLifecycleColumn.seriesTitle}</h2>
+          <p class="section-desc">{aiAgentLifecycleColumn.publicationRule}</p>
+        </div>
+
+        {preludeEntries.length > 0 && (
+          <div class="prelude-list" aria-label="Prelude essays">
+            {preludeEntries.map((entry, index) => (
+              <a href={`/essays/${entry.essay.slug}/`} class="prelude-link">
+                <span class="prelude-index">{String(index + 1).padStart(2, "0")}</span>
+                <span class="prelude-copy">
+                  <strong>{entry.essay.data.title}</strong>
+                  <span>{entry.role}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
+
+        <article class="registry-chassis next-essay-card">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">NEXT_ESSAY</span>: <span class="registry-value">{aiAgentLifecycleColumn.nextEssay.status.toUpperCase()}</span>
+          </div>
+          <h3>{aiAgentLifecycleColumn.nextEssay.title}</h3>
+        </article>
+      </section>
+
+      <section class="registry-chassis newsletter-cta">
+        <div>
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">FOLLOW</span>: <span class="registry-value">ONE ESSAY AT A TIME</span>
+          </div>
+          <h2>Follow the lifecycle protocol series.</h2>
+          <p>New essays are published when the argument is ready, not as a high-frequency content feed.</p>
+        </div>
+        <a href="/newsletter/" class="lifecycle-button">Open newsletter</a>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lifecycle-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .lifecycle-hero-link {
+    text-decoration: none;
+  }
+
+  .lifecycle-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .lifecycle-shell {
+    display: grid;
+    gap: 4rem;
+  }
+
+  .lifecycle-opening,
+  .newsletter-cta {
+    padding: 2.25rem;
+  }
+
+  .opening-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 3rem;
+  }
+
+  .opening-grid h2,
+  .section-header h2,
+  .newsletter-cta h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
+  }
+
+  .opening-grid p,
+  .section-desc,
+  .newsletter-cta p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .opening-notes {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .opening-notes p:first-child {
+    color: var(--current-text);
+  }
+
+  .lifecycle-section {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .section-header {
+    max-width: 68rem;
+  }
+
+  .lifecycle-card-grid,
+  .guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .lifecycle-card {
+    padding: 1.4rem;
+  }
+
+  .lifecycle-card h3,
+  .next-essay-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--current-text);
+  }
+
+  .lifecycle-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.62;
+  }
+
+  .prelude-list {
+    display: grid;
+    border: 1px solid var(--current-line);
+  }
+
+  .prelude-link {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    padding: 1.15rem 1.25rem;
+    color: var(--current-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .prelude-link:last-child {
+    border-bottom: none;
+  }
+
+  .prelude-link:hover strong {
+    color: var(--accent-signal);
+  }
+
+  .prelude-index {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    color: var(--accent-proof);
+    letter-spacing: 0.06em;
+  }
+
+  .prelude-copy {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .prelude-copy strong {
+    font-size: 1rem;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+  }
+
+  .prelude-copy span {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--current-muted);
+  }
+
+  .next-essay-card {
+    padding: 1.5rem;
+    border-left: 2px solid var(--accent-proof);
+  }
+
+  .newsletter-cta {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .lifecycle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1.1rem;
+    background: var(--accent-signal);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .lifecycle-button:hover {
+    opacity: 0.88;
+  }
+
+  @media (max-width: 980px) {
+    .opening-grid,
+    .newsletter-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .lifecycle-card-grid,
+    .guarantee-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .newsletter-cta {
+      display: grid;
+      align-items: start;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .lifecycle-shell {
+      gap: 2.5rem;
+    }
+
+    .lifecycle-opening,
+    .newsletter-cta {
+      padding: 1.5rem;
+    }
+
+    .opening-grid {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+
+    .lifecycle-card-grid,
+    .guarantee-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .prelude-link {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      padding: 1rem;
+    }
+  }
+</style>

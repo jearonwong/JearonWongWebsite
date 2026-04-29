@@ -2,21 +2,13 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { aiAgentLifecycleColumn, contentRouteRoles, getTheoryClusterName, pageRegistry } from "../../data/site";
+import { aiAgentLifecycleColumn, getTheoryClusterName, pageRegistry } from "../../data/site";
 
 const essays = (await getCollection("essays")).sort(
   (left, right) =>
     Number(right.data.flagship) - Number(left.data.flagship) ||
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
 );
-
-const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
-const columnPreludeEntries = aiAgentLifecycleColumn.preludeEssays
-  .map((entry) => {
-    const essay = essaysBySlug.get(entry.slug);
-    return essay ? { ...entry, essay } : null;
-  })
-  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 ---
 
 <BaseLayout title="Essays" description={pageRegistry.essays.lead}>
@@ -29,67 +21,28 @@ const columnPreludeEntries = aiAgentLifecycleColumn.preludeEssays
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
     <section class="shell">
-      <div class="registry-chassis start-here-block">
+      <div class="registry-chassis lifecycle-spotlight">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">READING_PATH</span>: <span class="registry-value">{contentRouteRoles.essays.question}</span>
+          <span class="registry-key">LIFECYCLE_PROTOCOL_SPOTLIGHT</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
         </div>
-        <div class="start-here-links">
-          <a href="/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/" class="start-link">
-            <span class="start-index">01</span>
-            <span class="start-copy">
-              <strong>Lifecycle governance / MCP-A2A gap</strong>
-              <span>Start with the protocol-stack question: tool access and agent coordination still need lifecycle authority.</span>
-            </span>
-          </a>
-          <a href="/essays/agentic-ai-inflection-point-project-delivery/" class="start-link">
-            <span class="start-index">02</span>
-            <span class="start-copy">
-              <strong>Agentic Delivery / project delivery</strong>
-              <span>Then read the category argument: agent systems must move from task execution to reliable project delivery.</span>
-            </span>
-          </a>
+        <div class="lifecycle-spotlight-grid">
+          <div>
+            <h2 class="spotlight-title">{aiAgentLifecycleColumn.categoryTitle}</h2>
+            <p class="spotlight-copy">{aiAgentLifecycleColumn.categoryStatement}</p>
+            <p class="spotlight-relation">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+          </div>
+          <div class="spotlight-actions">
+            <p>{aiAgentLifecycleColumn.publicationRule}</p>
+            <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open the Lifecycle Protocol entry</a>
+          </div>
         </div>
       </div>
 
-      <div class="registry-chassis column-foundation" id="ai-agent-lifecycle-column">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">COLUMN</span>: <span class="registry-value">IN DEVELOPMENT</span>
+      <div class="registry-section-heading">
+        <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+          <span class="registry-key">PUBLISHED_ESSAYS</span>: <span class="registry-value">REGISTRY</span>
         </div>
-        <div class="column-foundation-grid">
-          <div>
-            <h2 class="column-title">{aiAgentLifecycleColumn.title}</h2>
-            <p class="column-subtitle">{aiAgentLifecycleColumn.subtitle}</p>
-            <p class="column-copy">{aiAgentLifecycleColumn.purpose}</p>
-            <p class="column-relation">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
-          </div>
-          <aside class="column-status" aria-label="AI Agent Lifecycle column publication status">
-            <div class="registry-annotation" style="margin-bottom: 0.75rem;">
-              <span class="registry-key">PUBLICATION_RULE</span>
-            </div>
-            <p>{aiAgentLifecycleColumn.publicationRule}</p>
-            <div class="registry-annotation next-essay-label">
-              <span class="registry-key">NEXT_ESSAY</span>: <span class="registry-value">{aiAgentLifecycleColumn.nextEssay.status.toUpperCase()}</span>
-            </div>
-            <p class="next-essay-title">{aiAgentLifecycleColumn.nextEssay.title}</p>
-          </aside>
-        </div>
-
-        {columnPreludeEntries.length > 0 && (
-          <div class="prelude-list" aria-label="Foundational essays for the AI Agent Lifecycle column">
-            <div class="registry-annotation" style="margin-bottom: 0.85rem;">
-              <span class="registry-key">PRELUDE_ESSAYS</span>
-            </div>
-            {columnPreludeEntries.map((entry, index) => (
-              <a href={`/essays/${entry.essay.slug}/`} class="prelude-link">
-                <span class="prelude-index">{String(index + 1).padStart(2, "0")}</span>
-                <span class="prelude-copy">
-                  <strong>{entry.essay.data.title}</strong>
-                  <span>{entry.role}</span>
-                </span>
-              </a>
-            ))}
-          </div>
-        )}
+        <h2>Published Essays Registry</h2>
       </div>
 
       <div class="registry-log">
@@ -120,139 +73,63 @@ const columnPreludeEntries = aiAgentLifecycleColumn.preludeEssays
 </BaseLayout>
 
 <style>
-  .start-here-block {
-    margin-bottom: 2rem;
-    padding: 2rem;
-  }
-  .start-here-links {
-    display: grid;
-    gap: 0.85rem;
-  }
-  .start-link {
-    display: grid;
-    grid-template-columns: 3rem 1fr;
-    gap: 1rem;
-    padding: 1rem 0;
-    color: var(--current-text);
-    text-decoration: none;
-    border-top: 1px solid var(--current-line);
-  }
-  .start-link:last-child {
-    border-bottom: 1px solid var(--current-line);
-  }
-  .start-link:hover strong {
-    color: var(--accent-signal);
-  }
-  .start-index {
-    font-family: var(--font-mono);
-    font-size: 0.76rem;
-    font-weight: 800;
-    color: var(--accent-signal);
-    letter-spacing: 0.06em;
-  }
-  .start-copy {
-    display: grid;
-    gap: 0.35rem;
-  }
-  .start-copy strong {
-    font-size: 1rem;
-    line-height: 1.3;
-    transition: color 0.2s ease;
-  }
-  .start-copy span {
-    max-width: 68ch;
-    font-size: 0.94rem;
-    line-height: 1.6;
-    color: var(--current-muted);
-  }
-  .column-foundation {
+  .lifecycle-spotlight {
     margin-bottom: 2rem;
     padding: 2rem;
     border-left: 2px solid var(--accent-proof);
   }
-  .column-foundation-grid {
+  .lifecycle-spotlight-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
     gap: 2rem;
   }
-  .column-title {
+  .spotlight-title {
     margin: 0 0 0.7rem;
     font-size: 1.8rem;
     line-height: 1.12;
     letter-spacing: -0.02em;
     color: var(--current-text);
   }
-  .column-subtitle {
-    margin: 0 0 1rem;
-    max-width: 64ch;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--current-text);
-  }
-  .column-copy,
-  .column-relation,
-  .column-status p {
+  .spotlight-copy,
+  .spotlight-relation,
+  .spotlight-actions p {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.65;
     color: var(--current-muted);
   }
-  .column-relation {
+  .spotlight-relation {
     margin-top: 0.9rem;
     color: var(--current-text);
   }
-  .column-status {
-    padding: 1.2rem;
-    border: 1px solid var(--current-line);
-  }
-  .next-essay-label {
-    margin-top: 1.25rem;
-    margin-bottom: 0.45rem;
-  }
-  .next-essay-title {
-    color: var(--current-text);
-    font-weight: 700;
-  }
-  .prelude-list {
-    margin-top: 1.8rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--current-line);
-  }
-  .prelude-link {
+  .spotlight-actions {
     display: grid;
-    grid-template-columns: 3rem 1fr;
+    align-content: start;
     gap: 1rem;
-    padding: 0.95rem 0;
-    color: var(--current-text);
-    text-decoration: none;
-    border-top: 1px solid var(--current-line);
   }
-  .prelude-link:last-child {
-    border-bottom: 1px solid var(--current-line);
-  }
-  .prelude-link:hover strong {
-    color: var(--accent-signal);
-  }
-  .prelude-index {
+  .spotlight-link {
+    display: inline-flex;
+    width: fit-content;
     font-family: var(--font-mono);
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     font-weight: 800;
-    color: var(--accent-proof);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
   }
-  .prelude-copy {
-    display: grid;
-    gap: 0.35rem;
+  .spotlight-link:hover {
+    color: var(--current-text);
   }
-  .prelude-copy strong {
-    font-size: 0.98rem;
-    line-height: 1.35;
-    transition: color 0.2s ease;
+  .registry-section-heading {
+    margin: 0 0 1.4rem;
   }
-  .prelude-copy span {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: var(--current-muted);
+  .registry-section-heading h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
   }
   .registry-log {
     display: flex;
@@ -305,26 +182,15 @@ const columnPreludeEntries = aiAgentLifecycleColumn.preludeEssays
     margin: 0;
   }
   @media (max-width: 900px) {
-    .start-here-block {
+    .lifecycle-spotlight {
       padding: 1.5rem;
     }
-    .start-link {
-      grid-template-columns: 1fr;
-      gap: 0.4rem;
-    }
-    .column-foundation {
-      padding: 1.5rem;
-    }
-    .column-foundation-grid {
+    .lifecycle-spotlight-grid {
       grid-template-columns: 1fr;
       gap: 1.4rem;
     }
-    .column-title {
+    .spotlight-title {
       font-size: 1.45rem;
-    }
-    .prelude-link {
-      grid-template-columns: 1fr;
-      gap: 0.4rem;
     }
     .log-entry {
       grid-template-columns: 1fr;

@@ -39,8 +39,9 @@ import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegis
             <span class="registry-key">COLUMN_SIGNAL</span>
           </div>
           <p>
-            Follow the {aiAgentLifecycleColumn.title} series. Essays will be published one at a time when the argument is ready, not as a high-frequency content feed.
+            Follow the {aiAgentLifecycleColumn.seriesTitle} series. Essays will be published one at a time when the argument is ready, not as a high-frequency content feed.
           </p>
+          <a href={aiAgentLifecycleColumn.href} class="column-link">Open the Lifecycle Protocol entry</a>
         </div>
         <form
           action={siteConfig.newsletterEndpoint}
@@ -141,6 +142,20 @@ import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegis
     font-size: 0.92rem;
     line-height: 1.6;
     color: var(--current-muted);
+  }
+  .column-link {
+    display: inline-flex;
+    margin-top: 0.85rem;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .column-link:hover {
+    color: var(--current-text);
   }
   .subscribe-form {
     display: flex;

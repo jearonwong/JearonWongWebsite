@@ -39,13 +39,20 @@ export const siteThesis = {
 };
 
 export const aiAgentLifecycleColumn = {
+  categoryTitle: "AI Agent Lifecycle Protocol",
+  seriesTitle: "Defining the AI Agent Lifecycle",
   title: "Defining the AI Agent Lifecycle",
   subtitle:
     "From execution frameworks to auditable, accountable, insurable, and task-completable agent systems.",
+  categoryStatement:
+    "AI Agent Lifecycle Protocol is the missing category between agent execution and accountable project delivery.",
   purpose:
     "This series defines AI Agent Lifecycle as the missing system boundary behind Agentic Delivery: the continuity of agent identity, role, activation, responsibility, state, evidence, learning, and task progress across activations, processes, projects, and cross-project environments.",
   relationToAgenticDelivery:
     "Agentic Delivery names the shift. AI Agent Lifecycle explains the system boundary. Multi-Agent Lifecycle Protocol (MPLP) defines the protocol layer.",
+  categoryBridge:
+    "Agent frameworks solve execution. Communication protocols solve connection. Observability tools solve visibility. MPLP defines the lifecycle layer.",
+  href: "/lifecycle/",
   publicationRule:
     "Articles in this series are published one at a time after careful refinement. The series is not a content calendar dump.",
   preludeEssays: [
@@ -67,6 +74,50 @@ export const aiAgentLifecycleColumn = {
     "Engineering / Process Lifecycle",
     "Project Lifecycle",
     "Enterprise Cross-Project Lifecycle"
+  ],
+  lifecycleLayers: [
+    {
+      name: "Agent Activation Lifecycle",
+      description:
+        "The continuity of a single agent's activation, context loading, tool use, state update, suspension, resumption, and evidence record."
+    },
+    {
+      name: "Engineering / Process Lifecycle",
+      description:
+        "The continuity of intent intake, requirement clarification, planning, confirmation, execution, verification, change, review, and learning."
+    },
+    {
+      name: "Project Lifecycle",
+      description:
+        "The continuity of a project as a living objective: state, constraints, agents, humans, plans, decisions, traces, outcomes, and recovery."
+    },
+    {
+      name: "Enterprise Cross-Project Lifecycle",
+      description:
+        "The continuity of shared roles, activation boundaries, evidence ownership, audit chains, and responsibility across multiple projects or departments."
+    }
+  ],
+  productionGuarantees: [
+    {
+      name: "Auditability",
+      description:
+        "The lifecycle can reconstruct what happened, under which context, plan, confirmation, role, and evidence trail."
+    },
+    {
+      name: "Accountability",
+      description:
+        "Failures can be attributed to the right lifecycle boundary instead of being reduced to a generic AI error."
+    },
+    {
+      name: "Insurability",
+      description:
+        "Insurability means the lifecycle produces enough evidence, risk boundaries, responsibility assignment, and adjudication records for risk systems to assess the work."
+    },
+    {
+      name: "Task Completability",
+      description:
+        "The work has conditions for planning, confirmation, tracing, recovery, acceptance, and learning instead of ending at raw output."
+    }
   ]
 };
 
@@ -162,6 +213,10 @@ export const homepageActions = {
     href: "/projects/",
     label: "Open the proof room"
   },
+  lifecycle: {
+    href: "/lifecycle/",
+    label: "Open the Lifecycle Protocol entry"
+  },
   startHere: {
     href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
     label: "Start with the flagship essay"
@@ -246,10 +301,12 @@ export const homepageContent = {
 };
 
 export const primaryNav = [
-  { href: "/essays/", label: "Essays" },
   { href: "/theories/", label: "Ideas" },
-  { href: "/playbooks/", label: "Playbooks" },
+  { href: "/lifecycle/", label: "Lifecycle" },
+  { href: "/essays/", label: "Essays" },
   { href: "/projects/", label: "Projects" },
+  { href: "/governance/", label: "Governance" },
+  { href: "/playbooks/", label: "Playbooks" },
   { href: "/about/", label: "About" }
 ];
 
@@ -292,6 +349,13 @@ export const pageRegistry = {
     objectValue: "REGISTRY LOGBOOK",
     lead: "The public arguments behind Agentic Delivery, lifecycle governance, and the stack proof."
   },
+  lifecycle: {
+    title: "AI Agent Lifecycle Protocol",
+    subtitle: "Defining the AI Agent Lifecycle",
+    objectType: "CATEGORY_ENTRY",
+    objectValue: "PROTOCOL LAYER",
+    lead: "The category entry for the missing lifecycle layer between agent execution and accountable project delivery."
+  },
   governance: {
     title: "Governance",
     objectType: "PAGE_ROLE",
@@ -321,12 +385,12 @@ export const pageRegistry = {
 export const theoryClusters = [
   {
     slug: "ai-agent-lifecycle",
-    name: "AI Agent Lifecycle",
+    name: "AI Agent Lifecycle Protocol",
     description:
-      "The system boundary behind Agentic Delivery, spanning agent activation, engineering/process continuity, project lifecycle, and enterprise cross-project responsibility.",
+      "The protocol category behind Agentic Delivery: defining lifecycle continuity across activation, process, project, and enterprise cross-project responsibility.",
     prompt: "What must stay continuous for agent work to become auditable, accountable, insurable, and task-completable?",
-    essayPath: "/essays/#ai-agent-lifecycle-column",
-    essayLabel: "Open the column foundation",
+    essayPath: "/lifecycle/",
+    essayLabel: "Open the category entry",
     proofPath: "/projects/mplp/",
     proofLabel: "Open the protocol proof"
   },
