@@ -23,8 +23,14 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
           {contentRouteRoles.ideas.question} These concepts make the homepage thesis legible: {siteThesis.conceptDefinition}
           The essays develop the argument; the proof room shows how the concept becomes protocol, runtime, product, and evidence surfaces.
         </p>
+        <div class="relation-map" aria-label="Concept relationship">
+          <span><strong>Agentic Delivery</strong> names the outcome thesis.</span>
+          <span><strong>AI Agent Lifecycle</strong> defines the work-continuity category.</span>
+          <span><strong>MPLP</strong> is the later protocol abstraction and proof stack expression.</span>
+        </div>
         <div class="ideas-guidance__links">
-          <a href={aiAgentLifecycleColumn.href} class="ideas-guidance__link">Open the Lifecycle Protocol entry</a>
+          <a href={aiAgentLifecycleColumn.href} class="ideas-guidance__link">Open the AI Agent Lifecycle entry</a>
+          <a href="/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/" class="ideas-guidance__link">Read the origin essay</a>
           <a href={homepageActions.startHere.href} class="ideas-guidance__link">{homepageActions.startHere.label}</a>
           <a href={homepageActions.proof.href} class="ideas-guidance__link">Then inspect the proof room</a>
         </div>
@@ -65,6 +71,23 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
     flex-wrap: wrap;
     gap: 0.8rem 1rem;
     margin-top: 1.1rem;
+  }
+
+  .relation-map {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 1.1rem;
+    max-width: 62rem;
+  }
+
+  .relation-map span {
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .relation-map strong {
+    color: var(--current-text);
   }
 
   .ideas-guidance__link {

@@ -1,7 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
+
+const essays = await getCollection("essays");
+const firstEssay = essays.find((essay) => essay.slug === aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const firstEssayCover = firstEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const firstEssayCoverAlt = firstEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 ---
 
 <BaseLayout title="Newsletter" description={pageRegistry.newsletter.lead}>
@@ -36,12 +42,21 @@ import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegis
         </ul>
         <div class="column-note">
           <div class="registry-annotation" style="margin-bottom: 0.65rem;">
-            <span class="registry-key">COLUMN_SIGNAL</span>
+            <span class="registry-key">COLUMN_SIGNAL</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
           </div>
           <p>
-            Follow the {aiAgentLifecycleColumn.seriesTitle} series. Essays will be published one at a time when the argument is ready, not as a high-frequency content feed.
+            The first essay is published. The next article will define the four layers of AI Agent Lifecycle.
           </p>
-          <a href={aiAgentLifecycleColumn.href} class="column-link">Open the Lifecycle Protocol entry</a>
+          {firstEssay && (
+            <a href={`/essays/${firstEssay.slug}/`} class="current-article-link">
+              <img src={firstEssayCover} alt={firstEssayCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+              <span>
+                <strong>{firstEssay.data.title}</strong>
+                <small>{firstEssay.data.description}</small>
+              </span>
+            </a>
+          )}
+          <a href={aiAgentLifecycleColumn.href} class="column-link">Open the AI Agent Lifecycle entry</a>
         </div>
         <form
           action={siteConfig.newsletterEndpoint}
@@ -142,6 +157,37 @@ import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegis
     font-size: 0.92rem;
     line-height: 1.6;
     color: var(--current-muted);
+  }
+  .current-article-link {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 0.85rem;
+    align-items: center;
+    margin-top: 1rem;
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .current-article-link img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--current-line);
+    background: #111111;
+  }
+  .current-article-link span {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .current-article-link strong {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  .current-article-link small {
+    color: var(--current-muted);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+  .current-article-link:hover strong {
+    color: var(--accent-signal);
   }
   .column-link {
     display: inline-flex;
@@ -244,6 +290,9 @@ import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegis
     }
     .subscribe-btn {
       border-radius: 2px;
+    }
+    .current-article-link {
+      grid-template-columns: 1fr;
     }
   }
 </style>

@@ -129,11 +129,11 @@ const writingTracks = [
   </section>
 
   <div class="zone-b page-body">
-    <!-- 4. Lifecycle Protocol Category Bridge -->
+    <!-- 4. AI Agent Lifecycle Category Bridge -->
     <section class="shell section-rhythm lifecycle-category-bridge">
       <div class="registry-chassis lifecycle-bridge-panel">
         <div class="registry-annotation" style="margin-bottom: 0.85rem;">
-          <span class="registry-key">CATEGORY_ENTRY</span>: <span class="registry-value">AI AGENT LIFECYCLE PROTOCOL</span>
+          <span class="registry-key">CATEGORY_ENTRY</span>: <span class="registry-value">AI AGENT LIFECYCLE</span>
         </div>
         <div class="lifecycle-bridge-grid">
           <div>
@@ -142,7 +142,10 @@ const writingTracks = [
           </div>
           <div class="lifecycle-bridge-copy">
             <p>{aiAgentLifecycleColumn.categoryBridge}</p>
-            <a href={homepageActions.lifecycle.href} class="section-link">{homepageActions.lifecycle.label}</a>
+            <div class="lifecycle-bridge-links">
+              <a href={homepageActions.lifecycle.href} class="section-link">{homepageActions.lifecycle.label}</a>
+              <a href={homepageActions.lifecycleEssay.href} class="section-link">{homepageActions.lifecycleEssay.label}</a>
+            </div>
           </div>
         </div>
       </div>
@@ -375,6 +378,12 @@ const writingTracks = [
     color: var(--current-muted);
     font-size: 1rem;
     line-height: 1.65;
+  }
+
+  .lifecycle-bridge-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
   }
 
   /* ── Core Thesis ── */

@@ -4,6 +4,7 @@ const essays = defineCollection({
   schema: z.object({
     title: z.string(),
     titleLines: z.array(z.string()).optional(),
+    subtitle: z.string().optional(),
     description: z.string(),
     shareTitle: z.string().optional(),
     shareSubtitle: z.string().optional(),
@@ -15,6 +16,10 @@ const essays = defineCollection({
     projectProof: z.string(),
     featured: z.boolean().default(false),
     flagship: z.boolean().default(false),
+    series: z.string().optional(),
+    seriesOrder: z.number().optional(),
+    status: z.enum(["draft", "published"]).default("published"),
+    tags: z.array(z.string()).default([]),
     summary: z.string().optional(),
     summaryLines: z.array(z.string()).optional(),
     ogImage: z.string().optional(),

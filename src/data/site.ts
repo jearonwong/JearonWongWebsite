@@ -39,35 +39,47 @@ export const siteThesis = {
 };
 
 export const aiAgentLifecycleColumn = {
-  categoryTitle: "AI Agent Lifecycle Protocol",
-  seriesTitle: "Defining the AI Agent Lifecycle",
-  title: "Defining the AI Agent Lifecycle",
+  categoryTitle: "AI Agent Lifecycle",
+  seriesTitle: "Define The AI Agent Lifecycle",
+  title: "Define The AI Agent Lifecycle",
   subtitle:
-    "From execution frameworks to auditable, accountable, insurable, and task-completable agent systems.",
+    "A column on how agent work remains continuous across intent, context, role, plan, confirmation, execution, evidence, learning, and accepted outcome.",
   categoryStatement:
-    "AI Agent Lifecycle Protocol is the missing category between agent execution and accountable project delivery.",
+    "AI Agent Lifecycle is the work-continuity category beneath Agentic Delivery: how concrete work performed with agents remains traceable, reversible, and acceptable through time.",
   purpose:
-    "This series defines AI Agent Lifecycle as the missing system boundary behind Agentic Delivery: the continuity of agent identity, role, activation, responsibility, state, evidence, learning, and task progress across activations, processes, projects, and cross-project environments.",
+    "This column defines AI Agent Lifecycle as the continuity of intent, context, role, plan, confirmation, execution, evidence, learning, and accepted outcome across agent activation, engineering process, project, and cross-project dimensions.",
   relationToAgenticDelivery:
-    "Agentic Delivery names the shift. AI Agent Lifecycle explains the system boundary. Multi-Agent Lifecycle Protocol (MPLP) defines the protocol layer.",
+    "Agentic Delivery names the shift. AI Agent Lifecycle explains the work-continuity layer. MPLP later expresses the protocol structure.",
+  relationToMPLP:
+    "MPLP is the later protocol abstraction that grew from these lifecycle failure boundaries; it is not the subject of the first origin essay.",
   categoryBridge:
-    "Agent frameworks solve execution. Communication protocols solve connection. Observability tools solve visibility. MPLP defines the lifecycle layer.",
+    "Prompt Engineering improves a response. Context Engineering improves what the model sees. Harness Engineering improves execution. AI Agent Lifecycle asks what remains continuous after execution.",
   href: "/lifecycle/",
   publicationRule:
-    "Articles in this series are published one at a time after careful refinement. The series is not a content calendar dump.",
+    "Articles in this column are published one at a time after careful refinement. The first essay is the origin story; the next essay defines the four lifecycle layers.",
+  coverImage: "/figures/ai-agent-lifecycle-01-cover.svg",
+  coverImageAlt: "AI Agent Lifecycle: It Was Not Designed. It Grew. cover image",
+  firstPublishedEssay: {
+    slug: "ai-agent-lifecycle-it-was-not-designed-it-grew",
+    title: "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+    role: "Official first essay / concept origin prelude",
+    status: "published"
+  },
+  nextEssayDirection:
+    "The next essay will define the four layers of AI Agent Lifecycle and explain the engineering problem each layer solves.",
   preludeEssays: [
     {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
-      role: "Lifecycle governance gap / technical prelude"
+      role: "Technical prelude: lifecycle governance gap"
     },
     {
       slug: "agentic-ai-inflection-point-project-delivery",
-      role: "Agentic Delivery / project delivery prelude"
+      role: "Foundation reading: Agentic Delivery thesis"
     }
   ],
   nextEssay: {
-    title: "Agent Frameworks Manage Execution. They Don't Manage Lifecycle.",
-    status: "in development"
+    title: "The Four Layers of AI Agent Lifecycle",
+    status: "next"
   },
   previewLayers: [
     "Agent Activation Lifecycle",
@@ -128,7 +140,7 @@ export const contentRouteRoles = {
   },
   essays: {
     question: "Why is the thesis true?",
-    job: "Develop the public arguments behind Agentic Delivery and lifecycle governance."
+    job: "Develop the public arguments behind Agentic Delivery, AI Agent Lifecycle, and lifecycle governance."
   },
   ideas: {
     question: "What concepts make the thesis legible?",
@@ -215,7 +227,11 @@ export const homepageActions = {
   },
   lifecycle: {
     href: "/lifecycle/",
-    label: "Open the Lifecycle Protocol entry"
+    label: "Open the AI Agent Lifecycle entry"
+  },
+  lifecycleEssay: {
+    href: "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+    label: "Read the first Lifecycle essay"
   },
   startHere: {
     href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
@@ -290,6 +306,10 @@ export const homepageContent = {
   },
   readingPath: [
     {
+      slug: "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      note: "Column start: why AI Agent Lifecycle had to be named from real engineering failure boundaries."
+    },
+    {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
       note: "Protocol-stack gap: tool access and agent coordination still need lifecycle delivery."
     },
@@ -347,14 +367,14 @@ export const pageRegistry = {
     title: "Essays",
     objectType: "PAGE_ROLE",
     objectValue: "REGISTRY LOGBOOK",
-    lead: "The public arguments behind Agentic Delivery, lifecycle governance, and the stack proof."
+    lead: "The public arguments behind Agentic Delivery, AI Agent Lifecycle, lifecycle governance, and the stack proof."
   },
   lifecycle: {
-    title: "AI Agent Lifecycle Protocol",
-    subtitle: "Defining the AI Agent Lifecycle",
+    title: "AI Agent Lifecycle",
+    subtitle: "Define The AI Agent Lifecycle",
     objectType: "CATEGORY_ENTRY",
-    objectValue: "PROTOCOL LAYER",
-    lead: "The category entry for the missing lifecycle layer between agent execution and accountable project delivery."
+    objectValue: "WORK CONTINUITY LAYER",
+    lead: "The category entry for how agent work remains continuous through intent, context, plan, confirmation, evidence, learning, and accepted outcome."
   },
   governance: {
     title: "Governance",
@@ -378,21 +398,21 @@ export const pageRegistry = {
     title: "Newsletter",
     objectType: "PAGE_ROLE",
     objectValue: "SUBSCRIPTION PATH",
-    lead: "A low-noise stream on Agentic Delivery, lifecycle governance, and protocol-grade AI agent systems."
+    lead: "A low-noise stream on Agentic Delivery, Define The AI Agent Lifecycle, lifecycle governance, and protocol-grade AI agent systems."
   }
 };
 
 export const theoryClusters = [
   {
     slug: "ai-agent-lifecycle",
-    name: "AI Agent Lifecycle Protocol",
+    name: "AI Agent Lifecycle",
     description:
-      "The protocol category behind Agentic Delivery: defining lifecycle continuity across activation, process, project, and enterprise cross-project responsibility.",
-    prompt: "What must stay continuous for agent work to become auditable, accountable, insurable, and task-completable?",
-    essayPath: "/lifecycle/",
-    essayLabel: "Open the category entry",
+      "The work-continuity category behind Agentic Delivery: how agent work keeps intent, context, decisions, evidence, learning, and accepted outcome coherent through time.",
+    prompt: "What must stay continuous for agent work to remain traceable, reversible, accountable, and acceptable?",
+    essayPath: "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+    essayLabel: "Read the origin essay",
     proofPath: "/projects/mplp/",
-    proofLabel: "Open the protocol proof"
+    proofLabel: "Open the later protocol proof"
   },
   {
     slug: "agentic-delivery",
@@ -483,6 +503,10 @@ export const projects = [
       "MPLP is the protocol-layer proof surface in the thesis chain. It shows why reliable AI work needs a lifecycle vocabulary for context, planning, confirmation, trace, governance, and evidence.",
     relatedIdeas: ["protocol-engineering", "lifecycle-governance", "accountable-work"],
     relatedEssays: [
+      {
+        href: "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+        label: "AI Agent Lifecycle origin essay"
+      },
       {
         href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
         label: "MCP/A2A lifecycle governance essay"
@@ -738,11 +762,13 @@ export const playbookModules = [
 
 export const newsletterPromise = {
   headline:
-    "Follow the public development of Agentic Delivery, lifecycle governance, and protocol-grade AI agent systems.",
+    "Follow the public development of Agentic Delivery, Define The AI Agent Lifecycle, lifecycle governance, and protocol-grade AI agent systems.",
   cadence:
-    "New notes go out when there is a real thesis, framework, proof update, or evidence surface to report.",
+    "New notes go out when there is a real thesis, column essay, framework, proof update, or evidence surface to report.",
   topics: [
     "Agentic Delivery and project lifecycle design",
+    "Define The AI Agent Lifecycle, starting from the published origin essay",
+    "the upcoming four-layer AI Agent Lifecycle definition",
     "lifecycle governance above MCP and A2A",
     "protocol, runtime, product, and evidence surfaces",
     "field notes from MPLP, Cognitive OS, SoloCrew, and Validation Lab"

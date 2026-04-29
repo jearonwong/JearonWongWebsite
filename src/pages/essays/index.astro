@@ -9,6 +9,16 @@ const essays = (await getCollection("essays")).sort(
     Number(right.data.flagship) - Number(left.data.flagship) ||
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
 );
+const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
+const columnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const preludeEntries = aiAgentLifecycleColumn.preludeEssays
+  .map((entry) => {
+    const essay = essaysBySlug.get(entry.slug);
+    return essay ? { ...entry, essay } : null;
+  })
+  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
+const columnCover = columnEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 ---
 
 <BaseLayout title="Essays" description={pageRegistry.essays.lead}>
@@ -23,19 +33,43 @@ const essays = (await getCollection("essays")).sort(
     <section class="shell">
       <div class="registry-chassis lifecycle-spotlight">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">LIFECYCLE_PROTOCOL_SPOTLIGHT</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
+          <span class="registry-key">COLUMN</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
         </div>
         <div class="lifecycle-spotlight-grid">
-          <div>
+          {columnEssay && (
+            <a href={`/essays/${columnEssay.slug}/`} class="spotlight-cover" aria-label={`Read ${columnEssay.data.title}`}>
+              <img src={columnCover} alt={columnCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+            </a>
+          )}
+          <div class="spotlight-main">
             <h2 class="spotlight-title">{aiAgentLifecycleColumn.categoryTitle}</h2>
             <p class="spotlight-copy">{aiAgentLifecycleColumn.categoryStatement}</p>
             <p class="spotlight-relation">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+            {columnEssay && (
+              <div class="current-essay">
+                <span class="current-essay-label">First published column essay</span>
+                <h3><a href={`/essays/${columnEssay.slug}/`}>{columnEssay.data.title}</a></h3>
+                <p>{columnEssay.data.description}</p>
+              </div>
+            )}
           </div>
           <div class="spotlight-actions">
-            <p>{aiAgentLifecycleColumn.publicationRule}</p>
-            <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open the Lifecycle Protocol entry</a>
+            <p>{aiAgentLifecycleColumn.nextEssayDirection}</p>
+            <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open the AI Agent Lifecycle entry</a>
+            {columnEssay && <a href={`/essays/${columnEssay.slug}/`} class="spotlight-link">Read essay 01</a>}
           </div>
         </div>
+        {preludeEntries.length > 0 && (
+          <div class="foundation-strip" aria-label="Prelude and foundation readings">
+            <span class="foundation-label">Prelude / foundation readings</span>
+            {preludeEntries.map((entry) => (
+              <a href={`/essays/${entry.essay.slug}/`}>
+                <strong>{entry.essay.data.title}</strong>
+                <span>{entry.role}</span>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
       <div class="registry-section-heading">
@@ -52,6 +86,11 @@ const essays = (await getCollection("essays")).sort(
               {essay.data.flagship && (
                 <div class="registry-annotation log-flagship">
                   <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+                </div>
+              )}
+              {essay.data.series && (
+                <div class="registry-annotation log-series">
+                  <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
                 </div>
               )}
               <div class="registry-annotation">
@@ -80,8 +119,22 @@ const essays = (await getCollection("essays")).sort(
   }
   .lifecycle-spotlight-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr) minmax(240px, 0.58fr);
     gap: 2rem;
+    align-items: start;
+  }
+  .spotlight-cover {
+    display: block;
+    border: 1px solid var(--current-line);
+    background: #111111;
+    text-decoration: none;
+  }
+  .spotlight-cover img {
+    width: 100%;
+    height: auto;
+  }
+  .spotlight-main {
+    min-width: 0;
   }
   .spotlight-title {
     margin: 0 0 0.7rem;
@@ -106,6 +159,67 @@ const essays = (await getCollection("essays")).sort(
     display: grid;
     align-content: start;
     gap: 1rem;
+  }
+  .current-essay {
+    margin-top: 1.35rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .current-essay-label,
+  .foundation-label {
+    display: block;
+    margin-bottom: 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-proof);
+  }
+  .current-essay h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1.2rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+  .current-essay h3 a {
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .current-essay h3 a:hover {
+    color: var(--accent-signal);
+  }
+  .current-essay p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+  .foundation-strip {
+    display: grid;
+    grid-template-columns: minmax(160px, 0.32fr) repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.6rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .foundation-strip a {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .foundation-strip a:hover strong {
+    color: var(--accent-signal);
+  }
+  .foundation-strip strong {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+  .foundation-strip span:not(.foundation-label) {
+    color: var(--current-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
   }
   .spotlight-link {
     display: inline-flex;
@@ -160,6 +274,9 @@ const essays = (await getCollection("essays")).sort(
   .log-flagship {
     color: var(--accent-signal);
   }
+  .log-series {
+    color: var(--accent-proof);
+  }
   .log-title {
     font-size: 1.72rem;
     font-weight: 800;
@@ -191,6 +308,9 @@ const essays = (await getCollection("essays")).sort(
     }
     .spotlight-title {
       font-size: 1.45rem;
+    }
+    .foundation-strip {
+      grid-template-columns: 1fr;
     }
     .log-entry {
       grid-template-columns: 1fr;

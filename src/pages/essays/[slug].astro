@@ -103,6 +103,7 @@ const articleJsonLd = {
   <RegistryPageHero
     title={essay.data.title}
     titleLines={essay.data.titleLines}
+    subtitle={essay.data.subtitle}
     objectType="ENTRY_TYPE"
     objectValue={essay.data.flagship ? "FLAGSHIP THESIS" : "ESSAY RECORD"}
     lead={essay.data.summary ?? essay.data.description}
@@ -121,6 +122,11 @@ const articleJsonLd = {
       <div class="registry-annotation">
         <span class="registry-key">PROOF_CHAIN</span>: <span class="registry-value">{essay.data.projectProof.toUpperCase()}</span>
       </div>
+      {essay.data.series && (
+        <div class="registry-annotation">
+          <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
+        </div>
+      )}
       {isLegacy && (
         <div class="registry-annotation">
           <span class="registry-key">CANONICAL_PATH</span>: <span class="registry-value">{canonicalSlug.toUpperCase()}</span>
@@ -148,6 +154,24 @@ const articleJsonLd = {
               <span class="registry-value">{essay.data.projectProof}</span>
             )}
           </div>
+          {essay.data.series && (
+            <div class="sidebar-line">
+              <span class="registry-key">SERIES</span>
+              <span class="registry-value">
+                {essay.data.series}{essay.data.seriesOrder ? ` #${essay.data.seriesOrder}` : ""}
+              </span>
+            </div>
+          )}
+          {essay.data.tags.length > 0 && (
+            <div class="sidebar-line">
+              <span class="registry-key">TAGS</span>
+              <span class="sidebar-tags">
+                {essay.data.tags.map((tag) => (
+                  <span>{tag}</span>
+                ))}
+              </span>
+            </div>
+          )}
         </aside>
 
         <div class="article-content prose">
@@ -274,6 +298,20 @@ const articleJsonLd = {
   }
   .sidebar-link:hover {
     color: var(--current-text);
+  }
+  .sidebar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .sidebar-tags span {
+    display: inline-flex;
+    padding: 0.28rem 0.42rem;
+    border: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.25;
   }
   .article-content {
     font-size: 1.15rem;

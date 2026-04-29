@@ -6,12 +6,15 @@ import { aiAgentLifecycleColumn, pageRegistry } from "../data/site";
 
 const essays = await getCollection("essays");
 const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
+const firstEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
 const preludeEntries = aiAgentLifecycleColumn.preludeEssays
   .map((entry) => {
     const essay = essaysBySlug.get(entry.slug);
     return essay ? { ...entry, essay } : null;
   })
   .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
+const firstEssayCover = firstEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const firstEssayCoverAlt = firstEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 ---
 
 <BaseLayout title={pageRegistry.lifecycle.title} description={aiAgentLifecycleColumn.categoryStatement}>
@@ -27,7 +30,7 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
         <span class="registry-key">ESSAYS</span>: <span class="registry-value">PUBLIC ARGUMENTS</span>
       </a>
       <a href="/projects/mplp/" class="registry-annotation lifecycle-hero-link">
-        <span class="registry-key">MPLP</span>: <span class="registry-value">PROTOCOL EXPRESSION</span>
+        <span class="registry-key">MPLP</span>: <span class="registry-value">LATER PROTOCOL EXPRESSION</span>
       </a>
     </div>
   </RegistryPageHero>
@@ -46,9 +49,27 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
           <div class="opening-notes">
             <p>{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
             <p>{aiAgentLifecycleColumn.categoryBridge}</p>
+            <p>{aiAgentLifecycleColumn.relationToMPLP}</p>
           </div>
         </div>
       </section>
+
+      {firstEssay && (
+        <section class="registry-chassis first-essay-panel">
+          <a href={`/essays/${firstEssay.slug}/`} class="first-essay-cover" aria-label={`Read ${firstEssay.data.title}`}>
+            <img src={firstEssayCover} alt={firstEssayCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+          </a>
+          <div class="first-essay-copy">
+            <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+              <span class="registry-key">FIRST_ESSAY</span>: <span class="registry-value">PUBLISHED PRELUDE</span>
+            </div>
+            <h2>{firstEssay.data.title}</h2>
+            <p>{firstEssay.data.description}</p>
+            <p class="first-essay-note">{aiAgentLifecycleColumn.nextEssayDirection}</p>
+            <a href={`/essays/${firstEssay.slug}/`} class="lifecycle-text-link">Read essay 01</a>
+          </div>
+        </section>
+      )}
 
       <section class="lifecycle-section">
         <div class="section-header">
@@ -56,7 +77,7 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
             <span class="registry-key">PREVIEW</span>: <span class="registry-value">FOUR LAYERS</span>
           </div>
           <h2>Four lifecycle layers.</h2>
-          <p class="section-desc">A short map of the system boundary. The full argument belongs in the series essays.</p>
+          <p class="section-desc">A short map of the system boundary. The next essay will define these layers directly.</p>
         </div>
         <div class="lifecycle-card-grid">
           {aiAgentLifecycleColumn.lifecycleLayers.map((layer) => (
@@ -92,9 +113,9 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
         </div>
         <div class="opening-grid">
           <div>
-            <h2>MPLP is not another framework.</h2>
+            <h2>MPLP is the later protocol expression.</h2>
             <p>
-              Multi-Agent Lifecycle Protocol (MPLP) is a lifecycle protocol expression. It defines lifecycle semantics and responsibility boundaries for agent systems.
+              Multi-Agent Lifecycle Protocol (MPLP) is the later protocol abstraction that grew from these lifecycle failure boundaries. The first column essay explains the origin of the category before moving into protocol structure.
             </p>
           </div>
           <div class="opening-notes">
@@ -140,8 +161,8 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
           <div class="registry-annotation" style="margin-bottom: 0.8rem;">
             <span class="registry-key">FOLLOW</span>: <span class="registry-value">ONE ESSAY AT A TIME</span>
           </div>
-          <h2>Follow the lifecycle protocol series.</h2>
-          <p>New essays are published when the argument is ready, not as a high-frequency content feed.</p>
+          <h2>Follow the AI Agent Lifecycle column.</h2>
+          <p>New essays are published when the argument is ready, starting with the origin essay and continuing with the four-layer definition.</p>
         </div>
         <a href="/newsletter/" class="lifecycle-button">Open newsletter</a>
       </section>
@@ -171,8 +192,65 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
   }
 
   .lifecycle-opening,
-  .newsletter-cta {
+  .newsletter-cta,
+  .first-essay-panel {
     padding: 2.25rem;
+  }
+
+  .first-essay-panel {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    border-left: 2px solid var(--accent-proof);
+  }
+
+  .first-essay-cover {
+    display: block;
+    border: 1px solid var(--current-line);
+    background: #111111;
+    text-decoration: none;
+  }
+
+  .first-essay-cover img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first-essay-copy h2 {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.55rem, 3vw, 2.15rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
+  }
+
+  .first-essay-copy p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.66;
+  }
+
+  .first-essay-copy .first-essay-note {
+    margin-top: 0.9rem;
+    color: var(--current-text);
+  }
+
+  .lifecycle-text-link {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .lifecycle-text-link:hover {
+    color: var(--current-text);
   }
 
   .opening-grid {
@@ -328,7 +406,8 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
 
   @media (max-width: 980px) {
     .opening-grid,
-    .newsletter-cta {
+    .newsletter-cta,
+    .first-essay-panel {
       grid-template-columns: 1fr;
     }
 
@@ -349,7 +428,8 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
     }
 
     .lifecycle-opening,
-    .newsletter-cta {
+    .newsletter-cta,
+    .first-essay-panel {
       padding: 1.5rem;
     }
 
