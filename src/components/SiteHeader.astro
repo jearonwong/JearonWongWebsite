@@ -1,10 +1,13 @@
 ---
-import { primaryNav } from "../data/site";
+import { primaryNav, secondaryNav } from "../data/site";
 
 const currentPath =
   Astro.url.pathname.length > 1 && Astro.url.pathname.endsWith("/")
     ? Astro.url.pathname.slice(0, -1)
     : Astro.url.pathname;
+const drawerSecondaryNav = secondaryNav.filter(
+  (item) => !primaryNav.some((primaryItem) => primaryItem.href === item.href)
+);
 ---
 
 <header class="site-monitor-container">
@@ -33,12 +36,6 @@ const currentPath =
       </ul>
     </nav>
 
-    <div class="nav-actions">
-      <a href="/contact/" class="nav-cta">
-        <span class="nav-cta-label">Contact</span>
-      </a>
-    </div>
-
     <!-- Mobile hamburger toggle -->
     <input type="checkbox" id="mobile-drawer-toggle" class="drawer-checkbox" aria-hidden="true" />
     <label for="mobile-drawer-toggle" class="hamburger-btn" aria-label="Open navigation menu">
@@ -64,8 +61,14 @@ const currentPath =
           </li>
         ))}
         <li class="drawer-divider"></li>
-        <li><a href="/contact/" class="drawer-link drawer-link--accent">Contact</a></li>
-        <li><a href="/newsletter/" class="drawer-link">Newsletter</a></li>
+        {drawerSecondaryNav.map(item => (
+          <li>
+            <a
+              href={item.href}
+              class:list={["drawer-link", currentPath === item.href.slice(0, -1) && "is-active"]}
+            >{item.label}</a>
+          </li>
+        ))}
       </ul>
     </nav>
   </div>

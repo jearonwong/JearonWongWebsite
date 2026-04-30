@@ -137,14 +137,15 @@ const writingTracks = [
         </div>
         <div class="lifecycle-bridge-grid">
           <div>
-            <h2>{aiAgentLifecycleColumn.categoryTitle}</h2>
+            <h2>Start from AI Agent Lifecycle.</h2>
             <p class="section-desc">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
           </div>
           <div class="lifecycle-bridge-copy">
             <p>{aiAgentLifecycleColumn.categoryBridge}</p>
             <div class="lifecycle-bridge-links">
               <a href={homepageActions.lifecycle.href} class="section-link">{homepageActions.lifecycle.label}</a>
-              <a href={homepageActions.lifecycleEssay.href} class="section-link">{homepageActions.lifecycleEssay.label}</a>
+              <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
+              <a href={homepageActions.proof.href} class="section-link">{homepageActions.proof.label}</a>
             </div>
           </div>
         </div>
@@ -172,10 +173,11 @@ const writingTracks = [
     <!-- 6. Reading Path -->
     {readingPathEntries.length > 0 && (
       <section class="shell section-rhythm" style="padding-top: 2rem;">
-        <div class="section-header">
-          <h2>Reading Path</h2>
-          <p class="section-desc">Start with the public arguments that define the Agentic Delivery stack.</p>
-        </div>
+      <div class="section-header">
+        <h2>Reading Path</h2>
+        <p class="section-desc">The essays develop the public argument after the Lifecycle mainline is clear.</p>
+        <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
+      </div>
         <div class="reading-path-list">
           {readingPathEntries.map((entry) => (
             <article class="reading-path-card">
@@ -195,8 +197,7 @@ const writingTracks = [
     <section class="shell section-rhythm" style="padding-top: 2rem;">
       <div class="section-header">
         <h2>Writing tracks.</h2>
-        <p class="section-desc">Five lines of inquiry across protocols, governance, runtime, delivery, and product.</p>
-        <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
+        <p class="section-desc">Supporting lines of inquiry across protocols, governance, runtime, delivery, and product.</p>
       </div>
       <div class="tracks-grid">
         {writingTracks.map(track => (
@@ -710,7 +711,7 @@ const writingTracks = [
     }
     .hero-ctas {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 0.55rem;
       max-width: 100%;
     }
@@ -718,7 +719,8 @@ const writingTracks = [
       min-height: 2.65rem;
       padding-inline: 0.7rem;
       font-size: 0.82rem;
-      white-space: nowrap;
+      text-align: center;
+      white-space: normal;
     }
     .section-header {
       margin-bottom: 2.5rem;

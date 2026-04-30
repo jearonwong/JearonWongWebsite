@@ -19,8 +19,9 @@ import { contentRouteRoles, pageRegistry, playbookModules, siteThesis } from "..
           <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.playbooks.question}</span>
         </div>
         <p class="appendix-guidance__copy">
-          {siteThesis.conceptDefinition} These playbooks turn that thesis into operating checks for briefs, gates, evidence, acceptance, and later review.
+          {siteThesis.conceptDefinition} This is a supporting methods appendix to the AI Agent Lifecycle mainline. These playbooks turn the thesis into operating checks for briefs, gates, evidence, acceptance, and later review.
         </p>
+        <a href="/lifecycle/" class="appendix-route-link">Return to Lifecycle mainline</a>
       </div>
 
       <div class="appendix-stack">
@@ -54,6 +55,20 @@ import { contentRouteRoles, pageRegistry, playbookModules, siteThesis } from "..
     color: var(--current-muted);
     font-size: 1rem;
     line-height: 1.65;
+  }
+  .appendix-route-link {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .appendix-route-link:hover {
+    color: var(--current-text);
   }
   .appendix-stack {
     display: flex;

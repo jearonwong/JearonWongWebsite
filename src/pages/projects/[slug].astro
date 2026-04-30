@@ -65,7 +65,7 @@ const projectJsonLd = {
         <span class="registry-key">BACK_TO</span>: <span class="registry-value">PROJECTS</span>
       </a>
       <a href={homepageActions.thesis.href} class="registry-annotation hero-link">
-        <span class="registry-key">THESIS</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+        <span class="registry-key">MAINLINE</span>: <span class="registry-value">AI AGENT LIFECYCLE</span>
       </a>
     </div>
   </RegistryPageHero>
@@ -160,7 +160,8 @@ const projectJsonLd = {
           <span class="registry-key">WHERE_TO_GO_NEXT</span>
         </div>
         <div class="link-stack">
-          <a href={homepageActions.thesis.href} class="chain-link">Return to the flagship thesis essay</a>
+          <a href="/lifecycle/" class="chain-link">Return to the AI Agent Lifecycle mainline</a>
+          <a href="/essays/" class="chain-link">Read the essay sequence</a>
           <a href="/projects/" class="chain-link">Back to the proof room</a>
           {previousProof && (
             <a href={`/projects/${previousProof.slug}/`} class="chain-link">

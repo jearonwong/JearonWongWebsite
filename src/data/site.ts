@@ -83,7 +83,7 @@ export const aiAgentLifecycleColumn = {
   },
   previewLayers: [
     "Agent Activation Lifecycle",
-    "Engineering / Process Lifecycle",
+    "Engineering Process Lifecycle",
     "Project Lifecycle",
     "Enterprise Cross-Project Lifecycle"
   ],
@@ -94,7 +94,7 @@ export const aiAgentLifecycleColumn = {
         "The continuity of a single agent's activation, context loading, tool use, state update, suspension, resumption, and evidence record."
     },
     {
-      name: "Engineering / Process Lifecycle",
+      name: "Engineering Process Lifecycle",
       description:
         "The continuity of intent intake, requirement clarification, planning, confirmation, execution, verification, change, review, and learning."
     },
@@ -210,28 +210,28 @@ export const contentUpdateProtocol = {
 
 export const homepageActions = {
   thesis: {
-    href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
-    label: "Read the Thesis"
+    href: "/lifecycle/",
+    label: "Start with AI Agent Lifecycle"
   },
   projects: {
     href: "/projects/",
-    label: "Explore Projects"
+    label: "Inspect the Proof Stack"
   },
   ideas: {
     href: "/theories/",
-    label: "Open the ideas registry"
+    label: "Open the supporting idea map"
   },
   essays: {
     href: "/essays/",
-    label: "Open the writing log"
+    label: "Read the Essays"
   },
   proof: {
     href: "/projects/",
-    label: "Open the proof room"
+    label: "Inspect the Proof Stack"
   },
   lifecycle: {
     href: "/lifecycle/",
-    label: "Open the AI Agent Lifecycle entry"
+    label: "Start with AI Agent Lifecycle"
   },
   lifecycleEssay: {
     href: "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
@@ -576,18 +576,18 @@ export function getConceptBySlug(slug: string) {
 }
 
 export const primaryNav = [
-  { href: "/theories/", label: "Ideas" },
   { href: "/lifecycle/", label: "Lifecycle" },
   { href: "/essays/", label: "Essays" },
   { href: "/projects/", label: "Projects" },
-  { href: "/governance/", label: "Governance" },
-  { href: "/playbooks/", label: "Playbooks" },
-  { href: "/about/", label: "About" }
+  { href: "/about/", label: "About" },
+  { href: "/newsletter/", label: "Newsletter" }
 ];
 
 export const secondaryNav = [
   { href: "/concepts/", label: "Concepts" },
+  { href: "/theories/", label: "Ideas" },
   { href: "/governance/", label: "Governance" },
+  { href: "/playbooks/", label: "Playbooks" },
   { href: "/newsletter/", label: "Newsletter" },
   { href: "/contact/", label: "Contact" },
   { href: "/rss.xml", label: "RSS" }
@@ -610,8 +610,8 @@ export const pageRegistry = {
   ideas: {
     title: "Ideas",
     objectType: "PAGE_ROLE",
-    objectValue: "CONCEPTUAL BLUEPRINT",
-    lead: "A conceptual map for Agentic Delivery: the shift from task execution toward lifecycle-governed, accountable work."
+    objectValue: "SUPPORTING IDEA MAP",
+    lead: "A supporting idea map for the AI Agent Lifecycle mainline. Canonical definitions live in Concepts; the main theory route is Lifecycle."
   },
   ideasLegacy: {
     title: "Ideas",
@@ -628,9 +628,9 @@ export const pageRegistry = {
   lifecycle: {
     title: "AI Agent Lifecycle",
     subtitle: "Define The AI Agent Lifecycle",
-    objectType: "CATEGORY_ENTRY",
+    objectType: "MAIN_THEORY_ENTRY",
     objectValue: "WORK CONTINUITY LAYER",
-    lead: "The category entry for how agent work remains continuous through intent, context, plan, confirmation, evidence, learning, and accepted outcome."
+    lead: "The main theory entry for how agent work remains continuous through intent, context, plan, confirmation, evidence, learning, and accepted outcome."
   },
   governance: {
     title: "Governance",

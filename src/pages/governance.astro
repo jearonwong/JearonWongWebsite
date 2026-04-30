@@ -19,8 +19,9 @@ import { contentRouteRoles, governanceModules, pageRegistry, siteThesis } from "
           <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.governance.question}</span>
         </div>
         <p class="appendix-guidance__copy">
-          {siteThesis.technicalGap} This appendix names the lifecycle conditions that make delegated agent work accountable without turning governance into generic AI safety language.
+          {siteThesis.technicalGap} This is a supporting appendix to the AI Agent Lifecycle mainline. It names the lifecycle conditions that make delegated agent work accountable without turning governance into generic AI safety language.
         </p>
+        <a href="/lifecycle/" class="appendix-route-link">Return to Lifecycle mainline</a>
       </div>
 
       <div class="appendix-stack">
@@ -55,6 +56,20 @@ import { contentRouteRoles, governanceModules, pageRegistry, siteThesis } from "
     color: var(--current-muted);
     font-size: 1rem;
     line-height: 1.65;
+  }
+  .appendix-route-link {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .appendix-route-link:hover {
+    color: var(--current-text);
   }
   .appendix-stack {
     display: flex;

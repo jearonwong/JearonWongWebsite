@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
-import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, siteThesis, theoryClusters } from "../data/site";
+import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, theoryClusters } from "../data/site";
 ---
 
 <BaseLayout title="Ideas" description={pageRegistry.ideas.lead} canonicalPath="/theories">
@@ -20,8 +20,8 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
           <span class="registry-key">START_HERE</span>: <span class="registry-value">IDEAS_TO_ESSAY_TO_PROOF</span>
         </div>
         <p class="ideas-guidance__copy">
-          {contentRouteRoles.ideas.question} These concepts make the homepage thesis legible: {siteThesis.conceptDefinition}
-          The detailed definitions now live in the Concepts map; the essays develop the argument, and the proof room shows how the concept becomes protocol, runtime, product, and evidence surfaces.
+          {contentRouteRoles.ideas.question} This is a supporting idea map, not the main theory route.
+          The main route is AI Agent Lifecycle; canonical definitions live in Concepts; essays and proof surfaces continue the argument.
         </p>
         <div class="relation-map" aria-label="Concept relationship">
           <span><strong>Agentic Delivery</strong> names the outcome thesis.</span>

@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { aiAgentLifecycleColumn, getConceptBySlug, pageRegistry } from "../data/site";
+import { aiAgentLifecycleColumn, getConceptBySlug, getProjectBySlug, pageRegistry } from "../data/site";
 
 const essays = await getCollection("essays");
 const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
@@ -15,17 +15,43 @@ const preludeEntries = aiAgentLifecycleColumn.preludeEssays
   .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 const firstEssayCover = firstEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
 const firstEssayCoverAlt = firstEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
-const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-evidence"]
+const lifecycleConcept = getConceptBySlug("ai-agent-lifecycle");
+const failureModeConcepts = ["intent-drift", "context-drift", "confirmation-boundary", "lifecycle-evidence"]
   .map((conceptSlug) => getConceptBySlug(conceptSlug))
   .filter((concept): concept is NonNullable<typeof concept> => Boolean(concept));
+const proofStack = ["mplp", "cognitive-os", "solocrew", "validation-lab"]
+  .map((projectSlug) => getProjectBySlug(projectSlug))
+  .filter((project): project is NonNullable<typeof project> => Boolean(project));
+const relationshipMap = [
+  {
+    label: "Agentic Delivery",
+    role: "Outcome thesis",
+    body: "The shift from isolated task execution to reliable project delivery across a lifecycle."
+  },
+  {
+    label: "AI Agent Lifecycle",
+    role: "Continuity / work-state layer",
+    body: "The layer that keeps intent, context, role, plan, confirmation, execution, evidence, learning, and acceptance continuous."
+  },
+  {
+    label: "MPLP",
+    role: "Protocol expression / proof surface",
+    body: "The later protocol vocabulary for expressing lifecycle records, boundaries, trace, governance, and evidence."
+  },
+  {
+    label: "Cognitive OS / SoloCrew / Validation Lab",
+    role: "Runtime / product / evidence proof surfaces",
+    body: "The proof surfaces that run, apply, and verify lifecycle semantics without changing the proof stack order."
+  }
+];
 ---
 
 <BaseLayout title={pageRegistry.lifecycle.title} description={aiAgentLifecycleColumn.categoryStatement}>
   <RegistryPageHero
     title={aiAgentLifecycleColumn.categoryTitle}
     subtitle={aiAgentLifecycleColumn.subtitle}
-    objectType="SERIES"
-    objectValue={aiAgentLifecycleColumn.seriesTitle}
+    objectType={pageRegistry.lifecycle.objectType}
+    objectValue={pageRegistry.lifecycle.objectValue}
     lead={aiAgentLifecycleColumn.categoryStatement}
   >
     <div class="lifecycle-hero-links">
@@ -40,14 +66,14 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
 
   <div class="zone-b page-body" style="padding: 6rem 0;">
     <div class="shell lifecycle-shell">
-      <section class="registry-chassis lifecycle-opening">
+      <section class="registry-chassis lifecycle-opening lifecycle-opening--main">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">CATEGORY_OPENING</span>
+          <span class="registry-key">CANONICAL_DEFINITION</span>: <span class="registry-value">MAINLINE</span>
         </div>
         <div class="opening-grid">
           <div>
-            <h2>Why this category exists</h2>
-            <p>{aiAgentLifecycleColumn.purpose}</p>
+            <h2>AI Agent Lifecycle is the work-continuity layer.</h2>
+            <p>{lifecycleConcept?.definition ?? aiAgentLifecycleColumn.purpose}</p>
           </div>
           <div class="opening-notes">
             <p>{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
@@ -57,41 +83,24 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
         </div>
       </section>
 
-      <section class="registry-chassis lifecycle-concepts">
-        <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">CANONICAL_DEFINITIONS</span>: <span class="registry-value">CONCEPT MAP</span>
+      <section class="lifecycle-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">RELATIONSHIP_MAP</span>: <span class="registry-value">THESIS_TO_PROOF</span>
+          </div>
+          <h2>The spine of the site.</h2>
+          <p class="section-desc">Jearon Wong defines AI Agent Lifecycle, explains Agentic Delivery, names the failure modes, and routes the proof through MPLP, Cognitive OS, SoloCrew, and Validation Lab.</p>
         </div>
-        <div class="opening-grid">
-          <div>
-            <h2>Definitions live in the Concepts map.</h2>
-            <p>
-              This page remains the category entry for the AI Agent Lifecycle column. The concise canonical definitions now live under Concepts so the category, essays, and proof surfaces can point to the same source of meaning.
-            </p>
-          </div>
-          <div class="concept-link-stack">
-            {lifecycleConceptLinks.map((concept) => (
-              <a href={`/concepts/${concept.slug}/`} class="lifecycle-text-link">{concept.term}</a>
-            ))}
-          </div>
+        <div class="relationship-grid">
+          {relationshipMap.map((item) => (
+            <article class="registry-chassis lifecycle-card lifecycle-card--relation">
+              <span class="relation-role">{item.role}</span>
+              <h3>{item.label}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
         </div>
       </section>
-
-      {firstEssay && (
-        <section class="registry-chassis first-essay-panel">
-          <a href={`/essays/${firstEssay.slug}/`} class="first-essay-cover" aria-label={`Read ${firstEssay.data.title}`}>
-            <img src={firstEssayCover} alt={firstEssayCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
-          </a>
-          <div class="first-essay-copy">
-            <div class="registry-annotation" style="margin-bottom: 0.8rem;">
-              <span class="registry-key">FIRST_ESSAY</span>: <span class="registry-value">PUBLISHED PRELUDE</span>
-            </div>
-            <h2>{firstEssay.data.title}</h2>
-            <p>{firstEssay.data.description}</p>
-            <p class="first-essay-note">{aiAgentLifecycleColumn.nextEssayDirection}</p>
-            <a href={`/essays/${firstEssay.slug}/`} class="lifecycle-text-link">Read essay 01</a>
-          </div>
-        </section>
-      )}
 
       <section class="lifecycle-section">
         <div class="section-header">
@@ -99,7 +108,7 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
             <span class="registry-key">PREVIEW</span>: <span class="registry-value">FOUR LAYERS</span>
           </div>
           <h2>Four lifecycle layers.</h2>
-          <p class="section-desc">A short map of the system boundary. The next essay will define these layers directly.</p>
+          <p class="section-desc">A concise map of the work boundary. The essays develop the argument; this page keeps the reader on the main route.</p>
         </div>
         <div class="lifecycle-card-grid">
           {aiAgentLifecycleColumn.lifecycleLayers.map((layer) => (
@@ -114,35 +123,76 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
       <section class="lifecycle-section">
         <div class="section-header">
           <div class="registry-annotation" style="margin-bottom: 0.8rem;">
-            <span class="registry-key">PREVIEW</span>: <span class="registry-value">PRODUCTION GUARANTEES</span>
+            <span class="registry-key">FAILURE_MODES</span>: <span class="registry-value">REFERENCE LAYER</span>
           </div>
-          <h2>What a lifecycle protocol makes assessable.</h2>
-          <p class="section-desc">These are production-readiness conditions, not adoption claims or certification claims.</p>
+          <h2>Core lifecycle failure modes.</h2>
+          <p class="section-desc">These are the first reference concepts to name the weak points in long-running agent work. The full definitions stay in Concepts.</p>
         </div>
-        <div class="guarantee-grid">
-          {aiAgentLifecycleColumn.productionGuarantees.map((guarantee) => (
-            <article class="registry-chassis lifecycle-card">
-              <h3>{guarantee.name}</h3>
-              <p>{guarantee.description}</p>
-            </article>
+        <div class="failure-grid">
+          {failureModeConcepts.map((concept) => (
+            <a href={`/concepts/${concept.slug}/`} class="registry-chassis failure-card">
+              <h3>{concept.term}</h3>
+              <p>{concept.seoDescription}</p>
+            </a>
           ))}
         </div>
       </section>
 
-      <section class="registry-chassis lifecycle-opening">
+      {firstEssay && (
+        <section class="registry-chassis first-essay-panel">
+          <a href={`/essays/${firstEssay.slug}/`} class="first-essay-cover" aria-label={`Read ${firstEssay.data.title}`}>
+            <img src={firstEssayCover} alt={firstEssayCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+          </a>
+          <div class="first-essay-copy">
+            <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+              <span class="registry-key">START_READING</span>: <span class="registry-value">LIFECYCLE ESSAY 01</span>
+            </div>
+            <h2>{firstEssay.data.title}</h2>
+            <p>{firstEssay.data.description}</p>
+            <p class="first-essay-note">{aiAgentLifecycleColumn.nextEssayDirection}</p>
+            <div class="start-link-stack">
+              <a href={`/essays/${firstEssay.slug}/`} class="lifecycle-text-link">Read essay 01</a>
+              <a href="/essays/" class="lifecycle-text-link">Open essays index</a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section class="lifecycle-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.8rem;">
+            <span class="registry-key">PROOF_STACK</span>: <span class="registry-value">LEDGER ROUTE</span>
+          </div>
+          <h2>Proof stack route.</h2>
+          <p class="section-desc">The proof stack stays in order: protocol, runtime foundation, product proof, evidence surface.</p>
+          <a href="/projects/" class="lifecycle-text-link">Open Projects proof ledger</a>
+        </div>
+        <div class="proof-route-grid">
+          {proofStack.map((project) => (
+            <a href={`/projects/${project.slug}/`} class="registry-chassis proof-route-card">
+              <span>{project.proofRole}</span>
+              <h3>{project.name}</h3>
+              <p>{project.summary}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis lifecycle-concepts">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">WHERE_MPLP_SITS</span>
+          <span class="registry-key">REFERENCE_LAYER</span>: <span class="registry-value">CONCEPTS</span>
         </div>
         <div class="opening-grid">
           <div>
-            <h2>MPLP is the later protocol expression.</h2>
+            <h2>Concepts remains the reference layer.</h2>
             <p>
-              Multi-Agent Lifecycle Protocol (MPLP) is the later protocol abstraction that grew from these lifecycle failure boundaries. The first column essay explains the origin of the category before moving into protocol structure.
+              This Lifecycle page is the human-visible main route. Concepts remains the canonical definition layer for search engines, AI readers, and readers who want term-level references.
             </p>
           </div>
-          <div class="opening-notes">
-            <p>MPLP sits above execution frameworks, communication protocols, and observability tools. It does not replace MCP or A2A.</p>
-            <p>This page does not claim universal adoption, official standard status, or certification. It defines the category entry and points to the public proof surfaces.</p>
+          <div class="concept-link-stack">
+            <a href="/concepts/" class="lifecycle-text-link">Open Concepts reference</a>
+            <a href="/concepts/ai-agent-lifecycle/" class="lifecycle-text-link">AI Agent Lifecycle definition</a>
+            <a href="/concepts/agentic-delivery/" class="lifecycle-text-link">Agentic Delivery definition</a>
           </div>
         </div>
       </section>
@@ -224,6 +274,10 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     border-left: 2px solid var(--accent-proof);
   }
 
+  .lifecycle-opening--main {
+    border-left: 3px solid var(--accent-signal);
+  }
+
   .first-essay-panel {
     display: grid;
     grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
@@ -287,6 +341,12 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     gap: 0.8rem 1rem;
   }
 
+  .start-link-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+  }
+
   .concept-link-stack .lifecycle-text-link {
     margin-top: 0;
   }
@@ -335,7 +395,9 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
   }
 
   .lifecycle-card-grid,
-  .guarantee-grid {
+  .relationship-grid,
+  .failure-grid,
+  .proof-route-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
@@ -359,6 +421,61 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     color: var(--current-muted);
     font-size: 0.92rem;
     line-height: 1.62;
+  }
+
+  .lifecycle-card--relation {
+    border-top: 2px solid var(--accent-proof);
+  }
+
+  .relation-role {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+
+  .failure-card,
+  .proof-route-card {
+    display: grid;
+    align-content: start;
+    gap: 0.65rem;
+    padding: 1.4rem;
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .failure-card:hover h3,
+  .proof-route-card:hover h3 {
+    color: var(--accent-signal);
+  }
+
+  .failure-card h3,
+  .proof-route-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .failure-card p,
+  .proof-route-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+
+  .proof-route-card span {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent-proof);
   }
 
   .prelude-list {
@@ -450,7 +567,9 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     }
 
     .lifecycle-card-grid,
-    .guarantee-grid {
+    .relationship-grid,
+    .failure-grid,
+    .proof-route-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -466,6 +585,7 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     }
 
     .lifecycle-opening,
+    .lifecycle-concepts,
     .newsletter-cta,
     .first-essay-panel {
       padding: 1.5rem;
@@ -477,7 +597,9 @@ const lifecycleConceptLinks = ["ai-agent-lifecycle", "intent-drift", "lifecycle-
     }
 
     .lifecycle-card-grid,
-    .guarantee-grid {
+    .relationship-grid,
+    .failure-grid,
+    .proof-route-grid {
       grid-template-columns: 1fr;
     }
 

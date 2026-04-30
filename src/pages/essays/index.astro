@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { aiAgentLifecycleColumn, getTheoryClusterName, pageRegistry } from "../../data/site";
+import { aiAgentLifecycleColumn, pageRegistry } from "../../data/site";
 
 const essays = (await getCollection("essays")).sort(
   (left, right) =>
@@ -11,14 +11,15 @@ const essays = (await getCollection("essays")).sort(
 );
 const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
 const columnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
-const preludeEntries = aiAgentLifecycleColumn.preludeEssays
-  .map((entry) => {
-    const essay = essaysBySlug.get(entry.slug);
-    return essay ? { ...entry, essay } : null;
-  })
-  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 const columnCover = columnEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
 const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
+const lifecycleEssays = essays.filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle);
+const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
+  .map((slug) => essaysBySlug.get(slug))
+  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
+const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"]
+  .map((slug) => essaysBySlug.get(slug))
+  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
 ---
 
 <BaseLayout title="Essays" description={pageRegistry.essays.lead}>
@@ -43,8 +44,7 @@ const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleCol
           )}
           <div class="spotlight-main">
             <h2 class="spotlight-title">{aiAgentLifecycleColumn.categoryTitle}</h2>
-            <p class="spotlight-copy">{aiAgentLifecycleColumn.categoryStatement}</p>
-            <p class="spotlight-relation">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+            <p class="spotlight-copy">The essay sequence develops the Lifecycle mainline. Use /lifecycle/ for the theory entry; use this page for the writing order.</p>
             {columnEssay && (
               <div class="current-essay">
                 <span class="current-essay-label">First published column essay</span>
@@ -55,58 +55,96 @@ const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleCol
           </div>
           <div class="spotlight-actions">
             <p>{aiAgentLifecycleColumn.nextEssayDirection}</p>
-            <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open the AI Agent Lifecycle entry</a>
-            <a href="/concepts/" class="spotlight-link">Open the concept map</a>
+            <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open Lifecycle mainline</a>
+            <a href="/concepts/" class="spotlight-link">Concepts reference</a>
             {columnEssay && <a href={`/essays/${columnEssay.slug}/`} class="spotlight-link">Read essay 01</a>}
           </div>
         </div>
-        {preludeEntries.length > 0 && (
-          <div class="foundation-strip" aria-label="Prelude and foundation readings">
-            <span class="foundation-label">Prelude / foundation readings</span>
-            {preludeEntries.map((entry) => (
-              <a href={`/essays/${entry.essay.slug}/`}>
-                <strong>{entry.essay.data.title}</strong>
-                <span>{entry.role}</span>
-              </a>
+      </div>
+
+      <div class="essay-sections">
+        <section class="essay-section">
+          <div class="registry-section-heading">
+            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">DEFINE THE AI AGENT LIFECYCLE</span>
+            </div>
+            <h2>Define The AI Agent Lifecycle</h2>
+          </div>
+          <div class="registry-log">
+            {lifecycleEssays.map((essay) => (
+              <article class="log-entry is-series">
+                <div class="log-metadata">
+                  <div class="registry-annotation log-series">
+                    <span class="registry-key">SERIES</span>: <span class="registry-value">#{essay.data.seriesOrder ?? 1}</span>
+                  </div>
+                  <div class="registry-annotation">
+                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                  </div>
+                </div>
+                <div class="log-content">
+                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+                  <p class="log-desc">{essay.data.description}</p>
+                </div>
+              </article>
             ))}
           </div>
-        )}
-      </div>
+        </section>
 
-      <div class="registry-section-heading">
-        <div class="registry-annotation" style="margin-bottom: 0.65rem;">
-          <span class="registry-key">PUBLISHED_ESSAYS</span>: <span class="registry-value">REGISTRY</span>
-        </div>
-        <h2>Published Essays Registry</h2>
-      </div>
+        <section class="essay-section">
+          <div class="registry-section-heading">
+            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">FOUNDATION ESSAYS</span>
+            </div>
+            <h2>Foundation Essays</h2>
+          </div>
+          <div class="registry-log">
+            {foundationEssays.map((essay) => (
+              <article class="log-entry">
+                <div class="log-metadata">
+                  <div class="registry-annotation">
+                    <span class="registry-key">ROLE</span>: <span class="registry-value">AGENTIC DELIVERY THESIS</span>
+                  </div>
+                  <div class="registry-annotation">
+                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                  </div>
+                </div>
+                <div class="log-content">
+                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+                  <p class="log-desc">{essay.data.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      <div class="registry-log">
-        {essays.map((essay) => (
-          <article class:list={["log-entry", essay.data.flagship && "is-flagship"]}>
-            <div class="log-metadata">
-              {essay.data.flagship && (
-                <div class="registry-annotation log-flagship">
-                  <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
-                </div>
-              )}
-              {essay.data.series && (
-                <div class="registry-annotation log-series">
-                  <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
-                </div>
-              )}
-              <div class="registry-annotation">
-                <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
-              </div>
-              <div class="registry-annotation">
-                <span class="registry-key">IDEA</span>: <span class="registry-value">{getTheoryClusterName(essay.data.cluster).toUpperCase()}</span>
-              </div>
+        <section class="essay-section">
+          <div class="registry-section-heading">
+            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">PROTOCOL / GOVERNANCE ESSAYS</span>
             </div>
-            <div class="log-content">
-              <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-              <p class="log-desc">{essay.data.description}</p>
-            </div>
-          </article>
-        ))}
+            <h2>Protocol / Governance Essays</h2>
+          </div>
+          <div class="registry-log">
+            {protocolEssays.map((essay) => (
+              <article class:list={["log-entry", essay.data.flagship && "is-flagship"]}>
+                <div class="log-metadata">
+                  {essay.data.flagship && (
+                    <div class="registry-annotation log-flagship">
+                      <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+                    </div>
+                  )}
+                  <div class="registry-annotation">
+                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                  </div>
+                </div>
+                <div class="log-content">
+                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+                  <p class="log-desc">{essay.data.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
   </div>
@@ -236,8 +274,19 @@ const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleCol
   .spotlight-link:hover {
     color: var(--current-text);
   }
+
+  .essay-sections {
+    display: grid;
+    gap: 3.5rem;
+  }
+
+  .essay-section {
+    display: grid;
+    gap: 1.4rem;
+  }
+
   .registry-section-heading {
-    margin: 0 0 1.4rem;
+    margin: 0;
   }
   .registry-section-heading h2 {
     margin: 0;
@@ -266,6 +315,9 @@ const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleCol
   }
   .log-entry.is-flagship {
     border-left: 2px solid var(--accent-signal);
+  }
+  .log-entry.is-series {
+    border-left: 2px solid var(--accent-proof);
   }
   .log-metadata {
     display: flex;
