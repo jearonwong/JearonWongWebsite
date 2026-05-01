@@ -35,6 +35,10 @@ export const siteSemanticBaseline = {
     "MPLP",
     "Multi-Agent Lifecycle Protocol",
     "lifecycle protocol",
+    "lifecycle responsibility separation",
+    "Lifecycle Role Decomposition",
+    "Lifecycle-Governed Agent Workflow",
+    "Accountable MAS",
     "accountable outcomes",
     "reference architecture",
     "concrete reference path",
@@ -112,7 +116,7 @@ export const aiAgentLifecycleColumn = {
     "Prompt Engineering improves a response. Context Engineering improves what the model sees. Harness Engineering improves execution. AI Agent Lifecycle asks what remains continuous after execution.",
   href: "/lifecycle/",
   publicationRule:
-    "Articles in this column are published one at a time after careful refinement. The first essay is the origin story; the next essay defines the four lifecycle layers.",
+    "Articles in this column are published one at a time after careful refinement. The first essay is the origin story; the second essay defines MAS through lifecycle responsibility separation. The next essay defines the four lifecycle layers.",
   coverImage: "/figures/ai-agent-lifecycle-01-cover.svg",
   coverImageAlt: "AI Agent Lifecycle: It Was Not Designed. It Grew. cover image",
   firstPublishedEssay: {
@@ -122,7 +126,7 @@ export const aiAgentLifecycleColumn = {
     status: "published"
   },
   nextEssayDirection:
-    "The next essay will define the four layers of AI Agent Lifecycle and explain the engineering problem each layer solves.",
+    "After the second essay on MAS responsibility separation, the next essay will define the four layers of AI Agent Lifecycle and explain the engineering problem each layer solves.",
   preludeEssays: [
     {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
@@ -375,6 +379,10 @@ export const homepageContent = {
       note: "Column start: why AI Agent Lifecycle had to be named from real engineering failure boundaries."
     },
     {
+      slug: "the-industry-misdefined-multi-agent-ai",
+      note: "Series continuation: why real MAS is lifecycle responsibility separation, not agent count."
+    },
+    {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
       note: "Protocol-stack gap: tool access and agent coordination still need lifecycle delivery."
     },
@@ -404,17 +412,100 @@ export const concepts = [
       "The evidence route starts with the origin essay, because it explains why the category grew out of real engineering failure boundaries. From there, MPLP shows how lifecycle concepts can become protocol records, while Validation Lab keeps the delivery claim tied to inspectable evidence. The route is intentionally modest: it shows a thesis, a vocabulary, and proof surfaces, not market adoption.",
     relatedEssays: [
       "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "the-industry-misdefined-multi-agent-ai",
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
       "agentic-ai-inflection-point-project-delivery"
     ],
     relatedProjects: ["mplp", "cognitive-os", "validation-lab"],
-    relatedTerms: ["agentic-delivery", "intent-drift", "context-drift", "lifecycle-evidence", "protocol-engineering"],
+    relatedTerms: [
+      "agentic-delivery",
+      "lifecycle-role-decomposition",
+      "lifecycle-governed-agent-workflow",
+      "intent-drift",
+      "context-drift",
+      "lifecycle-evidence",
+      "protocol-engineering"
+    ],
     keywords: [
       "AI Agent Lifecycle",
       "AI agent work continuity",
       "production-grade AI agents",
       "multi-agent systems",
       "accepted outcome"
+    ]
+  },
+  {
+    slug: "lifecycle-role-decomposition",
+    term: "Lifecycle Role Decomposition",
+    seoTitle: "Lifecycle Role Decomposition Definition",
+    seoDescription:
+      "Lifecycle Role Decomposition translates human work roles into lifecycle responsibility boundaries that agent systems can execute, confirm, trace, roll back, and accept.",
+    definition:
+      "Lifecycle Role Decomposition is the translation step between human work models and real multi-agent systems. It does not merely rename PM, Architect, Developer, Reviewer, or QA as agents. It decomposes the responsibility behind those roles into lifecycle objects such as Context, Role, Plan, Confirm, Trace, and Delivery so an agent system can execute, confirm, trace, audit, roll back, and accept work.",
+    problem:
+      "The problem it names is that human roles carry implicit authority and responsibility, while agents do not automatically inherit those boundaries. A Reviewer Agent may produce comments, but unless its review boundary, confirmation authority, evidence obligation, and delivery-transition control are explicit, the system still only has a role label. The label looks familiar to the operator, but the accountability structure never entered the system.",
+    whyExistingApproachesAreNotEnough:
+      "Manual workflow graphs can show which agent runs next, and orchestration frameworks can execute those graphs. They usually do not infer which responsibilities must be separated, which decisions require confirmation, which traces must survive, or which states become accepted and inheritable. Lifecycle Role Decomposition names the missing translation layer before execution begins.",
+    relationToLifecycle:
+      "Within AI Agent Lifecycle, Lifecycle Role Decomposition sits at the boundary between human-readable work practice and protocol-governed agent work. It keeps role, plan, confirmation, trace, rollback, and delivery from remaining implicit. It is also the bridge from lifecycle theory toward lifecycle-governed agent workflow.",
+    evidenceRoute:
+      "The evidence route starts with the second Define The AI Agent Lifecycle essay, where human software work is decomposed into lifecycle objects and responsibility boundaries. MPLP is the proof surface for the protocol vocabulary; SoloCrew is the delivery proof path where human-facing roles need to become usable without losing accountability.",
+    relatedEssays: [
+      "the-industry-misdefined-multi-agent-ai",
+      "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
+    relatedProjects: ["mplp", "solocrew", "cognitive-os"],
+    relatedTerms: [
+      "ai-agent-lifecycle",
+      "lifecycle-governed-agent-workflow",
+      "confirmation-boundary",
+      "lifecycle-evidence",
+      "protocol-engineering"
+    ],
+    keywords: [
+      "Lifecycle Role Decomposition",
+      "lifecycle responsibility separation",
+      "real MAS",
+      "multi-agent systems",
+      "AI Agent Lifecycle"
+    ]
+  },
+  {
+    slug: "lifecycle-governed-agent-workflow",
+    term: "Lifecycle-Governed Agent Workflow",
+    seoTitle: "Lifecycle-Governed Agent Workflow Definition",
+    seoDescription:
+      "Lifecycle-Governed Agent Workflow is a protocol-generated workflow model where human work models become confirmable, traceable, rollback-aware, and delivery-aware agent work.",
+    definition:
+      "Lifecycle-Governed Agent Workflow is the workflow model in which a human-readable work process is interpreted through an Agent Lifecycle Protocol and generated as a governed agent workflow. The workflow is not only a node graph. It carries role boundaries, confirm gates, trace obligations, rollback points, and delivery states so multi-agent collaboration can move toward accountable delivery.",
+    problem:
+      "The problem it names is the limit of user-drawn orchestration. If the user must manually decide every agent, edge, review point, approval boundary, evidence obligation, and rollback point, the framework can execute the graph but cannot guarantee accountability. Missing responsibility structure remains the user’s burden.",
+    whyExistingApproachesAreNotEnough:
+      "Conventional workflow tools define who comes next. Lifecycle-governed workflow also defines who may continue, who must confirm, who is blocked, what evidence must remain, which state is locked, and where rollback should occur. That requires protocol interpretation, not only orchestration.",
+    relationToLifecycle:
+      "Lifecycle-Governed Agent Workflow is a downstream expression of AI Agent Lifecycle. It becomes possible after human roles have been decomposed into lifecycle responsibilities. It is the workflow direction made possible by Agent Lifecycle Protocol and the direction being built toward across MPLP, SoloCrew, and related Coregentis proof surfaces.",
+    evidenceRoute:
+      "The evidence route begins with the second Lifecycle essay’s software workflow example, where product requirements, review, architecture, development, QA, and acceptance are translated into lifecycle objects. MPLP supplies protocol language; SoloCrew tests whether the generated governance model can become usable inside real work.",
+    relatedEssays: [
+      "the-industry-misdefined-multi-agent-ai",
+      "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "agentic-ai-inflection-point-project-delivery"
+    ],
+    relatedProjects: ["mplp", "solocrew", "validation-lab"],
+    relatedTerms: [
+      "ai-agent-lifecycle",
+      "lifecycle-role-decomposition",
+      "agentic-delivery",
+      "confirmation-boundary",
+      "lifecycle-evidence"
+    ],
+    keywords: [
+      "Lifecycle-Governed Agent Workflow",
+      "Agent Lifecycle Protocol",
+      "agent workflow",
+      "accountable MAS",
+      "protocol-governed workflow"
     ]
   },
   {
@@ -496,10 +587,17 @@ export const concepts = [
     relatedEssays: [
       "agentic-ai-inflection-point-project-delivery",
       "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "the-industry-misdefined-multi-agent-ai",
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
     ],
     relatedProjects: ["solocrew", "mplp", "validation-lab"],
-    relatedTerms: ["ai-agent-lifecycle", "confirmation-boundary", "lifecycle-evidence", "ai-agent-governance"],
+    relatedTerms: [
+      "ai-agent-lifecycle",
+      "lifecycle-governed-agent-workflow",
+      "confirmation-boundary",
+      "lifecycle-evidence",
+      "ai-agent-governance"
+    ],
     keywords: [
       "Agentic Delivery",
       "agentic project delivery",
@@ -526,10 +624,17 @@ export const concepts = [
       "The evidence route for AI Agent Governance starts with the MCP/A2A lifecycle governance essay, because that essay separates tool access and agent coordination from lifecycle authority. From there, MPLP gives the protocol proof surface for context, plan, confirm, trace, and evidence. Validation Lab keeps the governance claim accountable by asking what records would let a reviewer inspect authorization, action, and outcome. This keeps governance practical: the question is not whether a page claims safety, but whether the system can show the authority path behind the work. That path is what makes governance inspectable after the agent has already acted and after memory has faded.",
     relatedEssays: [
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "the-industry-misdefined-multi-agent-ai",
       "agentic-ai-inflection-point-project-delivery"
     ],
     relatedProjects: ["mplp", "validation-lab", "solocrew"],
-    relatedTerms: ["confirmation-boundary", "lifecycle-evidence", "protocol-engineering", "ai-agent-lifecycle"],
+    relatedTerms: [
+      "confirmation-boundary",
+      "lifecycle-evidence",
+      "lifecycle-role-decomposition",
+      "protocol-engineering",
+      "ai-agent-lifecycle"
+    ],
     keywords: [
       "AI Agent Governance",
       "agent governance",
@@ -557,6 +662,7 @@ export const concepts = [
     relatedEssays: [
       "agentic-ai-inflection-point-project-delivery",
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "the-industry-misdefined-multi-agent-ai",
       "ai-agent-lifecycle-it-was-not-designed-it-grew"
     ],
     relatedProjects: ["validation-lab", "mplp", "cognitive-os"],
@@ -587,6 +693,7 @@ export const concepts = [
       "The evidence route for Confirmation Boundary starts with the lifecycle governance essay, where confirmation is treated as a protocol primitive rather than a decorative checkpoint. SoloCrew is the most concrete delivery route because confirmation boundaries have to feel usable inside a working loop. MPLP provides the protocol vocabulary, and Validation Lab asks whether the resulting approval record is enough for later review. The boundary should explain the approved plan, the excluded scope, the expected evidence, and the return condition before the agent continues. That makes approval durable enough to audit rather than merely visible in a UI at execution time.",
     relatedEssays: [
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "the-industry-misdefined-multi-agent-ai",
       "agentic-ai-inflection-point-project-delivery"
     ],
     relatedProjects: ["solocrew", "mplp", "validation-lab"],
@@ -617,11 +724,19 @@ export const concepts = [
       "The evidence route for Protocol Engineering starts with MPLP because it is the protocol proof surface, but the essays explain why the protocol question exists. The governance essay names the missing layer above tool access and coordination. The lifecycle origin essay explains how real project failure boundaries pushed the category into view. Validation Lab then tests whether protocol language produces evidence that can be inspected.",
     relatedEssays: [
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "the-industry-misdefined-multi-agent-ai",
       "ai-agent-lifecycle-it-was-not-designed-it-grew",
       "agentic-ai-inflection-point-project-delivery"
     ],
     relatedProjects: ["mplp", "cognitive-os", "solocrew", "validation-lab"],
-    relatedTerms: ["ai-agent-lifecycle", "ai-agent-governance", "confirmation-boundary", "lifecycle-evidence"],
+    relatedTerms: [
+      "ai-agent-lifecycle",
+      "lifecycle-role-decomposition",
+      "lifecycle-governed-agent-workflow",
+      "ai-agent-governance",
+      "confirmation-boundary",
+      "lifecycle-evidence"
+    ],
     keywords: [
       "Protocol Engineering",
       "AI agent protocol",
@@ -721,7 +836,7 @@ export const pageRegistry = {
     title: "Concepts for AI Agent Lifecycle",
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPT MAP",
-    lead: "A concise conceptual map for AI Agent Lifecycle, Agentic Delivery, Intent Drift, AI Agent Governance, and Protocol Engineering."
+    lead: "A concise conceptual map for AI Agent Lifecycle, Agentic Delivery, Lifecycle Role Decomposition, Lifecycle-Governed Agent Workflow, Intent Drift, AI Agent Governance, and Protocol Engineering."
   }
 };
 
@@ -823,11 +938,21 @@ export const projects = [
       "MPLP anchors the protocol foundation for context, planning, confirmation, trace, governance, and evidence so Agentic Delivery can be explicit, governable, and auditable.",
     shareDescription: siteSemanticBaseline.mplpDefinition,
     relatedIdeas: ["protocol-engineering", "lifecycle-governance", "accountable-work"],
-    relatedConcepts: ["ai-agent-lifecycle", "protocol-engineering", "lifecycle-evidence"],
+    relatedConcepts: [
+      "ai-agent-lifecycle",
+      "lifecycle-role-decomposition",
+      "lifecycle-governed-agent-workflow",
+      "protocol-engineering",
+      "lifecycle-evidence"
+    ],
     relatedEssays: [
       {
         href: "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
         label: "AI Agent Lifecycle origin essay"
+      },
+      {
+        href: "/essays/the-industry-misdefined-multi-agent-ai/",
+        label: "MAS responsibility separation essay"
       },
       {
         href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
@@ -856,11 +981,15 @@ export const projects = [
       "Cognitive OS keeps the runtime claim bounded: it explores how state, activation, projection, constraints, and evidence capture can make protocol-native work operational.",
     shareDescription: siteSemanticBaseline.cognitiveOSDefinition,
     relatedIdeas: ["agentic-delivery", "project-lifecycle-vs-task-execution", "protocol-engineering"],
-    relatedConcepts: ["context-drift", "lifecycle-evidence"],
+    relatedConcepts: ["context-drift", "lifecycle-governed-agent-workflow", "lifecycle-evidence"],
     relatedEssays: [
       {
         href: "/essays/agentic-ai-inflection-point-project-delivery/",
         label: "Agentic Delivery project lifecycle essay"
+      },
+      {
+        href: "/essays/the-industry-misdefined-multi-agent-ai/",
+        label: "Lifecycle-governed workflow essay"
       }
     ],
     adjacentProofs: ["mplp", "solocrew"],
@@ -883,11 +1012,15 @@ export const projects = [
       "SoloCrew tests how Agentic Delivery can become a concrete operating path for one-person-company work without claiming the category is closed or commercially proven.",
     shareDescription: siteSemanticBaseline.soloCrewDefinition,
     relatedIdeas: ["agentic-delivery", "accountable-work", "protocol-engineering"],
-    relatedConcepts: ["agentic-delivery", "confirmation-boundary"],
+    relatedConcepts: ["agentic-delivery", "lifecycle-role-decomposition", "lifecycle-governed-agent-workflow", "confirmation-boundary"],
     relatedEssays: [
       {
         href: "/essays/agentic-ai-inflection-point-project-delivery/",
         label: "Agentic Delivery project lifecycle essay"
+      },
+      {
+        href: "/essays/the-industry-misdefined-multi-agent-ai/",
+        label: "Lifecycle-governed workflow essay"
       }
     ],
     adjacentProofs: ["cognitive-os", "validation-lab"],
@@ -910,11 +1043,15 @@ export const projects = [
       "Validation Lab shows that reliable work delivery needs evidence adjudication, not just architectural language. Proof must be inspectable.",
     shareDescription: siteSemanticBaseline.validationLabDefinition,
     relatedIdeas: ["lifecycle-governance", "evidence-accepted-outcome", "accountable-work"],
-    relatedConcepts: ["lifecycle-evidence", "ai-agent-governance"],
+    relatedConcepts: ["lifecycle-evidence", "lifecycle-governed-agent-workflow", "ai-agent-governance"],
     relatedEssays: [
       {
         href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
         label: "Lifecycle governance essay"
+      },
+      {
+        href: "/essays/the-industry-misdefined-multi-agent-ai/",
+        label: "MAS responsibility separation essay"
       },
       {
         href: "/essays/agentic-ai-inflection-point-project-delivery/",
@@ -1086,7 +1223,7 @@ export const newsletterPromise = {
     "New notes go out when there is a real thesis, column essay, framework, proof update, or evidence adjudication surface to report.",
   topics: [
     "Agentic Delivery and project lifecycle design",
-    "Define The AI Agent Lifecycle, starting from the published origin essay",
+    "Define The AI Agent Lifecycle, including lifecycle responsibility separation in MAS",
     "the upcoming four-layer AI Agent Lifecycle definition",
     "lifecycle governance above MCP and A2A",
     "lifecycle protocol, runtime path, delivery proof path, and evidence adjudication",

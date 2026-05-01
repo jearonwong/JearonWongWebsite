@@ -372,6 +372,37 @@ const articleJsonLd = {
     background: rgba(17, 17, 17, 0.06);
     border-radius: var(--radius-module);
   }
+  .article-content :global(table) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 2.5rem 0;
+    border-collapse: collapse;
+    border: 1px solid var(--current-border);
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+  .article-content :global(th),
+  .article-content :global(td) {
+    min-width: 14rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--current-line);
+    text-align: left;
+    vertical-align: top;
+  }
+  .article-content :global(th) {
+    background: rgba(17, 17, 17, 0.045);
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .article-content :global(td) {
+    color: var(--current-muted);
+  }
   .article-content :global(hr) {
     margin: 3.5rem 0;
     border: 0;

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">The Industry Misdefined Multi-Agent AI</title>
+  <desc id="desc">Open graph image for the second Define The AI Agent Lifecycle essay by Jearon Wong.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111111; }
+      .grid-line { stroke: rgba(241,245,249,0.055); stroke-width: 1; }
+      .frame { fill: rgba(255,255,255,0.02); stroke: rgba(241,245,249,0.13); stroke-width: 1.2; }
+      .frame-strong { fill: rgba(34,211,238,0.055); stroke: rgba(34,211,238,0.42); stroke-width: 1.4; }
+      .label { fill: #22d3ee; font-family: "JetBrains Mono", Menlo, monospace; font-size: 17px; font-weight: 700; letter-spacing: 1.4px; }
+      .label-muted { fill: #94a3b8; font-family: "JetBrains Mono", Menlo, monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+      .title { fill: #f8fafc; font-family: "Outfit", Inter, sans-serif; font-size: 61px; font-weight: 800; letter-spacing: -0.7px; }
+      .subtitle { fill: #cbd5e1; font-family: Inter, sans-serif; font-size: 29px; font-weight: 600; }
+      .small { fill: #94a3b8; font-family: Inter, sans-serif; font-size: 17px; font-weight: 500; }
+      .mono { fill: #e2e8f0; font-family: "JetBrains Mono", Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.7px; }
+      .line { stroke: rgba(148,163,184,0.42); stroke-width: 2; fill: none; }
+      .line-strong { stroke: rgba(34,211,238,0.9); stroke-width: 2.5; fill: none; }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" class="grid-line"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" class="bg"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="rgba(241,245,249,0.13)" stroke-width="1"/>
+  <rect x="72" y="72" width="1056" height="486" fill="none" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+
+  <text x="96" y="122" class="label">DEFINE THE AI AGENT LIFECYCLE / ESSAY 02</text>
+  <text x="96" y="220" class="title">The Industry</text>
+  <text x="96" y="286" class="title">Misdefined</text>
+  <text x="96" y="352" class="title">Multi-Agent AI</text>
+  <text x="96" y="416" class="subtitle">More agents do not make MAS.</text>
+  <text x="96" y="456" class="subtitle" fill="#22d3ee">Lifecycle-governed workflows do.</text>
+
+  <g transform="translate(760 162)">
+    <rect width="292" height="112" rx="2" class="frame"/>
+    <text x="22" y="38" class="label-muted">COMMON DEFINITION</text>
+    <text x="22" y="75" class="mono">More agents + more roles</text>
+    <text x="22" y="99" class="small">Coordination without structure</text>
+    <path d="M54 140 H238" class="line"/>
+    <text x="108" y="161" class="label-muted">!= MAS</text>
+
+    <rect y="188" width="292" height="144" rx="2" class="frame-strong"/>
+    <text x="22" y="226" class="label">ACCOUNTABLE MAS</text>
+    <text x="22" y="264" class="mono">Context / Plan / Confirm</text>
+    <text x="22" y="291" class="mono">Trace / Rollback / Delivery</text>
+    <path d="M22 318 H270" class="line-strong"/>
+  </g>
+
+  <text x="96" y="532" class="label-muted">JEARON WONG / PROTOCOL ARCHITECT FOR THE AGENT ERA</text>
+</svg>

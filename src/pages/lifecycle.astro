@@ -7,6 +7,9 @@ import { aiAgentLifecycleColumn, getConceptBySlug, getProjectBySlug, pageRegistr
 const essays = await getCollection("essays");
 const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
 const firstEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const lifecycleEntries = essays
+  .filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle)
+  .sort((left, right) => (left.data.seriesOrder ?? 999) - (right.data.seriesOrder ?? 999));
 const preludeEntries = aiAgentLifecycleColumn.preludeEssays
   .map((entry) => {
     const essay = essaysBySlug.get(entry.slug);
@@ -210,6 +213,20 @@ const relationshipMap = [
           <h2>{aiAgentLifecycleColumn.seriesTitle}</h2>
           <p class="section-desc">{aiAgentLifecycleColumn.publicationRule}</p>
         </div>
+
+        {lifecycleEntries.length > 0 && (
+          <div class="prelude-list" aria-label="Published AI Agent Lifecycle essays">
+            {lifecycleEntries.map((essay) => (
+              <a href={`/essays/${essay.slug}/`} class="prelude-link">
+                <span class="prelude-index">{String(essay.data.seriesOrder ?? 1).padStart(2, "0")}</span>
+                <span class="prelude-copy">
+                  <strong>{essay.data.title}</strong>
+                  <span>{essay.data.description}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
 
         {preludeEntries.length > 0 && (
           <div class="prelude-list" aria-label="Prelude essays">
@@ -486,6 +503,10 @@ const relationshipMap = [
   .prelude-list {
     display: grid;
     border: 1px solid var(--current-line);
+  }
+
+  .prelude-list + .prelude-list {
+    margin-top: 1rem;
   }
 
   .prelude-link {

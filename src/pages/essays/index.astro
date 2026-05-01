@@ -10,10 +10,11 @@ const essays = (await getCollection("essays")).sort(
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
 );
 const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
-const columnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
-const columnCover = columnEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
-const columnCoverAlt = columnEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 const lifecycleEssays = essays.filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle);
+const firstColumnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const spotlightEssay = lifecycleEssays[0] ?? firstColumnEssay;
+const columnCover = spotlightEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const columnCoverAlt = spotlightEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
@@ -37,19 +38,26 @@ const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-
           <span class="registry-key">COLUMN</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
         </div>
         <div class="lifecycle-spotlight-grid">
-          {columnEssay && (
-            <a href={`/essays/${columnEssay.slug}/`} class="spotlight-cover" aria-label={`Read ${columnEssay.data.title}`}>
-              <img src={columnCover} alt={columnCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+          {spotlightEssay && (
+            <a href={`/essays/${spotlightEssay.slug}/`} class="spotlight-cover" aria-label={`Read ${spotlightEssay.data.title}`}>
+              <img
+                src={columnCover}
+                alt={columnCoverAlt}
+                width={spotlightEssay.data.images?.[0]?.width ?? 1200}
+                height={spotlightEssay.data.images?.[0]?.height ?? 630}
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           )}
           <div class="spotlight-main">
             <h2 class="spotlight-title">{aiAgentLifecycleColumn.categoryTitle}</h2>
             <p class="spotlight-copy">The essay sequence develops the Lifecycle mainline. Use /lifecycle/ for the theory entry; use this page for the writing order.</p>
-            {columnEssay && (
+            {spotlightEssay && (
               <div class="current-essay">
-                <span class="current-essay-label">First published column essay</span>
-                <h3><a href={`/essays/${columnEssay.slug}/`}>{columnEssay.data.title}</a></h3>
-                <p>{columnEssay.data.description}</p>
+                <span class="current-essay-label">Latest published column essay</span>
+                <h3><a href={`/essays/${spotlightEssay.slug}/`}>{spotlightEssay.data.title}</a></h3>
+                <p>{spotlightEssay.data.description}</p>
               </div>
             )}
           </div>
@@ -57,7 +65,10 @@ const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-
             <p>{aiAgentLifecycleColumn.nextEssayDirection}</p>
             <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open Lifecycle mainline</a>
             <a href="/concepts/" class="spotlight-link">Concepts reference</a>
-            {columnEssay && <a href={`/essays/${columnEssay.slug}/`} class="spotlight-link">Read essay 01</a>}
+            {firstColumnEssay && <a href={`/essays/${firstColumnEssay.slug}/`} class="spotlight-link">Read essay 01</a>}
+            {spotlightEssay && spotlightEssay.slug !== firstColumnEssay?.slug && (
+              <a href={`/essays/${spotlightEssay.slug}/`} class="spotlight-link">Read latest essay</a>
+            )}
           </div>
         </div>
       </div>

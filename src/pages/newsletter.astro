@@ -5,9 +5,12 @@ import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
 
 const essays = await getCollection("essays");
-const firstEssay = essays.find((essay) => essay.slug === aiAgentLifecycleColumn.firstPublishedEssay.slug);
-const firstEssayCover = firstEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
-const firstEssayCoverAlt = firstEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
+const lifecycleEssays = essays
+  .filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle)
+  .sort((left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime());
+const latestEssay = lifecycleEssays[0] ?? essays.find((essay) => essay.slug === aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const latestEssayCover = latestEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const latestEssayCoverAlt = latestEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 ---
 
 <BaseLayout title="Newsletter" description={pageRegistry.newsletter.lead}>
@@ -45,14 +48,21 @@ const firstEssayCoverAlt = firstEssay?.data.images?.[0]?.alt ?? aiAgentLifecycle
             <span class="registry-key">COLUMN_SIGNAL</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
           </div>
           <p>
-            The first essay is published. The next article will define the four layers of AI Agent Lifecycle.
+            The first two essays are published. The next article will define the four layers of AI Agent Lifecycle.
           </p>
-          {firstEssay && (
-            <a href={`/essays/${firstEssay.slug}/`} class="current-article-link">
-              <img src={firstEssayCover} alt={firstEssayCoverAlt} width="1200" height="630" loading="lazy" decoding="async" />
+          {latestEssay && (
+            <a href={`/essays/${latestEssay.slug}/`} class="current-article-link">
+              <img
+                src={latestEssayCover}
+                alt={latestEssayCoverAlt}
+                width={latestEssay.data.images?.[0]?.width ?? 1200}
+                height={latestEssay.data.images?.[0]?.height ?? 630}
+                loading="lazy"
+                decoding="async"
+              />
               <span>
-                <strong>{firstEssay.data.title}</strong>
-                <small>{firstEssay.data.description}</small>
+                <strong>{latestEssay.data.title}</strong>
+                <small>{latestEssay.data.description}</small>
               </span>
             </a>
           )}
