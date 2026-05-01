@@ -37,6 +37,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Flagship Essays
 
 - AI Agent Lifecycle: It Was Not Designed. It Grew.: https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/
+- The Industry Misdefined Multi-Agent AI: https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/
 - MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?: https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
 - The Agentic AI Inflection Point: Project Delivery: https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/
 
