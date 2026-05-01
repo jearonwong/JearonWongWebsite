@@ -50,3 +50,15 @@ The homepage must satisfy the "Three Truths" in order:
 - No decorative gradients that serve no functional purpose.
 - No "Portfolio" DNA (Projects are proof, not work-for-hire).
 - No "Blog" DNA (Essays are registry entries, not just posts).
+
+## 5. Essay Visual Governance
+- Article diagrams must read as governed registry assets: high contrast, real
+  text where practical, restrained grid/line systems, generous internal padding,
+  and no connectors or decorative strokes crossing text.
+- Protocol examples, lifecycle events, and pseudo-code should use governed
+  editorial blocks unless they are executable code. Preserve monospaced tokens
+  for identifiers, but avoid large dark rectangles for narrative examples.
+- Essay tables may use controlled horizontal scrolling on small screens. They
+  must keep readable headers, adequate cell padding, and no page-level overflow.
+- Figures require meaningful alt text, concise captions, consistent spacing, and
+  responsive behavior that keeps diagram text readable on phone viewports.

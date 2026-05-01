@@ -30,15 +30,15 @@ tags:
   - Agentic Delivery
 ogImage: /social/the-industry-misdefined-multi-agent-ai-og.png
 images:
-  - url: /figures/article2-mas-redefinition-diagram.png
+  - url: /figures/article2-mas-redefinition-diagram.svg
     alt: "Diagram comparing industry MAS defined by agent count with accountable MAS defined by lifecycle responsibility separation"
-    caption: "MAS is not defined by agent count. It becomes accountable when role surfaces are bound to separated lifecycle responsibility boundaries."
+    caption: "MAS is not defined by agent count. It becomes accountable when role surfaces are bound to lifecycle responsibility separation."
     thumbnailUrl: /social/the-industry-misdefined-multi-agent-ai-og.png
     width: 1600
     height: 900
-  - url: /figures/article2-lifecycle-governed-agent-workflow.png
+  - url: /figures/article2-lifecycle-governed-agent-workflow.svg
     alt: "Diagram showing human work models interpreted through Lifecycle Role Decomposition into lifecycle-governed agent workflow"
-    caption: "Lifecycle Role Decomposition turns human work models into protocol-governed workflow structure: context, role, plan, confirm, trace, delivery, rollback, and accountable handoff."
+    caption: "Lifecycle Role Decomposition turns human work models into protocol-governed workflow structure."
     thumbnailUrl: /social/the-industry-misdefined-multi-agent-ai-og.png
     width: 1600
     height: 900
@@ -221,9 +221,12 @@ So the core issue in multi-agent AI is not whether there are multiple agents.
 
 The issue is whether those agents are defined by lifecycle responsibility boundaries.
 
-<figure class="article-figure">
-  <img src="/figures/article2-mas-redefinition-diagram.png" alt="Diagram comparing industry MAS defined by agent count with accountable MAS defined by lifecycle responsibility separation" width="1600" height="900" loading="lazy" decoding="async" />
-  <figcaption>Figure 1. The category boundary is not “more agents.” It is whether agent roles are bound to separated lifecycle responsibilities such as context, plan, confirm, trace, review, rollback, and delivery.</figcaption>
+<figure class="article-figure article-figure--diagram">
+  <picture>
+    <source media="(max-width: 640px)" srcset="/figures/article2-mas-redefinition-diagram-mobile.svg" width="900" height="1200" />
+    <img src="/figures/article2-mas-redefinition-diagram.svg" alt="Diagram comparing industry MAS defined by agent count with accountable MAS defined by lifecycle responsibility separation" width="1600" height="900" loading="lazy" decoding="async" />
+  </picture>
+  <figcaption>Figure 1. The category boundary is not “more agents.” It is whether agent roles are bound to lifecycle responsibility separation.</figcaption>
 </figure>
 
 ## What current workflow frameworks do — and what they do not do
@@ -301,14 +304,35 @@ Lifecycle Role Decomposition means:
 
 In MPLP, or more broadly in an Agent Lifecycle Protocol, those objects include:
 
-```text
-Context  — what state this agent may rely on
-Role     — what responsibility boundary this agent carries
-Plan     — what action path this agent is authorized to form
-Confirm  — what requires confirmation before execution may continue
-Trace    — what evidence must remain after action
-Delivery — what state counts as accepted and inheritable by future agents
-```
+<section class="protocol-example-card" aria-label="Agent Lifecycle Protocol objects">
+  <p class="protocol-example-card__eyebrow">Protocol objects</p>
+  <dl class="protocol-object-grid">
+    <div>
+      <dt>Context</dt>
+      <dd>What state this agent may rely on.</dd>
+    </div>
+    <div>
+      <dt>Role</dt>
+      <dd>What responsibility boundary this agent carries.</dd>
+    </div>
+    <div>
+      <dt>Plan</dt>
+      <dd>What action path this agent is authorized to form.</dd>
+    </div>
+    <div>
+      <dt>Confirm</dt>
+      <dd>What requires confirmation before execution may continue.</dd>
+    </div>
+    <div>
+      <dt>Trace</dt>
+      <dd>What evidence must remain after action.</dd>
+    </div>
+    <div>
+      <dt>Delivery</dt>
+      <dd>What state counts as accepted and inheritable by future agents.</dd>
+    </div>
+  </dl>
+</section>
 
 The important point is this:
 
@@ -340,22 +364,31 @@ Under lifecycle governance, a Reviewer Agent is no longer merely “an agent tha
 
 It is decomposed into a set of lifecycle boundaries:
 
-```text
-Reviewer Agent → Context
-What materials may it read: requirements, architecture, code diff, test results, previous Trace?
-
-Reviewer Agent → Role
-What is its responsibility: requirement alignment, architecture alignment, quality threshold, risk identification?
-
-Reviewer Agent → Confirm
-What may it confirm: may this move to QA, should delivery be blocked, should rework be triggered?
-
-Reviewer Agent → Trace
-What must it record: review basis, findings, accepted risks, rejection reasons?
-
-Reviewer Agent → Delivery Transition Control
-It does not own final Delivery, but it may block transition into acceptance-ready state.
-```
+<section class="protocol-example-card" aria-label="Reviewer Agent lifecycle boundaries">
+  <p class="protocol-example-card__eyebrow">Lifecycle boundary decomposition</p>
+  <dl class="protocol-boundary-list">
+    <div>
+      <dt>Reviewer Agent → Context</dt>
+      <dd>Requirements, architecture, code diff, test results, and previous Trace.</dd>
+    </div>
+    <div>
+      <dt>Reviewer Agent → Role</dt>
+      <dd>Requirement alignment, architecture alignment, quality threshold, and risk identification.</dd>
+    </div>
+    <div>
+      <dt>Reviewer Agent → Confirm</dt>
+      <dd>Whether work may move to QA, must be blocked, or should return to rework.</dd>
+    </div>
+    <div>
+      <dt>Reviewer Agent → Trace</dt>
+      <dd>Review basis, findings, accepted risks, and rejection reasons.</dd>
+    </div>
+    <div>
+      <dt>Reviewer Agent → Delivery Transition Control</dt>
+      <dd>It does not own final Delivery, but it may block transition into acceptance-ready state.</dd>
+    </div>
+  </dl>
+</section>
 
 This is the key difference.
 
@@ -369,31 +402,32 @@ To make this concrete, take a very ordinary software development process.
 
 Suppose a user writes down the way their team works:
 
-```text
-Our development process is:
-
-1. PM prepares product requirements, including goals, scope, non-goals, and acceptance criteria.
-2. Requirements must pass requirements review before architecture begins.
-3. Architect designs the system architecture and module boundaries based on confirmed requirements.
-4. Architecture must pass architecture review, especially for high-risk dependencies and cross-module changes.
-5. Developer implements based on confirmed architecture.
-6. After Developer delivery, Reviewer must perform code review.
-7. QA designs test cases from requirements and architecture, then verifies the result.
-8. Final delivery must be accepted by a human.
-```
+<section class="protocol-example-card" aria-label="Human software workflow">
+  <p class="protocol-example-card__eyebrow">Human work model</p>
+  <ol class="protocol-ordered-list">
+    <li>PM prepares product requirements, including goals, scope, non-goals, and acceptance criteria.</li>
+    <li>Requirements must pass requirements review before architecture begins.</li>
+    <li>Architect designs the system architecture and module boundaries based on confirmed requirements.</li>
+    <li>Architecture must pass architecture review, especially for high-risk dependencies and cross-module changes.</li>
+    <li>Developer implements based on confirmed architecture.</li>
+    <li>After Developer delivery, Reviewer must perform code review.</li>
+    <li>QA designs test cases from requirements and architecture, then verifies the result.</li>
+    <li>Final delivery must be accepted by a human.</li>
+  </ol>
+</section>
 
 In a conventional agent workflow framework, the user usually has to turn this into nodes and edges:
 
-```text
-PM Agent
-→ Requirement Review
-→ Architect Agent
-→ Architecture Review
-→ Developer Agent
-→ Reviewer Agent
-→ QA Agent
-→ Human Acceptance
-```
+<div class="workflow-strip" aria-label="Conventional agent workflow graph">
+  <span>PM Agent</span>
+  <span>Requirement Review</span>
+  <span>Architect Agent</span>
+  <span>Architecture Review</span>
+  <span>Developer Agent</span>
+  <span>Reviewer Agent</span>
+  <span>QA Agent</span>
+  <span>Human Acceptance</span>
+</div>
 
 This is more flexible than a fixed workflow.
 
@@ -448,9 +482,10 @@ Suppose Developer Agent finishes a module.
 
 In a conventional workflow, the next step may simply be:
 
-```text
-Developer Agent → Reviewer Agent
-```
+<div class="workflow-strip workflow-strip--compact" aria-label="Conventional handoff">
+  <span>Developer Agent</span>
+  <span>Reviewer Agent</span>
+</div>
 
 Reviewer Agent reads the code, produces review comments, and the workflow continues.
 
@@ -458,15 +493,20 @@ But in a lifecycle-governed agent workflow, Developer’s delivery is not merely
 
 It must carry:
 
-```text
-implementation_trace:
-  - which confirmed requirement this change implements
-  - which modules were modified
-  - whether the change exceeds confirmed architecture boundaries
-  - which technical debt was introduced
-  - which tests were run
-  - whether a rollback point was generated
-```
+<section class="lifecycle-event-card" aria-label="implementation_trace">
+  <header>
+    <span>Lifecycle evidence</span>
+    <strong>implementation_trace</strong>
+  </header>
+  <ul>
+    <li>Which confirmed requirement this change implements.</li>
+    <li>Which modules were modified.</li>
+    <li>Whether the change exceeds confirmed architecture boundaries.</li>
+    <li>Which technical debt was introduced.</li>
+    <li>Which tests were run.</li>
+    <li>Whether a rollback point was generated.</li>
+  </ul>
+</section>
 
 Reviewer Agent does not receive plain text.
 
@@ -476,15 +516,20 @@ Reviewer’s responsibility is not “give some feedback.”
 
 Reviewer must judge:
 
-```text
-review_confirm:
-  - does this match confirmed requirements?
-  - does this match confirmed architecture?
-  - are there blockers?
-  - is rework required?
-  - may this enter QA?
-  - is there risk that requires human acceptance?
-```
+<section class="lifecycle-event-card" aria-label="review_confirm">
+  <header>
+    <span>Confirm gate</span>
+    <strong>review_confirm</strong>
+  </header>
+  <ul>
+    <li>Does this match confirmed requirements?</li>
+    <li>Does this match confirmed architecture?</li>
+    <li>Are there blockers?</li>
+    <li>Is rework required?</li>
+    <li>May this enter QA?</li>
+    <li>Is there risk that requires human acceptance?</li>
+  </ul>
+</section>
 
 Now suppose Reviewer finds that Developer modified a cross-module dependency that was not approved during architecture review.
 
@@ -494,17 +539,30 @@ The system should not merely allow Reviewer to write:
 
 It should trigger a lifecycle event:
 
-```text
-boundary_crossing_detected:
-  affected_boundary: architecture_dependency_boundary
-  required_action: architecture_review_confirm
-  downstream_effect:
-    - block QA
-    - notify Architect Agent
-    - require Human / Tech Lead confirmation
-    - preserve current snapshot
-    - record trace evidence
-```
+<section class="lifecycle-event-card lifecycle-event-card--critical" aria-label="boundary_crossing_detected">
+  <header>
+    <span>Lifecycle event</span>
+    <strong>boundary_crossing_detected</strong>
+  </header>
+  <dl>
+    <div>
+      <dt>Affected boundary</dt>
+      <dd><code>architecture_dependency_boundary</code></dd>
+    </div>
+    <div>
+      <dt>Required action</dt>
+      <dd><code>architecture_review_confirm</code></dd>
+    </div>
+  </dl>
+  <p class="lifecycle-event-card__label">Downstream effects</p>
+  <ul>
+    <li>Block QA.</li>
+    <li>Notify Architect Agent.</li>
+    <li>Require Human / Tech Lead confirmation.</li>
+    <li>Preserve current snapshot.</li>
+    <li>Record trace evidence.</li>
+  </ul>
+</section>
 
 That is the difference.
 
@@ -554,16 +612,17 @@ The user does not need to hand-assemble every node.
 
 The user describes how work happens in human terms:
 
-```text
-We develop software like this:
-
-Requirements go through product review.
-Then architecture begins.
-Architecture must be confirmed by a technical owner.
-Development must pass code review before QA.
-QA failure blocks delivery.
-Final delivery is accepted by the product owner.
-```
+<section class="protocol-example-card" aria-label="Human-readable workflow description">
+  <p class="protocol-example-card__eyebrow">Human-readable workflow</p>
+  <ul class="protocol-check-list">
+    <li>Requirements go through product review.</li>
+    <li>Then architecture begins.</li>
+    <li>Architecture must be confirmed by a technical owner.</li>
+    <li>Development must pass code review before QA.</li>
+    <li>QA failure blocks delivery.</li>
+    <li>Final delivery is accepted by the product owner.</li>
+  </ul>
+</section>
 
 The protocol interprets this description and generates a lifecycle-governed agent workflow:
 
@@ -582,9 +641,12 @@ The user described how they work.
 
 The protocol translated that description into a governed system.
 
-<figure class="article-figure">
-  <img src="/figures/article2-lifecycle-governed-agent-workflow.png" alt="Diagram showing human work models interpreted through Lifecycle Role Decomposition into lifecycle-governed agent workflow" width="1600" height="900" loading="lazy" decoding="async" />
-  <figcaption>Figure 2. The important shift is translation: human work models enter as familiar workflow language, then Agent Lifecycle Protocol turns them into lifecycle-governed agent workflow.</figcaption>
+<figure class="article-figure article-figure--diagram">
+  <picture>
+    <source media="(max-width: 640px)" srcset="/figures/article2-lifecycle-governed-agent-workflow-mobile.svg" width="900" height="1320" />
+    <img src="/figures/article2-lifecycle-governed-agent-workflow.svg" alt="Diagram showing human work models interpreted through Lifecycle Role Decomposition into lifecycle-governed agent workflow" width="1600" height="900" loading="lazy" decoding="async" />
+  </picture>
+  <figcaption>Figure 2. The shift is translation: human work models enter as familiar workflow language, then Agent Lifecycle Protocol turns them into lifecycle-governed agent workflow.</figcaption>
 </figure>
 
 This is what I believe the next generation of agent workflow should become:

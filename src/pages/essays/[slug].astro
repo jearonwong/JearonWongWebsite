@@ -317,6 +317,7 @@ const articleJsonLd = {
     font-size: 1.15rem;
     line-height: 1.75;
     color: var(--current-text);
+    min-width: 0;
   }
   .article-content :global(h2) {
     font-size: 2rem;
@@ -358,10 +359,15 @@ const articleJsonLd = {
     overflow-x: auto;
     margin: 2.5rem 0;
     padding: 1.35rem 1.5rem;
-    background: #111111;
+    background:
+      linear-gradient(rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.045) 1px, transparent 1px),
+      rgba(17, 17, 17, 0.96);
+    background-size: 32px 32px;
     color: #f1f5f9;
-    border: 1px solid rgba(17, 17, 17, 0.14);
+    border: 1px solid rgba(17, 17, 17, 0.18);
     line-height: 1.55;
+    -webkit-overflow-scrolling: touch;
   }
   .article-content :global(code) {
     font-family: var(--font-mono);
@@ -377,19 +383,22 @@ const articleJsonLd = {
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin: 2.5rem 0;
     border-collapse: collapse;
     border: 1px solid var(--current-border);
     font-size: 0.94rem;
     line-height: 1.55;
+    background: #ffffff;
   }
   .article-content :global(th),
   .article-content :global(td) {
-    min-width: 14rem;
-    padding: 0.85rem 1rem;
+    min-width: 13.5rem;
+    padding: 1rem 1.05rem;
     border: 1px solid var(--current-line);
     text-align: left;
     vertical-align: top;
+    overflow-wrap: anywhere;
   }
   .article-content :global(th) {
     background: rgba(17, 17, 17, 0.045);
@@ -410,12 +419,24 @@ const articleJsonLd = {
   }
   .article-content :global(.article-figure) {
     margin: 3rem 0;
+    max-width: 100%;
+  }
+  .article-content :global(.article-figure--diagram) {
+    overflow: visible;
+  }
+  .article-content :global(.article-figure picture) {
+    display: block;
+    width: 100%;
   }
   .article-content :global(.article-figure img) {
     width: 100%;
     height: auto;
     border: 1px solid var(--current-border);
     background: var(--current-surface);
+  }
+  .article-content :global(.article-figure--diagram img) {
+    border-color: rgba(17, 17, 17, 0.16);
+    background: #111111;
   }
   .article-content :global(.article-figure figcaption) {
     margin-top: 0.85rem;
@@ -521,6 +542,136 @@ const articleJsonLd = {
     font-size: 1rem;
     line-height: 1.65;
   }
+  .article-content :global(.protocol-example-card),
+  .article-content :global(.lifecycle-event-card) {
+    margin: 2.6rem 0;
+    padding: 1.35rem 1.45rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-left: 3px solid var(--accent-signal);
+    background:
+      linear-gradient(rgba(17, 17, 17, 0.032) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.026) 1px, transparent 1px),
+      rgba(17, 17, 17, 0.018);
+    background-size: 28px 28px;
+  }
+  .article-content :global(.lifecycle-event-card) {
+    border-left-color: var(--accent-proof);
+  }
+  .article-content :global(.lifecycle-event-card--critical) {
+    border-left-color: var(--accent-signal);
+    background:
+      linear-gradient(rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+      rgba(59, 130, 246, 0.038);
+    background-size: 28px 28px;
+  }
+  .article-content :global(.protocol-example-card__eyebrow),
+  .article-content :global(.lifecycle-event-card header span),
+  .article-content :global(.lifecycle-event-card__label) {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+  }
+  .article-content :global(.lifecycle-event-card header) {
+    display: grid;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+  .article-content :global(.lifecycle-event-card header strong) {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.35;
+    color: var(--current-text);
+    overflow-wrap: anywhere;
+  }
+  .article-content :global(.protocol-object-grid),
+  .article-content :global(.protocol-boundary-list),
+  .article-content :global(.lifecycle-event-card dl) {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+  }
+  .article-content :global(.protocol-object-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .article-content :global(.protocol-object-grid div),
+  .article-content :global(.protocol-boundary-list div),
+  .article-content :global(.lifecycle-event-card dl div) {
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+  }
+  .article-content :global(.protocol-object-grid dt),
+  .article-content :global(.protocol-boundary-list dt),
+  .article-content :global(.lifecycle-event-card dt) {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--accent-signal);
+    overflow-wrap: anywhere;
+  }
+  .article-content :global(.lifecycle-event-card dt) {
+    color: var(--accent-proof);
+  }
+  .article-content :global(.protocol-object-grid dd),
+  .article-content :global(.protocol-boundary-list dd),
+  .article-content :global(.lifecycle-event-card dd) {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .article-content :global(.protocol-ordered-list),
+  .article-content :global(.protocol-check-list),
+  .article-content :global(.lifecycle-event-card ul) {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+  .article-content :global(.protocol-ordered-list li),
+  .article-content :global(.protocol-check-list li),
+  .article-content :global(.lifecycle-event-card li) {
+    margin-bottom: 0.55rem;
+  }
+  .article-content :global(.workflow-strip) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin: 2.25rem 0;
+    padding: 1.15rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    background: rgba(17, 17, 17, 0.025);
+  }
+  .article-content :global(.workflow-strip span) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    background: #ffffff;
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+  .article-content :global(.workflow-strip span + span)::before {
+    content: "->";
+    margin-right: 0.75rem;
+    color: var(--accent-signal);
+  }
+  .article-content :global(.workflow-strip--compact span) {
+    font-size: 0.82rem;
+  }
   .article-content :global(a) {
     color: var(--accent-signal);
     text-decoration: underline;
@@ -560,8 +711,33 @@ const articleJsonLd = {
       margin: 2rem 0;
       padding: 1rem;
     }
+    .article-content :global(table) {
+      margin: 2rem 0;
+      font-size: 0.86rem;
+    }
+    .article-content :global(th),
+    .article-content :global(td) {
+      min-width: 12rem;
+      padding: 0.85rem 0.9rem;
+    }
     .article-content :global(.article-figure) {
       margin: 2.4rem 0;
+    }
+    .article-content :global(.protocol-example-card),
+    .article-content :global(.lifecycle-event-card) {
+      margin: 2.2rem 0;
+      padding: 1.05rem;
+    }
+    .article-content :global(.protocol-object-grid) {
+      grid-template-columns: 1fr;
+    }
+    .article-content :global(.workflow-strip) {
+      gap: 0.55rem;
+      padding: 0.9rem;
+    }
+    .article-content :global(.workflow-strip span) {
+      max-width: 100%;
+      font-size: 0.72rem;
     }
     .article-content :global(.protocol-stack-diagram) {
       margin: 2.5rem 0;

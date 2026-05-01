@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1320" viewBox="0 0 900 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Lifecycle-Governed Agent Workflow</title>
+  <desc id="desc">Mobile structural diagram showing human work models translated by Agent Lifecycle Protocol into governed workflow and accountable delivery.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111111; }
+      .grid { stroke: rgba(241,245,249,0.055); stroke-width: 1; }
+      .outer { fill: none; stroke: rgba(241,245,249,0.16); stroke-width: 1.2; }
+      .panel { fill: rgba(255,255,255,0.03); stroke: rgba(241,245,249,0.18); stroke-width: 1.5; }
+      .protocol { fill: rgba(34,211,238,0.06); stroke: rgba(34,211,238,0.62); stroke-width: 2; }
+      .output { fill: rgba(59,130,246,0.055); stroke: rgba(59,130,246,0.5); stroke-width: 1.7; }
+      .line { stroke: rgba(34,211,238,0.9); stroke-width: 3; fill: none; }
+      .kicker { fill: #22d3ee; font: 700 21px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.4px; }
+      .label { fill: #64748b; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .label-hot { fill: #22d3ee; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .title { fill: #f1f5f9; font: 820 54px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .title-hot { fill: #22d3ee; font: 820 40px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-title { fill: #f1f5f9; font: 800 38px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-sub { fill: #f1f5f9; font: 600 23px Inter, sans-serif; letter-spacing: 0; }
+      .node { fill: rgba(255,255,255,0.075); stroke: rgba(241,245,249,0.24); stroke-width: 1.2; }
+      .node-blue { fill: rgba(59,130,246,0.14); stroke: rgba(59,130,246,0.52); stroke-width: 1.2; }
+      .node-cyan { fill: rgba(34,211,238,0.13); stroke: rgba(34,211,238,0.56); stroke-width: 1.2; }
+      .mono { fill: #f1f5f9; font: 760 24px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.3px; }
+      .text { fill: #f1f5f9; font: 760 27px Inter, sans-serif; letter-spacing: 0; }
+      .footer { fill: #64748b; font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.7px; }
+    </style>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0 L0 0 0 38" class="grid" fill="none"/>
+    </pattern>
+    <marker id="arrow" markerWidth="14" markerHeight="11" refX="13" refY="5.5" orient="auto">
+      <path d="M0,0 L14,5.5 L0,11 Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="1320" class="bg"/>
+  <rect width="900" height="1320" fill="url(#grid)"/>
+  <rect x="38" y="38" width="824" height="1244" class="outer"/>
+
+  <text x="64" y="96" class="kicker">LIFECYCLE-GOVERNED WORKFLOW</text>
+  <text x="64" y="164" class="title">Human work</text>
+  <text x="64" y="226" class="title">models in.</text>
+  <text x="64" y="282" class="title-hot">Governed workflows out.</text>
+
+  <g transform="translate(64 336)">
+    <rect width="772" height="220" rx="2" class="panel"/>
+    <text x="32" y="52" class="label">INPUT</text>
+    <text x="32" y="100" class="panel-title">Human Work Model</text>
+    <text x="32" y="138" class="panel-sub">Requirements / Architecture / Development / QA</text>
+  </g>
+
+  <path d="M450 582 V640" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(64 660)">
+    <rect width="772" height="336" rx="2" class="protocol"/>
+    <text x="32" y="52" class="label-hot">TRANSLATION LAYER</text>
+    <text x="32" y="102" class="panel-title">Lifecycle Role Decomposition</text>
+    <text x="32" y="140" class="panel-sub">Agent Lifecycle Protocol turns roles into boundaries.</text>
+    <rect x="32" y="190" width="216" height="58" rx="2" class="node-cyan"/>
+    <text x="72" y="228" class="mono">Context</text>
+    <rect x="278" y="190" width="216" height="58" rx="2" class="node-blue"/>
+    <text x="344" y="228" class="mono">Plan</text>
+    <rect x="524" y="190" width="216" height="58" rx="2" class="node-cyan"/>
+    <text x="574" y="228" class="mono">Confirm</text>
+    <rect x="156" y="268" width="216" height="58" rx="2" class="node-blue"/>
+    <text x="222" y="306" class="mono">Trace</text>
+    <rect x="402" y="268" width="216" height="58" rx="2" class="node-cyan"/>
+    <text x="440" y="306" class="mono">Delivery</text>
+  </g>
+
+  <path d="M450 1022 V1070" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(64 1090)">
+    <rect width="772" height="158" rx="2" class="output"/>
+    <text x="32" y="52" class="label">OUTPUT</text>
+    <text x="32" y="96" class="text">Confirm gates / Trace obligations</text>
+    <text x="32" y="132" class="text">Accountable delivery</text>
+  </g>
+
+  <text x="64" y="1270" class="footer">Not manual orchestration. Protocol-governed workflow generation.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">More agents do not make MAS</title>
+  <desc id="desc">Mobile structural comparison between agent-count MAS and lifecycle responsibility separation.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111111; }
+      .grid { stroke: rgba(241,245,249,0.055); stroke-width: 1; }
+      .outer { fill: none; stroke: rgba(241,245,249,0.16); stroke-width: 1.2; }
+      .panel { fill: rgba(255,255,255,0.03); stroke: rgba(241,245,249,0.18); stroke-width: 1.5; }
+      .panel-hot { fill: rgba(34,211,238,0.05); stroke: rgba(34,211,238,0.58); stroke-width: 1.8; }
+      .kicker { fill: #22d3ee; font: 700 21px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.4px; }
+      .label { fill: #64748b; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .label-hot { fill: #22d3ee; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .title { fill: #f1f5f9; font: 820 58px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .title-hot { fill: #22d3ee; font: 820 40px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-title { fill: #f1f5f9; font: 800 40px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-sub { fill: #f1f5f9; font: 600 24px Inter, sans-serif; letter-spacing: 0; }
+      .node { fill: rgba(255,255,255,0.075); stroke: rgba(241,245,249,0.24); stroke-width: 1.2; }
+      .node-hot { fill: rgba(34,211,238,0.13); stroke: rgba(34,211,238,0.56); stroke-width: 1.2; }
+      .node-blue { fill: rgba(59,130,246,0.14); stroke: rgba(59,130,246,0.52); stroke-width: 1.2; }
+      .mono { fill: #f1f5f9; font: 760 24px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.3px; }
+      .text { fill: #f1f5f9; font: 780 29px Inter, sans-serif; letter-spacing: 0; }
+      .footer { fill: #64748b; font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.7px; }
+    </style>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0 L0 0 0 38" class="grid" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="1200" class="bg"/>
+  <rect width="900" height="1200" fill="url(#grid)"/>
+  <rect x="38" y="38" width="824" height="1124" class="outer"/>
+
+  <text x="64" y="96" class="kicker">ESSAY 02 / MAS REDEFINED</text>
+  <text x="64" y="166" class="title">More agents</text>
+  <text x="64" y="230" class="title">do not make MAS.</text>
+  <text x="64" y="286" class="title-hot">Separated lifecycle responsibilities do.</text>
+
+  <g transform="translate(64 340)">
+    <rect width="772" height="314" rx="2" class="panel"/>
+    <text x="32" y="52" class="label">INDUSTRY MAS</text>
+    <text x="32" y="104" class="panel-title">Agent count as system</text>
+    <text x="32" y="142" class="panel-sub">Role labels and branches without clear ownership.</text>
+    <rect x="32" y="194" width="196" height="62" rx="2" class="node"/>
+    <text x="62" y="234" class="mono">Agent Count</text>
+    <rect x="288" y="194" width="178" height="62" rx="2" class="node"/>
+    <text x="320" y="234" class="mono">Role Labels</text>
+    <rect x="526" y="194" width="214" height="62" rx="2" class="node"/>
+    <text x="554" y="234" class="mono">Workflow</text>
+  </g>
+
+  <g transform="translate(64 700)">
+    <rect width="772" height="350" rx="2" class="panel-hot"/>
+    <text x="32" y="52" class="label-hot">ACCOUNTABLE MAS</text>
+    <text x="32" y="104" class="panel-title">Responsibility as system</text>
+    <text x="32" y="142" class="panel-sub">Agent roles are bound to lifecycle boundaries.</text>
+    <rect x="32" y="190" width="312" height="62" rx="2" class="node-hot"/>
+    <text x="86" y="230" class="text">Confirm</text>
+    <rect x="428" y="190" width="312" height="62" rx="2" class="node-blue"/>
+    <text x="548" y="230" class="text">Trace</text>
+    <rect x="32" y="268" width="312" height="62" rx="2" class="node-blue"/>
+    <text x="90" y="308" class="text">Rollback</text>
+    <rect x="428" y="268" width="312" height="62" rx="2" class="node-hot"/>
+    <text x="530" y="308" class="text">Delivery</text>
+  </g>
+
+  <text x="64" y="1104" class="kicker">MAS is lifecycle responsibility separation.</text>
+  <text x="64" y="1138" class="footer">Jearon Wong / Define The AI Agent Lifecycle</text>
+</svg>
