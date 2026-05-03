@@ -47,6 +47,8 @@
   --registry-card-padding: clamp(1.5rem, 2vw, 1.75rem);
   --registry-supporting-card-padding: clamp(1.25rem, 1.8vw, 1.5rem);
   --registry-compact-padding: clamp(1rem, 1.5vw, 1.25rem);
+  --registry-reading-panel-max: 54rem;
+  --registry-reading-panel-padding: clamp(1.5rem, 2.2vw, 2rem);
   --registry-inline-gap: 1rem;
   --content-measure: 64ch;
   --lead-measure: 62ch;
@@ -222,6 +224,26 @@ button:focus-visible {
   border-radius: var(--radius-module);
   position: relative;
   overflow: hidden;
+}
+
+.registry-panel--reading {
+  max-width: min(100%, var(--registry-reading-panel-max));
+  padding: var(--registry-reading-panel-padding);
+}
+
+.registry-panel--structured {
+  max-width: 100%;
+}
+
+.registry-panel__body {
+  max-width: var(--content-measure);
+}
+
+@media (max-width: 768px) {
+  .registry-panel--reading {
+    max-width: 100%;
+    padding: var(--registry-card-padding);
+  }
 }
 
 .registry-annotation {

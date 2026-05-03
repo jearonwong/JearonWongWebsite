@@ -14,7 +14,7 @@ import { contentRouteRoles, governanceModules, pageRegistry, siteThesis } from "
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
-      <div class="registry-chassis appendix-guidance">
+      <div class="registry-chassis registry-panel--reading appendix-guidance">
         <div class="registry-annotation" style="margin-bottom: 0.9rem;">
           <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.governance.question}</span>
         </div>
@@ -47,7 +47,6 @@ import { contentRouteRoles, governanceModules, pageRegistry, siteThesis } from "
 
 <style>
   .appendix-guidance {
-    padding: var(--registry-panel-padding);
     margin-bottom: var(--space-5);
   }
   .appendix-guidance__copy {
@@ -115,7 +114,6 @@ import { contentRouteRoles, governanceModules, pageRegistry, siteThesis } from "
   }
   @media (max-width: 768px) {
     .appendix-guidance {
-      padding: var(--registry-card-padding);
       margin-bottom: var(--space-4);
     }
     .appendix-stack {

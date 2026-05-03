@@ -15,7 +15,7 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
-      <div class="registry-chassis ideas-guidance">
+      <div class="registry-chassis registry-panel--reading ideas-guidance">
         <div class="registry-annotation" style="margin-bottom: 0.9rem;">
           <span class="registry-key">START_HERE</span>: <span class="registry-value">IDEAS_TO_ESSAY_TO_PROOF</span>
         </div>
@@ -55,7 +55,6 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
 
 <style>
   .ideas-guidance {
-    padding: var(--registry-panel-padding);
     margin-bottom: var(--space-5);
   }
 
@@ -70,6 +69,8 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
   .ideas-guidance__links {
     display: flex;
     flex-wrap: wrap;
+    width: fit-content;
+    max-width: 100%;
     gap: 0.8rem 1rem;
     margin-top: var(--space-3);
   }
@@ -137,7 +138,6 @@ import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistr
 
   @media (max-width: 768px) {
     .ideas-guidance {
-      padding: var(--registry-card-padding);
       margin-bottom: var(--space-4);
     }
     .ideas-guidance__copy {

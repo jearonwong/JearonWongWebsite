@@ -26,7 +26,7 @@ const projectBoundaryNotes = [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
-      <div class="registry-chassis proof-room-guidance">
+      <div class="registry-chassis registry-panel--reading proof-room-guidance">
         <div class="registry-annotation" style="margin-bottom: 0.9rem;">
           <span class="registry-key">READING_PATH</span>: <span class="registry-value">THESIS_TO_PROOF</span>
         </div>
@@ -89,7 +89,6 @@ const projectBoundaryNotes = [
 
 <style>
   .proof-room-guidance {
-    padding: var(--registry-panel-padding);
     margin-bottom: var(--space-5);
   }
 
@@ -115,6 +114,8 @@ const projectBoundaryNotes = [
   .proof-room-guidance__links {
     display: flex;
     flex-wrap: wrap;
+    width: fit-content;
+    max-width: 100%;
     gap: 0.8rem 1rem;
     margin-top: var(--space-3);
   }
@@ -176,7 +177,6 @@ const projectBoundaryNotes = [
 
   @media (max-width: 768px) {
     .proof-room-guidance {
-      padding: var(--registry-card-padding);
       margin-bottom: var(--space-4);
     }
     .proof-room-guidance__copy {
