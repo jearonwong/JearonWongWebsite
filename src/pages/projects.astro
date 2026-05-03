@@ -17,7 +17,7 @@ const projectBoundaryNotes = [
 ---
 
 <BaseLayout
-  title="Projects"
+  title={pageRegistry.projects.title}
   description={pageRegistry.projects.lead}
   ogImagePath="/social/og-projects.png"
   ogImageAlt="Projects — Evidence Ledger by Jearon Wong"
@@ -31,40 +31,34 @@ const projectBoundaryNotes = [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
-      <div class="registry-chassis proof-room-guidance">
-        <div class="guidance-metadata">
-          <div class="registry-annotation">
-            <span class="registry-key">PAGE_ROLE</span>: <span class="registry-value">EVIDENCE LEDGER</span>
-          </div>
-          <div class="registry-annotation">
-            <span class="registry-key">PROTOCOL_PATH</span>: <span class="registry-value">MPLP</span>
-          </div>
-          <div class="registry-annotation">
-            <span class="registry-key">PROOF_PATH</span>: <span class="registry-value">COGNITIVE OS / SOLOCREW / VALIDATION LAB</span>
-          </div>
-          <div class="registry-annotation">
-            <span class="registry-key">CURRENT_FUNCTION</span>: <span class="registry-value">INSPECT DELIVERY PROOF</span>
-          </div>
-        </div>
-        <p class="proof-room-guidance__copy">
-          This is the project ledger for the AI Agent Lifecycle mainline, not a generic portfolio. {siteSemanticBaseline.referencePathDefinition}
-        </p>
-        <ul class="boundary-list" aria-label="Project maturity boundaries">
-          {projectBoundaryNotes.map((note) => (
-            <li>{note}</li>
-          ))}
-        </ul>
-        <div class="proof-room-guidance__links">
-          <a href="/lifecycle/" class="proof-room-link">Start with AI Agent Lifecycle</a>
-          <a href="/essays/" class="proof-room-link">{homepageActions.essays.label}</a>
-          <a href="/projects/mplp/" class="proof-room-link">Open the protocol path: MPLP</a>
-        </div>
-      </div>
 
+      <!-- Opening: thesis band — dark, authoritative, like lifecycle -->
+      <section class="registry-chassis proof-room-thesis">
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">01_EVIDENCE_LEDGER</span>
+        </div>
+        <h2>Proof room for the AI Agent Lifecycle mainline.</h2>
+        <p class="thesis-lead">{siteSemanticBaseline.referencePathDefinition}</p>
+        <div class="scope-ledger" aria-label="Project maturity boundaries">
+          {projectBoundaryNotes.map((note, index) => (
+            <div class="scope-row">
+              <span class="scope-index">{String(index + 1).padStart(2, "0")}</span>
+              <p>{note}</p>
+            </div>
+          ))}
+        </div>
+        <div class="proof-room-actions">
+          <a href="/lifecycle/" class="proof-action-link">Start with AI Agent Lifecycle</a>
+          <a href="/essays/" class="proof-action-link">{homepageActions.essays.label}</a>
+          <a href="/projects/mplp/" class="proof-action-link">Open the protocol path: MPLP</a>
+        </div>
+      </section>
+
+      <!-- Protocol Path -->
       <section class="project-section">
         <div class="section-header">
-          <div class="registry-annotation" style="margin-bottom: 0.75rem;">
-            <span class="registry-key">PROTOCOL_PATH</span>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">02_PROTOCOL_PATH</span>
           </div>
           <h2>Protocol Path</h2>
           <p class="section-desc">MPLP is the lifecycle protocol path. It is not the proof path.</p>
@@ -81,10 +75,11 @@ const projectBoundaryNotes = [
         </div>
       </section>
 
+      <!-- Proof Path -->
       <section class="project-section">
         <div class="section-header">
-          <div class="registry-annotation" style="margin-bottom: 0.75rem;">
-            <span class="registry-key">PROOF_PATH</span>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">03_PROOF_PATH</span>
           </div>
           <h2>Proof Path</h2>
           <p class="section-desc">Cognitive OS, SoloCrew, and Validation Lab are the concrete proof path through Agentic Delivery.</p>
@@ -101,71 +96,121 @@ const projectBoundaryNotes = [
           ))}
         </div>
       </section>
+
     </section>
   </div>
 </BaseLayout>
 
 <style>
-  .proof-room-guidance {
+  /* ── Opening Thesis Band ── */
+  .proof-room-thesis {
+    padding: var(--registry-panel-padding);
+    border-left: 4px solid var(--accent-signal);
+    background: #111111;
+    --current-surface: #111111;
+    --current-border: rgba(255, 255, 255, 0.1);
+    --current-line: rgba(255, 255, 255, 0.08);
+    --current-muted: rgba(226, 232, 240, 0.68);
+    --current-text: #f1f5f9;
+    color: var(--current-text);
     margin-bottom: var(--space-5);
   }
 
-  .guidance-metadata {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    margin-bottom: 1.25rem;
+  .section-tag {
+    margin-bottom: 1rem;
   }
 
-  .proof-room-guidance__copy {
+  .proof-room-thesis h2 {
     margin: 0;
-    max-width: var(--lead-measure);
-    font-size: 1rem;
-    line-height: 1.65;
-    color: var(--current-muted);
-  }
-
-  .boundary-list {
-    display: grid;
-    gap: 0.45rem;
-    margin: 1.25rem 0 0;
-    padding-left: 1.35rem;
-    max-width: var(--content-measure);
-    color: var(--current-muted);
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  .proof-room-guidance__links {
-    display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-    max-width: 100%;
-    gap: 0.8rem 1rem;
-    margin-top: var(--space-3);
-  }
-
-  .proof-room-link {
-    color: var(--accent-signal);
-    font-size: 0.84rem;
-    font-family: var(--font-mono);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  .proof-room-link:hover {
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
     color: var(--current-text);
   }
 
+  .thesis-lead {
+    max-width: 55rem;
+    margin: 1.1rem 0 0;
+    color: var(--current-muted);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    line-height: 1.6;
+  }
+
+  /* ── Scope Ledger (boundary notes as indexed rows) ── */
+  .scope-ledger {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .scope-row {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--current-line);
+    align-items: start;
+  }
+
+  .scope-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .scope-index {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--accent-signal);
+    padding-top: 0.2em;
+  }
+
+  .scope-row p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--current-muted);
+  }
+
+  /* ── Action Links ── */
+  .proof-room-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .proof-action-link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+
+  .proof-action-link:hover {
+    color: #f1f5f9;
+  }
+
+  /* ── Sections ── */
   .project-section {
     display: grid;
     gap: 1.35rem;
     margin-top: var(--space-8);
   }
 
+  .section-header {
+    display: grid;
+    gap: 0.6rem;
+  }
+
   .section-header h2 {
-    margin: 0 0 0.6rem;
+    margin: 0;
     color: var(--current-text);
     font-size: clamp(1.6rem, 3vw, 2.15rem);
     line-height: 1.08;
@@ -180,11 +225,22 @@ const projectBoundaryNotes = [
     line-height: 1.62;
   }
 
+  /* ── Protocol Ledger: MPLP dark authority ── */
   .protocol-ledger {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .protocol-ledger :global(.variant-protocol) {
+    background: #111111;
+    --current-surface: #111111;
+    --current-border: rgba(255, 255, 255, 0.1);
+    --current-line: rgba(255, 255, 255, 0.08);
+    --current-muted: rgba(226, 232, 240, 0.68);
+    --current-text: #f1f5f9;
+  }
+
+  /* ── Proof Ledger: essays log-entry rhythm ── */
   .proof-ledger {
     display: flex;
     flex-direction: column;
@@ -195,33 +251,38 @@ const projectBoundaryNotes = [
   .ledger-item {
     display: block;
   }
+
   .ledger-item:not(:last-child) {
     border-bottom: 1px solid var(--current-line);
   }
 
+  /* Inherit essays series border treatment + bolder title */
+  .proof-ledger :global(.variant-ledger-row) {
+    border-left: 2px solid var(--accent-proof);
+  }
+
+  .proof-ledger :global(.variant-ledger-row .record-title) {
+    font-size: clamp(1.4rem, 2.5vw, 1.72rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  /* ── Mobile ── */
   @media (max-width: 768px) {
-    .proof-room-guidance {
+    .proof-room-thesis {
+      padding: var(--registry-card-padding);
       margin-bottom: var(--space-4);
-    }
-    .guidance-metadata {
-      gap: 0.5rem 1rem;
-    }
-    .proof-room-guidance__copy {
-      font-size: 0.95rem;
-    }
-    .boundary-list {
-      font-size: 0.88rem;
-    }
-    .proof-room-link {
-      font-size: 0.76rem;
     }
 
     .project-section {
       margin-top: var(--space-5);
     }
+  }
 
-    .proof-ledger {
-      gap: 0;
+  @media (max-width: 640px) {
+    .scope-row {
+      grid-template-columns: 2.5rem minmax(0, 1fr);
     }
   }
 </style>
