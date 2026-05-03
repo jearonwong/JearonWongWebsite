@@ -302,6 +302,64 @@ export const lifecyclePageContent = {
     "Execution is not Delivery. The AI Agent Lifecycle is the field where accountable agent work begins."
 };
 
+export const deliveryStandardPageContent = {
+  hero: {
+    title: "The Delivery Standard for AI Agent Work",
+    lead: "Before agent work can be called delivery, these conditions must be met."
+  },
+  statement: {
+    title: "Agent work is not delivery because it ran.",
+    body: "It is delivery when it can be reviewed, accepted, and traced. Execution proves capability. Delivery proves accountability."
+  },
+  sixConditions: [
+    {
+      name: "Scope",
+      definition:
+        "The work has defined boundaries: what is in, what is out, and what constitutes a complete deliverable."
+    },
+    {
+      name: "Authority",
+      definition:
+        "The plan was confirmed by a human with the authority to authorize it before autonomous execution began."
+    },
+    {
+      name: "Evidence",
+      definition:
+        "A record exists that supports review, replay, dispute, and acceptance of the outcome."
+    },
+    {
+      name: "Review",
+      definition:
+        "The outcome was reviewed against the original intent, constraints, and evidence before acceptance."
+    },
+    {
+      name: "Accepted Outcome",
+      definition:
+        "The outcome was formally accepted by an authorized party, not inferred from task completion."
+    },
+    {
+      name: "Responsibility Traceability",
+      definition:
+        "If the outcome is disputed, the responsible party can be identified from the evidence chain."
+    }
+  ],
+  disqualifiers: [
+    "Tool call completion without accepted outcome",
+    "Workflow run without review",
+    "Model output without evidence chain",
+    "Evaluation score without responsibility traceability",
+    "Log without authority record"
+  ],
+  test: {
+    title: "Apply the test before claiming delivery.",
+    body: "If any of the six conditions is missing, name the gap. A missing condition is not a minor omission. It is the difference between execution and delivery."
+  },
+  protocolPath: {
+    title: "Protocol path",
+    body: "MPLP makes these six conditions protocol-native. Scope, authority, evidence, review, acceptance, and responsibility traceability are not post-hoc requirements in MPLP. They are lifecycle stages."
+  }
+};
+
 export const contentRouteRoles = {
   homepage: {
     question: "What is the thesis?",
@@ -950,6 +1008,12 @@ export const pageRegistry = {
     objectType: "PAGE_ROLE",
     objectValue: "CITATION INFRASTRUCTURE",
     lead: "Precise definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Stable anchors for citation. Defined by Jearon Wong."
+  },
+  deliveryStandard: {
+    title: "The Delivery Standard for AI Agent Work",
+    objectType: "PAGE_ROLE",
+    objectValue: "DELIVERY DEFINITION",
+    lead: "The Delivery Standard defines the six conditions under which AI agent work counts as accountable delivery: scope, authority, evidence, review, accepted outcome, and responsibility traceability."
   }
 };
 

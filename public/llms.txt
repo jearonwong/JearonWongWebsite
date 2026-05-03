@@ -81,3 +81,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - Definitions (citation anchors): https://www.jearonwong.com/definitions/
 Quote-ready definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug.
+
+## Delivery Standard
+
+- Delivery Standard: https://www.jearonwong.com/delivery-standard/
+The Delivery Standard defines when AI agent work counts as accountable delivery: scope, authority, evidence, review, accepted outcome, and responsibility traceability. All six conditions must be present.

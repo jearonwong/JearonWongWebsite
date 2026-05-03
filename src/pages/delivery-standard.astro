@@ -1,0 +1,482 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import SocialShare from "../components/SocialShare.astro";
+import {
+  deliveryStandardPageContent,
+  pageRegistry,
+  siteConfig
+} from "../data/site";
+
+const canonicalPath = "/delivery-standard/";
+const deliveryStandardUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteConfig.siteUrl}/delivery-standard/#webpage`,
+  url: deliveryStandardUrl,
+  name: pageRegistry.deliveryStandard.title,
+  headline: pageRegistry.deliveryStandard.title,
+  description: pageRegistry.deliveryStandard.lead,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  about: [
+    "Delivery Standard",
+    "AI agent delivery",
+    "accountable delivery",
+    "AI Agent Lifecycle",
+    "Agentic Delivery",
+    "MPLP",
+    "Evidence Chain",
+    "Confirmation Boundary",
+    "accepted outcome",
+    "responsibility traceability",
+    "AI agent governance"
+  ]
+};
+
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": `${siteConfig.siteUrl}/definitions/#delivery-standard`,
+  name: "Delivery Standard",
+  description:
+    "The Delivery Standard is the set of conditions under which AI agent work counts as accountable delivery: scope, authority, evidence, review, and accepted outcome.",
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    "@id": `${siteConfig.siteUrl}/definitions/#defined-term-set`,
+    name: "Definitions for the Agent Era"
+  },
+  url: `${siteConfig.siteUrl}/definitions/#delivery-standard`
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: pageRegistry.deliveryStandard.title,
+      item: deliveryStandardUrl
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={pageRegistry.deliveryStandard.title}
+  description={pageRegistry.deliveryStandard.lead}
+  canonicalPath={canonicalPath}
+  shareTitle="The Delivery Standard for AI Agent Work — Jearon Wong"
+  shareDescription={pageRegistry.deliveryStandard.lead}
+  jsonLd={[webPageJsonLd, definedTermJsonLd, breadcrumbJsonLd]}
+>
+  <RegistryPageHero
+    title={deliveryStandardPageContent.hero.title}
+    objectType={pageRegistry.deliveryStandard.objectType}
+    objectValue={pageRegistry.deliveryStandard.objectValue}
+    lead={deliveryStandardPageContent.hero.lead}
+  >
+    <div class="ds-hero-links">
+      <a href="/lifecycle/" class="registry-annotation ds-hero-link">
+        <span class="registry-key">FIELD</span>: <span class="registry-value">AI AGENT LIFECYCLE</span>
+      </a>
+      <a href="/projects/mplp/" class="registry-annotation ds-hero-link">
+        <span class="registry-key">PROTOCOL_PATH</span>: <span class="registry-value">MPLP</span>
+      </a>
+      <a href="/definitions/#delivery-standard" class="registry-annotation ds-hero-link">
+        <span class="registry-key">CITATION</span>: <span class="registry-value">DEFINITIONS/#DELIVERY-STANDARD</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body ds-body">
+    <div class="shell ds-shell">
+
+      <section class="registry-chassis ds-statement-band">
+        <div class="registry-annotation ds-section-tag">
+          <span class="registry-key">01_THE_STATEMENT</span>
+        </div>
+        <h2>{deliveryStandardPageContent.statement.title}</h2>
+        <p>{deliveryStandardPageContent.statement.body}</p>
+      </section>
+
+      <section class="ds-conditions-section">
+        <div class="section-header">
+          <div class="registry-annotation ds-section-tag">
+            <span class="registry-key">02_SIX_CONDITIONS</span>
+          </div>
+          <h2>Six conditions for accountable delivery</h2>
+          <p class="section-lead">All six must be present. A partial set is execution, not delivery.</p>
+        </div>
+        <div class="condition-ledger">
+          {deliveryStandardPageContent.sixConditions.map((condition, index) => (
+            <article class="condition-row">
+              <span class="condition-index">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{condition.name}</h3>
+              <p>{condition.definition}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis ds-disqualifiers-section">
+        <div class="registry-annotation ds-section-tag">
+          <span class="registry-key">03_WHAT_DOES_NOT_QUALIFY</span>
+        </div>
+        <h2>What does not qualify as delivery</h2>
+        <p class="disqualifiers-note">These forms of output are incomplete by the Delivery Standard. They may be useful. They are not delivery.</p>
+        <div class="disqualifier-list">
+          {deliveryStandardPageContent.disqualifiers.map((item) => (
+            <span class="disqualifier-tag">{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section class="lifecycle-split-section">
+        <article class="registry-chassis ledger-panel ledger-panel--test">
+          <div class="registry-annotation ds-section-tag">
+            <span class="registry-key">04_THE_TEST</span>
+          </div>
+          <h2>{deliveryStandardPageContent.test.title}</h2>
+          <p>{deliveryStandardPageContent.test.body}</p>
+        </article>
+
+        <article class="registry-chassis ledger-panel ledger-panel--protocol">
+          <div class="registry-annotation ds-section-tag">
+            <span class="registry-key">05_PROTOCOL_PATH</span>
+          </div>
+          <h2>{deliveryStandardPageContent.protocolPath.title}</h2>
+          <p>{deliveryStandardPageContent.protocolPath.body}</p>
+          <div class="protocol-links">
+            <a href="/projects/mplp/">MPLP protocol path</a>
+            <a href="/definitions/#delivery-standard">Delivery Standard definition</a>
+            <a href="/lifecycle/">AI Agent Lifecycle field analysis</a>
+          </div>
+        </article>
+      </section>
+
+      <SocialShare
+        title="The Delivery Standard for AI Agent Work"
+        description={pageRegistry.deliveryStandard.lead}
+        url={deliveryStandardUrl}
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .ds-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.15rem;
+    margin-top: 1.7rem;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .ds-hero-link {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+  }
+
+  .ds-hero-link .registry-value {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .ds-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .ds-body {
+    padding: var(--space-page-y) 0;
+  }
+
+  .ds-shell {
+    display: grid;
+    gap: 3rem;
+    min-width: 0;
+  }
+
+  .ds-section-tag {
+    margin-bottom: 1rem;
+  }
+
+  .ds-statement-band {
+    padding: var(--registry-panel-padding);
+    border-left: 4px solid var(--accent-signal);
+    background: #111111;
+    color: #f1f5f9;
+    --current-surface: #111111;
+    --current-border: rgba(255, 255, 255, 0.1);
+    --current-line: rgba(255, 255, 255, 0.08);
+    --current-muted: rgba(226, 232, 240, 0.68);
+    --current-text: #f1f5f9;
+  }
+
+  .ds-statement-band h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+  }
+
+  .ds-statement-band p {
+    max-width: 55rem;
+    margin: 1.1rem 0 0;
+    color: var(--current-muted);
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+    line-height: 1.6;
+  }
+
+  .ds-conditions-section {
+    display: grid;
+    gap: 1.35rem;
+    min-width: 0;
+  }
+
+  .section-header {
+    max-width: 68rem;
+    min-width: 0;
+  }
+
+  .section-header h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+  }
+
+  .section-lead {
+    margin: 0.65rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .condition-ledger {
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+    min-width: 0;
+  }
+
+  .condition-row {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(10rem, 0.3fr) minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: start;
+    padding: var(--registry-supporting-card-padding);
+    border-bottom: 1px solid var(--current-line);
+    min-width: 0;
+  }
+
+  .condition-row:last-child {
+    border-bottom: none;
+  }
+
+  .condition-index {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-proof);
+    letter-spacing: 0.08em;
+  }
+
+  .condition-row h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .condition-row p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  .ds-disqualifiers-section {
+    padding: var(--registry-panel-padding);
+    border-top: 2px solid var(--current-border);
+    min-width: 0;
+  }
+
+  .ds-disqualifiers-section h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .disqualifiers-note {
+    margin: 0.65rem 0 1.25rem;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+    max-width: 60rem;
+  }
+
+  .disqualifier-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .disqualifier-tag {
+    max-width: 100%;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--current-border);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+    overflow-wrap: anywhere;
+  }
+
+  .lifecycle-split-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    min-width: 0;
+  }
+
+  .ledger-panel {
+    padding: var(--registry-panel-padding);
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    min-width: 0;
+  }
+
+  .ledger-panel--test {
+    border-left: 3px solid var(--accent-signal);
+  }
+
+  .ledger-panel--protocol {
+    border-top: 2px solid var(--accent-proof);
+  }
+
+  .ledger-panel h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .ledger-panel p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .ledger-panel--test p {
+    color: var(--current-text);
+  }
+
+  .protocol-links {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .protocol-links a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .protocol-links a:hover {
+    color: var(--current-text);
+  }
+
+  @media (max-width: 980px) {
+    .lifecycle-split-section {
+      grid-template-columns: 1fr;
+    }
+
+    .condition-row {
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+
+    .condition-row p {
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ds-body {
+      padding: var(--space-section-y-mobile) 0;
+    }
+
+    .ds-shell {
+      gap: 2.25rem;
+    }
+
+    .ds-statement-band,
+    .ds-disqualifiers-section,
+    .ledger-panel {
+      padding: var(--registry-card-padding);
+    }
+
+    .ds-hero-links {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .ds-hero-link {
+      display: block;
+      width: 100%;
+      line-height: 1.7;
+      white-space: normal;
+    }
+
+    .ds-hero-link .registry-key,
+    .ds-hero-link .registry-value {
+      display: inline;
+      white-space: normal;
+    }
+
+    .ds-hero-link .registry-value {
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    .condition-row {
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+      padding: var(--registry-compact-padding);
+    }
+
+    .condition-row p {
+      grid-column: auto;
+    }
+  }
+</style>
