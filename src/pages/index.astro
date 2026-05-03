@@ -58,26 +58,22 @@ const writingTracks = [
     <section class="shell hero-section">
       <div class="split-layout">
         <div class="hero-content">
-          <div class="hero-technical-hook registry-annotation">
-            {homepageContent.hero.technicalHookLines.map((line) => (
-              <span>{line}</span>
-            ))}
+          <div class="hero-eyebrow registry-annotation">
+            <span class="registry-key">{homepageContent.hero.eyebrow.key}</span>
+            <span class="hero-eyebrow-separator">/</span>
+            <span class="registry-value">{homepageContent.hero.eyebrow.value}</span>
           </div>
-          <h1 class="hero-nameplate">
-            {homepageContent.hero.hookLines.map((line) => (
-              <span>{line}</span>
-            ))}
-          </h1>
-          <p class="hero-thesis">{homepageContent.hero.concept}</p>
+          <h1 class="hero-nameplate">{homepageContent.hero.title}</h1>
+          <p class="hero-subclaim">{homepageContent.hero.subclaim}</p>
+          <p class="hero-body">{homepageContent.hero.body}</p>
           <div class="hero-author-anchor">
             <span class="hero-author-name">{homepageContent.hero.authorAnchor}</span>
             <span class="hero-role-line">{homepageContent.hero.role}</span>
           </div>
-          <p class="hero-support">{homepageContent.hero.support}</p>
           
           <div class="hero-ctas">
-            <a href={homepageActions.thesis.href} class="button button-primary">{homepageActions.thesis.label}</a>
-            <a href={homepageActions.projects.href} class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">{homepageActions.projects.label}</a>
+            <a href={homepageActions.thesis.href} class="button button-primary">{homepageContent.hero.primaryCtaLabel}</a>
+            <a href={homepageActions.projects.href} class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">{homepageContent.hero.secondaryCtaLabel}</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -244,54 +240,70 @@ const writingTracks = [
     min-height: 100svh;
   }
   .hero-section {
-    padding-top: clamp(4.75rem, 6.1vw, 5.5rem);
-    padding-bottom: clamp(5rem, 6.4vw, 6rem);
-  }
-  .hero-technical-hook {
+    min-height: 100svh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    padding-top: clamp(6.75rem, 7.2vw, 7.85rem);
+    padding-bottom: clamp(4.75rem, 6vw, 6rem);
+  }
+  .hero-content {
+    max-width: 43rem;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: 0.24rem;
-    margin-bottom: 1.35rem;
+    gap: 0.42rem;
+    margin-bottom: clamp(1.2rem, 1.8vw, 1.6rem);
     color: var(--accent-signal);
     font-size: 0.75rem;
     line-height: 1.55;
-    letter-spacing: 0.05em;
-    max-width: min(100%, 46ch);
+    letter-spacing: 0.075em;
+    max-width: min(100%, 48ch);
   }
-  .hero-technical-hook span {
-    display: block;
+  .hero-eyebrow span {
     max-width: 100%;
     white-space: normal;
     overflow-wrap: break-word;
   }
+  .hero-eyebrow-separator {
+    color: rgba(148, 163, 184, 0.62);
+  }
   .hero-nameplate {
-    font-size: clamp(3.25rem, 4.2vw, 3.55rem);
-    font-weight: 780;
-    letter-spacing: -0.03em;
-    line-height: 1.045;
-    margin: 0 0 1.45rem;
+    font-size: clamp(4.2rem, 6.7vw, 6.15rem);
+    font-weight: 820;
+    letter-spacing: -0.045em;
+    line-height: 0.91;
+    margin: 0 0 clamp(1.3rem, 2vw, 1.8rem);
     color: var(--text-registry-primary);
-    max-width: 17ch;
-    text-wrap: wrap;
+    max-width: 10.8ch;
+    text-wrap: balance;
     overflow-wrap: normal;
   }
-  .hero-nameplate span {
-    display: block;
-  }
-  .hero-thesis {
-    font-size: clamp(1.42rem, 1.9vw, 1.6rem);
-    font-weight: 630;
-    letter-spacing: -0.01em;
-    line-height: 1.34;
-    margin: 0 0 1.9rem;
-    color: rgba(241, 245, 249, 0.88);
+  .hero-subclaim {
+    margin: 0 0 1.45rem;
     max-width: 39rem;
+    color: rgba(241, 245, 249, 0.9);
+    font-size: clamp(1.35rem, 1.9vw, 1.74rem);
+    font-weight: 640;
+    letter-spacing: -0.018em;
+    line-height: 1.18;
+  }
+  .hero-body {
+    max-width: 42ch;
+    margin: 0 0 1.8rem;
+    color: rgba(148, 163, 184, 0.84);
+    font-size: clamp(1rem, 1.16vw, 1.08rem);
+    line-height: 1.64;
+    font-weight: 400;
   }
   .hero-author-anchor {
     display: grid;
     gap: 0.28rem;
-    margin-bottom: 1.25rem;
+    width: fit-content;
+    margin-bottom: 1.65rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
   .hero-author-name {
     font-weight: 740;
@@ -308,14 +320,6 @@ const writingTracks = [
     font-weight: 600;
     line-height: 1.45;
     max-width: 44ch;
-  }
-  .hero-support {
-    max-width: 35rem;
-    color: rgba(148, 163, 184, 0.84);
-    font-size: clamp(1.03rem, 1.25vw, 1.06rem);
-    line-height: 1.64;
-    font-weight: 400;
-    margin-bottom: 1.9rem;
   }
   .hero-ctas {
     display: flex;
@@ -643,14 +647,15 @@ const writingTracks = [
   /* ── Layout ── */
   .split-layout {
     display: grid;
-    grid-template-columns: minmax(0, 0.6fr) minmax(400px, 0.4fr);
-    gap: clamp(3.5rem, 4vw, 4rem);
+    grid-template-columns: minmax(0, 0.55fr) minmax(380px, 0.45fr);
+    gap: clamp(3rem, 4.5vw, 4.75rem);
     align-items: center;
+    width: 100%;
   }
   .hero-visual {
     justify-self: end;
     align-self: center;
-    width: min(100%, 27.5rem);
+    width: min(100%, 33.5rem);
     padding-top: 0;
   }
 
@@ -663,7 +668,7 @@ const writingTracks = [
     }
     .hero-visual {
       justify-self: start;
-      width: min(100%, 23.75rem);
+      width: min(100%, 26rem);
       padding-top: 0;
     }
   }
@@ -678,41 +683,48 @@ const writingTracks = [
   @media (max-width: 900px) {
     .split-layout {
       grid-template-columns: 1fr;
-      gap: 2.5rem;
+      gap: 2.35rem;
     }
     .hero-section {
-      padding-top: 4rem;
+      min-height: auto;
+      padding-top: 6.1rem;
       padding-bottom: 4.25rem;
     }
   }
 
   @media (max-width: 768px) {
     .hero-section {
-      padding-top: 4rem;
+      padding-top: 6rem;
       padding-bottom: 4rem;
     }
-    .hero-nameplate {
-      font-size: clamp(1.9rem, 7vw, 2.5rem);
-      line-height: 1.055;
-      max-width: 100%;
-      letter-spacing: -0.028em;
+    .hero-eyebrow {
+      gap: 0.34rem;
+      margin-bottom: 1rem;
+      font-size: 0.68rem;
     }
-    .hero-technical-hook {
+    .hero-nameplate {
+      font-size: clamp(3rem, 13vw, 4rem);
+      line-height: 0.95;
+      max-width: 12ch;
+      letter-spacing: -0.04em;
+    }
+    .hero-subclaim {
+      font-size: clamp(1.08rem, 5vw, 1.24rem);
+      line-height: 1.24;
+      max-width: 27ch;
       margin-bottom: 1.2rem;
     }
-    .hero-thesis {
-      font-size: clamp(1.08rem, 4.5vw, 1.25rem);
-      line-height: 1.36;
-      max-width: 31ch;
-      margin-bottom: 1.75rem;
+    .hero-body {
+      font-size: 1rem;
+      max-width: 34ch;
+      margin-bottom: 1.45rem;
     }
     .hero-role-line {
       max-width: 31ch;
     }
-    .hero-support {
-      font-size: 1rem;
-      max-width: 34ch;
-      margin-bottom: 1.65rem;
+    .hero-author-anchor {
+      margin-bottom: 1.35rem;
+      padding-top: 0.85rem;
     }
     .hero-visual {
       width: min(100%, 21.25rem);
@@ -721,9 +733,11 @@ const writingTracks = [
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.55rem;
-      max-width: 100%;
+      width: min(100%, 22rem);
+      max-width: calc(100vw - 2rem);
     }
     .hero-ctas .button {
+      width: 100%;
       min-height: 2.65rem;
       padding-inline: 0.7rem;
       font-size: 0.82rem;

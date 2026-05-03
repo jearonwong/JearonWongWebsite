@@ -407,22 +407,19 @@ export const homepageActions = {
 
 export const homepageContent = {
   hero: {
-    hookLines: [
-      "Execution is not Delivery.",
-      "AI agents will not become",
-      "real infrastructure until",
-      "execution becomes accountable delivery."
-    ],
-    technicalHookLines: [
-      "AI Agent Lifecycle",
-      "Field analysis by Jearon Wong"
-    ],
-    concept:
-      siteSemanticBaseline.fieldDefinitionStatement,
+    eyebrow: {
+      key: "FIELD ANALYSIS",
+      value: "AI AGENT LIFECYCLE"
+    },
+    title: "Execution is not Delivery.",
+    subclaim:
+      "AI agents will not become real infrastructure until execution becomes accountable delivery.",
+    body:
+      "AI Agent Lifecycle examines how agent work moves from intent to accepted outcome.",
     authorAnchor: "Jearon Wong",
     role: "Protocol Architect for the Agent Era",
-    support:
-      "The AI agent industry built execution. It forgot delivery. Start with the field definition, then inspect the proof path."
+    primaryCtaLabel: "Open the field analysis",
+    secondaryCtaLabel: "Inspect the Proof Path"
   },
   coreThesis: {
     eyebrow: "CORE_THESIS",
