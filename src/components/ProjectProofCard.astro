@@ -39,17 +39,34 @@ const {
 ]}>
   <div class="record-header">
     {variant === "protocol" ? (
-      <>
+      <div class="metadata-grid">
         <div class="registry-annotation">
-          <span class="registry-key">PATH_ROLE</span>: <span class="registry-value">PROTOCOL_PATH</span>
+          <span class="registry-key">PATH_ROLE</span><span class="registry-value">PROTOCOL_PATH</span>
         </div>
         <div class="registry-annotation">
-          <span class="registry-key">LAYER</span>: <span class="registry-value">LIFECYCLE_PROTOCOL</span>
+          <span class="registry-key">LAYER</span><span class="registry-value">LIFECYCLE_PROTOCOL</span>
         </div>
         <div class="registry-annotation">
-          <span class="registry-key">FUNCTION</span>: <span class="registry-value">MAKES_AGENTIC_DELIVERY_GOVERNABLE</span>
+          <span class="registry-key">FUNCTION</span><span class="registry-value">MAKES_AGENTIC_DELIVERY_GOVERNABLE</span>
         </div>
-      </>
+      </div>
+    ) : variant === "ledger-row" ? (
+      <div class="metadata-grid">
+        <div class="registry-annotation">
+          <span class="registry-key">PROJECT_ID</span><span class="registry-value">{name.toUpperCase()}</span>
+        </div>
+        {proofRole && (
+          <div class="registry-annotation stack-layer-line">
+            <span class="registry-key">PATH_ROLE</span><span class="registry-value">{proofRole}</span>
+          </div>
+        )}
+        <div class="registry-annotation">
+          <span class="registry-key">STATUS</span><span class="registry-value">{status.toUpperCase()}</span>
+        </div>
+        <div class="registry-annotation">
+          <span class="registry-key">EVIDENCE_FUNCTION</span><span class="registry-value">{summary}</span>
+        </div>
+      </div>
     ) : (
       <>
         <div class="registry-annotation">
@@ -63,11 +80,6 @@ const {
         <div class="registry-annotation">
           <span class="registry-key">STATUS</span>: <span class="registry-value">{status.toUpperCase()}</span>
         </div>
-        {variant === "ledger-row" && (
-          <div class="registry-annotation">
-            <span class="registry-key">EVIDENCE_FUNCTION</span>: <span class="registry-value">{summary}</span>
-          </div>
-        )}
       </>
     )}
   </div>
@@ -372,6 +384,17 @@ const {
     margin-top: 2rem;
   }
 
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.8rem;
+    align-items: baseline;
+  }
+  .metadata-grid .registry-annotation {
+    display: contents; /* Allows key and value to act as direct grid children */
+  }
+
   /* Variant: Ledger Row */
   .variant-ledger-row {
     flex-direction: row;
@@ -383,12 +406,10 @@ const {
     border-radius: 0;
   }
   .variant-ledger-row .record-header {
-    flex-direction: column;
-    width: 16rem;
+    width: 20rem;
     flex-shrink: 0;
     border-bottom: none;
     padding-bottom: 0;
-    gap: 1rem;
   }
   .variant-ledger-row .record-content {
     flex-grow: 1;
@@ -423,21 +444,22 @@ const {
     }
     .variant-ledger-row .record-header {
       width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
       border-bottom: 1px solid var(--current-line);
       padding-bottom: 1.25rem;
     }
   }
 
   @media (max-width: 768px) {
-    .variant-protocol .record-header {
-      flex-direction: column;
-      gap: 0.8rem;
+    .metadata-grid {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
     }
-    .variant-ledger-row .record-header {
+    .metadata-grid .registry-annotation {
+      display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      align-items: flex-start;
+      gap: 0.2rem;
+      margin-bottom: 0.5rem;
     }
   }
 </style>
