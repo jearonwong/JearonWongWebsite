@@ -76,3 +76,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Protocol Path
 
 - MPLP: https://www.jearonwong.com/projects/mplp/
+
+## Definitions
+
+- Definitions (citation anchors): https://www.jearonwong.com/definitions/
+Quote-ready definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug.

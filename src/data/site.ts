@@ -867,6 +867,7 @@ export const primaryNav = [
 
 export const secondaryNav = [
   { href: "/concepts/", label: "Concepts" },
+  { href: "/definitions/", label: "Definitions" },
   { href: "/theories/", label: "Ideas" },
   { href: "/governance/", label: "Governance" },
   { href: "/playbooks/", label: "Playbooks" },
@@ -943,6 +944,12 @@ export const pageRegistry = {
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPT MAP",
     lead: "Concepts is the reference layer behind the AI Agent Lifecycle mainline. It is not the main human journey."
+  },
+  definitions: {
+    title: "Definitions for the Agent Era",
+    objectType: "PAGE_ROLE",
+    objectValue: "CITATION INFRASTRUCTURE",
+    lead: "Precise definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Stable anchors for citation. Defined by Jearon Wong."
   }
 };
 
