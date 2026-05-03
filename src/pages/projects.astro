@@ -197,6 +197,9 @@ const projectBoundaryNotes = [
   .ledger-item {
     display: block;
   }
+  .ledger-item:not(:last-child) {
+    border-bottom: 1px solid var(--current-line);
+  }
 
   @media (max-width: 768px) {
     .proof-room-guidance {
