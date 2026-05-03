@@ -2,8 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
-import { homepageActions, pageRegistry, projects, siteSemanticBaseline } from "../data/site";
+import { getProjectBySlug, homepageActions, pageRegistry, siteSemanticBaseline } from "../data/site";
 
+const protocolPathProject = getProjectBySlug("mplp");
+const proofPathProjects = ["cognitive-os", "solocrew", "validation-lab"]
+  .map((projectSlug) => getProjectBySlug(projectSlug))
+  .filter((project): project is NonNullable<ReturnType<typeof getProjectBySlug>> => Boolean(project));
 const projectBoundaryNotes = [
   "MPLP is the lifecycle protocol path, not the proof path.",
   "Cognitive OS is a runtime path, not a completed universal runtime.",
@@ -27,7 +31,7 @@ const projectBoundaryNotes = [
           <span class="registry-key">READING_PATH</span>: <span class="registry-value">THESIS_TO_PROOF</span>
         </div>
         <p class="proof-room-guidance__copy">
-          This is the proof ledger for the AI Agent Lifecycle mainline, not a generic portfolio. {siteSemanticBaseline.referencePathDefinition}
+          This is the project ledger for the AI Agent Lifecycle mainline, not a generic portfolio. {siteSemanticBaseline.referencePathDefinition}
         </p>
         <ul class="boundary-list" aria-label="Project maturity boundaries">
           {projectBoundaryNotes.map((note) => (
@@ -41,16 +45,44 @@ const projectBoundaryNotes = [
         </div>
       </div>
 
-      <div class="evidence-ledger">
-        {projects.map((project) => (
-          <div class="ledger-item" id={project.slug}>
-            <ProjectProofCard
-              {...project}
-              href={`/projects/${project.slug}/`}
-            />
+      <section class="project-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+            <span class="registry-key">PROTOCOL_PATH</span>
           </div>
-        ))}
-      </div>
+          <h2>Protocol Path</h2>
+          <p class="section-desc">MPLP is the lifecycle protocol path. It is not the proof path.</p>
+        </div>
+        <div class="protocol-ledger">
+          {protocolPathProject && (
+            <ProjectProofCard
+              {...protocolPathProject}
+              href={`/projects/${protocolPathProject.slug}/`}
+              linkLabel="Open the protocol path"
+            />
+          )}
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="section-header">
+          <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+            <span class="registry-key">PROOF_PATH</span>
+          </div>
+          <h2>Proof Path</h2>
+          <p class="section-desc">Cognitive OS, SoloCrew, and Validation Lab are the concrete proof path through Agentic Delivery.</p>
+        </div>
+        <div class="proof-ledger">
+          {proofPathProjects.map((project) => (
+            <div class="ledger-item" id={project.slug}>
+              <ProjectProofCard
+                {...project}
+                href={`/projects/${project.slug}/`}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
     </section>
   </div>
 </BaseLayout>
@@ -100,11 +132,39 @@ const projectBoundaryNotes = [
     color: var(--current-text);
   }
 
-  .evidence-ledger {
+  .project-section {
+    display: grid;
+    gap: 1.35rem;
+    margin-top: 3rem;
+  }
+
+  .section-header h2 {
+    margin: 0 0 0.6rem;
+    color: var(--current-text);
+    font-size: clamp(1.6rem, 3vw, 2.15rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    max-width: 64ch;
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  .protocol-ledger {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proof-ledger {
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
+
   .ledger-item {
     border-bottom: 1px solid var(--current-line);
     padding-bottom: 4rem;
@@ -128,9 +188,15 @@ const projectBoundaryNotes = [
     .proof-room-link {
       font-size: 0.76rem;
     }
-    .evidence-ledger {
+
+    .project-section {
+      margin-top: 2.25rem;
+    }
+
+    .proof-ledger {
       gap: 2.5rem;
     }
+
     .ledger-item {
       padding-bottom: 2.5rem;
     }

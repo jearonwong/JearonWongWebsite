@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { aiAgentLifecycleColumn, concepts, pageRegistry, siteConfig } from "../../data/site";
+import { aiAgentLifecycleColumn, concepts, pageRegistry, siteConfig, siteSemanticBaseline } from "../../data/site";
 
 const conceptSetJsonLd = {
   "@context": "https://schema.org",
@@ -20,6 +20,64 @@ const conceptSetJsonLd = {
     url: `${siteConfig.siteUrl}/concepts/${concept.slug}/`
   }))
 };
+const primaryConceptStack = [
+  {
+    term: "AI Agent Lifecycle",
+    role: "Field / problem-space",
+    description: siteSemanticBaseline.fieldDefinitionStatement,
+    href: "/concepts/ai-agent-lifecycle/",
+    linkLabel: "Open definition"
+  },
+  {
+    term: "Agentic Delivery",
+    role: "Category",
+    description: siteSemanticBaseline.agenticDeliveryDefinition,
+    href: "/concepts/agentic-delivery/",
+    linkLabel: "Open definition"
+  },
+  {
+    term: "MPLP",
+    role: "Protocol path",
+    description: siteSemanticBaseline.mplpDefinition,
+    href: "/projects/mplp/",
+    linkLabel: "Open protocol path"
+  },
+  {
+    term: "Multi-Agent Lifecycle Governance",
+    role: "Multi-agent form",
+    description: siteSemanticBaseline.multiAgentLifecycleGovernanceDefinition,
+    href: "/lifecycle/",
+    linkLabel: "Open lifecycle field analysis"
+  },
+  {
+    term: "Confirmation Boundary",
+    role: "Governance primitive",
+    description: siteSemanticBaseline.confirmationBoundaryDefinition,
+    href: "/concepts/confirmation-boundary/",
+    linkLabel: "Open definition"
+  },
+  {
+    term: "Evidence Chain",
+    role: "Governance primitive",
+    description: siteSemanticBaseline.evidenceChainDefinition,
+    href: "/concepts/lifecycle-evidence/",
+    linkLabel: "Open definition"
+  },
+  {
+    term: "Semantic Loss",
+    role: "Failure mode",
+    description: siteSemanticBaseline.semanticLossDefinition,
+    href: "/lifecycle/",
+    linkLabel: "Open lifecycle field analysis"
+  }
+];
+const primaryConceptPageSlugs = new Set([
+  "ai-agent-lifecycle",
+  "agentic-delivery",
+  "confirmation-boundary",
+  "lifecycle-evidence"
+]);
+const supportingConcepts = concepts.filter((concept) => !primaryConceptPageSlugs.has(concept.slug));
 ---
 
 <BaseLayout
@@ -48,13 +106,13 @@ const conceptSetJsonLd = {
     <section class="shell concepts-shell">
       <section class="concept-opening">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">CONCEPT_MAP</span>: <span class="registry-value">WORK_CONTINUITY_LAYER</span>
+          <span class="registry-key">CONCEPT_MAP</span>: <span class="registry-value">REFERENCE_LAYER</span>
         </div>
         <p class="concept-opening__lead">
-          These concepts define the work-continuity layer of AI agent systems: how intent, context, roles, confirmation, execution, evidence, learning, and accepted outcomes remain continuous over time.
+          Concepts is the reference layer behind the AI Agent Lifecycle mainline. It is not the main human journey.
         </p>
         <p class="concept-opening__copy">
-          This is not a glossary dump or the main human journey. It is the reference layer behind the Lifecycle mainline: what each term names, which failure boundary it clarifies, and where the public essays, protocol path, or proof path continue the thread.
+          Use this page to distinguish the primary concept stack from supporting terms. The main public journey still starts at /lifecycle/.
         </p>
       </section>
 
@@ -76,17 +134,45 @@ const conceptSetJsonLd = {
         </div>
       </section>
 
-      <section class="concept-grid" aria-label="AI Agent Lifecycle concept map">
-        {concepts.map((concept, index) => (
-          <article class="registry-chassis concept-card">
-            <div class="registry-annotation" style="margin-bottom: 0.75rem;">
-              <span class="registry-key">TERM_{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <h2><a href={`/concepts/${concept.slug}/`}>{concept.term}</a></h2>
-            <p>{concept.seoDescription}</p>
-            <a href={`/concepts/${concept.slug}/`} class="concept-card__link">Open definition</a>
-          </article>
-        ))}
+      <section class="concept-tier" aria-labelledby="primary-concept-stack-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+            <span class="registry-key">PRIMARY_CONCEPT_STACK</span>
+          </div>
+          <h2 id="primary-concept-stack-title">Primary Concept Stack</h2>
+          <p class="tier-note">These seven terms are the first-stage public concept stack. Everything else is supporting architecture.</p>
+        </div>
+        <div class="concept-grid concept-grid--primary">
+          {primaryConceptStack.map((entry, index) => (
+            <article class="registry-chassis concept-card concept-card--primary">
+              <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+                <span class="registry-key">STACK_{String(index + 1).padStart(2, "0")}</span>: <span class="registry-value">{entry.role}</span>
+              </div>
+              <h3><a href={entry.href}>{entry.term}</a></h3>
+              <p>{entry.description}</p>
+              <a href={entry.href} class="concept-card__link">{entry.linkLabel}</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-tier" aria-labelledby="supporting-terms-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+            <span class="registry-key">SUPPORTING_TERMS</span>
+          </div>
+          <h2 id="supporting-terms-title">Supporting Terms</h2>
+          <p class="tier-note">These terms clarify the mainline. They are not first-stage public concepts.</p>
+        </div>
+        <div class="supporting-term-list">
+          {supportingConcepts.map((concept) => (
+            <article class="supporting-term-card">
+              <h3><a href={`/concepts/${concept.slug}/`}>{concept.term}</a></h3>
+              <p>{concept.seoDescription}</p>
+              <a href={`/concepts/${concept.slug}/`} class="concept-card__link">Open supporting term</a>
+            </article>
+          ))}
+        </div>
       </section>
     </section>
   </div>
@@ -178,8 +264,34 @@ const conceptSetJsonLd = {
 
   .concept-path__links a:hover,
   .concept-card__link:hover,
-  .concept-card h2 a:hover {
+  .concept-card h3 a:hover,
+  .supporting-term-card h3 a:hover {
     color: var(--current-text);
+  }
+
+  .concept-tier {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  .registry-section-heading {
+    margin: 0;
+  }
+
+  .registry-section-heading h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--current-text);
+  }
+
+  .tier-note {
+    max-width: 62ch;
+    margin: 0.55rem 0 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .concept-grid {
@@ -195,28 +307,61 @@ const conceptSetJsonLd = {
     align-content: start;
   }
 
-  .concept-card h2 {
+  .concept-card--primary {
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .concept-card h3,
+  .supporting-term-card h3 {
     margin: 0;
     font-size: 1.35rem;
     line-height: 1.15;
     letter-spacing: -0.02em;
   }
 
-  .concept-card h2 a {
+  .concept-card h3 a,
+  .supporting-term-card h3 a {
     color: var(--current-text);
     text-decoration: none;
   }
 
-  .concept-card p {
+  .concept-card p,
+  .supporting-term-card p {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.62;
     color: var(--current-muted);
   }
 
+  .supporting-term-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .supporting-term-card {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+    padding: 1.35rem 1.25rem 1.35rem 0;
+    border-bottom: 1px solid var(--current-line);
+    min-width: 0;
+  }
+
+  .supporting-term-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .supporting-term-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
   @media (max-width: 860px) {
     .concept-path__grid,
-    .concept-grid {
+    .concept-grid,
+    .supporting-term-list {
       grid-template-columns: 1fr;
     }
   }
@@ -229,6 +374,10 @@ const conceptSetJsonLd = {
     .concept-path,
     .concept-card {
       padding: 1.4rem;
+    }
+
+    .supporting-term-card {
+      padding: 1.15rem 0;
     }
   }
 </style>

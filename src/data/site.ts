@@ -71,13 +71,13 @@ export const siteSemanticBaseline = {
 export const siteConfig = {
   title: "Jearon Wong — Protocol Architect for the Agent Era",
   description:
-    "Jearon Wong defines AI Agent Lifecycle, Agentic Delivery, and MPLP: a field definition for accountable agent work from intent to accepted outcome.",
+    "Jearon Wong works from AI Agent Lifecycle, Agentic Delivery, and MPLP: a protocol path for accountable agent work from intent to accepted outcome.",
   siteUrl: "https://www.jearonwong.com",
   socialImagePath: "/social/jearonwong-og.png",
   xHandle: "@jearonwong",
   thesis: siteSemanticBaseline.agenticDeliveryDefinition,
   supportLine:
-    "Execution is not Delivery. AI agents will not become real infrastructure until execution becomes accountable delivery. I define the lifecycle protocol path, proof path, and evidence chain behind that claim.",
+    "Execution is not Delivery. AI agents will not become real infrastructure until execution becomes accountable delivery. The site develops the lifecycle protocol path, proof path, and evidence chain behind that claim.",
   newsletterEndpoint: "https://buttondown.com/api/emails/embed-subscribe/jearonwong",
   author: {
     name: "Jearon Wong",
@@ -207,7 +207,7 @@ export const aiAgentLifecycleColumn = {
 export const lifecyclePageContent = {
   hero: {
     title: "The AI Agent Lifecycle",
-    subtitle: "A Field Definition by Jearon Wong",
+    subtitle: "A field analysis by Jearon Wong",
     leadLines: [
       "The AI agent industry built execution.",
       "It forgot delivery.",
@@ -243,7 +243,7 @@ export const lifecyclePageContent = {
       "MPLP governs agent work as a dynamic lifecycle."
     ],
     sourceNote:
-      "Named market routes are referenced as public product and framework directions. Detailed source-backed comparisons will be developed in the Agentic Delivery essay series."
+      "This page names public market routes as category references. The source-backed breakdown belongs in the Agentic Delivery essay series."
   },
   category: {
     title: "The category",
@@ -415,7 +415,7 @@ export const homepageContent = {
     ],
     technicalHookLines: [
       "AI Agent Lifecycle",
-      "Field definition by Jearon Wong"
+      "Field analysis by Jearon Wong"
     ],
     concept:
       siteSemanticBaseline.fieldDefinitionStatement,
@@ -883,7 +883,7 @@ export const pageRegistry = {
     title: "Projects",
     objectType: "PAGE_ROLE",
     objectValue: "EVIDENCE LEDGER",
-    lead: "The project evidence ledger for the concrete proof path through Agentic Delivery, with each proof object kept inside its maturity boundary."
+    lead: "The project ledger for the protocol path and proof path through Agentic Delivery. MPLP remains the lifecycle protocol path."
   },
   ideas: {
     title: "Ideas",
@@ -905,7 +905,7 @@ export const pageRegistry = {
   },
   lifecycle: {
     title: "AI Agent Lifecycle",
-    subtitle: "A Field Definition by Jearon Wong",
+    subtitle: "A field analysis by Jearon Wong",
     objectType: "FIELD_DEFINITION",
     objectValue: "ACCOUNTABLE DELIVERY",
     lead: siteSemanticBaseline.fieldDefinitionStatement
@@ -938,7 +938,7 @@ export const pageRegistry = {
     title: "Concepts for AI Agent Lifecycle",
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPT MAP",
-    lead: "A concise conceptual map for AI Agent Lifecycle, Agentic Delivery, lifecycle governance primitives, and supporting protocol concepts."
+    lead: "Concepts is the reference layer behind the AI Agent Lifecycle mainline. It is not the main human journey."
   }
 };
 
