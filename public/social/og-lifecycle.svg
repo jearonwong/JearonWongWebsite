@@ -1,0 +1,41 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#111111"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Border frame -->
+  <rect x="2" y="2" width="1196" height="626" fill="none" stroke="rgba(59,130,246,0.12)" stroke-width="2"/>
+
+  <!-- Top metadata line -->
+  <text x="60" y="70" font-family="'Menlo', 'Monaco', monospace" font-size="16" fill="#64748b" letter-spacing="0.05em">
+    JEARON WONG / PROTOCOL ARCHITECT FOR THE AGENT ERA
+  </text>
+
+  <!-- Main title -->
+  <text x="60" y="280" font-family="'Outfit', 'Inter', sans-serif" font-size="72" font-weight="700" fill="#f1f5f9" letter-spacing="-0.02em">
+    THE AI AGENT
+  </text>
+  <text x="60" y="360" font-family="'Outfit', 'Inter', sans-serif" font-size="72" font-weight="700" fill="#f1f5f9" letter-spacing="-0.02em">
+    LIFECYCLE
+  </text>
+
+  <!-- Page role annotation -->
+  <text x="60" y="440" font-family="'Menlo', 'Monaco', monospace" font-size="18" font-weight="800" fill="#3b82f6" letter-spacing="0.08em">
+    CATEGORY DEFINITION
+  </text>
+
+  <!-- Supporting line -->
+  <text x="60" y="500" font-family="'Inter', sans-serif" font-size="28" fill="#64748b">
+    Execution is not Delivery.
+  </text>
+
+  <!-- Accent line -->
+  <rect x="60" y="550" width="240" height="3" fill="#3b82f6"/>
+</svg>

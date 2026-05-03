@@ -23,7 +23,12 @@ const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
 ---
 
-<BaseLayout title="Essays" description={pageRegistry.essays.lead}>
+<BaseLayout
+  title="Essays"
+  description={pageRegistry.essays.lead}
+  ogImagePath="/social/og-essays.png"
+  ogImageAlt="Essays — Registry Logbook by Jearon Wong"
+>
   <RegistryPageHero
     title={pageRegistry.essays.title}
     objectType={pageRegistry.essays.objectType}

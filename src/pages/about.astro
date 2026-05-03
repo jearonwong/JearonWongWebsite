@@ -4,7 +4,12 @@ import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aboutSpecs, contentRouteRoles, pageRegistry, siteThesis, socialLinks, siteConfig } from "../data/site";
 ---
 
-<BaseLayout title="About" description={pageRegistry.about.lead}>
+<BaseLayout
+  title="About"
+  description={pageRegistry.about.lead}
+  ogImagePath="/social/og-about.png"
+  ogImageAlt="Jearon Wong — Protocol Architect for the Agent Era"
+>
   <RegistryPageHero
     title={pageRegistry.about.title}
     subtitle={pageRegistry.about.subtitle}
