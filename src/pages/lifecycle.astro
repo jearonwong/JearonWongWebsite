@@ -147,6 +147,7 @@ const lifecycleJsonLd = {
             ))}
           </div>
         </div>
+        <p class="named-market-note">{lifecyclePageContent.dynamicReality.sourceNote}</p>
       </section>
 
       <section class="lifecycle-split-section">
@@ -250,10 +251,23 @@ const lifecycleJsonLd = {
     flex-wrap: wrap;
     gap: 0.85rem 1.15rem;
     margin-top: 1.7rem;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .lifecycle-hero-link {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
     text-decoration: none;
+  }
+
+  .lifecycle-hero-link .registry-value,
+  .lifecycle-section-tag .registry-key {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .lifecycle-hero-link:hover .registry-value {
@@ -267,6 +281,20 @@ const lifecycleJsonLd = {
   .lifecycle-shell {
     display: grid;
     gap: 3rem;
+    min-width: 0;
+  }
+
+  :global(.lifecycle-judgment-hero),
+  :global(.lifecycle-judgment-hero .registry-page-hero__shell),
+  :global(.lifecycle-judgment-hero .registry-page-hero__title),
+  :global(.lifecycle-judgment-hero .registry-page-hero__lead) {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  :global(.lifecycle-judgment-hero .registry-page-hero__title),
+  :global(.lifecycle-judgment-hero .registry-page-hero__lead-line) {
+    overflow-wrap: anywhere;
   }
 
   .lifecycle-section-tag {
@@ -318,11 +346,13 @@ const lifecycleJsonLd = {
     grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     gap: 3rem;
     border-top: 2px solid var(--accent-proof);
+    min-width: 0;
   }
 
   .definition-band__copy {
     display: grid;
     gap: 1.1rem;
+    min-width: 0;
   }
 
   .definition-band__copy p,
@@ -355,6 +385,7 @@ const lifecycleJsonLd = {
     padding: 1rem 0;
     border-top: 1px solid var(--current-line);
     border-bottom: 1px solid var(--current-line);
+    min-width: 0;
   }
 
   .not-merely-ledger p {
@@ -370,9 +401,11 @@ const lifecycleJsonLd = {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
+    min-width: 0;
   }
 
   .not-merely-ledger span {
+    max-width: 100%;
     padding: 0.45rem 0.62rem;
     border: 1px solid var(--current-border);
     font-family: var(--font-mono);
@@ -381,10 +414,12 @@ const lifecycleJsonLd = {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--current-text);
+    overflow-wrap: anywhere;
   }
 
   .dynamic-reality-band {
     border-left: 3px solid var(--accent-signal);
+    min-width: 0;
   }
 
   .dynamic-reality-grid,
@@ -392,6 +427,7 @@ const lifecycleJsonLd = {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
+    min-width: 0;
   }
 
   .dynamic-reality-grid {
@@ -410,6 +446,7 @@ const lifecycleJsonLd = {
     gap: 1rem;
     align-content: start;
     padding-top: 0.2rem;
+    min-width: 0;
   }
 
   .market-ledger p {
@@ -424,10 +461,26 @@ const lifecycleJsonLd = {
     font-weight: 760;
   }
 
+  .named-market-note {
+    margin: 1.5rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 760;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    text-transform: uppercase;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .ledger-panel {
     display: grid;
     gap: 1rem;
     align-content: start;
+    min-width: 0;
   }
 
   .ledger-panel--scope,
@@ -443,15 +496,18 @@ const lifecycleJsonLd = {
   .proof-path-section {
     display: grid;
     gap: 1.35rem;
+    min-width: 0;
   }
 
   .section-header {
     max-width: 68rem;
+    min-width: 0;
   }
 
   .primitive-ledger {
     border: 1px solid var(--current-border);
     background: var(--current-surface);
+    min-width: 0;
   }
 
   .primitive-row {
@@ -461,6 +517,7 @@ const lifecycleJsonLd = {
     align-items: start;
     padding: 1.35rem 1.5rem;
     border-bottom: 1px solid var(--current-line);
+    min-width: 0;
   }
 
   .primitive-row:last-child {
@@ -509,6 +566,7 @@ const lifecycleJsonLd = {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+    min-width: 0;
   }
 
   .closing-anchor {
@@ -556,6 +614,38 @@ const lifecycleJsonLd = {
     .pairing-band,
     .closing-anchor {
       padding: 1.4rem;
+    }
+
+    .lifecycle-hero-links {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .lifecycle-hero-link {
+      display: block;
+      width: 100%;
+      line-height: 1.7;
+      white-space: normal;
+    }
+
+    .lifecycle-hero-link .registry-key,
+    .lifecycle-hero-link .registry-value {
+      display: inline;
+      white-space: normal;
+    }
+
+    .lifecycle-hero-link .registry-value {
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    .lifecycle-section-tag {
+      max-width: 100%;
+    }
+
+    :global(.lifecycle-judgment-hero .registry-page-hero__title) {
+      max-width: 13ch;
+      white-space: normal;
     }
 
     .primitive-row {

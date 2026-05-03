@@ -241,7 +241,9 @@ export const lifecyclePageContent = {
       "The dominant market routes, from AWS, Google, Microsoft, Salesforce, IBM, and LangChain, often begin by defining agents, assigning tools, setting policies, routing workflows, and observing execution.",
       "These systems may be useful. They still do not define dynamic lifecycle governance for accountable agent work.",
       "MPLP governs agent work as a dynamic lifecycle."
-    ]
+    ],
+    sourceNote:
+      "Named market routes are referenced as public product and framework directions. Detailed source-backed comparisons will be developed in the Agentic Delivery essay series."
   },
   category: {
     title: "The category",
@@ -752,7 +754,7 @@ export const concepts = [
     definition:
       "Evidence Chain is structured proof that agent work can be reviewed, replayed, disputed, and accepted. It includes the artifacts needed to reconstruct why the work began, what context was active, what plan was approved, which confirmations were required, what actions occurred, what changed, how the result was reviewed, and why the outcome was accepted or rejected. Evidence is not the same as raw logs. It is structured support for a delivery claim.",
     problem:
-      "The problem it names is that many agent systems can say they completed work without showing enough evidence to trust the claim. A trace may show calls. A diff may show changes. A chat transcript may show discussion. But none of those alone proves that the result satisfied the original intent under the approved constraints. Without lifecycle evidence, reliability becomes a narrative rather than an inspectable condition.",
+      "The problem it names is that many agent systems can say they completed work without showing enough evidence to trust the claim. A trace may show calls. A diff may show changes. A chat transcript may show discussion. But none of those alone proves that the result satisfied the original intent under the approved constraints. Without Evidence Chain, reliability becomes a narrative rather than an inspectable condition.",
     whyExistingApproachesAreNotEnough:
       "Observability tools are valuable, but they often describe system behavior from the runtime outward. Evidence Chain starts from the delivery claim and asks what must be visible for that claim to be assessed. Evaluations can test outputs, but they may not preserve authority, context, confirmation, or acceptance state. Audit logs can record events, but they may not explain whether the events were legitimate within the lifecycle.",
     relationToLifecycle:
