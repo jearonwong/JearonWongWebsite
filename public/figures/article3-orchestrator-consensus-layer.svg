@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Orchestrator Consensus Layer</title>
+  <desc id="d2">Contrasting single-point orchestrator dispatch with a three-perspective semantic consensus layer: Coordination view, Authority/Risk view, and Evidence/Acceptance view converging into an Orchestration Decision.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
+      .panel{fill:rgba(255,255,255,0.025);stroke:rgba(241,245,249,0.16);stroke-width:1.5}
+      .panel-hot{fill:rgba(34,211,238,0.045);stroke:rgba(34,211,238,0.56);stroke-width:1.8}
+      .node-m{fill:rgba(100,116,139,0.08);stroke:rgba(100,116,139,0.28);stroke-width:1.2}
+      .node-c{fill:rgba(34,211,238,0.12);stroke:rgba(34,211,238,0.55);stroke-width:1.3}
+      .node-b{fill:rgba(59,130,246,0.13);stroke:rgba(59,130,246,0.52);stroke-width:1.3}
+      .node-dec{fill:rgba(34,211,238,0.18);stroke:rgba(34,211,238,0.8);stroke-width:2}
+      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#f1f5f9;font:820 54px "Outfit",Inter,sans-serif}
+      .sub{fill:#22d3ee;font:700 28px "Outfit",Inter,sans-serif}
+      .lbl{fill:#64748b;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:1.2px}
+      .lbl-hot{fill:#22d3ee;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:1.2px}
+      .ptitle{fill:#f1f5f9;font:800 32px "Outfit",Inter,sans-serif}
+      .psub{fill:#94a3b8;font:500 18px Inter,sans-serif}
+      .nt{fill:#f1f5f9;font:700 18px Inter,sans-serif}
+      .nt-m{fill:#64748b;font:700 18px Inter,sans-serif}
+      .nt-s{fill:#f1f5f9;font:600 15px Inter,sans-serif}
+      .dec-t{fill:#22d3ee;font:800 20px "Outfit",Inter,sans-serif}
+      .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
+      .verdict{fill:#64748b;font:560 20px Inter,sans-serif}
+      .verdict-hot{fill:#22d3ee;font:700 20px Inter,sans-serif}
+    </style>
+    <pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+    </pattern>
+    <marker id="aM" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto">
+      <path d="M0,0 L12,4.5 L0,9 Z" fill="#64748b" opacity="0.7"/>
+    </marker>
+    <marker id="aC2" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto">
+      <path d="M0,0 L12,4.5 L0,9 Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" class="bg"/>
+  <rect width="1600" height="900" fill="url(#g2)"/>
+  <rect x="52" y="48" width="1496" height="804" class="outer"/>
+
+  <!-- Header -->
+  <text x="82" y="100" class="kicker">DEFINE THE AI AGENT LIFECYCLE / ESSAY 03</text>
+  <text x="82" y="162" class="ttl">Orchestrator Consensus Layer</text>
+  <text x="82" y="206" class="sub">Single-point judgment must become a semantic adjudication surface.</text>
+
+  <!-- Divider between left and right -->
+  <line x1="790" y1="240" x2="790" y2="832" stroke="rgba(241,245,249,0.1)" stroke-width="1" stroke-dasharray="8 6"/>
+
+  <!-- ===== LEFT PANEL: Single Orchestrator ===== -->
+  <rect x="82" y="240" width="680" height="580" rx="2" class="panel"/>
+  <text x="122" y="282" class="lbl">SINGLE ORCHESTRATOR</text>
+  <text x="122" y="322" class="ptitle">Single-point judgment</text>
+  <text x="122" y="356" class="psub">One node makes all decisions. No challenge. No adjudication.</text>
+
+  <!-- Single Orchestrator node -->
+  <rect x="226" y="388" width="228" height="70" rx="2" class="node-m"/>
+  <text x="340" y="426" text-anchor="middle" class="nt-m">Orchestrator</text>
+  <text x="340" y="447" text-anchor="middle" style="fill:#475569;font:500 14px Inter,sans-serif">Single-point semantic judge</text>
+
+  <!-- 4 agent nodes below -->
+  <path d="M280 458 L200 528" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.5" fill="none" marker-end="url(#aM)"/>
+  <path d="M320 458 L300 528" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.5" fill="none" marker-end="url(#aM)"/>
+  <path d="M360 458 L390 528" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.5" fill="none" marker-end="url(#aM)"/>
+  <path d="M400 458 L490 528" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.5" fill="none" marker-end="url(#aM)"/>
+
+  <rect x="136" y="530" width="120" height="54" rx="2" class="node-m"/>
+  <text x="196" y="562" text-anchor="middle" class="nt-m">Agent</text>
+
+  <rect x="270" y="530" width="120" height="54" rx="2" class="node-m"/>
+  <text x="330" y="562" text-anchor="middle" class="nt-m">Agent</text>
+
+  <rect x="404" y="530" width="120" height="54" rx="2" class="node-m"/>
+  <text x="464" y="562" text-anchor="middle" class="nt-m">Agent</text>
+
+  <rect x="538" y="530" width="120" height="54" rx="2" class="node-m"/>
+  <text x="598" y="562" text-anchor="middle" class="nt-m">Agent</text>
+
+  <!-- Problem annotations -->
+  <line x1="122" y1="628" x2="742" y2="628" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <text x="122" y="658" class="verdict">· Who challenges the orchestrator's goal decomposition?</text>
+  <text x="122" y="686" class="verdict">· Who verifies its authority/risk judgment?</text>
+  <text x="122" y="714" class="verdict">· Who confirms evidence is sufficient before acceptance?</text>
+  <text x="122" y="750" class="verdict-hot">Single-point judgment is structurally unaccountable.</text>
+  <text x="122" y="778" class="verdict">No challenge surface. No adjudication. No traceability of the decision.</text>
+
+  <!-- ===== RIGHT PANEL: Consensus Layer ===== -->
+  <rect x="838" y="240" width="710" height="580" rx="2" class="panel-hot"/>
+  <text x="878" y="282" class="lbl-hot">SEMANTIC CONSENSUS LAYER</text>
+  <text x="878" y="322" class="ptitle">Byzantine-inspired adjudication</text>
+  <text x="878" y="356" class="psub">Three views challenge, converge, then govern execution.</text>
+
+  <!-- Three view boxes -->
+  <rect x="878" y="380" width="194" height="108" rx="2" class="node-c"/>
+  <text x="875" y="372" style="fill:#22d3ee;font:700 13px 'JetBrains Mono',Menlo,monospace;letter-spacing:0.9px">COORDINATION</text>
+  <text x="975" y="416" text-anchor="middle" class="nt">Goal</text>
+  <text x="975" y="437" text-anchor="middle" class="nt">Decomposition</text>
+  <text x="975" y="460" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">Who does what, how</text>
+  <text x="975" y="478" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">and in what order</text>
+
+  <rect x="1100" y="380" width="194" height="108" rx="2" style="fill:rgba(239,68,68,0.1);stroke:rgba(239,68,68,0.5);stroke-width:1.3"/>
+  <text x="1097" y="372" style="fill:#f87171;font:700 13px 'JetBrains Mono',Menlo,monospace;letter-spacing:0.9px">AUTHORITY / RISK</text>
+  <text x="1197" y="416" text-anchor="middle" class="nt">Permission</text>
+  <text x="1197" y="437" text-anchor="middle" class="nt">&amp; Risk Check</text>
+  <text x="1197" y="460" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">Authorized? In bounds?</text>
+  <text x="1197" y="478" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">Needs confirmation?</text>
+
+  <rect x="989" y="518" width="194" height="108" rx="2" class="node-b"/>
+  <text x="986" y="510" style="fill:#60a5fa;font:700 13px 'JetBrains Mono',Menlo,monospace;letter-spacing:0.9px">EVIDENCE / ACCEPTANCE</text>
+  <text x="1086" y="554" text-anchor="middle" class="nt">Evidence</text>
+  <text x="1086" y="575" text-anchor="middle" class="nt">Sufficiency</text>
+  <text x="1086" y="598" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">Can this be accepted?</text>
+  <text x="1086" y="616" text-anchor="middle" style="fill:#94a3b8;font:500 14px Inter,sans-serif">Is evidence reviewable?</text>
+
+  <!-- Convergence arrows to decision -->
+  <path d="M1072 434 L1130 654" stroke="rgba(34,211,238,0.6)" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#aC2)"/>
+  <path d="M1197 488 L1165 654" stroke="rgba(239,68,68,0.5)" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#aC2)"/>
+  <path d="M1086 626 L1086 654" stroke="rgba(59,130,246,0.6)" stroke-width="1.8" fill="none" marker-end="url(#aC2)"/>
+
+  <!-- Decision diamond -->
+  <rect x="1008" y="658" width="156" height="56" rx="2" class="node-dec"/>
+  <text x="1086" y="691" text-anchor="middle" class="dec-t">Orchestration Decision</text>
+
+  <!-- Arrow from decision to agents -->
+  <path d="M1086 714 L1086 738" stroke="#22d3ee" stroke-width="2" fill="none" marker-end="url(#aC2)"/>
+
+  <!-- Agent Role nodes -->
+  <rect x="878"  y="740" width="146" height="52" rx="2" class="node-c"/>
+  <text x="951"  y="771" text-anchor="middle" class="nt-s">Developer Role</text>
+
+  <rect x="1010" y="740" width="146" height="52" rx="2" class="node-c"/>
+  <text x="1083" y="771" text-anchor="middle" class="nt-s">Reviewer Role</text>
+
+  <rect x="1142" y="740" width="146" height="52" rx="2" class="node-c"/>
+  <text x="1215" y="771" text-anchor="middle" class="nt-s">QA Role</text>
+
+  <rect x="1274" y="740" width="146" height="52" rx="2" class="node-c"/>
+  <text x="1347" y="771" text-anchor="middle" class="nt-s">Operator Role</text>
+
+  <!-- Distribution arrows from decision to roles -->
+  <path d="M1040 714 L960  740" stroke="rgba(34,211,238,0.5)" stroke-width="1.5" fill="none" marker-end="url(#aC2)"/>
+  <path d="M1070 714 L1086 740" stroke="rgba(34,211,238,0.5)" stroke-width="1.5" fill="none" marker-end="url(#aC2)"/>
+  <path d="M1110 714 L1215 740" stroke="rgba(34,211,238,0.5)" stroke-width="1.5" fill="none" marker-end="url(#aC2)"/>
+  <path d="M1140 714 L1347 740" stroke="rgba(34,211,238,0.5)" stroke-width="1.5" fill="none" marker-end="url(#aC2)"/>
+
+  <!-- Footer -->
+  <text x="82" y="862" class="footer">Jearon Wong / Define The AI Agent Lifecycle / www.jearonwong.com</text>
+</svg>

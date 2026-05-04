@@ -67,6 +67,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?: https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
 - The Agentic AI Inflection Point: Project Delivery: https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/
 - Agent Orchestration Is Not Delivery: https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/
+  Defines why agent orchestration coordinates execution but does not define delivery, and introduces lifecycle responsibility consensus as the orchestration-layer mechanism for aligning human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.
 
 ## Project Proof Path
 
@@ -82,6 +83,11 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - Definitions (citation anchors): https://www.jearonwong.com/definitions/
 Quote-ready definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug.
+
+## Key Definitions
+
+- Lifecycle Responsibility Consensus: https://www.jearonwong.com/definitions/#lifecycle-responsibility-consensus
+  Lifecycle Responsibility Consensus is the orchestration-layer mechanism that aligns human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.
 
 ## Delivery Standard
 

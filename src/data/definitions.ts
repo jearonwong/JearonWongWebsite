@@ -364,6 +364,28 @@ export const definitions: DefinitionEntry[] = [
       { label: "Agentic Delivery", href: "#agentic-delivery" },
       { label: "Evidence Chain", href: "#evidence-chain" }
     ]
+  },
+  {
+    slug: "lifecycle-responsibility-consensus",
+    term: "Lifecycle Responsibility Consensus",
+    section: "governance",
+    definition:
+      "Lifecycle Responsibility Consensus is the orchestration-layer mechanism that aligns human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.",
+    distinction:
+      "Lifecycle Responsibility Consensus is not ordinary agent routing, workflow continuation, or human approval. It describes how the orchestration layer aligns responsibility, execution, evidence, review, and acceptance into one traceable delivery relationship.",
+    evidence: [
+      { label: "Orchestration essay", href: "/essays/agent-orchestration-is-not-delivery/" },
+      { label: "Delivery Standard", href: "/delivery-standard/" }
+    ],
+    related: [
+      { label: "AI Agent Lifecycle", href: "#ai-agent-lifecycle" },
+      { label: "Agentic Delivery", href: "#agentic-delivery" },
+      { label: "Confirmation Boundary", href: "#confirmation-boundary" },
+      { label: "Evidence Chain", href: "#evidence-chain" },
+      { label: "Semantic Loss", href: "#semantic-loss" },
+      { label: "Multi-Agent Lifecycle Governance", href: "#multi-agent-lifecycle-governance" },
+      { label: "AI Agent Governance", href: "/ai-agent-governance/" }
+    ]
   }
 ];
 

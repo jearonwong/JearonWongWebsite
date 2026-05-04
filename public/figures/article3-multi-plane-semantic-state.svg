@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Multi-Plane Semantic State and Learning</title>
+  <desc id="d5">Three semantic planes — Project, Role, Operator — each with independent PSG, AEL, VSL, Intent Drift, and Learning Feedback. Flattening them into one context is how Semantic Loss begins.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
+      .plane-proj{fill:rgba(34,211,238,0.04);stroke:rgba(34,211,238,0.44);stroke-width:1.8}
+      .plane-role{fill:rgba(59,130,246,0.04);stroke:rgba(59,130,246,0.42);stroke-width:1.8}
+      .plane-op{fill:rgba(255,255,255,0.02);stroke:rgba(241,245,249,0.2);stroke-width:1.5}
+      .orch-col{fill:rgba(34,211,238,0.06);stroke:rgba(34,211,238,0.4);stroke-width:1.8}
+      .tag-c{fill:rgba(34,211,238,0.12);stroke:rgba(34,211,238,0.5);stroke-width:1.2}
+      .tag-b{fill:rgba(59,130,246,0.12);stroke:rgba(59,130,246,0.48);stroke-width:1.2}
+      .tag-m{fill:rgba(100,116,139,0.1);stroke:rgba(100,116,139,0.32);stroke-width:1.2}
+      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#f1f5f9;font:820 54px "Outfit",Inter,sans-serif}
+      .sub{fill:#22d3ee;font:700 28px "Outfit",Inter,sans-serif}
+      .plane-n{fill:#22d3ee;font:700 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .plane-nb{fill:#60a5fa;font:700 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .plane-nm{fill:#94a3b8;font:700 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .plane-t{fill:#f1f5f9;font:800 26px "Outfit",Inter,sans-serif}
+      .plane-desc{fill:#94a3b8;font:500 15px Inter,sans-serif}
+      .tag-t{fill:#f1f5f9;font:700 14px "JetBrains Mono",Menlo,monospace;letter-spacing:0.6px}
+      .tag-ts{fill:#94a3b8;font:500 12px Inter,sans-serif}
+      .orch-t{fill:#22d3ee;font:800 22px "Outfit",Inter,sans-serif}
+      .orch-s{fill:#94a3b8;font:500 14px Inter,sans-serif}
+      .warn{fill:#f59e0b;font:700 16px Inter,sans-serif}
+      .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
+    </style>
+    <pattern id="g5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+    </pattern>
+    <marker id="aC5" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#22d3ee" opacity="0.8"/>
+    </marker>
+    <marker id="aB5" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#3b82f6" opacity="0.8"/>
+    </marker>
+    <marker id="aM5" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" class="bg"/>
+  <rect width="1600" height="900" fill="url(#g5)"/>
+  <rect x="52" y="48" width="1496" height="804" class="outer"/>
+
+  <!-- Header -->
+  <text x="82" y="100" class="kicker">DEFINE THE AI AGENT LIFECYCLE / ESSAY 03</text>
+  <text x="82" y="162" class="ttl">Three Semantic Planes</text>
+  <text x="82" y="206" class="sub">Flatten them into one memory and Semantic Loss begins.</text>
+
+  <!-- Orchestrator column: x=1300 w=246 -->
+  <rect x="1304" y="234" width="240" height="584" rx="2" class="orch-col"/>
+  <text x="1424" y="290" text-anchor="middle" class="orch-t">DELIVERY-GRADE</text>
+  <text x="1424" y="318" text-anchor="middle" class="orch-t">ORCHESTRATOR</text>
+  <line x1="1320" y1="334" x2="1532" y2="334" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="1424" y="362" text-anchor="middle" class="orch-s">Judges which state</text>
+  <text x="1424" y="382" text-anchor="middle" class="orch-s">belongs to which plane.</text>
+  <text x="1424" y="420" text-anchor="middle" class="orch-s">Routes confirmations</text>
+  <text x="1424" y="440" text-anchor="middle" class="orch-s">to the right role.</text>
+  <text x="1424" y="478" text-anchor="middle" class="orch-s">Assigns learning</text>
+  <text x="1424" y="498" text-anchor="middle" class="orch-s">feedback correctly.</text>
+  <text x="1424" y="536" text-anchor="middle" class="orch-s">Cannot do this if</text>
+  <text x="1424" y="556" text-anchor="middle" class="orch-s">three planes are flat.</text>
+
+  <!-- Horizontal arrows from each plane to orchestrator -->
+  <path d="M1286 360 H1302" stroke="rgba(34,211,238,0.6)" stroke-width="2" fill="none" marker-end="url(#aC5)"/>
+  <path d="M1286 570 H1302" stroke="rgba(59,130,246,0.6)" stroke-width="2" fill="none" marker-end="url(#aB5)"/>
+  <path d="M1286 710 H1302" stroke="rgba(100,116,139,0.6)" stroke-width="2" fill="none" marker-end="url(#aM5)"/>
+
+  <!-- ===== PLANE 1: Project Plane ===== y=234 h=194 -->
+  <rect x="82" y="234" width="1204" height="194" rx="2" class="plane-proj"/>
+  <text x="122" y="270" class="plane-n">PROJECT PLANE</text>
+  <text x="122" y="302" class="plane-t">Project goal · State · Boundaries · Evidence · Accepted outcome</text>
+  <text x="122" y="328" class="plane-desc">Cares about: is the project's delivery healthy? Are intent and outcome aligned at the project level?</text>
+
+  <!-- 5 tag boxes: PSG, AEL, VSL, Intent Drift, Learning — x starts at 122 -->
+  <rect x="122"  y="344" width="180" height="66" rx="2" class="tag-c"/>
+  <text x="212" y="368" text-anchor="middle" class="tag-t">PSG</text>
+  <text x="212" y="386" text-anchor="middle" style="fill:#22d3ee;font:600 11px 'JetBrains Mono',Menlo,monospace">Project Semantic Graph</text>
+  <text x="212" y="402" text-anchor="middle" class="tag-ts">Intent vs. execution state</text>
+
+  <rect x="316"  y="344" width="180" height="66" rx="2" class="tag-c"/>
+  <text x="406" y="368" text-anchor="middle" class="tag-t">AEL</text>
+  <text x="406" y="386" text-anchor="middle" style="fill:#22d3ee;font:600 11px 'JetBrains Mono',Menlo,monospace">Action Execution Layer</text>
+  <text x="406" y="402" text-anchor="middle" class="tag-ts">Cross-phase evidence</text>
+
+  <rect x="510"  y="344" width="180" height="66" rx="2" class="tag-c"/>
+  <text x="600" y="368" text-anchor="middle" class="tag-t">VSL</text>
+  <text x="600" y="386" text-anchor="middle" style="fill:#22d3ee;font:600 11px 'JetBrains Mono',Menlo,monospace">Value State Layer</text>
+  <text x="600" y="402" text-anchor="middle" class="tag-ts">Confirmed states + sources</text>
+
+  <rect x="704"  y="344" width="200" height="66" rx="2" class="tag-c"/>
+  <text x="804" y="368" text-anchor="middle" class="tag-t">Intent Drift</text>
+  <text x="804" y="386" text-anchor="middle" style="fill:#22d3ee;font:600 11px 'JetBrains Mono',Menlo,monospace">Project-level drift</text>
+  <text x="804" y="402" text-anchor="middle" class="tag-ts">Goal changed? When? Who confirmed?</text>
+
+  <rect x="918"  y="344" width="240" height="66" rx="2" class="tag-c"/>
+  <text x="1038" y="368" text-anchor="middle" class="tag-t">Learning Feedback</text>
+  <text x="1038" y="386" text-anchor="middle" style="fill:#22d3ee;font:600 11px 'JetBrains Mono',Menlo,monospace">Project-level learning</text>
+  <text x="1038" y="402" text-anchor="middle" class="tag-ts">Which task types cause delivery problems</text>
+
+  <!-- ===== PLANE 2: Role Plane ===== y=446 h=194 -->
+  <rect x="82" y="446" width="1204" height="194" rx="2" class="plane-role"/>
+  <text x="122" y="482" class="plane-nb">ROLE PLANE</text>
+  <text x="122" y="514" class="plane-t">Role goal · Responsibility boundary · Authority · Evidence obligation</text>
+  <text x="122" y="540" class="plane-desc">Cares about: is each role executing its responsibilities accurately within its lifecycle boundary?</text>
+
+  <rect x="122"  y="556" width="180" height="66" rx="2" class="tag-b"/>
+  <text x="212" y="580" text-anchor="middle" class="tag-t">PSG</text>
+  <text x="212" y="598" text-anchor="middle" style="fill:#60a5fa;font:600 11px 'JetBrains Mono',Menlo,monospace">Role Semantic Graph</text>
+  <text x="212" y="614" text-anchor="middle" class="tag-ts">Role goal vs. execution</text>
+
+  <rect x="316"  y="556" width="180" height="66" rx="2" class="tag-b"/>
+  <text x="406" y="580" text-anchor="middle" class="tag-t">AEL</text>
+  <text x="406" y="598" text-anchor="middle" style="fill:#60a5fa;font:600 11px 'JetBrains Mono',Menlo,monospace">Role Execution Log</text>
+  <text x="406" y="614" text-anchor="middle" class="tag-ts">Per-role evidence record</text>
+
+  <rect x="510"  y="556" width="180" height="66" rx="2" class="tag-b"/>
+  <text x="600" y="580" text-anchor="middle" class="tag-t">VSL</text>
+  <text x="600" y="598" text-anchor="middle" style="fill:#60a5fa;font:600 11px 'JetBrains Mono',Menlo,monospace">Role Validation Log</text>
+  <text x="600" y="614" text-anchor="middle" class="tag-ts">Boundary states confirmed</text>
+
+  <rect x="704"  y="556" width="200" height="66" rx="2" class="tag-b"/>
+  <text x="804" y="580" text-anchor="middle" class="tag-t">Intent Drift</text>
+  <text x="804" y="598" text-anchor="middle" style="fill:#60a5fa;font:600 11px 'JetBrains Mono',Menlo,monospace">Role-level drift</text>
+  <text x="804" y="614" text-anchor="middle" class="tag-ts">Did task scope drift mid-execution?</text>
+
+  <rect x="918"  y="556" width="240" height="66" rx="2" class="tag-b"/>
+  <text x="1038" y="580" text-anchor="middle" class="tag-t">Learning Feedback</text>
+  <text x="1038" y="598" text-anchor="middle" style="fill:#60a5fa;font:600 11px 'JetBrains Mono',Menlo,monospace">Role-level learning</text>
+  <text x="1038" y="614" text-anchor="middle" class="tag-ts">Which inputs cause boundary violations</text>
+
+  <!-- ===== PLANE 3: Operator Plane ===== y=658 h=150 -->
+  <rect x="82" y="658" width="1204" height="150" rx="2" class="plane-op"/>
+  <text x="122" y="694" class="plane-nm">OPERATOR / USER PLANE</text>
+  <text x="122" y="726" class="plane-t">Expression habits · Risk preference · Confirmation style · Acceptance standard</text>
+  <text x="122" y="748" class="plane-desc">Cares about: how does this human express intent, confirm decisions, and accept outcomes?</text>
+
+  <!-- 3 tags for operator -->
+  <rect x="122"  y="762" width="200" height="28" rx="2" class="tag-m"/>
+  <text x="222" y="781" text-anchor="middle" style="fill:#94a3b8;font:700 12px 'JetBrains Mono',Menlo,monospace">PSG: Expression Habits</text>
+
+  <rect x="336"  y="762" width="220" height="28" rx="2" class="tag-m"/>
+  <text x="446" y="781" text-anchor="middle" style="fill:#94a3b8;font:700 12px 'JetBrains Mono',Menlo,monospace">AEL: Confirmation Patterns</text>
+
+  <rect x="570"  y="762" width="200" height="28" rx="2" class="tag-m"/>
+  <text x="670" y="781" text-anchor="middle" style="fill:#94a3b8;font:700 12px 'JetBrains Mono',Menlo,monospace">Intent Drift: Style Shift</text>
+
+  <rect x="784"  y="762" width="260" height="28" rx="2" class="tag-m"/>
+  <text x="914" y="781" text-anchor="middle" style="fill:#94a3b8;font:700 12px 'JetBrains Mono',Menlo,monospace">Learning: Reduce Expression Loss</text>
+
+  <!-- Semantic Loss warning bar -->
+  <rect x="82" y="826" width="1204" height="4" rx="2" style="fill:rgba(245,158,11,0.6)"/>
+
+  <!-- Footer text -->
+  <text x="82" y="858" class="warn">Flattening Project + Role + Operator into one context window is how Semantic Loss begins.</text>
+  <text x="1200" y="858" class="footer">jearonwong.com</text>
+</svg>

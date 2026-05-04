@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Dynamic Role Graph</title>
+  <desc id="d3">Project phases across the top, six Agent Roles activated and deactivated across phases, each with activation condition, authority scope, and evidence obligation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
+      .phase{fill:rgba(255,255,255,0.025);stroke:rgba(241,245,249,0.16);stroke-width:1.2}
+      .bar-active{fill:rgba(34,211,238,0.18);stroke:rgba(34,211,238,0.6);stroke-width:1.3}
+      .bar-new{fill:rgba(245,158,11,0.2);stroke:rgba(245,158,11,0.7);stroke-width:1.5}
+      .bar-done{fill:rgba(100,116,139,0.08);stroke:rgba(100,116,139,0.22);stroke-width:1;stroke-dasharray:5 4}
+      .bar-none{fill:none}
+      .role-lbl{fill:#f1f5f9;font:700 18px Inter,sans-serif}
+      .role-sub{fill:#64748b;font:500 13px Inter,sans-serif}
+      .phase-t{fill:#f1f5f9;font:700 20px "Outfit",Inter,sans-serif}
+      .phase-n{fill:#22d3ee;font:700 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#f1f5f9;font:820 54px "Outfit",Inter,sans-serif}
+      .sub{fill:#22d3ee;font:700 28px "Outfit",Inter,sans-serif}
+      .tag-act{fill:#22d3ee;font:700 12px "JetBrains Mono",Menlo,monospace}
+      .tag-new{fill:#f59e0b;font:700 12px "JetBrains Mono",Menlo,monospace}
+      .tag-done{fill:#475569;font:700 12px "JetBrains Mono",Menlo,monospace}
+      .ann{fill:#64748b;font:500 13px Inter,sans-serif}
+      .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
+      .leg-dot-a{fill:#22d3ee}
+      .leg-dot-n{fill:#f59e0b}
+    </style>
+    <pattern id="g3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" class="bg"/>
+  <rect width="1600" height="900" fill="url(#g3)"/>
+  <rect x="52" y="48" width="1496" height="804" class="outer"/>
+
+  <!-- Header -->
+  <text x="82" y="100" class="kicker">DEFINE THE AI AGENT LIFECYCLE / ESSAY 03</text>
+  <text x="82" y="162" class="ttl">Dynamic Role Graph</text>
+  <text x="82" y="206" class="sub">Roles activate and expire with project pressure. Agent list is not Role Graph.</text>
+
+  <!-- Phase column headers: 4 phases across x=320-1540 -->
+  <!-- Phase x starts: 320, 620, 920, 1220  width=280 each -->
+  <rect x="320" y="232" width="280" height="72" rx="2" class="phase"/>
+  <text x="460" y="262" text-anchor="middle" class="phase-n">PHASE 01</text>
+  <text x="460" y="290" text-anchor="middle" class="phase-t">Requirements</text>
+
+  <rect x="620" y="232" width="280" height="72" rx="2" class="phase"/>
+  <text x="760" y="262" text-anchor="middle" class="phase-n">PHASE 02</text>
+  <text x="760" y="290" text-anchor="middle" class="phase-t">Architecture</text>
+
+  <rect x="920" y="232" width="280" height="72" rx="2" class="phase"/>
+  <text x="1060" y="262" text-anchor="middle" class="phase-n">PHASE 03</text>
+  <text x="1060" y="290" text-anchor="middle" class="phase-t">Development</text>
+
+  <rect x="1220" y="232" width="280" height="72" rx="2" class="phase"/>
+  <text x="1360" y="262" text-anchor="middle" class="phase-n">PHASE 04</text>
+  <text x="1360" y="290" text-anchor="middle" class="phase-t">Release</text>
+
+  <!-- Vertical dividers -->
+  <line x1="320" y1="316" x2="1500" y2="316" stroke="rgba(241,245,249,0.1)" stroke-width="1"/>
+
+  <!-- Role rows: y per row starting at 328, height=76, gap=8 -->
+  <!-- Row y: 328, 412, 496, 580, 664, 748 -->
+
+  <!-- Role label column x=82-308 -->
+  <!-- Row 1: Product Role -->
+  <text x="82" y="370" class="role-lbl">Product Role</text>
+  <text x="82" y="390" class="role-sub">Scope · Acceptance criteria</text>
+  <!-- Active phase 1 + 2 -->
+  <rect x="328" y="330" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="460" y="360" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="460" y="378" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Define scope + intent</text>
+  <text x="460" y="393" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Evidence: confirmed requirements</text>
+  <rect x="628" y="330" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="760" y="360" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="760" y="378" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Scope boundary lock</text>
+  <text x="760" y="393" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Evidence: change log</text>
+  <!-- Deactivated in phase 3 + 4 -->
+  <rect x="928" y="330" width="264" height="66" rx="2" class="bar-done"/>
+  <text x="1060" y="368" text-anchor="middle" class="tag-done">DEACTIVATED</text>
+  <rect x="1228" y="330" width="264" height="66" rx="2" class="bar-done"/>
+  <text x="1360" y="368" text-anchor="middle" class="tag-done">DEACTIVATED</text>
+
+  <!-- Row 2: Architecture Role -->
+  <text x="82" y="454" class="role-lbl">Architecture Role</text>
+  <text x="82" y="474" class="role-sub">Design boundary · Risk</text>
+  <!-- Active p1,p2,p3 -->
+  <rect x="328" y="414" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="460" y="444" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="460" y="462" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Review requirements</text>
+  <rect x="628" y="414" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="760" y="444" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="760" y="462" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Define boundaries</text>
+  <rect x="928" y="414" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="1060" y="444" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="1060" y="462" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Boundary crossing review</text>
+  <!-- Deactivated p4 -->
+  <rect x="1228" y="414" width="264" height="66" rx="2" class="bar-done"/>
+  <text x="1360" y="452" text-anchor="middle" class="tag-done">DEACTIVATED</text>
+
+  <!-- Row 3: Developer Role -->
+  <text x="82" y="538" class="role-lbl">Developer Role</text>
+  <text x="82" y="558" class="role-sub">Impl · Evidence: diff + tests</text>
+  <!-- None p1, active p2,p3, done p4 -->
+  <rect x="328" y="498" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="460" y="536" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="628" y="498" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="760" y="528" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="760" y="546" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Impl per architecture</text>
+  <rect x="928" y="498" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="1060" y="528" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="1060" y="546" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Code + test evidence</text>
+  <rect x="1228" y="498" width="264" height="66" rx="2" class="bar-done"/>
+  <text x="1360" y="536" text-anchor="middle" class="tag-done">DEACTIVATED</text>
+
+  <!-- Row 4: Security Role -->
+  <text x="82" y="622" class="role-lbl">Security Role</text>
+  <text x="82" y="642" class="role-sub">Risk boundary · Auth check</text>
+  <!-- None p1,p2, newly activated p3, active p4 -->
+  <rect x="328" y="582" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="460" y="620" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="628" y="582" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="760" y="620" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="928" y="582" width="264" height="66" rx="2" class="bar-new"/>
+  <text x="1060" y="608" text-anchor="middle" class="tag-new">NEWLY ACTIVATED</text>
+  <text x="1060" y="626" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Risk boundary check</text>
+  <text x="1060" y="641" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Auth review evidence</text>
+  <rect x="1228" y="582" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="1360" y="612" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="1360" y="630" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Pre-deploy audit</text>
+
+  <!-- Row 5: QA Role -->
+  <text x="82" y="706" class="role-lbl">QA Role</text>
+  <text x="82" y="726" class="role-sub">Acceptance criteria · Test ev.</text>
+  <!-- None p1,p2, active p3, active p4 -->
+  <rect x="328" y="666" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="460" y="704" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="628" y="666" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="760" y="704" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="928" y="666" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="1060" y="696" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="1060" y="714" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Test case design</text>
+  <rect x="1228" y="666" width="264" height="66" rx="2" class="bar-active"/>
+  <text x="1360" y="696" text-anchor="middle" class="tag-act">ACTIVE</text>
+  <text x="1360" y="714" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Acceptance verification</text>
+
+  <!-- Row 6: Operator Role -->
+  <text x="82" y="790" class="role-lbl">Operator Role</text>
+  <text x="82" y="810" class="role-sub">Deploy readiness · Confirm</text>
+  <!-- None p1,p2,p3, active p4 -->
+  <rect x="328" y="750" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="460" y="788" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="628" y="750" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="760" y="788" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="928" y="750" width="264" height="66" rx="2" class="bar-none"/>
+  <text x="1060" y="788" text-anchor="middle" style="fill:#334155;font:700 12px 'JetBrains Mono',Menlo,monospace">NOT ACTIVATED</text>
+  <rect x="1228" y="750" width="264" height="66" rx="2" class="bar-new"/>
+  <text x="1360" y="780" text-anchor="middle" class="tag-new">NEWLY ACTIVATED</text>
+  <text x="1360" y="798" text-anchor="middle" style="fill:#94a3b8;font:500 12px Inter,sans-serif">Deploy window confirm</text>
+
+  <!-- Legend -->
+  <circle cx="82" cy="848" r="6" class="leg-dot-a"/>
+  <text x="96" y="853" style="fill:#22d3ee;font:600 14px Inter,sans-serif">Active</text>
+  <circle cx="168" cy="848" r="6" class="leg-dot-n"/>
+  <text x="182" y="853" style="fill:#f59e0b;font:600 14px Inter,sans-serif">Newly Activated</text>
+  <rect x="302" y="842" width="16" height="12" rx="1" style="fill:rgba(100,116,139,0.08);stroke:rgba(100,116,139,0.22);stroke-dasharray:3 3"/>
+  <text x="326" y="853" style="fill:#475569;font:600 14px Inter,sans-serif">Deactivated</text>
+
+  <text x="900" y="853" class="footer">Jearon Wong / Define The AI Agent Lifecycle / www.jearonwong.com</text>
+</svg>
