@@ -78,11 +78,6 @@ relatedProjects:
 
 *This is the third essay in the Define The AI Agent Lifecycle series. The first argued that execution is not delivery — AI Agent work needs a lifecycle. The second argued that more agents are not MAS (Multi-Agent Systems) — multi-agent work needs lifecycle responsibility separation. This essay enters the third layer: Orchestration Is Not Delivery.*
 
-<figure class="article-figure article-figure--cover">
-  <img src="/figures/article3-cover.svg" alt="Agent Orchestration Is Not Delivery — Define The AI Agent Lifecycle Essay 03 cover" width="1200" height="630" loading="eager" decoding="async" />
-  <figcaption>The third essay in <em>Define The AI Agent Lifecycle</em> argues that the Orchestrator must become the lifecycle responsibility consensus layer — not a router of agents.</figcaption>
-</figure>
-
 ## My initial assumption: the Orchestrator is just a coordinator
 
 SoloCrew started from a very concrete requirement: one person managing multiple projects simultaneously, needing a system that lets every project genuinely deliver — not just run.
