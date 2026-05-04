@@ -8,8 +8,41 @@ description: "The third essay in the Define The AI Agent Lifecycle series. Jearo
 shareTitle: "Agent Orchestration Is Not Delivery"
 shareSubtitle: "Orchestration coordinates execution. Delivery requires lifecycle responsibility consensus."
 shareDescription: "Agent orchestration coordinates execution. Delivery requires lifecycle responsibility consensus: bidirectional mapping between human intent, role authority, agent execution, evidence, review, and accepted outcome."
-shareImage: /social/og-agent-orchestration-is-not-delivery.svg
+shareImage: /social/og-agent-orchestration-is-not-delivery.png
 shareImageAlt: "Agent Orchestration Is Not Delivery — Define The AI Agent Lifecycle"
+ogImage: /social/og-agent-orchestration-is-not-delivery.png
+images:
+  - url: /figures/article3-cover.svg
+    alt: "Agent Orchestration Is Not Delivery — Define The AI Agent Lifecycle Essay 03 cover"
+    caption: "The third essay in Define The AI Agent Lifecycle argues that orchestration coordinates execution but does not define delivery. The Orchestrator must become the lifecycle responsibility consensus layer."
+    thumbnailUrl: /social/og-agent-orchestration-is-not-delivery.png
+    width: 1200
+    height: 630
+  - url: /figures/article3-bidirectional-responsibility-mapping.svg
+    alt: "Bidirectional responsibility mapping: forward chain from Human Intent to Accepted Outcome, backward chain from Accepted Outcome to Human Intent"
+    caption: "A delivery-grade Orchestrator maintains two directions: forward, translating human intent into verifiable responsibility; backward, tracing accepted outcomes back to human responsibility sources."
+    width: 1600
+    height: 900
+  - url: /figures/article3-orchestrator-consensus-layer.svg
+    alt: "Single Orchestrator vs. Semantic Consensus Layer: three views (Coordination, Authority/Risk, Evidence/Acceptance) converging into Orchestration Decision"
+    caption: "The Orchestrator should not be a single-point black box — it should be a challengeable, traceable, convergeable semantic consensus layer."
+    width: 1600
+    height: 900
+  - url: /figures/article3-dynamic-role-graph.svg
+    alt: "Dynamic Role Graph: project phases across the top, six Agent Roles activating and deactivating across phases"
+    caption: "The Role Graph dynamically activates, adjusts, and expires with project phases."
+    width: 1600
+    height: 900
+  - url: /figures/article3-human-role-hitl.svg
+    alt: "HITL vs Human Role Confirmation Boundary: each role confirms a different lifecycle boundary and produces traceable downstream authorization"
+    caption: "Each role confirms different content at different boundaries, producing different downstream authorization."
+    width: 1600
+    height: 900
+  - url: /figures/article3-multi-plane-semantic-state.svg
+    alt: "Three semantic planes — Project, Role, Operator — each with independent PSG, AEL, VSL, Intent Drift, and Learning Feedback"
+    caption: "Each plane has independent semantic state, Intent Drift detection, and Learning Feedback. Flattening them is how Semantic Loss begins."
+    width: 1600
+    height: 900
 publishDate: 2026-05-04
 cluster: ai-agent-lifecycle
 projectProof: MPLP
@@ -44,6 +77,11 @@ relatedProjects:
 ---
 
 *This is the third essay in the Define The AI Agent Lifecycle series. The first argued that execution is not delivery — AI Agent work needs a lifecycle. The second argued that more agents are not MAS (Multi-Agent Systems) — multi-agent work needs lifecycle responsibility separation. This essay enters the third layer: Orchestration Is Not Delivery.*
+
+<figure class="article-figure article-figure--cover">
+  <img src="/figures/article3-cover.svg" alt="Agent Orchestration Is Not Delivery — Define The AI Agent Lifecycle Essay 03 cover" width="1200" height="630" loading="eager" decoding="async" />
+  <figcaption>The third essay in <em>Define The AI Agent Lifecycle</em> argues that the Orchestrator must become the lifecycle responsibility consensus layer — not a router of agents.</figcaption>
+</figure>
 
 ## My initial assumption: the Orchestrator is just a coordinator
 
