@@ -199,7 +199,7 @@ def set_publication_defaults(doc: Document) -> None:
 
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = footer.add_run("GAIC-2026 v0.3.2-FRC-R3 | Full White Paper Draft | Phase 1D-4 QA Required")
+    run = footer.add_run("GAIC-2026 v0.3.2-FRC-R3 | Publication Draft | Non-legal technical governance analysis")
     run.font.name = "Arial"
     run.font.size = Pt(7.0)
     run.font.color.rgb = pub.ANODIZED_SLATE
@@ -261,7 +261,7 @@ def add_cover(doc: Document) -> None:
 
     meta = doc.add_paragraph()
     meta.paragraph_format.space_before = Pt(22)
-    mrun = meta.add_run("GACWP-2026-v0.3.2-FRC-R3 | Phase 1D-4 full-content reflow | May 2026")
+    mrun = meta.add_run("GACWP-2026-v0.3.2-FRC-R3 | Publication Draft | May 2026")
     mrun.font.name = "Arial"
     mrun.font.size = Pt(8.6)
     mrun.font.color.rgb = pub.ANODIZED_SLATE
@@ -284,11 +284,14 @@ def sanitize_publication_line(line: str, relative: str) -> str | None:
     # the underlying source files and governance reports.
     if relative == "sections/00-front-matter.md":
         if stripped.startswith("**Status:**"):
-            return "**Status:** Phase 1D-4 full-content publication draft; QA required; non-legal technical governance analysis; not legal advice"
+            return "**Status:** Publication Draft — non-legal technical governance analysis; not legal advice"
         if "| Status |" in stripped:
-            return "| Status | Phase 1D-4 full-content publication draft; QA required; agenda-setting technical governance white paper; not legal advice |"
+            return "| Status | Publication Draft — agenda-setting technical governance white paper; not legal advice |"
         if "phase 1d-2 publication design draft status" in low:
-            return "This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Phase 1D-4 full-content publication draft status. The current source is the controlled Markdown source for designed DOCX/PDF generation, visual QA, citation rendering checks, and final publication proofing."
+            return "This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Publication Draft status. It remains subject to editorial review, citation review, visual proofing, and final release approval."
+
+    if re.match(r"^\*End of (Front Matter|Chapter|Appendix).*\*$", stripped, re.IGNORECASE):
+        return None
 
     if re.match(r"^\*\*Status:\*\*\s*Reconstructed from", stripped, re.IGNORECASE):
         return None

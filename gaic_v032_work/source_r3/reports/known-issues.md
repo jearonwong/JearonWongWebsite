@@ -29,6 +29,34 @@ Phase 1D-5 does not rewrite the white paper and does not regenerate DOCX/PDF art
 
 **Phase 1D-5 Decision:** PHASE 1D-5 FULL-TEXT REVIEW PACK GENERATED / HUMAN EDITORIAL REVIEW REQUIRED.
 
+## Phase 1D-5 Wave 1 Front Matter / Executive Summary Patch
+
+### Status: WAVE 1 PATCH APPLIED / WAVES 2-8 PENDING
+
+Wave 1 human review covered the Phase 1D-5 line-numbered full white paper range `L00001-L00290` for Front Matter + Executive Summary. Content preservation passed, but publication-candidate readiness failed because public-facing front matter still contained internal production status language, a publication URL placeholder, source-engineering version language, weak navigation structure, an under-structured executive summary, code-style F-01 figure formatting, and the `End of Front Matter` source marker.
+
+**Patch applied:**
+
+1. Public-facing front matter now uses `Publication Draft` status rather than internal phase/QA wording.
+2. Recommended citation now uses draft-safe publication URL wording without square-bracket placeholder text.
+3. Version history and revision note now use reader-facing publication language instead of source reconstruction language.
+4. Table of Contents now includes Part I-V grouping.
+5. List of Tables now clarifies that complete table inventory remains in the technical source ledger.
+6. Executive Summary now includes `Key Findings` and `Enterprise Action Implications`.
+7. Figure F-01 source formatting now uses formal figure text instead of code-style formatting.
+8. `End of Front Matter` was removed from publication-facing source.
+9. Formal author identity now names Jearon Wong, Protocol Architect for the Agent Era, Creator of MPLP — Multi-Agent Lifecycle Protocol, and JearonWong.com.
+10. The Phase 1D-4 full-whitepaper generator now suppresses internal public-facing phase/QA status and source end markers for future generation.
+
+**Remaining blockers:**
+
+1. Waves 2-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final citation style, visual proofing, table split spot-checking, and figure proofing remain pending.
+4. Publication candidate readiness is not declared.
+
+**Wave 1 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
 ## Phase 1D-4 Full-Content White Paper Reflow
 
 ### Status: FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED

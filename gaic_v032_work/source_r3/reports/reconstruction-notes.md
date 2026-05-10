@@ -198,6 +198,41 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 
 **Phase 1D-5 Status:** ◐ FULL-TEXT REVIEW PACK GENERATED / HUMAN EDITORIAL REVIEW REQUIRED.
 
+---
+
+## Phase 1D-5 Wave 1 Notes (May 10, 2026)
+
+**Scope:** Front Matter + Executive Summary publication-quality patch after human line-by-line review of `L00001-L00290`.
+
+**Review result:**
+
+- Content preservation: PASS.
+- Publication readiness: FAIL before patch.
+- Publication candidate: BLOCKED.
+
+**Patch applied:**
+
+1. Removed internal public-facing phase/QA status from the front matter and replaced it with Publication Draft language.
+2. Replaced the publication URL placeholder with draft-safe wording.
+3. Rewrote version history and revision notes for public readers rather than source reconstruction governance.
+4. Added part-level TOC grouping for problem/method, MRO/scoring, system mapping/validation, enterprise adoption, and technical appendices.
+5. Clarified the List of Tables as a major table-group navigation aid with the complete table inventory maintained in the source ledger.
+6. Added Executive Summary `Key Findings` and `Enterprise Action Implications` blocks without adding unsupported statistics or new systems.
+7. Replaced the F-01 code-style lane with formal figure text and preserved its non-certifying boundary note.
+8. Removed `End of Front Matter` from publication-facing source.
+9. Added restrained formal author identity for Jearon Wong while preserving the MPLP conflict-of-interest boundary.
+10. Updated the Phase 1D-4 full-whitepaper generator to avoid reintroducing internal status/footer/source-marker residue in future generated artifacts.
+
+**Boundary discipline:**
+
+- No Chapters 1-18 prose was rewritten.
+- No MRO/RCCS/ALCS taxonomy changed.
+- No system mapping semantics changed.
+- No final publication candidate was declared.
+- Non-legal, non-certifying, non-ranking, non-procurement boundaries remain intact.
+
+**Phase 1D-5 Wave 1 Status:** ◐ PATCH APPLIED / WAVES 2-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
 **Scope:** Chapter 16 — Boundary to Companion Papers: Evidence, Assurance, and Insurability (all sections 16.0-16.6)

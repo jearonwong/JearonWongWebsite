@@ -7,10 +7,15 @@
 **Document ID:** GACWP-2026-v0.3.2-FRC-R3  
 **Version:** v0.3.2 Final Release Candidate R3  
 **Trace Tag:** GACWP-2026-v0.3.2-FRC-R3  
-**Status:** Phase 1D-2 publication design draft; QA required; not final publication candidate; non-legal technical governance analysis; not legal advice  
+**Status:** Publication Draft — non-legal technical governance analysis; not legal advice
 **Compiled:** May 2026  
 **Source Snapshot:** Sources available and checked as of May 2026  
 **Scope Snapshot:** Public-source technical governance analysis based on sources available and checked as of May 2026
+
+**Author:** Jearon Wong
+**Role:** Protocol Architect for the Agent Era
+**Protocol Disclosure:** Creator of MPLP — Multi-Agent Lifecycle Protocol
+**Site:** JearonWong.com
 
 ---
 
@@ -26,7 +31,11 @@
 |-------|-------|
 | Document ID | GACWP-2026-v0.3.2-FRC-R3 |
 | Version | v0.3.2 Final Release Candidate R3 |
-| Status | Phase 1D-2 publication design draft; QA required; not final publication candidate; agenda-setting technical governance white paper; not legal advice |
+| Status | Publication Draft — agenda-setting technical governance white paper; not legal advice |
+| Author | Jearon Wong |
+| Author role | Protocol Architect for the Agent Era |
+| Author disclosure | Creator of MPLP — Multi-Agent Lifecycle Protocol |
+| Site | JearonWong.com |
 | Primary concept | AI Agent Lifecycle Governance |
 | Primary transition | From model governance to agentic lifecycle conformance |
 | Primary thesis | AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance. |
@@ -114,7 +123,7 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 ### Recommended Citation
 
-> Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Version v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3). May 2026. Available at [publication URL when released].
+> Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Version v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3). May 2026. Publication URL to be assigned before release.
 
 ### Short Citation
 
@@ -130,34 +139,42 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 | Version | Date | Trace Tag | Summary |
 |---------|------|-----------|---------|
-| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Clean Markdown source edition with enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements. |
+| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Expanded publication draft integrating lifecycle governance, MROs, RCCS/ALCS scoring, evidence validation, enterprise failure scenarios, adoption roadmap, and technical appendices. |
 | v0.3.1-PC | May 2026 | GACWP-2026-v0.3.1-PC | Publication candidate. Adds ALCS-to-MRO mapping, clarifies RCCS weighting and calculation reproducibility, updates Colorado AI Act status note as of 2026-05-07, aligns Singapore MGF wording with official four-part framing. |
 | v0.3-FULL | April 2026 | GACWP-2026-v0.3-FULL | Full research edition baseline (historical reference only) |
 
 ### Revision Note for v0.3.2-FRC-R3
 
-v0.3.2-FRC-R3 integrates enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements into a clean Markdown source edition.
+v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterprise control mapping, lifecycle scoring, evidence validation, system assessment boundaries, adoption guidance, and technical appendices.
 
 **Key improvements in R3:**
-- Clean Markdown source master for reproducible publication generation
-- Enhanced citation and evidence basis framework
-- Strengthened boundary disclosure and conflict-of-interest statements
-- Improved version control and trace tag discipline
-- Comprehensive inventory tracking for tables, figures, and citations
+- Full lifecycle governance framing for agentic and multi-agent systems
+- Missing Regulatory Objects connected to RCCS and ALCS analysis
+- Evidence validation and enterprise failure scenario coverage
+- Adoption roadmap and enterprise control crosswalks
+- Strengthened boundary disclosure, conflict-of-interest discipline, and non-claim language
 
 ---
 
 ## Table of Contents
+
+### Part I — Problem and Method
 
 1. Scope, Methodology, and Non-Legal Boundary
 2. The Missing Layer: AI Agent Lifecycle Governance
 3. Why Agentic AI Breaks Model-Centric Compliance
 4. Regulatory and Standards Baseline
 5. From Regulatory Language to Engineering Objects
+
+### Part II — Missing Regulatory Objects and Scoring
+
 6. Missing Regulatory Objects for Agentic and MAS Compliance
 7. RCCS - Regulatory Compliance Coverage Score
 8. ALCS - Agentic Lifecycle Conformance Score
 9. Composite Scoring Method
+
+### Part III — System Mapping and Lifecycle Validation
+
 10. Enterprise Adoption, Procurement, and Control Crosswalk
 11. Comparative Field and System Positioning
 12. Detailed System Mappings
@@ -165,8 +182,14 @@ v0.3.2-FRC-R3 integrates enterprise control, procurement, board reporting, model
 14. Evidence-Based Validation Pattern
 15. Enterprise Failure Scenarios
 16. Boundary to Companion Papers
+
+### Part IV — Enterprise Adoption
+
 17. Adoption Roadmap
 18. Conclusion
+
+### Part V — Technical Appendices
+
 19. Appendices A-K
 
 ---
@@ -191,6 +214,8 @@ v0.3.2-FRC-R3 integrates enterprise control, procurement, board reporting, model
 
 The paper contains detailed body and appendix tables. The most important table groups are:
 
+A complete table inventory is maintained in the technical source ledger; this publication lists major table groups for reader navigation.
+
 - Scope, boundary, document-control, and evidence-basis tables in the front matter and Chapter 1
 - Regulatory and standards baseline tables in Chapter 4
 - Missing Regulatory Object tables in Chapter 6
@@ -213,6 +238,15 @@ The first generation of AI governance focused on model governance. That work rem
 
 This white paper names the missing layer **AI Agent Lifecycle Governance**. AI Agent Lifecycle Governance is the governance layer that defines how agentic work is authorized, executed, evidenced, reviewed, accepted, disputed, remediated, and reused across agents, humans, tools, projects, vendors, and organizational boundaries.
 
+### Key Findings
+
+- Model governance remains necessary, but it is not sufficient for agentic and multi-agent workflows that act through tools, memory, APIs, and delegation.
+- Lifecycle responsibility objects are needed to connect intent, authority, evidence, review, accepted outcome, dispute, remediation, and reuse.
+- The sixteen Missing Regulatory Objects define engineering objects that help make existing governance expectations testable in agentic execution.
+- RCCS and ALCS measure different layers: regulatory coverage and agentic lifecycle conformance. A system can be strong in one layer and weak in the other.
+- Logs, traces, dashboards, and guardrails are useful, but they are not evidence chains by themselves unless tied to authority, responsibility, privacy, acceptance, and remediation semantics.
+- Validation verdicts can support evidence review, but they do not prove legal compliance, regulatory approval, certification, or procurement suitability.
+
 ### Core Thesis
 
 **The paper argues that AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.**
@@ -221,7 +255,7 @@ That thesis has practical consequences. Enterprise buyers, auditors, insurers, r
 
 **Figure F-01: AI Agent Lifecycle Governance Stack**
 
-`Intent -> Context -> Plan -> Authority -> Agent Work -> Tool Actions -> Evidence -> Review -> Accepted Outcome -> Dispute / Remediate`
+Intent → Context → Plan → Authority → Agent Work → Tool Actions → Evidence → Review → Accepted Outcome → Dispute / Remediation
 
 *Figure F-01 summarizes the lifecycle responsibility chain used throughout the paper. The chain is a governance model, not a certification path or legal compliance proof.*
 
@@ -271,20 +305,27 @@ Finally, the report compares the major system categories now shaping the enterpr
 
 The comparison is not a ranking of product quality. It is a map of responsibility semantics. The key question is not which system is useful. Most of them are useful. The key question is whether the system defines the lifecycle responsibility objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints.
 
+### Enterprise Action Implications
+
+- Start with an authority, responsibility, and evidence inventory before selecting or extending agentic platforms.
+- Separate model governance controls from lifecycle responsibility controls so that logs, traces, guardrails, and reviews are not over-read as proof of accepted outcomes.
+- Map current systems against MRO, RCCS, and ALCS dimensions to identify which controls are documented, which are implementation-dependent, and which remain analytical assumptions.
+- Treat MPLP, Validation Lab, and comparable lifecycle protocols or evidence tools as possible implementation patterns, not required paths or certification mechanisms.
+- Preserve source and evidence levels near high-risk product, protocol, validation, and system-mapping claims before publication or procurement use.
+
 ### Audience and Use
 
 This paper is written for AI governance leaders, enterprise architects, compliance teams, cybersecurity leaders, agent platform builders, insurance and assurance professionals, and protocol designers. It is a technical governance analysis, not legal advice. It translates regulatory and standards language into engineering requirements for agentic and multi-agent systems.
 
 ### Document Status
 
-This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Phase 1D-2 publication design draft status. It is not yet a final publication candidate. The current source is the controlled Markdown source for designed DOCX/PDF generation, visual QA, citation rendering checks, and final publication proofing.
+This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Publication Draft status. It remains subject to editorial review, citation review, visual proofing, and final release approval.
 
 ---
 
+**Author:** Jearon Wong
 **Author Position:** Protocol Architect for the Agent Era
+**Protocol Disclosure:** Creator of MPLP — Multi-Agent Lifecycle Protocol
+**Site:** JearonWong.com
 
 **Non-legal technical governance analysis. Not legal advice. MPLP is discussed with explicit conflict-of-interest disclosure.**
-
----
-
-*End of Front Matter*
