@@ -24,7 +24,7 @@ This chapter is a bridge from lifecycle objects to enterprise controls. It does 
 
 The following figure illustrates how AI Agent Lifecycle Governance maps into enterprise control structures. Regulation and standards define baseline requirements. RCCS measures regulatory compliance coverage. ALCS measures lifecycle conformance. MROs provide engineering objects. Together, these layers produce enterprise control evidence that supports audit, insurance, and board reporting readiness.
 
-[FIGURE PLACEHOLDER F-06: Enterprise Control Overlay for AI Agent Lifecycle Governance]
+**Figure F-06: Enterprise Control Overlay for AI Agent Lifecycle Governance**
 
 **Figure description:**
 
@@ -100,7 +100,7 @@ Traditional model risk management asks whether a model is governed. Agentic mode
 
 The following figure illustrates how model, prompt, policy, and runtime changes propagate through the agentic lifecycle and influence authority, tool use, evidence, and accepted outcomes.
 
-[FIGURE PLACEHOLDER F-07: Model Risk in Agentic Lifecycle]
+**Figure F-07: Model Risk in Agentic Lifecycle**
 
 **Figure description:**
 

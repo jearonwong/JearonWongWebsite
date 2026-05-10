@@ -23,6 +23,12 @@ The roadmap is not a procurement guide, certification checklist, or legal compli
 
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to provide a practical path for enterprises to address the lifecycle governance gap identified in this white paper.
 
+**Figure F-11: Stage 0-to-7 Adoption Roadmap**
+
+`Stage 0 Inventory -> Stage 1 Authority -> Stage 2 Responsibility -> Stage 3 Evidence -> Stage 4 Privacy -> Stage 5 Validation -> Stage 6 Remediation -> Stage 7 Scale`
+
+*Figure F-11 summarizes the adoption roadmap. It is a staged implementation guide, not a procurement mandate, certification checklist, or legal compliance procedure.*
+
 ---
 
 ## 17.1 Maturity Assessment and Gap Analysis

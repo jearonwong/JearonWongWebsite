@@ -14,6 +14,12 @@ The core move in this paper is to turn regulatory abstractions into lifecycle ob
 
 The following table summarizes all sixteen MROs. Full detail for MRO-01 through MRO-16 is provided in this chapter.
 
+**Figure F-03: MRO Topology**
+
+`Responsibility -> Authority -> Evidence -> Privacy -> Substitution -> Closure`
+
+*Figure F-03 groups the Missing Regulatory Objects by lifecycle control surface. It is a topology for engineering interpretation, not a new legal taxonomy.*
+
 | ID | Object | Core Judgment | Primary Lifecycle Concern |
 |----|--------|---------------|---------------------------|
 | MRO-01 | Human Role to MAS Responsibility Mapping | Human oversight without human-to-agent responsibility mapping is supervision theater. | Accountability, human oversight, role mapping |
@@ -946,4 +952,3 @@ The next chapters introduce two scoring frameworks that measure how systems map 
 ---
 
 **Chapter 6 Status:** COMPLETE — All sixteen MROs filled; chapter summary added.
-

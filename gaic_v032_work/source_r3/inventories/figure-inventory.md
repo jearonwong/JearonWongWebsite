@@ -1,23 +1,24 @@
 # Figure Inventory
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Status:** PHASE 1C CLEANUP COMPLETE — PHASE 1D RENDERING PENDING  
+**Status:** PHASE 1D-2 PUBLICATION REFLOW IN PROGRESS  
 **Last Updated:** May 10, 2026
 
 ## Required Figures
 
 | Figure ID | Title | Location | Status | Format | Notes |
 |-----------|-------|----------|--------|--------|-------|
-| F-01 | Lifecycle chain for AI Agent Lifecycle Governance | Executive Summary / Chapter 2 | ✓ Placeholder Added | SVG/PNG | Intent → Context → Plan → Authority → Agent Work → Tool Actions → Evidence → Review → Accepted Outcome → Dispute/Remediate; publication-grade rendering pending Phase 1D |
-| F-02 | The governance stack - The missing layer | Chapter 2 | ✓ Placeholder Added | SVG/PNG | 5-layer stack diagram; publication-grade rendering pending Phase 1D |
-| F-03 | MRO topology around AI Agent Lifecycle Governance | Chapter 6 | ⏸️ Placeholder / layout QA pending | SVG/PNG | 16 MROs mapped to lifecycle; verify reference/caption during Phase 1D |
-| F-04 | Composite score weighting | Chapter 9 | ⏸️ Placeholder / layout QA pending | SVG/PNG | RCCS vs ALCS weighting visualization; verify formula labels during Phase 1D |
-| F-05 | Lifecycle conformance mapping strength heatmap | Chapter 11/12 | ✓ Placeholder Added (1B-1) | SVG/PNG | Qualitative heatmap across systems; must remain non-ranking and provisional until source revalidation is complete |
-| F-06 | Enterprise Control Overlay | Chapter 10 | ✓ Placeholder Added (1A-4.1) | SVG/PNG | Enterprise control framework mapping; publication-grade figure pending Phase 1D |
-| F-07 | Model Risk in Agentic Lifecycle | Chapter 10 | ✓ Placeholder Added (1A-4.1) | SVG/PNG | Model risk mapped to lifecycle stages; publication-grade figure pending Phase 1D |
-| F-08 | Evidence-Based Validation Pattern Flow | Chapter 14 | ✓ Placeholder Added (1B-5) | SVG/PNG | Evidence Pack → Hash Manifest → Validation Provider → Verdict Hash flow; publication-grade figure pending Phase 1D |
-| F-09 | Reserved figure slot for numbering continuity | Reserved / Phase 1D | ⏸️ Reserved | SVG/PNG | Reserved during Phase 1C to avoid downstream renumbering risk; evaluate whether to fill or retire during Phase 1D figure/caption QA |
-| F-10 | Companion Paper Boundary Map | Chapter 16 | ✓ Placeholder Added (1A-4.3) | SVG/PNG | Main paper vs companion papers scope; publication-grade figure pending Phase 1D |
+| F-01 | AI Agent Lifecycle Governance Stack | Executive Summary / Chapter 2 | Publication panel required | DOCX-native panel / SVG later | Intent → Context → Plan → Authority → Agent Work → Tool Actions → Evidence → Review → Accepted Outcome → Dispute/Remediate |
+| F-02 | Governance Stack / Missing Layer | Chapter 2 | Publication panel required | DOCX-native panel / SVG later | 5-layer stack diagram; missing layer between orchestration and enterprise trust |
+| F-03 | MRO Topology | Chapter 6 | Publication panel required | DOCX-native panel / SVG later | 16 MROs grouped into lifecycle responsibility clusters |
+| F-04 | RCCS/ALCS Dual Scoring Model | Chapter 9 | Publication panel required | DOCX-native panel / SVG later | RCCS + ALCS with evidence multiplier gate; must preserve non-legal-score boundary |
+| F-05 | Lifecycle Conformance Mapping Strength Heatmap | Chapter 11/12 | Publication panel required | DOCX-native panel / SVG later | Qualitative heatmap; must remain non-ranking and provisional |
+| F-06 | Enterprise Control Overlay | Chapter 10 | Publication panel required | DOCX-native panel / SVG later | Enterprise control framework mapping |
+| F-07 | Model Risk in Agentic Lifecycle | Chapter 10 | Publication panel required | DOCX-native panel / SVG later | Model risk mapped to lifecycle stages |
+| F-08 | Evidence-Based Validation Pattern Flow | Chapter 14 | Publication panel required | DOCX-native panel / SVG later | Evidence Pack → Hash Manifest → Validation Provider → Verdict Hash |
+| F-09 | Enterprise Failure Scenario Chain | Chapter 15 | ✓ Filled in Phase 1D-2 source | DOCX-native panel / SVG later | Trigger → missing lifecycle object → evidence gap → enterprise consequence → remediation closure |
+| F-10 | Companion Paper Boundary Map | Chapter 16 | Publication panel required | DOCX-native panel / SVG later | Main paper vs companion paper scope |
+| F-11 | Stage 0-to-7 Adoption Roadmap | Chapter 17 | Publication panel required | DOCX-native panel / SVG later | Stage strip from inventory to scale |
 
 ## Figure Style Guidelines
 
@@ -32,11 +33,15 @@
 
 F-09 is intentionally reserved. Renumbering F-10 would create unnecessary downstream reference risk, so Phase 1C closes the unexplained numbering gap by preserving F-09 as a reserved slot.
 
-## Phase 1D Actions Required
+## Phase 1D-2 Figure Decision
 
-- Generate or finalize publication-grade figures from the placeholders.
+F-09 is filled as **Enterprise Failure Scenario Chain** in Chapter 15. This resolves the publication numbering gap while preserving F-10 references.
+
+## Phase 1D-2 Actions Required
+
+- Generate or finalize publication-grade DOCX-native panels for all listed figures.
 - Verify caption text, figure references, and numbering continuity.
-- Confirm F-09 should remain reserved or be filled with a real figure.
+- Confirm F-09 renders as a figure panel rather than a reserved gap.
 - Verify no figure clipping, overlap, unreadable labels, or low-resolution rendering in DOCX/PDF.
 
 ## Known Issues from R2

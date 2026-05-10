@@ -16,6 +16,12 @@ Enterprise failure scenarios are not included to claim that agentic AI is unique
 
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to demonstrate that lifecycle governance gaps create predictable failure patterns that enterprises must address.
 
+**Figure F-09: Enterprise Failure Scenario Chain**
+
+`Trigger or workflow change -> missing lifecycle object -> evidence gap -> enterprise consequence -> remediation closure`
+
+*Figure F-09 shows how a localized agentic workflow trigger can become an enterprise failure when the lifecycle object is missing or weak. The figure is an analytical chain, not an incident probability model or claim that all agentic failures follow the same sequence.*
+
 ---
 
 ## 15.1 Failure Mode Categories

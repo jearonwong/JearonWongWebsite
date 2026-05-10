@@ -1,7 +1,28 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D Draft QA)
+**Last Updated:** May 10, 2026 (Phase 1D-2 Publication Reflow)
+
+## Phase 1D-2 Publication Design Reflow
+
+### Status: PUBLICATION DRAFT GENERATED / QA REQUIRED / PUBLICATION CANDIDATE BLOCKED
+
+Phase 1D-2 moved the artifact from engineering draft toward a professional publication design draft. It adds a JearonWong-aligned design system, publication design audit, figure production plan, table reflow plan, front-matter cleanup, F-09 fill decision, a dedicated Phase 1D-2 generation script, and fresh designed DOCX/PDF artifacts under `out/phase_1d2/`.
+
+**Resolved from Phase 1D blockers:**
+
+1. Front matter generated-list placeholders are removed from active source.
+2. F-09 is filled as `Enterprise Failure Scenario Chain` in Chapter 15 and the figure inventory.
+
+**Publication-candidate blockers remaining after Phase 1D-2 draft generation:**
+
+1. Final human publication proofing is still required.
+2. The widest body and appendix tables may still require split-table editorial reflow for final publication readability.
+3. DOCX-native figure panels are publication-draft credible, but final vector/art-directed figures may still be preferable before release.
+4. Citation IDs remain visible as reconstruction/source markers; final citation style remains a publication-candidate decision.
+5. OpenAI platform guide HTTP 403 remains tracked and cannot be treated as fully rendered/validated.
+
+**Phase 1D-2 Decision:** PHASE 1D-2 PUBLICATION DRAFT GENERATED / QA REQUIRED / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1D Fresh Draft Generation
 

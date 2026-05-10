@@ -7,7 +7,7 @@
 **Document ID:** GACWP-2026-v0.3.2-FRC-R3  
 **Version:** v0.3.2 Final Release Candidate R3  
 **Trace Tag:** GACWP-2026-v0.3.2-FRC-R3  
-**Status:** Source reconstruction candidate; not ready for publication; non-legal technical governance analysis; not legal advice  
+**Status:** Phase 1D-2 publication design draft; QA required; not final publication candidate; non-legal technical governance analysis; not legal advice  
 **Compiled:** May 2026  
 **Source Snapshot:** Sources available and checked as of May 2026  
 **Scope Snapshot:** Public-source technical governance analysis based on sources available and checked as of May 2026
@@ -26,7 +26,7 @@
 |-------|-------|
 | Document ID | GACWP-2026-v0.3.2-FRC-R3 |
 | Version | v0.3.2 Final Release Candidate R3 |
-| Status | Source reconstruction candidate; not ready for publication; agenda-setting technical governance white paper; not legal advice |
+| Status | Phase 1D-2 publication design draft; QA required; not final publication candidate; agenda-setting technical governance white paper; not legal advice |
 | Primary concept | AI Agent Lifecycle Governance |
 | Primary transition | From model governance to agentic lifecycle conformance |
 | Primary thesis | AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance. |
@@ -43,7 +43,7 @@ This white paper is a **non-legal technical governance analysis**, not legal adv
 
 ### Purpose
 
-This full research edition expands the v0.3 framework into a publication-grade white paper. Its purpose is to define a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a dual scoring framework, system-specific mappings, comparative matrices, and implementation templates.
+This research edition defines a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a dual scoring framework, system-specific mappings, comparative matrices, and implementation templates.
 
 ### What This Paper Does
 
@@ -130,65 +130,76 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 | Version | Date | Trace Tag | Summary |
 |---------|------|-----------|---------|
-| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Source reconstruction from v0.3.1 semantic base. Integrates Wave 1 enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements. Rebuilds report from clean Markdown source rather than PDF-to-DOCX conversion artifacts. |
+| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Clean Markdown source edition with enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements. |
 | v0.3.1-PC | May 2026 | GACWP-2026-v0.3.1-PC | Publication candidate. Adds ALCS-to-MRO mapping, clarifies RCCS weighting and calculation reproducibility, updates Colorado AI Act status note as of 2026-05-07, aligns Singapore MGF wording with official four-part framing. |
 | v0.3-FULL | April 2026 | GACWP-2026-v0.3-FULL | Full research edition baseline (historical reference only) |
 
 ### Revision Note for v0.3.2-FRC-R3
 
-v0.3.2-FRC-R3 reconstructs the white paper from the v0.3.1 semantic base, integrates Wave 1 enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements, and rebuilds the report from a clean Markdown source rather than from PDF-to-DOCX conversion artifacts.
+v0.3.2-FRC-R3 integrates enterprise control, procurement, board reporting, model risk, cybersecurity, companion-paper boundary, citation policy, and source-audit improvements into a clean Markdown source edition.
 
 **Key improvements in R3:**
-- Clean Markdown source master eliminates PDF conversion artifacts
+- Clean Markdown source master for reproducible publication generation
 - Enhanced citation and evidence basis framework
 - Strengthened boundary disclosure and conflict-of-interest statements
 - Improved version control and trace tag discipline
-- Structured placeholder system for phased content reconstruction
 - Comprehensive inventory tracking for tables, figures, and citations
 
 ---
 
 ## Table of Contents
 
-**Status:** PHASE 1A-2 TO BE GENERATED
-
-*The table of contents will be automatically generated from section headers once all body chapters are filled in Phase 1A-2, 1A-3, and 1A-4.*
+1. Scope, Methodology, and Non-Legal Boundary
+2. The Missing Layer: AI Agent Lifecycle Governance
+3. Why Agentic AI Breaks Model-Centric Compliance
+4. Regulatory and Standards Baseline
+5. From Regulatory Language to Engineering Objects
+6. Missing Regulatory Objects for Agentic and MAS Compliance
+7. RCCS - Regulatory Compliance Coverage Score
+8. ALCS - Agentic Lifecycle Conformance Score
+9. Composite Scoring Method
+10. Enterprise Adoption, Procurement, and Control Crosswalk
+11. Comparative Field and System Positioning
+12. Detailed System Mappings
+13. MPLP Deep Mapping, Boundary, and Non-Claim Discipline
+14. Evidence-Based Validation Pattern
+15. Enterprise Failure Scenarios
+16. Boundary to Companion Papers
+17. Adoption Roadmap
+18. Conclusion
+19. Appendices A-K
 
 ---
 
 ## List of Figures
 
-**Status:** PHASE 1A-2 TO BE GENERATED
-
-*The list of figures will be compiled from the figure inventory once all body chapters are filled.*
-
-**Known figures from v0.3.1:**
-- Figure 1: Lifecycle chain for AI Agent Lifecycle Governance
-- Figure 2: The governance stack - The missing layer sits between orchestration and enterprise trust
-- Figure 3: MRO topology around AI Agent Lifecycle Governance
-- Figure 4: Composite score weighting used in this paper
-- Figure 5: Illustrative lifecycle conformance mapping strength (0-4)
+- Figure F-01: AI Agent Lifecycle Governance Stack
+- Figure F-02: Governance Stack / Missing Layer
+- Figure F-03: MRO Topology
+- Figure F-04: RCCS/ALCS Dual Scoring Model
+- Figure F-05: Lifecycle Conformance Mapping Strength Heatmap
+- Figure F-06: Enterprise Control Overlay
+- Figure F-07: Model Risk in Agentic Lifecycle
+- Figure F-08: Evidence-Based Validation Pattern Flow
+- Figure F-09: Enterprise Failure Scenario Chain
+- Figure F-10: Companion Paper Boundary Map
+- Figure F-11: Stage 0-to-7 Adoption Roadmap
 
 ---
 
 ## List of Tables
 
-**Status:** PHASE 1A-2 TO BE GENERATED
+The paper contains detailed body and appendix tables. The most important table groups are:
 
-*The list of tables will be compiled from the table inventory once all body chapters are filled.*
-
-**Known tables from v0.3.1:**
-- Document Control and Positioning table
-- Evidence Basis levels table
-- Conflict of Interest boundary controls table
-- In Scope / Out of Scope table
-- Regulatory frameworks baseline table
-- Missing Regulatory Objects (MRO-01 through MRO-16) specification tables
-- RCCS dimensions table
-- ALCS dimensions table
-- ALCS to MRO mapping table
-- System comparison and mapping tables
-- Composite scoring formula and evidence multiplier tables
+- Scope, boundary, document-control, and evidence-basis tables in the front matter and Chapter 1
+- Regulatory and standards baseline tables in Chapter 4
+- Missing Regulatory Object tables in Chapter 6
+- RCCS, ALCS, and composite scoring tables in Chapters 7-9
+- Enterprise control, procurement, board reporting, model risk, and cybersecurity crosswalk tables in Chapter 10
+- System mapping and comparative posture tables in Chapters 11-13 and Appendix D
+- Evidence validation and failure scenario tables in Chapters 14-15
+- Adoption roadmap and contribution-summary tables in Chapters 17-18
+- Technical appendices A-K, including scorecard templates, source ledgers, detailed rubrics, Appendix G provisional system assessments, procurement scorecards, source audit registers, gap closure matrices, and editorial remediation records
 
 ---
 
@@ -207,6 +218,12 @@ This white paper names the missing layer **AI Agent Lifecycle Governance**. AI A
 **The paper argues that AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.**
 
 That thesis has practical consequences. Enterprise buyers, auditors, insurers, regulators, and internal governance teams need more than dashboards, logs, or guardrails. They need lifecycle objects: delegated authority boundaries, human-role-to-agent-responsibility mappings, tool-action liability records, evidence partitions, accepted outcome states, cross-project reuse controls, privacy-preserving validation packs, and dispute closure records.
+
+**Figure F-01: AI Agent Lifecycle Governance Stack**
+
+`Intent -> Context -> Plan -> Authority -> Agent Work -> Tool Actions -> Evidence -> Review -> Accepted Outcome -> Dispute / Remediate`
+
+*Figure F-01 summarizes the lifecycle responsibility chain used throughout the paper. The chain is a governance model, not a certification path or legal compliance proof.*
 
 ### Dual Scoring Framework
 
@@ -260,7 +277,7 @@ This paper is written for AI governance leaders, enterprise architects, complian
 
 ### Document Status
 
-This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)**, a source reconstruction candidate built from the v0.3.1 semantic base. It is not ready for publication. It is a clean Markdown source master that eliminates PDF conversion artifacts and establishes a structured foundation for final content integration and validation.
+This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Phase 1D-2 publication design draft status. It is not yet a final publication candidate. The current source is the controlled Markdown source for designed DOCX/PDF generation, visual QA, citation rendering checks, and final publication proofing.
 
 ---
 

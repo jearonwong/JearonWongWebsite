@@ -12,6 +12,12 @@ This chapter introduces the **Composite Scoring Method**, which combines RCCS an
 
 The chapter explains the composite score formula, evidence multiplier application, interpretation guidance for RCCS and ALCS together, reproducibility requirements, and boundary statements. It establishes clear expectations about what composite scoring measures and what it does not measure, and bridges to the system mapping chapters that follow.
 
+**Figure F-04: RCCS/ALCS Dual Scoring Model**
+
+`RCCS regulatory coverage + ALCS lifecycle conformance -> evidence-adjusted analytical composite`
+
+*Figure F-04 shows the dual scoring model used in this paper. It is an analytical model for comparing governance capability, not a legal compliance score, certification, or regulatory approval signal.*
+
 ---
 
 ## 9.1 Purpose of Composite Scoring

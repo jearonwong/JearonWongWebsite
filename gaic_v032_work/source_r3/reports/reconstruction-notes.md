@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1B-10)
+**Last Updated:** May 10, 2026 (Phase 1D-2)
 
 ## Reconstruction Strategy
 
@@ -27,9 +27,10 @@ R3 uses phased reconstruction:
 6. **Phase 1A-2.5:** Fill Chapter 5 only (✓ COMPLETE)
 7. **Phase 1A-3:** Fill chapters 6-9 (MRO, RCCS, ALCS, Composite Scoring) (✓ COMPLETE)
 8. **Phase 1A-4:** Fill chapters 10, 16 (Wave 1 additions) (✓ COMPLETE)
-9. **Phase 1B:** Fill chapters 11-15, 17-18, appendices (⏸️ PENDING)
-10. **Phase 1C:** Global cleanup, citations, tables, figures (⏸️ PENDING)
-11. **Phase 1D:** DOCX/PDF generation and visual QA (⏸️ PENDING)
+9. **Phase 1B:** Fill chapters 11-15, 17-18, appendices (✓ COMPLETE)
+10. **Phase 1C:** Global cleanup, citations, tables, figures (✓ COMPLETE)
+11. **Phase 1D:** DOCX/PDF generation and visual QA (◐ DRAFT GENERATED / QA REQUIRED)
+12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -82,6 +83,29 @@ Each phase has clear acceptance gates. A phase is NOT complete until all gates p
 ---
 
 *These notes guide the reconstruction process through all phases.*
+
+---
+
+## Phase 1D-2 Notes (May 10, 2026)
+
+**Scope:** Publication design reflow from engineering draft to JearonWong-aligned white paper draft.
+
+**Actions completed:**
+
+1. Created a publication design audit classifying the Phase 1D artifact as an engineering draft.
+2. Created `design/gaic-whitepaper-vi-system.md` with cover, typography, palette, figure, table, citation, and PDF export rules.
+3. Created a figure production plan and filled F-09 as Enterprise Failure Scenario Chain.
+4. Created a table reflow plan for high-risk body and appendix tables.
+5. Rebuilt front matter to remove generated-list placeholders and raw reconstruction language.
+6. Added `scripts/generate_r3_phase1d2_publication_draft.py` for fresh designed artifacts under `out/phase_1d2/`.
+7. Generated fresh Phase 1D-2 assembled Markdown, DOCX, PDF, generation log, and 539 rendered PDF page PNGs.
+
+**Boundary discipline:**
+
+- No core claims, scoring methodology, MRO/ALCS taxonomy, or system assessment semantics changed.
+- No new systems, rankings, vendor endorsements, certification claims, legal compliance proof claims, or procurement recommendations introduced.
+- Publication candidate remains blocked until designed artifact QA passes.
+- Phase 1D-2 status is publication draft generated / QA required, not publication candidate ready.
 
 ---
 

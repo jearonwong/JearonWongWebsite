@@ -171,9 +171,9 @@ The positioning in this chapter prepares the reader for Chapter 12 by establishi
 
 ---
 
-**[FIGURE PLACEHOLDER F-05: Lifecycle Conformance Mapping Strength Heatmap]**
+**Figure F-05: Lifecycle Conformance Mapping Strength Heatmap**
 
-*Figure description: A future heatmap showing lifecycle conformance mapping strength across systems and MRO / ALCS dimensions. The heatmap will use a 0-4 scale to visualize system capability strength across all fifteen ALCS dimensions and sixteen MROs. Systems will be shown as rows, dimensions as columns, and cell color intensity will reflect capability strength. This figure will be generated in Phase 1C after Chapter 12 mappings are complete and validated.*
+*Figure F-05 is a qualitative, non-ranking map of lifecycle conformance visibility across systems and MRO / ALCS dimensions. It must not be read as a product ranking, procurement recommendation, or final vendor assessment.*
 
 ---
 

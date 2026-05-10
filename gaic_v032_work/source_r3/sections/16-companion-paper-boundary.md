@@ -265,7 +265,7 @@ The boundary also ensures that adoption recommendations do not overreach into le
 
 ---
 
-[FIGURE PLACEHOLDER F-10: Companion Paper Boundary Map]
+**Figure F-10: Companion Paper Boundary Map**
 
 **Figure description:**
 

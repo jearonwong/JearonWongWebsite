@@ -24,7 +24,7 @@ The evidence-based validation pattern separates evidence generation from evidenc
 
 **Pattern boundary:** The pattern validates that lifecycle responsibility objects exist, are structured correctly, and satisfy predefined governance rules. It does not validate business logic correctness, model accuracy, legal compliance, or regulatory approval.
 
-**Figure F-08 Placeholder: Evidence-Based Validation Pattern Flow**
+**Figure F-08: Evidence-Based Validation Pattern Flow**
 
 ```
 [Organization] → Evidence Pack → [Hash Manifest] → [Validation Provider]
