@@ -14,11 +14,11 @@ The core move in this paper is to turn regulatory abstractions into lifecycle ob
 
 The following table summarizes all sixteen MROs. Full detail for MRO-01 through MRO-16 is provided in this chapter.
 
-**Figure F-03: MRO Topology**
+**Figure F-03 — MRO Topology**
 
-`Responsibility -> Authority -> Evidence -> Privacy -> Substitution -> Closure`
+Responsibility → Authority → Evidence → Privacy → Substitution → Closure
 
-*Figure F-03 groups the Missing Regulatory Objects by lifecycle control surface. It is a topology for engineering interpretation, not a new legal taxonomy.*
+*Figure F-03 groups the Missing Regulatory Objects by lifecycle control surface. It is a topology for engineering interpretation, not a new legal taxonomy, certification path, or compliance proof.*
 
 | ID | Object | Core Judgment | Primary Lifecycle Concern |
 |----|--------|---------------|---------------------------|
@@ -39,7 +39,7 @@ The following table summarizes all sixteen MROs. Full detail for MRO-01 through 
 | MRO-15 | Vendor / Model / Runtime Substitution Conformance | Vendor neutrality is not real unless compliance survives substitution. | Substitution, vendor changes, conformance continuity |
 | MRO-16 | Incident, Dispute, and Remediation Closure | A compliance incident closes when evidence, responsibility, correction, and acceptance are resolved. | Incident closure, dispute resolution, remediation |
 
-**Table 6-01:** Summary of the Sixteen Missing Regulatory Objects
+**Table T-06-01:** Summary of the Sixteen Missing Regulatory Objects
 
 ---
 
@@ -49,19 +49,27 @@ All sixteen MRO object cards share a common set of identity and evidence fields.
 
 The following table defines the common fields that apply to all MROs:
 
-**Table 6-01A:** Common MRO Field Model
+**Table T-06-01A:** Common MRO Field Model
 
 | Common Field | Purpose |
 |--------------|---------|
 | object_id | Unique identifier for the object instance |
+| object_type | MRO type identifier for the object instance |
 | lifecycle_id | Identifier linking the object to a specific lifecycle execution |
-| project_id / scope_id | Project or scope context in which the object applies |
-| actor_role_id | Human role identifier associated with the object |
-| agent_role_id | Agent role identifier associated with the object (where applicable) |
-| timestamp | Creation or last modification timestamp |
-| version | Version identifier for the object schema or instance |
+| project_id | Project or regulated context in which the object applies |
+| object_version | Version identifier for the object schema or instance |
+| related_human_role_id | Human role identifier associated with the object |
+| related_agent_role_id | Agent role identifier associated with the object, where applicable |
+| authority_scope | Scope of authority for this object |
+| risk_class | Risk classification for this object |
 | evidence_pointer | Reference to evidence supporting the object's validity |
+| privacy_treatment | Privacy treatment for this object |
 | status | Current lifecycle status of the object (active, closed, revoked, etc.) |
+| created_at | Timestamp when this object was created |
+| updated_at | Timestamp when this object was last updated |
+| closure_reason | Reason for closure, if the object is closed |
+
+Implementation aliases may appear in specific systems. In this paper, `actor_role_id` is treated as an implementation alias for `related_human_role_id`, and `timestamp` is treated as implementation shorthand for `created_at` / `updated_at`, not as separate canonical fields.
 
 Individual MRO object cards below therefore emphasize MRO-specific purpose, controls, failure mode, and audit question rather than repeating the full common field model.
 
@@ -86,12 +94,12 @@ Human oversight without human-to-agent responsibility mapping is supervision the
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make human role to MAS responsibility mapping explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable human role to MAS responsibility mapping semantics. |
 | Audit question | Can an independent reviewer determine whether human role to MAS responsibility mapping was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-02:** MRO-01 Object Card — Human Role to MAS Responsibility Mapping
+**Table T-06-02:** MRO-01 Object Card — Human Role to MAS Responsibility Mapping
 
 ### Detailed Discussion
 
@@ -105,13 +113,13 @@ The difficulty is that a human may own business acceptance while an agent owns e
 
 Without this map, a company can show that a human was somewhere in the loop but cannot prove that the right human held the right responsibility at the right lifecycle point. This weakens internal audit, customer assurance, and board-level accountability because role labels become narrative claims rather than evidence-backed assignments.
 
-Platforms with identity, approval, or workflow controls may partially support this object, but buyers should ask whether the mapping survives multi-agent delegation, cross-project reuse, and external validation. The implementation test is to select a completed run and ask: who owned intent, who approved risk, who executed each step, who reviewed evidence, and who accepted the outcome? If the answer requires tribal memory, the mapping is not audit-grade.
+Adjacent identity, approval, or workflow controls may support this object, but lifecycle conformance requires explicit object semantics that preserve responsibility mapping across multi-agent delegation, cross-project reuse, and external validation. The implementation test is to select a completed run and ask: who owned intent, who approved risk, who executed each step, who reviewed evidence, and who accepted the outcome? If the answer requires tribal memory, the mapping is not audit-grade.
 
 ### Design Implication
 
 The object should be represented as a role-responsibility graph linking human role IDs, agent role IDs, delegated scopes, reserved decisions, review duties, evidence obligations, and accepted-outcome authority. It must be updated when responsibilities move across teams or projects.
 
-Multi-agent frameworks often score well on collaboration metaphors but lower on accountability semantics unless role objects include responsibility, evidence, and escalation duties. The design should separate persona labels from capability boundaries, evidence duties, and human accountability.
+The design should separate persona labels from capability boundaries, evidence duties, and human accountability so that collaboration structure does not substitute for responsibility semantics.
 
 ### Audit Question
 
@@ -138,12 +146,12 @@ IAM permission decides access. Delegated authority decides responsibility.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make delegated authority boundary explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable delegated authority boundary semantics. |
 | Audit question | Can an independent reviewer determine whether delegated authority boundary was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-03:** MRO-02 Object Card — Delegated Authority Boundary
+**Table T-06-03:** MRO-02 Object Card — Delegated Authority Boundary
 
 ### Detailed Discussion
 
@@ -151,19 +159,17 @@ Delegated authority is narrower than access control. A model or agent may techni
 
 The core question for MRO-02 is whether a system distinguishes technical permission from business authority. Strong support requires action-level delegation tied to scope, condition, risk class, expiry, escalation, and evidence. The same tool call can be harmless in one context and impermissible in another. Authority must therefore be evaluated against intent and plan state, not only against static credentials.
 
-The difficulty is that the same tool call can be harmless in one context and impermissible in another. Authority must therefore be evaluated against intent and plan state, not only against static credentials.
-
 ### Enterprise Implication
 
 If authority is reduced to IAM, API keys, or tool availability, a low-risk task can silently become a high-impact act. The organization may later discover that the system had permission to act but no evidence that the action was approved under the relevant business scope.
 
-Cloud IAM, guardrails, and workflow approvals are valuable adjacent controls, but they become lifecycle conformance only when they bind the specific action to a delegated authority object. The market implication is that buyers should ask whether the system can show the exact authority basis and escalation rule for a high-impact tool call before it executes.
+Adjacent controls such as IAM, guardrails, and workflow approvals may support this object, but lifecycle conformance requires explicit object semantics that bind a specific action to delegated authority, escalation rules, and evidence.
 
 ### Design Implication
 
 The boundary should be checked before high-impact tool calls and should include action class, permitted scope, expiration, revocation, escalation path, evidence pointer, and human override requirements. It should fail closed when authority cannot be reconstructed.
 
-Microsoft Azure AI Foundry and AWS Bedrock provide strong feature/workflow mapping for authorization, escalation, action scope, and revocation. These capabilities can support lifecycle governance but do not automatically define accepted outcome, human-role-to-MAS mapping, or cross-project responsibility continuity.
+Adjacent platform capabilities can support lifecycle governance, but they do not automatically define accepted outcome, human-role-to-MAS mapping, or cross-project responsibility continuity.
 
 ### Audit Question
 
@@ -190,12 +196,12 @@ An agent role is a bounded responsibility surface, not a human job title.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make agent role boundaries explicit, inspectable, and replayable within an agentic lifecycle, separating persona labels from responsibility semantics. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable agent role responsibility semantics. |
 | Audit question | Can an independent reviewer determine whether agent role boundaries were properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-04:** MRO-03 Object Card — Agent Role is not Human Role
+**Table T-06-04:** MRO-03 Object Card — Agent Role is not Human Role
 
 ### Detailed Discussion
 
@@ -203,13 +209,11 @@ Agent labels such as researcher, writer, analyst, or reviewer are useful interfa
 
 The core question for MRO-03 is whether agent roles are governance identities or only execution personas. Strong support requires separating persona labels from capability boundaries, evidence duties, and human accountability. Human-like role labels are persuasive in UI and documentation, but they can obscure the fact that legal and business accountability remains with humans and organizations.
 
-The difficulty is that human-like role labels are persuasive in UI and documentation, but they can obscure the fact that legal and business accountability remains with humans and organizations.
-
 ### Enterprise Implication
 
 Treating an agent persona as a human job role creates false accountability. The company may believe that a reviewer agent has performed review while no accountable human or approved review boundary exists.
 
-Multi-agent frameworks often score well on collaboration metaphors but lower on accountability semantics unless role objects include responsibility, evidence, and escalation duties. The market implication is that buyers should ask whether the system can prove that an agent role carried responsibility semantics, not merely a persuasive label.
+Adjacent controls may support this object, but lifecycle conformance requires explicit object semantics for responsibility, evidence, escalation duties, and human accountability linkage.
 
 ### Design Implication
 
@@ -242,12 +246,12 @@ Output is a system event. Accepted outcome is a governance state.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make accepted outcome compliance explicit, inspectable, and replayable within an agentic lifecycle, separating execution completion from governance acceptance. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable accepted outcome compliance semantics. |
 | Audit question | Can an independent reviewer determine whether accepted outcome compliance was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-05:** MRO-04 Object Card — Accepted Outcome Compliance
+**Table T-06-05:** MRO-04 Object Card — Accepted Outcome Compliance
 
 ### Detailed Discussion
 
@@ -255,13 +259,11 @@ Agentic systems often mark work as complete when execution reaches a terminal st
 
 The core question for MRO-04 is whether output completion is separated from outcome acceptance. Strong support requires acceptance criteria, reviewer identity, evidence linkage, and dispute/remediation state. Execution engines naturally optimize for terminal states, while governance requires a second state transition from completed output to accepted outcome.
 
-The difficulty is that execution engines naturally optimize for terminal states, while governance requires a second state transition from completed output to accepted outcome.
-
 ### Enterprise Implication
 
 Without accepted-outcome semantics, completed tasks may enter business processes without accountable review. This creates disputes when customers, regulators, or internal stakeholders ask who accepted the work and on what evidence.
 
-Orchestrators and SDKs may complete work reliably, but enterprise buyers should ask whether the system can prove accepted delivery rather than executed task closure. Downstream business teams may rely on unaccepted output. In a dispute, the enterprise cannot distinguish whether the problem was execution quality, review failure, or missing acceptance policy.
+Adjacent execution controls may complete work reliably, but lifecycle conformance requires explicit object semantics for accepted delivery rather than executed task closure. In a dispute, the enterprise must be able to distinguish execution quality, review failure, and missing acceptance policy.
 
 ### Design Implication
 
@@ -294,12 +296,12 @@ Tool use is where AI output becomes external consequence.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make tool-action liability boundary explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable tool-action liability boundary semantics. |
 | Audit question | Can an independent reviewer determine whether tool-action liability boundary was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-06:** MRO-05 Object Card — Tool-Action Liability Boundary
+**Table T-06-06:** MRO-05 Object Card — Tool-Action Liability Boundary
 
 ### Detailed Discussion
 
@@ -313,11 +315,9 @@ The difficulty is that a tool log alone may show that an action happened, but no
 
 ### Enterprise Implication
 
-A tool log alone may show that an action happened, but not whether the agent had authority, whether the action was reversible, which system was affected, or who owns the resulting consequence.
-
 Without liability boundaries, enterprises face disputes when external actions cause customer impact, regulatory violations, or financial loss. The organization cannot prove who authorized the action, whether it was within delegated scope, or whether rollback procedures were available.
 
-Cloud IAM and API permission controls are valuable adjacent capabilities, but they become lifecycle conformance only when they bind the specific tool action to authority, reversibility, affected systems, and accountable ownership. The market implication is that buyers should ask whether the system can reconstruct the full liability context for any consequential tool action.
+Adjacent controls such as IAM and API permissions may support this object, but lifecycle conformance requires explicit object semantics that bind the specific tool action to authority, reversibility, affected systems, and accountable ownership.
 
 ### Design Implication
 
@@ -350,18 +350,16 @@ Handoff without explicit responsibility transfer is just routing.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make responsibility transfer across agents explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable responsibility transfer across agents semantics. |
 | Audit question | Can an independent reviewer determine whether responsibility transfer across agents was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-07:** MRO-06 Object Card — Responsibility Transfer Across Agents
+**Table T-06-07:** MRO-06 Object Card — Responsibility Transfer Across Agents
 
 ### Detailed Discussion
 
 Handoff is an execution event; responsibility transfer is a governance event. When one agent delegates to another, the receiving agent must inherit constraints, evidence duties, privacy restrictions, and escalation conditions rather than merely receiving a prompt or task payload.
-
-Agent handoff is not automatically responsibility transfer. A receiving agent must inherit constraints, evidence duties, privacy limitations, escalation rules, and acceptance conditions. Upstream and downstream responsibility must remain reconstructable.
 
 The core question for MRO-06 is whether the system distinguishes workflow routing from responsibility transfer. Strong support requires explicit transfer records declaring transferred scope, retained scope, inherited constraints, evidence obligations, receiving-role acceptance, and rejection/escalation behavior.
 
@@ -369,11 +367,9 @@ The difficulty is that workflow engines naturally optimize for task routing, whi
 
 ### Enterprise Implication
 
-If transfer is implicit, responsibility fragments. A downstream agent can claim it only followed instructions while the upstream agent no longer controls execution, leaving a gap in audit and remediation.
-
 Without explicit transfer semantics, multi-agent workflows create accountability gaps. When disputes arise, the organization cannot prove which agent held which responsibility at which lifecycle point. This weakens internal audit, customer assurance, and regulatory defense.
 
-Multi-agent frameworks often score well on collaboration metaphors but lower on accountability semantics unless transfer objects include responsibility, evidence, and escalation duties. The market implication is that buyers should ask whether the system can reconstruct responsibility continuity across agent handoffs.
+Adjacent orchestration controls may support this object, but lifecycle conformance requires explicit object semantics for transferred responsibility, retained responsibility, inherited constraints, evidence duties, and escalation.
 
 ### Design Implication
 
@@ -406,18 +402,16 @@ The most dangerous agent failures are often unauthorized authority transitions.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make authority drift explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable authority drift semantics. |
 | Audit question | Can an independent reviewer determine whether authority drift was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-08:** MRO-07 Object Card — Authority Drift
+**Table T-06-08:** MRO-07 Object Card — Authority Drift
 
 ### Detailed Discussion
 
 Authority drift occurs when an agent gradually moves from advice to execution, from draft to send, from read-only to write, or from internal recommendation to external commitment. It is often a transition problem rather than a single bad output.
-
-Authority drift happens when an agent moves from advice to execution, draft to send, read to write, or internal recommendation to external commitment without a new authority boundary or confirmation event.
 
 The core question for MRO-07 is whether the system monitors for unauthorized authority transitions. Strong support requires comparing observed behavior against original authority boundaries and plan state. Unauthorized transitions should trigger stop, downgrade, or human confirmation rather than being treated as ordinary execution variance.
 
@@ -425,11 +419,9 @@ The difficulty is that drift is dangerous because each local step may appear rea
 
 ### Enterprise Implication
 
-Drift is dangerous because each local step may appear reasonable while the cumulative lifecycle state exceeds the original delegation. This is especially acute in long-running workflows, autonomous retries, or agent loops.
-
 Without drift detection, agents can silently escalate from low-risk to high-impact actions. The organization may discover the problem only after customer impact, regulatory violation, or financial loss. Drift detection is a lifecycle monitoring requirement, not merely a model safety feature.
 
-Guardrails and content filters are valuable adjacent controls, but they become lifecycle conformance only when they monitor authority boundaries across the full execution timeline. The market implication is that buyers should ask whether the system can detect and halt unauthorized authority transitions before they cause external consequence.
+Adjacent guardrails and content filters may support this object, but lifecycle conformance requires explicit object semantics that monitor authority boundaries across the full execution timeline.
 
 ### Design Implication
 
@@ -462,18 +454,16 @@ In MAS, evidence must be partitioned, linked, and reconstructable.
 | Field | Description |
 |-------|-------------|
 | Object purpose | To make MAS evidence partitioning explicit, inspectable, and replayable within an agentic lifecycle. |
-| Minimum identity fields | object_id, lifecycle_id, project_id, actor_role_id, agent_role_id where applicable, timestamp, version, evidence_pointer |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
 | Required controls | scope boundary, risk class, evidence requirement, privacy treatment, review/approval rule, revocation or closure rule |
 | Failure if missing | The system may appear governed at UI or workflow level while lacking enforceable MAS evidence partitioning semantics. |
 | Audit question | Can an independent reviewer determine whether MAS evidence partitioning was properly established and preserved for the relevant lifecycle phase? |
 
-**Table 6-09:** MRO-08 Object Card — MAS Evidence Partitioning
+**Table T-06-09:** MRO-08 Object Card — MAS Evidence Partitioning
 
 ### Detailed Discussion
 
 Multi-agent evidence is not a single log stream. It includes plan versions, agent messages, tool calls, human confirmations, data accesses, privacy decisions, model outputs, evidence hashes, and outcome states. Different auditors may need different partitions.
-
-A flat log is not enough for MAS governance. Evidence must be partitioned by agent, role, tool, plan version, authority boundary, privacy class, human confirmation, and accepted outcome so that disputes, audits, selective disclosure, and remediation can be reconstructed.
 
 The core question for MRO-08 is whether evidence can be partitioned, linked, and reconstructed for different audit purposes. Strong support requires partitioning by agent, tool, authority boundary, privacy class, confirmation event, plan version, and accepted outcome. Partitions should be linked by stable identifiers and integrity hashes.
 
@@ -481,11 +471,9 @@ The difficulty is that flat logs are difficult to use in disputes because they m
 
 ### Enterprise Implication
 
-Flat logs are difficult to use in disputes because they mix irrelevant telemetry with critical proof. They also make selective disclosure and privacy minimization harder because sensitive payloads and governance metadata are not separated.
-
 Without evidence partitioning, multi-agent workflows become difficult to audit, dispute, or selectively disclose. The organization cannot prove which agent performed which action under which authority without exposing unnecessary sensitive data. This weakens regulatory defense, customer assurance, and external validation.
 
-Observability platforms and trace systems are valuable adjacent capabilities, but they become lifecycle conformance only when they partition evidence by governance boundaries rather than only by execution timeline. The market implication is that buyers should ask whether the system can reconstruct evidence for specific agents, tools, privacy classes, and accepted outcomes without exposing the full raw log.
+Adjacent observability and trace systems may support this object, but lifecycle conformance requires explicit object semantics that partition evidence by governance boundaries rather than only by execution timeline.
 
 ### Design Implication
 
@@ -511,20 +499,19 @@ A cross-project reuse compliance record linking original validation context to n
 
 ### Judgment
 
-**Judgment:** Reuse without revalidation is the most common lifecycle governance failure.
+Reuse without revalidation is the most common lifecycle governance failure.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Cross-Project Reuse Compliance Record |
-| Lifecycle Phase | Reuse, deployment, cross-project transfer |
-| Responsibility Boundary | Original validator, receiving project owner, reuse approver |
-| Evidence Requirement | Original validation record, reuse authorization, context delta, privacy review, evidence revalidation |
-| Privacy Constraint | Privacy boundary must be reassessed for new context; original consent scope may not transfer |
-| Audit Question | Can an independent reviewer determine whether cross-project reuse was authorized, revalidated, and privacy-reviewed for the new deployment context? |
+| Object purpose | To make cross-project reuse compliance explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | original validation record, receiving project context, reuse authorization, context delta, privacy review, evidence revalidation, acceptance criteria adjustment |
+| Failure if missing | A workflow may be reused in a new project, risk class, or privacy context without authority reset, evidence revalidation, or privacy reassessment. |
+| Audit question | Can an independent reviewer determine whether cross-project reuse was authorized, revalidated, and privacy-reviewed for the new deployment context? |
 
-**Table 6-10:** MRO-09 Object Card — Cross-Project Reuse Compliance
+**Table T-06-10:** MRO-09 Object Card — Cross-Project Reuse Compliance
 
 ### Detailed Discussion
 
@@ -540,7 +527,7 @@ The difficulty is that reuse is often invisible to governance systems. A develop
 
 Without reuse compliance, organizations face hidden governance debt. A workflow validated once may be reused dozens of times across different projects, risk classes, and privacy contexts without any record of revalidation. This creates audit gaps, privacy violations, and liability exposure.
 
-The market implication is that buyers should ask whether the system tracks workflow reuse and enforces revalidation when the deployment context changes. Template libraries and shared agent definitions are valuable productivity features, but they become lifecycle conformance only when they enforce context reset and revalidation.
+Adjacent template libraries and shared agent definitions may support this object, but lifecycle conformance requires explicit object semantics for context reset, privacy review, and evidence revalidation when deployment context changes.
 
 ### Design Implication
 
@@ -566,20 +553,19 @@ A lifecycle data-flow map showing what personal data enters, flows through, and 
 
 ### Judgment
 
-**Judgment:** Privacy compliance in MAS requires lifecycle data-flow mapping, not only model-level controls.
+Privacy compliance in MAS requires lifecycle data-flow mapping, not only model-level controls.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Privacy / GDPR Lifecycle Data-Flow Map |
-| Lifecycle Phase | All phases where personal data is accessed, processed, stored, shared, or deleted |
-| Responsibility Boundary | Data controller, data protection officer, agent owner, tool owner |
-| Evidence Requirement | Data-flow map, legal basis, purpose limitation, retention policy, data subject rights implementation |
-| Privacy Constraint | Must cover full lifecycle, not only model training; must support data subject rights (access, rectification, erasure, portability) |
-| Audit Question | Can an independent reviewer reconstruct what personal data entered, flowed through, and exited each agent, tool, and memory system, and verify that legal basis, purpose limitation, and retention policies were enforced? |
+| Object purpose | To make privacy / GDPR lifecycle mapping explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | data-flow map, legal-basis reference, purpose-limitation record, retention policy, data subject rights workflow, privacy impact assessment reference |
+| Failure if missing | Personal data may move through agents, tools, memory, and handoffs without lifecycle-level evidence of purpose, retention, rights handling, or privacy treatment. |
+| Audit question | Can an independent reviewer reconstruct what personal data entered, flowed through, and exited each agent, tool, and memory system, and verify that legal basis, purpose limitation, and retention policies were enforced? |
 
-**Table 6-11:** MRO-10 Object Card — Privacy / GDPR Lifecycle Mapping
+**Table T-06-11:** MRO-10 Object Card — Privacy / GDPR Lifecycle Mapping
 
 ### Detailed Discussion
 
@@ -595,7 +581,7 @@ The difficulty is that agentic systems are dynamic. Data flows change based on r
 
 Without lifecycle data-flow mapping, organizations cannot prove GDPR compliance for agentic systems. A data subject access request may require reconstructing what personal data was processed by which agents, for what purpose, under what legal basis, and where it is now stored. If the organization cannot answer these questions, it faces regulatory penalties and reputational damage.
 
-The market implication is that buyers should ask whether the system can reconstruct lifecycle data flows for personal data, not only model training data. Privacy dashboards and data governance platforms are valuable adjacent capabilities, but they become lifecycle conformance only when they track personal data through the full agent lifecycle.
+Adjacent privacy dashboards and data governance systems may support this object, but lifecycle conformance requires explicit object semantics that track personal data through the full agent lifecycle, not only model training or database layers.
 
 ### Design Implication
 
@@ -621,20 +607,19 @@ A privacy-preserving validation protocol allowing selective disclosure and zero-
 
 ### Judgment
 
-**Judgment:** Third-party validation must not require full evidence disclosure.
+Third-party validation must not require full evidence disclosure.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Privacy-Preserving Validation Protocol |
-| Lifecycle Phase | External validation, audit, assurance, certification |
-| Responsibility Boundary | Evidence owner, validator, validation protocol designer |
-| Evidence Requirement | Selective disclosure policy, zero-knowledge proof capability, integrity verification, validation scope definition |
-| Privacy Constraint | Validator must not access raw sensitive data, model weights, or proprietary workflows unless explicitly authorized |
-| Audit Question | Can an independent validator verify compliance properties without accessing raw sensitive data, and can the evidence owner prove that only authorized evidence was disclosed? |
+| Object purpose | To make privacy-preserving third-party validation explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | validation scope definition, selective disclosure policy, redaction profile, proof or hash manifest, evidence-owner authorization, validator access boundary |
+| Failure if missing | External validation may require raw sensitive evidence access, creating privacy, trade-secret, and over-disclosure risk. |
+| Audit question | Can an independent validator verify compliance properties without accessing raw sensitive data, and can the evidence owner prove that only authorized evidence was disclosed? |
 
-**Table 6-12:** MRO-11 Object Card — Privacy-Preserving Third-Party Validation
+**Table T-06-12:** MRO-11 Object Card — Privacy-Preserving Third-Party Validation
 
 ### Detailed Discussion
 
@@ -650,7 +635,7 @@ The difficulty is that privacy-preserving validation is technically complex. Zer
 
 Without privacy-preserving validation, enterprises face a dilemma: accept unvalidated systems or disclose sensitive data to validators. This slows adoption, increases risk, and creates vendor lock-in because switching vendors requires re-disclosing evidence.
 
-The market implication is that buyers should ask whether the system supports privacy-preserving validation. Validation programs that require full evidence disclosure are not enterprise-ready for agentic systems. The industry needs validation protocols that allow independent verification without raw data access.
+Adjacent validation programs may support this object, but lifecycle conformance requires explicit object semantics for selective disclosure and independent verification without unnecessary raw data access.
 
 ### Design Implication
 
@@ -676,20 +661,19 @@ An evidence minimization and selective disclosure policy defining retention peri
 
 ### Judgment
 
-**Judgment:** Evidence retention must balance auditability with privacy minimization.
+Evidence retention must balance auditability with privacy minimization.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Evidence Minimization and Selective Disclosure Policy |
-| Lifecycle Phase | Evidence collection, retention, disclosure, deletion |
-| Responsibility Boundary | Evidence owner, data protection officer, auditor, validator |
-| Evidence Requirement | Retention policy, redaction rules, disclosure boundaries, deletion schedule, audit trail |
-| Privacy Constraint | Must minimize personal data retention while preserving accountability; must support data subject rights |
-| Audit Question | Can an independent reviewer verify that evidence retention was minimized to what is necessary for accountability, and that disclosure was limited to authorized parties and purposes? |
+| Object purpose | To make evidence minimization and selective disclosure explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | retention policy, redaction rules, disclosure boundaries, deletion schedule, audit trail, evidence class handling |
+| Failure if missing | Evidence retention may become a privacy risk, while evidence deletion may create accountability gaps. |
+| Audit question | Can an independent reviewer verify that evidence retention was minimized to what is necessary for accountability, and that disclosure was limited to authorized parties and purposes? |
 
-**Table 6-13:** MRO-12 Object Card — Evidence Minimization and Selective Disclosure
+**Table T-06-13:** MRO-12 Object Card — Evidence Minimization and Selective Disclosure
 
 ### Detailed Discussion
 
@@ -705,7 +689,7 @@ Selective disclosure requires disclosure boundaries. Different auditors may need
 
 Without evidence minimization, organizations face privacy violations and regulatory penalties. Retaining full execution logs indefinitely violates GDPR data minimization principles. Without selective disclosure, organizations face dilemmas: deny audit requests or expose unnecessary sensitive data.
 
-The market implication is that buyers should ask whether the system supports evidence minimization and selective disclosure. Observability platforms that retain full logs indefinitely are not privacy-compliant for agentic systems. The industry needs evidence management systems that balance auditability with privacy minimization.
+Adjacent observability and evidence management systems may support this object, but lifecycle conformance requires explicit object semantics that balance auditability with privacy minimization and selective disclosure.
 
 ### Design Implication
 
@@ -731,20 +715,19 @@ A data subject rights vs evidence retention policy defining retention periods, a
 
 ### Judgment
 
-**Judgment:** Data subject rights and evidence retention are in structural tension in agentic systems.
+Data subject rights and evidence retention are in structural tension in agentic systems.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Data Subject Rights vs Evidence Retention Policy |
-| Lifecycle Phase | Evidence retention, data subject request handling, dispute resolution |
-| Responsibility Boundary | Data protection officer, evidence owner, legal counsel, auditor |
-| Evidence Requirement | Retention policy, legal basis documentation, anonymization procedures, erasure request log, retention override justification |
-| Privacy Constraint | Must honor data subject rights while preserving minimum necessary evidence for accountability; must document legal basis for retention override |
-| Audit Question | Can an independent reviewer verify that evidence retention was limited to what is legally necessary for accountability, and that data subject rights were honored except where legal retention obligations apply? |
+| Object purpose | To make data subject rights versus evidence retention handling explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | retention policy, legal-basis documentation, anonymization procedures, erasure request log, retention override justification, escalation path |
+| Failure if missing | The organization may either lose accountability evidence or over-retain personal data without a documented reconciliation process. |
+| Audit question | Can an independent reviewer verify that evidence retention was limited to what is legally necessary for accountability, and that data subject rights were honored except where legal retention obligations apply? |
 
-**Table 6-14:** MRO-13 Object Card — Data Subject Rights vs Evidence Retention
+**Table T-06-14:** MRO-13 Object Card — Data Subject Rights vs Evidence Retention
 
 ### Detailed Discussion
 
@@ -760,7 +743,7 @@ The difficulty is that legal retention obligations vary by jurisdiction, industr
 
 Without a clear policy, organizations face impossible choices: honor erasure requests and lose accountability evidence, or deny erasure requests and violate GDPR. Both paths create legal risk. The organization needs a documented policy that defines when evidence retention overrides erasure rights, what legal basis applies, and how to minimize retained personal data.
 
-The market implication is that buyers should ask whether the system supports evidence retention policies that distinguish governance metadata from raw payloads, and whether it can handle data subject erasure requests without breaking accountability chains. Systems that treat all evidence as equally sensitive or equally permanent cannot balance these competing obligations.
+Adjacent evidence retention controls may support this object, but lifecycle conformance requires explicit object semantics that distinguish governance metadata from raw payloads and reconcile data subject requests with accountability needs.
 
 ### Design Implication
 
@@ -786,20 +769,19 @@ A dynamic processor chain record tracking which processors and subprocessors han
 
 ### Judgment
 
-**Judgment:** In MAS, the processor chain is dynamic and must be tracked at lifecycle granularity.
+In MAS, the processor chain is dynamic and must be tracked at lifecycle granularity.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Dynamic Processor Chain Record |
-| Lifecycle Phase | All phases where personal data is processed by third-party processors or subprocessors |
-| Responsibility Boundary | Data controller, data protection officer, agent owner, tool owner, vendor manager |
-| Evidence Requirement | Processor identity, subprocessor identity, data categories processed, processing purpose, legal basis, processor agreement reference, data flow timestamps |
-| Privacy Constraint | Must track all processors and subprocessors that handle personal data; must support data subject access requests and processor chain disclosure |
-| Audit Question | Can an independent reviewer reconstruct which processors and subprocessors handled which personal data at which lifecycle phase, and verify that processor agreements and legal basis were in place? |
+| Object purpose | To make third-party processor / subprocessor chain handling explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | processor identity, subprocessor identity, data categories, processing purpose, legal-basis reference, processor agreement reference, data-flow timestamps |
+| Failure if missing | Static vendor or processor lists may fail to show which third parties processed which personal data during actual agentic execution. |
+| Audit question | Can an independent reviewer reconstruct which processors and subprocessors handled which personal data at which lifecycle phase, and verify that processor agreements and legal basis were in place? |
 
-**Table 6-15:** MRO-14 Object Card — Third-Party Processor / Subprocessor Chain
+**Table T-06-15:** MRO-14 Object Card — Third-Party Processor / Subprocessor Chain
 
 ### Detailed Discussion
 
@@ -815,7 +797,7 @@ The difficulty is that processor chains can be long and nested. A tool may call 
 
 Without dynamic processor chain tracking, organizations cannot answer data subject access requests, cannot verify processor compliance, and cannot detect unauthorized subprocessor usage. This creates GDPR violation risk and weakens vendor management.
 
-The market implication is that buyers should ask whether the system tracks processor and subprocessor usage at lifecycle granularity, not only at configuration time. Vendor management systems that maintain static processor lists are insufficient for dynamic multi-agent systems. The industry needs lifecycle-aware processor chain tracking.
+Adjacent vendor management systems may support this object, but lifecycle conformance requires explicit object semantics that track processor and subprocessor usage at lifecycle granularity, not only at configuration time.
 
 ### Design Implication
 
@@ -841,20 +823,19 @@ A vendor substitution conformance record proving that substitution preserved lif
 
 ### Judgment
 
-**Judgment:** Vendor substitution without revalidation breaks lifecycle conformance.
+Vendor substitution without revalidation breaks lifecycle conformance.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Vendor Substitution Conformance Record |
-| Lifecycle Phase | Vendor substitution, model substitution, runtime substitution, revalidation |
-| Responsibility Boundary | Original validator, substitution approver, revalidation owner, vendor manager |
-| Evidence Requirement | Original validation record, substitution authorization, conformance test results, delta analysis, revalidation decision |
-| Privacy Constraint | Substitution must preserve privacy boundaries; new vendor must meet same privacy obligations as original vendor |
-| Audit Question | Can an independent reviewer verify that vendor substitution preserved lifecycle responsibility properties, and that conformance was revalidated before deployment? |
+| Object purpose | To make vendor / model / runtime substitution conformance explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | original validation record, substitution authorization, delta analysis, conformance check record, privacy boundary review, revalidation decision |
+| Failure if missing | Vendor, model, or runtime substitution may create compliance drift while appearing to be only a configuration change. |
+| Audit question | Can an independent reviewer verify that vendor substitution preserved lifecycle responsibility properties, and that conformance was revalidated before deployment? |
 
-**Table 6-16:** MRO-15 Object Card — Vendor / Model / Runtime Substitution Conformance
+**Table T-06-16:** MRO-15 Object Card — Vendor / Model / Runtime Substitution Conformance
 
 ### Detailed Discussion
 
@@ -870,7 +851,7 @@ The conformance record must document what was substituted, why, what changed, wh
 
 Without substitution conformance, vendor optionality becomes compliance drift. The organization may believe it has validated workflows when in fact it has validated only the original vendor configuration. Substitution without revalidation creates hidden governance debt that surfaces during audits or disputes.
 
-The market implication is that buyers should ask whether the system tracks vendor substitutions and enforces conformance revalidation. Vendor-neutral architectures are valuable, but they become lifecycle conformance only when they prove that substitution preserved responsibility properties. The industry needs substitution conformance protocols, not merely substitution capability.
+Adjacent vendor-neutral architectures may support this object, but lifecycle conformance requires explicit object semantics proving that substitution preserved responsibility properties rather than merely preserving technical capability.
 
 ### Design Implication
 
@@ -896,20 +877,19 @@ An incident, dispute, and remediation closure record linking incident detection 
 
 ### Judgment
 
-**Judgment:** Lifecycle governance is incomplete without incident closure and continuous improvement.
+Lifecycle governance is incomplete without incident closure and continuous improvement.
 
 ### Object Card
 
 | Field | Description |
 |-------|-------------|
-| Object Name | Incident, Dispute, and Remediation Closure Record |
-| Lifecycle Phase | Incident detection, investigation, remediation, dispute resolution, closure, continuous improvement |
-| Responsibility Boundary | Incident owner, investigator, remediator, dispute resolver, continuous improvement owner |
-| Evidence Requirement | Incident detection record, root cause analysis, remediation action, dispute resolution decision, closure acceptance, continuous improvement plan |
-| Privacy Constraint | Incident investigation must respect privacy boundaries; evidence disclosure must be limited to what is necessary for resolution |
-| Audit Question | Can an independent reviewer verify that incidents were detected, investigated, remediated, and closed with documented root cause and continuous improvement measures? |
+| Object purpose | To make incident, dispute, and remediation closure explicit, inspectable, and replayable within an agentic lifecycle. |
+| Minimum identity fields | object_id, object_type, lifecycle_id, project_id, object_version, related_human_role_id, related_agent_role_id where applicable, evidence_pointer, status, created_at, updated_at |
+| Required controls | incident detection record, root cause analysis, remediation action, dispute resolution decision, closure acceptance, continuous improvement plan, privacy-limited evidence disclosure |
+| Failure if missing | Incidents may be detected or handled manually without evidence-linked remediation, dispute closure, or continuous improvement. |
+| Audit question | Can an independent reviewer verify that incidents were detected, investigated, remediated, and closed with documented root cause and continuous improvement measures? |
 
-**Table 6-17:** MRO-16 Object Card — Incident, Dispute, and Remediation Closure
+**Table T-06-17:** MRO-16 Object Card — Incident, Dispute, and Remediation Closure
 
 ### Detailed Discussion
 
@@ -925,7 +905,7 @@ The closure record must link incident detection to lifecycle evidence, root caus
 
 Without incident closure, organizations cannot prove that they handle agentic failures responsibly. Customers lose trust. Regulators question accountability. Insurers raise premiums or deny coverage. The organization cannot demonstrate continuous improvement because it has no structured process for learning from incidents.
 
-The market implication is that buyers should ask whether the system supports incident detection, root cause analysis, remediation tracking, dispute resolution, and closure verification. Monitoring systems that detect anomalies are valuable, but they become lifecycle conformance only when they link incidents to remediation and continuous improvement. The industry needs incident closure protocols, not merely incident detection.
+Adjacent monitoring systems may support this object, but lifecycle conformance requires explicit object semantics that link incidents to remediation, dispute closure, and continuous improvement.
 
 ### Design Implication
 
@@ -948,7 +928,3 @@ Existing regulation and governance frameworks increasingly require human oversig
 These objects are necessary because agentic AI is not only model output. It is organized work that moves from intent to accepted outcome through delegation, execution, evidence collection, review, acceptance, dispute, remediation, and reuse. If that work cannot be proven under controlled authority, evidence, privacy, and remediation constraints, it remains difficult to audit, insure, delegate, reuse, and scale. This is why AI Agent Lifecycle Governance is not a philosophical category. It is an operational prerequisite for agentic AI becoming trusted enterprise infrastructure.
 
 The next chapters introduce two scoring frameworks that measure how systems map to these objects. RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. Together, they provide a dual-layer assessment of whether a system can prove lifecycle responsibility compliance.
-
----
-
-**Chapter 6 Status:** COMPLETE — All sixteen MROs filled; chapter summary added.

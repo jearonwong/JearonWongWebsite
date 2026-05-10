@@ -1,8 +1,6 @@
 # Appendix A — Machine-Readable Object Templates
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1B-8
 
 ---
 
@@ -47,6 +45,10 @@ closure_reason: reason for closure (if status is "closed")
 ```
 
 **Object-specific fields:** Each MRO template includes 3-6 object-specific fields relevant to that MRO's purpose.
+
+All example values are non-normative placeholders and do not establish legal compliance, liability allocation, certification, or completed validation.
+
+For readability, the examples below present object-specific fields under a comment block. Implementations may alternatively nest them under `object_specific_fields`.
 
 ---
 
@@ -215,7 +217,7 @@ closure_reason: null
 # Object-specific fields
 tool_name: "CRM API"
 action_type: "update_customer_record"
-liability_assignment: "enterprise"
+liability_assignment: "responsibility_boundary_recorded"
 tool_provider_agreement: "agreement-uuid"
 authorization_record: "authorization-uuid"
 action_reversibility: "reversible_with_audit_trail"
@@ -246,7 +248,7 @@ source_agent_id: "agent-1-uuid"
 target_agent_id: "agent-2-uuid"
 transfer_timestamp: "2026-05-10T10:00:00Z"
 constraint_inheritance: ["no_refund_over_1000", "require_manager_approval"]
-handoff_validation: "validated"
+handoff_validation: "handoff_check_recorded"
 responsibility_acceptance: "accepted_by_agent_2"
 ```
 
@@ -323,7 +325,7 @@ authority_scope: "reuse_validation"
 risk_class: "high"
 evidence_pointer: "evidence-chain-uuid"
 privacy_treatment: "context_reset"
-status: "reuse_validated"
+status: "reuse_review_recorded"
 created_at: "2026-05-10T10:00:00Z"
 updated_at: "2026-05-10T10:00:00Z"
 closure_reason: null
@@ -332,9 +334,9 @@ closure_reason: null
 source_project_id: "project-1-uuid"
 target_project_id: "project-2-uuid"
 reuse_type: "prompt_template"
-reset_validation: "validated"
+reset_validation: "reset_check_recorded"
 reauthorization_required: true
-context_boundary_check: "passed"
+context_boundary_check: "context_boundary_check_recorded"
 ```
 
 ### MRO-10: Privacy / GDPR Lifecycle Mapping
@@ -360,9 +362,9 @@ closure_reason: null
 # Object-specific fields
 data_flow_record: "data-flow-uuid"
 retention_policy: "30_days"
-data_subject_rights_workflow: "erasure_supported"
+data_subject_rights_workflow: "rights_workflow_mapping_required"
 privacy_impact_assessment: "pia-uuid"
-gdpr_article_mapping: ["Article 6", "Article 17"]
+gdpr_article_mapping: ["Article 6 mapping required", "Article 17 mapping required"]
 data_minimization_policy: "collect_only_necessary"
 ```
 
@@ -381,7 +383,7 @@ authority_scope: "validation"
 risk_class: "medium"
 evidence_pointer: "evidence-chain-uuid"
 privacy_treatment: "hash_based_validation"
-status: "validated"
+status: "validation_recorded"
 created_at: "2026-05-10T10:00:00Z"
 updated_at: "2026-05-10T10:30:00Z"
 closure_reason: null
@@ -478,7 +480,7 @@ processor_name: "Cloud AI Provider"
 processor_role: "model_inference"
 subprocessor_chain: ["Vector DB Provider", "Monitoring Platform"]
 data_processing_agreement: "dpa-uuid"
-responsibility_assignment: "processor_liable_for_subprocessors"
+responsibility_assignment: "processor_responsibility_reference"
 processor_liability: "gdpr_article_28_mapping_required"
 ```
 
@@ -497,7 +499,7 @@ authority_scope: "substitution_validation"
 risk_class: "high"
 evidence_pointer: "evidence-chain-uuid"
 privacy_treatment: "no_pii"
-status: "conformance_validated"
+status: "conformance_check_recorded"
 created_at: "2026-05-10T10:00:00Z"
 updated_at: "2026-05-10T10:00:00Z"
 closure_reason: null
@@ -506,9 +508,9 @@ closure_reason: null
 substitution_type: "model_provider"
 previous_vendor: "Vendor A"
 new_vendor: "Vendor B"
-conformance_validation: "passed"
-regression_testing: "passed"
-evidence_integrity_check: "passed"
+conformance_validation: "conformance_check_recorded"
+regression_testing: "regression_check_recorded"
+evidence_integrity_check: "evidence_integrity_check_recorded"
 ```
 
 ### MRO-16: Incident, Dispute, and Remediation Closure
@@ -539,9 +541,3 @@ closure_status: "closed"
 responsible_owner: "Engineering Manager"
 customer_impact_assessment: "low_impact_2_customers_notified"
 ```
-
----
-
-**End of Appendix A**
-
-**Appendix A Status:** FILLED (Phase 1B-8; Phase 1C follow-up reviewed) — Machine-Readable Object Templates complete; illustrative status preserved.

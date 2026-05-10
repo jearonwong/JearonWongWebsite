@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 2 Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 3 Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -81,6 +81,34 @@ Wave 2 human review covered Chapters 1-5: Scope/Methodology, Missing Layer, Mode
 4. Publication candidate readiness is not declared.
 
 **Wave 2 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 3 Chapter 6 / Appendix A Patch
+
+### Status: WAVE 3 PATCH APPLIED / WAVES 4-8 PENDING
+
+Wave 3 human review covered Chapter 6 and Appendix A. MRO conceptual direction passed, but publication-candidate readiness failed because Chapter 6 and Appendix A had shared-field inconsistency, object-card format drift, legacy figure/table formatting, vendor/system scope bleed, source metadata markers, and template example values that could imply completed validation, liability allocation, or legal/compliance status.
+
+**Patch applied:**
+
+1. Replaced the code-style Figure F-03 topology lane with formal figure text and a non-legal/non-certifying boundary note.
+2. Renamed Chapter 6 table captions to T-style IDs, including `T-06-01A` for the Common MRO Field Model.
+3. Added `T-06-01A` to the table inventory.
+4. Aligned the Chapter 6 Common MRO Field Model with Appendix A shared fields and defined `actor_role_id` / `timestamp` only as implementation aliases.
+5. Normalized MRO-01 through MRO-16 object cards to the same five-row format: object purpose, minimum identity fields, required controls, failure if missing, audit question.
+6. Reduced duplicated MRO discussion language without removing substantive controls or audit questions.
+7. Removed or neutralized vendor-specific system mapping and market-implication language from Chapter 6.
+8. Removed Appendix A internal `Status` / `Phase` metadata and appendix status/source markers.
+9. Neutralized Appendix A example values from completed-validation/liability/compliance implication into recorded-check / mapping-required language.
+10. Added non-normative placeholder and `object_specific_fields` notes to Appendix A.
+
+**Remaining blockers:**
+
+1. Waves 4-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final visual/citation/table proofing remains required before publication.
+4. Publication candidate readiness is not declared.
+
+**Wave 3 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

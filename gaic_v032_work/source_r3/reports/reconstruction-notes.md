@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 2)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 3)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-2 patches (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-3 patches (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -265,6 +265,43 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - Non-legal, non-certifying, non-ranking, and non-procurement boundaries remain intact.
 
 **Phase 1D-5 Wave 2 Status:** ◐ PATCH APPLIED / WAVES 3-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 3 Notes (May 11, 2026)
+
+**Scope:** Chapter 6 and Appendix A publication-quality and object-consistency cleanup after human line-by-line review.
+
+**Review result:**
+
+- Content preservation: MOSTLY PASS.
+- MRO conceptual direction: PASS.
+- Object consistency: FAIL before patch.
+- Publication readiness: FAIL before patch.
+- Publication candidate: BLOCKED.
+
+**Patch applied:**
+
+1. Replaced Figure F-03 code-style topology text with formal figure block formatting and explicit non-legal / non-certifying / non-compliance-proof boundary language.
+2. Renamed Chapter 6 table captions from `Table 6-*` to `Table T-06-*`, including `T-06-01A` for the Common MRO Field Model.
+3. Updated `inventories/table-inventory.md` to include `T-06-01A`.
+4. Aligned the Chapter 6 Common MRO Field Model with Appendix A shared fields: `object_id`, `object_type`, `lifecycle_id`, `project_id`, `object_version`, `related_human_role_id`, `related_agent_role_id`, `authority_scope`, `risk_class`, `evidence_pointer`, `privacy_treatment`, `status`, `created_at`, `updated_at`, and `closure_reason`.
+5. Defined `actor_role_id` and `timestamp` only as implementation aliases rather than separate canonical fields.
+6. Normalized all sixteen MRO object cards to the canonical five-row format while preserving MRO-specific discussion, enterprise implication, design implication, and audit question sections.
+7. Removed or neutralized vendor/system mapping and market-implication language from Chapter 6 so that system assessment remains in Chapters 11-13 / Appendix D / Appendix G.
+8. Removed Appendix A publication-source metadata and appendix status/source markers.
+9. Neutralized Appendix A example values that could imply completed validation, legal compliance, liability allocation, or certification.
+10. Added non-normative placeholder language and an `object_specific_fields` note to Appendix A.
+
+**Boundary discipline:**
+
+- The sixteen canonical MRO IDs remain unchanged.
+- Core MRO meanings remain unchanged.
+- RCCS/ALCS taxonomy remains unchanged.
+- No legal claims, certification claims, liability determinations, or completed-validation claims were introduced.
+- Appendix A remains illustrative only and not a formal MPLP schema.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 3 Status:** ◐ PATCH APPLIED / WAVES 4-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

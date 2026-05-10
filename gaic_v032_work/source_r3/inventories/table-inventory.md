@@ -52,6 +52,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | Table ID | Title | Location | Status | Layout Notes |
 |----------|-------|----------|--------|--------------|
 | T-06-01 | Sixteen Missing Regulatory Objects Summary | Chapter 6 | ✓ Filled (1A-3.1) | Portrait or landscape, 4 columns |
+| T-06-01A | Common MRO Field Model | Chapter 6 | ✓ Filled (Phase 1D-5 Wave 3 aligned) | Portrait, canonical shared field model |
 | T-06-02 | MRO-01 Object Card: Human Role to MAS Responsibility Mapping | Chapter 6 | ✓ Filled (1A-3.1) | Portrait, object card format |
 | T-06-03 | MRO-02 Object Card: Delegated Authority Boundary | Chapter 6 | ✓ Filled (1A-3.1) | Portrait, object card format |
 | T-06-04 | MRO-03 Object Card: Agent Role is not Human Role | Chapter 6 | ✓ Filled (1A-3.1) | Portrait, object card format |
