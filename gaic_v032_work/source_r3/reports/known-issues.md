@@ -1,11 +1,48 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-3 Publication Compression Reflow)
+**Last Updated:** May 10, 2026 (Phase 1D-4 Full-Content Reflow)
+
+## Phase 1D-4 Full-Content White Paper Reflow
+
+### Status: FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED
+
+Phase 1D-4 corrects the Phase 1D-3 interpretation problem. The 93-page public white paper is not treated as the final direction because it reduced substantive content and moved full Appendices A-K out of the white paper. Phase 1D-4 instead preserves the full substantive white paper while removing mechanical pagination and layout inefficiency.
+
+**Generated artifacts:**
+
+1. `out/phase_1d4/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Draft.md`
+2. `out/phase_1d4/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Draft.docx`
+3. `out/phase_1d4/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Draft.pdf`
+4. `out/phase_1d4/full_whitepaper/phase_1d4_full_whitepaper_generation_log.json`
+5. `out/phase_1d4/full_whitepaper/rendered_pdf_pages/page-001.png` through `page-229.png`
+
+**Resolved from Phase 1D-3 direction:**
+
+1. Full substantive Chapters 1-18 are retained.
+2. Appendices A-K are retained as publication appendices.
+3. Internal QA/governance ledgers are externalized instead of used as publication body.
+4. Wide/high-risk tables are split into continuous portrait subtables rather than forced landscape islands.
+5. F-01 through F-11 render as inline DOCX-native panels.
+6. Generated PDF text scan found no visible figure-placeholder residue or raw reconstruction status residue.
+7. Forbidden positive claim count is 0 after generated-output context classification.
+8. Appendix G remains REVALIDATED PROVISIONAL, qualitative, non-ranking, and non-score-based.
+
+**Publication-candidate blockers / warnings remaining after Phase 1D-4:**
+
+1. Final human proofing of the 229-page full white paper is still required.
+2. Final citation style remains a publication decision.
+3. Appendix A machine-readable templates remain dense by nature and may need final copyfitting or code-block styling.
+4. DOCX-native figure panels are acceptable for draft QA but may still need final vector/art-directed replacement before release.
+5. OpenAI platform guide HTTP 403 remains tracked and cannot be treated as fully rendered/validated.
+
+**Phase 1D-4 Decision:** PHASE 1D-4 FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED.
 
 ## Phase 1D-3 Publication Compression and Narrative Reflow
 
 ### Status: PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED
+
+**Superseded as final direction by Phase 1D-4.** Phase 1D-3 remains useful as evidence that the 539-page mechanical full-corpus artifact was not a readable public white paper, but its 93-page reduced public paper is not the current final publication architecture.
 
 Phase 1D-3 corrects the Phase 1D-2 structural problem: the 539-page artifact is no longer treated as the public white paper. The publication model is now split into:
 

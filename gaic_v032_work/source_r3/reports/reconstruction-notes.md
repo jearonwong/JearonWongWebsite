@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-3)
+**Last Updated:** May 10, 2026 (Phase 1D-4)
 
 ## Reconstruction Strategy
 
@@ -32,6 +32,7 @@ R3 uses phased reconstruction:
 11. **Phase 1D:** DOCX/PDF generation and visual QA (◐ DRAFT GENERATED / QA REQUIRED)
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
+14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -133,6 +134,43 @@ Each phase has clear acceptance gates. A phase is NOT complete until all gates p
 - Publication candidate is not declared; final human proofing and publication-candidate checks remain.
 
 **Phase 1D-3 Status:** ◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED.
+
+---
+
+## Phase 1D-4 Notes (May 10, 2026)
+
+**Scope:** Research professional white paper format, then rebuild a full-content, continuous, publication-grade GAIC white paper from R3 source.
+
+**Correction applied:**
+
+Phase 1D-3 solved page count by reducing content into a 93-page public paper and moving full Appendices A-K into a technical evidence pack. Phase 1D-4 corrects that interpretation. The requirement is full substantive white paper content with professional reflow, not a shortened brief.
+
+**Actions completed:**
+
+1. Created `reports/phase-1d4-white-paper-format-research.md` before implementation, grounding the reflow rules in white paper, executive-summary, figure/table, appendix, and report-design guidance.
+2. Created `reports/phase-1d4-full-content-publication-architecture.md` defining the three-layer model: full white paper body, publication appendices, and external evidence/source ledger.
+3. Created `reports/phase-1d4-content-preservation-matrix.md` confirming Chapters 1-18 and Appendices A-K remain in the white paper package.
+4. Created `reports/phase-1d4-layout-continuity-rules.md` defining no global H1 page breaks, no forced table/figure islands, and semantic table splitting.
+5. Added `scripts/generate_r3_phase1d4_full_whitepaper.py`.
+6. Generated fresh Phase 1D-4 assembled Markdown, DOCX, PDF, generation log, and 229 rendered PDF page PNGs under `out/phase_1d4/full_whitepaper/`.
+7. Created table reflow, figure integration, and full white paper QA reports.
+
+**Generation result:**
+
+- Full white paper PDF page count: 229
+- Source table records retained: 186
+- Wide/high-risk tables split: 68
+- Figure panels rendered: F-01 through F-11
+- Rendered-page density scan: 0 low-content pages
+- Forbidden positive claim count: 0
+
+**Boundary discipline:**
+
+- No core claims, scoring methodology, MRO/ALCS taxonomy, system assessment semantics, vendor scope, certification boundaries, legal-compliance boundaries, or procurement boundaries were changed.
+- No old DOCX/PDF artifact was used as input.
+- Publication candidate is not declared; final human proofing and publication-candidate checks remain.
+
+**Phase 1D-4 Status:** ◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED.
 
 ---
 
