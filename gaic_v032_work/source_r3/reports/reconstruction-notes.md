@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-2)
+**Last Updated:** May 10, 2026 (Phase 1D-3)
 
 ## Reconstruction Strategy
 
@@ -31,6 +31,7 @@ R3 uses phased reconstruction:
 10. **Phase 1C:** Global cleanup, citations, tables, figures (✓ COMPLETE)
 11. **Phase 1D:** DOCX/PDF generation and visual QA (◐ DRAFT GENERATED / QA REQUIRED)
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
+13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -106,6 +107,32 @@ Each phase has clear acceptance gates. A phase is NOT complete until all gates p
 - No new systems, rankings, vendor endorsements, certification claims, legal compliance proof claims, or procurement recommendations introduced.
 - Publication candidate remains blocked until designed artifact QA passes.
 - Phase 1D-2 status is publication draft generated / QA required, not publication candidate ready.
+
+---
+
+## Phase 1D-3 Notes (May 10, 2026)
+
+**Scope:** Publication compression and narrative reflow from the 539-page full-corpus draft into a split publication model.
+
+**Actions completed:**
+
+1. Created `reports/phase-1d3-publication-architecture-decision.md` and rejected the 539-page artifact as the public white paper structure.
+2. Created `reports/phase-1d3-source-split-plan.md` classifying source files into public white paper, evidence pack, and source-only governance roles.
+3. Created `reports/phase-1d3-narrative-reflow-report.md` and `reports/phase-1d3-table-compression-report.md`.
+4. Added `scripts/generate_r3_phase1d3_public_whitepaper.py` to generate a compressed public white paper under `out/phase_1d3/public_whitepaper/`.
+5. Added `scripts/generate_r3_phase1d3_evidence_pack.py` to generate the separate technical evidence pack under `out/phase_1d3/evidence_pack/`.
+6. Generated a 93-page public white paper draft with 10 summary tables and required figure panels.
+7. Generated a 711-page technical evidence pack preserving full Appendices A-K, inventories, source and claim ledgers, QA reports, and dense mappings.
+8. Created Phase 1D-3 public white paper QA, evidence pack QA, and final status reports.
+
+**Boundary discipline:**
+
+- The public white paper does not include full Appendices A-K.
+- Dense rubrics, inventories, full mappings, source registers, and QA ledgers belong in the technical evidence pack.
+- No core claims, scoring methodology, MRO/ALCS taxonomy, system assessment semantics, vendor scope, certification boundaries, legal-compliance boundaries, or procurement boundaries were changed.
+- Publication candidate is not declared; final human proofing and publication-candidate checks remain.
+
+**Phase 1D-3 Status:** ◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED.
 
 ---
 

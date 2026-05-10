@@ -1,7 +1,32 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-2 Publication Reflow)
+**Last Updated:** May 10, 2026 (Phase 1D-3 Publication Compression Reflow)
+
+## Phase 1D-3 Publication Compression and Narrative Reflow
+
+### Status: PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED
+
+Phase 1D-3 corrects the Phase 1D-2 structural problem: the 539-page artifact is no longer treated as the public white paper. The publication model is now split into:
+
+1. `out/phase_1d3/public_whitepaper/` — a 93-page public white paper draft.
+2. `out/phase_1d3/evidence_pack/` — a 711-page technical evidence pack.
+
+**Resolved from Phase 1D-2 blockers:**
+
+1. The public artifact no longer includes full Appendices A-K.
+2. Dense rubrics, inventories, full mappings, source registers, claim evidence register, and QA ledgers have moved to the separate evidence pack.
+3. The public PDF is under the 160-page hard maximum and within the 80-140 page target band.
+4. Public-output strict text checks found no visible figure-placeholder residue, no Phase 1A placeholder residue, no full Appendix A/K titles, and no `Table T-` technical table-title residue.
+
+**Publication-candidate blockers remaining after Phase 1D-3:**
+
+1. Final human proofing of the 93-page public PDF is still required.
+2. Final citation style for public release remains a publication decision.
+3. DOCX-native figure panels are acceptable for draft QA but may still need final art direction/vector replacement before release.
+4. OpenAI platform guide HTTP 403 remains tracked and cannot be treated as fully rendered/validated.
+
+**Phase 1D-3 Decision:** PHASE 1D-3 PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED.
 
 ## Phase 1D-2 Publication Design Reflow
 
