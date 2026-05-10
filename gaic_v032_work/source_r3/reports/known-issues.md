@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-5 Full-Text Review Pack)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 2 Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -56,6 +56,31 @@ Wave 1 human review covered the Phase 1D-5 line-numbered full white paper range 
 4. Publication candidate readiness is not declared.
 
 **Wave 1 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 2 Chapters 1-5 Patch
+
+### Status: WAVE 2 PATCH APPLIED / WAVES 3-8 PENDING
+
+Wave 2 human review covered Chapters 1-5: Scope/Methodology, Missing Layer, Model-Centric Compliance Failure, Regulatory and Standards Baseline, and Regulatory Language to Engineering Objects. Content preservation and argument direction passed, but publication-candidate readiness failed because these chapters still contained internal reconstructed-source metadata, source end markers, one legacy figure placeholder format, repeated thesis/workflow language, and template-like regulatory framework wording.
+
+**Patch applied:**
+
+1. Removed internal `Status` / `Phase` metadata from Chapters 1-5 publication-facing source.
+2. Removed `End of Chapter` source markers from Chapters 1-5.
+3. Converted the Chapter 2 governance-stack placeholder into formal `Figure F-02 — Governance Stack / Missing Layer` text with a non-certifying boundary note.
+4. Reduced Chapter 3 repetition while preserving the claim that model governance remains necessary but insufficient.
+5. Replaced repeated Chapter 4 generic implementation-mistake wording with framework-specific lifecycle-object implications.
+6. Preserved legal/regulatory snapshot claims; Colorado AI Act / legal-status verification remains a final publication source-check item.
+7. Polished Chapter 5 bridge language while preserving the lifecycle-object list and Chapter 6 handoff.
+
+**Remaining blockers:**
+
+1. Waves 3-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final legal-status/source verification remains required before publication, including Colorado AI Act snapshot-sensitive language.
+4. Publication candidate readiness is not declared.
+
+**Wave 2 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

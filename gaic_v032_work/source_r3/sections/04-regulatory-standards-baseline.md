@@ -1,8 +1,6 @@
 # Chapter 4: Regulatory and Standards Baseline
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-2.4
 
 ---
 
@@ -42,7 +40,7 @@ EU AI Act functions in this paper as binding regulation. Its relevance to agenti
 
 **What it does not define (the agentic gap):** The framework does not itself define MAS responsibility-transfer object models.
 
-**How it connects to lifecycle objects:** The EU AI Act establishes binding direction around technical documentation, record-keeping, human oversight, and post-market monitoring. For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** The EU AI Act establishes binding direction around technical documentation, record-keeping, human oversight, and post-market monitoring. In agentic workflows, those obligations need lifecycle evidence boundaries: which agent or human role acted, which authority applied, which logs support the action, how oversight occurred, and how post-market monitoring reaches the workflow state rather than only the model artifact.
 
 ## 4.4 GDPR
 
@@ -56,7 +54,7 @@ GDPR functions in this paper as binding privacy regulation. Its relevance to age
 
 **What it does not define (the agentic gap):** Lifecycle mapping remains an engineering task.
 
-**How it connects to lifecycle objects:** For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** GDPR pushes the lifecycle question into data flow. Privacy controls must follow prompts, memory, retrieval context, tool payloads, traces, evidence packs, redaction profiles, and validation artifacts. A lifecycle object model makes those flows reviewable without treating a database policy or privacy notice as the whole control surface.
 
 ## 4.5 NIST AI RMF 1.0
 
@@ -70,7 +68,7 @@ NIST AI RMF 1.0 functions in this paper as voluntary risk framework. Its relevan
 
 **What it does not define (the agentic gap):** Intentionally not a MAS protocol or delegated-authority object model.
 
-**How it connects to lifecycle objects:** For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** NIST AI RMF supplies the risk-management frame; agentic execution needs the frame to bind to action classes, delegated authority, evidence sufficiency, monitoring triggers, remediation records, and accepted-outcome review. Lifecycle objects make the Govern, Map, Measure, and Manage functions concrete inside multi-step workflows.
 
 ## 4.6 ISO/IEC 42001
 
@@ -84,7 +82,7 @@ ISO/IEC 42001 functions in this paper as management system standard. Its relevan
 
 **What it does not define (the agentic gap):** Needs technical lifecycle evidence objects for agentic execution.
 
-**How it connects to lifecycle objects:** For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** ISO/IEC 42001 can organize the management system around AI governance, but agentic systems still need execution-level evidence objects. The management system needs records that show where policy, responsibility, authorization, monitoring, correction, and improvement were enforced in the actual agentic lifecycle.
 
 ## 4.7 Singapore IMDA Model AI Governance Framework for Agentic AI
 
@@ -98,7 +96,7 @@ Singapore MGF for Agentic AI functions in this paper as a voluntary governance f
 
 **What it does not define (the agentic gap):** Still a governance framework rather than a protocol schema. It should not be overstated as a protocol, law, or certification regime; it is a voluntary framework that helps name the agentic lifecycle control problem.
 
-**How it connects to lifecycle objects:** For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** The Singapore framework names the agentic governance problem more directly than many general AI frameworks. The implementation step is to translate that framing into protocol or schema-level controls for authority, human accountability, testing, monitoring, tool use, and lifecycle evidence.
 
 ## 4.8 W3C PROV / Verifiable Credentials
 
@@ -112,7 +110,7 @@ W3C PROV / Verifiable Credentials functions in this paper as web provenance and 
 
 **What it does not define (the agentic gap):** Not agent governance by itself.
 
-**How it connects to lifecycle objects:** For an enterprise team, the implementation mistake would be to treat the framework as satisfied by generic policy documentation alone. The deeper requirement is to ensure that the system architecture can produce evidence that the policy was enforced at the right lifecycle boundary. That is where the difference between written governance and lifecycle conformance becomes visible.
+**How it connects to lifecycle objects:** W3C PROV and Verifiable Credentials can represent provenance and machine-verifiable claims, but they do not decide which agentic governance facts must exist. Lifecycle objects define the semantics that provenance and credential structures may carry: authority, responsibility, evidence partition, selective disclosure, validation verdict, dispute, and remediation state.
 
 ## 4.9 Colorado AI Act (SB24-205 / SB25B-004)
 
@@ -126,8 +124,4 @@ Colorado AI Act (SB24-205 / SB25B-004) functions in this paper as U.S. state law
 
 **What it does not define (the agentic gap):** Should be treated as forward-looking in this paper, not as an active effective-law baseline at the snapshot date.
 
-**How it connects to lifecycle objects:** State-level accountability requirements will eventually require lifecycle objects to prove compliance.
-
----
-
-**End of Chapter 4**
+**How it connects to lifecycle objects:** State-level accountability requirements point toward a need for lifecycle evidence that can connect risk management, notice, review, impact, and accountability to actual system behavior. This paper keeps the Colorado discussion snapshot-bound and treats final legal-status verification as a publication QA item.

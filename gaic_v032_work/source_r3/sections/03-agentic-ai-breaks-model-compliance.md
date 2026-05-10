@@ -1,8 +1,6 @@
 # Chapter 3: Why Agentic AI Breaks Model-Centric Compliance
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-2
 
 ---
 
@@ -16,9 +14,7 @@ This does not mean models are unimportant. It means that model safety is no long
 
 The first generation of AI governance focused on model governance. That work remains essential: risk management, documentation, transparency, robustness, bias mitigation, security, and monitoring are all foundational. But agentic AI adds a new layer of operational consequence.
 
-A model answer becomes enterprise risk when it is embedded inside a workflow that can send an email, approve a refund, update a database, deploy code, modify access permissions, route a customer case, create a compliance record, or trigger another autonomous agent.
-
-This white paper names the missing layer **AI Agent Lifecycle Governance**. AI Agent Lifecycle Governance is the governance layer that defines how agentic work is authorized, executed, evidenced, reviewed, accepted, disputed, remediated, and reused across agents, humans, tools, projects, vendors, and organizational boundaries.
+This is why model governance must be treated as a foundation rather than the system boundary. Once a model is embedded inside a workflow, compliance must follow the work unit, not only the model artifact.
 
 ## 3.3 Failure Mode Comparison
 
@@ -46,10 +42,6 @@ The central compliance question is changing:
 - **Model-centric question:** Did the model produce a safe output?
 - **Agentic lifecycle question:** Was an agentic unit of work authorized, executed, evidenced, reviewed, accepted, disputed, remediated, and improved under controlled authority, evidence, privacy, and remediation constraints?
 
-This shift has practical consequences. Enterprise buyers, auditors, insurers, regulators, and internal governance teams now need more than dashboards, logs, or guardrails. They need lifecycle objects: delegated authority boundaries, human-role-to-agent-responsibility mappings, tool-action liability records, evidence partitions, accepted outcome states, cross-project reuse controls, privacy-preserving validation packs, and dispute closure records.
+This shift changes the compliance question. The test is no longer only whether the model output was safe, but whether the unit of agentic work can be shown to have moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints.
 
-The paper argues that **AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.** That thesis has practical consequences. Enterprise buyers, auditors, insurers, regulators, and internal governance teams now need more than dashboards, logs, or guardrails. They need lifecycle objects.
-
----
-
-**End of Chapter 3**
+The next chapter therefore turns to the regulatory and standards baseline: what existing frameworks already require, and where agentic lifecycle objects are still needed.

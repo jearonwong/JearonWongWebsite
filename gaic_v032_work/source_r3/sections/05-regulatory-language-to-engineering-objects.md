@@ -1,8 +1,6 @@
 # Chapter 5: From Regulatory Language to Engineering Objects
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-2.5
 
 ---
 
@@ -64,7 +62,7 @@ Without explicit lifecycle objects, regulatory language remains aspirational rat
 
 ## 5.4 The Engineering Object Requirement
 
-The paper argues that AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance. That thesis has practical consequences.
+At this point in the argument, the thesis becomes operational: lifecycle responsibility compliance requires objects that can be represented, emitted, reviewed, and replayed.
 
 Enterprise buyers, auditors, insurers, regulators, and internal governance teams need more than dashboards, logs, or guardrails. They need lifecycle objects: delegated authority boundaries, human-role-to-agent-responsibility mappings, tool-action liability records, evidence partitions, accepted outcome states, cross-project reuse controls, privacy-preserving validation packs, and dispute closure records.
 
@@ -96,7 +94,3 @@ The objects are designed to make visible the difference between model governance
 - Incident, dispute, and remediation closure
 
 The bridge from this chapter to Chapter 6 is direct: regulatory language establishes what must be proven; Missing Regulatory Objects define how to prove it in agentic workflows.
-
----
-
-**End of Chapter 5**

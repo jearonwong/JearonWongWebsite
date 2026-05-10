@@ -1,12 +1,12 @@
 # Chapter 1: Scope, Methodology, and Non-Legal Boundary
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-2
 
 ---
 
 ## 1.1 Purpose and Positioning
+
+The front matter states the document boundary; this chapter explains how that boundary is operationalized as a technical governance method.
 
 This paper is a technical governance analysis, not legal advice. It translates regulatory and standards language into engineering requirements for agentic and multi-agent systems. It is written for AI governance leaders, enterprise architects, AI risk teams, compliance teams, cybersecurity leaders, agent platform builders, insurance and assurance professionals, and protocol designers.
 
@@ -93,7 +93,3 @@ The controls used to limit over-claiming are as follows:
 | AI Agent Lifecycle Governance | A missing semantic and engineering layer | A binding regulatory standard |
 
 This boundary discipline strengthens the paper. The argument does not need to claim that MPLP is the only path. It only needs to show that agentic AI compliance requires lifecycle responsibility objects and that MPLP is one coherent way to express such objects.
-
----
-
-**End of Chapter 1**

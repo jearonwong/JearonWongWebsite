@@ -1,8 +1,6 @@
 # Chapter 2: The Missing Layer: AI Agent Lifecycle Governance
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-2
 
 ---
 
@@ -22,9 +20,11 @@ None of these terms alone names the full lifecycle responsibility problem.
 
 AI Agent Lifecycle Governance names the whole accountability surface. It asks whether an organization can demonstrate continuity from intent to outcome, not merely whether a system completed a task. It asks whether a human role had the right responsibility boundary, not merely whether a person clicked approve. It asks whether a tool action had a liability boundary, not merely whether an API key existed. It asks whether evidence can be replayed for dispute, not merely whether logs exist. It asks whether privacy survives evidence retention, not merely whether a database has access control.
 
-[FIGURE 2: Governance Stack / Missing Layer]
+**Figure F-02 — Governance Stack / Missing Layer**
 
-*Figure 2: The governance stack. The missing layer sits between orchestration and enterprise trust.*
+Model Governance → Agent Orchestration → AI Agent Lifecycle Governance → Enterprise Trust
+
+*Figure F-02 shows the missing lifecycle governance layer between execution orchestration and enterprise trust. The figure is a conceptual governance model, not a certification path or legal compliance proof.*
 
 ## 2.2 Why Existing Terms Are Insufficient
 
@@ -54,7 +54,3 @@ This is not bureaucracy for its own sake. It is the recognition that agentic sys
 ## 2.4 The Enterprise Implication
 
 The enterprise implication is severe. If agentic workflows cannot prove lifecycle responsibility, they will remain difficult to audit, insure, delegate, reuse, and scale. This is the reason that AI Agent Lifecycle Governance is not a philosophical category. It is an operational prerequisite for agentic AI becoming trusted enterprise infrastructure.
-
----
-
-**End of Chapter 2**

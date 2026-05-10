@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-5)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 2)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-2 patches (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -232,6 +232,39 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - Non-legal, non-certifying, non-ranking, non-procurement boundaries remain intact.
 
 **Phase 1D-5 Wave 1 Status:** ◐ PATCH APPLIED / WAVES 2-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 2 Notes (May 11, 2026)
+
+**Scope:** Chapters 1-5 publication-quality cleanup after human line-by-line review.
+
+**Review result:**
+
+- Content preservation: PASS.
+- Argument direction: PASS.
+- Publication readiness: FAIL before patch.
+- Publication candidate: BLOCKED.
+
+**Patch applied:**
+
+1. Removed internal reconstructed-source `Status` / `Phase` metadata from Chapters 1-5.
+2. Removed `End of Chapter` source markers from Chapters 1-5.
+3. Replaced the Chapter 2 `[FIGURE 2...]` placeholder syntax with formal `Figure F-02 — Governance Stack / Missing Layer` text.
+4. Preserved the Figure F-02 boundary that the governance stack is a conceptual model, not a certification path or legal compliance proof.
+5. Reduced duplicated Chapter 3 safe-model/workflow and thesis/object language while preserving the core model-governance-is-necessary-but-insufficient claim.
+6. Replaced repeated Chapter 4 generic implementation-mistake wording with framework-specific implications for EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, Singapore MGF Agentic AI, and W3C PROV / Verifiable Credentials.
+7. Kept legal/regulatory snapshot claims unchanged; Colorado AI Act and other status-sensitive claims remain final publication source-check items.
+8. Polished the Chapter 5 bridge into the MRO chapter while preserving the lifecycle-object list.
+
+**Boundary discipline:**
+
+- No MRO/RCCS/ALCS taxonomy changed.
+- No system mapping semantics changed.
+- No legal/regulatory facts were updated without source verification.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+- Non-legal, non-certifying, non-ranking, and non-procurement boundaries remain intact.
+
+**Phase 1D-5 Wave 2 Status:** ◐ PATCH APPLIED / WAVES 3-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
