@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-4)
+**Last Updated:** May 10, 2026 (Phase 1D-5)
 
 ## Reconstruction Strategy
 
@@ -33,6 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -173,6 +174,29 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 **Phase 1D-4 Status:** ◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED.
 
 ---
+
+## Phase 1D-5 Notes (May 10, 2026)
+
+**Scope:** Prepare full-text editorial review pack for human/assistant line-by-line review.
+
+**Actions completed:**
+
+1. Created a line-numbered full-text review file from the Phase 1D-4 assembled Markdown.
+2. Created an eight-wave section review index with generated line ranges, approximate PDF page ranges, word counts, table counts, figure counts, and review priorities.
+3. Created an automated content preservation diff comparing current source files against generated Phase 1D-4 Markdown chunks.
+4. Created a table split integrity report covering every Phase 1D-4 split/high-risk table record.
+5. Created a figure/text integration map for F-01 through F-11.
+6. Created a citation placement map for the 24 high-risk claim-evidence register claims.
+7. Created an editorial review checklist for human review waves.
+
+**Boundary discipline:**
+
+- No white paper prose was rewritten.
+- No DOCX/PDF artifact was regenerated.
+- No substantive content was removed, compressed, or moved.
+- Publication candidate readiness was not declared.
+
+**Phase 1D-5 Status:** ◐ FULL-TEXT REVIEW PACK GENERATED / HUMAN EDITORIAL REVIEW REQUIRED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

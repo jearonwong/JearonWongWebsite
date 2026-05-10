@@ -1,7 +1,33 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 10, 2026 (Phase 1D-4 Full-Content Reflow)
+**Last Updated:** May 10, 2026 (Phase 1D-5 Full-Text Review Pack)
+
+## Phase 1D-5 Full-Text Editorial Review Pack
+
+### Status: PHASE 1D-5 FULL-TEXT REVIEW PACK GENERATED / HUMAN EDITORIAL REVIEW REQUIRED
+
+Phase 1D-5 does not rewrite the white paper and does not regenerate DOCX/PDF artifacts. It prepares the Phase 1D-4 full white paper for human line-by-line editorial review.
+
+**Review-pack artifacts:**
+
+1. `reports/phase-1d5-line-numbered-full-whitepaper.md`
+2. `reports/phase-1d5-section-review-index.md`
+3. `reports/phase-1d5-content-preservation-diff.md`
+4. `reports/phase-1d5-table-split-integrity-report.md`
+5. `reports/phase-1d5-figure-text-integration-map.md`
+6. `reports/phase-1d5-citation-placement-map.md`
+7. `reports/phase-1d5-editorial-review-checklist.md`
+
+**Remaining blockers:**
+
+1. Full human editorial review of the 229-page Phase 1D-4 white paper is still required.
+2. Table split integrity must be spot-checked against original source tables.
+3. Citation placement must be checked near high-risk claims.
+4. Figure/text integration must be visually confirmed in the PDF.
+5. Publication candidate readiness is not declared.
+
+**Phase 1D-5 Decision:** PHASE 1D-5 FULL-TEXT REVIEW PACK GENERATED / HUMAN EDITORIAL REVIEW REQUIRED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 
