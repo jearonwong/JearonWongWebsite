@@ -1,8 +1,6 @@
-# Chapter 7: RCCS - Regulatory Compliance Coverage Score
+# Chapter 7: Regulatory Compliance Coverage Score (RCCS)
 
-**Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-3.5
+**Version:** v0.3.2-FRC-R3
 
 ---
 
@@ -125,7 +123,7 @@ RCCS is calculated from adjusted RCCS dimension scores. Each dimension first rec
 
 Where:
 - Raw Score is the 0-5 capability score for each dimension
-- Evidence Confidence Multiplier is L1=1.00, L2=0.85, L3=0.75, L4=0.55, or L5=0.35
+- Evidence Confidence Multiplier is L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, or L5 = 0.35
 
 The RCCS framework score is the aggregate of adjusted RCCS dimension scores. The cross-framework composite score is defined in Chapter 9 as:
 
@@ -627,9 +625,3 @@ This chapter introduced the Regulatory Compliance Coverage Score (RCCS), the fir
 The ten RCCS dimensions map directly to recurring requirements in EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, and Singapore MGF for Agentic AI. Risk management corresponds to EU AI Act Article 9 and NIST AI RMF core functions. Data governance corresponds to GDPR Article 5 and EU AI Act Article 10. Documentation corresponds to EU AI Act Article 11. Record-keeping corresponds to EU AI Act Article 12 and GDPR Article 30. Transparency corresponds to EU AI Act Article 13 and GDPR Articles 13-14. Human oversight corresponds to EU AI Act Article 14. Security corresponds to EU AI Act Article 15 and GDPR Article 32. Accountability corresponds to GDPR Article 5(2) and EU AI Act Article 26. Contestability corresponds to EU AI Act Article 86 and GDPR Article 22. Monitoring corresponds to EU AI Act Article 72. These mappings demonstrate that RCCS is grounded in existing regulatory requirements, not speculative future obligations.
 
 RCCS provides a baseline for evaluating whether systems provide the governance primitives that regulation increasingly requires. However, RCCS alone is insufficient for agentic systems. A system may score well on RCCS while lacking the lifecycle objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints. This is where ALCS becomes necessary. Chapter 8 introduces the Agentic Lifecycle Conformance Score (ALCS), which measures a different layer: whether a system supports the sixteen Missing Regulatory Objects that enable lifecycle responsibility compliance in multi-agent execution. RCCS and ALCS together provide a dual-layer assessment of system governance capability.
-
----
-
-**End of Chapter 7**
-
-**Chapter 7 Status:** COMPLETE — All sections filled (7.0-7.16); all ten RCCS dimension scoring rubrics provided (T-07-03 through T-07-12).

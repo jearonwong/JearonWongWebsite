@@ -1,8 +1,6 @@
-# Chapter 8: ALCS - Agentic Lifecycle Conformance Score
+# Chapter 8: Agentic Lifecycle Conformance Score (ALCS)
 
-**Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-3.7
+**Version:** v0.3.2-FRC-R3
 
 ---
 
@@ -781,9 +779,3 @@ This chapter introduced the Agentic Lifecycle Conformance Score (ALCS), a framew
 The fifteen ALCS dimensions operationalize the sixteen MROs into system features that can be evaluated, scored, and improved. Human-role-to-MAS responsibility mapping ensures that human organizational accountability is explicitly linked to agent execution responsibilities. Delegated authority boundaries distinguish technical permission from business authority. Agent role definitions carry governance semantics beyond execution personas. Accepted outcome compliance separates execution completion from outcome acceptance. Tool-action liability boundaries record accountability for consequential actions. Responsibility transfer semantics make agent handoffs auditable. Authority drift detection prevents unauthorized authority transitions. MAS evidence partitioning enables selective disclosure and reconstruction. Cross-project reuse compliance enforces revalidation when workflows move between contexts. Privacy lifecycle mapping tracks personal data flows across agents, tools, and memory. Privacy-preserving validation supports external verification without raw data disclosure. Evidence minimization limits retention to governance purposes. Data subject rights reconciliation balances erasure requests with evidence obligations. Processor chain tracking maintains visibility into third-party data handling. Vendor substitution conformance ensures that optionality does not become governance drift.
 
 ALCS complements RCCS by measuring a different layer. RCCS evaluates regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. ALCS evaluates agentic lifecycle conformance: whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries. A system can have strong RCCS and weak ALCS, meaning it provides strong regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work. Both layers are necessary. Neither alone is sufficient. Chapter 9 introduces composite scoring, which combines RCCS and ALCS into system-level assessments that reflect both regulatory compliance coverage and agentic lifecycle conformance.
-
----
-
-**End of Chapter 8**
-
-**Chapter 8 Status:** COMPLETE — All sections filled (8.0-8.22); all fifteen ALCS dimension scoring rubrics provided (T-08-03 through T-08-17); chapter summary added.

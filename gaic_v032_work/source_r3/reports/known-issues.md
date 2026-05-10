@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 3 Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4A Source Restoration)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -109,6 +109,30 @@ Wave 3 human review covered Chapter 6 and Appendix A. MRO conceptual direction p
 4. Publication candidate readiness is not declared.
 
 **Wave 3 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 4A Chapters 7-9 Source Restoration
+
+### Status: WAVE 4A SOURCE RESTORATION COMPLETE / WAVE 4 EDITORIAL REVIEW PENDING
+
+Wave 4 initial review found that the legacy placeholder files for Chapters 7-9 were empty, creating source-layer ambiguity for the RCCS, ALCS, and composite scoring methodology. Active SOURCE MASTER and generation scripts already referenced the filled R3 methodology files, but the empty placeholders could mislead review and future source recovery work.
+
+**Restoration applied:**
+
+1. Restored `sections/07-rccs-placeholder.md` from the existing completed R3 Chapter 7 source `sections/07-rccs-regulatory-compliance-coverage.md`.
+2. Restored `sections/08-alcs-placeholder.md` from the existing completed R3 Chapter 8 source `sections/08-alcs-agentic-lifecycle-conformance.md`.
+3. Restored `sections/09-composite-scoring-placeholder.md` from the existing completed R3 Chapter 9 source `sections/09-composite-scoring-method.md`.
+4. Cross-checked the restored content against the Phase 1D-4 assembled Markdown and Appendices B/E/F canonical methodology assets.
+5. Removed publication-facing internal `Status` / `Phase` metadata and `End of Chapter` / chapter status markers from the restored Chapter 7-9 source files.
+6. Preserved canonical RCCS dimensions, ALCS dimensions, evidence multipliers, dimension score formula, and composite formula.
+7. No DOCX/PDF artifacts were regenerated.
+
+**Remaining blockers:**
+
+1. Detailed Wave 4 editorial review of Chapters 7-9 and Appendices B/E/F remains pending.
+2. Waves 5-8 full-text editorial review remain pending.
+3. Publication candidate readiness is not declared.
+
+**Wave 4A Decision:** SOURCE RESTORATION COMPLETE / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

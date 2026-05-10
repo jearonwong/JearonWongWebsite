@@ -1,8 +1,6 @@
-# Chapter 9: Composite Scoring Method
+# Chapter 9: Composite Scoring Method and Evidence Confidence
 
-**Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1A-3.10
+**Version:** v0.3.2-FRC-R3
 
 ---
 
@@ -42,7 +40,7 @@ Each dimension is first normalized using the canonical dimension formula:
 
 Where:
 - **Raw Score** is the 0-5 score for each dimension based on system capability strength
-- **Evidence Confidence Multiplier** is L1=1.00, L2=0.85, L3=0.75, L4=0.55, or L5=0.35
+- **Evidence Confidence Multiplier** is L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, or L5 = 0.35
 
 The cross-framework composite score is:
 
@@ -198,9 +196,3 @@ Interpreting RCCS and ALCS together requires understanding four quadrants. High 
 Composite scoring must be reproducible and transparent. Dimension scores must be documented with rationale. Evidence sources must be cited with quality assessment. Evidence multipliers must be applied explicitly. Calculations must be shown transparently. Scoring is comparative, not absolute. The value of scoring is in making visible the differences between systems and identifying gaps in capability.
 
 Composite scoring is an analytical framework, not a legal compliance score. High composite scores do not mean legal compliance. Low composite scores do not mean non-compliance. Composite scoring measures system capability, not organizational practice. It is context-independent, but compliance is context-dependent. Organizations must not rely on composite scores as proof of legal compliance. The following chapters apply composite scoring to specific systems, providing comparative field analysis and detailed system mappings.
-
----
-
-**End of Chapter 9**
-
-**Chapter 9 Status:** COMPLETE — All sections filled (9.0-9.8); composite scoring method defined; RCCS/ALCS interpretation guidance provided; boundary discipline maintained.

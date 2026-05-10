@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 3)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4A)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-3 patches (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-3 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -302,6 +302,38 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 3 Status:** ◐ PATCH APPLIED / WAVES 4-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 4A Notes (May 11, 2026)
+
+**Scope:** Restore canonical Chapter 7-9 source continuity before detailed Wave 4 editorial review.
+
+**Review finding:**
+
+- `sections/07-rccs-placeholder.md` was empty.
+- `sections/08-alcs-placeholder.md` was empty.
+- `sections/09-composite-scoring-placeholder.md` was empty.
+- Active SOURCE MASTER and generators already referenced the filled R3 methodology files, but the empty legacy placeholders created source-layer ambiguity for RCCS, ALCS, and composite scoring review.
+
+**Source recovery method:**
+
+1. Confirmed that active SOURCE MASTER and generation scripts reference `sections/07-rccs-regulatory-compliance-coverage.md`, `sections/08-alcs-agentic-lifecycle-conformance.md`, and `sections/09-composite-scoring-method.md`.
+2. Confirmed those filled R3 source files align with the Phase 1D-4 assembled Markdown for Chapters 7-9.
+3. Cross-checked the canonical formulas and dimensions against Appendix B, Appendix E, and Appendix F.
+4. Restored the empty placeholder files from the existing completed R3 methodology source files.
+5. Removed publication-facing internal `Status` / `Phase` metadata and `End of Chapter` / chapter status markers from Chapter 7-9 source.
+
+**Methodology preservation:**
+
+- RCCS dimensions remain unchanged.
+- ALCS dimensions remain unchanged.
+- Evidence multipliers remain L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, and L5 = 0.35.
+- Dimension score formula remains `Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier`.
+- Composite formula remains `Composite Score = 0.40 × RCCS + 0.60 × ALCS`.
+- No legal compliance score, certification, regulatory approval, vendor score, ranking, or procurement claim was introduced.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 4A Status:** ◐ SOURCE RESTORATION COMPLETE / WAVE 4 EDITORIAL REVIEW PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
