@@ -1,0 +1,97 @@
+# Appendix K — Editorial Remediation Record
+
+**Version:** v0.3.2-FRC-R3  
+**Status:** Filled — Phase 1C claim-level source binding applied  
+**Phase:** 1B-10 / 1C Follow-up
+
+---
+
+## K.0 Editorial Remediation Boundary
+
+This appendix records governance-relevant remediation decisions across Phase 1A and Phase 1B. It is not a line-by-line changelog. It preserves audit traceability for reconstruction strategy, methodology correction, boundary hardening, source governance, and deferred cleanup.
+
+The record does not claim that Phase 1C source validation or Phase 1D publication QA has been completed.
+
+---
+
+## K.1 Remediation Categories
+
+Remediation categories:
+
+1. **Structural reconstruction:** Creating clean Markdown source, filling chapters, and replacing unstable PDF extraction behavior.
+2. **Methodology correction:** Aligning evidence multipliers, scoring formulas, score-5 interpretation, and composite weighting.
+3. **Boundary hardening:** Preventing legal, procurement, certification, vendor ordering, or compliance-proof overclaim.
+4. **Source governance:** Preserving citation inventory status, L2 revalidation requirements, evidence level annotation, and source coverage validation.
+5. **Publication deferral:** Reserving DOCX/PDF generation and layout QA for Phase 1D.
+
+---
+
+## K.2 Phase 1A Remediation Record
+
+Phase 1A established the clean source foundation:
+
+- Rebuilt the document as Markdown-first source.
+- Filled core body chapters and methodology chapters.
+- Established RCCS, ALCS, evidence multiplier, and composite scoring discipline.
+- Preserved non-legal and non-certifying boundaries.
+- Deferred DOCX/PDF generation until after source completion and cleanup.
+
+---
+
+## K.3 Phase 1B Remediation Record
+
+**Table T-K-01: Editorial Remediation Record**
+
+| Record ID | Phase | Issue | Remediation | Evidence / File Area | Status |
+|-----------|-------|-------|-------------|----------------------|--------|
+| R-K-01 | Phase 1A | R2 extraction and layout instability | Adopted Markdown-first reconstruction strategy | Reconstruction notes; SOURCE MASTER | Closed |
+| R-K-02 | Phase 1A | Core methodology needed stable scoring discipline | Established canonical evidence multipliers and scoring formulas | Chapters 7-9; Appendix B | Closed |
+| R-K-03 | Phase 1B-1 to 1B-7 | Body chapters 11-15 and 17-18 missing from clean source | Filled comparative field, mappings, validation pattern, failure scenarios, roadmap, and conclusion | Sections 11-15, 17-18 | Closed |
+| R-K-04 | Phase 1B-8 | Appendices A-D missing from clean source | Created templates, scorecards, source notes, and expanded MRO mapping | Appendices A-D | Closed |
+| R-K-05 | Phase 1B-8C | Appendix B methodology values inconsistent with canonical method | Corrected evidence multipliers, adjusted score formula, composite weights, and Article 12 example | Appendix B; Phase 1B-8C report | Corrected by later patch |
+| R-K-06 | Phase 1B-8C | Appendix A and D contained overclaim risk | Neutralized compliance-sounding template values and marked mappings provisional | Appendices A and D | Corrected by later patch |
+| R-K-07 | Phase 1B-9 | Appendices E-G missing detailed rubric and assessment content | Created RCCS rubrics, ALCS rubrics, and provisional system assessments | Appendices E-G | Structurally closed |
+| R-K-08 | Phase 1B-9C | Appendix G scope drift and score/order overreach | Rewrote Appendix G using authorized 8 systems and qualitative provisional posture | Appendix G; 1B-9C report | Corrected by later patch |
+| R-K-09 | Phase 1B-9C | Appendix E/F score-5 wording risked implementation overclaim | Hardened score-5 rows to require implementation evidence | Appendices E/F | Corrected by later patch |
+| R-K-10 | Phase 1B-9D | Governance ledgers stale after partial 1B-9D patch | Synced Appendix G metadata, SOURCE MASTER, carryover list, and report | SOURCE MASTER; 1B-9D report | Closed |
+| R-K-11 | Phase 1B-10 | Appendices H-K missing | Filled procurement scorecard, source audit register, gap closure matrix, and editorial remediation record | Appendices H-K | Closed |
+| R-K-12 | Phase 1B-10 | Phase 1C / 1D obligations needed final pre-cleanup ledger | Preserved canonical carryover and publication deferrals | Appendices I/J/K; completion report | Closed |
+| R-K-13 | Phase 1C | Taxonomy and editorial drift remained after Phase 1B | Corrected ALCS/MRO names, Stage 0-to-7 wording, eight-contribution wording, and F-09 reservation | Chapters 14/15/17/18; figure inventory | Closed for editorial cleanup |
+| R-K-14 | Phase 1C | Citation and coverage ledgers remained pre-cleanup | Updated citation inventory and source coverage matrix with URL/entry-point review and unresolved claim-level validation queue | Citation inventory; source coverage matrix | Corrected by Phase 1C follow-up |
+| R-K-15 | Phase 1C | Wide-table risks were not fully documented for Phase 1D | Added layout risk notes for requested wide-table set and H-K tables | Table inventory | Closed for layout-readiness audit |
+| R-K-16 | Phase 1C follow-up | Claim-level L2 product/protocol source binding remained pending | Created claim evidence register; located official source entry points; narrowed or downgraded material product/protocol claims; marked Appendix G revalidated provisional | Claim evidence register; citation inventory; source coverage matrix; Appendix G | Closed for claim-level source binding; page-level citation pinning remains |
+
+---
+
+## K.4 Boundary and Non-Claim Remediation Record
+
+**Table T-K-02: Boundary Hardening Record**
+
+| Boundary Area | Risk | Remediation Applied | Remaining Check | Phase |
+|---------------|------|---------------------|-----------------|-------|
+| RCCS/ALCS non-legal-score boundary | Readers may treat analytical scores as legal determinations | Repeated boundary language across chapters and appendices | Verify consistency in Phase 1C | Phase 1A / 1B |
+| MPLP non-required / non-exclusive boundary | MPLP could be misread as required or sufficient by itself | Disclosed author relationship and framed MPLP as one protocol path | Verify wording in Phase 1C | Phase 1B-4 |
+| Validation Lab non-certifying boundary | Validation Lab could be misread as an approval body | Framed as a non-certifying evidence adjudication example | Validate URL and boundary language in Phase 1C | Phase 1B-5 |
+| Appendix G no-score/no-ranking boundary | Provisional assessment could be misused as vendor ordering | Removed scores, ordered comparisons, and selection language; Phase 1C follow-up preserved revalidated provisional status | Verify no score/ranking language in final proof | Phase 1B-9C / 1B-9D / 1C |
+| Appendix E/F legal-text boundary | Legal text could be misread as implementation evidence | Hardened score-5 rows and top-level scale language | Verify formula and rubric consistency in Phase 1C | Phase 1B-9C / 1B-9D |
+| Appendix H procurement boundary | Buyer checklist could be misused as vendor selection advice | Added procurement-use boundary and required human review | Verify no vendor ordering language in Phase 1C | Phase 1B-10 |
+| Appendix I source audit boundary | Revalidation register could be misread as completed validation | Stated that Phase 1B-10 was preparatory; Phase 1C follow-up added claim-level source-binding status without claiming final publication readiness | Perform final page-level citation pinning and rendering QA | Phase 1B-10 / Phase 1C |
+| Appendix J closure boundary | Gap closure could be misread as final publication readiness | Distinguished closed, structurally closed, Phase 1C, and Phase 1D items | Complete deferred work | Phase 1B-10 |
+
+---
+
+## K.5 Remaining Editorial Actions for Phase 1C/1D
+
+**Table T-K-03: Phase 1C / 1D Remaining Editorial Actions**
+
+| Action | Reason | Target Phase | Required Evidence | Blocking Level |
+|--------|--------|--------------|-------------------|----------------|
+| Page-level citation pinning for source-bound product/protocol claims | Official entry points were located, but final citation pages must be pinned before publication | Phase 1D / publication-candidate QA | Exact source page references and citation rendering record | Blocks publication release |
+| Validation Lab methodology-specific citation | Public entry point was located, but methodology-specific support remains limited | Phase 1D / publication-candidate QA | Methodology URL or retained unresolved note | Blocks treating methodology claims as more than boundary-limited |
+| Evidence level source-to-claim rendering check | Evidence confidence is now tied to claims, but final artifacts must preserve labels | Phase 1D | Citation/evidence rendering QA record | Blocks publication release |
+| Appendix G revalidated provisional proofread | Provisional postures now have source binding but remain non-final | Phase 1D | Final no-score/no-ranking grep and citation check | Blocks final Appendix G publication status |
+| DOCX/PDF generation and visual QA | Publication rendering not yet produced | Phase 1D | DOCX/PDF artifacts and visual QA report | Blocks publication release |
+
+---
+
+**End of Appendix K**
