@@ -1,7 +1,7 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-11 Citation Source Evidence Closure
+**Phase:** 1D-12 Two-Layer RCCS and Visual Repair
 **Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
 **Last Updated:** May 11, 2026
 
@@ -18,6 +18,8 @@ Phase 1D-9 added the missing evaluation-results layer and semantic table-type sy
 Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all evaluated systems. These scores are publication-facing result signals, but they are not final vendor scores, rankings, procurement recommendations, certifications, regulatory approval signals, legal compliance proof, or deployment-readiness guarantees. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
 
 Phase 1D-11 closes the high-risk citation/source evidence blockers without swallowing them as vague limitations. OpenAI platform-guide HTTP 403 is retained as an access note only because accessible official OpenAI Agents SDK Python and JavaScript docs replace it for narrowed SDK-surface claims. Validation Lab is limited to a public-surface, non-certifying evidence adjudication example. MPLP identity is source-bound, while GAIC MRO/ALCS mappings remain author analytical mapping where not directly stated. Product/platform documentation supports capability surfaces, not lifecycle compliance proof.
+
+Phase 1D-12 adds the final two-layer RCCS presentation and repairs the table wrapping blocker. Evaluation Results now distinguishes RCCS-T (traditional governance coverage), RCCS-M (MRO-adjusted agentic regulatory coverage), and ALCS (lifecycle responsibility conformance). MPLP remains in the fixed-order comparison with limited RCCS-T product/platform coverage and strong RCCS-M/ALCS lifecycle-object semantics. Tables must not use wrapping rules that create single-letter vertical columns.
 
 ## VI Principles
 
@@ -87,10 +89,10 @@ Do not scale typography with viewport width. Letter spacing remains normal.
 | MRO/RCCS/ALCS badge | Small registry-blue or slate monospace pill |
 | Figure card | Bordered panel with figure label, flow lane, interpretation text |
 | Chart card | Print-safe SVG or CSS chart with source-data boundary note |
-| Evaluation profile card | Source-qualified RCCS/ALCS posture, visible strength, lifecycle gap, evidence basis, and boundary per system |
-| Score overview table | Fixed-order RCCS/ALCS provisional analytical scores, score ranges, confidence labels, and source-boundary notes |
-| RCCS/ALCS score comparison | Grouped bar chart with fixed source order; no score sorting, leaderboard, or winner framing |
-| RCCS/ALCS posture map | Provisional analytical score map; no final scores, no rank order, no procurement quadrant |
+| Evaluation profile card | Source-qualified RCCS-T/RCCS-M/ALCS posture, visible strength, lifecycle gap, evidence basis, and boundary per system |
+| Score overview table | Fixed-order RCCS-T/RCCS-M/ALCS provisional analytical scores, score ranges, confidence labels, and source-boundary notes |
+| RCCS-T/RCCS-M/ALCS score comparison | Grouped bar chart with fixed source order; no score sorting, leaderboard, or winner framing |
+| RCCS-M/ALCS posture map | Provisional analytical score map; no final scores, no rank order, no procurement quadrant |
 | System heatmap | Strong / Partial / Limited / Not visible qualitative cells only; no leaderboard coloring |
 | Object card | Reader-facing rendering of short lifecycle object/code examples in body chapters |
 | Table | Fixed layout where possible, shaded header, compact cell padding, repeat headers in print when supported |
@@ -142,6 +144,17 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | Scored profile card | Lead with score/range/confidence, then visible strength, lifecycle gap, evidence basis, and boundary |
 | Boundary note | Repeat that scores are analytical profiles, not final vendor scores, rankings, legal proof, certifications, regulatory approval, or procurement recommendations |
 
+## Phase 1D-12 RCCS-T / RCCS-M Components
+
+| Component | Rule |
+|---|---|
+| RCCS-T | Traditional Regulatory Compliance Coverage Score; measures familiar governance surfaces such as risk management, documentation, records, transparency, oversight, security, accountability, contestability, and monitoring |
+| RCCS-M | MRO-Adjusted Regulatory Compliance Coverage Score; measures whether regulatory coverage can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics |
+| ALCS | Agentic Lifecycle Conformance Score; remains the lifecycle responsibility conformance layer |
+| MPLP interpretation | Do not inflate traditional RCCS-T; explain that MPLP is not an enterprise governance SaaS while its RCCS-M/ALCS profile is strong because protocol semantics map to MRO-style lifecycle objects |
+| Chart order | Use fixed system order only; do not sort by any score or create a winner, leader, best-system, or procurement quadrant |
+| Boundary note | RCCS-M is author analytical, not a regulator-approved benchmark, legal compliance score, certification, final vendor score, ranking, or procurement recommendation |
+
 ## Phase 1D-11 Citation Closure Components
 
 | Component | Rule |
@@ -164,3 +177,13 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | system_profile_table | `.table-system-profile` or `.system-profile-card-set` | System/mapping rows with long strength, gap, evidence, and boundary text |
 | governance_boundary_table | `.table-boundary` or semantic row cards | Claim/non-claim boundary rows |
 | appendix_dense_table | `.table-appendix-dense` | Compact technical appendix tables only |
+
+## Phase 1D-12 Table Wrapping Repair Rules
+
+| Rule | Requirement |
+|---|---|
+| Table/code wrapping | Do not use `overflow-wrap: anywhere` for table cells or code-like text |
+| Word breaking | Do not use `word-break: break-all`; table cells use `word-break: normal` |
+| Long text | Use `overflow-wrap: break-word` plus semantic colgroups, table splitting, or card rendering |
+| Hyphenation | Use `hyphens: auto` for table prose and `hyphens: none` for code/preformatted text |
+| Visual blocker | Single-letter vertical table text is a publication blocker, not an accepted limitation |

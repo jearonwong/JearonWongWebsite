@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-11 Citation Source Evidence Closure)
+**Last Updated:** May 11, 2026 (Phase 1D-12 Two-Layer RCCS and Visual Repair)
+
+## Phase 1D-12 Two-Layer RCCS and Visual Repair
+
+### Status: PHASE 1D-12 TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+
+Phase 1D-12 addresses two final human-review blockers without reopening content expansion: table text that could render as single-letter vertical columns in PDF, and an over-blunt RCCS presentation that did not distinguish traditional governance coverage from MRO-adjusted agentic regulatory coverage.
+
+**Repair results:**
+
+1. Table wrapping root cause repaired globally: table/code text no longer uses `overflow-wrap: anywhere`; `word-break: break-all` remains absent; table cells use `word-break: normal`, `overflow-wrap: break-word`, and `hyphens: auto`.
+2. Evaluation Results now displays three bounded profile layers for every evaluated system: RCCS-T, RCCS-M, and ALCS.
+3. RCCS-T is defined as Traditional Regulatory Compliance Coverage Score; RCCS-M is defined as MRO-Adjusted Regulatory Compliance Coverage Score.
+4. MPLP remains in the comparison. Its RCCS-T is limited by not being an enterprise governance SaaS, while its RCCS-M and ALCS are strong because its protocol semantics map to lifecycle responsibility objects.
+5. Grouped score charts now show RCCS-T/RCCS-M/ALCS; the map uses RCCS-M vs ALCS. Fixed non-ranked system order is preserved.
+6. Phase 1D-11 citation/source closure remains intact; citation blocker count and final unresolved high-risk blocker count remain 0.
+
+**Generated / QA result:**
+
+1. Phase 1D-12 HTML/PDF/DOCX derivative artifacts generated into `out/phase_1d12/html_publication/`.
+2. PDF page count: 523 A4 pages; rendered PNG pages: 523.
+3. Tables rendered: 186; split tables: 113; figures: 11; charts: 6.
+4. Positive forbidden-claim blocker count: 0.
+5. Citation blocker count: 0; final unresolved high-risk blocker count: 0.
+6. Old DOCX/PDF used as input: false.
+
+**Remaining limitations, not blockers:**
+
+1. Human final review should still inspect the Phase 1D-12 HTML/PDF, especially score charts, T-08-13-style rubric rendering, Appendix G, References / Sources, and final pages.
+2. RCCS-M remains an author analytical model, not a regulator-approved benchmark, certification, legal compliance proof, or procurement recommendation.
+3. MPLP mapping to RCCS-M/ALCS remains author analytical where not directly stated in MPLP sources, with conflict-of-interest disclosure preserved.
+
+**Phase 1D-12 Decision:** PHASE 1D-12 TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
 
 ## Phase 1D-11 Citation Source Evidence Closure
 

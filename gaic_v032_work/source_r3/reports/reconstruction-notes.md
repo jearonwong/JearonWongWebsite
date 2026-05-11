@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-11 Citation Source Evidence Closure)
+**Last Updated:** May 11, 2026 (Phase 1D-12 Two-Layer RCCS and Visual Repair)
 
 ## Reconstruction Strategy
 
@@ -40,6 +40,7 @@ R3 uses phased reconstruction:
 19. **Phase 1D-9:** Evaluation results layer and semantic table reflow with non-ranking RCCS/ALCS profiles, result-first chapter panels, and publication table semantics (◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED)
 20. **Phase 1D-10:** Scored evaluation results and table layout repair with provisional RCCS/ALCS score ranges, confidence labels, score visuals, stronger result hierarchy, and semantic table readability repair (◐ SCORED EVALUATION RESULTS GENERATED / QA REQUIRED)
 21. **Phase 1D-11:** Citation/source evidence closure with OpenAI source replacement, Validation Lab public-methodology narrowing, MPLP source-bound/analytical split, L2 product reference closure, score evidence integrity QA, and regenerated HTML/PDF/DOCX derivative (✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+22. **Phase 1D-12:** Two-layer RCCS model and final table visual repair with RCCS-T/RCCS-M/ALCS result profiles, MPLP interpretation clarification, score chart update, table wrapping root-cause repair, and regenerated HTML/PDF/DOCX derivative (✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -91,6 +92,10 @@ Phase 1D-10 corrects the over-conservative result layer by allowing explicit RCC
 ### Decision 9: Close Evidence Gaps Before Review Seal
 
 Phase 1D-11 rejects a broad accepted-limitation shortcut. High-risk citation/access/source-pointer blockers must be closed by accessible official source, source replacement, claim narrowing, L5 downgrade, or removal. Only explicit, non-core limitations may remain. The OpenAI platform guide HTTP 403 is retained as an access note because accessible official OpenAI Agents SDK Python/JavaScript docs support the narrowed SDK claims. Validation Lab is limited to public-surface non-certifying methodology support. MPLP identity is source-bound while GAIC MRO/ALCS mapping remains author analytical mapping where not directly stated.
+
+### Decision 10: Split RCCS Into Traditional and MRO-Adjusted Layers
+
+Phase 1D-12 corrects an over-blunt RCCS presentation by preserving MPLP in the comparison while separating traditional product-governance coverage from agentic lifecycle regulatory coverage. RCCS-T measures familiar regulatory/governance coverage surfaces; RCCS-M measures whether those obligations can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics. MPLP's RCCS-T is not inflated, but its RCCS-M and ALCS posture is presented as strong because the protocol semantics map to authority, evidence, accepted-outcome, responsibility-transfer, and substitution objects. RCCS-M remains author analytical and is not a regulator-approved benchmark, legal compliance score, certification, or procurement recommendation.
 
 ## Lessons from R2
 
@@ -2572,3 +2577,37 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - Final unresolved high-risk citation blockers: 0.
 
 **Phase 1D-11 Status:** ✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
+
+## Phase 1D-12 Notes (May 11, 2026)
+
+**Scope:** Targeted final repair for table rendering blockers and two-layer RCCS model clarity after Phase 1D-11 publication-candidate review readiness.
+
+**Actions completed:**
+
+1. Created `scripts/generate_r3_phase1d12_html_publication.py` from the HTML-first renderer and updated output paths to `out/phase_1d12/html_publication/`.
+2. Replaced the single RCCS result display with RCCS-T, RCCS-M, and ALCS score/range/profile fields for all eight systems.
+3. Updated the Evaluation Results section to explain RCCS-T as traditional governance coverage and RCCS-M as MRO-adjusted agentic regulatory coverage.
+4. Clarified MPLP scoring interpretation: limited RCCS-T product/platform coverage, strong RCCS-M MRO-adjusted coverage, and strong ALCS lifecycle conformance.
+5. Updated grouped score charts to show RCCS-T/RCCS-M/ALCS and updated the score map to use RCCS-M vs ALCS.
+6. Repaired the table wrapping root cause by removing/overriding rules that allow extreme single-letter wrapping and preserving semantic card/table layouts for long text.
+7. Preserved Phase 1D-11 citation/source closure, confidence labels, no-ranking boundary, and HTML/PDF visual authority.
+8. Generated Phase 1D-12 HTML, PDF, DOCX derivative, PDF text, rendered PDF pages, contact sheets, and generation log under `out/phase_1d12/html_publication/`.
+
+**Generation result:**
+
+- PDF page count: 523 A4 pages.
+- Rendered PNG pages: 523.
+- Tables rendered: 186; split tables: 113.
+- Figures: 11; charts: 6.
+- Positive forbidden-claim blocker count: 0.
+- Citation blocker count: 0.
+- Final unresolved high-risk blockers: 0.
+- Old DOCX/PDF used as input: false.
+
+**Boundary discipline:**
+
+- HTML/PDF remain visual authority; DOCX remains editable derivative.
+- RCCS-M is author analytical and not a legal compliance score, certification, regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
+- MPLP remains in fixed non-ranked comparison order and carries the preserved conflict-of-interest / analytical-mapping boundary.
+
+**Phase 1D-12 Status:** ✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
