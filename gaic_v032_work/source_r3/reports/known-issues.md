@@ -1,7 +1,59 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-6 Final Regeneration and Publication QA)
+**Last Updated:** May 11, 2026 (Phase 1D-7 HTML-first Publication Renderer)
+
+## Phase 1D-7 HTML-first Publication Renderer
+
+### Status: PHASE 1D-7 HTML PUBLICATION DRAFT GENERATED / QA REQUIRED
+
+Phase 1D-7 replaces the rejected Phase 1D-6 Word/DOCX-style visual route with an HTML-first publication renderer. It uses active `source_r3` Markdown as the only content truth, uses the Genspark sample only as a layout-discipline reference, and treats HTML/PDF as the visual source of truth. DOCX is generated only as an editable derivative.
+
+**Generated artifacts:**
+
+1. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.html`
+2. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.pdf`
+3. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.docx`
+4. `out/phase_1d7/html_publication/rendered_pdf_pages/page-001.png` through `page-300.png`
+5. `out/phase_1d7/html_publication/phase_1d7_generation_log.json`
+6. `out/phase_1d7/html_publication/phase_1d7_front_matter_contact_sheet.png`
+7. `out/phase_1d7/html_publication/phase_1d7_figure_pages_contact_sheet.png`
+8. `out/phase_1d7/html_publication/phase_1d7_high_risk_tables_contact_sheet.png`
+9. `out/phase_1d7/html_publication/phase_1d7_appendix_final_pages_contact_sheet.png`
+
+**Reports created:**
+
+1. `reports/phase-1d7-genspark-style-analysis.md`
+2. `reports/phase-1d7-html-renderer-architecture.md`
+3. `reports/phase-1d7-html-publication-generation-report.md`
+4. `reports/phase-1d7-html-visual-qa.md`
+5. `reports/phase-1d7-html-content-preservation-qa.md`
+6. `reports/phase-1d7-html-citation-boundary-qa.md`
+7. `reports/phase-1d7-html-docx-derivative-qa.md`
+
+**Pass / warning results:**
+
+1. HTML-first publication renderer implemented: PASS.
+2. HTML/PDF/DOCX derivative generated from active source: PASS.
+3. Old DOCX/PDF used as input: NO.
+4. Genspark sample text used as content: NO.
+5. PDF page rendering: PASS, 300 A4 pages rendered to PNG.
+6. Visual QA: PASS for HTML QA draft; no blank-page, low-content, or edge-clipping blocker detected.
+7. Content preservation QA: PASS; Chapters 1-18, Appendices A-K, F-01 through F-11, and all 170 active table IDs retained.
+8. Boundary/forbidden-claim QA: PASS; positive blocker count 0.
+9. Appendix G proofing: PASS for HTML QA draft; Appendix G remains qualitative, source-qualified, revalidated provisional, non-ranking, and no-score.
+10. DOCX derivative QA: GENERATED; DOCX is editable derivative only and is not the visual authority.
+
+**Remaining blockers:**
+
+1. Final page-level citation pinning remains incomplete for several high-risk L2 product/protocol references.
+2. OpenAI platform guide still returns HTTP 403 and cannot be treated as fully pinned/rendered.
+3. Validation Lab methodology-specific support remains boundary-limited unless a release-approved methodology citation is pinned.
+4. MPLP docs/spec references remain source-bound for protocol identity but analytical for MRO/ALCS mapping where not directly stated.
+5. Product/protocol L2 references still include source-pointer queues.
+6. Publication candidate readiness is not declared.
+
+**Phase 1D-7 Decision:** PHASE 1D-7 HTML PUBLICATION DRAFT GENERATED / QA REQUIRED.
 
 ## Phase 1D-6 Final Regeneration and Publication QA
 

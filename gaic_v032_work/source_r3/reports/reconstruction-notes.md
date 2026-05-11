@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-6 Final Regeneration and Publication QA)
+**Last Updated:** May 11, 2026 (Phase 1D-7 HTML-first Publication Renderer)
 
 ## Reconstruction Strategy
 
@@ -35,6 +35,7 @@ R3 uses phased reconstruction:
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 15. **Phase 1D-5:** Full-text editorial review pack, Waves 1-8 patches/review, and Wave 4A source restoration (✓ WAVE 8 CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED)
 16. **Phase 1D-6:** Final regeneration and publication QA from Wave 8-clean source (◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED)
+17. **Phase 1D-7:** HTML-first publication renderer with HTML/PDF visual authority and DOCX derivative (◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -65,6 +66,10 @@ Tables, figures, and citations are tracked in inventories before content fill. T
 ### Decision 4: No Premature DOCX/PDF
 
 DOCX/PDF generation happens only in Phase 1D, after all content is filled and validated. This avoids wasting time on half-finished formatting.
+
+### Decision 5: HTML/PDF Visual Authority
+
+Phase 1D-7 corrects the publication route from a Word/DOCX-style visual pipeline to an HTML-first renderer. Active `source_r3` Markdown remains the content source of truth, HTML/CSS is the publication layout layer, PDF exported from HTML is the primary visual artifact, and DOCX is an editable derivative only.
 
 ## Lessons from R2
 
@@ -557,6 +562,43 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 5. `out/phase_1d6/full_whitepaper/phase_1d6_generation_log.json`
 
 **Phase 1D-6 Status:** ◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-7 Notes (May 11, 2026)
+
+**Scope:** HTML-first publication renderer, JearonWong-aligned HTML publication VI, Genspark-style layout-discipline analysis, full HTML/PDF/DOCX derivative generation, rendered PDF page generation, visual QA, content preservation QA, citation/boundary QA, DOCX derivative QA, and governance update.
+
+**Actions completed:**
+
+1. Created `reports/phase-1d7-genspark-style-analysis.md` to record layout lessons from the Genspark sample without using its text as source content.
+2. Created `design/gaic-html-publication-style.md` to define the GAIC HTML publication VI, CSS tokens, typography, cover, metadata, notice, callout, figure, table, appendix, and print rules.
+3. Created `reports/phase-1d7-html-renderer-architecture.md` to document the active-source Markdown to structured HTML to PDF/DOCX-derivative pipeline.
+4. Created `scripts/generate_r3_phase1d7_html_publication.py` as the auditable HTML-first renderer.
+5. Generated full HTML publication, PDF from HTML, DOCX editable derivative, extracted PDF text, generation log, contact sheets, and 300 rendered PDF pages under `out/phase_1d7/html_publication/`.
+6. Confirmed old DOCX/PDF artifacts were not used as input and Genspark text was not used as content.
+7. Created Phase 1D-7 QA reports for generation, visual layout, content preservation, citation/boundary, and DOCX derivative fidelity.
+8. Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+**QA result:**
+
+- HTML generation: PASS.
+- PDF export from HTML: PASS, 300 A4 pages.
+- Rendered page generation: PASS, 300 PNG pages.
+- Visual layout QA: PASS for HTML QA draft; no blank-page, low-content, or edge-clipping blocker detected.
+- Content preservation QA: PASS; Chapters 1-18, Appendices A-K, F-01 through F-11, and all 170 active table IDs retained.
+- Boundary / forbidden-claim QA: PASS with positive blocker count 0.
+- Appendix G proofing: PASS for HTML QA draft; Appendix G remains qualitative, source-qualified, revalidated provisional, non-ranking, and no-score.
+- DOCX derivative QA: GENERATED / EDITABLE DERIVATIVE ONLY; HTML/PDF remain the visual source of truth.
+- Citation QA: BLOCKER. Final page-level citation pinning remains incomplete, OpenAI platform guide still returns HTTP 403, Validation Lab methodology-specific support remains boundary-limited, MPLP MRO/ALCS mapping remains analytical where not directly stated, and some high-risk L2 product/protocol references remain source-pointer queues.
+
+**Artifacts generated:**
+
+1. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.html`
+2. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.pdf`
+3. `out/phase_1d7/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft.docx`
+4. `out/phase_1d7/html_publication/rendered_pdf_pages/page-001.png` through `page-300.png`
+5. `out/phase_1d7/html_publication/phase_1d7_generation_log.json`
+
+**Phase 1D-7 Status:** ◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

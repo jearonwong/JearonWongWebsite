@@ -1,0 +1,108 @@
+# GAIC HTML Publication Style
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Phase:** 1D-7 HTML-first Publication Renderer
+**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION DRAFT
+**Last Updated:** May 11, 2026
+
+## Visual Position
+
+The HTML publication should read as a JearonWong.com white paper: architectural, evidence-led, protocol-native, and restrained. The visual model is a technical registry and governance publication, not a SaaS brochure, academic manuscript, generic consulting report, or Word-exported artifact.
+
+The HTML/PDF artifact is the visual source of truth. DOCX is an editable derivative and may have lower layout fidelity.
+
+## VI Principles
+
+| Principle | Publication Meaning | HTML/CSS Implication |
+|---|---|---|
+| Architectural Headquarters | The paper defines a framework layer and operating architecture | Strong cover, part dividers, clear heading hierarchy, registry-like metadata |
+| Evidence First | Claims are bounded by source level and evidence confidence | Evidence badges, source notes, boundary callouts, cautious table language |
+| Identity as Infrastructure | Protocol identity and lifecycle objects are governance infrastructure | Protocol lanes, object cards, compact figures, no product-marketing treatment |
+| Restrained Authority | Confident without legal or certification overclaim | Dark structure, quiet accent color, no decorative gradients or oversized hero tropes |
+| Black Box of Protocol | Governance feels like controlled institutional machinery | Charcoal fields, grid rules, monospace trace tags, compact control blocks |
+
+## CSS Tokens
+
+| Token | Hex | Use |
+|---|---|---|
+| Monolith Charcoal | `#111111` | Primary text, cover field, major rules |
+| Anodized Slate | `#1a1a1a` | Structural dark panels and table headers |
+| Machine White | `#f1f5f9` | Page background and subtle panels |
+| Registry Blue | `#3b82f6` | Links, figure labels, active registry elements |
+| Evidence Cyan | `#22d3ee` | Evidence highlights, protocol strip accents |
+| Status Gray | `#64748b` | Metadata, notes, secondary labels |
+| Grid Gray | `#d8dee8` | Borders and table rules |
+| Boundary Amber | `#b7791f` | Non-legal and non-certifying callout accents |
+| Fault Red | `#991b1b` | Blocker notes only |
+
+## Typography
+
+| Role | Stack | Rule |
+|---|---|---|
+| Headings | `Outfit, Inter, system-ui, sans-serif` | Bold, tight, no negative letter spacing |
+| Body | `Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif` | 10.2-10.8 pt print equivalent; line-height 1.52 |
+| Registry / Code | `"JetBrains Mono", "SFMono-Regular", Consolas, monospace` | Trace tags, badges, source IDs, code blocks |
+
+Fonts must degrade cleanly to system fonts. The renderer should not depend on fragile remote font loading.
+
+## Layout
+
+| Surface | Rule |
+|---|---|
+| Screen body | Centered publication shell, max width 980 px, generous side padding |
+| Print target | A4 portrait |
+| Print margins | 16 mm top/bottom, 15 mm inner/outer |
+| Paragraph measure | Continuous flow, no arbitrary page breaks after every heading |
+| Part dividers | Optional compact section gates, not standalone decorative pages |
+| Footer | Trace tag, non-legal note, page number when browser print supports it |
+
+## Heading Scale
+
+| Level | Screen | Print Behavior |
+|---|---|---|
+| H1 | 34-42 px | Chapter opening; avoid page break immediately after |
+| H2 | 24-28 px | Section gate with top border or rule |
+| H3 | 18-20 px | Dense subsection heading |
+| H4 | 14-16 px | Compact label heading |
+
+Do not scale typography with viewport width. Letter spacing remains normal.
+
+## Components
+
+| Component | Style |
+|---|---|
+| Cover page | Charcoal title block, registry metadata, five-lane thesis strip |
+| Important notice | Amber-left callout, non-legal/non-certifying/non-ranking boundary |
+| Document control | Compact key/value table with strong label column |
+| Thesis callout | Charcoal or pale blue panel, one focused claim |
+| Evidence badge | Small monospace pill: L1-L5 |
+| MRO/RCCS/ALCS badge | Small registry-blue or slate monospace pill |
+| Figure card | Bordered panel with figure label, flow lane, interpretation text |
+| Table | Fixed layout where possible, shaded header, compact cell padding, repeat headers in print when supported |
+| Wide table | Semantic column splitting for dense 6+ column tables; preserve all rows and columns |
+| Appendix | More compact density, visible provisional/boundary notes, no ranking style |
+| Citation/source note | Small status-gray text, no unsupported raw URL sprawl |
+
+## Print Rules
+
+The renderer must define:
+
+- `@media print`;
+- `@page { size: A4; margin: 16mm 15mm; }`;
+- `break-after: avoid` for headings;
+- `break-inside: avoid` for callouts and figure cards where practical;
+- table headers styled for repetition where supported;
+- compact appendix table mode;
+- no forced figure-only pages unless explicitly justified.
+
+## Boundary Rules
+
+The design must reinforce, not weaken, the paper's non-claim boundaries:
+
+- no legal advice;
+- no certification standard;
+- no regulatory approval;
+- no procurement recommendation;
+- no vendor ranking;
+- no final vendor assessment;
+- Appendix G remains qualitative, source-qualified, provisional, non-ranking, and no-score.
