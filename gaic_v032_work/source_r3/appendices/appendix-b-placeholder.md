@@ -1,8 +1,6 @@
 # Appendix B — Scorecard Template
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1B-8
 
 ---
 
@@ -88,18 +86,18 @@ boundary_note: "Score measures capability, not organizational practice; does not
 
 The following template supports composite score calculation combining RCCS and ALCS.
 
-**Table T-B-02: Composite Score Worksheet**
+**Table T-B-02: Composite Analytical Score Worksheet**
 
-| System | RCCS Average | ALCS Average | RCCS Weight | ALCS Weight | Composite Score | Interpretation Boundary |
-|--------|--------------|--------------|-------------|-------------|-----------------|------------------------|
-| Example System A | 3.5 | 2.8 | 0.40 | 0.60 | 3.08 | Composite score is analytical tool; does not prove legal compliance or regulatory approval |
-| Example System B | 2.9 | 4.2 | 0.40 | 0.60 | 3.68 | Strong ALCS posture indicates lifecycle responsibility object maturity; does not prove operational effectiveness |
-| Example System C | 4.1 | 2.3 | 0.40 | 0.60 | 3.02 | Strong RCCS posture indicates regulatory compliance coverage primitives; does not prove legal compliance |
+| System | RCCS Adjusted Score 0-100 | ALCS Adjusted Score 0-100 | RCCS Weight | ALCS Weight | Composite Analytical Score 0-100 | Interpretation Boundary |
+|--------|----------------------------|----------------------------|-------------|-------------|----------------------------------|------------------------|
+| Example System A | 65.0 | 55.0 | 0.40 | 0.60 | 59.0 | Analytical score; not legal compliance proof or procurement ranking |
+| Example System B | 72.0 | 48.0 | 0.40 | 0.60 | 57.6 | Analytical score; not legal compliance proof or deployment readiness threshold |
+| Example System C | 45.0 | 70.0 | 0.40 | 0.60 | 60.0 | Analytical score; not vendor ranking or certification signal |
 
 **Composite score formula:**
 
 ```
-Composite Score = (RCCS Average × RCCS Weight) + (ALCS Average × ALCS Weight)
+Composite Score = (RCCS Adjusted Score × RCCS Weight) + (ALCS Adjusted Score × ALCS Weight)
 ```
 
 **Default weights:**
@@ -109,11 +107,13 @@ Composite Score = (RCCS Average × RCCS Weight) + (ALCS Average × ALCS Weight)
 
 **Interpretation guidance:**
 
-- **Composite score 4.0-5.0:** Strong regulatory compliance coverage and lifecycle responsibility object maturity; does not prove legal compliance
-- **Composite score 3.0-3.9:** Moderate regulatory compliance coverage and lifecycle responsibility object maturity; gaps exist
-- **Composite score 2.0-2.9:** Partial regulatory compliance coverage and lifecycle responsibility object maturity; significant gaps exist
-- **Composite score 1.0-1.9:** Weak regulatory compliance coverage and lifecycle responsibility object maturity; major gaps exist
-- **Composite score 0.0-0.9:** Minimal regulatory compliance coverage and lifecycle responsibility object maturity; fundamental gaps exist
+- **Composite score 80-100:** Strong regulatory compliance coverage and lifecycle responsibility object maturity; does not prove legal compliance
+- **Composite score 60-79:** Moderate regulatory compliance coverage and lifecycle responsibility object maturity; gaps may exist
+- **Composite score 40-59:** Partial regulatory compliance coverage and lifecycle responsibility object maturity; significant gaps may exist
+- **Composite score 20-39:** Weak regulatory compliance coverage and lifecycle responsibility object maturity; major gaps may exist
+- **Composite score 0-19:** Minimal regulatory compliance coverage and lifecycle responsibility object maturity; fundamental gaps may exist
+
+These bands are analytical interpretation bands only. They are not legal compliance thresholds, deployment readiness thresholds, procurement thresholds, or certification cutoffs.
 
 ---
 
@@ -123,11 +123,11 @@ The following template supports tracking score changes over time.
 
 **Table T-B-03: Score Delta Record**
 
-| Dimension | Previous Score | Updated Score | Reason for Change | Evidence Change | Reviewer | Date |
-|-----------|----------------|---------------|-------------------|-----------------|----------|------|
-| RCCS-04: Record-Keeping | 3.2 | 3.6 | System added evidence export API with selective disclosure capability | L2 product docs updated with new API documentation | Governance Team | 2026-05-10 |
-| ALCS-02: Delegated Authority Boundary | 2.7 | 3.5 | System added authority drift detection and reauthorization workflow | L3 audit report validated new capability | Compliance Team | 2026-05-10 |
-| RCCS-06: Human Oversight | 1.2 | 2.4 | Vendor published official documentation for human-in-the-loop capability | Evidence level upgraded from L4 (vendor claim) to L2 (product docs) | Governance Team | 2026-05-10 |
+| Dimension | Previous Adjusted Score 0-100 | Updated Adjusted Score 0-100 | Reason for Change | Evidence Change | Reviewer | Date |
+|-----------|-------------------------------|------------------------------|-------------------|-----------------|----------|------|
+| RCCS-04: Record-Keeping | 54.4 | 68.0 | System added evidence export API with selective disclosure capability | L2 product docs updated with new API documentation | Governance Team | 2026-05-10 |
+| ALCS-02: Delegated Authority Boundary | 40.5 | 52.5 | System added authority drift detection and reauthorization workflow | L3 audit report recorded new capability | Compliance Team | 2026-05-10 |
+| RCCS-06: Human Oversight | 13.2 | 34.0 | Vendor published official documentation for human-in-the-loop capability | Evidence level upgraded from L4 (vendor claim) to L2 (product docs) | Governance Team | 2026-05-10 |
 
 **Score delta policy:**
 
@@ -158,9 +158,3 @@ The following template supports negative control to prevent overclaim.
 - **Require explicit evidence for lifecycle responsibility objects.** Approval buttons, logs, access control, task completion, and data export are not lifecycle responsibility objects unless they include the required fields and workflows.
 - **Prevent overclaim.** Negative control prevents scoring systems for adjacent capabilities that do not meet lifecycle responsibility object requirements.
 - **Document why adjacent capabilities do not count.** Negative control checklist explains why specific capabilities do not count toward RCCS/ALCS scores.
-
----
-
-**End of Appendix B**
-
-**Appendix B Status:** FILLED (Phase 1B-8; Phase 1C follow-up reviewed) — Scorecard Template complete; canonical evidence multipliers and non-legal-score boundaries preserved.

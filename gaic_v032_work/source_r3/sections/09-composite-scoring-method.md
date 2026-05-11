@@ -10,11 +10,11 @@ This chapter introduces the **Composite Scoring Method**, which combines RCCS an
 
 The chapter explains the composite score formula, evidence multiplier application, interpretation guidance for RCCS and ALCS together, reproducibility requirements, and boundary statements. It establishes clear expectations about what composite scoring measures and what it does not measure, and bridges to the system mapping chapters that follow.
 
-**Figure F-04: RCCS/ALCS Dual Scoring Model**
+**Figure F-04 — RCCS/ALCS Dual Scoring Model**
 
-`RCCS regulatory coverage + ALCS lifecycle conformance -> evidence-adjusted analytical composite`
+RCCS Regulatory Coverage + ALCS Lifecycle Conformance → Evidence-Adjusted Analytical Composite
 
-*Figure F-04 shows the dual scoring model used in this paper. It is an analytical model for comparing governance capability, not a legal compliance score, certification, or regulatory approval signal.*
+*Figure F-04 shows how RCCS and ALCS combine into an evidence-adjusted analytical profile. It is not a legal compliance score, certification, regulatory approval signal, product ranking, or procurement recommendation.*
 
 ---
 
@@ -105,6 +105,8 @@ RCCS and ALCS measure different layers. RCCS measures regulatory compliance cove
 
 Interpreting RCCS and ALCS together requires understanding four quadrants: High RCCS + High ALCS, High RCCS + Low ALCS, Low RCCS + High ALCS, and Low RCCS + Low ALCS. Each quadrant represents a different system capability profile.
 
+The 70% boundary used in this matrix is an analytical interpretation band for comparing capability profiles. It is not a legal compliance threshold, deployment readiness threshold, procurement threshold, or certification cutoff.
+
 **Table T-09-03: RCCS and ALCS Interpretation Matrix**
 
 | Quadrant | RCCS | ALCS | Interpretation | Common System Types |
@@ -175,11 +177,11 @@ The purpose of this boundary statement is to prevent over-claiming. Composite sc
 
 ## 9.7 Bridge to System Mappings
 
-The following chapters apply RCCS and ALCS to specific systems. Chapter 10 provides enterprise control crosswalk, mapping RCCS and ALCS dimensions to enterprise control frameworks such as NIST Cybersecurity Framework, ISO 27001, and SOC 2. Chapters 11 through 15 provide comparative field analysis and detailed system mappings for major system categories shaping the enterprise agentic stack.
+The following chapters use RCCS and ALCS as analytical lenses for enterprise controls and system mappings. Chapter 10 provides enterprise control crosswalk, mapping RCCS and ALCS dimensions to enterprise control frameworks such as NIST Cybersecurity Framework, ISO 27001, and SOC 2. Chapters 11 through 15 provide comparative field analysis and detailed system mappings for major system categories shaping the enterprise agentic stack.
 
 Each system mapping documents dimension scores, evidence sources, and scoring rationale. The mappings are responsibility-semantics comparisons, not product endorsements or procurement recommendations. The key question is not which system is useful. Most of them are useful. The key question is whether the system defines the governance primitives and lifecycle responsibility objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints.
 
-System mappings use the composite scoring method defined in this chapter. Each system receives separate RCCS and ALCS scores. Dimension scores are documented with rationale. Evidence sources are cited with quality assessment. Evidence multipliers are applied per dimension. Composite scores are calculated transparently. The result is a dual-layer assessment of system governance capability that makes visible the difference between regulatory compliance coverage and lifecycle responsibility conformance.
+System mappings use the composite scoring method defined in this chapter where a scoring worksheet is appropriate. Where a scoring worksheet is used, systems may be evaluated with separate RCCS and ALCS analytical profiles. In this publication draft, any system-level assessment remains source-bound, provisional, and non-ranking unless explicitly finalized through the evidence register. Dimension scores should be documented with rationale, evidence sources should be cited with quality assessment, and evidence multipliers should be applied per dimension. The result is a dual-layer analytical profile that makes visible the difference between regulatory compliance coverage and lifecycle responsibility conformance without creating a final vendor score.
 
 The system mappings are based on public evidence available as of May 2026. They reflect the state of system capabilities at the time of analysis. System capabilities evolve rapidly. Vendors add features, update documentation, and release new versions. The mappings should be treated as snapshots, not permanent judgments. Organizations evaluating systems should verify current capabilities with vendors and review updated documentation.
 

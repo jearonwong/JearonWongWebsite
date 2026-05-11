@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4A)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-3 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-4 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -333,7 +333,37 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No DOCX/PDF artifacts were regenerated.
 - No final publication candidate was declared.
 
-**Phase 1D-5 Wave 4A Status:** ◐ SOURCE RESTORATION COMPLETE / WAVE 4 EDITORIAL REVIEW PENDING / PUBLICATION CANDIDATE BLOCKED.
+**Phase 1D-5 Wave 4A Status:** ◐ SOURCE RESTORATION COMPLETE / SUPERSEDED BY WAVE 4 PATCH / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 4 Notes (May 11, 2026)
+
+**Scope:** Chapters 7-9 plus Appendices B/E/F scoring methodology consistency and publication cleanup.
+
+**Actions completed:**
+
+1. Removed internal source metadata and appendix status/source markers from Appendix B, Appendix E, and Appendix F.
+2. Replaced Chapter 8 phase-reconstruction residue with a reader-facing reference to sections 8.7 through 8.21 and Appendix F.
+3. Replaced the code-style Figure F-04 lane with formal figure text and explicit non-legal, non-certifying, non-ranking, and non-procurement boundaries.
+4. Corrected Appendix B `T-B-02` from 0-5 average examples to 0-100 adjusted RCCS/ALCS framework scores using the existing canonical composite formula.
+5. Added 0-100 analytical interpretation bands and clarified that bands are not legal compliance, deployment readiness, procurement, or certification thresholds.
+6. Softened Chapter 9 system-scoring language so scoring worksheets are conditional, source-bound, provisional, and non-ranking unless finalized through the evidence register.
+7. Added the Chapter 9 70% quadrant boundary note.
+8. Added body-vs-appendix rubric relationship notes in Chapters 7 and 8.
+9. Added Appendix E/F score-5 legal-baseline clarification and rewrote score-5 examples to separate legal baseline references from implementation evidence.
+10. Updated the table inventory entry for `T-B-02`.
+
+**Methodology preservation:**
+
+- RCCS dimensions remain unchanged.
+- ALCS dimensions remain unchanged.
+- Evidence multipliers remain L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, and L5 = 0.35.
+- Dimension score formula remains `Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier`.
+- Composite formula remains `Composite Score = 0.40 × RCCS + 0.60 × ALCS`.
+- No vendor score, product ranking, procurement recommendation, legal compliance score, certification, or regulatory approval claim was introduced.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 4 Status:** ◐ PATCH APPLIED / WAVES 5-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

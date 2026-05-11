@@ -1,8 +1,6 @@
 # Appendix E — RCCS Detailed Scoring Rubrics
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1B-9
 
 ---
 
@@ -53,6 +51,8 @@ This appendix provides detailed scoring rubrics for all ten RCCS (Regulatory Com
 - **4:** Strong capability; validated evidence
 - **5:** Complete capability demonstrated by implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts. Legal text may establish a regulatory baseline but does not by itself prove implementation.
 
+In score-5 rows, legal references identify the regulatory baseline only. They do not count as implementation evidence unless paired with implementation artifacts, formal audit evidence, protocol-level evidence, or validated operational records.
+
 **Negative controls:**
 
 Each rubric includes negative controls to prevent overclaim. Negative controls distinguish adjacent capabilities from regulatory compliance coverage primitives.
@@ -78,7 +78,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial risk management | Product documentation with partial coverage | Risk assessment template exists but no risk register or monitoring | Risk template ≠ risk assessment workflow | Partial coverage; gaps exist |
 | 3 | Moderate risk management | Product documentation with risk assessment and register | Risk assessment workflow, risk register, basic mitigation controls | Risk register ≠ risk monitoring or escalation | Moderate coverage; monitoring gaps exist |
 | 4 | Strong risk management | Product documentation with risk assessment, register, mitigation, and monitoring | Risk assessment workflow, risk register, mitigation controls, risk monitoring dashboard | Risk monitoring ≠ risk escalation or continuous improvement | Strong coverage; escalation gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 9 risk management system requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 9 risk management system requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -99,7 +99,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial data governance | Product documentation with partial coverage | Data quality checks exist but no data lineage or retention policies | Data quality ≠ data lineage or retention | Partial coverage; lineage and retention gaps exist |
 | 3 | Moderate data governance | Product documentation with data quality, lineage, and access control | Data quality checks, data lineage tracking, data access control | Data access control ≠ data retention or subject rights | Moderate coverage; retention and subject rights gaps exist |
 | 4 | Strong data governance | Product documentation with data quality, lineage, access control, and retention | Data quality checks, data lineage tracking, data access control, data retention policies | Data retention ≠ data subject rights workflows | Strong coverage; subject rights gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | GDPR Article 5 data governance requirements; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: GDPR Article 5 data governance requirements; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -120,7 +120,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial documentation | Product documentation with partial coverage | Model card template exists but no system card or deployment documentation | Model card ≠ system card or deployment documentation | Partial coverage; system card and deployment gaps exist |
 | 3 | Moderate documentation | Product documentation with model cards and system cards | Model card template, system card template, basic technical documentation | System card ≠ deployment documentation or API documentation | Moderate coverage; deployment and API gaps exist |
 | 4 | Strong documentation | Product documentation with model cards, system cards, and technical documentation | Model card template, system card template, technical documentation, API documentation | API documentation ≠ deployment documentation or lifecycle documentation | Strong coverage; deployment and lifecycle gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 11 technical documentation requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 11 technical documentation requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -141,7 +141,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial record-keeping | Product documentation with partial coverage | Audit trails exist but no evidence export or retention policies | Audit trails ≠ evidence export or retention | Partial coverage; export and retention gaps exist |
 | 3 | Moderate record-keeping | Product documentation with audit trails and evidence export | Audit trails, evidence export capability, basic log retention policies | Evidence export ≠ log integrity validation or selective disclosure | Moderate coverage; integrity and disclosure gaps exist |
 | 4 | Strong record-keeping | Product documentation with audit trails, evidence export, and retention | Audit trails, evidence export capability, log retention policies, log integrity validation | Log integrity ≠ selective disclosure or evidence minimization | Strong coverage; disclosure and minimization gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 12 record-keeping requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 12 record-keeping requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -162,7 +162,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial transparency | Product documentation with partial coverage | Explainability tools exist but no interpretability or disclosure mechanisms | Explainability ≠ interpretability or disclosure | Partial coverage; interpretability and disclosure gaps exist |
 | 3 | Moderate transparency | Product documentation with explainability and interpretability | Explainability tools, interpretability methods, basic disclosure mechanisms | Disclosure mechanisms ≠ transparency reports or selective disclosure | Moderate coverage; reporting and selective disclosure gaps exist |
 | 4 | Strong transparency | Product documentation with explainability, interpretability, and disclosure | Explainability tools, interpretability methods, disclosure mechanisms, transparency reports | Transparency reports ≠ selective disclosure or evidence minimization | Strong coverage; selective disclosure and minimization gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 13 transparency requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 13 transparency requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -183,7 +183,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial human oversight | Product documentation with partial coverage | Approval button exists but no human-role-to-MAS responsibility mapping or escalation | Approval button ≠ human-role-to-MAS responsibility mapping | Partial coverage; responsibility mapping and escalation gaps exist |
 | 3 | Moderate human oversight | Product documentation with human-in-the-loop and human-on-the-loop | Human-in-the-loop workflows, human-on-the-loop monitoring, basic human review workflows | Human review ≠ escalation mechanisms or accountability mapping | Moderate coverage; escalation and accountability gaps exist |
 | 4 | Strong human oversight | Product documentation with human-in-the-loop, human-on-the-loop, and escalation | Human-in-the-loop workflows, human-on-the-loop monitoring, human review workflows, escalation mechanisms | Escalation mechanisms ≠ accountability mapping or accepted outcome compliance | Strong coverage; accountability and accepted outcome gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 14 human oversight requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 14 human oversight requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -204,7 +204,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial security | Product documentation with partial coverage | Access control exists but no authentication or authorization for AI lifecycle | Access control ≠ authentication or authorization | Partial coverage; authentication and authorization gaps exist |
 | 3 | Moderate security | Product documentation with access control, authentication, and authorization | Access control, authentication, authorization, basic security monitoring | Security monitoring ≠ security incident response or lifecycle evidence | Moderate coverage; incident response and lifecycle evidence gaps exist |
 | 4 | Strong security | Product documentation with access control, authentication, authorization, and monitoring | Access control, authentication, authorization, security monitoring, security incident response | Security incident response ≠ lifecycle evidence or delegated authority boundary | Strong coverage; lifecycle evidence and authority boundary gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | NIST AI RMF security requirements; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Baseline source: NIST AI RMF security requirements; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal or standards text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -225,7 +225,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial accountability | Product documentation with partial coverage | Role assignment exists but no responsibility mapping or accountability tracking | Role assignment ≠ responsibility mapping or accountability tracking | Partial coverage; responsibility mapping and tracking gaps exist |
 | 3 | Moderate accountability | Product documentation with role assignment and responsibility mapping | Role assignment, responsibility mapping, basic accountability tracking | Accountability tracking ≠ accountability escalation or accepted outcome compliance | Moderate coverage; escalation and accepted outcome gaps exist |
 | 4 | Strong accountability | Product documentation with role assignment, responsibility mapping, and tracking | Role assignment, responsibility mapping, accountability tracking, accountability escalation | Accountability escalation ≠ accepted outcome compliance or human-role-to-MAS mapping | Strong coverage; accepted outcome and human-role-to-MAS gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 26 accountability requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 26 accountability requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -246,7 +246,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial contestability | Product documentation with partial coverage | Dispute resolution workflow exists but no appeal mechanisms or remediation workflows | Dispute resolution ≠ appeal mechanisms or remediation workflows | Partial coverage; appeal and remediation gaps exist |
 | 3 | Moderate contestability | Product documentation with dispute resolution and appeal mechanisms | Dispute resolution workflows, appeal mechanisms, basic remediation workflows | Remediation workflows ≠ remediation closure or contestability tracking | Moderate coverage; closure and tracking gaps exist |
 | 4 | Strong contestability | Product documentation with dispute resolution, appeal, and remediation | Dispute resolution workflows, appeal mechanisms, remediation workflows, contestability tracking | Contestability tracking ≠ remediation closure or incident/dispute/remediation closure | Strong coverage; closure gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | GDPR Article 22 right to contest automated decision-making; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: GDPR Article 22 right to contest automated decision-making; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -267,7 +267,7 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 | 2 | Partial monitoring | Product documentation with partial coverage | Performance monitoring exists but no drift detection or continuous improvement | Performance monitoring ≠ drift detection or continuous improvement | Partial coverage; drift detection and continuous improvement gaps exist |
 | 3 | Moderate monitoring | Product documentation with performance monitoring and drift detection | Performance monitoring, drift detection, basic continuous improvement workflows | Continuous improvement ≠ monitoring dashboards or authority drift detection | Moderate coverage; dashboards and authority drift gaps exist |
 | 4 | Strong monitoring | Product documentation with performance monitoring, drift detection, and continuous improvement | Performance monitoring, drift detection, continuous improvement workflows, monitoring dashboards | Monitoring dashboards ≠ authority drift detection or lifecycle drift detection | Strong coverage; authority drift and lifecycle drift gaps may exist |
-| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | EU AI Act Article 72 post-market monitoring requirement; implementation validated by audit or operational evidence | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
+| 5 | Complete capability demonstrated by implementation evidence | Implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts | Legal baseline: EU AI Act Article 72 post-market monitoring requirement; implementation evidence: audit report, operational artifact, protocol evidence, or validated workflow record | Legal text may establish regulatory baseline but does not prove system implementation | Complete capability requires implementation evidence; legal text alone insufficient |
 
 ---
 
@@ -355,9 +355,3 @@ Dimension Score: (4/5) × 100 × 0.85 = 68.0
 - RCCS scores are context-independent; organizations must interpret within their legal, regulatory, and operational context
 - RCCS scores require evidence; evidence level affects score multiplier
 - RCCS scores are not product rankings; they compare systems by regulatory compliance coverage primitives
-
----
-
-**End of Appendix E**
-
-**Appendix E Status:** FILLED (Phase 1B-9) — RCCS Detailed Scoring Rubrics complete; all 10 RCCS dimensions with detailed rubrics, evidence requirements, and negative controls.

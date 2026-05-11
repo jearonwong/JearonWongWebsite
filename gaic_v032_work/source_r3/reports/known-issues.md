@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4A Source Restoration)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4 Scoring Methodology Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -128,11 +128,39 @@ Wave 4 initial review found that the legacy placeholder files for Chapters 7-9 w
 
 **Remaining blockers:**
 
-1. Detailed Wave 4 editorial review of Chapters 7-9 and Appendices B/E/F remains pending.
+1. Detailed Wave 4 editorial review of Chapters 7-9 and Appendices B/E/F was still pending at Wave 4A and is superseded by the Wave 4 patch record below.
 2. Waves 5-8 full-text editorial review remain pending.
 3. Publication candidate readiness is not declared.
 
 **Wave 4A Decision:** SOURCE RESTORATION COMPLETE / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 4 Scoring Methodology Patch
+
+### Status: WAVE 4 PATCH APPLIED / WAVES 5-8 PENDING
+
+Wave 4 human review covered Chapters 7-9 and Appendices B/E/F. Source restoration passed, and the scoring methodology direction passed, but publication readiness required cleanup because Appendix B/E/F retained internal source markers, Chapter 8 retained a phase-reconstruction sentence, Chapter 9 figure/system-scoring language over-implied final scores, Appendix B used 0-5 composite worksheet examples, and Appendix E/F score-5 examples needed clearer separation between legal baseline references and implementation evidence.
+
+**Patch applied:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and appendix status/source markers from Appendix B/E/F.
+2. Replaced Chapter 8 phase-reconstruction residue with a reader-facing Appendix F reference.
+3. Converted Figure F-04 to formal figure text with legal-compliance, certification, regulatory-approval, ranking, and procurement boundaries.
+4. Corrected Appendix B `T-B-02` to use 0-100 adjusted RCCS/ALCS framework scores and 0-100 analytical interpretation bands.
+5. Added analytical-band boundary wording for Appendix B and Chapter 9's 70% quadrant matrix.
+6. Softened Chapter 9 system-scoring language so system-level assessment remains source-bound, provisional, and non-ranking unless finalized through the evidence register.
+7. Added Chapter 7/8 body-vs-appendix rubric relationship notes.
+8. Added Appendix E/F score-5 legal-baseline clarification and rewrote score-5 examples as legal baseline plus separate implementation evidence.
+9. Preserved canonical RCCS/ALCS dimensions, evidence multipliers, dimension formula, and composite formula.
+10. No DOCX/PDF artifacts were regenerated.
+
+**Remaining blockers:**
+
+1. Waves 5-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final visual/citation/table proofing remains required before publication.
+4. Publication candidate readiness is not declared.
+
+**Wave 4 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

@@ -189,7 +189,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 |----------|-------|----------|--------|--------------|
 | T-A-01 | Appendix A Template Index | Appendix A | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 5 columns |
 | T-B-01 | RCCS/ALCS Dimension Scorecard Template | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 8 columns |
-| T-B-02 | Composite Score Worksheet | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Portrait, 7 columns |
+| T-B-02 | Composite Analytical Score Worksheet | Appendix B | ✓ Filled (1B-8, corrected 1B-8C, patched Wave 4) | Portrait, 7 columns; uses 0-100 adjusted RCCS/ALCS framework scores |
 | T-B-03 | Score Delta Record | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 7 columns |
 | T-B-04 | Negative Control Checklist | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 5 columns |
 | T-C-01 | Evidence Level Policy | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Portrait, 5 columns |

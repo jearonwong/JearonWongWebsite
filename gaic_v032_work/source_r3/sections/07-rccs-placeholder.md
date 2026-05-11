@@ -186,6 +186,8 @@ The following sections (7.6 through 7.15) detail each RCCS dimension. Each dimen
 
 The dimension sections provide the detailed rubrics required to score systems consistently and reproducibly. They translate regulatory abstractions into concrete system features that can be evaluated through documentation review, API inspection, and evidence analysis.
 
+The body chapter includes compact dimension rubrics for reader continuity; Appendix E provides the reusable detailed RCCS scoring reference.
+
 ---
 
 ## 7.6 RCCS-01: Risk Management

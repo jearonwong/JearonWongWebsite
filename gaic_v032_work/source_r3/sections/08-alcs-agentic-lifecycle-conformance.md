@@ -12,7 +12,7 @@ ALCS is not a legal compliance certification, not a conformity assessment, and n
 
 RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. These are different layers, not competing scores. RCCS evaluates whether a system provides the governance primitives that existing regulation requires. ALCS evaluates whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries.
 
-The chapter defines the fifteen ALCS dimensions, explains the ALCS-to-MRO mapping, references the shared scoring procedure established in Chapter 7, and establishes clear boundaries around what ALCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 8.7 through 8.21, which will be reconstructed in Phase 1A-3.8 and 1A-3.9.
+The chapter defines the fifteen ALCS dimensions, explains the ALCS-to-MRO mapping, references the shared scoring procedure established in Chapter 7, and establishes clear boundaries around what ALCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 8.7 through 8.21 and expanded in Appendix F.
 
 ---
 
@@ -214,6 +214,8 @@ The following sections (8.7 through 8.21) detail each ALCS dimension. Each dimen
 - **System mapping guidance** - How to evaluate whether a system supports the dimension
 
 The dimension sections provide the detailed rubrics required to score systems consistently and reproducibly. They translate lifecycle responsibility abstractions into concrete system features that can be evaluated through documentation review, API inspection, and evidence analysis.
+
+The body chapter includes compact dimension rubrics for reader continuity; Appendix F provides the reusable detailed ALCS scoring reference.
 
 ---
 
