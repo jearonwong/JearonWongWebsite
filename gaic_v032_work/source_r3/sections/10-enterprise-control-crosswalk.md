@@ -1,8 +1,6 @@
 # 10. Enterprise Adoption, Procurement, and Control Crosswalk
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** FILLED — All sections 10.0-10.8 complete  
-**Phase:** 1A-4.2
 
 ---
 
@@ -24,23 +22,11 @@ This chapter is a bridge from lifecycle objects to enterprise controls. It does 
 
 The following figure illustrates how AI Agent Lifecycle Governance maps into enterprise control structures. Regulation and standards define baseline requirements. RCCS measures regulatory compliance coverage. ALCS measures lifecycle conformance. MROs provide engineering objects. Together, these layers produce enterprise control evidence that supports audit, insurance, and board reporting readiness.
 
-**Figure F-06: Enterprise Control Overlay for AI Agent Lifecycle Governance**
+**Figure F-06 — Enterprise Control Overlay for AI Agent Lifecycle Governance**
 
-**Figure description:**
+Regulation / Standards → RCCS Baseline Controls → ALCS Lifecycle Conformance → MRO Engineering Objects → Enterprise Control Evidence → Audit / Insurance / Board Reporting Readiness
 
-```
-Regulation / Standards
-        ↓
-RCCS baseline controls
-        ↓
-ALCS lifecycle conformance
-        ↓
-MRO engineering objects
-        ↓
-Enterprise control evidence
-        ↓
-Audit / insurance / board reporting readiness
-```
+*Figure F-06 shows how regulation and standards can be translated into enterprise control evidence through RCCS baseline controls, ALCS lifecycle conformance, and MRO engineering objects. It is a governance crosswalk, not an audit opinion, certification path, insurance underwriting model, or legal compliance proof.*
 
 The overlay shows that lifecycle governance is not separate from enterprise controls. It is a structured method for producing the evidence that enterprise controls require. RCCS and ALCS scores do not replace risk assessments, internal audits, or compliance reviews. They provide structured inputs that make those processes more efficient, consistent, and auditable when applied to agentic systems.
 
@@ -100,23 +86,11 @@ Traditional model risk management asks whether a model is governed. Agentic mode
 
 The following figure illustrates how model, prompt, policy, and runtime changes propagate through the agentic lifecycle and influence authority, tool use, evidence, and accepted outcomes.
 
-**Figure F-07: Model Risk in Agentic Lifecycle**
+**Figure F-07 — Model Risk in Agentic Lifecycle**
 
-**Figure description:**
+Model / Prompt / Policy / Runtime Changes → Plan and Delegation Behavior → Authority Boundary Behavior → Tool Selection / Tool Action → Evidence Interpretation → Accepted Outcome / Incident Closure
 
-```
-Model / prompt / policy / runtime changes
-        ↓
-Plan and delegation behavior
-        ↓
-Authority boundary behavior
-        ↓
-Tool selection / tool action
-        ↓
-Evidence interpretation
-        ↓
-Accepted outcome / incident closure
-```
+*Figure F-07 shows how model, prompt, policy, or runtime changes can propagate through an agentic lifecycle and affect authority, tools, evidence, outcomes, and closure. It is a lifecycle-risk model, not a model-risk-management standard, certification path, or legal compliance proof.*
 
 Model risk in agentic systems is not only a model-performance concern. It is a lifecycle-conformance concern. A model version change may alter planning behavior, which may alter delegation patterns, which may alter authority transitions, which may alter tool selection, which may alter evidence interpretation, which may alter accepted outcome states. Each of these transitions is a potential lifecycle risk.
 
@@ -210,7 +184,7 @@ The following table defines board-level reporting elements for agentic AI, mappe
 | Remediation Closure Rate | Incident closure record, accepted outcome state, remediation record | Quarterly | Remediation closure rate below threshold, high-severity incident unresolved, remediation rejected by human authority | NIST AI RMF Manage function, EU AI Act Art. 9 (corrective actions) |
 | Privacy Incident Summary | Privacy lifecycle map, data subject rights reconciliation record, evidence partition, incident closure record | Quarterly | Privacy incident involving personal data breach, data subject rights request unresolved, cross-border data transfer violation | GDPR Art. 33-34 (breach notification), EU AI Act Art. 10 (data governance) |
 | Vendor and Tool Substitution Log | Vendor substitution conformance test, processor chain record, model version registry | Semi-annually | Vendor lock-in risk identified, substitution test failure, processor chain integrity violation | EU AI Act Art. 25 (obligations of importers), Art. 28 (obligations of distributors), DORA Art. 28 (ICT third-party risk) |
-| Drift and Continuous Improvement Status | Authority drift detection log, lifecycle drift detection log, continuous improvement feedback loop record | Quarterly | Authority drift detected in high-risk system, lifecycle drift unresolved, continuous improvement stalled | NIST AI RMF Measure function, EU AI Act Art. 9 (monitoring and logging) |
+| Drift and Remediation Status | Authority drift detection log, monitoring record, incident/remediation closure record | Quarterly | Authority drift detected in high-risk system, remediation unresolved, improvement actions stalled | NIST AI RMF Measure function, EU AI Act Art. 9 (monitoring and logging) |
 
 **Interpretation:** Board reporting for agentic AI must be structured, auditable, and reproducible. Lifecycle governance objects provide the data sources for board-level risk reporting. Boards should receive lifecycle accountability summaries, not only model performance metrics.
 
@@ -256,7 +230,7 @@ The following table defines procurement scorecard criteria for agentic AI system
 | Privacy Data-Flow Map | Privacy lifecycle map, processor chain record, data subject rights reconciliation record | Privacy impact assessment, data flow diagram, processor/subprocessor registry | Cannot reconstruct data processing activities; GDPR compliance failure; privacy incident response failure | GDPR Art. 28 (processor obligations), Art. 30 (records of processing), EU AI Act Art. 10 (data governance) |
 | Incident Response Support | Incident closure record, accepted outcome state, remediation record | Incident response procedure, incident closure SLA, remediation acceptance criteria | Cannot close incidents with accepted remediation; redress failure; regulatory reporting failure | EU AI Act Art. 72 (dispute resolution), GDPR Art. 33-34 (breach notification) |
 | Vendor Substitution Support | Vendor substitution conformance test, model version registry, processor chain record | Vendor substitution test procedure, data portability support, lifecycle conformance revalidation plan | Vendor lock-in; cannot switch vendors without losing lifecycle conformance; supply-chain risk | EU AI Act Art. 25 (obligations of importers), DORA Art. 28 (exit strategies) |
-| Drift Monitoring Capability | Authority drift detection log, lifecycle drift detection log | Drift detection procedure, drift alert mechanism, drift remediation workflow | Cannot detect authority boundary violations, lifecycle conformance degradation, or continuous improvement stalls | NIST AI RMF Measure function, EU AI Act Art. 9 (monitoring and logging) |
+| Drift Monitoring Capability | Authority drift detection log, monitoring record, incident/remediation closure record | Drift detection procedure, drift alert mechanism, drift remediation workflow | Cannot detect authority boundary violations, lifecycle conformance degradation, or unresolved remediation | NIST AI RMF Measure function, EU AI Act Art. 9 (monitoring and logging) |
 | Dispute Resolution Support | Dispute resolution record, accepted outcome state, incident closure record | Dispute resolution procedure, dispute escalation path, dispute closure criteria | Cannot resolve disputes with accepted outcomes; redress failure; regulatory escalation risk | EU AI Act Art. 72 (dispute resolution), GDPR Art. 79 (right to judicial remedy) |
 
 **Interpretation:** Procurement scorecards for agentic AI must evaluate lifecycle governance capabilities, not only functional performance. Vendors that cannot support lifecycle evidence export, tool-action liability boundaries, or vendor substitution introduce governance risk that may outweigh functional benefits.
@@ -277,7 +251,7 @@ Traditional observability monitors execution metrics: latency, throughput, error
 
 Lifecycle monitoring asks: Are responsibility assignments still valid? Are evidence chains still complete? Are tool-action liability boundaries still operative? Are human review roles still engaged? Are accepted outcomes still being produced? Are disputes being resolved? Are privacy boundaries being maintained?
 
-MRO-09 (Lifecycle Drift Detection) and MRO-10 (Continuous Improvement Feedback Loop) are the relevant dimensions for lifecycle monitoring. Lifecycle drift occurs when responsibility assignments, authority boundaries, tool-action liability boundaries, or evidence partitions degrade over time without explicit revalidation. Continuous improvement requires feeding lifecycle monitoring results back into ALCS lifecycle records, MRO scores, and RCCS coverage assessments.
+Lifecycle monitoring primarily draws from delegated authority, evidence partitioning, substitution conformance, privacy lifecycle mapping, and incident/remediation closure objects. It does not introduce separate lifecycle-drift or continuous-improvement MROs. Monitoring events should be interpreted through canonical lifecycle objects: authority drift uses MRO-07, evidence-chain breaks use MRO-08 and MRO-16, substitution alerts use MRO-09 and MRO-15, privacy data-flow deviations use MRO-10, MRO-13, and MRO-14, and incident closure uses MRO-16.
 
 Lifecycle monitoring is not a replacement for traditional observability. It is a complementary layer that monitors governance continuity alongside execution performance. A system may perform well on execution metrics while experiencing lifecycle drift, responsibility gaps, evidence chain breaks, or dispute backlogs.
 
@@ -289,22 +263,22 @@ The following table defines lifecycle monitoring indicators, mapped to lifecycle
 
 | Indicator | Lifecycle Object | Alert Condition | MRO Dimension | Remediation Path |
 |-----------|------------------|-----------------|---------------|------------------|
-| Responsibility Drift | Role-responsibility map, agent identity lifecycle record | Role assignment unchanged beyond revalidation period; role holder departed; responsibility gap detected | MRO-01, MRO-09 | Revalidate role-responsibility map; reassign agent identity; update lifecycle record; document drift remediation |
-| Evidence Chain Break | Evidence partition, accepted outcome state, incident closure record | Evidence partition integrity check failed; evidence missing for lifecycle phase; accepted outcome lacks supporting evidence | MRO-08, MRO-09 | Reconstruct evidence chain; validate evidence partition; re-execute acceptance review; document evidence remediation |
-| Tool-Action Boundary Violation | Tool-action liability boundary, authority boundary object | Tool invoked outside delegated scope; tool action exceeded liability boundary; unauthorized tool credential access | MRO-02, MRO-05, MRO-09 | Halt tool execution; revalidate authority boundary; update tool-action liability boundary; document boundary violation and remediation |
-| Human-Role Absence | Role-responsibility map, accepted outcome state, human review packet | Human review required but not performed; acceptance decision made without human authority; escalation rule violated | MRO-01, MRO-04, MRO-09 | Escalate to human authority; re-execute review with human role; update role-responsibility map; document human-role remediation |
-| Dispute Backlog | Dispute resolution record, incident closure record | Dispute unresolved beyond SLA; dispute escalation path exhausted; dispute closure rate below threshold | MRO-16, MRO-10 | Escalate dispute resolution; engage external authority if needed; update dispute resolution procedure; document backlog remediation |
-| Privacy Data-Flow Deviation | Privacy lifecycle map, data subject rights reconciliation record, processor chain record | Data processed outside documented flow; processor/subprocessor not in registry; data subject rights request unresolved | MRO-10, MRO-13, MRO-14, MRO-09 | Halt data processing; revalidate privacy lifecycle map; update processor chain record; resolve data subject rights request; document privacy remediation |
-| Vendor Substitution Alert | Vendor substitution conformance test, model version registry, processor chain record | Vendor substitution test failed; model version changed without revalidation; processor chain integrity violated | MRO-15, MRO-09 | Revalidate vendor substitution conformance; update model version registry; revalidate processor chain; document substitution remediation |
-| Continuous Improvement Stall | Continuous improvement feedback loop record, lifecycle drift detection log | Feedback loop inactive beyond threshold; drift detected but not remediated; improvement actions not implemented | MRO-10, MRO-09 | Reactivate feedback loop; prioritize drift remediation; implement improvement actions; update continuous improvement record |
+| Responsibility Drift | Role-responsibility map, agent identity lifecycle record, authority drift detection log | Role assignment unchanged beyond revalidation period; role holder departed; responsibility gap detected | MRO-01, MRO-06, MRO-07 | Revalidate role-responsibility map; reassign agent identity; update lifecycle record; document drift remediation |
+| Evidence Chain Break | Evidence partition, accepted outcome state, incident closure record | Evidence partition integrity check failed; evidence missing for lifecycle phase; accepted outcome lacks supporting evidence | MRO-08, MRO-16 | Reconstruct evidence chain; validate evidence partition; re-execute acceptance review; document evidence remediation |
+| Tool-Action Boundary Violation | Tool-action liability boundary, authority boundary object, authority drift detection log | Tool invoked outside delegated scope; tool action exceeded liability boundary; unauthorized tool credential access | MRO-02, MRO-05, MRO-07 | Halt tool execution; revalidate authority boundary; update tool-action liability boundary; document boundary violation and remediation |
+| Human-Role Absence | Role-responsibility map, accepted outcome state, human review packet | Human review required but not performed; acceptance decision made without human authority; escalation rule violated | MRO-01, MRO-04 | Escalate to human authority; re-execute review with human role; update role-responsibility map; document human-role remediation |
+| Dispute Backlog | Dispute resolution record, evidence partition, incident closure record | Dispute unresolved beyond SLA; dispute escalation path exhausted; dispute closure rate below threshold | MRO-04, MRO-08, MRO-16 | Escalate dispute resolution; engage external authority if needed; update dispute resolution procedure; document backlog remediation |
+| Privacy Data-Flow Deviation | Privacy lifecycle map, data subject rights reconciliation record, processor chain record | Data processed outside documented flow; processor/subprocessor not in registry; data subject rights request unresolved | MRO-10, MRO-13, MRO-14 | Halt data processing; revalidate privacy lifecycle map; update processor chain record; resolve data subject rights request; document privacy remediation |
+| Vendor Substitution Alert | Cross-project reuse record, vendor substitution conformance test, model version registry, processor chain record | Vendor substitution test failed; model version changed without revalidation; processor chain integrity violated | MRO-09, MRO-15 | Revalidate vendor substitution conformance; update model version registry; revalidate processor chain; document substitution remediation |
+| Continuous Improvement Stall | Monitoring record, incident/remediation closure record | Feedback loop inactive beyond threshold; drift detected but not remediated; improvement actions not implemented | RCCS-10, MRO-16 | Reactivate monitoring review; prioritize drift remediation; implement improvement actions; update incident/remediation closure record |
 
 **Interpretation:** Lifecycle monitoring indicators detect governance continuity failures, not only execution performance failures. Alert conditions trigger remediation paths that restore lifecycle conformance. Monitoring without remediation is observation without governance.
 
 ### 10.7.3 Continuous Improvement Note
 
-Lifecycle monitoring feeds back into ALCS lifecycle records, MRO scores, and RCCS coverage assessments. This is the governance loop: authorization → execution → evidence → review → remediation → improvement → re-authorization. Continuous improvement is not a separate process. It is the feedback mechanism that ensures lifecycle governance adapts to changing systems, roles, tools, vendors, and regulatory requirements.
+Lifecycle monitoring feeds back into ALCS lifecycle records, MRO evidence records, and RCCS coverage assessments. This is the governance loop: authorization → execution → evidence → review → remediation → improvement → re-authorization. Continuous improvement is not a separate MRO. It is the feedback mechanism that ensures lifecycle governance adapts to changing systems, roles, tools, vendors, and regulatory requirements.
 
-Lifecycle drift detection (MRO-09) identifies when governance structures degrade. Continuous improvement feedback loops (MRO-10) ensure that drift is remediated and that remediation is documented, accepted, and integrated into lifecycle records. Without continuous improvement, lifecycle governance becomes static and brittle. With continuous improvement, lifecycle governance becomes adaptive and resilient.
+Authority drift detection (MRO-07), evidence partitioning (MRO-08), cross-project reuse compliance (MRO-09), privacy lifecycle mapping (MRO-10), substitution conformance (MRO-15), and incident/remediation closure (MRO-16) together show whether governance structures are degrading and whether remediation is documented, accepted, and integrated into lifecycle records. Without this feedback loop, lifecycle governance becomes static and brittle. With it, lifecycle governance becomes adaptive and resilient.
 
 **Boundary:** This section is a governance crosswalk for lifecycle monitoring, not a real-time monitoring product specification, SRE framework, or SLA definition. Detailed monitoring implementation procedures and continuous improvement frameworks are reserved for companion papers, as outlined in Chapter 16.
 
@@ -351,7 +325,3 @@ The crosswalk does not replace internal control frameworks, audit procedures, or
 **Boundary:** Chapter 10 is a governance crosswalk, not a certification framework, audit specification, insurance underwriting model, or legal compliance opinion. It provides the mapping from lifecycle governance objects to enterprise control language. Detailed assurance procedures, certification frameworks, and insurance models are reserved for companion papers, as outlined in Chapter 16.
 
 Chapter 16 will establish the boundary to companion papers and provide the bridge from this white paper to evidence-based validation, assurance frameworks, and insurability considerations.
-
----
-
-*End of Chapter 10. All sections 10.0-10.8 complete. Chapter 16 pending Phase 1A-4.3.*

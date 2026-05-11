@@ -195,7 +195,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-C-01 | Evidence Level Policy | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Portrait, 5 columns |
 | T-C-02 | Source Register | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 6 columns |
 | T-C-03 | Citation Revalidation Queue | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 5 columns |
-| T-D-01 | Expanded Cross-System MRO Mapping | Appendix D | ✓ Filled (1B-8, corrected 1B-8C) | Landscape required; very wide 10-column table; Phase 1D split/rotation QA required |
+| T-D-01 | Expanded Cross-System MRO Mapping | Appendix D | ✓ Filled (1B-8, corrected 1B-8C, patched Wave 5) | Landscape required; very wide 10-column table; notes use revalidated provisional cell-level support language |
 | T-E-01 | RCCS-01 Risk Management Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
 | T-E-02 | RCCS-02 Data Governance Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
 | T-E-03 | RCCS-03 Documentation Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
@@ -221,15 +221,15 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-F-13 | ALCS-13 Data Subject Rights vs Evidence Retention Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |
 | T-F-14 | ALCS-14 Third-Party Processor/Subprocessor Chain Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |
 | T-F-15 | ALCS-15 Vendor/Model/Runtime Substitution Conformance Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |
-| T-G-01 | MPLP Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-02 | IBM watsonx.governance Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-03 | Microsoft Azure AI Foundry Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-04 | AWS Bedrock / Guardrails / AgentCore Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-05 | Google Vertex AI / ADK / Model Armor Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-06 | LangGraph / LangSmith Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-07 | OpenAI Agents SDK Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-08 | CrewAI Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D) | Landscape required; 7 columns; Phase 1D clipping check required |
-| T-G-09 | Cross-System Pattern Summary | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D) | Landscape recommended; 5 columns; Phase 1D clipping check required |
+| T-G-01 | MPLP Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-02 | IBM watsonx.governance Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-03 | Microsoft Azure AI Foundry Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-04 | AWS Bedrock / Guardrails / AgentCore Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-05 | Google Vertex AI / ADK / Model Armor Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-06 | LangGraph / LangSmith Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-07 | OpenAI Agents SDK Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-08 | CrewAI Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
+| T-G-09 | Cross-System Pattern Summary | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D, patched Wave 5) | Landscape recommended; 5 columns; uses Claim-Level Support Status |
 | T-H-01 | Enterprise Procurement Scorecard | Appendix H | ✓ Filled (1B-10) | Landscape required; 6 columns; split if buyer-note text clips |
 | T-H-02 | Vendor Evidence Request Template | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-H-03 | Procurement Red Flag Checklist | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |

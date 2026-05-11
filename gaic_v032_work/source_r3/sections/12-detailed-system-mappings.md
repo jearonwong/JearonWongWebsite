@@ -1,8 +1,6 @@
 # Chapter 12: Detailed System Mappings
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** FILLED — Phase 1B-3; Phase 1C claim-level source binding applied  
-**Phase:** 1B-3 / 1C Follow-up
 
 ---
 
@@ -56,7 +54,7 @@ The canonical evidence multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L
 
 Public documentation may be incomplete. Absence of evidence is not evidence of absence. A system may provide a capability that is not documented publicly. A system may provide a capability that is documented but not yet validated by independent audit. A system may provide a capability that is in development but not yet released.
 
-This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. No unsupported final numeric scores are introduced without evidence basis.
+This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. No unsupported final numeric scores are introduced without evidence basis, and this publication draft does not present published numerical system assessments or rankings.
 
 ### Mapping Strength Scale
 
@@ -68,7 +66,7 @@ Instead of numeric scores for every dimension in this phase, the chapter uses qu
 - **Weak:** Minimal evidence or capability is conceptual only.
 - **Not Evaluated:** Insufficient public evidence to evaluate, or outside system scope.
 
-Numeric scores may be provided where v0.3.1 evidence basis supports them and where official documentation has been validated.
+This chapter uses qualitative mapping strength. Numerical worksheets, if used, remain internal analytical support and are not presented as published numerical system assessments or rankings in this publication draft.
 
 ### Evidence Basis Table
 
@@ -102,9 +100,9 @@ Briefly states:
 
 Uses citation placeholders and evidence levels. Includes a mini-table:
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| [Area] | [Type] | [L1-L5] | [Yes/No] |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| [Area] | [Type] | [L1-L5] | [source-bound at entry-point level / narrowed or partially validated / L5 analytical interpretation / exact page-level support unresolved] |
 
 ### RCCS Mapping Summary
 
@@ -160,8 +158,8 @@ MPLP is strong at lifecycle protocol semantics. It defines governance primitives
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
 | Protocol specification | Protocol docs | L2 | Claim-level reviewed; mapping remains L5 analytical interpretation where the protocol does not directly prove implementation |
 | Lifecycle object semantics | Protocol docs | L2 + L5 | Claim-level reviewed; semantic fit remains analytical interpretation |
 | Governance primitives | Protocol docs | L2 + L5 | Claim-level reviewed; implementation maturity remains unresolved |
@@ -235,13 +233,13 @@ IBM watsonx.governance is strong at enterprise AI governance. It provides policy
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| AI governance platform | Official product docs | L2 | Phase 1C |
-| Policy enforcement | Official product docs | L2 | Phase 1C |
-| Model risk management | Official product docs | L2 | Phase 1C |
-| Compliance workflows | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| AI governance platform | Official product docs | L2 | source-bound at entry-point level |
+| Policy enforcement | Official product docs | L2 | source-bound at entry-point level |
+| Model risk management | Official product docs | L2 | source-bound at entry-point level |
+| Compliance workflows | Official product docs | L2 | narrowed / partially validated |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [IBM-WATSONX-GOVERNANCE-DOCS]
@@ -309,13 +307,13 @@ Microsoft Azure AI Foundry is strong at cloud AI platform capabilities. It provi
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Cloud AI platform | Official product docs | L2 | Phase 1C |
-| Responsible AI tooling | Official product docs | L2 | Phase 1C |
-| Content safety | Official product docs | L2 | Phase 1C |
-| Tracing and observability | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Cloud AI platform | Official product docs | L2 | source-bound at entry-point level |
+| Responsible AI tooling | Official product docs | L2 | source-bound at entry-point level |
+| Content safety | Official product docs | L2 | source-bound at entry-point level |
+| Tracing and observability | Official product docs | L2 | narrowed / partially validated |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [MICROSOFT-AZURE-AI-FOUNDRY-DOCS]
@@ -384,13 +382,13 @@ AWS Bedrock / Guardrails / AgentCore is strong at cloud AI services. It provides
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Cloud AI services | Official product docs | L2 | Phase 1C |
-| Guardrails | Official product docs | L2 | Phase 1C |
-| Agent orchestration | Official product docs | L2 | Phase 1C |
-| Enterprise security | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Cloud AI services | Official product docs | L2 | source-bound at entry-point level |
+| Guardrails | Official product docs | L2 | source-bound at entry-point level |
+| Agent orchestration | Official product docs | L2 | narrowed / partially validated |
+| Enterprise security | Official product docs | L2 | source-bound at entry-point level |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [AWS-BEDROCK-DOCS]
@@ -461,13 +459,13 @@ Google Vertex AI / ADK / Model Armor is strong at cloud AI platform capabilities
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Cloud AI platform | Official product docs | L2 | Phase 1C |
-| Agent Development Kit (ADK) | Official product docs | L2 | Phase 1C |
-| Model Armor safety controls | Official product docs | L2 | Phase 1C |
-| Model evaluation and monitoring | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Cloud AI platform | Official product docs | L2 | source-bound at entry-point level |
+| Agent Development Kit (ADK) | Official product docs | L2 | source-bound at entry-point level |
+| Model Armor safety controls | Official product docs | L2 | source-bound at entry-point level |
+| Model evaluation and monitoring | Official product docs | L2 | narrowed / partially validated |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [GOOGLE-VERTEX-AI-DOCS]
@@ -538,13 +536,13 @@ LangGraph / LangSmith is strong at agent orchestration and observability. It pro
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Agent orchestration | Official product docs | L2 | Phase 1C |
-| Workflow graphs and state | Official product docs | L2 | Phase 1C |
-| Checkpoints and persistence | Official product docs | L2 | Phase 1C |
-| Traces and observability | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Agent orchestration | Official product docs | L2 | source-bound at entry-point level |
+| Workflow graphs and state | Official product docs | L2 | source-bound at entry-point level |
+| Checkpoints and persistence | Official product docs | L2 | source-bound at entry-point level |
+| Traces and observability | Official product docs | L2 | narrowed / partially validated |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [LANGGRAPH-DOCS]
@@ -615,13 +613,13 @@ OpenAI Agents SDK is strong at agent execution and tool use. It provides model a
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Agent execution framework | Official product docs | L2 | Phase 1C |
-| Tool calling and tool use | Official product docs | L2 | Phase 1C |
-| Model access and APIs | Official product docs | L2 | Phase 1C |
-| Developer primitives | Official product docs | L2 | Phase 1C |
-| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Agent execution framework | Official product docs | L2 | source-bound at entry-point level |
+| Tool calling and tool use | Official product docs | L2 | narrowed / partially validated |
+| Model access and APIs | Official product docs | L2 | source-bound at entry-point level |
+| Developer primitives | Official product docs | L2 | narrowed / partially validated |
+| Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [OPENAI-AGENTS-SDK-DOCS]
@@ -692,13 +690,13 @@ CrewAI is strong at role-based agent composition and task orchestration. It prov
 
 ### Evidence Basis
 
-| Evidence Area | Source Type | Evidence Level | Revalidation Needed |
-|---------------|-------------|----------------|---------------------|
-| Multi-agent collaboration | Official docs or GitHub | L2 | Phase 1C |
-| Role-based orchestration | Official docs or GitHub | L2 | Phase 1C |
-| Task assignment and delegation | Official docs or GitHub | L2 | Phase 1C |
-| Agent role composition | Official docs or GitHub | L2 | Phase 1C |
-| Agentic lifecycle objects | Official docs or GitHub | L2 (if available) or L5 (author inference) | Phase 1C |
+| Evidence Area | Source Type | Evidence Level | Claim-Level Status |
+|---------------|-------------|----------------|--------------------|
+| Multi-agent collaboration | Official docs or GitHub | L2 | source-bound at entry-point level |
+| Role-based orchestration | Official docs or GitHub | L2 | narrowed / partially validated |
+| Task assignment and delegation | Official docs or GitHub | L2 | narrowed / partially validated |
+| Agent role composition | Official docs or GitHub | L2 | source-bound at entry-point level |
+| Agentic lifecycle objects | Official docs or GitHub | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
 Citation placeholders:
 - [CREWAI-DOCS]
@@ -806,5 +804,3 @@ No system is described as non-compliant. MPLP is not described as required for c
 The synthesis validates the core thesis: agentic compliance is lifecycle responsibility compliance, not only model compliance. The field gap is not lack of AI tools. The field gap is lack of explicit lifecycle responsibility objects.
 
 ---
-
-*Chapter 12 is now complete. All eight system mappings (MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, Google Vertex AI / ADK / Model Armor, LangGraph / LangSmith, OpenAI Agents SDK, CrewAI) and synthesis are filled. Phase 1C follow-up applied claim-level source binding; exact page-level citation pinning remains before publication.*

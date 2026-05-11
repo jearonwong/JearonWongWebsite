@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4 Scoring Methodology Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 5 System Mapping Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -161,6 +161,34 @@ Wave 4 human review covered Chapters 7-9 and Appendices B/E/F. Source restoratio
 4. Publication candidate readiness is not declared.
 
 **Wave 4 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 5 System Mapping Patch
+
+### Status: WAVE 5 PATCH APPLIED / WAVES 6-8 PENDING
+
+Wave 5 human review covered Chapters 10-13 and Appendices D/G. Conceptual direction passed, but publication readiness required cleanup because Chapter 10 still contained old MRO-09/MRO-10 taxonomy meanings, Chapters 11-12 over-implied final scoring, Appendix D/G retained internal source metadata and future-looking Phase 1C revalidation language, and F-06/F-07 were still code-block diagrams.
+
+**Patch applied:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and chapter/appendix source markers from Chapters 10-13 and Appendices D/G.
+2. Corrected Chapter 10 lifecycle monitoring mapping to canonical MRO IDs: authority drift, evidence partitioning, cross-project reuse, privacy lifecycle mapping, data subject rights/evidence retention, processor chain, substitution conformance, incident/remediation closure, and RCCS monitoring.
+3. Updated Table T-10-06 so responsibility drift, evidence chain break, tool-action boundary violation, human-role absence, dispute backlog, privacy data-flow deviation, vendor substitution, and continuous-improvement stall map to canonical MRO/RCCS objects.
+4. Converted F-06 and F-07 into formal figure blocks with interpretation and non-claim boundaries.
+5. Reworked Chapter 11 and Chapter 12 scoring language so system mappings remain qualitative, source-qualified, provisional, and non-ranking; numerical worksheets, if used, remain internal analytical support.
+6. Replaced stale Chapter 12 evidence-table future-revalidation language with `Claim-Level Status`.
+7. Replaced Appendix D future-looking Phase 1C wording with revalidated provisional cell-level support language.
+8. Replaced Appendix G future-looking revalidation / validation-priority columns with `Claim-Level Support Status`.
+9. Preserved MPLP protocol-level semantic-fit boundary and Validation Lab non-certifying boundary.
+10. No DOCX/PDF artifacts were regenerated.
+
+**Remaining blockers:**
+
+1. Waves 6-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final visual/citation/table proofing remains required before publication.
+4. Publication candidate readiness is not declared.
+
+**Wave 5 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 
@@ -1185,7 +1213,7 @@ Phase 1B-8C corrected methodology inconsistencies in Appendices A-D identified d
 
 6. **Appendix A compliance-sounding field values** — Neutralized "gdpr_compliant" → "gdpr_lifecycle_mapping_required" and "gdpr_article_28" → "gdpr_article_28_mapping_required"
 
-7. **Appendix D vendor mappings** — Added provisional language throughout (boundary statement, qualitative values, table cells, pattern interpretation) pending Phase 1C source revalidation
+7. **Appendix D vendor mappings** — Added provisional language throughout (boundary statement, qualitative values, table cells, pattern interpretation) for later source review; Wave 5 later replaced future-looking wording with claim-level support status
 
 **Remaining Issues:** None blocking Phase 1B-9
 

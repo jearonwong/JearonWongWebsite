@@ -1,8 +1,6 @@
 # 11. Comparative Field and System Positioning
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** FILLED — Phase 1B-1 Complete  
-**Phase:** 1B-1
 
 ---
 
@@ -97,7 +95,7 @@ The following table provides high-level positioning for each system or category.
 | OpenAI Agents SDK | Developer-focused agent framework; model access; tool use; execution orchestration | Low to Moderate (execution focus, governance primitives require validation) | Low to Moderate (execution orchestration exists, but lifecycle object semantics require validation) | Governance primitives; lifecycle responsibility objects; authority boundary enforcement; evidence chain |
 | CrewAI | Multi-agent collaboration; role-based agent design; task orchestration | Low to Moderate (collaboration focus, governance primitives require validation) | Low to Moderate (role-based design exists, but lifecycle object semantics require validation) | Governance primitives; lifecycle responsibility objects; authority boundary enforcement; evidence chain |
 
-This table provides initial positioning based on public documentation, system architecture, and stated design goals. Detailed evaluation in Chapter 12 will validate these positions with evidence-based scoring across all RCCS and ALCS dimensions.
+This table provides initial positioning based on public documentation, system architecture, and stated design goals. Chapter 12 tests these positions through evidence-qualified, provisional system mappings. Where numerical scoring is not fully source-bound, mappings remain qualitative and non-ranking.
 
 The table shows that systems have different strengths. Enterprise AI governance platforms tend to score higher on RCCS (regulatory compliance coverage) because they are designed for policy enforcement, risk management, and regulatory compliance. Lifecycle protocol paths tend to score higher on ALCS (agentic lifecycle conformance) because they are designed to expose lifecycle responsibility objects as first-class protocol primitives. Cloud AI platforms and agent orchestration frameworks tend to score in the moderate range on both RCCS and ALCS because they provide some governance capabilities and some lifecycle primitives, but may not expose full lifecycle responsibility semantics.
 
@@ -117,7 +115,7 @@ The ideal system provides both strong RCCS and strong ALCS. This means the syste
 
 The positioning in Table T-11-01 reflects this fragmentation. Systems with strong RCCS posture tend to be enterprise AI governance platforms designed for regulatory compliance. Systems with strong ALCS posture tend to be lifecycle protocol paths designed for responsibility semantics. Systems with moderate posture on both dimensions tend to be cloud AI platforms or agent orchestration frameworks that provide some governance capabilities and some lifecycle primitives, but may not expose full lifecycle responsibility semantics.
 
-Chapter 12 will validate these positions with evidence-based scoring across all RCCS and ALCS dimensions. The positioning in this chapter is preliminary and based on public documentation, system architecture, and stated design goals. Detailed evaluation may reveal stronger or weaker capabilities than the preliminary positioning suggests.
+Chapter 12 tests these positions through evidence-qualified, provisional system mappings. The positioning in this chapter is preliminary and based on public documentation, system architecture, and stated design goals. Detailed evaluation may reveal stronger or weaker capabilities than the preliminary positioning suggests, but system-level mappings remain qualitative and non-ranking unless numerical scoring is explicitly source-bound and approved.
 
 ---
 
@@ -160,14 +158,14 @@ Chapter 12 will provide detailed system mappings for each of the eight systems o
 - **RCCS dimensions:** Risk Management, Data Governance, Documentation, Record-Keeping, Transparency, Human Oversight, Security, Accountability, Contestability, Monitoring
 - **ALCS dimensions:** Human-Role-to-MAS Responsibility Mapping, Delegated Authority Boundary, Agent Role vs Human Role Distinction, Accepted Outcome Compliance, Tool-Action Liability Boundary, Responsibility Transfer Across Agents, Authority Drift Detection, MAS Evidence Partitioning, Cross-Project Reuse Compliance, Privacy/GDPR Lifecycle Mapping, Privacy-Preserving Third-Party Validation, Evidence Minimization and Selective Disclosure, Data Subject Rights vs Evidence Retention, Third-Party Processor/Subprocessor Chain, Vendor/Model/Runtime Substitution Conformance
 - **Evidence basis:** What evidence supports the evaluation (L1, L2, L3, L4, or L5)
-- **Composite scores:** RCCS percentage and ALCS percentage based on dimension scores and evidence multipliers
+- **Analytical posture:** qualitative RCCS/ALCS mapping strength and evidence level; no published numerical system assessment unless explicitly source-bound and approved
 - **Lifecycle gaps:** What lifecycle responsibility objects or governance primitives are missing or require further validation
 
-Chapter 12 will not assign final scores unless the score already exists in the v0.3.1 semantic base and is clearly marked as analytical and evidence-based. Chapter 12 will not create final procurement recommendations. Chapter 12 will not issue certification, endorsement, or legal compliance judgments.
+Chapter 12 does not create published numerical system assessments, final procurement recommendations, certification, endorsement, or legal compliance judgments. Any numerical worksheet, if used, remains internal analytical support unless explicitly source-bound and approved for publication.
 
 Chapter 12 will provide evidence-based system mappings that allow buyers, auditors, governance teams, and protocol designers to evaluate whether systems provide the governance primitives and lifecycle objects that regulation and lifecycle responsibility require. It will make visible the difference between systems that provide regulatory compliance coverage, systems that provide lifecycle responsibility semantics, and systems that provide both.
 
-The positioning in this chapter prepares the reader for Chapter 12 by establishing the comparison method, defining the systems in scope, providing preliminary positioning, and clarifying what the comparison evaluates and what it does not evaluate. Chapter 12 will validate these positions with detailed evidence-based evaluation across all RCCS and ALCS dimensions.
+The positioning in this chapter prepares the reader for Chapter 12 by establishing the comparison method, defining the systems in scope, providing preliminary positioning, and clarifying what the comparison evaluates and what it does not evaluate. Chapter 12 then tests these positions with detailed evidence-qualified mapping across RCCS and ALCS dimensions.
 
 ---
 
@@ -191,7 +189,3 @@ The positioning in this chapter prepares the reader for Chapter 12 by establishi
 | Certification / endorsement | Not evaluated | Certification; conformity assessment; regulatory approval; endorsement; criticism; vendor quality judgment; market leadership judgment |
 
 This table clarifies the boundaries of the comparison. It ensures that readers understand what the comparison evaluates and what it does not evaluate. It prevents scope confusion and establishes clear expectations about what the white paper claims and what it does not claim.
-
----
-
-*End of Chapter 11*

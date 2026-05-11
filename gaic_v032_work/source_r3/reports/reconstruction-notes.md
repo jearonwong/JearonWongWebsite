@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 4)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 5)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-4 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-5 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -364,6 +364,43 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 4 Status:** ◐ PATCH APPLIED / WAVES 5-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 5 Notes (May 11, 2026)
+
+**Scope:** Chapters 10-13 plus Appendices D/G system mapping, control crosswalk, MPLP boundary, and provisional assessment cleanup.
+
+**Review result:**
+
+- Conceptual direction: PASS.
+- Boundary intent: MOSTLY PASS before patch.
+- Taxonomy consistency: FAIL before patch.
+- Publication-source cleanliness: FAIL before patch.
+- Provisional mapping consistency: FAIL before patch.
+
+**Actions completed:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and source end/status markers from Chapters 10-13 and Appendices D/G.
+2. Corrected Chapter 10's old lifecycle-monitoring MRO taxonomy drift. Lifecycle monitoring now maps to canonical delegated authority, evidence partitioning, cross-project reuse, privacy lifecycle, substitution conformance, incident/remediation closure, and RCCS monitoring objects.
+3. Corrected Table T-10-06 mappings for responsibility drift, evidence chain break, tool-action boundary violation, human-role absence, dispute backlog, privacy data-flow deviation, vendor substitution alert, and continuous-improvement stall.
+4. Replaced F-06 and F-07 fenced-code diagrams with formal figure blocks and boundary notes.
+5. Reworked Chapter 11 and Chapter 12 so system mapping remains qualitative, source-qualified, provisional, and non-ranking.
+6. Renamed Chapter 12 evidence mini-table status columns from future-looking revalidation language to `Claim-Level Status`.
+7. Removed Chapter 12 publication-source completion residue.
+8. Preserved Chapter 13 MPLP boundary discipline: protocol-level semantic fit, not implementation conformance, certification, legal authority, or exclusive path.
+9. Replaced Appendix D pending-revalidation table notes with revalidated provisional cell-level support language.
+10. Replaced Appendix G future-looking revalidation columns with `Claim-Level Support Status` and boundary-safe source-support statuses.
+11. Updated the table inventory to record Appendix G support-status columns.
+
+**Boundary discipline:**
+
+- Canonical MRO IDs and definitions remain unchanged.
+- RCCS/ALCS taxonomy remains unchanged.
+- No numerical vendor scores, product rankings, procurement recommendations, certification claims, legal compliance proof claims, vendor endorsements, or stronger MPLP/Validation Lab claims were introduced.
+- No source-level evidence claims were strengthened without source verification.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 5 Status:** ◐ PATCH APPLIED / WAVES 6-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
@@ -902,7 +939,7 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 
 **Section 10.7 — Ongoing Monitoring and Continuous Improvement:**
 - Why monitoring must be lifecycle-integrated
-- MRO-09 (Lifecycle Drift Detection), MRO-10 (Continuous Improvement Feedback Loop)
+   - Legacy MRO-09/MRO-10 lifecycle-monitoring labels later corrected during Wave 5 to the canonical MRO dictionary
 - T-10-06: 8-row lifecycle monitoring indicators table
 - Governance loop: authorization → execution → evidence → review → remediation → improvement → re-authorization
 - Boundary: governance crosswalk, not real-time monitoring product or SRE framework
@@ -1534,9 +1571,9 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
    - Prevents misinterpretation as compliance claims
 
 8. **Appendix D Provisional Language Added:**
-   - Section D.0: Added "All mappings are provisional pending Phase 1C source revalidation"
+   - Section D.0: Added pre-Phase-1C provisional wording for later source review
    - Section D.1: All qualitative value definitions updated with provisional language
-   - Table T-D-01: All 16 rows updated with "(provisional)" suffix and "All provisional pending Phase 1C revalidation" notes
+   - Table T-D-01: All 16 rows updated with "(provisional)" suffix and pre-Phase-1C review notes, later replaced by Wave 5 claim-level support language
    - Section D.3: All six patterns updated with provisional language and Phase 1C revalidation requirements
 
 **Canonical Methodology Formulas (Now Consistent):**
@@ -1574,7 +1611,7 @@ Composite Score = 0.40 × RCCS + 0.60 × ALCS
 
 ---
 
-*Phase 1B-8C correction complete. Canonical evidence multipliers (L1=1.00, L2=0.85, L3=0.75, L4=0.55, L5=0.35) and composite weights (0.40/0.60) now consistent across Appendices B, C, and Chapter 9. Appendix D vendor mappings marked provisional pending Phase 1C source revalidation. Phase 1B-9 ready to proceed.*
+*Phase 1B-8C correction complete. Canonical evidence multipliers (L1=1.00, L2=0.85, L3=0.75, L4=0.55, L5=0.35) and composite weights (0.40/0.60) now consistent across Appendices B, C, and Chapter 9. Appendix D vendor mappings were marked provisional for later source review. Phase 1B-9 ready to proceed.*
 
 ---
 
@@ -1678,7 +1715,7 @@ All appendices maintain strict boundary discipline:
 - High scores do not prove legal compliance, regulatory approval, or certification
 - Low scores do not prove non-compliance or unsuitability
 - Scores are context-independent; organizations must interpret within their context
-- All Appendix G assessments are provisional pending Phase 1C revalidation
+- All Appendix G assessments were marked provisional for later source review
 
 ### Negative Controls Implemented
 
@@ -1690,7 +1727,7 @@ All rubrics include comprehensive negative controls to prevent overclaim:
 ### Phase 1C Carryover Items
 
 All Phase 1C carryover items from Phase 1B-8C preserved, plus new item:
-11. **Appendix G provisional assessments require Phase 1C source revalidation before finalization**
+11. **Appendix G provisional assessments require later source review before finalization**
 
 ### Acceptance Gates
 
@@ -1703,9 +1740,9 @@ All 15 acceptance gates passed:
 6. ✓ All assessments use canonical composite score formula from Phase 1B-8C
 7. ✓ All rubrics include comprehensive negative controls
 8. ✓ All appendices maintain boundary discipline
-9. ✓ Appendix G assessments marked as provisional requiring Phase 1C revalidation
+9. ✓ Appendix G assessments marked as provisional requiring later source review
 10. ✓ All L2 product documentation sources flagged for Phase 1C revalidation
-11. ✓ No final vendor scores published before Phase 1C
+11. ✓ No published numerical vendor assessments before Phase 1C
 12. ✓ Table inventory update created with all 34 new tables
 13. ✓ Phase 1C carryover items preserved
 14. ✓ No legal, certification, regulatory approval, or compliance proof claims introduced
@@ -1875,7 +1912,7 @@ Confirmed no positive claims of:
 - ✓ No "leader" (in ranking context)
 - ✓ No "trails" (in ranking context)
 - ✓ No "procurement winner"
-- ✓ No "final vendor score"
+- ✓ No published numerical vendor assessment
 
 ### Phase 1B-10 Readiness
 
@@ -2086,7 +2123,7 @@ Complete the final Phase 1C preflight before DOCX/PDF generation. This pass crea
 
 ### Appendix G Proofing Result
 
-Appendix G strict grep found no `Composite Score`, `Ranking`, `ranked`, `leads`, `trails`, `recommended vendor`, `best system`, `winner`, `leader`, `trailer`, or `final vendor score` contexts. The only `score` matches are no-score boundary statements.
+Appendix G strict grep found no `Composite Score`, `Ranking`, `ranked`, `leads`, `trails`, `recommended vendor`, `best system`, `winner`, `leader`, `trailer`, or published numerical vendor assessment contexts. The only `score` matches are no-score boundary statements.
 
 ### Phase 1D Readiness
 
