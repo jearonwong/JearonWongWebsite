@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-8 HTML Publication Refinement)
+**Last Updated:** May 11, 2026 (Phase 1D-9 Evaluation Results and Semantic Table Reflow)
 
 ## Reconstruction Strategy
 
@@ -37,6 +37,7 @@ R3 uses phased reconstruction:
 16. **Phase 1D-6:** Final regeneration and publication QA from Wave 8-clean source (◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED)
 17. **Phase 1D-7:** HTML-first publication renderer with HTML/PDF visual authority and DOCX derivative (◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED)
 18. **Phase 1D-8:** HTML publication refinement with pagination rules, safe charts, object-card rendering, table typography, and References / Sources section (◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED)
+19. **Phase 1D-9:** Evaluation results layer and semantic table reflow with non-ranking RCCS/ALCS profiles, result-first chapter panels, and publication table semantics (◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -75,6 +76,10 @@ Phase 1D-7 corrects the publication route from a Word/DOCX-style visual pipeline
 ### Decision 6: Refine HTML, Do Not Revert to Word
 
 Phase 1D-8 keeps the HTML-first foundation and refines it for publication behavior: chapter and appendix print starts, deterministic charts, reader-friendly object cards, complete front matter navigation, normalized table typography, and a final References / Sources section. It does not use old DOCX/PDF artifacts as input and does not mark the publication candidate ready while citation pinning/access blockers remain.
+
+### Decision 7: Add Results Without Rankings
+
+Phase 1D-9 adds evaluation results as qualitative, source-qualified analytical profiles rather than final vendor scores. The white paper may show RCCS/ALCS posture patterns, lifecycle strengths, gaps, evidence basis, and boundary notes, but it must not sort systems as a leaderboard, recommend procurement, certify compliance, or claim legal/regulatory approval.
 
 ## Lessons from R2
 
@@ -643,6 +648,51 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - Publication candidate readiness is not declared because citation pinning/access QA remains unresolved.
 
 **Phase 1D-8 Status:** ◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED.
+
+## Phase 1D-9 Notes (May 11, 2026)
+
+**Scope:** Evaluation results layer and semantic table reflow on top of the Phase 1D-8 HTML-first renderer.
+
+**Actions completed:**
+
+1. Added `scripts/generate_r3_phase1d9_html_publication.py` as the Phase 1D-9 HTML publication generator.
+2. Generated fresh full HTML, PDF, DOCX derivative, PDF text, 518 rendered page PNGs, contact sheets, and generation log under `out/phase_1d9/html_publication/`.
+3. Updated `design/gaic-html-publication-style.md` with Phase 1D-9 evaluation-profile, RCCS/ALCS posture-map, heatmap, rubric-card, system-profile-card, semantic-row-card, and semantic table class rules.
+4. Added a publication-facing `Evaluation Results: RCCS/ALCS Analytical Profiles` section after Chapter 12.
+5. Added qualitative, source-qualified analytical profiles for all eight evaluated systems: MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI.
+6. Added source-safe visual result components: RCCS/ALCS qualitative posture map, system x dimension heatmap, and profile cards.
+7. Added result-first chapter hierarchy panels for Chapters 1-18.
+8. Implemented semantic table classification and reflow: rubric cards, system profile cards, semantic row cards, and limited semantic column splitting.
+9. Created Phase 1D-9 architecture, visual-result, chapter-hierarchy, table-semantics, reflow, source/citation, generation, visual QA, evaluation QA, content preservation, boundary QA, and DOCX derivative reports.
+
+**Generation result:**
+
+- Full HTML/PDF/DOCX derivative generated from active `source_r3` Markdown only.
+- PDF page count: 518 A4 pages.
+- Rendered PNG pages: 518.
+- Active source table IDs: 170; generated HTML/PDF retain all active table IDs.
+- Figures F-01 through F-11 retained.
+- Evaluation profiles: 8/8 systems present.
+- Chapter hierarchy panels: 18/18 chapters present.
+- T-08-13 renders as rubric card reflow.
+- Appendix E rubrics reflowed: 10/10.
+- Appendix F rubrics reflowed: 15/15.
+- Appendix G system tables reflowed: 9/9.
+- Semantic row card reflows: 25.
+- Automated visual QA: 0 blank-ish pages, 0 edge-ink clipping alerts, 0 pagination warnings; 2 low-word pages are text-tail pages, not blank-table artifacts.
+- Forbidden positive blocker count: 0.
+- Citation blockers: 1 category remains, covering final page-level citation pinning/access QA.
+
+**Boundary discipline:**
+
+- No substantive source content was removed or summarized.
+- No old DOCX/PDF artifact was used as input.
+- No vendor ranking, final vendor score, procurement recommendation, legal compliance proof claim, certification claim, regulatory approval claim, or stronger MPLP / Validation Lab claim was introduced.
+- Evaluation profiles are qualitative posture profiles, not score bands, numeric system profiles, rankings, or procurement quadrants.
+- Appendix G remains revalidated provisional, qualitative, source-qualified, non-ranking, and no-score.
+- Publication candidate readiness is not declared because citation pinning/access QA remains unresolved.
+
+**Phase 1D-9 Status:** ◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

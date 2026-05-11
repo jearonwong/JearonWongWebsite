@@ -1,7 +1,81 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-8 HTML Publication Refinement)
+**Last Updated:** May 11, 2026 (Phase 1D-9 Evaluation Results and Semantic Table Reflow)
+
+## Phase 1D-9 Evaluation Results and Semantic Table Reflow
+
+### Status: PHASE 1D-9 EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED
+
+Phase 1D-9 builds on the accepted HTML-first Phase 1D-8 renderer. It adds a reader-facing evaluation results layer, all-platform qualitative RCCS/ALCS analytical profiles, RCCS/ALCS visual profiles, chapter opening hierarchy panels, semantic table type classification, rubric card rendering, system profile cards, semantic row-card reflow for dense scorecard/source/governance tables, and an enhanced source/citation result layer.
+
+**Generated artifacts:**
+
+1. `out/phase_1d9/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v3.html`
+2. `out/phase_1d9/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v3.pdf`
+3. `out/phase_1d9/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v3.docx`
+4. `out/phase_1d9/html_publication/rendered_pdf_pages/page-001.png` through `page-518.png`
+5. `out/phase_1d9/html_publication/phase_1d9_generation_log.json`
+6. `out/phase_1d9/html_publication/phase_1d9_front_matter_contact_sheet.png`
+7. `out/phase_1d9/html_publication/phase_1d9_charts_overview_contact_sheet.png`
+8. `out/phase_1d9/html_publication/phase_1d9_evaluation_results_contact_sheet.png`
+9. `out/phase_1d9/html_publication/phase_1d9_rccs_alcs_visual_profiles_contact_sheet.png`
+10. `out/phase_1d9/html_publication/phase_1d9_figure_pages_contact_sheet.png`
+11. `out/phase_1d9/html_publication/phase_1d9_high_risk_tables_contact_sheet.png`
+12. `out/phase_1d9/html_publication/phase_1d9_rubric_examples_contact_sheet.png`
+13. `out/phase_1d9/html_publication/phase_1d9_system_mapping_examples_contact_sheet.png`
+14. `out/phase_1d9/html_publication/phase_1d9_references_contact_sheet.png`
+15. `out/phase_1d9/html_publication/phase_1d9_appendix_final_pages_contact_sheet.png`
+
+**Reports created:**
+
+1. `reports/phase-1d9-evaluation-results-architecture.md`
+2. `reports/phase-1d9-rccs-alcs-visual-results-plan.md`
+3. `reports/phase-1d9-chapter-hierarchy-report.md`
+4. `reports/phase-1d9-semantic-table-type-system.md`
+5. `reports/phase-1d9-rubric-table-reflow-report.md`
+6. `reports/phase-1d9-system-table-reflow-report.md`
+7. `reports/phase-1d9-source-citation-layer-report.md`
+8. `reports/phase-1d9-pagination-refinement-report.md`
+9. `reports/phase-1d9-chart-visualization-plan.md`
+10. `reports/phase-1d9-chart-implementation-report.md`
+11. `reports/phase-1d9-codeblock-object-card-report.md`
+12. `reports/phase-1d9-frontmatter-toc-overview-report.md`
+13. `reports/phase-1d9-table-typography-report.md`
+14. `reports/phase-1d9-references-section-report.md`
+15. `reports/phase-1d9-html-publication-generation-report.md`
+16. `reports/phase-1d9-html-visual-qa.md`
+17. `reports/phase-1d9-evaluation-results-qa.md`
+18. `reports/phase-1d9-table-semantics-qa.md`
+19. `reports/phase-1d9-content-preservation-qa.md`
+20. `reports/phase-1d9-citation-boundary-qa.md`
+21. `reports/phase-1d9-boundary-claim-qa.md`
+22. `reports/phase-1d9-docx-derivative-qa.md`
+
+**Pass / warning results:**
+
+1. HTML/PDF/DOCX derivative generated from active source: PASS.
+2. Old DOCX/PDF used as input: NO.
+3. PDF page rendering: PASS, 518 A4 pages rendered to PNG.
+4. Evaluation results layer: PASS; all eight systems have qualitative RCCS/ALCS profiles.
+5. RCCS/ALCS visual profiles: PASS; qualitative posture map and heatmap generated without scores or rankings.
+6. Chapter hierarchy: PASS; 18/18 chapters render result-first opening panels.
+7. Table semantics: PASS; T-08-13 renders as rubric card reflow; Appendix E/F rubrics and Appendix G system tables reflow as semantic cards where appropriate.
+8. Content preservation QA: PASS; Chapters 1-18, Appendices A-K, all 170 active table IDs, and F-01 through F-11 retained.
+9. Boundary/forbidden-claim QA: PASS; positive blocker count 0.
+10. Appendix G proofing: PASS for HTML QA draft; Appendix G remains qualitative, source-qualified, revalidated provisional, non-ranking, and no-score.
+11. DOCX derivative QA: GENERATED; DOCX is editable derivative only and is not the visual authority.
+
+**Remaining blockers:**
+
+1. Final page-level citation pinning remains incomplete for several high-risk L2 product/protocol references.
+2. OpenAI platform guide still returns HTTP 403 and cannot be treated as fully pinned/rendered.
+3. Validation Lab methodology-specific support remains boundary-limited unless a release-approved methodology citation is pinned.
+4. MPLP docs/spec references remain source-bound for protocol identity but analytical for MRO/ALCS mapping where not directly stated.
+5. Product/protocol L2 references still include source-pointer queues.
+6. Publication candidate readiness is not declared.
+
+**Phase 1D-9 Decision:** PHASE 1D-9 EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED.
 
 ## Phase 1D-8 HTML Publication Refinement
 
