@@ -1,8 +1,8 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-7 HTML-first Publication Renderer
-**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION DRAFT
+**Phase:** 1D-8 HTML Publication Refinement
+**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION REFINEMENT DRAFT
 **Last Updated:** May 11, 2026
 
 ## Visual Position
@@ -10,6 +10,8 @@
 The HTML publication should read as a JearonWong.com white paper: architectural, evidence-led, protocol-native, and restrained. The visual model is a technical registry and governance publication, not a SaaS brochure, academic manuscript, generic consulting report, or Word-exported artifact.
 
 The HTML/PDF artifact is the visual source of truth. DOCX is an editable derivative and may have lower layout fidelity.
+
+Phase 1D-8 extends the Phase 1D-7 HTML-first foundation with stricter publication rules: chapters and appendices begin on new print pages, ordinary tables and code templates may split when needed, deterministic charts are rendered as print-safe SVG, body code-like examples can become reader-friendly object cards, and the final publication includes a References / Sources section.
 
 ## VI Principles
 
@@ -78,10 +80,13 @@ Do not scale typography with viewport width. Letter spacing remains normal.
 | Evidence badge | Small monospace pill: L1-L5 |
 | MRO/RCCS/ALCS badge | Small registry-blue or slate monospace pill |
 | Figure card | Bordered panel with figure label, flow lane, interpretation text |
+| Chart card | Print-safe SVG or CSS chart with source-data boundary note |
+| Object card | Reader-facing rendering of short lifecycle object/code examples in body chapters |
 | Table | Fixed layout where possible, shaded header, compact cell padding, repeat headers in print when supported |
 | Wide table | Semantic column splitting for dense 6+ column tables; preserve all rows and columns |
 | Appendix | More compact density, visible provisional/boundary notes, no ranking style |
 | Citation/source note | Small status-gray text, no unsupported raw URL sprawl |
+| References / Sources | Grouped source register with evidence level, access status, page-pinning notes, and conflict-of-interest boundaries |
 
 ## Print Rules
 
@@ -89,8 +94,10 @@ The renderer must define:
 
 - `@media print`;
 - `@page { size: A4; margin: 16mm 15mm; }`;
+- `.chapter { break-before: page; }` and `.appendix { break-before: page; }`;
 - `break-after: avoid` for headings;
-- `break-inside: avoid` for callouts and figure cards where practical;
+- `break-inside: avoid` for callouts, figure cards, chart cards, object cards, and reference items where practical;
+- `break-inside: auto` for large tables and technical template code so they do not create avoidable blank page islands;
 - table headers styled for repetition where supported;
 - compact appendix table mode;
 - no forced figure-only pages unless explicitly justified.

@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-7 HTML-first Publication Renderer)
+**Last Updated:** May 11, 2026 (Phase 1D-8 HTML Publication Refinement)
 
 ## Reconstruction Strategy
 
@@ -36,6 +36,7 @@ R3 uses phased reconstruction:
 15. **Phase 1D-5:** Full-text editorial review pack, Waves 1-8 patches/review, and Wave 4A source restoration (✓ WAVE 8 CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED)
 16. **Phase 1D-6:** Final regeneration and publication QA from Wave 8-clean source (◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED)
 17. **Phase 1D-7:** HTML-first publication renderer with HTML/PDF visual authority and DOCX derivative (◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED)
+18. **Phase 1D-8:** HTML publication refinement with pagination rules, safe charts, object-card rendering, table typography, and References / Sources section (◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -70,6 +71,10 @@ DOCX/PDF generation happens only in Phase 1D, after all content is filled and va
 ### Decision 5: HTML/PDF Visual Authority
 
 Phase 1D-7 corrects the publication route from a Word/DOCX-style visual pipeline to an HTML-first renderer. Active `source_r3` Markdown remains the content source of truth, HTML/CSS is the publication layout layer, PDF exported from HTML is the primary visual artifact, and DOCX is an editable derivative only.
+
+### Decision 6: Refine HTML, Do Not Revert to Word
+
+Phase 1D-8 keeps the HTML-first foundation and refines it for publication behavior: chapter and appendix print starts, deterministic charts, reader-friendly object cards, complete front matter navigation, normalized table typography, and a final References / Sources section. It does not use old DOCX/PDF artifacts as input and does not mark the publication candidate ready while citation pinning/access blockers remain.
 
 ## Lessons from R2
 
@@ -599,6 +604,45 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 5. `out/phase_1d7/html_publication/phase_1d7_generation_log.json`
 
 **Phase 1D-7 Status:** ◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED.
+
+## Phase 1D-8 Notes (May 11, 2026)
+
+**Scope:** HTML publication refinement on top of the Phase 1D-7 renderer.
+
+**Actions completed:**
+
+1. Added `scripts/generate_r3_phase1d8_html_publication.py` as the refined HTML-first publication generator.
+2. Generated fresh full HTML, PDF, DOCX derivative, PDF text, 352 rendered page PNGs, contact sheets, and generation log under `out/phase_1d8/html_publication/`.
+3. Updated `design/gaic-html-publication-style.md` to include Phase 1D-8 pagination, chart, object-card, table-density, and References / Sources behavior.
+4. Added print pagination rules so chapters and appendices begin on new pages while large tables and technical templates may split to avoid isolated object pages.
+5. Implemented four deterministic, source-safe charts: evidence confidence multipliers, MRO category distribution, enterprise failure scenario distribution, and Stage 0-to-7 adoption roadmap timeline.
+6. Added renderer treatment for body object cards and lighter appendix template code blocks.
+7. Added publication front matter sections for `Problem This White Paper Solves`, `How to Read This Paper`, and generated Publication Contents.
+8. Added final publication-facing References / Sources section from the citation inventory with evidence-level, access, OpenAI 403, Validation Lab, and MPLP conflict-of-interest notes.
+9. Created Phase 1D-8 reports for pagination, chart planning/implementation, codeblock/object-card handling, front matter, table typography, references, generation, visual QA, content preservation, citation/boundary QA, and DOCX derivative QA.
+
+**Generation result:**
+
+- Full HTML/PDF/DOCX derivative generated from active `source_r3` Markdown only.
+- PDF page count: 352 A4 pages.
+- Rendered PNG pages: 352.
+- Active source table IDs: 170; generated HTML/PDF retain all active table IDs.
+- Figures F-01 through F-11 retained.
+- Safe charts rendered: 4.
+- Automated visual QA: 0 blank-ish pages, 0 low-content pages, 0 edge-ink clipping alerts, 0 pagination warnings.
+- Forbidden positive blocker count: 0.
+- Citation blockers: 1 category remains, covering final page-level citation pinning/access QA.
+
+**Boundary discipline:**
+
+- No substantive source content was removed or summarized.
+- No old DOCX/PDF artifact was used as input.
+- Genspark sample text was not used as content.
+- No vendor ranking, final vendor score, procurement recommendation, legal compliance proof claim, certification claim, regulatory approval claim, or stronger MPLP / Validation Lab claim was introduced.
+- Appendix G remains revalidated provisional, qualitative, source-qualified, non-ranking, and no-score.
+- Publication candidate readiness is not declared because citation pinning/access QA remains unresolved.
+
+**Phase 1D-8 Status:** ◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

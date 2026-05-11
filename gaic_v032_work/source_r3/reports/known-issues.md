@@ -1,7 +1,69 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-7 HTML-first Publication Renderer)
+**Last Updated:** May 11, 2026 (Phase 1D-8 HTML Publication Refinement)
+
+## Phase 1D-8 HTML Publication Refinement
+
+### Status: PHASE 1D-8 HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED
+
+Phase 1D-8 refines the accepted Phase 1D-7 HTML-first renderer instead of reverting to DOCX-first generation. It adds publication pagination rules, deterministic source-safe charts, reader-friendly object-card rendering for body code-like examples, complete front matter navigation and problem overview, table typography normalization, and a final References / Sources section.
+
+**Generated artifacts:**
+
+1. `out/phase_1d8/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v2.html`
+2. `out/phase_1d8/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v2.pdf`
+3. `out/phase_1d8/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v2.docx`
+4. `out/phase_1d8/html_publication/rendered_pdf_pages/page-001.png` through `page-352.png`
+5. `out/phase_1d8/html_publication/phase_1d8_generation_log.json`
+6. `out/phase_1d8/html_publication/phase_1d8_front_matter_contact_sheet.png`
+7. `out/phase_1d8/html_publication/phase_1d8_charts_overview_contact_sheet.png`
+8. `out/phase_1d8/html_publication/phase_1d8_figure_pages_contact_sheet.png`
+9. `out/phase_1d8/html_publication/phase_1d8_high_risk_tables_contact_sheet.png`
+10. `out/phase_1d8/html_publication/phase_1d8_appendix_final_pages_contact_sheet.png`
+
+**Reports created:**
+
+1. `reports/phase-1d8-pagination-refinement-report.md`
+2. `reports/phase-1d8-chart-visualization-plan.md`
+3. `reports/phase-1d8-chart-implementation-report.md`
+4. `reports/phase-1d8-codeblock-object-card-report.md`
+5. `reports/phase-1d8-frontmatter-toc-overview-report.md`
+6. `reports/phase-1d8-table-typography-report.md`
+7. `reports/phase-1d8-references-section-report.md`
+8. `reports/phase-1d8-html-publication-generation-report.md`
+9. `reports/phase-1d8-html-visual-qa.md`
+10. `reports/phase-1d8-content-preservation-qa.md`
+11. `reports/phase-1d8-citation-boundary-qa.md`
+12. `reports/phase-1d8-docx-derivative-qa.md`
+
+**Pass / warning results:**
+
+1. HTML/PDF/DOCX derivative generated from active source: PASS.
+2. Old DOCX/PDF used as input: NO.
+3. PDF page rendering: PASS, 352 A4 pages rendered to PNG.
+4. Pagination QA: PASS for automated checks; chapter/appendix page-start behavior applied and pagination warnings are 0.
+5. Visual QA: PASS for HTML QA draft; no blank-ish pages, low-content pages, or edge-ink clipping alerts detected.
+6. Chart implementation: PASS; four deterministic, source-safe charts rendered for evidence multipliers, MRO category distribution, failure scenario distribution, and adoption roadmap timeline.
+7. Codeblock/object-card treatment: PASS; body code-like blocks are converted where appropriate, and Appendix technical templates remain complete as lighter non-normative template blocks.
+8. Front matter refinement: PASS; Publication Contents, `Problem This White Paper Solves`, and `How to Read This Paper` are present.
+9. Table typography: PASS for QA draft; normal table text aligns more closely with body scale, and all active table IDs are retained.
+10. References / Sources: PASS for section existence and grouping; final page-level citation pinning remains unresolved.
+11. Content preservation QA: PASS; Chapters 1-18, Appendices A-K, F-01 through F-11, and all 170 active table IDs retained.
+12. Boundary/forbidden-claim QA: PASS; positive blocker count 0.
+13. Appendix G proofing: PASS for HTML QA draft; Appendix G remains qualitative, source-qualified, revalidated provisional, non-ranking, and no-score.
+14. DOCX derivative QA: GENERATED; DOCX is editable derivative only and is not the visual authority.
+
+**Remaining blockers:**
+
+1. Final page-level citation pinning remains incomplete for several high-risk L2 product/protocol references.
+2. OpenAI platform guide still returns HTTP 403 and cannot be treated as fully pinned/rendered.
+3. Validation Lab methodology-specific support remains boundary-limited unless a release-approved methodology citation is pinned.
+4. MPLP docs/spec references remain source-bound for protocol identity but analytical for MRO/ALCS mapping where not directly stated.
+5. Product/protocol L2 references still include source-pointer queues.
+6. Publication candidate readiness is not declared.
+
+**Phase 1D-8 Decision:** PHASE 1D-8 HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED.
 
 ## Phase 1D-7 HTML-first Publication Renderer
 
