@@ -1,24 +1,22 @@
 # 16. Boundary to Companion Papers: Evidence, Assurance, and Insurability
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** FILLED — All sections 16.0-16.6 complete  
-**Phase:** 1A-4.3
 
 ---
 
 ## 16.0 Why Companion Paper Boundaries Matter
 
-This white paper has grown into a mother framework for AI Agent Lifecycle Governance. It defines the semantic and engineering layer for agentic and multi-agent system compliance. It introduces Missing Regulatory Objects, dual-layer scoring frameworks, enterprise control crosswalks, system positioning, and adoption pathways. Because the subject intersects compliance, audit, assurance, insurance, and enterprise procurement, clear scope boundaries are necessary.
+This white paper serves as the primary framework document for AI Agent Lifecycle Governance. It defines the semantic and engineering layer for agentic and multi-agent system compliance. It introduces Missing Regulatory Objects, dual-layer scoring frameworks, enterprise control crosswalks, system positioning, and adoption pathways. Because the subject intersects compliance, audit, assurance, insurance, and enterprise procurement, clear scope boundaries are necessary.
 
 Without companion-paper boundaries, the main white paper could become overloaded with audit methodology, insurance underwriting models, actuarial analysis, legal opinions, certification procedures, and procurement recommendations. That would dilute its core purpose and make it unreadable for the audiences who need lifecycle governance clarity.
 
-The purpose of this chapter is to declare which topics are covered at framework-entry level in the main white paper and which topics are reserved for specialized companion papers. This boundary is intentional. This white paper defines the mother framework. It does not attempt to become every downstream assurance, insurance, audit, or procurement methodology.
+The purpose of this chapter is to declare which topics are covered at framework-entry level in the main white paper and which topics are reserved for specialized companion papers. This boundary is intentional. This white paper defines the primary framework layer. It does not attempt to become every downstream assurance, insurance, audit, or procurement methodology.
 
 Two companion papers are planned:
 
-1. **Agentic AI Evidence & Assurance White Paper 2026** — defines audit control objectives, evidence sufficiency, test procedures, attestation readiness, and privacy-preserving validation patterns.
+1. **Agentic AI Evidence & Assurance White Paper 2026** — planned to define audit control objectives, evidence sufficiency, test procedures, attestation readiness, and privacy-preserving validation patterns.
 
-2. **Agentic AI Insurability White Paper 2026** — defines risk classification, tool-action liability, loss attribution, claim replay evidence, premium differentiation logic, exclusion triggers, and underwriting implications.
+2. **Agentic AI Insurability White Paper 2026** — planned to define risk classification, tool-action liability, loss attribution, claim replay evidence, premium differentiation logic, exclusion triggers, and underwriting implications.
 
 This chapter clarifies the role of each paper and prevents scope confusion. It ensures that readers understand what the main white paper does and does not claim. It establishes non-claim discipline for legal, audit, assurance, insurance, RCCS/ALCS, MPLP, Validation Lab, and system mapping boundaries.
 
@@ -60,17 +58,17 @@ The main white paper does not fully define:
 - Certification procedures or conformity assessment
 - Validation Lab operational procedures or certification authority claims
 
-The main white paper provides the governance mother framework. Detailed assurance procedures and insurability models are reserved for companion papers. This boundary ensures that the main paper remains focused on lifecycle governance definition and does not overreach into professional judgment domains that require specialized expertise.
+The main white paper provides the primary framework layer. Detailed assurance procedures and insurability models are reserved for companion papers. This boundary ensures that the main paper remains focused on lifecycle governance definition and does not overreach into professional judgment domains that require specialized expertise.
 
 ---
 
 ## 16.2 Companion Paper 1 — Agentic AI Evidence & Assurance White Paper 2026
 
-The **Agentic AI Evidence & Assurance White Paper 2026** will define the audit, control testing, and validation methodology for agentic systems. It will build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into audit control objectives, evidence requirements, and attestation readiness.
+The **Agentic AI Evidence & Assurance White Paper 2026** is planned to define the audit, control testing, and validation methodology for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into audit control objectives, evidence requirements, and attestation readiness.
 
 **Intended Scope:**
 
-The Evidence & Assurance companion paper will cover:
+The Evidence & Assurance companion paper is intended to cover:
 
 - **Evidence artifact taxonomy:** What evidence types are required for each MRO and lifecycle stage.
 - **Audit control objectives:** How to translate MROs into testable control objectives.
@@ -88,7 +86,7 @@ The Evidence & Assurance companion paper will cover:
 
 **Boundary:**
 
-The Evidence & Assurance companion paper will not:
+The Evidence & Assurance companion paper is not intended to:
 - Create legal certification or regulatory approval
 - Claim that Validation Lab is a certification authority, regulator, or conformity assessment body
 - Issue audit opinions or replace professional audit judgment
@@ -100,17 +98,17 @@ The Evidence & Assurance companion paper will not:
 
 Validation Lab may be referenced in the Evidence & Assurance companion paper only as a non-certifying evidence adjudication example. It is not a regulator, certification authority, conformity assessment body, or legal compliance certification mechanism. It does not certify compliance. It does not issue legal opinions. It does not replace audit or regulatory judgment.
 
-The Evidence & Assurance companion paper will clarify that Validation Lab is an example of how privacy-preserving third-party validation could be structured. It is not the only method. It is not required for compliance. It is not a certification program.
+The Evidence & Assurance companion paper is expected to clarify that Validation Lab is an example of how privacy-preserving third-party validation could be structured. It is not the only method. It is not required for compliance. It is not a certification program.
 
 ---
 
 ## 16.3 Companion Paper 2 — Agentic AI Insurability White Paper 2026
 
-The **Agentic AI Insurability White Paper 2026** will define the risk classification, loss attribution, and underwriting implications for agentic systems. It will build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into insurability criteria, claim replay evidence, and premium differentiation logic.
+The **Agentic AI Insurability White Paper 2026** is planned to define the risk classification, loss attribution, and underwriting implications for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into insurability criteria, claim replay evidence, and premium differentiation logic.
 
 **Intended Scope:**
 
-The Insurability companion paper will cover:
+The Insurability companion paper is intended to cover:
 
 - **Insurability criteria:** What makes an agentic system insurable or uninsurable.
 - **Risk classification:** How to classify agentic system risk for underwriting purposes.
@@ -129,7 +127,7 @@ The Insurability companion paper will cover:
 
 **Boundary:**
 
-The Insurability companion paper will not:
+The Insurability companion paper is not intended to:
 - Define actual insurance policy wording or coverage terms
 - Set premiums or provide actuarial pricing models
 - Replace underwriting, actuarial, legal, or claims judgment
@@ -138,7 +136,7 @@ The Insurability companion paper will not:
 - Replace insurance broker, underwriter, or claims adjuster judgment
 - Define claim settlement procedures or dispute resolution mechanisms
 
-The Insurability companion paper will provide a framework for analyzing insurability implications. It will not replace professional insurance judgment. It will not claim that RCCS or ALCS scores determine premiums. It will not claim that MPLP conformance guarantees insurability. It will clarify that insurability depends on underwriting judgment, actuarial analysis, legal review, and risk appetite, not only on lifecycle conformance scores.
+The Insurability companion paper is expected to provide a framework for analyzing insurability implications. It is not intended to replace professional insurance judgment. It is not intended to claim that RCCS or ALCS scores determine premiums. It is not intended to claim that MPLP conformance guarantees insurability. It is expected to clarify that insurability depends on underwriting judgment, actuarial analysis, legal review, and risk appetite, not only on lifecycle conformance scores.
 
 ---
 
@@ -243,7 +241,7 @@ The companion-paper boundary clarifies adoption sequencing for enterprises, audi
 
 **Recommended Adoption Sequence:**
 
-1. **Use the main white paper** to understand the AI Agent Lifecycle Governance mother framework, Missing Regulatory Objects, RCCS/ALCS scoring, enterprise control crosswalk, and system positioning. This provides the conceptual foundation and framework-entry understanding.
+1. **Use the main white paper** to understand the AI Agent Lifecycle Governance primary framework layer, Missing Regulatory Objects, RCCS/ALCS scoring, enterprise control crosswalk, and system positioning. This provides the conceptual foundation and framework-entry understanding.
 
 2. **Use the Evidence & Assurance companion paper** (when published) for audit readiness, control testing methodology, evidence sufficiency analysis, attestation preparation, and privacy-preserving validation procedures. This provides the assurance methodology layer.
 
@@ -253,31 +251,22 @@ The companion-paper boundary clarifies adoption sequencing for enterprises, audi
 
 **Why This Sequence Matters:**
 
-The main white paper defines the governance mother framework. Without understanding MROs, RCCS, ALCS, and lifecycle conformance, the assurance and insurability methodologies will not make sense. The companion papers build on the main framework. They do not replace it.
+The main white paper defines the primary governance framework. Without understanding MROs, RCCS, ALCS, and lifecycle conformance, the assurance and insurability methodologies would not make sense. The companion papers build on the main framework. They do not replace it.
 
 Enterprises that attempt to implement audit procedures or insurance analysis without understanding the lifecycle governance foundation will struggle with scope confusion, evidence gaps, and control misalignment. The adoption sequence ensures that governance, assurance, and insurability are addressed in the correct order.
 
 **Bridge to Chapter 17:**
 
-Chapter 17 will define the adoption roadmap in detail, including enterprise adoption pathways, regulatory engagement strategies, industry brief development, and global rollout sequencing. The companion-paper boundary established in this chapter ensures that the adoption roadmap can clearly distinguish between framework adoption, assurance methodology adoption, and insurability analysis adoption.
+Chapter 17 defines the adoption roadmap in detail, including enterprise adoption pathways, regulatory engagement strategies, industry brief development, and global rollout sequencing. The companion-paper boundary established in this chapter ensures that the adoption roadmap can clearly distinguish between framework adoption, assurance methodology adoption, and insurability analysis adoption.
 
-The boundary also ensures that adoption recommendations do not overreach into legal, audit, insurance, or procurement conclusions. Chapter 17 will provide adoption guidance, not adoption mandates. It will clarify that adoption pathways depend on enterprise context, regulatory jurisdiction, industry sector, and risk appetite, not only on lifecycle conformance scores.
-
----
-
-**Figure F-10: Companion Paper Boundary Map**
-
-**Figure description:**
-
-```
-Main White Paper: AI Agent Lifecycle Governance Mother Framework
-        ├── Evidence & Assurance Paper: Audit / validation / evidence procedures
-        ├── Insurability Paper: Risk transfer / claim replay / underwriting implications
-        └── Later Industry Briefs: Accounting, insurance, banking, regulated enterprise applications
-```
-
-The figure illustrates that the main white paper is the mother framework. The companion papers extend the framework into specialized professional judgment domains. Industry briefs will further extend the framework into sector-specific operationalization. This layered structure prevents scope overload and ensures that each paper remains focused on its core purpose.
+The boundary also ensures that adoption recommendations do not overreach into legal, audit, insurance, or procurement conclusions. Chapter 17 provides adoption guidance, not adoption mandates. It clarifies that adoption pathways depend on enterprise context, regulatory jurisdiction, industry sector, and risk appetite, not only on lifecycle conformance scores.
 
 ---
 
-**Chapter 16 Status:** ✓ FILLED — All sections 16.0-16.6 complete. Companion paper boundary established. Non-claim discipline defined. Bridge to Chapter 17 adoption roadmap complete.
+**Figure F-10 — Companion Paper Boundary Map**
+
+Main White Paper → Evidence & Assurance Companion → Insurability Companion → Later Industry Briefs
+
+*Figure F-10 shows the publication boundary between the main framework document, planned companion papers, and later industry briefs. The figure is a scope map, not a publication guarantee, certification pathway, or claim that companion papers are already complete.*
+
+---

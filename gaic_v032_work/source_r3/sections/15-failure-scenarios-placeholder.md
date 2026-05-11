@@ -1,8 +1,6 @@
 # 15. Enterprise Failure Scenarios
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1B-6
 
 ---
 
@@ -14,13 +12,15 @@ Enterprise failure scenarios are not included to claim that agentic AI is unique
 
 **This chapter examines eight enterprise failure scenarios. Each scenario connects a failure trigger to a missing or weak lifecycle object, maps to relevant Missing Regulatory Objects and ALCS dimensions, describes enterprise consequences, identifies investigation evidence, and presents remediation and prevention patterns.**
 
+The scenarios in this chapter are illustrative and hypothetical. They do not describe real company incidents, assert actual legal violations, or claim that any specific vendor, platform, or organization failed.
+
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to demonstrate that lifecycle governance gaps create predictable failure patterns that enterprises must address.
 
-**Figure F-09: Enterprise Failure Scenario Chain**
+**Figure F-09 — Enterprise Failure Scenario Chain**
 
-`Trigger or workflow change -> missing lifecycle object -> evidence gap -> enterprise consequence -> remediation closure`
+Trigger or Workflow Change → Missing Lifecycle Object → Evidence Gap → Enterprise Consequence → Remediation Closure
 
-*Figure F-09 shows how a localized agentic workflow trigger can become an enterprise failure when the lifecycle object is missing or weak. The figure is an analytical chain, not an incident probability model or claim that all agentic failures follow the same sequence.*
+*Figure F-09 shows how a localized agentic workflow trigger can become an enterprise failure pattern when the lifecycle object is missing or weak. The figure is an analytical chain, not an incident probability model, legal conclusion, or claim that all agentic failures follow the same sequence.*
 
 ---
 
@@ -32,10 +32,10 @@ Enterprise failure scenarios fall into four categories based on where the lifecy
 
 | Category | Failure Pattern | Primary MROs | Primary ALCS | Enterprise Risk |
 |----------|----------------|--------------|--------------|-----------------|
-| Authority and Boundary Failures | Agent exceeds delegated authority; moves from advising to committing; operates without explicit human authorization | MRO-02: Delegated Authority Boundary; MRO-05: Tool-Action Liability Boundary; MRO-07: Authority Drift | ALCS-02: Delegated Authority Boundary; ALCS-04: Accepted Outcome Compliance; ALCS-07: Authority Drift Detection | Unauthorized actions; liability disputes; regulatory non-compliance; customer harm |
-| Evidence and Traceability Failures | Organization has logs but cannot reconstruct authority, plan version, human confirmation, tool action, and accepted outcome; evidence chain is incomplete or non-partitioned | MRO-08: MAS Evidence Partitioning; MRO-11: Privacy-Preserving Third-Party Validation; MRO-12: Evidence Minimization and Selective Disclosure | ALCS-08: MAS Evidence Partitioning; ALCS-11: Privacy-Preserving Third-Party Validation; ALCS-12: Evidence Minimization and Selective Disclosure | Audit failure; dispute resolution failure; regulatory investigation failure; inability to demonstrate compliance |
+| Authority and Boundary Failures | Agent exceeds delegated authority; moves from advising to committing; operates without explicit human authorization | MRO-02: Delegated Authority Boundary; MRO-05: Tool-Action Liability Boundary; MRO-07: Authority Drift | ALCS-02: Delegated Authority Boundary; ALCS-04: Accepted Outcome Compliance; ALCS-07: Authority Drift Detection | Unauthorized actions; liability disputes; potential regulatory non-compliance depending on deployment context; customer harm |
+| Evidence and Traceability Failures | Organization has logs but cannot reconstruct authority, plan version, human confirmation, tool action, and accepted outcome; evidence chain is incomplete or non-partitioned | MRO-08: MAS Evidence Partitioning; MRO-11: Privacy-Preserving Third-Party Validation; MRO-12: Evidence Minimization and Selective Disclosure | ALCS-08: MAS Evidence Partitioning; ALCS-11: Privacy-Preserving Third-Party Validation; ALCS-12: Evidence Minimization and Selective Disclosure | Audit-readiness failure or audit challenge; dispute resolution failure; regulatory investigation challenge; inability to demonstrate conformance |
 | Responsibility and Acceptance Failures | Orchestrator marks task complete but no accountable human role accepts the result under evidence; execution completion ≠ accepted outcome | MRO-01: Human Role to MAS Responsibility Mapping; MRO-04: Accepted Outcome Compliance; MRO-16: Incident, Dispute, and Remediation Closure | ALCS-01: Human-Role-to-MAS Responsibility Mapping; ALCS-04: Accepted Outcome Compliance; ALCS-06: Responsibility Transfer Across Agents | Accountability gaps; no responsible party for outcomes; remediation delays; customer disputes without resolution path |
-| Integration and Substitution Failures | Cross-project reuse without reset; vendor/model/runtime substitution without conformance validation; processor chain without responsibility mapping | MRO-09: Cross-Project Reuse Compliance; MRO-10: Privacy/GDPR Lifecycle Mapping; MRO-14: Third-Party Processor/Subprocessor Chain; MRO-15: Vendor/Model/Runtime Substitution Conformance | ALCS-09: Cross-Project Reuse Compliance; ALCS-10: Privacy/GDPR Lifecycle Mapping; ALCS-14: Third-Party Processor/Subprocessor Chain; ALCS-15: Vendor/Model/Runtime Substitution Conformance | Privacy violations; compliance drift; vendor lock-in; substitution-induced failures; processor chain liability disputes |
+| Integration and Substitution Failures | Cross-project reuse without reset; vendor/model/runtime substitution without conformance validation; processor chain without responsibility mapping | MRO-09: Cross-Project Reuse Compliance; MRO-10: Privacy/GDPR Lifecycle Mapping; MRO-14: Third-Party Processor/Subprocessor Chain; MRO-15: Vendor/Model/Runtime Substitution Conformance | ALCS-09: Cross-Project Reuse Compliance; ALCS-10: Privacy/GDPR Lifecycle Mapping; ALCS-14: Third-Party Processor/Subprocessor Chain; ALCS-15: Vendor/Model/Runtime Substitution Conformance | Privacy risks; compliance drift; vendor lock-in; substitution-induced failures; processor chain liability disputes |
 
 **Interpretation:** These four categories cover the primary failure modes where lifecycle governance gaps create enterprise risk. Authority failures occur when agents exceed boundaries. Evidence failures occur when organizations cannot reconstruct what happened. Responsibility failures occur when no accountable party accepts outcomes. Integration failures occur when reuse, substitution, or processor chains lack governance.
 
@@ -49,22 +49,22 @@ The following table maps missing or weak lifecycle objects to enterprise failure
 
 | Missing Object | What Fails | What Evidence Is Needed | Likely Enterprise Consequence |
 |----------------|-----------|-------------------------|-------------------------------|
-| Human-Role-to-MAS Responsibility Mapping | No accountable human role for agent outcomes; execution logs exist but responsibility assignment does not | Role assignment records; delegation records; acceptance records; escalation records | Accountability gaps; no responsible party when outcomes are disputed; regulatory non-compliance (e.g., EU AI Act Article 26 human oversight) |
-| Delegated Authority Boundary | Agent moves from advising to committing; agent performs tool actions without explicit authorization; authority scope is implicit or undocumented | Authority grant records; tool-action authorization records; boundary violation alerts; human confirmation records | Unauthorized actions; liability disputes; customer harm; regulatory non-compliance; reputational damage |
-| Accepted Outcome Compliance | Orchestrator marks task complete but no human accepts the result; execution completion ≠ accepted outcome | Acceptance records; review records; outcome validation records; rejection/escalation records | No accepted outcome state; disputes without resolution path; audit failure; inability to demonstrate compliance |
+| Human-Role-to-MAS Responsibility Mapping | No accountable human role for agent outcomes; execution logs exist but responsibility assignment does not | Role assignment records; delegation records; acceptance records; escalation records | Accountability gaps; no responsible party when outcomes are disputed; potential regulatory non-compliance depending on deployment context (for example, human oversight obligations requiring legal review) |
+| Delegated Authority Boundary | Agent moves from advising to committing; agent performs tool actions without explicit authorization; authority scope is implicit or undocumented | Authority grant records; tool-action authorization records; boundary violation alerts; human confirmation records | Unauthorized actions; liability disputes; customer harm; potential regulatory non-compliance depending on deployment context; reputational damage |
+| Accepted Outcome Compliance | Orchestrator marks task complete but no human accepts the result; execution completion ≠ accepted outcome | Acceptance records; review records; outcome validation records; rejection/escalation records | No accepted outcome state; disputes without resolution path; audit-readiness failure or audit challenge; inability to demonstrate conformance |
 | Tool-Action Liability Boundary | Agent uses tool (API call, database write, email send, payment initiation) but no liability boundary record exists | Tool-action logs; authorization records; liability assignment records; tool provider agreements | Liability disputes; unclear responsibility for tool-induced harm; vendor disputes; insurance claim failures |
 | Responsibility Transfer Across Agents | Multi-agent handoff occurs but no responsibility transfer record exists; constraint inheritance is not validated | Handoff records; constraint transfer records; responsibility acceptance records; handoff validation logs | Accountability gaps across agent boundaries; constraint violations; handoff-induced failures; no responsible party for multi-agent outcomes |
-| Authority Drift | Agent authority expands over time without explicit reauthorization; model updates or prompt changes alter agent behavior without authority review | Authority baseline records; drift detection logs; reauthorization records; behavior change alerts | Unauthorized authority expansion; regulatory non-compliance; customer harm; liability disputes |
-| MAS Evidence Partitioning | Organization has logs but cannot partition evidence by project, customer, jurisdiction, or data subject; evidence export is not selective | Partitioned evidence chains; evidence export logs; partition policy records; selective disclosure records | Audit failure; privacy violations; inability to respond to data subject requests; regulatory investigation failure |
-| Cross-Project Reuse Compliance | Prompt, memory, role, workflow, or trace-derived pattern is reused across regulated contexts without reset or reauthorization | Reuse records; reset validation records; reauthorization records; context boundary records | Privacy violations; compliance drift; cross-contamination of regulated contexts; regulatory non-compliance |
-| Privacy/GDPR Lifecycle Mapping | Data flow, retention, and subject rights are not mapped to agent lifecycle; evidence retention conflicts with data subject rights | Data flow records; retention policy records; data subject rights workflow records; evidence minimization records | Privacy violations; GDPR non-compliance; data subject rights disputes; regulatory fines |
-| Privacy-Preserving Third-Party Validation | Enterprise sends raw traces or sensitive evidence to a reviewer, creating a privacy/security incident during validation | Validation evidence records; disclosure policy records; redaction records; validation protocol records | Privacy violations; security incidents; regulatory non-compliance; customer trust loss |
-| Evidence Minimization and Selective Disclosure | Organization retains excessive evidence or discloses evidence without minimization policy | Retention policy records; disclosure policy records; minimization records; selective disclosure logs | Privacy violations; regulatory non-compliance; excessive data retention risk; disclosure-induced harm |
-| Third-Party Processor/Subprocessor Chain | Model provider, vector DB, CRM API, workflow tool, monitoring platform, and cloud runtime are all involved, but no processor/subprocessor responsibility chain exists | Processor agreements; subprocessor chain records; responsibility assignment records; data flow records | Processor chain liability disputes; GDPR Article 28 non-compliance; vendor disputes; unclear responsibility for processor-induced harm |
-| Vendor/Model/Runtime Substitution Conformance | Team switches model, runtime, vector store, or tool provider; execution still works but evidence, authority, privacy, and replay semantics degrade | Substitution records; conformance validation records; regression testing records; evidence integrity validation records | Compliance drift; evidence chain degradation; authority boundary violations; privacy violations; audit failure |
-| Incident, Dispute, and Remediation Closure | Engineering fixes a prompt or workflow bug, but no responsibility owner, affected outcome list, evidence review, customer impact assessment, or accepted closure state exists | Incident records; affected outcome records; remediation records; closure acceptance records; customer impact assessment records | Remediation delays; no closure state; customer disputes without resolution; regulatory investigation failure; reputational damage |
+| Authority Drift | Agent authority expands over time without explicit reauthorization; model updates or prompt changes alter agent behavior without authority review | Authority baseline records; drift detection logs; reauthorization records; behavior change alerts | Unauthorized authority expansion; potential regulatory non-compliance depending on deployment context; customer harm; liability disputes |
+| MAS Evidence Partitioning | Organization has logs but cannot partition evidence by project, customer, jurisdiction, or data subject; evidence export is not selective | Partitioned evidence chains; evidence export logs; partition policy records; selective disclosure records | Audit-readiness failure or audit challenge; privacy risks; inability to respond to data subject requests; regulatory investigation challenge |
+| Cross-Project Reuse Compliance | Prompt, memory, role, workflow, or trace-derived pattern is reused across regulated contexts without reset or reauthorization | Reuse records; reset validation records; reauthorization records; context boundary records | Privacy risks; compliance drift; cross-contamination of regulated contexts; potential regulatory non-compliance depending on deployment context |
+| Privacy/GDPR Lifecycle Mapping | Data flow, retention, and subject rights are not mapped to agent lifecycle; evidence retention conflicts with data subject rights | Data flow records; retention policy records; data subject rights workflow records; evidence minimization records | Privacy risks; potential GDPR compliance issue requiring legal review; data subject rights disputes; potential regulatory exposure |
+| Privacy-Preserving Third-Party Validation | Enterprise sends raw traces or sensitive evidence to a reviewer, creating a privacy/security incident during validation | Validation evidence records; disclosure policy records; redaction records; validation protocol records | Privacy risks; security incidents; potential regulatory non-compliance depending on deployment context; customer trust loss |
+| Evidence Minimization and Selective Disclosure | Organization retains excessive evidence or discloses evidence without minimization policy | Retention policy records; disclosure policy records; minimization records; selective disclosure logs | Privacy risks; potential regulatory non-compliance depending on deployment context; excessive data retention risk; disclosure-induced harm |
+| Third-Party Processor/Subprocessor Chain | Model provider, vector DB, CRM API, workflow tool, monitoring platform, and cloud runtime are all involved, but no processor/subprocessor responsibility chain exists | Processor agreements; subprocessor chain records; responsibility assignment records; data flow records | Processor chain liability disputes; potential GDPR Article 28 processor-chain issue requiring legal review; vendor disputes; unclear responsibility for processor-induced harm |
+| Vendor/Model/Runtime Substitution Conformance | Team switches model, runtime, vector store, or tool provider; execution still works but evidence, authority, privacy, and replay semantics degrade | Substitution records; conformance validation records; regression testing records; evidence integrity validation records | Compliance drift; evidence chain degradation; authority boundary violations; privacy risks; audit-readiness failure or audit challenge |
+| Incident, Dispute, and Remediation Closure | Engineering fixes a prompt or workflow bug, but no responsibility owner, affected outcome list, evidence review, customer impact assessment, or accepted closure state exists | Incident records; affected outcome records; remediation records; closure acceptance records; customer impact assessment records | Remediation delays; no closure state; customer disputes without resolution; regulatory investigation challenge; reputational damage |
 
-**Interpretation:** This mapping shows that lifecycle governance gaps create predictable enterprise failures. Missing objects lead to accountability gaps, audit failures, privacy violations, liability disputes, and regulatory non-compliance. Investigation requires specific evidence artifacts that ordinary orchestration logs do not provide.
+**Interpretation:** This mapping shows that lifecycle governance gaps create predictable enterprise failure patterns. Missing objects may lead to accountability gaps, audit-readiness failures or audit challenges, privacy risks, liability disputes, and potential regulatory non-compliance depending on deployment context. Investigation requires specific evidence artifacts that ordinary orchestration logs do not provide.
 
 ---
 
@@ -117,7 +117,7 @@ MAS Evidence Partitioning (MRO-08); Privacy-Preserving Third-Party Validation (M
 ALCS-08: MAS Evidence Partitioning; ALCS-11: Privacy-Preserving Third-Party Validation; ALCS-12: Evidence Minimization and Selective Disclosure
 
 **Enterprise Consequence:**  
-Audit failure. Regulatory investigation. Potential fines. Inability to demonstrate compliance. Customer disputes cannot be resolved because evidence chain is incomplete. Reputational damage.
+Audit-readiness failure or audit challenge. Regulatory investigation challenge. Potential regulatory exposure. Inability to demonstrate conformance. Customer disputes cannot be resolved because evidence chain is incomplete. Reputational damage.
 
 **Investigation Evidence Needed:**  
 - Partitioned evidence chain showing authority → plan → confirmation → tool action → evidence → review → accepted outcome
@@ -182,7 +182,7 @@ Cross-Project Reuse Compliance (MRO-09); Privacy/GDPR Lifecycle Mapping (MRO-10)
 ALCS-09: Cross-Project Reuse Compliance; ALCS-10: Privacy/GDPR Lifecycle Mapping; ALCS-14: Third-Party Processor/Subprocessor Chain
 
 **Enterprise Consequence:**  
-Privacy violation. HIPAA non-compliance. Regulatory fines. Customer trust loss. Cross-contamination of regulated and non-regulated contexts. Reputational damage.
+Privacy risk. Potential HIPAA compliance issue requiring legal review. Potential regulatory exposure. Customer trust loss. Cross-contamination of regulated and non-regulated contexts. Reputational damage.
 
 **Investigation Evidence Needed:**  
 - Reuse records showing when and how the pattern was reused
@@ -206,7 +206,7 @@ Privacy violation. HIPAA non-compliance. Regulatory fines. Customer trust loss. 
 ### Scenario 5: Privacy Validation Failure
 
 **Failure Trigger:**  
-An enterprise sends raw agent traces, including customer PII and proprietary business logic, to a third-party reviewer for compliance validation. The reviewer is not a processor under a data processing agreement. The data transfer creates a privacy violation and security incident.
+An enterprise sends raw agent traces, including customer PII and proprietary business logic, to a third-party reviewer for compliance validation. The reviewer is not a processor under a data processing agreement. The data transfer creates a privacy risk and potential security incident.
 
 **Missing Lifecycle Object:**  
 Privacy/GDPR Lifecycle Mapping (MRO-10); Privacy-Preserving Third-Party Validation (MRO-11); Evidence Minimization and Selective Disclosure (MRO-12); Data Subject Rights vs Evidence Retention (MRO-13)
@@ -215,7 +215,7 @@ Privacy/GDPR Lifecycle Mapping (MRO-10); Privacy-Preserving Third-Party Validati
 ALCS-10: Privacy/GDPR Lifecycle Mapping; ALCS-11: Privacy-Preserving Third-Party Validation; ALCS-12: Evidence Minimization and Selective Disclosure; ALCS-13: Data Subject Rights vs Evidence Retention
 
 **Enterprise Consequence:**  
-Privacy violation. GDPR Article 28 non-compliance. Security incident. Regulatory investigation. Customer trust loss. Potential fines. Reputational damage.
+Privacy risk. Potential GDPR Article 28 processor-chain issue requiring legal review. Security incident. Regulatory investigation challenge. Customer trust loss. Potential regulatory exposure. Reputational damage.
 
 **Investigation Evidence Needed:**  
 - Validation evidence transfer records
@@ -249,7 +249,7 @@ Third-Party Processor/Subprocessor Chain (MRO-14); Tool-Action Liability Boundar
 ALCS-14: Third-Party Processor/Subprocessor Chain; ALCS-04: Accepted Outcome Compliance; ALCS-08: MAS Evidence Partitioning
 
 **Enterprise Consequence:**  
-Processor chain liability dispute. GDPR Article 28 non-compliance. Unclear responsibility for breach. Vendor disputes. Insurance claim failure. Regulatory investigation. Customer trust loss. Reputational damage.
+Processor chain liability dispute. Potential GDPR Article 28 processor-chain issue requiring legal review. Unclear responsibility for breach. Vendor disputes. Insurance claim challenge. Regulatory investigation challenge. Customer trust loss. Reputational damage.
 
 **Investigation Evidence Needed:**  
 - Processor agreements with each vendor
@@ -260,7 +260,7 @@ Processor chain liability dispute. GDPR Article 28 non-compliance. Unclear respo
 
 **Remediation Pattern:**  
 - Implement third-party processor/subprocessor chain mapping
-- Add processor agreements with GDPR Article 28 compliance
+- Add processor agreements with GDPR Article 28 mapping and legal review
 - Implement responsibility assignment for each processor
 - Add tool-action liability boundary records
 - Implement evidence partitioning at processor boundaries
@@ -282,7 +282,7 @@ Vendor/Model/Runtime Substitution Conformance (MRO-15); MAS Evidence Partitionin
 ALCS-15: Vendor/Model/Runtime Substitution Conformance; ALCS-08: MAS Evidence Partitioning; ALCS-11: Privacy-Preserving Third-Party Validation
 
 **Enterprise Consequence:**  
-Compliance drift. Evidence chain degradation. Authority boundary violations. Privacy violations. Audit failure. Inability to demonstrate conformance after substitution. Reputational damage.
+Compliance drift. Evidence chain degradation. Authority boundary violations. Privacy risks. Audit-readiness failure or audit challenge. Inability to demonstrate conformance after substitution. Reputational damage.
 
 **Investigation Evidence Needed:**  
 - Substitution records showing when and why the model was changed
@@ -351,7 +351,7 @@ The following table summarizes remediation and prevention patterns for the eight
 | Accepted Outcome Failure | Orchestrator marks task complete but no human accepts the result | Human-Role-to-MAS Responsibility Mapping; Accepted Outcome Compliance; Incident/Dispute/Remediation Closure | Role assignment records; acceptance records; review records; escalation records; remediation ownership records | Implement human-role-to-MAS responsibility mapping; add accepted outcome compliance workflow; add review and escalation workflow |
 | Cross-Project Reuse Failure | Prompt, memory, or workflow reused across regulated contexts without reset or reauthorization | Cross-Project Reuse Compliance; Privacy/GDPR Lifecycle Mapping; Vendor/Model/Runtime Substitution Conformance | Reuse records; reset validation records; reauthorization records; context boundary records; privacy impact assessment records | Implement cross-project reuse compliance workflow; add context boundary validation; add privacy/GDPR lifecycle mapping |
 | Privacy Validation Failure | Enterprise sends raw traces with PII to third-party reviewer without data processing agreement | Privacy/GDPR Lifecycle Mapping; Privacy-Preserving Third-Party Validation; Evidence Minimization; Data Subject Rights | Validation evidence transfer records; data processing agreement records; disclosure policy records; redaction records | Implement privacy-preserving validation protocol; add disclosure policy with evidence minimization; add redaction profile; require data processing agreements |
-| Processor Chain Failure | Multi-vendor workflow but no processor/subprocessor responsibility chain exists | Third-Party Processor/Subprocessor Chain; Tool-Action Liability Boundary; MAS Evidence Partitioning | Processor agreements; subprocessor chain records; responsibility assignment records; tool-action logs; evidence partitioning records | Implement processor/subprocessor chain mapping; add processor agreements with GDPR Article 28 compliance; add responsibility assignment |
+| Processor Chain Failure | Multi-vendor workflow but no processor/subprocessor responsibility chain exists | Third-Party Processor/Subprocessor Chain; Tool-Action Liability Boundary; MAS Evidence Partitioning | Processor agreements; subprocessor chain records; responsibility assignment records; tool-action logs; evidence partitioning records | Implement processor/subprocessor chain mapping; add processor agreements with GDPR Article 28 mapping and legal review; add responsibility assignment |
 | Vendor/Runtime Substitution Failure | Model/runtime substitution degrades evidence, authority, and privacy semantics | Vendor/Model/Runtime Substitution Conformance; MAS Evidence Partitioning; Privacy/GDPR Lifecycle Mapping | Substitution records; conformance validation records; regression testing records; evidence integrity validation records | Implement substitution conformance workflow; add conformance validation testing; add regression testing for evidence chain integrity |
 | Remediation Closure Failure | Bug fixed but no responsible owner, affected outcome list, evidence review, or accepted closure state | Incident/Dispute/Remediation Closure; Accepted Outcome Compliance; MAS Evidence Partitioning | Incident records; affected outcome records; remediation records; closure acceptance records; customer impact assessment records | Implement incident/dispute/remediation closure workflow; add responsible owner assignment; add affected outcome list generation; add closure acceptance |
 
@@ -380,7 +380,7 @@ Chapter 15 has examined eight enterprise failure scenarios where lifecycle gover
 
 **The bridge from failure scenarios (Chapter 15) to adoption roadmap (Chapter 17) is the recognition that lifecycle governance is not a theoretical framework. It is a practical necessity for enterprises deploying agentic AI systems.**
 
-Failure scenarios create enterprise consequences: accountability gaps, audit failures, privacy violations, liability disputes, regulatory non-compliance, customer harm, and reputational damage. Prevention and remediation patterns require specific lifecycle objects, operational owners, and evidence artifacts.
+Failure scenarios create enterprise consequences: accountability gaps, audit-readiness failures or audit challenges, privacy risks, liability disputes, potential regulatory non-compliance depending on deployment context, customer harm, and reputational damage. Prevention and remediation patterns require specific lifecycle objects, operational owners, and evidence artifacts.
 
 Chapter 17 will present an adoption roadmap for enterprises implementing AI Agent Lifecycle Governance. The roadmap will address:
 - Where to start (maturity assessment, gap analysis, pilot projects)
@@ -390,9 +390,3 @@ Chapter 17 will present an adoption roadmap for enterprises implementing AI Agen
 - How to scale from pilot to production
 
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to provide a practical path for enterprises to address the lifecycle governance gap.
-
----
-
-**End of Chapter 15**
-
-**Chapter 15 Status:** FILLED (Phase 1B-6; Phase 1C follow-up reviewed) — Enterprise Failure Scenarios complete; no system-specific capability claim requiring Appendix G-style finalization was introduced.

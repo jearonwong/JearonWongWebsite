@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 5 System Mapping Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 6 Validation / Failure / Companion Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -189,6 +189,32 @@ Wave 5 human review covered Chapters 10-13 and Appendices D/G. Conceptual direct
 4. Publication candidate readiness is not declared.
 
 **Wave 5 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 6 Validation / Failure / Companion Boundary Patch
+
+### Status: WAVE 6 PATCH APPLIED / WAVES 7-8 PENDING
+
+Wave 6 human review covered Chapters 14-16. The validation pattern, enterprise failure scenarios, and companion-paper boundary direction passed, but publication readiness required cleanup because Chapters 14-16 retained internal source metadata and status markers, F-08/F-09/F-10 still used code-style figure formatting, Chapter 14 contained final-publication / independent-validation wording that could overstate Validation Lab, Chapter 15 stated legal consequences too directly, and Chapter 16 overcommitted planned companion papers.
+
+**Patch applied:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and chapter status/source markers from Chapters 14-16.
+2. Converted F-08, F-09, and F-10 into formal figure blocks with methodology, analytical-chain, and scope-map boundary notes.
+3. Preserved Validation Lab as a non-certifying public-surface evidence adjudication example only; it remains outside certification, regulatory approval, legal compliance proof, and independent audit evidence claims.
+4. Clarified that the eight enterprise failure scenarios are illustrative and hypothetical, not real incidents or asserted legal violations by any vendor, platform, or organization.
+5. Softened Chapter 15 HIPAA/GDPR/fines/non-compliance language into potential issues requiring legal review, context-dependent exposure, or audit-readiness challenges.
+6. Replaced Chapter 16 `mother framework` language with primary framework wording.
+7. Reframed unpublished companion papers as planned/intended scope rather than published deliverables or guaranteed publication commitments.
+8. No DOCX/PDF artifacts were regenerated.
+
+**Remaining blockers:**
+
+1. Waves 7-8 full-text editorial review remain pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final visual/citation/table proofing remains required before publication.
+4. Publication candidate readiness is not declared.
+
+**Wave 6 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

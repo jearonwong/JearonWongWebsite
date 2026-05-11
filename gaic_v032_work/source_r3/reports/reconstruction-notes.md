@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 5)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 6)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-5 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-6 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -401,6 +401,42 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 5 Status:** ◐ PATCH APPLIED / WAVES 6-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 6 Notes (May 11, 2026)
+
+**Scope:** Chapters 14-16 validation pattern, enterprise failure scenarios, and companion-paper boundary cleanup.
+
+**Review result:**
+
+- Validation/failure/companion direction: PASS.
+- Publication-source cleanliness: FAIL before patch.
+- Legal and assurance boundary discipline: FAIL before patch.
+- Companion-paper commitment discipline: FAIL before patch.
+- Publication candidate: BLOCKED.
+
+**Actions completed:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and end/status source markers from Chapters 14-16.
+2. Replaced F-08, F-09, and F-10 code-style diagrams with formal figure blocks and boundary notes.
+3. Replaced final-publication and independent-validation wording in Chapter 14 with boundary-safe public-surface / reviewable-validation language.
+4. Preserved Validation Lab as a non-certifying example only, not certification, audit evidence, legal compliance proof, or regulatory approval.
+5. Added explicit hypothetical scenario boundary language to Chapter 15.
+6. Softened Chapter 15 HIPAA/GDPR/non-compliance/fines/audit-failure language into potential issues requiring legal review, context-dependent regulatory exposure, or audit-readiness challenges.
+7. Replaced Chapter 16 `mother framework` phrasing with primary framework document/layer wording.
+8. Reframed companion papers as planned/intended scope, not published deliverables or guaranteed commitments.
+
+**Boundary discipline:**
+
+- Validation Lab non-certifying boundary remains intact.
+- The eight failure scenarios remain present and illustrative.
+- No real company incident or real legal violation is asserted.
+- Canonical MRO and ALCS definitions remain unchanged.
+- Companion papers are not introduced as already published.
+- No certification, legal compliance proof, regulatory approval, audit opinion, insurance guarantee, procurement recommendation, or vendor ranking was introduced.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 6 Status:** ◐ PATCH APPLIED / WAVES 7-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

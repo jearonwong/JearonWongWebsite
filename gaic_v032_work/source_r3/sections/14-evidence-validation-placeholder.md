@@ -1,20 +1,18 @@
 # 14. Evidence-Based Validation Pattern for AI Agent Lifecycle Governance
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base; Phase 1C claim-level source binding applied  
-**Phase:** 1B-5 / 1C Follow-up
 
 ---
 
 ## 14.0 Why Evidence-Based Validation Matters for AI Agent Lifecycle Governance
 
-AI Agent Lifecycle Governance produces lifecycle responsibility objects: role mappings, delegation boundaries, accepted outcomes, evidence chains, handoff records, and authority transitions. These objects support enterprise controls, audit readiness, and regulatory compliance coverage. However, lifecycle responsibility objects are internal governance artifacts. They require independent validation to become externally credible evidence.
+AI Agent Lifecycle Governance produces lifecycle responsibility objects: role mappings, delegation boundaries, accepted outcomes, evidence chains, handoff records, and authority transitions. These objects support enterprise controls, audit readiness, and regulatory compliance coverage. However, lifecycle responsibility objects are internal governance artifacts. They require reviewable validation, which may be performed by internal governance teams, auditors, validation providers, or other qualified reviewers depending on context.
 
 Evidence-based validation is a methodology pattern for privacy-preserving third-party validation of lifecycle responsibility objects. The pattern allows organizations to demonstrate governance conformance without exposing sensitive operational data, proprietary workflows, or confidential business logic.
 
 **This chapter describes the evidence-based validation pattern as a reusable methodology. It does not describe a certification program, regulatory approval process, or legal compliance proof. The pattern can be implemented by multiple validation providers, internal audit teams, or enterprise governance functions.**
 
-Validation Lab is referenced in this chapter as one non-certifying evidence adjudication example. Phase 1C follow-up located the public Validation Lab entry point, but detailed methodology support remains boundary-limited and must not be treated as independent audit evidence. Validation Lab does not certify compliance, does not act as a certification authority, and does not prove legal compliance. It is an example of how the evidence-based validation pattern can be operationalized.
+Validation Lab is referenced in this chapter as one non-certifying evidence adjudication example at the level of public-surface evidence. Detailed methodology support remains boundary-limited and must not be treated as independent audit evidence. Validation Lab does not certify compliance, does not act as a certification authority, and does not prove legal compliance. It is an example of how the evidence-based validation pattern can be operationalized.
 
 ---
 
@@ -24,23 +22,11 @@ The evidence-based validation pattern separates evidence generation from evidenc
 
 **Pattern boundary:** The pattern validates that lifecycle responsibility objects exist, are structured correctly, and satisfy predefined governance rules. It does not validate business logic correctness, model accuracy, legal compliance, or regulatory approval.
 
-**Figure F-08: Evidence-Based Validation Pattern Flow**
+**Figure F-08 — Evidence-Based Validation Pattern Flow**
 
-```
-[Organization] → Evidence Pack → [Hash Manifest] → [Validation Provider]
-                                                   ↓
-                                            Ruleset Identity
-                                                   ↓
-                                            Evidence Pointers
-                                                   ↓
-                                            Verdict Hash
-                                                   ↓
-                                    [Disclosure Profile / Redaction Profile]
-                                                   ↓
-                                    [Replay / Recheck Procedure]
-```
+Organization → Evidence Pack → Hash Manifest → Validation Provider → Ruleset Identity → Evidence Pointers → Verdict Hash → Disclosure / Redaction Profile → Replay / Recheck Procedure
 
-*Figure F-08 shows the evidence-based validation pattern flow. Organizations generate evidence packs containing lifecycle responsibility objects. Hash manifests provide tamper-evident integrity. Validation providers apply predefined rulesets to evidence pointers and return verdict hashes. Disclosure profiles and redaction profiles support privacy-preserving validation. Replay and recheck procedures support continuous validation.*
+*Figure F-08 shows the evidence-based validation pattern flow. Organizations generate evidence packs containing lifecycle responsibility objects. Hash manifests provide tamper-evident integrity. Validation providers or qualified reviewers apply predefined rulesets to evidence pointers and return verdict records or hashes. Disclosure and redaction profiles support privacy-preserving validation. Replay and recheck procedures support repeatable validation. The figure is a methodology pattern, not a certification process, legal compliance proof, or regulatory approval path.*
 
 ---
 
@@ -87,7 +73,7 @@ The evidence-based validation pattern validates lifecycle responsibility object 
 
 ## 14.4 Validation Lab as Non-Certifying Evidence Adjudication Example
 
-Validation Lab is one example of how the evidence-based validation pattern can be operationalized. The public Validation Lab entry point was located during Phase 1C follow-up; methodology-specific claims remain source-bound only at the public-surface level and require additional documentation before final publication. Validation Lab is not a certification program, certification authority, regulator, legal authority, or conformity assessment body. It does not certify compliance, does not prove legal compliance, and does not guarantee regulatory approval.
+Validation Lab is one example of how the evidence-based validation pattern can be operationalized. Validation Lab is referenced only at the level of public-surface evidence and as a non-certifying example. This paper does not rely on Validation Lab as independent audit evidence or as proof of legal compliance. Validation Lab is not a certification program, certification authority, regulator, legal authority, or conformity assessment body. It does not certify compliance, does not prove legal compliance, and does not guarantee regulatory approval.
 
 **Validation Lab boundary statement:**
 
@@ -149,9 +135,3 @@ Chapter 14 has described the evidence-based validation pattern as a methodology 
 - Substitution conformance is not re-validated after system changes
 
 Chapter 15 will examine these failure modes and their enterprise impact. The goal is not to claim that lifecycle governance eliminates all risk. The goal is to demonstrate that lifecycle governance gaps create predictable failure patterns that enterprises must address.
-
----
-
-**End of Chapter 14**
-
-**Chapter 14 Status:** FILLED (Phase 1B-5; Phase 1C follow-up reviewed) — Evidence-Based Validation Pattern complete; Validation Lab public entry point located, but methodology-specific support remains unresolved for final publication and all Validation Lab language remains non-certifying.
