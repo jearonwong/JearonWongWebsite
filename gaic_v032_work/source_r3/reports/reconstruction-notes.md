@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-10 Scored Evaluation Results and Table Layout Repair)
+**Last Updated:** May 11, 2026 (Phase 1D-11 Citation Source Evidence Closure)
 
 ## Reconstruction Strategy
 
@@ -39,6 +39,7 @@ R3 uses phased reconstruction:
 18. **Phase 1D-8:** HTML publication refinement with pagination rules, safe charts, object-card rendering, table typography, and References / Sources section (◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED)
 19. **Phase 1D-9:** Evaluation results layer and semantic table reflow with non-ranking RCCS/ALCS profiles, result-first chapter panels, and publication table semantics (◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED)
 20. **Phase 1D-10:** Scored evaluation results and table layout repair with provisional RCCS/ALCS score ranges, confidence labels, score visuals, stronger result hierarchy, and semantic table readability repair (◐ SCORED EVALUATION RESULTS GENERATED / QA REQUIRED)
+21. **Phase 1D-11:** Citation/source evidence closure with OpenAI source replacement, Validation Lab public-methodology narrowing, MPLP source-bound/analytical split, L2 product reference closure, score evidence integrity QA, and regenerated HTML/PDF/DOCX derivative (✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -85,6 +86,11 @@ Phase 1D-9 adds evaluation results as qualitative, source-qualified analytical p
 ### Decision 8: Scores Are Allowed When Bounded
 
 Phase 1D-10 corrects the over-conservative result layer by allowing explicit RCCS/ALCS provisional analytical scores and ranges. The scores are visible to readers, but they remain source-qualified, confidence-labeled, fixed-order, and non-ranking. They are not final vendor scores, legal compliance proof, certification, regulatory approval, deployment-readiness guarantees, or procurement recommendations.
+
+
+### Decision 9: Close Evidence Gaps Before Review Seal
+
+Phase 1D-11 rejects a broad accepted-limitation shortcut. High-risk citation/access/source-pointer blockers must be closed by accessible official source, source replacement, claim narrowing, L5 downgrade, or removal. Only explicit, non-core limitations may remain. The OpenAI platform guide HTTP 403 is retained as an access note because accessible official OpenAI Agents SDK Python/JavaScript docs support the narrowed SDK claims. Validation Lab is limited to public-surface non-certifying methodology support. MPLP identity is source-bound while GAIC MRO/ALCS mapping remains author analytical mapping where not directly stated.
 
 ## Lessons from R2
 
@@ -2528,3 +2534,41 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 ### Final Decision
 
 **PHASE 1D QA REQUIRED / PUBLICATION CANDIDATE BLOCKED**
+
+---
+
+## Phase 1D-11 Notes (May 11, 2026)
+
+**Scope:** Citation / source evidence closure for high-risk source blockers after Phase 1D-10.
+
+**Actions completed:**
+
+1. Created `scripts/generate_r3_phase1d11_html_publication.py` from the HTML-first renderer and updated output paths to `out/phase_1d11/html_publication/`.
+2. Closed OpenAI source blocker by replacing inaccessible platform guide support with accessible official Python/JavaScript Agents SDK docs for narrowed SDK-surface claims.
+3. Closed Validation Lab methodology blocker by pinning the methodology page as public-surface, non-certifying evidence adjudication support only.
+4. Closed MPLP source boundary by separating official protocol identity from GAIC author analytical MRO/ALCS mapping.
+5. Classified L2 product/platform references as source-bound capability surfaces plus L5 lifecycle mapping where needed.
+6. Preserved score ranges as provisional analytical profiles with confidence labels; no final vendor score, ranking, procurement recommendation, certification, legal compliance proof, or regulatory approval claim introduced.
+7. Updated citation inventory, claim evidence register, source coverage matrix, page-level citation map, citation rendering QA checklist, Appendices C/I/J/K, SOURCE MASTER, known issues, reconstruction notes, and HTML publication style.
+8. Generated Phase 1D-11 HTML, PDF, DOCX derivative, PDF text, rendered PDF pages, contact sheets, and generation log under `out/phase_1d11/html_publication/`.
+
+**Generation result:**
+
+- PDF page count: 524 A4 pages.
+- Rendered PNG pages: 524.
+- Active source table IDs: 170; generated HTML/PDF table IDs: 175; missing active table IDs: 0.
+- Figures F-01 through F-11 retained.
+- Evaluation results section present with scored RCCS/ALCS profiles for all eight systems.
+- References / Sources section present with evidence labels and access notes.
+- Positive forbidden-claim blocker count: 0.
+- Citation blocker count: 0.
+- Final unresolved high-risk citation blockers: 0.
+- Blank-ish rendered pages: 0; edge-ink clipping alerts: 0.
+
+**Boundary discipline:**
+
+- HTML/PDF remain visual authority; DOCX remains editable derivative.
+- Remaining limitations are explicit and non-blocking for publication-candidate review.
+- Final unresolved high-risk citation blockers: 0.
+
+**Phase 1D-11 Status:** ✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY.

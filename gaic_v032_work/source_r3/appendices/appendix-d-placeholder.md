@@ -20,7 +20,7 @@ This appendix provides an expanded cross-system MRO mapping across the eight rep
 
 - **This mapping is based on source-bound public evidence and analytical interpretation.** Official product/protocol entry points were located during Phase 1C follow-up. L2 evidence supports documented capability surfaces; MRO cell-level mapping remains L5 analytical interpretation where official documentation does not directly define the lifecycle responsibility object.
 
-- **This mapping uses qualitative values.** The mapping uses qualitative values (Strong object-level mapping, Strong workflow/feature mapping, Partial or adjacent capability, Weak or implementer-built only, Not visible in public evidence, Source support unresolved where applicable) rather than numeric scores to avoid creating a false precision ranking.
+- **This mapping uses qualitative values.** The mapping uses qualitative values (Strong object-level mapping, Strong workflow/feature mapping, Partial or adjacent capability, Weak or implementer-built only, Not visible in public evidence, explicit non-blocking limitation where applicable) rather than numeric scores to avoid creating a false precision ranking.
 
 ---
 
@@ -40,7 +40,7 @@ The expanded MRO mapping (Table T-D-01) maps all sixteen Missing Regulatory Obje
 
 - **Not visible in public evidence:** Lifecycle responsibility object primitives are not visible in public product documentation or protocol specifications. This does not prove the capability does not exist; it means public evidence is not available.
 
-- **Source support unresolved:** Mapping is uncertain because exact source support for the lifecycle responsibility object has not been pinned.
+- **Explicit non-blocking limitation:** Mapping remains analytical because official sources support adjacent capability surfaces but do not directly state the lifecycle responsibility object.
 
 **Reading the table:**
 
@@ -110,12 +110,12 @@ All eight systems provide useful primitives for agentic AI. However, based on av
 
 ## D.4 Phase 1C Claim-Level Source Binding Note
 
-This appendix is based on public product documentation and protocol specifications available as of the white paper publication date. Phase 1C follow-up completed source-entry and claim-disposition review for Appendix D. Remaining finalization work is to:
+This appendix is based on public product documentation and protocol specifications available as of the white paper publication date. Phase 1D-11 completed high-risk source closure for Appendix D by narrowing source-supported claims and retaining L5 analytical labels where official sources do not directly define lifecycle responsibility objects. Remaining final proofing work is to:
 
-1. **Pin exact page-level citations** for high-risk MRO cell claims where needed
+1. **Preserve narrowed citation wording** for high-risk MRO cell claims
 2. **Preserve L5 analytical status** for MRO mappings not directly stated in official documentation
 3. **Retain provisional wording** for all cross-system cells until publication approval
 4. **Verify all qualitative mapping values** during final proofing
-5. **Mark uncertain mappings** as source-support unresolved if exact page-level support cannot be pinned
+5. **Mark uncertain mappings** as explicit non-blocking limitations if exact lifecycle-object support cannot be pinned
 
 **Phase 1D wide-table evaluation:** Table T-D-01 is very wide (10 columns) and may require splitting, rotation, or alternative layout for readability in DOCX/PDF format.

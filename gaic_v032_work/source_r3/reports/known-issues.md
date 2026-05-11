@@ -1,6 +1,45 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
+**Last Updated:** May 11, 2026 (Phase 1D-11 Citation Source Evidence Closure)
+
+## Phase 1D-11 Citation Source Evidence Closure
+
+### Status: PHASE 1D-11 CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+
+Phase 1D-11 closes the high-risk citation/access/source-pointer blockers that were blocking publication-candidate review after Phase 1D-10. It does not hide evidence gaps as vague accepted limitations. It replaces inaccessible sources where possible, narrows unsupported claims, downgrades lifecycle mappings to L5 author analysis where direct support is absent, and preserves explicit limitations.
+
+**Closure results:**
+
+1. OpenAI platform guide remains HTTP 403 by curl, but accessible official OpenAI Agents SDK Python and JavaScript docs replace it for retained SDK-surface claims. The 403 is now a non-blocking access note.
+2. Validation Lab methodology is pinned as a public-surface, non-certifying evidence adjudication example only. It is not certification, endorsement, audit opinion, regulatory approval, legal compliance proof, or a required/exclusive path.
+3. MPLP protocol identity is source-bound to official materials; GAIC MRO/ALCS mapping and scoring relationship remain author analytical mapping where not directly stated.
+4. L2 product/platform references are classified as source-bound capability surfaces plus L5 analytical lifecycle mapping where needed.
+5. Score confidence labels remain visible; score ranges are provisional analytical profiles, not final vendor scores.
+6. Final unresolved high-risk citation blockers: 0.
+
+**Generated / QA result:**
+
+1. Phase 1D-11 HTML/PDF/DOCX derivative artifacts generated into `out/phase_1d11/html_publication/`.
+2. PDF page count: 524 A4 pages; rendered PNG pages: 524.
+3. Active table IDs: 170; generated HTML/PDF table IDs: 175; missing active table IDs: 0.
+4. F-01 through F-11 retained.
+5. Positive forbidden-claim blocker count: 0.
+6. Citation blocker count: 0; final unresolved high-risk blocker count: 0.
+7. Blank-ish rendered pages: 0; edge-ink clipping alerts: 0.
+
+**Remaining limitations, not blockers:**
+
+1. OpenAI platform guide 403 is retained as an access note only.
+2. Product documentation can change and supports capability surfaces, not deployment practice or legal compliance.
+3. MPLP and Validation Lab carry explicit conflict-of-interest and non-certifying boundaries.
+4. Publication-candidate review should still proofread references, Appendix G, final pages, and score confidence labels.
+
+**Phase 1D-11 Decision:** PHASE 1D-11 CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
+
+# Known Issues
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
 **Last Updated:** May 11, 2026 (Phase 1D-10 Scored Evaluation Results and Table Layout Repair)
 
 ## Phase 1D-10 Scored Evaluation Results and Table Layout Repair

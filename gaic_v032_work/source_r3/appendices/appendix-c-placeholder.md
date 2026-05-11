@@ -6,13 +6,13 @@
 
 ## C.0 Source Boundary
 
-This appendix provides a source register and citation guidance for the Global AI Compliance White Paper 2026. Phase 1C follow-up located official source entry points and created a claim evidence register for high-risk L2 product/protocol claims. This appendix does not claim final publication-candidate citation rendering or page-level source pinning is complete.
+This appendix provides a source register and citation guidance for the Global AI Compliance White Paper 2026. Phase 1D-11 closes the high-risk citation/access/source-pointer blockers by replacing inaccessible sources, narrowing claims, downgrading lifecycle interpretations to L5, and retaining explicit non-blocking limitations where appropriate.
 
 **Boundary statement:**
 
-- **This appendix is a source register and claim-binding pointer, not a final bibliography.** The source register lists sources used in the white paper and their current validation status. Phase 1C follow-up completed source-entry and claim-disposition review; final page-level citation pinning remains a publication-candidate QA task.
+- **This appendix is a source register and claim-binding pointer, not legal proof.** The source register lists sources used in the white paper and their current validation status. Phase 1D-11 completed high-risk source closure for publication-candidate review.
 
-- **Citation source pointers require final page-level pinning.** Many L2 product documentation sources are referenced via source IDs (e.g., [IBM-WATSONX-GOVERNANCE-DOCS], [MPLP-DOCS]). Phase 1C follow-up located official entry points; publication-candidate QA should pin exact page URLs and publication/access details where needed.
+- **Citation source pointers are classified by claim support.** L2 product documentation sources support visible capability surfaces only. Lifecycle-object interpretations remain L5 analytical unless the source directly supports the lifecycle object.
 
 - **Evidence levels affect confidence.** L1 sources (binding legal text, formal standards) establish baseline obligations but do not prove implementation. L2 sources (official product/protocol documentation) support documented capability surfaces but do not prove deployment practice, audit success, legal compliance, or lifecycle responsibility-object implementation. L3-L5 sources have lower or different confidence and must be marked appropriately.
 
@@ -82,13 +82,13 @@ The white paper uses five source groups: L1 Binding Legal/Regulatory Sources, L1
 | GOOGLE-MODEL-ARMOR-DOCS | Google Model Armor Official Documentation | Product docs | Chapter 12 | ✓ Entry point located; safety inspection is not lifecycle responsibility proof |
 | LANGGRAPH-DOCS | LangGraph Official Documentation | Product docs | Chapter 12 | ✓ Entry point located; orchestration mappings remain analytical |
 | LANGSMITH-DOCS | LangSmith Official Documentation | Product docs | Chapter 12 | ✓ Entry point located; observability mappings remain analytical |
-| OPENAI-AGENTS-SDK-DOCS | OpenAI Agents SDK Official Documentation | Product docs | Chapter 12 | ✓ SDK entry point located; OpenAI platform guide returned HTTP 403 by curl and needs final access/rendering check |
-| OPENAI-TOOLS-DOCS | OpenAI Tools Official Documentation | Product docs | Chapter 12 | ◐ Official source family located; exact tools page pinning remains |
+| OPENAI-AGENTS-SDK-DOCS | OpenAI Agents SDK Official Documentation | Product docs | Chapter 12 | ✓ Accessible official Python/JS SDK docs replace inaccessible platform guide for retained SDK-surface claims; platform guide 403 retained as access note |
+| OPENAI-TOOLS-DOCS | OpenAI Tools Official Documentation | Product docs | Chapter 12 | ✓ Narrowed to accessible SDK primitive claims only; lifecycle-governance mapping remains analytical |
 | CREWAI-DOCS | CrewAI Official Documentation | Product docs | Chapter 12 | ✓ Entry point located; agent role labels are not human accountability roles |
 | CREWAI-GITHUB | CrewAI GitHub Repository | Product docs | Chapter 12 | ✓ Repository entry point located; exact code/API claims require page-level pinning |
 | MPLP-DOCS | MPLP (Multi-Agent Lifecycle Protocol) Official Documentation | Protocol docs | Chapters 12, 13 | ✓ Entry point located; protocol mapping remains L2 + L5 analytical interpretation |
 | MPLP-SPEC | MPLP Protocol Specification | Protocol docs | Chapter 13 | ✓ Bound through MPLP docs entry point; version/citation rendering remains |
-| VALIDATION-LAB-METHODOLOGY | Validation Lab Evidence-Based Validation Methodology | Protocol docs | Chapter 14 | ◐ Public entry point located; methodology-specific support remains boundary-limited |
+| VALIDATION-LAB-METHODOLOGY | Validation Lab Evidence-Based Validation Methodology | Protocol docs | Chapter 14 | ✓ Methodology page cited as public-surface, non-certifying evidence adjudication example only |
 
 ### L5: Author Inference
 
@@ -119,24 +119,24 @@ The following table provides the complete source register for the white paper.
 | SINGAPORE-IMDA | Singapore IMDA Model AI Governance Framework for Agentic AI | L1 | Chapter 4 | ✓ Referenced | Verify citation |
 | W3C-PROV | W3C PROV-DM | L1 | Chapter 4 | ✓ Referenced | Verify citation |
 | W3C-VC | W3C Verifiable Credentials | L1 | Chapter 4 | ✓ Referenced | Verify citation |
-| IBM-WATSONX-GOVERNANCE-DOCS | IBM watsonx.governance Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact docs pages and publication/access details |
-| MICROSOFT-AZURE-AI-FOUNDRY-DOCS | Microsoft Azure AI Foundry Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact Microsoft Learn pages and publication/access details |
-| MICROSOFT-RESPONSIBLE-AI-DOCS | Microsoft Responsible AI Docs | L2 | Chapter 12 | Source family located; exact page pinning remains | Pin exact responsible-AI pages if retained |
-| AWS-BEDROCK-DOCS | AWS Bedrock Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact Bedrock pages and publication/access details |
-| AWS-BEDROCK-GUARDRAILS-DOCS | AWS Bedrock Guardrails Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact guardrails pages and preserve authority-boundary caveat |
-| AWS-AGENTCORE-DOCS | AWS AgentCore Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact AgentCore pages and publication/access details |
-| GOOGLE-VERTEX-AI-DOCS | Google Vertex AI Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact Vertex AI pages and publication/access details |
-| GOOGLE-ADK-DOCS | Google ADK Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact ADK pages and publication/access details |
-| GOOGLE-MODEL-ARMOR-DOCS | Google Model Armor Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact Model Armor pages and preserve lifecycle-governance caveat |
-| LANGGRAPH-DOCS | LangGraph Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact LangGraph pages and publication/access details |
-| LANGSMITH-DOCS | LangSmith Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact LangSmith pages and publication/access details |
-| OPENAI-AGENTS-SDK-DOCS | OpenAI Agents SDK Docs | L2 | Chapter 12 | SDK entry point located; platform guide access/rendering needs final check | Use accessible official SDK docs and perform final citation rendering check |
-| OPENAI-TOOLS-DOCS | OpenAI Tools Docs | L2 | Chapter 12 | Official source family located; exact tools page pinning remains | Pin exact accessible tools pages if retained |
-| CREWAI-DOCS | CrewAI Docs | L2 | Chapter 12 | Entry point located; page-level citation pinning remains | Pin exact CrewAI docs pages and publication/access details |
+| IBM-WATSONX-GOVERNANCE-DOCS | IBM watsonx.governance Docs | L2 | Chapter 12 | Closed for high-risk citation review; official entry points support narrowed capability-surface claims | Preserve narrowed claim wording and final citation formatting |
+| MICROSOFT-AZURE-AI-FOUNDRY-DOCS | Microsoft Azure AI Foundry Docs | L2 | Chapter 12 | Closed for high-risk citation review; Microsoft Learn entry point supports narrowed platform-surface claims | Preserve narrowed claim wording and final citation formatting |
+| MICROSOFT-RESPONSIBLE-AI-DOCS | Microsoft Responsible AI Docs | L2 | Chapter 12 | Closed as source-family support for retained responsible-AI surface claims | Keep lifecycle-object scoring analytical unless exact source language directly supports the object |
+| AWS-BEDROCK-DOCS | AWS Bedrock Docs | L2 | Chapter 12 | Closed for high-risk citation review; official entry points support narrowed Bedrock capability-surface claims | Preserve narrowed claim wording and final citation formatting |
+| AWS-BEDROCK-GUARDRAILS-DOCS | AWS Bedrock Guardrails Docs | L2 | Chapter 12 | Closed for high-risk citation review; guardrail claims narrowed to documented safety/control surfaces | Preserve authority-boundary caveat |
+| AWS-AGENTCORE-DOCS | AWS AgentCore Docs | L2 | Chapter 12 | Closed for high-risk citation review; AgentCore claims narrowed to documented runtime/agent surfaces | Preserve lifecycle-object mapping as analytical where needed |
+| GOOGLE-VERTEX-AI-DOCS | Google Vertex AI Docs | L2 | Chapter 12 | Closed for high-risk citation review; Vertex AI claims narrowed to documented platform surfaces | Preserve narrowed claim wording and final citation formatting |
+| GOOGLE-ADK-DOCS | Google ADK Docs | L2 | Chapter 12 | Closed for high-risk citation review; ADK claims narrowed to documented agent-development primitives | Preserve lifecycle-object mapping as analytical where needed |
+| GOOGLE-MODEL-ARMOR-DOCS | Google Model Armor Docs | L2 | Chapter 12 | Closed for high-risk citation review; Model Armor claims narrowed to documented safety inspection surfaces | Preserve lifecycle-governance caveat |
+| LANGGRAPH-DOCS | LangGraph Docs | L2 | Chapter 12 | Closed for high-risk citation review; LangGraph claims narrowed to documented orchestration surfaces | Preserve narrowed claim wording and final citation formatting |
+| LANGSMITH-DOCS | LangSmith Docs | L2 | Chapter 12 | Closed for high-risk citation review; LangSmith claims narrowed to documented observability/evaluation surfaces | Preserve lifecycle-object mapping as analytical where needed |
+| OPENAI-AGENTS-SDK-DOCS | OpenAI Agents SDK Docs | L2 | Chapter 12 | Accessible official Python/JS SDK docs validated; platform guide 403 is a non-blocking access note | Use accessible official SDK docs for retained agents/tools/handoffs/guardrails/tracing/session claims |
+| OPENAI-TOOLS-DOCS | OpenAI Tools Docs | L2 | Chapter 12 | Narrowed to SDK primitive claims supported by accessible official docs | Keep liability-boundary and lifecycle-governance mapping analytical |
+| CREWAI-DOCS | CrewAI Docs | L2 | Chapter 12 | Closed for high-risk citation review; CrewAI claims narrowed to documented orchestration surfaces | Preserve human-accountability caveat |
 | CREWAI-GITHUB | CrewAI GitHub | L2 | Chapter 12 | Repository entry point located; exact code/API claims require page-level pinning | Pin exact repository paths only for code/API-specific claims |
-| MPLP-DOCS | MPLP Docs | L2 | Chapters 12, 13 | Entry point located; protocol version/citation rendering remains | Pin protocol version and preserve conflict-of-interest boundary |
-| MPLP-SPEC | MPLP Spec | L2 | Chapter 13 | Bound through MPLP docs entry point; exact version/citation rendering remains | Pin exact specification/version reference if separate page exists |
-| VALIDATION-LAB-METHODOLOGY | Validation Lab Methodology | L2 | Chapter 14 | Public entry point located; methodology-specific support remains boundary-limited | Pin methodology-specific citation if available or retain boundary-limited note |
+| MPLP-DOCS | MPLP Docs | L2 | Chapters 12, 13 | Closed for protocol identity claims; GAIC MRO/ALCS mapping remains author analytical mapping where not directly stated | Preserve conflict-of-interest boundary |
+| MPLP-SPEC | MPLP Spec | L2 | Chapter 13 | Closed through MPLP docs entry point for protocol identity support | Preserve version/citation details during final proof |
+| VALIDATION-LAB-METHODOLOGY | Validation Lab Methodology | L2 | Chapter 14 | Methodology page cited and boundary narrowed | Retain as public-surface non-certifying example only |
 | AUTHOR-INFERENCE-MRO | Sixteen MROs (Author Inference) | L5 | Chapter 6 | ✓ Marked as L5 | Verify L5 marking in text |
 | AUTHOR-INFERENCE-RCCS | RCCS (Author Inference) | L5 | Chapter 7 | ✓ Marked as L5 | Verify L5 marking in text |
 | AUTHOR-INFERENCE-ALCS | ALCS (Author Inference) | L5 | Chapter 8 | ✓ Marked as L5 | Verify L5 marking in text |
@@ -146,32 +146,23 @@ The following table provides the complete source register for the white paper.
 
 ---
 
-## C.4 Citation Revalidation Queue
+## C.4 Citation Closure Ledger
 
-The following table lists sources requiring final page-level citation pinning or retained boundary notes during publication-candidate QA after claim-level source review.
+The following table lists Phase 1D-11 source closure results after claim-level source review.
 
 **Table T-C-03: Citation Revalidation Queue**
 
-| Source ID | URL / Source Pointer | Publication QA Need | Priority | QA Stage |
-|-----------|-------------------|------------------------|----------|-------|
-| IBM-WATSONX-GOVERNANCE-DOCS | `https://www.ibm.com/products/watsonx-governance`; `https://www.ibm.com/docs/en/watsonx` | Pin exact pages for specific governance claims | High | Phase 1D / publication QA |
-| MICROSOFT-AZURE-AI-FOUNDRY-DOCS | `https://learn.microsoft.com/en-us/azure/foundry/` | Pin exact pages for agents, tracing, evaluations, and safety claims | High | Phase 1D / publication QA |
-| MICROSOFT-RESPONSIBLE-AI-DOCS | Microsoft Learn source family | Pin exact responsible-AI pages if retained | High | Phase 1D / publication QA |
-| AWS-BEDROCK-DOCS | `https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html` | Pin exact Bedrock pages for retained claims | High | Phase 1D / publication QA |
-| AWS-BEDROCK-GUARDRAILS-DOCS | `https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html` | Pin exact guardrails pages; preserve authority-boundary caveat | High | Phase 1D / publication QA |
-| AWS-AGENTCORE-DOCS | `https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html` | Pin exact AgentCore pages for runtime/observability claims | High | Phase 1D / publication QA |
-| GOOGLE-VERTEX-AI-DOCS | `https://docs.cloud.google.com/vertex-ai/docs` | Pin exact Vertex AI pages for retained claims | High | Phase 1D / publication QA |
-| GOOGLE-ADK-DOCS | `https://adk.dev/` | Pin exact ADK pages for agent/tool/session claims | High | Phase 1D / publication QA |
-| GOOGLE-MODEL-ARMOR-DOCS | `https://docs.cloud.google.com/model-armor/overview` | Pin exact Model Armor pages; preserve lifecycle-governance caveat | High | Phase 1D / publication QA |
-| LANGGRAPH-DOCS | `https://docs.langchain.com/oss/python/langgraph/overview` | Pin exact persistence/interrupt/tool pages for retained claims | High | Phase 1D / publication QA |
-| LANGSMITH-DOCS | `https://docs.langchain.com/langsmith/home` | Pin exact tracing/evaluation pages for retained claims | High | Phase 1D / publication QA |
-| OPENAI-AGENTS-SDK-DOCS | `https://openai.github.io/openai-agents-python/` | Pin exact SDK pages for agents/tools/handoffs/tracing claims | High | Phase 1D / publication QA |
-| OPENAI-TOOLS-DOCS | OpenAI platform docs source family | Pin exact accessible tools pages if retained | High | Phase 1D / publication QA |
-| CREWAI-DOCS | `https://docs.crewai.com/` | Pin exact agents/tasks/crews/flows/tools pages for retained claims | High | Phase 1D / publication QA |
-| CREWAI-GITHUB | `https://github.com/crewAIInc/crewAI` | Pin exact repository paths only for code/API-specific claims | High | Phase 1D / publication QA |
-| MPLP-DOCS | `https://docs.mplp.io/docs/introduction/mplp-v1.0-protocol-overview` | Pin protocol version and preserve conflict-of-interest boundary | Critical | Phase 1D / publication QA |
-| MPLP-SPEC | `https://docs.mplp.io/docs/introduction/mplp-v1.0-protocol-overview` | Pin exact specification/version reference if separate page exists | Critical | Phase 1D / publication QA |
-| VALIDATION-LAB-METHODOLOGY | `https://lab.mplp.io/` | Pin methodology-specific citation if available or retain boundary-limited note | Critical | Phase 1D / publication QA |
+| Source ID | URL / Source Pointer | Closure Result | Remaining Limitation | Release Status |
+|-----------|-------------------|----------------|----------------------|----------------|
+| IBM-WATSONX-GOVERNANCE-DOCS | `https://www.ibm.com/products/watsonx-governance`; `https://www.ibm.com/docs/en/watsonx` | Official entry points accessible; governance capability claims narrowed to documented surfaces | ALCS lifecycle-object mapping remains L5 where not directly documented | Non-blocking |
+| MICROSOFT-AZURE-AI-FOUNDRY-DOCS | `https://learn.microsoft.com/en-us/azure/foundry/` | Official entry point accessible; platform/agent claims narrowed | ALCS lifecycle-object mapping remains L5 where not directly documented | Non-blocking |
+| AWS-BEDROCK-DOCS / GUARDRAILS / AGENTCORE | AWS official docs URLs | Official entry points accessible; guardrail/runtime claims narrowed | Guardrails/runtime features are not delegated-authority proof | Non-blocking |
+| GOOGLE-VERTEX-AI-DOCS / ADK / MODEL ARMOR | Google official docs URLs | Official entry points accessible; safety/agent claims narrowed | Model safety and ADK primitives are not lifecycle responsibility proof | Non-blocking |
+| LANGGRAPH-DOCS / LANGSMITH-DOCS | LangChain official docs URLs | Official entry points accessible; orchestration/observability claims narrowed | Lifecycle governance requires implementer integration | Non-blocking |
+| OPENAI-AGENTS-SDK-DOCS / OPENAI-TOOLS-DOCS | `https://openai.github.io/openai-agents-python/`; `https://openai.github.io/openai-agents-js/` | Inaccessible platform guide replaced by accessible official SDK docs for SDK claims | Platform guide HTTP 403 retained as access note only | Non-blocking |
+| CREWAI-DOCS / CREWAI-GITHUB | `https://docs.crewai.com/`; `https://github.com/crewAIInc/crewAI` | Official docs/repository accessible; orchestration claims narrowed | Human accountability/lifecycle governance remains implementer-built | Non-blocking |
+| MPLP-DOCS / MPLP-SPEC | `https://docs.mplp.io/docs/introduction/mplp-v1.0-protocol-overview` | Protocol identity source-bound; conflict-of-interest boundary preserved | GAIC MRO/ALCS mapping remains author analytical mapping | Non-blocking |
+| VALIDATION-LAB-METHODOLOGY | `https://lab.mplp.io/methodology` | Closed as public-surface non-certifying methodology example | Does not support certification, endorsement, audit opinion, or legal compliance proof | Non-blocking |
 
 ---
 
@@ -181,7 +172,7 @@ The following table lists sources requiring final page-level citation pinning or
 
 - **L1 sources (legal text and formal standards)** are referenced in Chapter 4 and provide the regulatory baseline for the white paper. These sources are authoritative but require legal interpretation. The white paper does not provide legal advice or legal interpretation.
 
-- **L2 sources (official product documentation)** are referenced in Chapters 12, 13, and 14 and support documented product/protocol capability surfaces. Phase 1C follow-up located official entry points and recorded claim-level dispositions. L2 sources still require page-level pinning during publication-candidate QA and do not prove deployment practice or legal compliance.
+- **L2 sources (official product documentation)** are referenced in Chapters 12, 13, and 14 and support documented product/protocol capability surfaces. Phase 1D-11 records closure dispositions for high-risk source pointers. L2 sources do not prove deployment practice, audit success, lifecycle responsibility-object implementation, or legal compliance.
 
 - **L5 sources (author inference)** are used in Chapters 6-9, 11-12, and 15 to define the analytical framework (MROs, RCCS, ALCS, Composite Scoring, System Mapping, Failure Scenarios). These sources are marked as author inference and do not replace evidence-based analysis.
 
@@ -191,9 +182,9 @@ The following table lists sources requiring final page-level citation pinning or
 
 Publication-candidate source governance must:
 
-1. **Pin exact page-level L2 product documentation URLs** and replace remaining source pointers with validated URLs and publication/access details
+1. **Keep L2 product documentation tied to narrowed capability-surface claims** and preserve L5 mapping labels where lifecycle support is analytical
 2. **Verify all L1 legal/regulatory citations** for accuracy and completeness
 3. **Mark all L5 author inference** clearly in the text
-4. **Preserve MPLP and Validation Lab boundary discipline** and add methodology-specific Validation Lab support if available
+4. **Preserve MPLP and Validation Lab boundary discipline** and keep the Validation Lab methodology citation limited to public-surface non-certifying support
 5. **Remove or mark as inference** any unsupported claims
 6. **Maintain the claim evidence register** documenting all source validation and downgrade actions

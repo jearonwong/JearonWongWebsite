@@ -54,7 +54,7 @@ The canonical evidence multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L
 
 Public documentation may be incomplete. Absence of evidence is not evidence of absence. A system may provide a capability that is not documented publicly. A system may provide a capability that is documented but not yet validated by independent audit. A system may provide a capability that is in development but not yet released.
 
-This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. No unsupported final numeric scores are introduced without evidence basis, and this publication draft does not present published numerical system assessments or rankings.
+This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. Numerical score ranges, where presented in the Evaluation Results section, are provisional analytical profiles with confidence labels and are not rankings, final vendor scores, procurement recommendations, certification signals, or legal compliance judgments.
 
 ### Mapping Strength Scale
 
@@ -66,7 +66,7 @@ Instead of numeric scores for every dimension in this phase, the chapter uses qu
 - **Weak:** Minimal evidence or capability is conceptual only.
 - **Not Evaluated:** Insufficient public evidence to evaluate, or outside system scope.
 
-This chapter uses qualitative mapping strength. Numerical worksheets, if used, remain internal analytical support and are not presented as published numerical system assessments or rankings in this publication draft.
+This chapter uses qualitative mapping strength for dimension-level mapping. Numerical results, where presented in the Evaluation Results section, are published only as provisional analytical score ranges with source confidence labels and explicit non-ranking boundaries.
 
 ### Evidence Basis Table
 
@@ -102,7 +102,7 @@ Uses citation placeholders and evidence levels. Includes a mini-table:
 
 | Evidence Area | Source Type | Evidence Level | Claim-Level Status |
 |---------------|-------------|----------------|--------------------|
-| [Area] | [Type] | [L1-L5] | [source-bound at entry-point level / narrowed or partially validated / L5 analytical interpretation / exact page-level support unresolved] |
+| [Area] | [Type] | [L1-L5] | [source-bound capability surface / narrowed claim / L5 analytical interpretation / explicit non-blocking limitation] |
 
 ### RCCS Mapping Summary
 
@@ -140,14 +140,14 @@ Each system section closes with:
 
 ### System Positioning
 
-MPLP (Multi-Agent Lifecycle Protocol) is a lifecycle protocol path designed to expose lifecycle responsibility objects as first-class protocol primitives. It is relevant to RCCS and ALCS because it provides protocol-level semantics for human-role-to-MAS mapping, delegated authority boundaries, accepted outcome compliance, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance.
+MPLP (Multi-Agent Lifecycle Protocol) is a lifecycle protocol path designed to expose lifecycle responsibility objects as first-class protocol primitives. It is relevant to RCCS and ALCS because its public protocol semantics can be analytically mapped to human-role-to-MAS mapping, delegated authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance.
 
-MPLP is strong at lifecycle protocol semantics. It defines governance primitives and lifecycle objects as protocol-level constructs rather than application-level features. This makes MPLP relevant for systems that require provable lifecycle responsibility compliance across agents, tools, vendors, and organizational boundaries.
+MPLP is strong at lifecycle protocol semantics. It defines governance primitives and lifecycle objects as protocol-level constructs rather than application-level features. This makes MPLP relevant for systems that need protocol-level lifecycle responsibility semantics across agents, tools, vendors, and organizational boundaries. The GAIC MRO/ALCS mapping remains an author analytical mapping based on those protocol semantics, not an MPLP official compliance claim.
 
 **What this paper evaluates:**
 - Whether MPLP protocol specification defines governance primitives and lifecycle objects
 - Whether MPLP semantics map to RCCS and ALCS dimensions
-- Whether MPLP provides protocol-level support for lifecycle responsibility compliance
+- Whether MPLP provides protocol-level semantics that can support lifecycle responsibility analysis
 
 **What this paper does not infer:**
 - MPLP is not required for compliance. It is one example of a lifecycle protocol path.
@@ -770,7 +770,7 @@ Systems like OpenAI Agents SDK and CrewAI provide developer-friendly execution p
 
 **5. Lifecycle protocol paths tend to show stronger ALCS semantics but require implementation, adoption, and enterprise integration validation.**
 
-Systems like MPLP are designed to expose lifecycle responsibility objects as first-class protocol primitives. They provide protocol-level semantics for human-role-to-MAS mapping, delegated authority boundaries, accepted outcome compliance, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance. This makes them relevant for systems that require provable lifecycle responsibility compliance across agents, tools, vendors, and organizational boundaries. However, MPLP implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, and regulator familiarity require validation.
+Systems like MPLP are designed to expose lifecycle responsibility objects as first-class protocol primitives. They provide protocol-level semantics for human-role-to-MAS mapping, delegated authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance. This makes them relevant for systems that require lifecycle responsibility semantics across agents, tools, vendors, and organizational boundaries. However, MPLP implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, and regulator familiarity require validation.
 
 **6. The field gap is not lack of AI tools. The field gap is lack of explicit lifecycle responsibility objects.**
 
@@ -778,7 +778,7 @@ The eight systems evaluated in this chapter represent a wide range of capabiliti
 
 Model governance and AI governance are not identical to agentic lifecycle governance. Responsible AI tooling and cloud platform features are not identical to lifecycle responsibility objects. Orchestration and observability are not identical to lifecycle responsibility semantics. Execution framework features and role-based orchestration are not identical to enterprise lifecycle governance objects.
 
-The comparison validates the core thesis: agentic compliance is lifecycle responsibility compliance, not only model compliance.
+The comparison supports the core thesis: agentic compliance analysis must include lifecycle responsibility, not only model compliance.
 
 ### Synthesis Matrix
 
@@ -788,7 +788,7 @@ The following table synthesizes the eight system mappings by system category.
 
 | System Category | Typical Strength | Typical Lifecycle Gap | Interpretation |
 |-----------------|------------------|----------------------|----------------|
-| Lifecycle protocol path (MPLP) | Protocol-level lifecycle responsibility semantics; strong ALCS posture for authority boundaries, accepted outcomes, responsibility transfer, evidence partitioning, substitution conformance | Implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, regulator familiarity | Designed for lifecycle responsibility compliance; requires validation of implementation, adoption, and enterprise integration |
+| Lifecycle protocol path (MPLP) | Protocol-level lifecycle responsibility semantics; strong ALCS posture for authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, substitution conformance | Implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, regulator familiarity | Relevant to lifecycle responsibility semantics; implementation, adoption, and enterprise integration require validation |
 | Enterprise AI governance platform (IBM watsonx.governance) | Strong RCCS posture for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, monitoring | Multi-agent responsibility transfer, accepted outcome governance, tool-action liability boundary, MAS evidence partitioning, cross-project reuse controls | Designed for enterprise AI governance; agentic lifecycle objects require validation |
 | Cloud AI platform (Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, Google Vertex AI / ADK / Model Armor) | Moderate-to-strong RCCS posture for cloud AI management, model governance, safety, evaluation, monitoring; moderate ALCS adjacency depending on agent lifecycle object exposure | Accepted outcome compliance, delegated authority boundary, cross-agent responsibility transfer, evidence partitioning, vendor/model/runtime substitution conformance | Designed for cloud AI platform capabilities; lifecycle responsibility objects require validation; responsible AI tooling ≠ lifecycle responsibility objects |
 | Agent orchestration / observability framework (LangGraph / LangSmith) | Moderate RCCS posture for documentation, record-keeping, transparency, monitoring; moderate ALCS adjacency through graphs, state, checkpoints, traces, observability | Human-role-to-MAS responsibility mapping, delegated authority boundary, accepted outcome compliance, tool-action liability, responsibility transfer, MAS evidence partitioning | Designed for agent orchestration and observability; lifecycle responsibility semantics require additional governance layer; orchestration ≠ governance |
@@ -801,6 +801,6 @@ This synthesis is not a product ranking. It is not a legal compliance judgment. 
 
 No system is described as non-compliant. MPLP is not described as required for compliance. MPLP is not described as the only correct path. MPLP is not described as certification or legal authority. Validation Lab is not described as certification or legal authority.
 
-The synthesis validates the core thesis: agentic compliance is lifecycle responsibility compliance, not only model compliance. The field gap is not lack of AI tools. The field gap is lack of explicit lifecycle responsibility objects.
+The synthesis supports the core thesis: agentic compliance analysis must include lifecycle responsibility, not only model compliance. The field gap is not lack of AI tools. The field gap is lack of explicit lifecycle responsibility objects.
 
 ---

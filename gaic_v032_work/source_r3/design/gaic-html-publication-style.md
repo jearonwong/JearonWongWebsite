@@ -1,8 +1,8 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-10 Scored Evaluation Results and Table Layout Repair
-**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF SCORED EVALUATION DRAFT
+**Phase:** 1D-11 Citation Source Evidence Closure
+**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
 **Last Updated:** May 11, 2026
 
 ## Visual Position
@@ -16,6 +16,8 @@ Phase 1D-8 extended the Phase 1D-7 HTML-first foundation with stricter publicati
 Phase 1D-9 added the missing evaluation-results layer and semantic table-type system. Publication-facing system results were expressed as qualitative, source-qualified RCCS/ALCS analytical profiles, not rankings or final vendor scores.
 
 Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all evaluated systems. These scores are publication-facing result signals, but they are not final vendor scores, rankings, procurement recommendations, certifications, regulatory approval signals, legal compliance proof, or deployment-readiness guarantees. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
+
+Phase 1D-11 closes the high-risk citation/source evidence blockers without swallowing them as vague limitations. OpenAI platform-guide HTTP 403 is retained as an access note only because accessible official OpenAI Agents SDK Python and JavaScript docs replace it for narrowed SDK-surface claims. Validation Lab is limited to a public-surface, non-certifying evidence adjudication example. MPLP identity is source-bound, while GAIC MRO/ALCS mappings remain author analytical mapping where not directly stated. Product/platform documentation supports capability surfaces, not lifecycle compliance proof.
 
 ## VI Principles
 
@@ -99,6 +101,7 @@ Do not scale typography with viewport width. Letter spacing remains normal.
 | Appendix | More compact density, visible provisional/boundary notes, no ranking style |
 | Citation/source note | Small status-gray text, no unsupported raw URL sprawl |
 | References / Sources | Grouped source register with evidence level, access status, page-pinning notes, and conflict-of-interest boundaries |
+| Citation closure ledger | Publication-facing evidence status summary: closed official source, replacement source, narrowed claim, L5 analytical mapping, explicit limitation, unresolved blocker count |
 
 ## Print Rules
 
@@ -133,11 +136,21 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | Component | Rule |
 |---|---|
 | Provisional score cell | Show `0-100` score plus range; label as `Provisional Analytical Score` |
-| Confidence label | Use Source-bound, Partially source-bound, L5 analytical inference, or Source-pointer pending language |
+| Confidence label | Use Source-bound, Partially source-bound, L5 analytical inference, platform-guide access note, or explicit non-blocking limitation language |
 | Score chart | Display systems in fixed source order, not score order |
 | Score map | Use axis labels for RCCS and ALCS only; no leader/winner quadrant |
 | Scored profile card | Lead with score/range/confidence, then visible strength, lifecycle gap, evidence basis, and boundary |
 | Boundary note | Repeat that scores are analytical profiles, not final vendor scores, rankings, legal proof, certifications, regulatory approval, or procurement recommendations |
+
+## Phase 1D-11 Citation Closure Components
+
+| Component | Rule |
+|---|---|
+| Source closure summary | Show final unresolved high-risk blocker count and closure actions without hiding limitations |
+| OpenAI access note | Platform guide HTTP 403 is visible but non-blocking; accessible official SDK docs support retained SDK claims |
+| Validation Lab boundary | Public-surface methodology example only; no certification, endorsement, audit opinion, or compliance proof |
+| MPLP boundary | Protocol identity source-bound; GAIC MRO/ALCS mapping is author analytical mapping where not directly stated |
+| L2 product support | Product docs support capability surfaces only; lifecycle responsibility mapping remains L5 where analytical |
 
 ## Phase 1D-10 Semantic Table Classes
 
