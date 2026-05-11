@@ -1,6 +1,6 @@
 # 1. Scope, Methodology, and Non-Legal Boundary
 
-**Status:** PHASE 1A-2 TO BE FILLED
+**Inactive legacy stub:** The active publication source is `sections/01-scope-methodology.md`.
 
 **Source:** v0.3.1 PDF pages 4-5 (estimate based on chapter position)
 
@@ -16,4 +16,4 @@
 
 ---
 
-*This section will be filled in Phase 1A-2 from the v0.3.1 semantic base.*
+*This legacy stub is retained only as a historical reconstruction note and is not imported by the active generation script.*

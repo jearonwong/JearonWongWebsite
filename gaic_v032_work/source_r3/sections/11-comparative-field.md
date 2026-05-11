@@ -38,7 +38,7 @@ This is a responsibility-semantics mapping, not a product ranking. The compariso
 - Certification, conformity assessment, or regulatory approval
 - Endorsement or criticism of any vendor or product
 
-The comparison uses the evidence hierarchy established in the front matter and harmonized during Phase 1C follow-up. L1 evidence covers binding legal, regulatory, and formal standards baselines; it does not prove product implementation. L2 evidence covers official product, protocol, API, developer, platform, or repository documentation. L3 evidence covers independent audit reports, credible research papers, or independent reports. L4 evidence covers vendor claims, marketing pages, blogs, and announcements. L5 evidence covers author inference or analytical interpretation and is explicitly disclosed. The canonical multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L5=0.35.
+The comparison uses the evidence hierarchy established in the front matter and harmonized through source review follow-up. L1 evidence covers binding legal, regulatory, and formal standards baselines; it does not prove product implementation. L2 evidence covers official product, protocol, API, developer, platform, or repository documentation. L3 evidence covers independent audit reports, credible research papers, or independent reports. L4 evidence covers vendor claims, marketing pages, blogs, and announcements. L5 evidence covers author inference or analytical interpretation and is explicitly disclosed. The canonical multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L5=0.35.
 
 The comparison is not a certification program. It does not certify that any system is compliant with any regulation. It does not guarantee that any system meets all legal obligations. It does not substitute for legal counsel, compliance review, or risk assessment. It measures system capability to express governance primitives and lifecycle objects, not organizational conformance to legal requirements.
 
@@ -169,7 +169,7 @@ The positioning in this chapter prepares the reader for Chapter 12 by establishi
 
 ---
 
-**Figure F-05: Lifecycle Conformance Mapping Strength Heatmap**
+**Figure F-05 — Lifecycle Conformance Mapping Strength Heatmap**
 
 *Figure F-05 is a qualitative, non-ranking map of lifecycle conformance visibility across systems and MRO / ALCS dimensions. It must not be read as a product ranking, procurement recommendation, or final vendor assessment.*
 

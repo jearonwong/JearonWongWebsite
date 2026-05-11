@@ -20,6 +20,8 @@ This is why model governance must be treated as a foundation rather than the sys
 
 The table below compares how failure modes manifest differently in model-centric systems versus agentic lifecycle systems.
 
+**Table T-03-01: Failure Mode Comparison**
+
 | **Failure Mode** | **Model-Centric View** | **Lifecycle Governance View** |
 |------------------|------------------------|-------------------------------|
 | Wrong output | Model produced incorrect text | Was the output accepted, used, challenged, corrected, and evidenced? |

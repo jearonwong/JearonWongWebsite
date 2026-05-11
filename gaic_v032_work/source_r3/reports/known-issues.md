@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 7 Adoption / Conclusion / Governance Appendix Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 8 Cross-Document Review)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -242,6 +242,56 @@ Wave 7 human review covered Chapters 17-18 and Appendices H-K. The adoption road
 4. Publication candidate readiness is not declared.
 
 **Wave 7 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 8 Cross-Document Review
+
+### Status: PHASE 1D-5 WAVE 8 CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED
+
+Wave 8 reviewed the active publication source across front matter, Chapters 1-18, Appendices A-K, table inventory, figure inventory, citation/source governance ledgers, SOURCE MASTER, known issues, and reconstruction notes. This was a source-readiness gate only. No DOCX/PDF artifacts were regenerated and publication candidate readiness was not declared.
+
+**Reports created:**
+
+1. `reports/phase-1d5-wave8-source-marker-sweep.md`
+2. `reports/phase-1d5-wave8-figure-consistency-report.md`
+3. `reports/phase-1d5-wave8-table-id-consistency-report.md`
+4. `reports/phase-1d5-wave8-mro-taxonomy-sweep.md`
+5. `reports/phase-1d5-wave8-scoring-consistency-sweep.md`
+6. `reports/phase-1d5-wave8-boundary-claim-sweep.md`
+7. `reports/phase-1d5-wave8-phase1c-wording-sweep.md`
+8. `reports/phase-1d5-wave8-appendix-g-proofing-report.md`
+9. `reports/phase-1d5-wave8-continuity-duplication-report.md`
+
+**Patch applied:**
+
+1. Removed remaining publication-facing metadata and tail markers from Appendix C.
+2. Replaced Appendix C placeholder/revalidation wording with source-pointer and publication-candidate QA wording.
+3. Normalized Appendix I/J source-audit wording away from placeholder / final-publication phrasing.
+4. Synchronized Chapter 9 system-mapping bridge and summary language with qualitative, source-bound, provisional, non-ranking boundaries.
+5. Synchronized the inactive restored Chapter 9 placeholder with the active Chapter 9 boundary wording to avoid broad-source false positives.
+6. Updated Chapter 2 monitoring wording to avoid old lifecycle-drift / continuous-improvement ambiguity.
+7. Synchronized F-01 through F-11 titles across active source, front matter, and figure inventory.
+8. Added explicit T-style captions for front matter and early chapter tables, and added `T-08-02A` to table inventory.
+9. Relabeled inactive Chapter 1-3 legacy stubs as inactive historical stubs.
+
+**Sweep result:**
+
+- Active-source marker blockers: 0
+- Figure consistency blockers: 0
+- Table inventory blockers: 0
+- MRO taxonomy blockers: 0
+- Scoring consistency blockers: 0
+- Forbidden positive claim blockers: 0
+- Phase 1C future-work wording blockers: 0
+- Appendix G score/ranking blockers: 0
+- Continuity/duplication blockers: 0
+
+**Remaining blockers:**
+
+1. DOCX/PDF have not been regenerated from the Wave 8-reviewed source.
+2. Post-generation visual QA, citation rendering QA, table/figure proofing, and final publication-candidate review remain required.
+3. Publication candidate readiness is not declared.
+
+**Wave 8 Decision:** CROSS-DOCUMENT REVIEW COMPLETE / PUBLICATION CANDIDATE STILL BLOCKED PENDING FINAL REGENERATION AND POST-GENERATION QA.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

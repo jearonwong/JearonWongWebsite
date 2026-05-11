@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 7)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 8)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-7 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack, Waves 1-8 patches/review, and Wave 4A source restoration (✓ WAVE 8 CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED)
 
 ## Source Hierarchy
 
@@ -474,6 +474,50 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 7 Status:** ◐ PATCH APPLIED / WAVE 8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 8 Notes (May 11, 2026)
+
+**Scope:** Full-document cross-cutting source review across active publication source, Appendices A-K, inventories, source/citation governance ledgers, SOURCE MASTER, known issues, and reconstruction notes.
+
+**Review result:**
+
+- Source marker sweep: PASS after patch.
+- Figure consistency sweep: PASS after patch.
+- Table ID / inventory sweep: PASS after patch.
+- MRO taxonomy sweep: PASS after patch.
+- RCCS/ALCS/scoring sweep: PASS after patch.
+- Boundary / forbidden-claim sweep: PASS with positive blocker count 0.
+- Phase 1C wording sweep: PASS after patch.
+- Appendix G no-score/no-ranking sweep: PASS.
+- Continuity/duplication sweep: PASS after light cleanup.
+- Publication candidate: BLOCKED pending final regeneration and post-generation QA.
+
+**Actions completed:**
+
+1. Removed Appendix C publication-facing internal metadata and tail source markers.
+2. Updated Appendix C source register and citation queue from placeholder/revalidation wording to source-pointer and publication-candidate QA wording.
+3. Updated Appendix I/J source-audit language to avoid placeholder/final-publication wording.
+4. Softened Chapter 9 bridge/summary language so system mappings remain qualitative, source-bound, provisional, and non-ranking unless a source-bound worksheet is explicitly used.
+5. Synchronized inactive restored Chapter 9 placeholder wording with the active Chapter 9 boundary language.
+6. Updated Chapter 2 monitoring wording to avoid old lifecycle-drift / continuous-improvement MRO ambiguity.
+7. Synchronized F-01 through F-11 active titles across source, front matter, and figure inventory.
+8. Added explicit table captions for front matter and early chapter tables; added `T-08-02A` to table inventory.
+9. Relabeled inactive Chapter 1-3 legacy stubs as inactive historical stubs.
+10. Created nine Wave 8 review reports under `reports/phase-1d5-wave8-*`.
+11. Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+**Boundary discipline:**
+
+- Canonical MRO/RCCS/ALCS definitions remain unchanged.
+- Canonical evidence multipliers and formulas remain unchanged.
+- Appendix G remains revalidated provisional, qualitative, no-score, and non-ranking.
+- Positive forbidden-claim blocker count is 0.
+- Raw forbidden phrases remain only in negative boundary / forbidden-wording contexts.
+- No new systems, vendor rankings, procurement recommendations, legal compliance proof claims, certifications, regulatory approval claims, audit opinions, insurance guarantees, or vendor endorsements were introduced.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 8 Status:** ✓ CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

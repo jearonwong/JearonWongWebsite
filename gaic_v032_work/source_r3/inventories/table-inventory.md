@@ -93,6 +93,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 |----------|-------|----------|--------|--------------|
 | T-08-01 | ALCS Dimensions Summary | Chapter 8 | ✓ Filled (1A-3.7) | Portrait or landscape, 4 columns |
 | T-08-02 | ALCS to MRO Mapping | Chapter 8 | ✓ Filled (1A-3.7) | Landscape recommended, 5 columns |
+| T-08-02A | MRO-16 Evaluation Path | Chapter 8 | ✓ Filled (Phase 1D-5 Wave 8 inventory sync) | Portrait, 3 columns; cross-cutting MRO-16 treatment |
 | T-08-03 | ALCS-01: Human-Role-to-MAS Responsibility Mapping Scoring Rubric | Chapter 8 | ✓ Filled (1A-3.8) | Portrait, scoring rubric |
 | T-08-04 | ALCS-02: Delegated Authority Boundary Scoring Rubric | Chapter 8 | ✓ Filled (1A-3.8) | Portrait, scoring rubric |
 | T-08-05 | ALCS-03: Agent Role vs Human Role Distinction Scoring Rubric | Chapter 8 | ✓ Filled (1A-3.8) | Portrait, scoring rubric |
@@ -193,8 +194,8 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-B-03 | Score Delta Record | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 7 columns |
 | T-B-04 | Negative Control Checklist | Appendix B | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 5 columns |
 | T-C-01 | Evidence Level Policy | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Portrait, 5 columns |
-| T-C-02 | Source Register | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 6 columns |
-| T-C-03 | Citation Revalidation Queue | Appendix C | ✓ Filled (1B-8, corrected 1B-8C) | Landscape recommended, 5 columns |
+| T-C-02 | Source Register | Appendix C | ✓ Filled (1B-8, corrected 1B-8C, patched Wave 8) | Publication Follow-up Action column; landscape recommended, 6 columns |
+| T-C-03 | Citation Revalidation Queue | Appendix C | ✓ Filled (1B-8, corrected 1B-8C, patched Wave 8) | URL / Source Pointer and Publication QA Need columns; landscape recommended, 5 columns |
 | T-D-01 | Expanded Cross-System MRO Mapping | Appendix D | ✓ Filled (1B-8, corrected 1B-8C, patched Wave 5) | Landscape required; very wide 10-column table; notes use revalidated provisional cell-level support language |
 | T-E-01 | RCCS-01 Risk Management Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
 | T-E-02 | RCCS-02 Data Governance Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
@@ -235,7 +236,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-H-03 | Procurement Red Flag Checklist | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-H-04 | Buyer Interpretation Boundary | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-I-01 | Source Audit Register | Appendix I | ✓ Filled (1B-10, patched Wave 7) | Publication Follow-up Action column; landscape required; 7 columns; high clipping risk after Phase 1C source updates |
-| T-I-02 | URL Verification Queue | Appendix I | ✓ Filled (1B-10) | Landscape required; 6 columns; Phase 1D clipping check required |
+| T-I-02 | URL Verification Queue | Appendix I | ✓ Filled (1B-10, patched Wave 8) | URL / Source Pointer column; landscape required; 6 columns; Phase 1D clipping check required |
 | T-I-03 | Evidence Level Reclassification Rules | Appendix I | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-I-04 | Source Coverage Matrix Validation Checklist | Appendix I | ✓ Filled (1B-10, patched Wave 7) | Publication Follow-up Action column; landscape recommended; Phase 1D clipping check required |
 | T-J-01 | v0.3.2 Gap Closure Coverage Matrix | Appendix J | ✓ Filled (1B-10) | Landscape required; 6 columns; high clipping risk |

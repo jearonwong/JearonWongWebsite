@@ -42,7 +42,7 @@ Evidence levels describe source confidence for analytical scoring. They do not m
 | W3C-PROV | W3C PROV | Protocol / provenance standard | L1 | Chapter 4, evidence/provenance framing | Referenced; final citation check pending | Verify citation details and relevance language |
 | W3C-VC | W3C Verifiable Credentials | Protocol / evidence standard | L1 | Chapter 4, evidence framing | Referenced; final citation check pending | Verify citation details and relevance language |
 | MPLP-DOCS | MPLP documentation | Protocol documentation | L2/L5 | Chapters 12, 13, Appendix G, claim register | Official docs entry point located; mapping remains analytical | Keep exact URL pinned; do not treat mapping as implementation proof |
-| MPLP-SPEC | MPLP protocol specification | Protocol documentation | L2/L5 | Chapters 12, 13, Appendix G, claim register | Source-bound through MPLP docs entry point | Validate version/citation rendering before publication |
+| MPLP-SPEC | MPLP protocol specification | Protocol documentation | L2/L5 | Chapters 12, 13, Appendix G, claim register | Source-bound through MPLP docs entry point | Validate version/citation rendering during publication-candidate QA |
 | VALIDATION-LAB | Validation Lab methodology / public surface | Validation methodology source | L2/L5 | Chapter 14, Appendix K, claim register | Public entry point located; methodology-specific support remains limited | Keep non-certifying boundary; add methodology-specific citation if available |
 | IBM-WATSONX-GOV | IBM watsonx.governance documentation | Product documentation | L2/L5 | Chapters 11, 12, Appendix G, claim register | Official entry points located; ALCS mappings remain L5 where not directly documented | Pin exact docs pages for final citation |
 | MS-AZURE-FOUNDRY | Microsoft Azure AI Foundry documentation | Product documentation | L2/L5 | Chapters 11, 12, Appendix G, claim register | Official entry point located; ALCS mappings remain L5 where not directly documented | Pin exact Microsoft Learn pages for final citation |
@@ -52,8 +52,8 @@ Evidence levels describe source confidence for analytical scoring. They do not m
 | OPENAI-AGENTS-SDK | OpenAI Agents SDK documentation | Product documentation | L2/L5 | Chapters 11, 12, Appendix G, claim register | SDK docs entry point located; platform guide access/rendering needs final check | Use accessible official SDK docs and perform final citation rendering check |
 | CREWAI-DOCS | CrewAI documentation and repository references | Product documentation / repository documentation | L2/L5 | Chapters 11, 12, Appendix G, claim register | Official docs and repository entry points located; ALCS mappings remain L5 where not directly documented | Pin exact CrewAI docs pages for final citation |
 | CLAIM-EVIDENCE-REGISTER | Claim evidence register | Internal governance ledger | L5 | Phase 1C follow-up | PHASE 1C CLAIM-LEVEL REVIEW COMPLETE — PROVISIONAL SOURCE BINDING | Maintain as source-to-claim audit ledger |
-| CITATION-INVENTORY | Citation inventory ledger | Internal governance ledger | L5 | Appendix C, Appendix I | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Final page-level citation pinning remains before publication |
-| SOURCE-COVERAGE-MATRIX | Source coverage matrix | Internal governance ledger | L5 | Appendix I, Phase 1C carryover | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Final citation rendering and page-level source pinning remain before publication |
+| CITATION-INVENTORY | Citation inventory ledger | Internal governance ledger | L5 | Appendix C, Appendix I | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Final page-level citation pinning remains before publication-candidate release |
+| SOURCE-COVERAGE-MATRIX | Source coverage matrix | Internal governance ledger | L5 | Appendix I, Phase 1C carryover | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Final citation rendering and page-level source pinning remain before publication-candidate release |
 
 ---
 
@@ -65,7 +65,7 @@ Source review and publication handoff should follow a controlled workflow:
 2. Confirm the citation inventory status and source coverage matrix status.
 3. Verify each L1 legal or standards citation for citation rendering and relevance.
 4. Revalidate every L2 product documentation source for currency, scope, and claim support.
-5. Confirm MPLP documentation and Validation Lab URL placeholders.
+5. Confirm MPLP documentation and Validation Lab URL/source pointers.
 6. Reclassify evidence levels only when documentation supports the change.
 7. Record all source changes and unresolved gaps in Appendix I or a publication QA report.
 
@@ -77,19 +77,19 @@ Phase 1C follow-up completed the claim-level review path at source-entry and cla
 
 **Table T-I-02: URL Verification Queue**
 
-| Source ID | URL / Placeholder | Used In | Verification Need | Priority | Notes |
+| Source ID | URL / Source Pointer | Used In | Verification Need | Priority | Notes |
 |-----------|-------------------|---------|-------------------|----------|-------|
-| MPLP-DOCS | Placeholder in citation inventory | Chapters 12, 13, Appendix G | Validate URL, source currency, and protocol documentation scope | High | Canonical Phase 1C carryover item |
-| MPLP-SPEC | Placeholder in citation inventory | Chapters 12, 13, Appendix G | Validate specification URL and version | High | Do not treat protocol mapping as implementation proof |
-| VALIDATION-LAB | Placeholder in citation inventory | Chapter 14, Appendix K | Validate URL and non-certifying methodology boundary | High | Canonical Phase 1C carryover item |
-| IBM-WATSONX-GOV | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate official documentation URL and current product scope | High | L2 product docs remain provisional |
-| MS-AZURE-FOUNDRY | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate official documentation URL and current product scope | High | L2 product docs remain provisional |
-| AWS-BEDROCK-STACK | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate official documentation URLs and current product scope | High | Includes Bedrock, Guardrails, and AgentCore references |
-| GOOGLE-VERTEX-STACK | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate official documentation URLs and current product scope | High | Includes Vertex AI, ADK, and Model Armor references |
-| LANGGRAPH-LANGSMITH | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate documentation and repository references | High | Confirm current framework/documentation names |
-| OPENAI-AGENTS-SDK | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate official documentation URL and current SDK scope | High | Do not add new product claims during verification |
-| CREWAI-DOCS | Placeholder in citation inventory | Chapters 11, 12, Appendix G | Validate documentation and repository references | High | Confirm current documentation scope |
-| L1-LEGAL-STANDARDS | Citation placeholders / reference notes | Chapters 4, 7, 8, Appendices E/F | Verify citation rendering and article/standard references | Medium | Does not change legal interpretation |
+| MPLP-DOCS | Citation inventory source pointer | Chapters 12, 13, Appendix G | Validate URL, source currency, and protocol documentation scope | High | Canonical Phase 1C carryover item |
+| MPLP-SPEC | Citation inventory source pointer | Chapters 12, 13, Appendix G | Validate specification URL and version | High | Do not treat protocol mapping as implementation proof |
+| VALIDATION-LAB | Citation inventory source pointer | Chapter 14, Appendix K | Validate URL and non-certifying methodology boundary | High | Canonical Phase 1C carryover item |
+| IBM-WATSONX-GOV | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate official documentation URL and current product scope | High | L2 product docs remain provisional |
+| MS-AZURE-FOUNDRY | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate official documentation URL and current product scope | High | L2 product docs remain provisional |
+| AWS-BEDROCK-STACK | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate official documentation URLs and current product scope | High | Includes Bedrock, Guardrails, and AgentCore references |
+| GOOGLE-VERTEX-STACK | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate official documentation URLs and current product scope | High | Includes Vertex AI, ADK, and Model Armor references |
+| LANGGRAPH-LANGSMITH | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate documentation and repository references | High | Confirm current framework/documentation names |
+| OPENAI-AGENTS-SDK | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate official documentation URL and current SDK scope | High | Do not add new product claims during verification |
+| CREWAI-DOCS | Citation inventory source pointer | Chapters 11, 12, Appendix G | Validate documentation and repository references | High | Confirm current documentation scope |
+| L1-LEGAL-STANDARDS | Citation source pointers / reference notes | Chapters 4, 7, 8, Appendices E/F | Verify citation rendering and article/standard references | Medium | Does not change legal interpretation |
 | FIGURE-TABLE-REFERENCES | Internal references | Entire source | Verify table and figure references render correctly | Medium | Coordinate with Phase 1D layout QA |
 
 Phase 1C follow-up located or validated official source entry points for the high-priority L2 groups. Final page-level citation pinning and DOCX/PDF citation rendering remain Phase 1D/publication-candidate tasks.
@@ -120,11 +120,11 @@ Phase 1C follow-up located or validated official source entry points for the hig
 |---------------|----------------------|----------------|-----|-----------------|
 | Legal baseline claims | L1 legal / regulatory text | Referenced in baseline chapters | Citation rendering and article mapping not globally validated | Verify all legal citations and claim boundaries |
 | Standards baseline claims | L1 formal standards | Referenced in baseline chapters | Citation rendering and standard references not globally validated | Verify all standards citations |
-| Product capability claims | L2 product documentation plus L5 mapping where needed | Claim-level source binding applied | Exact page-level citation pinning remains for final publication | Preserve narrowed claims and L5 downgrades during publication QA |
+| Product capability claims | L2 product documentation plus L5 mapping where needed | Claim-level source binding applied | Exact page-level citation pinning remains for publication-candidate QA | Preserve narrowed claims and L5 downgrades during publication QA |
 | MPLP protocol mapping | L2 protocol docs plus disclosed author relationship | Official docs entry point located; mapping remains L2 + L5 | Version/citation rendering still requires final proofing | Preserve conflict-of-interest and implementation-proof boundary |
 | Validation Lab discussion | L2 public entry point plus L5 methodology interpretation | Public entry point located; methodology-specific support remains boundary-limited | Exact methodology citation may remain unresolved | Keep non-certifying boundary and do not promote methodology claims |
 | Appendix G provisional assessments | L2 product docs and L5 inference | Revalidated provisional | Final assessment remains non-final and non-ranking | Preserve no-score/no-ranking posture and page-level citation needs |
 | Citation inventory | Internal ledger | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Exact citation pages and rendering not yet verified | Pin page-level citations before publication candidate |
 | Source coverage matrix | Internal ledger | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Citation rendering and claim-label preservation not yet verified | Verify source labels during Phase 1D/publication QA |
 
-The source coverage matrix has been updated during Phase 1C as a coverage ledger and during Phase 1C follow-up as a claim-level source-binding ledger. Final publication still requires page-level citation pinning and rendering QA. Appendix G remains revalidated provisional, not final.
+The source coverage matrix has been updated during Phase 1C as a coverage ledger and during Phase 1C follow-up as a claim-level source-binding ledger. Publication-candidate QA still requires page-level citation pinning and rendering checks. Appendix G remains revalidated provisional, not final.

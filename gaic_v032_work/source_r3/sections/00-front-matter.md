@@ -7,7 +7,7 @@
 **Document ID:** GACWP-2026-v0.3.2-FRC-R3  
 **Version:** v0.3.2 Final Release Candidate R3  
 **Trace Tag:** GACWP-2026-v0.3.2-FRC-R3  
-**Status:** Publication Draft — non-legal technical governance analysis; not legal advice
+**Publication Note:** Publication Draft — non-legal technical governance analysis; not legal advice
 **Compiled:** May 2026  
 **Source Snapshot:** Sources available and checked as of May 2026  
 **Scope Snapshot:** Public-source technical governance analysis based on sources available and checked as of May 2026
@@ -26,6 +26,8 @@
 ---
 
 ## Document Control and Positioning
+
+**Table T-FM-01: Document Control and Positioning**
 
 | Field | Value |
 |-------|-------|
@@ -66,6 +68,8 @@ The report therefore separates three questions that are often confused:
 
 ### Scope Boundaries
 
+**Table T-FM-02: Publication Scope Boundaries**
+
 | In Scope | Out of Scope |
 |----------|--------------|
 | Agentic AI lifecycle responsibility | Legal advice for any specific jurisdiction |
@@ -87,6 +91,8 @@ The author is the creator of **MPLP - Multi-Agent Lifecycle Protocol**. MPLP is 
 
 The controls used to limit over-claiming are as follows:
 
+**Table T-FM-03: Conflict of Interest Boundary Controls**
+
 | Boundary | Required Wording | Forbidden Wording |
 |----------|------------------|-------------------|
 | MPLP | A lifecycle protocol path for expressing agentic responsibility objects | The only compliant standard |
@@ -104,6 +110,8 @@ This boundary discipline strengthens the paper. The argument does not need to cl
 This paper uses a five-level evidence hierarchy to ensure that claims are grounded in verifiable sources rather than marketing language or conceptual speculation.
 
 ### Evidence Levels
+
+**Table T-FM-04: Evidence Levels**
 
 | Level | Evidence Type | Use in This Paper | Confidence |
 |-------|---------------|-------------------|------------|
@@ -136,6 +144,8 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 ---
 
 ## Version History
+
+**Table T-FM-05: Version History**
 
 | Version | Date | Trace Tag | Summary |
 |---------|------|-----------|---------|
@@ -196,17 +206,17 @@ v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterpr
 
 ## List of Figures
 
-- Figure F-01: AI Agent Lifecycle Governance Stack
-- Figure F-02: Governance Stack / Missing Layer
-- Figure F-03: MRO Topology
-- Figure F-04: RCCS/ALCS Dual Scoring Model
-- Figure F-05: Lifecycle Conformance Mapping Strength Heatmap
-- Figure F-06: Enterprise Control Overlay
-- Figure F-07: Model Risk in Agentic Lifecycle
-- Figure F-08: Evidence-Based Validation Pattern Flow
-- Figure F-09: Enterprise Failure Scenario Chain
-- Figure F-10: Companion Paper Boundary Map
-- Figure F-11: Stage 0-to-7 Adoption Roadmap
+- Figure F-01 — AI Agent Lifecycle Governance Stack
+- Figure F-02 — Governance Stack / Missing Layer
+- Figure F-03 — MRO Topology
+- Figure F-04 — RCCS/ALCS Dual Scoring Model
+- Figure F-05 — Lifecycle Conformance Mapping Strength Heatmap
+- Figure F-06 — Enterprise Control Overlay for AI Agent Lifecycle Governance
+- Figure F-07 — Model Risk in Agentic Lifecycle
+- Figure F-08 — Evidence-Based Validation Pattern Flow
+- Figure F-09 — Enterprise Failure Scenario Chain
+- Figure F-10 — Companion Paper Boundary Map
+- Figure F-11 — Stage 0-to-7 Adoption Roadmap
 
 ---
 
@@ -253,7 +263,7 @@ This white paper names the missing layer **AI Agent Lifecycle Governance**. AI A
 
 That thesis has practical consequences. Enterprise buyers, auditors, insurers, regulators, and internal governance teams need more than dashboards, logs, or guardrails. They need lifecycle objects: delegated authority boundaries, human-role-to-agent-responsibility mappings, tool-action liability records, evidence partitions, accepted outcome states, cross-project reuse controls, privacy-preserving validation packs, and dispute closure records.
 
-**Figure F-01: AI Agent Lifecycle Governance Stack**
+**Figure F-01 — AI Agent Lifecycle Governance Stack**
 
 Intent → Context → Plan → Authority → Agent Work → Tool Actions → Evidence → Review → Accepted Outcome → Dispute / Remediation
 

@@ -51,7 +51,7 @@ Gap categories used in this appendix:
 | G-J-10 | Phase 1B-9D governance ledgers stale after partial patch | Phase 1B-9D | Corrected by Later Patch | SOURCE MASTER, Appendix G metadata, carryover list, and final report synchronized | Continue with Phase 1B-10 completion record |
 | G-J-11 | Appendices H-K missing from clean source | Phase 1B-10 | Closed | Appendices H-K filled in Phase 1B-10 | Phase 1C source validation completed; Phase 1D layout QA remains |
 | G-J-12 | Citation Inventory remained partial after Phase 1B | Phase 1B-3 | Corrected by Later Patch | Phase 1C cleanup updated citation inventory to URL-reviewed status; Phase 1C follow-up added claim-level source binding and claim register | Final page-level citation pinning and rendering QA before publication candidate |
-| G-J-15 | Claim-level L2 product/protocol source binding remained pending after Phase 1C cleanup | Phase 1C follow-up | Corrected by Later Patch | Claim evidence register created; Appendix G marked revalidated provisional; citation inventory/source coverage matrix updated | Keep Appendix G provisional; perform page-level citation pinning before final publication |
+| G-J-15 | Claim-level L2 product/protocol source binding remained pending after Phase 1C cleanup | Phase 1C follow-up | Corrected by Later Patch | Claim evidence register created; Appendix G marked revalidated provisional; citation inventory/source coverage matrix updated | Keep Appendix G provisional; perform page-level citation pinning before publication-candidate release |
 | G-J-13 | Wide tables require layout evaluation | R2 / Phase 1B | Corrected by Later Patch | Phase 1C recorded layout risk notes in table inventory | Render and inspect tables in Phase 1D |
 | G-J-14 | DOCX/PDF layout, figures, captions, and page breaks not regenerated | Phase 1D | Deferred to Phase 1D | DOCX/PDF generation intentionally deferred | Generate and visually QA in Phase 1D |
 
@@ -87,7 +87,7 @@ Gap categories used in this appendix:
 | DOCX generation | Formatting may drift from Markdown source | Generate DOCX from reviewed source | Publication candidate DOCX | Phase 1D |
 | PDF generation | Tables or figures may clip or wrap poorly | Generate PDF from finalized DOCX/source | Publication candidate PDF | Phase 1D |
 | Wide table rendering | Landscape tables may be unreadable or clipped | Inspect T-D-01, T-13/T-14/T-15/T-17/T-18, Appendix G, H-K tables | Wide-table remediation record | Phase 1D |
-| Figure readability | Placeholder or generated figures may not be publication grade | Verify figure resolution, labels, captions, and references | Figure QA record | Phase 1D |
+| Figure readability | Figure panels or generated figures may not be publication grade | Verify figure resolution, labels, captions, and references | Figure QA record | Phase 1D |
 | Table captions and page breaks | Captions and headers may split incorrectly | Inspect page breaks, captions, repeated headers | Layout QA record | Phase 1D |
 | Citation rendering | Citations may not render consistently in DOCX/PDF | Verify citation formatting after generation | Citation rendering QA record | Phase 1D |
 

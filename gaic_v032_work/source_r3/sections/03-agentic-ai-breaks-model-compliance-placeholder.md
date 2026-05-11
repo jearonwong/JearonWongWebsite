@@ -1,6 +1,6 @@
 # 3. Why Agentic AI Breaks Model-Centric Compliance
 
-**Status:** PHASE 1A-2 TO BE FILLED
+**Inactive legacy stub:** The active publication source is `sections/03-agentic-ai-breaks-model-compliance.md`.
 
 **Source:** v0.3.1 PDF pages 6-7 (estimate based on chapter position)
 
@@ -15,4 +15,4 @@
 
 ---
 
-*This section will be filled in Phase 1A-2 from the v0.3.1 semantic base.*
+*This legacy stub is retained only as a historical reconstruction note and is not imported by the active generation script.*

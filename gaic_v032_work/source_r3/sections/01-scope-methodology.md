@@ -31,6 +31,8 @@ This paper is designed for professionals who must translate regulatory obligatio
 
 The scope includes internationally comparable legal frameworks, voluntary governance frameworks, management standards, web provenance standards, public cloud AI platforms, agent orchestration frameworks, developer SDKs, and protocol-level approaches. The analysis deliberately avoids jurisdiction-specific political content controls and focuses instead on lifecycle responsibility, auditability, privacy, evidence, and enterprise deployment readiness.
 
+**Table T-01-01: In Scope / Out of Scope**
+
 | **In Scope** | **Out of Scope** |
 |--------------|------------------|
 | Agentic AI lifecycle responsibility | Legal advice for any specific jurisdiction |
@@ -59,6 +61,8 @@ The paper avoids pretending that regulatory texts already contain every engineer
 ## 1.5 Evidence Basis
 
 This hierarchy is necessary because the AI governance market has rapidly overloaded terms such as trace, guardrail, oversight, agent governance, evidence, approval, and evaluation. A trace in an observability product, a log in a cloud service, a review step in an SDK, and an evidence chain in a lifecycle protocol may all sound similar, but they have different compliance strength. This paper therefore treats terminology as insufficient unless it is tied to an object, a rule, an evidence source, and an enforcement or verification mechanism.
+
+**Table T-01-02: Evidence Basis Levels (detailed)**
 
 | **Level** | **Evidence Type** | **Use in This Paper** | **Confidence** |
 |-----------|-------------------|-----------------------|----------------|

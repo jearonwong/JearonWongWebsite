@@ -30,6 +30,8 @@ Model Governance → Agent Orchestration → AI Agent Lifecycle Governance → E
 
 The table below shows how existing governance layers answer different questions and produce different artifacts. Each layer is necessary, but none alone addresses lifecycle responsibility for agentic work.
 
+**Table T-02-01: Governance Layer Comparison**
+
 | **Layer** | **Question It Answers** | **Typical Artifact** | **Limitation if Used Alone** |
 |-----------|-------------------------|----------------------|------------------------------|
 | Model Governance | Is the model robust, documented, monitored, and aligned with policy? | Model cards, evaluations, risk assessments, monitoring reports | Does not prove lifecycle responsibility for agentic work |
@@ -46,7 +48,7 @@ The core move in this paper is to turn regulatory abstractions into lifecycle ob
 - **Logging** becomes **partitioned evidence chain**
 - **Accountability** becomes **tool-action liability and responsibility transfer**
 - **Transparency** becomes **evidence-linked review and accepted outcome**
-- **Monitoring** becomes **lifecycle drift, incident closure, and continuous improvement**
+- **Monitoring** becomes **authority drift detection, incident closure, and monitoring feedback**
 - **Privacy** becomes **lifecycle data-flow mapping, minimization, and selective disclosure**
 
 This is not bureaucracy for its own sake. It is the recognition that agentic systems need explicit objects because the old system boundary has dissolved. The work unit is now distributed across agents, tools, memory, people, projects, and vendors.
