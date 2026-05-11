@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 6 Validation / Failure / Companion Patch)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 7 Adoption / Conclusion / Governance Appendix Patch)
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
@@ -215,6 +215,33 @@ Wave 6 human review covered Chapters 14-16. The validation pattern, enterprise f
 4. Publication candidate readiness is not declared.
 
 **Wave 6 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
+
+## Phase 1D-5 Wave 7 Adoption / Conclusion / Governance Appendix Patch
+
+### Status: WAVE 7 PATCH APPLIED / WAVE 8 PENDING
+
+Wave 7 human review covered Chapters 17-18 and Appendices H-K. The adoption roadmap, conclusion, and governance appendices direction passed, but publication readiness required cleanup because the files retained internal source metadata and status markers, F-11 used code-style figure formatting, Chapter 17 over-narrowed validation to third-party review, Chapter 18 over-implied system comparison, and Appendices H-K still described Phase 1C as active future work.
+
+**Patch applied:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and chapter/appendix status/source markers from Chapters 17-18 and Appendices H-K.
+2. Converted F-11 into a formal figure block with procurement, certification, legal-compliance, and deployment-readiness boundaries.
+3. Reframed Chapter 17 validation language as qualified review, which may include internal governance review, audit review, validation provider review, or other context-appropriate reviewers.
+4. Softened Chapter 17 standards/regulatory dialogue language to contextual contribution of learnings where appropriate.
+5. Reworked Chapter 18 RCCS/ALCS and system-mapping language so it describes analytical posture review and qualitative, source-qualified posture differences rather than final vendor comparison or ranking.
+6. Aligned Chapter 18 failure scenario language with Wave 6 by describing the scenarios as illustrative and hypothetical.
+7. Normalized Appendix H/I/J/K wording so completed Phase 1C claim-level source binding is historical, while active remaining work is Phase 1D/publication-candidate QA.
+8. Updated table inventory entries for T-H-02, T-I-01, T-I-04, T-J-02, and T-K-03.
+9. No DOCX/PDF artifacts were regenerated.
+
+**Remaining blockers:**
+
+1. Wave 8 cross-document review remains pending.
+2. DOCX/PDF have not been regenerated for a new publication candidate.
+3. Final visual/citation/table proofing remains required before publication.
+4. Publication candidate readiness is not declared.
+
+**Wave 7 Decision:** PATCH APPLIED / PUBLICATION CANDIDATE STILL BLOCKED.
 
 ## Phase 1D-4 Full-Content White Paper Reflow
 

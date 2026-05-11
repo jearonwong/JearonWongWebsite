@@ -1,8 +1,6 @@
 # Appendix K — Editorial Remediation Record
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Filled — Phase 1C claim-level source binding applied  
-**Phase:** 1B-10 / 1C Follow-up
 
 ---
 
@@ -10,7 +8,7 @@
 
 This appendix records governance-relevant remediation decisions across Phase 1A and Phase 1B. It is not a line-by-line changelog. It preserves audit traceability for reconstruction strategy, methodology correction, boundary hardening, source governance, and deferred cleanup.
 
-The record does not claim that Phase 1C source validation or Phase 1D publication QA has been completed.
+The record does not claim that Phase 1D publication QA or publication-candidate review has been completed.
 
 ---
 
@@ -69,29 +67,25 @@ Phase 1A established the clean source foundation:
 
 | Boundary Area | Risk | Remediation Applied | Remaining Check | Phase |
 |---------------|------|---------------------|-----------------|-------|
-| RCCS/ALCS non-legal-score boundary | Readers may treat analytical scores as legal determinations | Repeated boundary language across chapters and appendices | Verify consistency in Phase 1C | Phase 1A / 1B |
-| MPLP non-required / non-exclusive boundary | MPLP could be misread as required or sufficient by itself | Disclosed author relationship and framed MPLP as one protocol path | Verify wording in Phase 1C | Phase 1B-4 |
-| Validation Lab non-certifying boundary | Validation Lab could be misread as an approval body | Framed as a non-certifying evidence adjudication example | Validate URL and boundary language in Phase 1C | Phase 1B-5 |
+| RCCS/ALCS non-legal-score boundary | Readers may treat analytical scores as legal determinations | Repeated boundary language across chapters and appendices | Phase 1C consistency review completed; verify in final proof | Phase 1A / 1B |
+| MPLP non-required / non-exclusive boundary | MPLP could be misread as required or sufficient by itself | Disclosed author relationship and framed MPLP as one protocol path | Phase 1C wording review completed; verify in final proof | Phase 1B-4 |
+| Validation Lab non-certifying boundary | Validation Lab could be misread as an approval body | Framed as a non-certifying evidence adjudication example | URL and boundary language reviewed at entry-point level; verify in final proof | Phase 1B-5 |
 | Appendix G no-score/no-ranking boundary | Provisional assessment could be misused as vendor ordering | Removed scores, ordered comparisons, and selection language; Phase 1C follow-up preserved revalidated provisional status | Verify no score/ranking language in final proof | Phase 1B-9C / 1B-9D / 1C |
-| Appendix E/F legal-text boundary | Legal text could be misread as implementation evidence | Hardened score-5 rows and top-level scale language | Verify formula and rubric consistency in Phase 1C | Phase 1B-9C / 1B-9D |
-| Appendix H procurement boundary | Buyer checklist could be misused as vendor selection advice | Added procurement-use boundary and required human review | Verify no vendor ordering language in Phase 1C | Phase 1B-10 |
+| Appendix E/F legal-text boundary | Legal text could be misread as implementation evidence | Hardened score-5 rows and top-level scale language | Formula and rubric consistency reviewed; verify in final proof | Phase 1B-9C / 1B-9D |
+| Appendix H procurement boundary | Buyer checklist could be misused as vendor selection advice | Added procurement-use boundary and required human review | Verify no vendor ordering language in final proof | Phase 1B-10 |
 | Appendix I source audit boundary | Revalidation register could be misread as completed validation | Stated that Phase 1B-10 was preparatory; Phase 1C follow-up added claim-level source-binding status without claiming final publication readiness | Perform final page-level citation pinning and rendering QA | Phase 1B-10 / Phase 1C |
-| Appendix J closure boundary | Gap closure could be misread as final publication readiness | Distinguished closed, structurally closed, Phase 1C, and Phase 1D items | Complete deferred work | Phase 1B-10 |
+| Appendix J closure boundary | Gap closure could be misread as final publication readiness | Distinguished closed, structurally closed, completed Phase 1C follow-up, and Phase 1D/publication QA items | Complete remaining publication QA work | Phase 1B-10 / Wave 7 |
 
 ---
 
-## K.5 Remaining Editorial Actions for Phase 1C/1D
+## K.5 Remaining Publication QA Actions
 
-**Table T-K-03: Phase 1C / 1D Remaining Editorial Actions**
+**Table T-K-03: Remaining Publication QA Actions**
 
 | Action | Reason | Target Phase | Required Evidence | Blocking Level |
 |--------|--------|--------------|-------------------|----------------|
 | Page-level citation pinning for source-bound product/protocol claims | Official entry points were located, but final citation pages must be pinned before publication | Phase 1D / publication-candidate QA | Exact source page references and citation rendering record | Blocks publication release |
 | Validation Lab methodology-specific citation | Public entry point was located, but methodology-specific support remains limited | Phase 1D / publication-candidate QA | Methodology URL or retained unresolved note | Blocks treating methodology claims as more than boundary-limited |
-| Evidence level source-to-claim rendering check | Evidence confidence is now tied to claims, but final artifacts must preserve labels | Phase 1D | Citation/evidence rendering QA record | Blocks publication release |
-| Appendix G revalidated provisional proofread | Provisional postures now have source binding but remain non-final | Phase 1D | Final no-score/no-ranking grep and citation check | Blocks final Appendix G publication status |
-| DOCX/PDF generation and visual QA | Publication rendering not yet produced | Phase 1D | DOCX/PDF artifacts and visual QA report | Blocks publication release |
-
----
-
-**End of Appendix K**
+| Evidence level source-to-claim rendering check | Evidence confidence is now tied to claims, but final artifacts must preserve labels | Phase 1D / publication-candidate QA | Citation/evidence rendering QA record | Blocks publication release |
+| Appendix G revalidated provisional proofread | Provisional postures now have source binding but remain non-final | Phase 1D / publication-candidate QA | Final no-score/no-ranking grep and citation check | Blocks final Appendix G publication status |
+| DOCX/PDF generation and visual QA | Publication rendering not yet produced | Phase 1D / publication-candidate QA | DOCX/PDF artifacts and visual QA report | Blocks publication release |

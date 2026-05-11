@@ -1,8 +1,6 @@
 # 17. Adoption Roadmap for AI Agent Lifecycle Governance
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Reconstructed from v0.3.1 semantic base  
-**Phase:** 1B-7
 
 ---
 
@@ -17,17 +15,17 @@ The roadmap is not a procurement guide, certification checklist, or legal compli
 - Define delegated authority boundaries and human-role-to-MAS responsibility mappings
 - Convert orchestration logs into partitioned evidence chains
 - Map privacy and data subject rights across lifecycle surfaces
-- Prepare for evidence-based validation and third-party review
+- Prepare for evidence-based validation and qualified review
 - Operationalize incident, dispute, and remediation closure workflows
 - Scale lifecycle governance through integration with existing enterprise controls
 
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to provide a practical path for enterprises to address the lifecycle governance gap identified in this white paper.
 
-**Figure F-11: Stage 0-to-7 Adoption Roadmap**
+**Figure F-11 — Stage 0-to-7 Adoption Roadmap**
 
-`Stage 0 Inventory -> Stage 1 Authority -> Stage 2 Responsibility -> Stage 3 Evidence -> Stage 4 Privacy -> Stage 5 Validation -> Stage 6 Remediation -> Stage 7 Scale`
+Stage 0 Inventory → Stage 1 Authority → Stage 2 Responsibility → Stage 3 Evidence → Stage 4 Privacy → Stage 5 Validation → Stage 6 Remediation → Stage 7 Scale
 
-*Figure F-11 summarizes the adoption roadmap. It is a staged implementation guide, not a procurement mandate, certification checklist, or legal compliance procedure.*
+*Figure F-11 summarizes a staged adoption path for lifecycle governance. It is an implementation planning aid, not a procurement mandate, certification checklist, legal compliance procedure, or deployment-readiness guarantee.*
 
 ---
 
@@ -43,7 +41,7 @@ Enterprises should begin adoption with a maturity assessment to understand their
 | Level 1: Aware | Lifecycle governance gap recognized; pilot projects identified; governance team assigned | Basic lifecycle inventory; some authority boundaries documented; human oversight exists but not mapped to MAS responsibilities | Authority boundaries are implicit or undocumented; human oversight is ad-hoc; evidence chains are incomplete; no privacy-preserving validation capability | Define delegated authority boundaries for pilot projects; map human roles to MAS responsibilities; document accepted outcome compliance workflow |
 | Level 2: Pilot | Pilot projects operationalize lifecycle responsibility objects; evidence chains exist for pilot scope; authority boundaries enforced | Delegated authority boundaries defined; human-role-to-MAS responsibility mapping exists; accepted outcome compliance workflow operational; evidence partitioning implemented for pilot scope | Pilot scope is limited; lifecycle governance not integrated with existing enterprise controls; no cross-project reuse compliance; no vendor/runtime substitution conformance | Integrate lifecycle governance with existing enterprise controls (audit, privacy, security, procurement); extend evidence partitioning beyond pilot scope; implement cross-project reuse compliance |
 | Level 3: Integrated | Lifecycle governance integrated with existing enterprise controls; evidence-based validation capability operational; privacy-preserving validation protocol implemented | Evidence partitioning operational; privacy-preserving validation protocol implemented; cross-project reuse compliance enforced; vendor/runtime substitution conformance validated | Lifecycle governance not yet scaled to all agentic workflows; incident/dispute/remediation closure workflow exists but not fully operationalized; continuous improvement not yet systematic | Scale lifecycle governance to all agentic workflows; operationalize incident/dispute/remediation closure workflow; implement continuous improvement and monitoring |
-| Level 4: Scaled | Lifecycle governance scaled to all agentic workflows; continuous improvement operational; evidence-based validation integrated with audit readiness | All lifecycle responsibility objects operational; evidence-based validation integrated with audit readiness; incident/dispute/remediation closure workflow fully operationalized; continuous improvement and monitoring systematic | Lifecycle governance is operational but may require refinement as agentic systems evolve; new MROs may emerge as agentic AI capabilities expand | Maintain lifecycle governance through continuous improvement; monitor for new lifecycle governance gaps; contribute to industry standards and regulatory dialogue |
+| Level 4: Scaled | Lifecycle governance scaled to all agentic workflows; continuous improvement operational; evidence-based validation integrated with audit readiness | All lifecycle responsibility objects operational; evidence-based validation integrated with audit readiness; incident/dispute/remediation closure workflow fully operationalized; continuous improvement and monitoring systematic | Lifecycle governance is operational but may require refinement as agentic systems evolve; new MROs may emerge as agentic AI capabilities expand | Maintain lifecycle governance through continuous improvement; monitor for new lifecycle governance gaps; where appropriate, contribute learnings to standards, industry, or regulatory dialogue |
 
 **Interpretation:** Maturity assessment helps enterprises understand where they are and what gaps exist. Most enterprises deploying agentic AI systems are at Level 0 or Level 1. The roadmap provides a staged path from Level 0 to Level 4.
 
@@ -103,9 +101,9 @@ Enterprises should operationalize lifecycle responsibility objects in stages. Th
 | Stage 2: Responsibility | Map human roles to MAS responsibilities and implement accepted outcome compliance | Define role assignment records; implement acceptance records; add review and escalation workflow; implement closure acceptance workflow | Human-role-to-MAS responsibility mapping; acceptance records; review records; escalation records; closure acceptance records | Accountable human role exists for every agent outcome; accepted outcome compliance workflow operational |
 | Stage 3: Evidence | Convert orchestration logs into partitioned evidence chains | Implement MAS evidence partitioning; add evidence export capability with selective disclosure; implement evidence chain integrity validation | Partitioned evidence chains; evidence export logs; partition policy records; selective disclosure records; evidence integrity validation records | Evidence chains can reconstruct authority, plan, confirmation, tool action, and accepted outcome; evidence can be selectively disclosed to auditors |
 | Stage 4: Privacy | Map privacy and data subject rights across lifecycle surfaces | Implement privacy/GDPR lifecycle mapping; add data subject rights workflow; implement evidence minimization and selective disclosure policy | Data flow records; retention policy records; data subject rights workflow records; evidence minimization records; selective disclosure policy records | Privacy is mapped across lifecycle surfaces; data subject rights can be exercised without destroying evidence; evidence minimization policy operational |
-| Stage 5: Validation | Prepare for evidence-based validation and third-party review | Implement privacy-preserving validation protocol (e.g., evidence-based validation pattern from Chapter 14); add disclosure profile and redaction profile; implement hash manifests and verdict hashes | Validation protocol records; disclosure profile records; redaction profile records; hash manifests; verdict hashes | Evidence can be validated by third parties without exposing sensitive data; validation results are privacy-preserving and tamper-evident |
+| Stage 5: Validation | Prepare for evidence-based validation and qualified review | Implement privacy-preserving validation protocol (e.g., evidence-based validation pattern from Chapter 14); add disclosure profile and redaction profile; implement hash manifests and verdict hashes; plan qualified review, which may include internal governance review, audit review, validation provider review, or other context-appropriate reviewers | Validation protocol records; disclosure profile records; redaction profile records; hash manifests; verdict hashes | Evidence can be reviewed by qualified reviewers without exposing sensitive data; validation results are privacy-preserving and tamper-evident |
 | Stage 6: Remediation | Operationalize incident, dispute, and remediation closure workflows | Implement incident records; add affected outcome list generation; implement remediation records; add closure acceptance workflow; implement customer impact assessment | Incident records; affected outcome records; remediation records; closure acceptance records; customer impact assessment records | Incidents are tracked with responsible owners; affected outcomes are identified; remediation is documented; closure is accepted by responsible owner |
-| Stage 7: Scale | Scale lifecycle governance through integration and continuous improvement | Integrate lifecycle governance with existing enterprise controls (Table T-17-03); extend to all agentic workflows; implement continuous improvement and monitoring; contribute to industry standards | Lifecycle governance integrated with audit, privacy, security, procurement, incident response, compliance, model risk, and business continuity; continuous improvement operational | Lifecycle governance is operational for all agentic workflows; continuous improvement and monitoring systematic; enterprise contributes to industry standards |
+| Stage 7: Scale | Scale lifecycle governance through integration and continuous improvement | Integrate lifecycle governance with existing enterprise controls (Table T-17-03); extend to all agentic workflows; implement continuous improvement and monitoring; where appropriate, contribute learnings to standards, industry, or regulatory dialogue | Lifecycle governance integrated with audit, privacy, security, procurement, incident response, compliance, model risk, and business continuity; continuous improvement operational | Lifecycle governance is operational for all agentic workflows; continuous improvement and monitoring systematic; enterprise may contribute learnings to standards, industry, or regulatory dialogue where appropriate |
 
 **Interpretation:** The Stage 0-to-7 roadmap provides a practical path from lifecycle governance awareness to scaled operational capability. Each stage builds on the previous stage and produces measurable outputs and success indicators.
 
@@ -121,7 +119,7 @@ Enterprises should measure progress using lifecycle responsibility objects as ev
 |----------|-----------|-----------|----------|
 | Gap analysis | RCCS dimensions identify regulatory compliance coverage gaps (e.g., RCCS-04 Record-Keeping, RCCS-06 Human Oversight) | ALCS dimensions identify lifecycle responsibility object gaps (e.g., ALCS-02 Delegated Authority Boundary, ALCS-04 Accepted Outcome Compliance, ALCS-06 Responsibility Transfer Across Agents) | RCCS/ALCS are analytical tools, not legal compliance scores; gaps identified by RCCS/ALCS require organizational interpretation and legal review |
 | Pilot project baseline | RCCS baseline measures regulatory compliance coverage before pilot; RCCS post-pilot measures improvement | ALCS baseline measures lifecycle responsibility object maturity before pilot; ALCS post-pilot measures improvement | RCCS/ALCS baselines are internal analytical tools; they do not prove legal compliance or regulatory approval |
-| System evaluation | RCCS posture helps evaluate whether a system provides regulatory compliance coverage primitives | ALCS posture helps evaluate whether a system provides lifecycle responsibility object primitives | RCCS/ALCS postures are analytical tools for system comparison (Chapter 11-12); they are not product rankings, certifications, or procurement recommendations |
+| System evaluation | RCCS posture helps evaluate whether a system provides regulatory compliance coverage primitives | ALCS posture helps evaluate whether a system provides lifecycle responsibility object primitives | RCCS/ALCS postures are analytical tools for system posture review (Chapter 11-12); they are not product rankings, certifications, or procurement recommendations |
 | Audit readiness | RCCS dimensions map to audit control objectives (e.g., RCCS-04 Record-Keeping → audit trail requirements) | ALCS dimensions map to lifecycle responsibility objects that auditors may request (e.g., ALCS-08 MAS Evidence Partitioning → evidence reconstruction) | RCCS/ALCS help prepare for audit but do not replace audit opinions, assurance reports, or legal compliance determinations |
 | Evidence-based validation | RCCS dimensions help identify what regulatory compliance evidence should be validated | ALCS dimensions help identify what lifecycle responsibility objects should be validated | RCCS/ALCS help scope validation but do not replace validation protocols, validation providers, or validation results |
 | Continuous improvement | RCCS dimensions help monitor regulatory compliance coverage over time | ALCS dimensions help monitor lifecycle responsibility object maturity over time | RCCS/ALCS are monitoring tools, not legal compliance scores; continuous improvement requires organizational governance, not just scoring |
@@ -142,11 +140,11 @@ Scaling from pilot to production requires organizational commitment, integration
 
 4. **Implement continuous improvement:** Monitor lifecycle governance effectiveness using lifecycle responsibility objects as evidence artifacts. Use RCCS/ALCS as analytical tools to identify gaps and measure progress. Implement continuous improvement workflows to address gaps and refine lifecycle governance as agentic systems evolve.
 
-5. **Prepare for evidence-based validation:** Implement privacy-preserving validation protocols (e.g., evidence-based validation pattern from Chapter 14) to prepare for third-party review. Ensure that evidence can be validated without exposing sensitive data.
+5. **Prepare for evidence-based validation:** Implement privacy-preserving validation protocols (e.g., evidence-based validation pattern from Chapter 14) to prepare for qualified review, which may include internal governance review, audit review, validation provider review, or other context-appropriate reviewers. Ensure that evidence can be reviewed without exposing sensitive data.
 
 6. **Use Chapter 15 scenarios as test cases:** Use Chapter 15 enterprise failure scenarios as test cases for lifecycle governance design. Ensure that lifecycle governance prevents or mitigates the eight failure scenarios: authority boundary failure, evidence chain failure, accepted outcome failure, cross-project reuse failure, privacy validation failure, processor chain failure, vendor/runtime substitution failure, and remediation closure failure.
 
-7. **Contribute to industry standards:** As lifecycle governance matures, contribute to industry standards and regulatory dialogue. Share learnings with industry peers, participate in standards development, and engage with regulators to inform policy development.
+7. **Contribute learnings where appropriate:** As lifecycle governance matures, where appropriate, contribute learnings to standards, industry, or regulatory dialogue. Enterprises may share learnings with industry peers, participate in standards development, or engage with regulators where doing so fits their role, jurisdiction, and risk posture.
 
 **Scaling is not a one-time event. It is a continuous process that requires organizational commitment, integration with existing controls, and continuous improvement.**
 
@@ -161,9 +159,3 @@ Chapter 17 has presented an adoption roadmap for enterprises implementing AI Age
 The white paper has defined the missing layer (Chapter 2), identified the sixteen Missing Regulatory Objects (Chapter 6), introduced RCCS and ALCS as analytical frameworks (Chapters 7-8), mapped existing systems (Chapters 11-12), examined evidence-based validation patterns (Chapter 14), demonstrated enterprise failure scenarios (Chapter 15), and presented an adoption roadmap (Chapter 17).
 
 Chapter 18 will conclude the white paper with a restatement of the core thesis, a summary of contributions, a statement of boundaries, and a call to action.
-
----
-
-**End of Chapter 17**
-
-**Chapter 17 Status:** FILLED (Phase 1B-7; Phase 1C follow-up reviewed) — Adoption Roadmap complete; taxonomy and evidence-level wording harmonized.

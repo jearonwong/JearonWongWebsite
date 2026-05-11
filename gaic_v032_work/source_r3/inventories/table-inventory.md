@@ -231,19 +231,19 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-G-08 | CrewAI Provisional Assessment | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D, patched Wave 5) | Landscape required; 6 columns; uses Claim-Level Support Status |
 | T-G-09 | Cross-System Pattern Summary | Appendix G | ✓ Filled (1B-9, corrected 1B-9C/1B-9D, patched Wave 5) | Landscape recommended; 5 columns; uses Claim-Level Support Status |
 | T-H-01 | Enterprise Procurement Scorecard | Appendix H | ✓ Filled (1B-10) | Landscape required; 6 columns; split if buyer-note text clips |
-| T-H-02 | Vendor Evidence Request Template | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
+| T-H-02 | Vendor Evidence Request Template | Appendix H | ✓ Filled (1B-10, patched Wave 7) | Column renamed to Publication / Enterprise Review Note; landscape recommended; Phase 1D clipping check required |
 | T-H-03 | Procurement Red Flag Checklist | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-H-04 | Buyer Interpretation Boundary | Appendix H | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
-| T-I-01 | Source Audit Register | Appendix I | ✓ Filled (1B-10) | Landscape required; 7 columns; high clipping risk after Phase 1C source updates |
+| T-I-01 | Source Audit Register | Appendix I | ✓ Filled (1B-10, patched Wave 7) | Publication Follow-up Action column; landscape required; 7 columns; high clipping risk after Phase 1C source updates |
 | T-I-02 | URL Verification Queue | Appendix I | ✓ Filled (1B-10) | Landscape required; 6 columns; Phase 1D clipping check required |
 | T-I-03 | Evidence Level Reclassification Rules | Appendix I | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
-| T-I-04 | Source Coverage Matrix Validation Checklist | Appendix I | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
+| T-I-04 | Source Coverage Matrix Validation Checklist | Appendix I | ✓ Filled (1B-10, patched Wave 7) | Publication Follow-up Action column; landscape recommended; Phase 1D clipping check required |
 | T-J-01 | v0.3.2 Gap Closure Coverage Matrix | Appendix J | ✓ Filled (1B-10) | Landscape required; 6 columns; high clipping risk |
-| T-J-02 | Phase 1C Deferred Items | Appendix J | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
+| T-J-02 | Phase 1C Items and Current Disposition | Appendix J | ✓ Filled (1B-10, patched Wave 7) | Former Phase 1C deferrals converted to current disposition framing; landscape recommended; Phase 1D clipping check required |
 | T-J-03 | Phase 1D Layout / Publication Items | Appendix J | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
 | T-K-01 | Editorial Remediation Record | Appendix K | ✓ Filled (1B-10) | Landscape required; 6 columns; high clipping risk |
 | T-K-02 | Boundary Hardening Record | Appendix K | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
-| T-K-03 | Phase 1C / 1D Remaining Editorial Actions | Appendix K | ✓ Filled (1B-10) | Landscape recommended; Phase 1D clipping check required |
+| T-K-03 | Remaining Publication QA Actions | Appendix K | ✓ Filled (1B-10, patched Wave 7) | Active remaining work targets Phase 1D / publication-candidate QA; landscape recommended; Phase 1D clipping check required |
 
 ---
 

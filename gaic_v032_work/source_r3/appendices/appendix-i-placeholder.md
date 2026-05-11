@@ -1,14 +1,12 @@
 # Appendix I — Source Audit and Revalidation Register
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Filled — Phase 1C claim-level source binding applied  
-**Phase:** 1B-10 / 1C Follow-up
 
 ---
 
 ## I.0 Source Audit Boundary
 
-This appendix provides a source audit register for Phase 1C and Phase 1D handoff. It tracks source classes, citation status, evidence level, claim-binding status, and required publication follow-up actions.
+This appendix provides a source audit register for the completed Phase 1C source review record and Phase 1D publication handoff. It tracks source classes, citation status, evidence level, claim-binding status, and required publication follow-up actions.
 
 This appendix was created before Phase 1C as a revalidation workflow. Phase 1C cleanup updated the citation inventory and source coverage matrix with URL/entry-point review status. Phase 1C follow-up then added the claim evidence register and reviewed high-risk product/protocol claims at claim level. Appendix G is now revalidated provisional, not final.
 
@@ -26,7 +24,7 @@ The source audit register uses the canonical evidence levels:
 - **L4 (Vendor Claim):** 0.55
 - **L5 (Author Inference):** 0.35
 
-Evidence levels describe source confidence for analytical scoring. They do not make a source legally sufficient, current, complete, or operationally validated. Evidence levels may change during Phase 1C if source type, source currency, or claim support changes.
+Evidence levels describe source confidence for analytical scoring. They do not make a source legally sufficient, current, complete, or operationally validated. Evidence levels may change if source type, source currency, or claim support changes during future source review.
 
 ---
 
@@ -34,7 +32,7 @@ Evidence levels describe source confidence for analytical scoring. They do not m
 
 **Table T-I-01: Source Audit Register**
 
-| Source ID | Source Name | Source Class | Evidence Level | Used In | Current Status | Phase 1C Action |
+| Source ID | Source Name | Source Class | Evidence Level | Used In | Current Status | Publication Follow-up Action |
 |-----------|-------------|--------------|----------------|---------|----------------|-----------------|
 | EU-AI-ACT | EU AI Act articles referenced in baseline chapters | Legal / regulatory text | L1 | Chapters 4, 7, 8, Appendices E/F | Referenced; citation rendering pending global check | Verify article references and citation formatting |
 | GDPR | GDPR articles referenced in privacy and data governance sections | Legal / regulatory text | L1 | Chapters 4, 6, 8, Appendices E/F | Referenced; citation rendering pending global check | Verify article references and privacy mapping language |
@@ -59,9 +57,9 @@ Evidence levels describe source confidence for analytical scoring. They do not m
 
 ---
 
-## I.3 Phase 1C Revalidation Workflow
+## I.3 Source Review and Publication Handoff Workflow
 
-Phase 1C source revalidation should follow a controlled workflow:
+Source review and publication handoff should follow a controlled workflow:
 
 1. Freeze the active Markdown source set for validation.
 2. Confirm the citation inventory status and source coverage matrix status.
@@ -69,7 +67,7 @@ Phase 1C source revalidation should follow a controlled workflow:
 4. Revalidate every L2 product documentation source for currency, scope, and claim support.
 5. Confirm MPLP documentation and Validation Lab URL placeholders.
 6. Reclassify evidence levels only when documentation supports the change.
-7. Record all source changes and unresolved gaps in Appendix I or a Phase 1C validation report.
+7. Record all source changes and unresolved gaps in Appendix I or a publication QA report.
 
 Phase 1C follow-up completed the claim-level review path at source-entry and claim-disposition level. It did not convert L2 documentation into audit proof or final vendor assessment evidence.
 
@@ -110,7 +108,7 @@ Phase 1C follow-up located or validated official source entry points for the hig
 | L2 product documentation | Third-party audit report validates implementation detail | L3 | Audit report reference, scope, date, and control mapping | Audit scope must match claim scope |
 | L3 audit report | Audit scope does not cover the claim or is not accessible | L4 or L5 | Gap explanation and reviewer note | Do not infer coverage from report existence |
 | L1 legal text | Legal text establishes regulatory baseline but not system implementation | L1 for baseline only | Citation and claim boundary note | Do not use legal text alone as implementation evidence |
-| Any level | Source is unverifiable during Phase 1C | Lower confidence level or unresolved | Verification attempt log and unresolved issue record | Preserve uncertainty explicitly |
+| Any level | Source is unverifiable during source review | Lower confidence level or unresolved | Verification attempt log and unresolved issue record | Preserve uncertainty explicitly |
 
 ---
 
@@ -118,7 +116,7 @@ Phase 1C follow-up located or validated official source entry points for the hig
 
 **Table T-I-04: Source Coverage Matrix Validation Checklist**
 
-| Coverage Area | Expected Source Type | Current Status | Gap | Phase 1C Action |
+| Coverage Area | Expected Source Type | Current Status | Gap | Publication Follow-up Action |
 |---------------|----------------------|----------------|-----|-----------------|
 | Legal baseline claims | L1 legal / regulatory text | Referenced in baseline chapters | Citation rendering and article mapping not globally validated | Verify all legal citations and claim boundaries |
 | Standards baseline claims | L1 formal standards | Referenced in baseline chapters | Citation rendering and standard references not globally validated | Verify all standards citations |
@@ -130,7 +128,3 @@ Phase 1C follow-up located or validated official source entry points for the hig
 | Source coverage matrix | Internal ledger | PHASE 1C CLAIM-LEVEL REVIEWED — PROVISIONAL SOURCE BINDING COMPLETE | Citation rendering and claim-label preservation not yet verified | Verify source labels during Phase 1D/publication QA |
 
 The source coverage matrix has been updated during Phase 1C as a coverage ledger and during Phase 1C follow-up as a claim-level source-binding ledger. Final publication still requires page-level citation pinning and rendering QA. Appendix G remains revalidated provisional, not final.
-
----
-
-**End of Appendix I**

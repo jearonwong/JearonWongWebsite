@@ -1,8 +1,6 @@
 # Appendix H — Enterprise Procurement Scorecard
 
 **Version:** v0.3.2-FRC-R3  
-**Status:** Filled  
-**Phase:** 1B-10
 
 ---
 
@@ -14,7 +12,7 @@ This appendix is a buyer diligence aid. It is not a procurement recommendation, 
 
 The scorecard may reference RCCS and ALCS dimensions as analytical prompts. It must not be read as proof that a vendor, platform, protocol, or implementation is legally compliant, operationally effective, enterprise-ready, certified, or regulator-approved.
 
-Appendix G may be used only as an example of qualitative provisional assessment categories. Appendix G provisional postures must not be reused as vendor selection advice before Phase 1C source revalidation.
+Appendix G may be used only as an example of qualitative provisional assessment categories. Appendix G provisional postures must not be reused as vendor selection advice without enterprise-specific review, page-level citation support, and accountable buyer judgment.
 
 ---
 
@@ -29,7 +27,7 @@ Recommended use sequence:
 3. Request evidence from vendors or implementation teams using the evidence request template.
 4. Record gaps, red flags, and unresolved assumptions.
 5. Escalate material gaps to legal, security, privacy, risk, procurement, and business owners.
-6. Defer final evidence interpretation to Phase 1C-style source validation or enterprise review.
+6. Defer final evidence interpretation to publication / enterprise review.
 
 This appendix does not tell an enterprise which system to buy. It supports disciplined questioning and evidence collection.
 
@@ -43,7 +41,7 @@ This appendix does not tell an enterprise which system to buy. It supports disci
 |------|----------------------|-------------------|--------------------------|----------|------------|
 | Governance scope | What agentic workflows, tools, models, and runtime components are covered by the governance controls? | RCCS-03, ALCS-15 | Scope statement, architecture diagram, runtime inventory | Governance claims cover only model behavior while agent workflow remains undefined | Confirm whether controls apply to the full lifecycle, not only model invocation |
 | Risk management | How are agentic risks identified, assessed, mitigated, and monitored over time? | RCCS-01, RCCS-10 | Risk register template, monitoring policy, escalation workflow | Risk management is described only as a general platform feature | Require AI-agent-specific risk handling evidence |
-| Data governance | How are input data, context data, generated evidence, and retained records governed? | RCCS-02, ALCS-10, ALCS-13 | Data flow map, retention policy, access control description | Retention and deletion duties are described without lifecycle evidence handling | Verify privacy and retention conflicts during Phase 1C |
+| Data governance | How are input data, context data, generated evidence, and retained records governed? | RCCS-02, ALCS-10, ALCS-13 | Data flow map, retention policy, access control description | Retention and deletion duties are described without lifecycle evidence handling | Verify privacy and retention conflicts during publication / enterprise review |
 | Documentation | What documentation exists for model use, agent role, tool access, and deployment configuration? | RCCS-03, ALCS-03, ALCS-15 | System card, model card, deployment record, configuration manifest | Documentation exists for models but not agents or tool actions | Separate model documentation from agent lifecycle documentation |
 | Record keeping | What records are created for plans, tool actions, authority grants, evidence packs, reviews, and accepted outcomes? | RCCS-04, ALCS-08, ALCS-12 | Log schema, evidence export sample, retention rule | Logs cannot be connected to lifecycle responsibility objects | Ask whether records are exportable and reviewable |
 | Human oversight | How are human roles mapped to agent responsibilities, review points, and escalation authority? | RCCS-06, ALCS-01, ALCS-02 | Responsibility matrix, review workflow, escalation rule | Human oversight is described as a generic approval button | Require role-to-responsibility mapping |
@@ -77,16 +75,16 @@ The checklist should be completed by a cross-functional review group. Procuremen
 
 **Table T-H-02: Vendor Evidence Request Template**
 
-| Evidence Area | Requested Artifact | Minimum Acceptable Evidence | Preferred Evidence | Phase 1C Revalidation Note |
+| Evidence Area | Requested Artifact | Minimum Acceptable Evidence | Preferred Evidence | Publication / Enterprise Review Note |
 |---------------|--------------------|-----------------------------|--------------------|----------------------------|
-| System boundary | Product scope statement and deployment architecture | Official documentation or implementation description | Versioned architecture record tied to deployed configuration | Revalidate documentation currency in Phase 1C |
+| System boundary | Product scope statement and deployment architecture | Official documentation or implementation description | Versioned architecture record tied to deployed configuration | Review documentation currency before publication or adoption |
 | Human responsibility | Role-to-responsibility mapping | Documented workflow or responsibility matrix | Evidence of review workflow execution and exception handling | Confirm mapping against active enterprise roles |
 | Delegated authority | Authority policy and enforcement description | Product documentation or implementation policy | Validated operational artifact showing grant, denial, and change handling | Verify whether enforcement is built-in or implementer-defined |
 | Tool actions | Tool registry and action record schema | Tool list and logging description | Exportable action records with accountability linkage | Validate record completeness before publication or adoption |
 | Evidence handling | Evidence pack, log export, or audit record sample | Sample artifact with field definitions | Hashable or reviewable evidence artifact with minimization controls | Confirm no sensitive evidence over-disclosure |
-| Privacy lifecycle | Data flow, retention, and deletion policy | Privacy documentation and retention statement | Mapped workflow for retention conflict and data subject request handling | Revalidate against current privacy requirements in Phase 1C |
+| Privacy lifecycle | Data flow, retention, and deletion policy | Privacy documentation and retention statement | Mapped workflow for retention conflict and data subject request handling | Review against current privacy requirements before publication or adoption |
 | Monitoring | Monitoring dashboard or alert workflow | Monitoring documentation | Operational monitoring artifact tied to lifecycle risk events | Confirm monitoring covers agent lifecycle, not only model metrics |
-| Substitution control | Versioning and change approval record | Change management description | Substitution review artifact covering vendor, model, runtime, and tool changes | Revalidate version history and current product state |
+| Substitution control | Versioning and change approval record | Change management description | Substitution review artifact covering vendor, model, runtime, and tool changes | Review version history and current product state |
 
 ---
 
@@ -103,7 +101,7 @@ The checklist should be completed by a cross-functional review group. Procuremen
 | Privacy retention conflict is not addressed | Evidence retention may conflict with privacy obligations | Data subject rights vs evidence retention conflict | Request retention conflict workflow | Legal interpretation remains outside this appendix |
 | Vendor substitution lacks impact review | Model or runtime changes may change lifecycle risk | Reuse and substitution conformance gap | Request change review template | This checklist does not approve substitutions |
 | Claims rely only on marketing material | Evidence confidence is lower than product docs or validated artifacts | Overstated capability posture | Request higher-confidence evidence | Evidence level must be recorded explicitly |
-| Appendix G posture is treated as a purchase conclusion | Appendix G is provisional and not procurement advice | Premature selection based on unrevalidated source posture | Require Phase 1C revalidation before final use | Appendix G categories are illustrative only |
+| Appendix G posture is treated as a purchase conclusion | Appendix G is provisional and not procurement advice | Premature selection based on provisional source posture | Require enterprise-specific review, page-level citation support, and accountable buyer judgment before final use | Appendix G categories are illustrative only |
 
 ---
 
@@ -121,7 +119,3 @@ The checklist should be completed by a cross-functional review group. Procuremen
 | Deployment gate | Checklist for unresolved assumptions | Certification or approval | Enterprise governance board or equivalent owner |
 
 Procurement decisions remain enterprise decisions. This appendix helps buyers ask better questions; it does not replace accountable human judgment.
-
----
-
-**End of Appendix H**

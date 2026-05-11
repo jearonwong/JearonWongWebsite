@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 6)
+**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 7)
 
 ## Reconstruction Strategy
 
@@ -33,7 +33,7 @@ R3 uses phased reconstruction:
 12. **Phase 1D-2:** Publication design reflow and JearonWong-aligned designed draft generation (◐ PUBLICATION DRAFT GENERATED / QA REQUIRED)
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
-15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-6 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
+15. **Phase 1D-5:** Full-text editorial review pack and Waves 1-7 patches plus Wave 4A source restoration (◐ HUMAN EDITORIAL REVIEW REQUIRED)
 
 ## Source Hierarchy
 
@@ -437,6 +437,43 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 6 Status:** ◐ PATCH APPLIED / WAVES 7-8 PENDING / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-5 Wave 7 Notes (May 11, 2026)
+
+**Scope:** Chapters 17-18 plus Appendices H-K adoption, conclusion, procurement, source-audit, gap-closure, and remediation cleanup.
+
+**Review result:**
+
+- Adoption/conclusion/governance appendix direction: PASS.
+- Publication-source cleanliness: FAIL before patch.
+- Post-Phase-1C wording consistency: FAIL before patch.
+- Procurement and system-comparison boundary discipline: FAIL before patch.
+- Publication candidate: BLOCKED.
+
+**Actions completed:**
+
+1. Removed publication-facing internal `Status` / `Phase` metadata and end/status source markers from Chapters 17-18 and Appendices H-K.
+2. Replaced F-11 code-style adoption lane with a formal figure block and boundary note.
+3. Reframed Chapter 17 validation language from third-party-only review to qualified review, including internal governance, audit, validation provider, or other context-appropriate reviewers.
+4. Softened Chapter 17 standards/regulatory dialogue language to contextual contribution of learnings where appropriate.
+5. Updated Chapter 18 RCCS/ALCS practical-use language to analytical posture review rather than system comparison.
+6. Updated Chapter 18 system-mapping language to qualitative, source-qualified posture differences across system categories.
+7. Updated Chapter 18 failure-scenario contribution language to illustrative, hypothetical scenarios.
+8. Normalized Appendix H/I/J/K post-Phase-1C language so Phase 1C cleanup and claim-level source binding are complete and active remaining work is Phase 1D/publication-candidate QA.
+9. Updated table inventory entries for T-H-02, T-I-01, T-I-04, T-J-02, and T-K-03.
+
+**Boundary discipline:**
+
+- Canonical MRO/RCCS/ALCS definitions remain unchanged.
+- Substantive content remains present.
+- Procurement scorecard remains a diligence aid, not a recommendation, ranking, certification checklist, or legal-compliance determination.
+- RCCS/ALCS remain analytical tools, not legal compliance scores.
+- System mappings remain qualitative, source-qualified, provisional/non-ranking context.
+- No procurement recommendation, vendor ranking, legal compliance proof, certification, regulatory approval, audit opinion, insurance guarantee, or vendor endorsement was introduced.
+- No DOCX/PDF artifacts were regenerated.
+- No final publication candidate was declared.
+
+**Phase 1D-5 Wave 7 Status:** ◐ PATCH APPLIED / WAVE 8 PENDING / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
