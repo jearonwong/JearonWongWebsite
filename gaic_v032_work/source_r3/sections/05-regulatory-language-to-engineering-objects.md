@@ -70,6 +70,8 @@ These objects are not proposed legal mandates. They are engineering and assuranc
 
 Existing regulation establishes the direction of travel. Agentic systems require additional engineering object models to implement that direction faithfully.
 
+This translation is what makes RCCS-M possible. Without MROs, regulatory coverage remains RCCS-T: a traditional view of governance primitives such as documentation, oversight, record-keeping, transparency, security, accountability, contestability, and monitoring. With MROs, the same coverage can be tested against agentic lifecycle responsibility objects. RCCS-M is the author analytical profile for that MRO-adjusted coverage.
+
 ## 5.5 Bridge to Chapter 6
 
 The following chapter defines sixteen Missing Regulatory Objects. These are not proposed legal mandates. They are engineering objects that appear necessary if existing regulatory ideals are to become auditable in multi-agent execution.
@@ -93,4 +95,4 @@ The objects are designed to make visible the difference between model governance
 - Vendor / model / runtime substitution conformance
 - Incident, dispute, and remediation closure
 
-The bridge from this chapter to Chapter 6 is direct: regulatory language establishes what must be proven; Missing Regulatory Objects define how to prove it in agentic workflows.
+The bridge from this chapter to Chapter 6 is direct: regulatory language establishes what must be proven; Missing Regulatory Objects define how to prove it in agentic workflows. In scoring terms, this is the bridge from RCCS-T to RCCS-M.

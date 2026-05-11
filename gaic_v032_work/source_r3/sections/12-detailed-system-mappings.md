@@ -6,14 +6,15 @@
 
 ## 12.0 Purpose of Detailed System Mappings
 
-This chapter performs detailed system mappings for the eight systems introduced in Chapter 11. It evaluates public evidence of governance primitives and lifecycle responsibility objects against RCCS and ALCS dimensions. The purpose is to make visible which systems provide which capabilities, where evidence is strong, where evidence is weak, and where lifecycle gaps remain.
+This chapter performs detailed system mappings for the eight systems introduced in Chapter 11. It evaluates public evidence of governance primitives and lifecycle responsibility objects against RCCS-T, RCCS-M, and ALCS dimensions. The purpose is to make visible which systems provide traditional governance coverage, which systems expose MRO-adjusted lifecycle responsibility semantics, where evidence is strong, where evidence is weak, and where lifecycle gaps remain.
 
 This chapter is not a product ranking. It is not a legal compliance judgment. It is not a procurement recommendation. It is not an endorsement or criticism of any vendor. It is a responsibility-semantics mapping based on public evidence and author inference where explicitly disclosed.
 
 The chapter evaluates whether systems expose governance primitives and lifecycle responsibility objects. It does not evaluate product quality, market leadership, pricing, procurement suitability, developer experience, or legal compliance. Those are different questions that depend on organizational context, deployment requirements, risk appetite, budget, technical stack, and strategic priorities.
 
 **What this chapter evaluates:**
-- Whether a system defines governance primitives for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring (RCCS dimensions)
+- Whether a system defines governance primitives for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring (RCCS-T dimensions)
+- Whether those governance obligations can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics (RCCS-M interpretation)
 - Whether a system defines lifecycle responsibility objects for human-role-to-MAS mapping, delegated authority boundaries, agent role distinction, accepted outcome compliance, tool-action liability, responsibility transfer, authority drift detection, evidence partitioning, cross-project reuse, privacy lifecycle mapping, privacy-preserving validation, evidence minimization, data subject rights reconciliation, processor chain tracking, and vendor substitution conformance (ALCS dimensions)
 - Whether public documentation, API specifications, protocol definitions, or reproducible evidence artifacts support the evaluation
 - Where evidence is weak or unavailable, whether author inference is explicitly disclosed
@@ -36,7 +37,7 @@ The chapter evaluates whether systems expose governance primitives and lifecycle
 
 ## 12.1 Mapping Method and Evidence Boundary
 
-The mapping method evaluates systems against RCCS and ALCS dimensions using the evidence hierarchy established in Chapter 1 and the scoring rubrics defined in Chapters 7 and 8.
+The mapping method evaluates systems against RCCS-T, RCCS-M, and ALCS dimensions using the evidence hierarchy established in Chapter 1 and the scoring rubrics defined in Chapters 7 and 8. RCCS-T captures traditional regulatory/governance coverage. RCCS-M captures MRO-adjusted regulatory coverage. ALCS captures lifecycle responsibility conformance maturity.
 
 ### Evidence Hierarchy
 
@@ -48,7 +49,7 @@ The evidence hierarchy used in this chapter is:
 - **L4 — Vendor Claim / Marketing Page / Announcement:** Vendor white papers, product pages, blogs, announcements, or positioning material.
 - **L5 — Author Inference / Analytical Interpretation:** Author inference, conceptual analysis, or mapping judgment. Explicitly disclosed.
 
-The canonical evidence multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L5=0.35. Protocol specifications are treated as L2 unless they are binding legal or standards text. Mapping a product or protocol feature to RCCS/ALCS remains an analytical interpretation unless the source directly defines the lifecycle governance object.
+The canonical evidence multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L5=0.35. Protocol specifications are treated as L2 unless they are binding legal or standards text. Mapping a product or protocol feature to RCCS-T, RCCS-M, or ALCS remains an analytical interpretation unless the source directly defines the lifecycle governance object.
 
 ### Evidence Limitation
 
@@ -93,7 +94,7 @@ Each system section in this chapter uses the same structure:
 Briefly states:
 - What the system primarily is
 - What it is strong at
-- Why it is relevant to RCCS / ALCS
+- Why it is relevant to RCCS-T / RCCS-M / ALCS
 - What this paper does and does not infer
 
 ### Evidence Basis
@@ -104,12 +105,12 @@ Uses citation placeholders and evidence levels. Includes a mini-table:
 |---------------|-------------|----------------|--------------------|
 | [Area] | [Type] | [L1-L5] | [source-bound capability surface / narrowed claim / L5 analytical interpretation / explicit non-blocking limitation] |
 
-### RCCS Mapping Summary
+### RCCS-T / RCCS-M Mapping Summary
 
 Compact table:
 
-| RCCS Dimension | Mapping Strength | Evidence Basis | Notes |
-|----------------|------------------|----------------|-------|
+| RCCS Layer / Dimension | Mapping Strength | Evidence Basis | Notes |
+|------------------------|------------------|----------------|-------|
 | [Dimension] | [Strong/Moderate/Partial/Weak/Not Evaluated] | [L1-L5] | [Notes] |
 
 ### ALCS Mapping Summary
@@ -132,7 +133,7 @@ Lists 3-5 specific gaps or revalidation needs.
 
 Each system section closes with:
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement.*
 
 ---
 
@@ -140,13 +141,13 @@ Each system section closes with:
 
 ### System Positioning
 
-MPLP (Multi-Agent Lifecycle Protocol) is a lifecycle protocol path designed to expose lifecycle responsibility objects as first-class protocol primitives. It is relevant to RCCS and ALCS because its public protocol semantics can be analytically mapped to human-role-to-MAS mapping, delegated authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance.
+MPLP (Multi-Agent Lifecycle Protocol) is a lifecycle protocol path designed to expose lifecycle responsibility objects as first-class protocol primitives. It is relevant to RCCS-T, RCCS-M, and ALCS because its public protocol semantics can be analytically mapped to human-role-to-MAS mapping, delegated authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance.
 
-MPLP is strong at lifecycle protocol semantics. It defines governance primitives and lifecycle objects as protocol-level constructs rather than application-level features. This makes MPLP relevant for systems that need protocol-level lifecycle responsibility semantics across agents, tools, vendors, and organizational boundaries. The GAIC MRO/ALCS mapping remains an author analytical mapping based on those protocol semantics, not an MPLP official compliance claim.
+MPLP is strong at lifecycle protocol semantics. It defines governance primitives and lifecycle objects as protocol-level constructs rather than application-level features. This means MPLP's traditional RCCS-T product-platform coverage may be limited, while its RCCS-M and ALCS posture may be strong where protocol semantics map to MRO-like objects. The GAIC MRO/RCCS-M/ALCS mapping remains an author analytical mapping based on those protocol semantics, not an MPLP official compliance claim.
 
 **What this paper evaluates:**
 - Whether MPLP protocol specification defines governance primitives and lifecycle objects
-- Whether MPLP semantics map to RCCS and ALCS dimensions
+- Whether MPLP semantics map to RCCS-T, RCCS-M, and ALCS dimensions
 - Whether MPLP provides protocol-level semantics that can support lifecycle responsibility analysis
 
 **What this paper does not infer:**
@@ -170,12 +171,14 @@ Citation placeholders:
 - [MPLP-DOCS]
 - [MPLP-SPEC]
 
-### RCCS Mapping Summary
+### RCCS-T / RCCS-M Mapping Summary
 
-**Table T-12-02: MPLP RCCS Mapping Summary**
+**Table T-12-02: MPLP RCCS-T / RCCS-M Mapping Summary**
 
-| RCCS Dimension | Mapping Strength | Evidence Basis | Notes |
-|----------------|------------------|----------------|-------|
+| RCCS Layer / Dimension | Mapping Strength | Evidence Basis | Notes |
+|------------------------|------------------|----------------|-------|
+| RCCS-T overall product-platform coverage | Partial to Moderate | L2 + L5 reviewed | MPLP is not an enterprise governance SaaS and does not by itself provide full productized governance dashboards, cloud controls, or organizational policy workflows |
+| RCCS-M overall MRO-adjusted coverage | Strong | L2 + L5 reviewed | Protocol semantics map strongly to authority, evidence, accepted-outcome, responsibility-transfer, and substitution objects; mapping remains author analytical where not directly stated |
 | Risk Management | Moderate | L2 + L5 reviewed | Protocol may define risk boundaries; implementation maturity requires validation |
 | Data Governance | Moderate | L2 + L5 reviewed | Protocol may define data lineage; implementation requires validation |
 | Documentation | Strong | L2 + L5 reviewed | Protocol specification provides documentation primitives |
@@ -209,7 +212,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. MPLP is one example of a lifecycle protocol path. It is not required for compliance. It is not a certification program. It is not a regulator or legal authority.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. MPLP is one example of a lifecycle protocol path. It is not required for compliance. It is not a certification program. It is not a regulator or legal authority.*
 
 ---
 
@@ -217,14 +220,14 @@ Citation placeholders:
 
 ### System Positioning
 
-IBM watsonx.governance is an enterprise AI governance platform designed for policy enforcement, model risk management, regulatory compliance coverage, and AI lifecycle management. It is relevant to RCCS and ALCS because it provides enterprise-grade governance capabilities for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+IBM watsonx.governance is an enterprise AI governance platform designed for policy enforcement, model risk management, regulatory compliance coverage, and AI lifecycle management. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides enterprise-grade governance capabilities for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring, while lifecycle responsibility-object coverage remains analytically tested.
 
 IBM watsonx.governance is strong at enterprise AI governance. It provides policy enforcement, model governance, risk management workflows, compliance tracking, and enterprise integration capabilities. This makes IBM watsonx.governance relevant for organizations that require regulatory compliance coverage across the AI lifecycle.
 
 **What this paper evaluates:**
 - Whether IBM watsonx.governance provides governance primitives for RCCS dimensions
 - Whether IBM watsonx.governance provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - IBM watsonx.governance is not evaluated for product quality, market leadership, or procurement suitability.
@@ -283,7 +286,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. IBM watsonx.governance is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Model governance and AI governance are not identical to agentic lifecycle governance.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. IBM watsonx.governance is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Model governance and AI governance are not identical to agentic lifecycle governance.*
 
 ---
 
@@ -291,14 +294,14 @@ Citation placeholders:
 
 ### System Positioning
 
-Microsoft Azure AI Foundry is a cloud-native AI platform designed for model management, responsible AI tooling, content safety, tracing, evaluation, and enterprise integration. It is relevant to RCCS and ALCS because it provides cloud platform capabilities for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, and monitoring.
+Microsoft Azure AI Foundry is a cloud-native AI platform designed for model management, responsible AI tooling, content safety, tracing, evaluation, and enterprise integration. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides cloud platform capabilities for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, and monitoring, while MRO-adjusted lifecycle coverage remains implementation-dependent.
 
 Microsoft Azure AI Foundry is strong at cloud AI platform capabilities. It provides model access, responsible AI tooling, content safety, tracing, observability, evaluation, and enterprise integration. This makes Microsoft Azure AI Foundry relevant for organizations that require cloud-native AI platform capabilities with responsible AI tooling.
 
 **What this paper evaluates:**
 - Whether Microsoft Azure AI Foundry provides governance primitives for RCCS dimensions
 - Whether Microsoft Azure AI Foundry provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - Microsoft Azure AI Foundry is not evaluated for product quality, market leadership, or procurement suitability.
@@ -358,7 +361,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. Microsoft Azure AI Foundry is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Responsible AI tooling and cloud platform features are not identical to lifecycle responsibility objects.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. Microsoft Azure AI Foundry is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Responsible AI tooling and cloud platform features are not identical to lifecycle responsibility objects.*
 
 ---
 
@@ -366,14 +369,14 @@ Citation placeholders:
 
 ### System Positioning
 
-AWS Bedrock / Guardrails / AgentCore is a cloud AI service suite designed for model access, guardrails, agent orchestration, and enterprise security integration. It is relevant to RCCS and ALCS because it provides cloud service capabilities for guardrails, security, access control, monitoring, and agent orchestration.
+AWS Bedrock / Guardrails / AgentCore is a cloud AI service suite designed for model access, guardrails, agent orchestration, and enterprise security integration. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides cloud service capabilities for guardrails, security, access control, monitoring, and agent orchestration, while lifecycle responsibility-object coverage remains source-qualified and analytical.
 
 AWS Bedrock / Guardrails / AgentCore is strong at cloud AI services. It provides model access, guardrails, agent orchestration, tool use, and enterprise security integration. This makes AWS Bedrock / Guardrails / AgentCore relevant for organizations that require cloud-native AI services with guardrails and agent orchestration.
 
 **What this paper evaluates:**
 - Whether AWS Bedrock / Guardrails / AgentCore provides governance primitives for RCCS dimensions
 - Whether AWS Bedrock / Guardrails / AgentCore provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - AWS Bedrock / Guardrails / AgentCore is not evaluated for product quality, market leadership, or procurement suitability.
@@ -434,7 +437,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. AWS Bedrock / Guardrails / AgentCore is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Guardrails and tool permission are not identical to delegated authority boundary.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. AWS Bedrock / Guardrails / AgentCore is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Guardrails and tool permission are not identical to delegated authority boundary.*
 
 ---
 
@@ -442,14 +445,14 @@ Citation placeholders:
 
 ### System Positioning
 
-Google Vertex AI / ADK / Model Armor is a cloud AI platform suite designed for model management, agent development tooling, and model/content safety controls. It is relevant to RCCS and ALCS because it provides cloud platform capabilities for model governance, agent development, safety evaluation, content filtering, and enterprise integration.
+Google Vertex AI / ADK / Model Armor is a cloud AI platform suite designed for model management, agent development tooling, and model/content safety controls. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides cloud platform capabilities for model governance, agent development, safety evaluation, content filtering, and enterprise integration, while MRO-adjusted lifecycle coverage remains evidence-qualified.
 
 Google Vertex AI / ADK / Model Armor is strong at cloud AI platform capabilities, agent development tooling, and model safety controls. It provides model access, agent development kit (ADK), model armor safety features, evaluation frameworks, and enterprise security integration. This makes Google Vertex AI / ADK / Model Armor relevant for organizations that require cloud-native AI platform capabilities with agent development and safety tooling.
 
 **What this paper evaluates:**
 - Whether Google Vertex AI / ADK / Model Armor provides governance primitives for RCCS dimensions
 - Whether Google Vertex AI / ADK / Model Armor provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - Google Vertex AI / ADK / Model Armor is not evaluated for product quality, market leadership, or procurement suitability.
@@ -511,7 +514,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. Google Vertex AI / ADK / Model Armor is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Model safety, content safety, and platform governance are not identical to lifecycle responsibility objects.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. Google Vertex AI / ADK / Model Armor is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Model safety, content safety, and platform governance are not identical to lifecycle responsibility objects.*
 
 ---
 
@@ -519,14 +522,14 @@ Citation placeholders:
 
 ### System Positioning
 
-LangGraph / LangSmith is an agent orchestration and observability framework designed for workflow graphs, state management, checkpoints, traces, and observability. It is relevant to RCCS and ALCS because it provides orchestration and observability capabilities that can support governance, monitoring, transparency, and evidence collection.
+LangGraph / LangSmith is an agent orchestration and observability framework designed for workflow graphs, state management, checkpoints, traces, and observability. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides orchestration and observability capabilities that can support governance, monitoring, transparency, evidence collection, and MRO-adjacent lifecycle analysis.
 
 LangGraph / LangSmith is strong at agent orchestration and observability. It provides workflow graphs, state management, checkpoints, traces, debugging, evaluation, and observability features. This makes LangGraph / LangSmith relevant for organizations that require agent orchestration with observability and debugging capabilities.
 
 **What this paper evaluates:**
 - Whether LangGraph / LangSmith provides governance primitives for RCCS dimensions
 - Whether LangGraph / LangSmith provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - LangGraph / LangSmith is not evaluated for product quality, market leadership, or procurement suitability.
@@ -588,7 +591,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. LangGraph / LangSmith is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Orchestration and observability can support governance but do not automatically provide regulatory compliance coverage.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. LangGraph / LangSmith is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Orchestration and observability can support governance but do not automatically provide regulatory compliance coverage.*
 
 ---
 
@@ -596,18 +599,18 @@ Citation placeholders:
 
 ### System Positioning
 
-OpenAI Agents SDK is a developer-focused agent execution framework designed for model access, tool use, agent execution patterns, and developer primitives. It is relevant to RCCS and ALCS because it provides execution capabilities that can support agent workflows, tool actions, and observability.
+OpenAI Agents SDK is a developer-focused agent execution framework designed for model access, tool use, agent execution patterns, and developer primitives. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides execution capabilities that can support agent workflows, tool actions, observability, and MRO-adjacent lifecycle analysis, while enterprise governance coverage remains outside SDK primitives.
 
 OpenAI Agents SDK is strong at agent execution and tool use. It provides model access, tool calling, agent execution patterns, streaming, and developer-friendly APIs. This makes OpenAI Agents SDK relevant for developers building agentic applications with tool use and execution capabilities.
 
 **What this paper evaluates:**
 - Whether OpenAI Agents SDK provides governance primitives for RCCS dimensions
 - Whether OpenAI Agents SDK provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - OpenAI Agents SDK is not evaluated for product quality, market leadership, or procurement suitability.
-- RCCS and ALCS posture requires validation: execution framework features do not automatically provide enterprise governance, audit readiness, accepted outcome, or lifecycle responsibility semantics.
+- RCCS-T, RCCS-M, and ALCS posture requires validation: execution framework features do not automatically provide enterprise governance, audit readiness, accepted outcome, or lifecycle responsibility semantics.
 - Tool calling and agent execution are not identical to tool-action liability boundary.
 - Developer primitives are not identical to enterprise lifecycle governance objects.
 
@@ -665,7 +668,7 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. OpenAI Agents SDK is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Execution framework features do not automatically provide enterprise governance, audit readiness, or lifecycle responsibility semantics.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. OpenAI Agents SDK is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Execution framework features do not automatically provide enterprise governance, audit readiness, or lifecycle responsibility semantics.*
 
 ---
 
@@ -673,18 +676,18 @@ Citation placeholders:
 
 ### System Positioning
 
-CrewAI is a multi-agent collaboration and role-based orchestration framework designed for agent role composition, task orchestration, and multi-agent workflows. It is relevant to RCCS and ALCS because it provides role-based orchestration capabilities that can support agent collaboration, task delegation, and workflow management.
+CrewAI is a multi-agent collaboration and role-based orchestration framework designed for agent role composition, task orchestration, and multi-agent workflows. It is relevant to RCCS-T, RCCS-M, and ALCS because it provides role-based orchestration capabilities that can support agent collaboration, task delegation, workflow management, and MRO-adjacent lifecycle analysis.
 
 CrewAI is strong at role-based agent composition and task orchestration. It provides agent role labels, task assignment, multi-agent collaboration, and workflow orchestration features. This makes CrewAI relevant for developers building multi-agent systems with role-based collaboration patterns.
 
 **What this paper evaluates:**
 - Whether CrewAI provides governance primitives for RCCS dimensions
 - Whether CrewAI provides lifecycle responsibility objects for ALCS dimensions
-- Whether public documentation supports RCCS and ALCS mapping
+- Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
 **What this paper does not infer:**
 - CrewAI is not evaluated for product quality, market leadership, or procurement suitability.
-- RCCS and ALCS posture requires validation: agent role labels and task orchestration do not automatically provide governance responsibility semantics.
+- RCCS-T, RCCS-M, and ALCS posture requires validation: agent role labels and task orchestration do not automatically provide governance responsibility semantics.
 - Agent role labels are not identical to human accountability roles.
 - Role-based orchestration is not identical to human-role-to-MAS responsibility mapping.
 
@@ -742,13 +745,13 @@ Citation placeholders:
 
 ### Boundary Note
 
-*This section maps public evidence to RCCS/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. CrewAI is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Agent role labels and task orchestration do not automatically provide governance responsibility semantics.*
+*This section maps public evidence to RCCS-T/RCCS-M/ALCS dimensions. It is not a legal compliance judgment, procurement recommendation, certification, or endorsement. CrewAI is evaluated for governance primitives and lifecycle responsibility objects based on public documentation. Agent role labels and task orchestration do not automatically provide governance responsibility semantics.*
 
 ---
 
 ## 12.11 Chapter 12 Synthesis
 
-This chapter evaluated eight systems against RCCS and ALCS dimensions using public evidence. The purpose was not to rank systems as best or worst, but to make visible which systems provide which capabilities, where evidence is strong, where evidence is weak, and where lifecycle gaps remain.
+This chapter evaluated eight systems against RCCS-T, RCCS-M, and ALCS dimensions using public evidence. The purpose was not to rank systems as best or worst, but to make visible which systems provide which capabilities, where evidence is strong, where evidence is weak, and where lifecycle gaps remain.
 
 ### Synthesis Themes
 
@@ -768,7 +771,7 @@ Systems like LangGraph / LangSmith provide workflow graphs, state management, ch
 
 Systems like OpenAI Agents SDK and CrewAI provide developer-friendly execution primitives for agent workflows, tool use, and multi-agent collaboration. These primitives are useful for building agentic applications. However, execution framework features and role-based orchestration do not automatically provide enterprise governance, audit readiness, accepted outcome, or lifecycle responsibility semantics. Developer primitives are not identical to enterprise lifecycle governance objects.
 
-**5. Lifecycle protocol paths tend to show stronger ALCS semantics but require implementation, adoption, and enterprise integration validation.**
+**5. Lifecycle protocol paths tend to show stronger RCCS-M and ALCS semantics but require implementation, adoption, and enterprise integration validation.**
 
 Systems like MPLP are designed to expose lifecycle responsibility objects as first-class protocol primitives. They provide protocol-level semantics for human-role-to-MAS mapping, delegated authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance. This makes them relevant for systems that require lifecycle responsibility semantics across agents, tools, vendors, and organizational boundaries. However, MPLP implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, and regulator familiarity require validation.
 
@@ -786,14 +789,14 @@ The following table synthesizes the eight system mappings by system category.
 
 **Table T-12-18: Chapter 12 Synthesis Matrix**
 
-| System Category | Typical Strength | Typical Lifecycle Gap | Interpretation |
-|-----------------|------------------|----------------------|----------------|
-| Lifecycle protocol path (MPLP) | Protocol-level lifecycle responsibility semantics; strong ALCS posture for authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, substitution conformance | Implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, regulator familiarity | Relevant to lifecycle responsibility semantics; implementation, adoption, and enterprise integration require validation |
-| Enterprise AI governance platform (IBM watsonx.governance) | Strong RCCS posture for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, monitoring | Multi-agent responsibility transfer, accepted outcome governance, tool-action liability boundary, MAS evidence partitioning, cross-project reuse controls | Designed for enterprise AI governance; agentic lifecycle objects require validation |
-| Cloud AI platform (Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, Google Vertex AI / ADK / Model Armor) | Moderate-to-strong RCCS posture for cloud AI management, model governance, safety, evaluation, monitoring; moderate ALCS adjacency depending on agent lifecycle object exposure | Accepted outcome compliance, delegated authority boundary, cross-agent responsibility transfer, evidence partitioning, vendor/model/runtime substitution conformance | Designed for cloud AI platform capabilities; lifecycle responsibility objects require validation; responsible AI tooling ≠ lifecycle responsibility objects |
-| Agent orchestration / observability framework (LangGraph / LangSmith) | Moderate RCCS posture for documentation, record-keeping, transparency, monitoring; moderate ALCS adjacency through graphs, state, checkpoints, traces, observability | Human-role-to-MAS responsibility mapping, delegated authority boundary, accepted outcome compliance, tool-action liability, responsibility transfer, MAS evidence partitioning | Designed for agent orchestration and observability; lifecycle responsibility semantics require additional governance layer; orchestration ≠ governance |
-| Developer agent SDK (OpenAI Agents SDK) | Strong for model access, tool use, agent execution patterns; weak-to-moderate RCCS posture; weak-to-partial ALCS posture | Delegated authority boundary, accepted outcome compliance, tool-action liability, MAS evidence partitioning, human accountability mapping, dispute/remediation closure | Designed for developer execution primitives; enterprise governance and lifecycle responsibility semantics require additional layer; execution framework ≠ governance layer |
-| Multi-agent collaboration framework (CrewAI) | Strong for role-based agent composition and task orchestration; weak-to-moderate RCCS posture; weak-to-partial ALCS posture | Agent role vs human role distinction, human-role-to-MAS responsibility mapping, delegated authority boundary, accepted outcome compliance, evidence partitioning, responsibility transfer | Designed for multi-agent collaboration; lifecycle responsibility semantics require additional governance layer; role labels ≠ accountability roles |
+| System Category | Typical RCCS-T Strength | Typical RCCS-M / ALCS Posture | Typical Lifecycle Gap | Interpretation |
+|-----------------|-------------------------|----------------------------|----------------------|----------------|
+| Lifecycle protocol path (MPLP) | Limited to partial product-platform coverage | Strong RCCS-M and ALCS semantic posture for authority boundaries, accepted outcome records, responsibility transfer, evidence partitioning, substitution conformance | Implementation maturity, enterprise integration, vendor adoption, operational deployment evidence, regulator familiarity | Relevant to MRO-adjusted lifecycle responsibility semantics; implementation, adoption, and enterprise integration require validation |
+| Enterprise AI governance platform (IBM watsonx.governance) | Strong RCCS-T posture for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, monitoring | Partial RCCS-M / ALCS where lifecycle responsibility objects are not explicit | Multi-agent responsibility transfer, accepted outcome governance, tool-action liability boundary, MAS evidence partitioning, cross-project reuse controls | Designed for enterprise AI governance; agentic lifecycle objects require validation |
+| Cloud AI platform (Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, Google Vertex AI / ADK / Model Armor) | Moderate-to-strong RCCS-T posture for cloud AI management, model governance, safety, evaluation, monitoring | Partial-to-moderate RCCS-M / ALCS depending on agent lifecycle object exposure | Accepted outcome compliance, delegated authority boundary, cross-agent responsibility transfer, evidence partitioning, vendor/model/runtime substitution conformance | Designed for cloud AI platform capabilities; lifecycle responsibility objects require validation; responsible AI tooling does not equal lifecycle responsibility objects |
+| Agent orchestration / observability framework (LangGraph / LangSmith) | Moderate RCCS-T posture for documentation, record-keeping, transparency, monitoring | Moderate RCCS-M / ALCS adjacency through graphs, state, checkpoints, traces, observability | Human-role-to-MAS responsibility mapping, delegated authority boundary, accepted outcome compliance, tool-action liability, responsibility transfer, MAS evidence partitioning | Designed for agent orchestration and observability; lifecycle responsibility semantics require additional governance layer; orchestration does not equal governance |
+| Developer agent SDK (OpenAI Agents SDK) | Weak-to-moderate RCCS-T posture beyond SDK primitives | Partial RCCS-M / ALCS where SDK primitives support agents, tools, handoffs, guardrails, tracing, or sessions | Delegated authority boundary, accepted outcome compliance, tool-action liability, MAS evidence partitioning, human accountability mapping, dispute/remediation closure | Designed for developer execution primitives; enterprise governance and lifecycle responsibility semantics require additional layer; execution framework does not equal governance layer |
+| Multi-agent collaboration framework (CrewAI) | Weak-to-moderate RCCS-T posture beyond orchestration primitives | Partial RCCS-M / ALCS where roles, tasks, and collaboration patterns support lifecycle analysis | Agent role vs human role distinction, human-role-to-MAS responsibility mapping, delegated authority boundary, accepted outcome compliance, evidence partitioning, responsibility transfer | Designed for multi-agent collaboration; lifecycle responsibility semantics require additional governance layer; role labels do not equal accountability roles |
 
 ### Boundary Restatement
 

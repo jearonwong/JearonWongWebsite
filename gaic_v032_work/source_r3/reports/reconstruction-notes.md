@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-12 Two-Layer RCCS and Visual Repair)
+**Last Updated:** May 11, 2026 (Phase 1D-13B Global RCCS-M Integration)
 
 ## Reconstruction Strategy
 
@@ -41,6 +41,7 @@ R3 uses phased reconstruction:
 20. **Phase 1D-10:** Scored evaluation results and table layout repair with provisional RCCS/ALCS score ranges, confidence labels, score visuals, stronger result hierarchy, and semantic table readability repair (◐ SCORED EVALUATION RESULTS GENERATED / QA REQUIRED)
 21. **Phase 1D-11:** Citation/source evidence closure with OpenAI source replacement, Validation Lab public-methodology narrowing, MPLP source-bound/analytical split, L2 product reference closure, score evidence integrity QA, and regenerated HTML/PDF/DOCX derivative (✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 22. **Phase 1D-12:** Two-layer RCCS model and final table visual repair with RCCS-T/RCCS-M/ALCS result profiles, MPLP interpretation clarification, score chart update, table wrapping root-cause repair, and regenerated HTML/PDF/DOCX derivative (✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+23. **Phase 1D-13B:** Targeted global RCCS-M integration with RCCS-T / MRO / RCCS-M / ALCS as the explanatory spine across active source, while preserving 1D-12 score ranges, 1D-11 source closure, Appendix G qualitative/no-score posture, and publication boundaries (✓ GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -96,6 +97,10 @@ Phase 1D-11 rejects a broad accepted-limitation shortcut. High-risk citation/acc
 ### Decision 10: Split RCCS Into Traditional and MRO-Adjusted Layers
 
 Phase 1D-12 corrects an over-blunt RCCS presentation by preserving MPLP in the comparison while separating traditional product-governance coverage from agentic lifecycle regulatory coverage. RCCS-T measures familiar regulatory/governance coverage surfaces; RCCS-M measures whether those obligations can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics. MPLP's RCCS-T is not inflated, but its RCCS-M and ALCS posture is presented as strong because the protocol semantics map to authority, evidence, accepted-outcome, responsibility-transfer, and substitution objects. RCCS-M remains author analytical and is not a regulator-approved benchmark, legal compliance score, certification, or procurement recommendation.
+
+### Decision 11: Integrate RCCS-M Globally Without Reopening Scores
+
+Phase 1D-13B applies the Phase 1D-13A research finding that Phase 1D-12 fixed the result layer but not the global narrative layer. The implementation updates active source so RCCS-T, MRO, RCCS-M, and ALCS form the paper's explanatory spine. It does not recalculate scores, add systems, create a ranking, or turn Appendix G into a scored appendix. Numeric RCCS-T/RCCS-M/ALCS profiles remain in Evaluation Results only; Appendix G remains qualitative and provisional.
 
 ## Lessons from R2
 

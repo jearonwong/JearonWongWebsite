@@ -43,7 +43,7 @@
 | Primary thesis | AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance. |
 | Protocol boundary | MPLP is discussed as a lifecycle protocol path, not as a certification program, legal authority, cloud platform, or exclusive compliance method. |
 | Validation boundary | Validation Lab is referenced as a non-certifying evidence adjudication example, not as a regulator, conformity assessment body, certification authority, market endorsement program, or legal compliance certification mechanism. |
-| Scoring boundary | RCCS/ALCS is an analytical scoring framework, not a legal compliance score. |
+| Scoring boundary | RCCS-T / RCCS-M / ALCS is a three-profile analytical model, not legal compliance proof, certification, a regulator-approved benchmark, a final vendor score, a ranking, or procurement advice. |
 | System mapping boundary | System mappings are responsibility-semantics comparisons, not product endorsements or procurement recommendations. |
 
 ---
@@ -54,7 +54,7 @@ This white paper is a **non-legal technical governance analysis**, not legal adv
 
 ### Purpose
 
-This research edition defines a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a dual scoring framework, system-specific mappings, comparative matrices, and implementation templates.
+This research edition defines a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a three-profile analytical model, system-specific mappings, comparative matrices, and implementation templates.
 
 ### What This Paper Does
 
@@ -97,7 +97,7 @@ The controls used to limit over-claiming are as follows:
 |----------|------------------|-------------------|
 | MPLP | A lifecycle protocol path for expressing agentic responsibility objects | The only compliant standard |
 | Validation Lab | A non-certifying evidence adjudication example | A certification authority |
-| RCCS/ALCS | A proposed analytical scoring framework | A regulator-approved benchmark |
+| RCCS-T / RCCS-M / ALCS | A proposed three-profile analytical model | A regulator-approved benchmark |
 | System mapping | A mapping of public primitives to lifecycle objects | A final legal compliance judgment |
 | AI Agent Lifecycle Governance | A missing semantic and engineering layer | A binding regulatory standard |
 
@@ -149,7 +149,7 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 | Version | Date | Trace Tag | Summary |
 |---------|------|-----------|---------|
-| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Expanded publication draft integrating lifecycle governance, MROs, RCCS/ALCS scoring, evidence validation, enterprise failure scenarios, adoption roadmap, and technical appendices. |
+| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Expanded publication draft integrating lifecycle governance, MROs, RCCS-T / RCCS-M / ALCS scoring, evidence validation, enterprise failure scenarios, adoption roadmap, and technical appendices. |
 | v0.3.1-PC | May 2026 | GACWP-2026-v0.3.1-PC | Publication candidate. Adds ALCS-to-MRO mapping, clarifies RCCS weighting and calculation reproducibility, updates Colorado AI Act status note as of 2026-05-07, aligns Singapore MGF wording with official four-part framing. |
 | v0.3-FULL | April 2026 | GACWP-2026-v0.3-FULL | Full research edition baseline (historical reference only) |
 
@@ -159,7 +159,7 @@ v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterpr
 
 **Key improvements in R3:**
 - Full lifecycle governance framing for agentic and multi-agent systems
-- Missing Regulatory Objects connected to RCCS and ALCS analysis
+- Missing Regulatory Objects connected to RCCS-T, RCCS-M, and ALCS analysis
 - Evidence validation and enterprise failure scenario coverage
 - Adoption roadmap and enterprise control crosswalks
 - Strengthened boundary disclosure, conflict-of-interest discipline, and non-claim language
@@ -179,7 +179,7 @@ v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterpr
 ### Part II — Missing Regulatory Objects and Scoring
 
 6. Missing Regulatory Objects for Agentic and MAS Compliance
-7. RCCS - Regulatory Compliance Coverage Score
+7. RCCS-T / RCCS-M - Regulatory Compliance Coverage Scores
 8. ALCS - Agentic Lifecycle Conformance Score
 9. Composite Scoring Method
 
@@ -209,7 +209,7 @@ v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterpr
 - Figure F-01 — AI Agent Lifecycle Governance Stack
 - Figure F-02 — Governance Stack / Missing Layer
 - Figure F-03 — MRO Topology
-- Figure F-04 — RCCS/ALCS Dual Scoring Model
+- Figure F-04 — RCCS-T / RCCS-M / ALCS Three-Profile Scoring Model
 - Figure F-05 — Lifecycle Conformance Mapping Strength Heatmap
 - Figure F-06 — Enterprise Control Overlay for AI Agent Lifecycle Governance
 - Figure F-07 — Model Risk in Agentic Lifecycle
@@ -229,7 +229,7 @@ A complete table inventory is maintained in the technical source ledger; this pu
 - Scope, boundary, document-control, and evidence-basis tables in the front matter and Chapter 1
 - Regulatory and standards baseline tables in Chapter 4
 - Missing Regulatory Object tables in Chapter 6
-- RCCS, ALCS, and composite scoring tables in Chapters 7-9
+- RCCS-T, RCCS-M, ALCS, and optional composite scoring tables in Chapters 7-9
 - Enterprise control, procurement, board reporting, model risk, and cybersecurity crosswalk tables in Chapter 10
 - System mapping and comparative posture tables in Chapters 11-13 and Appendix D
 - Evidence validation and failure scenario tables in Chapters 14-15
@@ -253,7 +253,7 @@ This white paper names the missing layer **AI Agent Lifecycle Governance**. AI A
 - Model governance remains necessary, but it is not sufficient for agentic and multi-agent workflows that act through tools, memory, APIs, and delegation.
 - Lifecycle responsibility objects are needed to connect intent, authority, evidence, review, accepted outcome, dispute, remediation, and reuse.
 - The sixteen Missing Regulatory Objects define engineering objects that help make existing governance expectations testable in agentic execution.
-- RCCS and ALCS measure different layers: regulatory coverage and agentic lifecycle conformance. A system can be strong in one layer and weak in the other.
+- RCCS-T, RCCS-M, and ALCS measure different but connected layers: traditional regulatory coverage, MRO-adjusted regulatory coverage, and agentic lifecycle conformance. A system can be strong in one layer and weaker in another.
 - Logs, traces, dashboards, and guardrails are useful, but they are not evidence chains by themselves unless tied to authority, responsibility, privacy, acceptance, and remediation semantics.
 - Validation verdicts can support evidence review, but they do not prove legal compliance, regulatory approval, certification, or procurement suitability.
 
@@ -269,13 +269,23 @@ Intent → Context → Plan → Authority → Agent Work → Tool Actions → Ev
 
 *Figure F-01 summarizes the lifecycle responsibility chain used throughout the paper. The chain is a governance model, not a certification path or legal compliance proof.*
 
-### Dual Scoring Framework
+### Three-Profile Analytical Model
 
-The report introduces two scoring layers:
+The report introduces three profile signals:
 
-1. **RCCS - Regulatory Compliance Coverage Score** - measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+1. **RCCS-T - Traditional Regulatory Compliance Coverage Score** - measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
 
-2. **ALCS - Agentic Lifecycle Conformance Score** - measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance. A system can have a strong RCCS score and still have a weak ALCS score. That is not a contradiction. It means the system may be strong in existing model governance or platform controls while lacking deeper lifecycle responsibility semantics for multi-agent work.
+2. **RCCS-M - MRO-Adjusted Regulatory Compliance Coverage Score** - measures whether those regulatory obligations can be expressed through Missing Regulatory Objects required for agentic lifecycle responsibility compliance.
+
+3. **ALCS - Agentic Lifecycle Conformance Score** - measures whether lifecycle responsibility conformance is mature across responsibility, authority, evidence, privacy, substitution, and remediation. A system can have strong RCCS-T and weaker RCCS-M or ALCS. That is not a contradiction. It means the system may be strong in existing model governance or platform controls while lacking deeper lifecycle responsibility semantics for multi-agent work.
+
+Conceptual flow:
+
+```text
+RCCS-T -> MRO Adjustment Layer -> RCCS-M -> ALCS
+```
+
+RCCS-M is an author analytical, forward-looking, MRO-adjusted model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, a final vendor score, ranking, or procurement recommendation.
 
 ### Missing Regulatory Objects
 
@@ -319,7 +329,7 @@ The comparison is not a ranking of product quality. It is a map of responsibilit
 
 - Start with an authority, responsibility, and evidence inventory before selecting or extending agentic platforms.
 - Separate model governance controls from lifecycle responsibility controls so that logs, traces, guardrails, and reviews are not over-read as proof of accepted outcomes.
-- Map current systems against MRO, RCCS, and ALCS dimensions to identify which controls are documented, which are implementation-dependent, and which remain analytical assumptions.
+- Map current systems against MRO, RCCS-T, RCCS-M, and ALCS dimensions to identify which controls are documented, which are implementation-dependent, and which remain analytical assumptions.
 - Treat MPLP, Validation Lab, and comparable lifecycle protocols or evidence tools as possible implementation patterns, not required paths or certification mechanisms.
 - Preserve source and evidence levels near high-risk product, protocol, validation, and system-mapping claims before publication or procurement use.
 

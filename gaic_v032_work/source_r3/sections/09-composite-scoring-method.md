@@ -6,23 +6,23 @@
 
 ## 9.0 Chapter Overview
 
-This chapter introduces the **Composite Scoring Method**, which combines RCCS and ALCS into system-level assessments. In this paper, composite scoring means a dual-layer scoring profile consisting of separate RCCS and ALCS scores. It does not collapse both scores into a single legal compliance number. Composite scoring provides a dual-layer view of system governance capability: regulatory compliance coverage and agentic lifecycle conformance. It is an analytical framework for comparing systems, not a legal compliance certification.
+This chapter introduces the **Composite Scoring Method and Evidence Confidence** layer. In this paper, the primary result display is not a single composite number. The primary result display is a three-profile analytical view: **RCCS-T**, **RCCS-M**, and **ALCS**. Composite views are secondary analytical summaries that may help compare posture patterns, but they must not hide the distinction between traditional regulatory coverage, MRO-adjusted regulatory coverage, and lifecycle conformance.
 
-The chapter explains the composite score formula, evidence multiplier application, interpretation guidance for RCCS and ALCS together, reproducibility requirements, and boundary statements. It establishes clear expectations about what composite scoring measures and what it does not measure, and bridges to the system mapping chapters that follow.
+The chapter explains evidence multiplier application, optional composite views, interpretation guidance for RCCS-T / RCCS-M / ALCS together, reproducibility requirements, and boundary statements. It establishes clear expectations about what composite scoring measures and what it does not measure, and bridges to the system mapping chapters that follow.
 
-**Figure F-04 — RCCS/ALCS Dual Scoring Model**
+**Figure F-04 — RCCS-T / RCCS-M / ALCS Three-Profile Scoring Model**
 
-RCCS Regulatory Coverage + ALCS Lifecycle Conformance → Evidence-Adjusted Analytical Composite
+RCCS-T Traditional Coverage -> MRO Adjustment Layer -> RCCS-M MRO-Adjusted Coverage -> ALCS Lifecycle Conformance
 
-*Figure F-04 shows how RCCS and ALCS combine into an evidence-adjusted analytical profile. It is not a legal compliance score, certification, regulatory approval signal, product ranking, or procurement recommendation.*
+*Figure F-04 shows how traditional regulatory coverage is adjusted through Missing Regulatory Objects before being read alongside lifecycle conformance. It is not a legal compliance score, certification, regulatory approval signal, product ranking, or procurement recommendation.*
 
 ---
 
 ## 9.1 Purpose of Composite Scoring
 
-Composite scoring combines RCCS and ALCS into system-level assessments that reflect both regulatory compliance coverage and agentic lifecycle conformance. It provides a structured method for evaluating whether systems provide the governance primitives that existing regulation requires and the lifecycle objects that make agentic responsibility auditable, provable, and transferable.
+Composite scoring is secondary to the three-profile view. The three-profile view reflects traditional regulatory compliance coverage (RCCS-T), MRO-adjusted regulatory compliance coverage (RCCS-M), and agentic lifecycle conformance (ALCS). It provides a structured method for evaluating whether systems provide the governance primitives that existing regulation requires, whether those primitives can be expressed through lifecycle responsibility objects, and whether lifecycle conformance is mature enough to make agentic responsibility auditable, provable, and transferable.
 
-The purpose of composite scoring is to make visible the difference between systems that provide regulatory compliance coverage, systems that provide lifecycle responsibility semantics, and systems that provide both. A system can have a strong RCCS score and a weak ALCS score. This is not a contradiction. It means the system may provide strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking the deeper lifecycle responsibility objects required to prove authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance in multi-agent execution.
+The purpose of the three-profile model is to make visible the difference between systems that provide traditional regulatory compliance coverage, systems that provide MRO-adjusted lifecycle responsibility semantics, and systems that provide both. A system can have a strong RCCS-T score and weaker RCCS-M or ALCS scores. This is not a contradiction. It means the system may provide strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking the deeper lifecycle responsibility objects required to prove authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance in multi-agent execution.
 
 Composite scoring is an analytical framework, not a certification program. It does not certify that a system is compliant with any specific regulation. It does not guarantee that a system meets all legal obligations. It does not substitute for legal counsel, compliance review, or risk assessment. It measures system capability to express governance primitives and lifecycle objects, not organizational conformance to legal requirements.
 
@@ -30,9 +30,15 @@ The value of composite scoring is comparative analysis. Buyers can compare syste
 
 ---
 
-## 9.2 Composite Score Formula
+## 9.2 Primary Three-Profile Display and Optional Composite Views
 
-Composite scoring calculates adjusted RCCS and ALCS framework scores and then combines them using the canonical cross-framework weight. RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. Both scores are needed for full assessment.
+The preferred publication-facing result display is:
+
+1. **RCCS-T** — Traditional Regulatory Compliance Coverage Score
+2. **RCCS-M** — MRO-Adjusted Regulatory Compliance Coverage Score
+3. **ALCS** — Agentic Lifecycle Conformance Score
+
+This structure prevents a single number from hiding the key score-delta insight. Enterprise governance platforms may show strong RCCS-T while MRO-adjusted lifecycle object coverage remains partial. Lifecycle protocol systems may show stronger RCCS-M and ALCS while traditional productized governance-platform coverage remains limited.
 
 Each dimension is first normalized using the canonical dimension formula:
 
@@ -42,11 +48,12 @@ Where:
 - **Raw Score** is the 0-5 score for each dimension based on system capability strength
 - **Evidence Confidence Multiplier** is L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, or L5 = 0.35
 
-The cross-framework composite score is:
+If a composite view is required for worksheet analysis, two optional views may be used:
 
-**Composite Score = 0.40 × RCCS + 0.60 × ALCS**
+- **Traditional Composite = 0.40 × RCCS-T + 0.60 × ALCS**
+- **Agentic Composite = 0.40 × RCCS-M + 0.60 × ALCS**
 
-RCCS and ALCS are expressed on a 0-100 scale after evidence adjustment. The composite score is also expressed on a 0-100 scale.
+RCCS-T, RCCS-M, and ALCS are expressed on a 0-100 scale after evidence adjustment. Optional composite views are also expressed on a 0-100 scale.
 
 The following table illustrates the composite score calculation with an example.
 
@@ -57,13 +64,15 @@ The following table illustrates the composite score calculation with an example.
 | Raw Score | 0-5 scale based on capability strength | Risk Management = 4 |
 | Evidence Multiplier | L1-L5 confidence multiplier | L2 evidence = 0.85 |
 | Dimension Score | (Raw Score / 5) × 100 × Evidence Multiplier | (4 / 5) × 100 × 0.85 = 68.0 |
-| RCCS Score | Aggregated RCCS dimension score | RCCS = 65.0 |
+| RCCS-T Score | Aggregated traditional RCCS dimension score | RCCS-T = 65.0 |
+| RCCS-M Score | Aggregated MRO-adjusted RCCS dimension score | RCCS-M = 72.0 |
 | ALCS Score | Aggregated ALCS dimension score | ALCS = 55.0 |
-| Composite Score | 0.40 × RCCS + 0.60 × ALCS | 0.40 × 65.0 + 0.60 × 55.0 = 59.0 |
+| Traditional Composite | 0.40 × RCCS-T + 0.60 × ALCS | 0.40 × 65.0 + 0.60 × 55.0 = 59.0 |
+| Agentic Composite | 0.40 × RCCS-M + 0.60 × ALCS | 0.40 × 72.0 + 0.60 × 55.0 = 61.8 |
 
-This calculation preserves the distinction between RCCS and ALCS while still producing a single analytical composite score for high-level comparison.
+These calculations preserve the distinction between traditional regulatory coverage and MRO-adjusted regulatory coverage. They are optional worksheet views, not the main publication result.
 
-RCCS and ALCS are reported separately because they measure different layers. RCCS evaluates whether a system provides the governance primitives that existing regulation requires. ALCS evaluates whether a system provides the lifecycle objects that make agentic responsibility auditable and transferable. The composite score must therefore be read alongside the separate RCCS and ALCS scores.
+RCCS-T, RCCS-M, and ALCS are reported separately because they measure different layers. RCCS-T evaluates whether a system provides the governance primitives that existing regulation requires. RCCS-M evaluates whether those obligations can be expressed through Missing Regulatory Objects. ALCS evaluates whether lifecycle responsibility conformance is mature. Any composite view must therefore be read only alongside the separate three-profile scores.
 
 ---
 
@@ -99,32 +108,32 @@ The evidence multiplier ensures that scores reflect not only system capability b
 
 ---
 
-## 9.4 Interpreting RCCS and ALCS Together
+## 9.4 Interpreting RCCS-T, RCCS-M, and ALCS Together
 
-RCCS and ALCS measure different layers. RCCS measures regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. ALCS measures agentic lifecycle conformance: whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries.
+RCCS-T, RCCS-M, and ALCS measure different layers. RCCS-T measures traditional regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. RCCS-M measures whether those obligations can be expressed through Missing Regulatory Objects. ALCS measures agentic lifecycle conformance: whether the system provides mature lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries.
 
-Interpreting RCCS and ALCS together requires understanding four quadrants: High RCCS + High ALCS, High RCCS + Low ALCS, Low RCCS + High ALCS, and Low RCCS + Low ALCS. Each quadrant represents a different system capability profile.
+Interpreting the three profiles requires reading score deltas rather than collapsing the profiles into a single ordering. High RCCS-T with lower RCCS-M or ALCS means conventional governance coverage is more visible than lifecycle responsibility object coverage. Lower RCCS-T with higher RCCS-M and ALCS means protocol or framework semantics may express lifecycle responsibility strongly while productized governance-platform coverage remains limited. This distinction is especially important for comparing enterprise governance platforms with lifecycle protocol paths.
 
 The 70% boundary used in this matrix is an analytical interpretation band for comparing capability profiles. It is not a legal compliance threshold, deployment readiness threshold, procurement threshold, or certification cutoff.
 
-**Table T-09-03: RCCS and ALCS Interpretation Matrix**
+**Table T-09-03: RCCS-T / RCCS-M / ALCS Interpretation Matrix**
 
-| Quadrant | RCCS | ALCS | Interpretation | Common System Types |
-|----------|------|------|----------------|---------------------|
-| High/High | High (≥70%) | High (≥70%) | Strong regulatory compliance coverage and strong lifecycle responsibility semantics. System provides both governance primitives and lifecycle objects. | Lifecycle protocol systems, enterprise AI governance platforms with lifecycle extensions |
-| High/Low | High (≥70%) | Low (<70%) | Strong regulatory compliance coverage but weak lifecycle responsibility semantics. System provides governance primitives for model governance and platform controls but lacks lifecycle objects for multi-agent responsibility. | Enterprise AI governance platforms, managed AI platforms with strong observability but limited lifecycle semantics |
-| Low/High | Low (<70%) | High (≥70%) | Weak regulatory compliance coverage but strong lifecycle responsibility semantics. System provides lifecycle objects for expressing agentic responsibility but lacks broader governance primitives. | Specialized lifecycle protocols or agent frameworks focused on responsibility semantics without full governance platform capabilities |
-| Low/Low | Low (<70%) | Low (<70%) | Weak regulatory compliance coverage and weak lifecycle responsibility semantics. System provides execution orchestration or observability features but lacks governance primitives and lifecycle objects. | Developer agent SDKs, orchestration frameworks without governance extensions |
+| Pattern | RCCS-T | RCCS-M | ALCS | Interpretation | Common System Types |
+|---------|--------|--------|------|----------------|---------------------|
+| Traditional governance visible | High | Lower | Lower/Partial | Strong conventional governance surfaces, but MRO-adjusted lifecycle responsibility objects are less visible. | Enterprise AI governance platforms, managed AI platforms |
+| Lifecycle semantics visible | Lower/Partial | High | High | Traditional productized governance coverage may be limited, but lifecycle responsibility semantics are strong. | Lifecycle protocol systems, lifecycle-aware orchestration frameworks |
+| Three-profile balanced | High | High | High | Governance surfaces and lifecycle responsibility semantics are both visible. | Future governance platforms with explicit lifecycle object support |
+| Execution-oriented | Lower | Lower/Partial | Lower/Partial | Useful execution or observability primitives, but governance and lifecycle responsibility objects require surrounding systems. | Developer SDKs, orchestration frameworks without governance extensions |
 
-The High RCCS + Low ALCS quadrant is the most common pattern. Many enterprise AI governance platforms, managed AI platforms, and observability tools provide strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities. However, they may lack the deeper lifecycle responsibility objects required to prove authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance in multi-agent execution. This is not a failure. It reflects the reality that existing regulation focuses on model governance and platform controls while lifecycle responsibility semantics for multi-agent systems are still emerging.
+The traditional-governance-visible pattern is common. Many enterprise AI governance platforms, managed AI platforms, and observability tools provide strong RCCS-T coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities. However, they may have lower RCCS-M and ALCS posture where authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, accepted outcomes, and vendor substitution conformance are not exposed as first-class lifecycle responsibility objects. This is not a failure. It reflects the reality that existing regulation focuses on model governance and platform controls while lifecycle responsibility semantics for multi-agent systems are still emerging.
 
-The Low RCCS + High ALCS quadrant is rare. It represents systems that provide strong lifecycle objects for expressing agentic responsibility while lacking broader regulatory compliance coverage. This pattern may appear in specialized lifecycle protocols or agent frameworks that focus on responsibility semantics without providing full governance platform capabilities. These systems may be valuable as components within larger governance architectures but may not provide sufficient coverage for standalone compliance programs.
+The lifecycle-semantics-visible pattern is strategically important. It represents systems that provide strong lifecycle objects for expressing agentic responsibility while lacking broader productized governance-platform coverage. This pattern may appear in specialized lifecycle protocols or agent frameworks that focus on responsibility semantics without providing full governance platform capabilities. These systems may be valuable as components within larger governance architectures but may not provide sufficient coverage for standalone compliance programs.
 
-The High RCCS + High ALCS quadrant represents systems that provide both regulatory compliance coverage and lifecycle responsibility semantics. These systems are positioned to support both existing regulatory requirements and emerging lifecycle responsibility requirements for multi-agent systems. This quadrant is the target for systems designed specifically for agentic AI governance.
+The three-profile-balanced pattern represents systems that provide traditional regulatory compliance coverage, MRO-adjusted lifecycle object coverage, and lifecycle conformance maturity. These systems are positioned to support both existing regulatory requirements and emerging lifecycle responsibility requirements for multi-agent systems.
 
-The Low RCCS + Low ALCS quadrant represents systems that provide execution orchestration or observability features but lack governance primitives and lifecycle objects. These systems may be valuable for development, experimentation, or low-risk use cases but may not provide sufficient governance capability for high-risk or regulated deployments.
+The execution-oriented pattern represents systems that provide execution orchestration or observability features but lack explicit governance primitives and lifecycle objects. These systems may be valuable for development, experimentation, or low-risk use cases but may require surrounding governance systems for high-risk or regulated deployments.
 
-Both RCCS and ALCS scores are necessary for full assessment. Neither alone is sufficient. RCCS ensures that systems meet existing regulatory requirements. ALCS ensures that systems can prove lifecycle responsibility in multi-agent execution. Together, they provide a dual-layer assessment of system governance capability.
+All three profile scores are necessary for full assessment. RCCS-T shows familiar governance coverage. RCCS-M shows MRO-adjusted regulatory coverage. ALCS shows lifecycle conformance maturity. Together, they provide the publication-facing assessment of system governance capability.
 
 ---
 
@@ -140,48 +149,48 @@ Evidence sources must be documented with quality assessment. For each dimension,
 
 Evidence multiplier application must be explicit. For each dimension, evaluators must show the evidence multiplier value and how it was applied to the raw score. This ensures that evidence quality adjustments are transparent and verifiable. The calculation should be shown using the canonical formula: `Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier`.
 
-Calculation transparency requires showing the full composite score calculation. Evaluators must provide a table or worksheet showing raw scores, evidence multipliers, adjusted dimension scores, RCCS and ALCS framework scores, and the final `0.40 × RCCS + 0.60 × ALCS` composite score. This allows reviewers to verify the calculation and identify any errors or disagreements.
+Calculation transparency requires showing the full three-profile score basis. Evaluators must provide a table or worksheet showing raw scores, evidence multipliers, adjusted dimension scores, RCCS-T, RCCS-M, and ALCS framework scores, and any optional Traditional Composite or Agentic Composite view. This allows reviewers to verify the calculation and identify any errors or disagreements without collapsing the main result into one number.
 
-Scoring is comparative, not absolute. Composite scores are most useful when comparing systems against defined governance expectations or tracking a single system over time. Absolute score thresholds such as "70% is compliant" are not meaningful because composite scoring is an analytical framework, not a compliance certification. The value of scoring is in making visible capability gaps and evidence-confidence limits.
+Scoring is comparative, not absolute. Three-profile scores and optional composite views are most useful when comparing systems against defined governance expectations or tracking a single system over time. Absolute score thresholds such as "70% is compliant" are not meaningful because the scoring method is an analytical framework, not a compliance certification. The value of scoring is in making visible capability gaps and evidence-confidence limits.
 
 ---
 
 ## 9.6 Boundary Statement
 
-Composite scoring is an analytical framework, not a legal compliance score. This boundary must be understood clearly to avoid misinterpretation and over-claiming.
+The three-profile scoring method is an analytical framework, not a legal compliance score. Optional composite views are secondary worksheet tools. This boundary must be understood clearly to avoid misinterpretation and over-claiming.
 
-**What composite scoring is:**
-- An analytical framework for comparing system capabilities against regulatory requirements and lifecycle responsibility requirements
+**What the scoring method is:**
+- An analytical framework for comparing system capabilities against traditional regulatory requirements, MRO-adjusted regulatory coverage, and lifecycle responsibility requirements
 - A structured method for evaluating whether systems provide governance primitives and lifecycle objects
 - A tool for buyers, auditors, governance teams, and protocol designers to assess system readiness
 - A bridge between regulatory abstractions, lifecycle requirements, and engineering implementation
 
-**What composite scoring is not:**
+**What the scoring method is not:**
 - A legal compliance certification or conformity assessment
 - A regulatory approval or endorsement
 - A guarantee that a system meets all legal obligations
 - A substitute for legal counsel, compliance review, or risk assessment
 - A market endorsement or procurement recommendation
 
-High composite scores do NOT mean legal compliance. A system may score well on both RCCS and ALCS while the organization using it fails to comply with legal obligations due to deployment gaps, policy weaknesses, incomplete adoption, jurisdictional differences, or use case risks. Composite scoring measures system capability to express governance primitives and lifecycle objects, not organizational conformance to legal requirements.
+High RCCS-T, RCCS-M, ALCS, or optional composite scores do NOT mean legal compliance. A system may score well on visible capability surfaces while the organization using it fails to comply with legal obligations due to deployment gaps, policy weaknesses, incomplete adoption, jurisdictional differences, or use case risks. The scoring method measures system capability to express governance primitives and lifecycle objects, not organizational conformance to legal requirements.
 
-Low composite scores do NOT mean non-compliance. A system may score lower on RCCS or ALCS while the organization achieves compliance through compensating controls, manual processes, alternative governance mechanisms, or different system architectures. Composite scoring evaluates specific system capabilities, not all possible paths to compliance.
+Low RCCS-T, RCCS-M, ALCS, or optional composite scores do NOT mean non-compliance. A system may score lower in one profile while the organization achieves compliance through compensating controls, manual processes, alternative governance mechanisms, or different system architectures. The scoring method evaluates specific system capabilities, not all possible paths to compliance.
 
-Composite scoring measures system capability, not organizational practice. A system may provide strong governance primitives and lifecycle objects while the organization fails to use them. Conversely, an organization may achieve strong governance through processes that are not reflected in system capabilities. Composite scoring evaluates what the system can express, not what the organization actually does.
+The scoring method measures system capability, not organizational practice. A system may provide strong governance primitives and lifecycle objects while the organization fails to use them. Conversely, an organization may achieve strong governance through processes that are not reflected in system capabilities. The scoring method evaluates what the system can express, not what the organization actually does.
 
-Composite scoring is context-independent, but compliance is context-dependent. Composite scoring evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors. A system with high composite scores may still be non-compliant in specific contexts, and a system with low composite scores may be compliant in other contexts.
+The scoring method is context-independent, but compliance is context-dependent. It evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors. A system with high scores may still be non-compliant in specific contexts, and a system with low scores may be compliant in other contexts.
 
-The purpose of this boundary statement is to prevent over-claiming. Composite scoring is a useful analytical tool, but it is not a compliance certification. Organizations must not rely on composite scores as proof of legal compliance. Buyers must not treat high composite scores as a substitute for due diligence, legal review, or risk assessment. System vendors must not market composite scores as compliance certifications or regulatory approvals.
+The purpose of this boundary statement is to prevent over-claiming. RCCS-M is an author analytical, forward-looking, MRO-adjusted model. It is not current law, a regulator-approved benchmark, a certification, legal compliance proof, a final vendor score, a ranking, or a procurement recommendation. Organizations must not rely on these scores as proof of legal compliance. Buyers must not treat high scores as a substitute for due diligence, legal review, or risk assessment. System vendors must not market these scores as compliance certifications or regulatory approvals.
 
 ---
 
 ## 9.7 Bridge to System Mappings
 
-The following chapters use RCCS and ALCS as analytical lenses for enterprise controls and system mappings. Chapter 10 provides enterprise control crosswalk, mapping RCCS and ALCS dimensions to enterprise control frameworks such as NIST Cybersecurity Framework, ISO 27001, and SOC 2. Chapters 11 through 15 provide comparative field analysis and detailed system mappings for major system categories shaping the enterprise agentic stack.
+The following chapters use RCCS-T, RCCS-M, and ALCS as analytical lenses for enterprise controls and system mappings. Chapter 10 provides enterprise control crosswalk, mapping regulatory coverage and lifecycle conformance dimensions to enterprise control frameworks such as NIST Cybersecurity Framework, ISO 27001, and SOC 2. Chapters 11 through 15 provide comparative field analysis and detailed system mappings for major system categories shaping the enterprise agentic stack.
 
 Each system mapping documents qualitative posture, evidence sources, and scoring rationale where a source-bound worksheet is used. The mappings are responsibility-semantics comparisons, not product endorsements or procurement recommendations. The key question is not which system is useful. Most of them are useful. The key question is whether the system defines the governance primitives and lifecycle responsibility objects required to show that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints.
 
-System mappings use the composite scoring method defined in this chapter only where a scoring worksheet is appropriate. Where a scoring worksheet is used, systems may be evaluated with separate RCCS and ALCS analytical profiles. In this publication draft, any system-level assessment remains source-bound, provisional, and non-ranking unless explicitly finalized through the evidence register. Dimension-level analytical judgments should be documented with rationale, evidence sources should be cited with quality assessment, and evidence multipliers should be applied per dimension when numerical worksheets are used. The result is a dual-layer analytical profile that makes visible the difference between regulatory compliance coverage and lifecycle responsibility conformance without creating vendor scores or rankings.
+System mappings use the scoring method defined in this chapter only where a scoring worksheet is appropriate. Where a scoring worksheet is used, systems may be evaluated with separate RCCS-T, RCCS-M, and ALCS analytical profiles. In this publication draft, any system-level assessment remains source-bound, provisional, and non-ranking unless explicitly finalized through the evidence register. Dimension-level analytical judgments should be documented with rationale, evidence sources should be cited with quality assessment, and evidence multipliers should be applied per dimension when numerical worksheets are used. The result is a three-profile analytical view that makes visible the difference between traditional regulatory coverage, MRO-adjusted regulatory coverage, and lifecycle responsibility conformance without creating vendor scores or rankings.
 
 The system mappings are based on public evidence available as of May 2026. They reflect the state of system capabilities at the time of analysis. System capabilities evolve rapidly. Vendors add features, update documentation, and release new versions. The mappings should be treated as snapshots, not permanent judgments. Organizations evaluating systems should verify current capabilities with vendors and review updated documentation.
 
@@ -189,12 +198,12 @@ The system mappings are based on public evidence available as of May 2026. They 
 
 ## 9.8 Chapter Summary
 
-This chapter introduced the composite scoring method, which combines RCCS and ALCS into system-level assessments. Composite scoring provides a dual-layer view of system governance capability: regulatory compliance coverage and agentic lifecycle conformance. It is an analytical framework for comparing systems, not a legal compliance certification.
+This chapter introduced the three-profile scoring method and optional composite views. The publication-facing result display is RCCS-T, RCCS-M, and ALCS. It is an analytical framework for comparing system capability patterns, not a legal compliance certification.
 
-The composite score formula first normalizes dimension scores using `(Raw Score / 5) × 100 × Evidence Confidence Multiplier`, then combines RCCS and ALCS with `0.40 × RCCS + 0.60 × ALCS`. RCCS and ALCS should still be reported separately because they measure different layers. Both scores are necessary for full assessment. The evidence multiplier adjusts dimension scores based on evidence quality, ensuring that scores reflect both system capability and confidence level in the assessment.
+The method first normalizes dimension scores using `(Raw Score / 5) × 100 × Evidence Confidence Multiplier`, then reports RCCS-T, RCCS-M, and ALCS separately. Optional worksheet composites may combine RCCS-T or RCCS-M with ALCS, but composite views are secondary and must not hide the three-profile structure. The evidence multiplier adjusts dimension scores based on evidence quality, ensuring that scores reflect both system capability and confidence level in the assessment.
 
-Interpreting RCCS and ALCS together requires understanding four quadrants. High RCCS + Low ALCS is the most common pattern, representing systems with strong regulatory compliance coverage but weak lifecycle responsibility semantics. High RCCS + High ALCS represents systems with both regulatory compliance coverage and lifecycle responsibility semantics. Low RCCS + High ALCS is rare, representing specialized lifecycle protocols without full governance platform capabilities. Low RCCS + Low ALCS represents systems with execution orchestration or observability features but lacking governance primitives and lifecycle objects.
+Interpreting RCCS-T, RCCS-M, and ALCS together requires reading score-delta patterns. Strong RCCS-T with lower RCCS-M or ALCS indicates visible traditional governance coverage but less visible lifecycle responsibility object coverage. Lower RCCS-T with stronger RCCS-M and ALCS indicates stronger lifecycle protocol semantics but less productized governance-platform coverage. This is the strategic distinction the three-profile model preserves.
 
 Composite scoring must be reproducible and transparent when used. Dimension-level analytical judgments must be documented with rationale. Evidence sources must be cited with quality assessment. Evidence multipliers must be applied explicitly when numerical worksheets are used. Calculations must be shown transparently. Scoring is comparative, not absolute. In this publication draft, the value of the method is in making capability gaps visible without turning qualitative system mappings into rankings.
 
-Composite scoring is an analytical framework, not a legal compliance score. High composite scores do not mean legal compliance. Low composite scores do not mean non-compliance. Composite scoring measures system capability, not organizational practice. It is context-independent, but compliance is context-dependent. Organizations must not rely on composite scores as proof of legal compliance. The following chapters use RCCS/ALCS as analytical lenses for comparative field analysis and detailed qualitative system mappings.
+The scoring method is an analytical framework, not a legal compliance score. High RCCS-T, RCCS-M, ALCS, or optional composite scores do not mean legal compliance. Low scores do not mean non-compliance. The method measures system capability, not organizational practice. It is context-independent, but compliance is context-dependent. Organizations must not rely on scores as proof of legal compliance. The following chapters use RCCS-T, RCCS-M, and ALCS as analytical lenses for comparative field analysis and detailed qualitative system mappings.

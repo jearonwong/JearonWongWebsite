@@ -8,11 +8,11 @@
 
 Enterprises do not buy abstract governance concepts. They evaluate controls, procurement risk, board reporting, audit readiness, vendor substitution, model risk, cybersecurity, incident response, and monitoring. When a CTO, CISO, CRO, procurement lead, or board-facing risk team evaluates an agentic AI system, they ask questions in enterprise control language, not in lifecycle theory.
 
-Chapters 6 through 9 defined the Missing Regulatory Objects, RCCS, ALCS, and dual-layer scoring methodology. Those chapters established the lifecycle responsibility framework. This chapter translates those objects into enterprise adoption, procurement, internal control, board reporting, model risk, cybersecurity, incident response, and monitoring language.
+Chapters 6 through 9 defined the Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and the three-profile analytical model. Those chapters established the lifecycle responsibility framework. This chapter translates those objects into enterprise adoption, procurement, internal control, board reporting, model risk, cybersecurity, incident response, and monitoring language.
 
-The purpose of this chapter is to show that AI Agent Lifecycle Governance is not only an abstract protocol or research model. It can be mapped into enterprise control language. RCCS and ALCS scores become procurement scorecard inputs. MROs become audit evidence requirements. Lifecycle conformance becomes vendor substitution readiness. Evidence partitioning becomes privacy-preserving validation. Accepted outcome compliance becomes board reporting on agentic risk.
+The purpose of this chapter is to show that AI Agent Lifecycle Governance is not only an abstract protocol or research model. It can be mapped into enterprise control language. RCCS-T, RCCS-M, and ALCS scores can become bounded scorecard inputs. MROs become audit evidence requirements. Lifecycle conformance becomes vendor substitution readiness. Evidence partitioning becomes privacy-preserving validation. Accepted outcome compliance becomes board reporting on agentic risk.
 
-This chapter is a bridge from lifecycle objects to enterprise controls. It does not replace internal control frameworks. It shows where agentic lifecycle objects can provide evidence for enterprise control questions. It does not claim that MPLP is required for compliance. It does not claim that RCCS or ALCS is a legal compliance score. It does not provide an audit opinion, certification, or procurement recommendation.
+This chapter is a bridge from lifecycle objects to enterprise controls. It does not replace internal control frameworks. It shows where agentic lifecycle objects can provide evidence for enterprise control questions. It does not claim that MPLP is required for compliance. It does not claim that RCCS-T, RCCS-M, or ALCS is a legal compliance score. It does not provide an audit opinion, certification, or procurement recommendation.
 
 **Boundary:** This chapter provides a governance crosswalk, not an audit framework, certification procedure, insurance underwriting model, or legal opinion. Detailed assurance procedures and insurance models are reserved for companion papers, as outlined in Chapter 16.
 
@@ -20,15 +20,15 @@ This chapter is a bridge from lifecycle objects to enterprise controls. It does 
 
 ## 10.1 Enterprise Control Overlay
 
-The following figure illustrates how AI Agent Lifecycle Governance maps into enterprise control structures. Regulation and standards define baseline requirements. RCCS measures regulatory compliance coverage. ALCS measures lifecycle conformance. MROs provide engineering objects. Together, these layers produce enterprise control evidence that supports audit, insurance, and board reporting readiness.
+The following figure illustrates how AI Agent Lifecycle Governance maps into enterprise control structures. Regulation and standards define baseline requirements. RCCS-T measures traditional regulatory compliance coverage. MROs provide the adjustment layer. RCCS-M measures MRO-adjusted regulatory coverage. ALCS measures lifecycle conformance. Together, these layers produce enterprise control evidence that supports audit, insurance, and board reporting readiness.
 
 **Figure F-06 — Enterprise Control Overlay for AI Agent Lifecycle Governance**
 
-Regulation / Standards → RCCS Baseline Controls → ALCS Lifecycle Conformance → MRO Engineering Objects → Enterprise Control Evidence → Audit / Insurance / Board Reporting Readiness
+Regulation / Standards -> RCCS-T Baseline Controls -> MRO Adjustment Layer -> RCCS-M MRO-Adjusted Coverage -> ALCS Lifecycle Conformance -> Enterprise Control Evidence -> Audit / Insurance / Board Reporting Readiness
 
-*Figure F-06 shows how regulation and standards can be translated into enterprise control evidence through RCCS baseline controls, ALCS lifecycle conformance, and MRO engineering objects. It is a governance crosswalk, not an audit opinion, certification path, insurance underwriting model, or legal compliance proof.*
+*Figure F-06 shows how regulation and standards can be translated into enterprise control evidence through RCCS-T baseline controls, the MRO adjustment layer, RCCS-M coverage, ALCS lifecycle conformance, and MRO engineering objects. It is a governance crosswalk, not an audit opinion, certification path, insurance underwriting model, or legal compliance proof.*
 
-The overlay shows that lifecycle governance is not separate from enterprise controls. It is a structured method for producing the evidence that enterprise controls require. RCCS and ALCS scores do not replace risk assessments, internal audits, or compliance reviews. They provide structured inputs that make those processes more efficient, consistent, and auditable when applied to agentic systems.
+The overlay shows that lifecycle governance is not separate from enterprise controls. It is a structured method for producing the evidence that enterprise controls require. RCCS-T, RCCS-M, and ALCS scores do not replace risk assessments, internal audits, or compliance reviews. They provide structured inputs that make those processes more efficient, consistent, and auditable when applied to agentic systems.
 
 ---
 
@@ -55,7 +55,7 @@ The following tables map enterprise control topics to agentic lifecycle objects.
 
 ### Table T-10-01B: Enterprise Control Crosswalk — MRO/Dimension/Evidence Mapping
 
-| Enterprise Control Topic | Relevant MROs | Relevant RCCS/ALCS Dimensions | Evidence Expected |
+| Enterprise Control Topic | Relevant MROs | Relevant RCCS-T/RCCS-M/ALCS Dimensions | Evidence Expected |
 |--------------------------|---------------|-------------------------------|-------------------|
 | Internal control | MRO-01, MRO-02, MRO-04, MRO-05, MRO-08, MRO-16 | RCCS-04, RCCS-06, RCCS-08, ALCS-01, ALCS-02, ALCS-04, ALCS-05, ALCS-08 | Role-responsibility map, authority boundary object, accepted outcome state, tool-action liability record, evidence partition, incident closure record |
 | Procurement scorecard | MRO-11, MRO-14, MRO-15, MRO-16 | RCCS-03, RCCS-04, RCCS-07, ALCS-11, ALCS-14, ALCS-15 | Privacy-preserving validation protocol, processor chain record, vendor substitution conformance test, incident closure record |
@@ -192,7 +192,7 @@ The following table defines board-level reporting elements for agentic AI, mappe
 
 Not all lifecycle governance issues require board escalation. Management reporting addresses routine lifecycle conformance, evidence validation, and remediation closure. Board escalation is triggered when lifecycle accountability gaps, unresolved disputes, remediation failures, or privacy incidents exceed management authority, involve high-risk systems, or indicate systemic governance failures.
 
-Lifecycle objects provide the structured data needed for escalation decisions. RCCS and ALCS scores indicate whether lifecycle conformance is degrading. Open dispute registers indicate whether remediation processes are functioning. Privacy incident summaries indicate whether data governance controls are effective. Vendor substitution logs indicate whether supply-chain risk is managed.
+Lifecycle objects provide the structured data needed for escalation decisions. RCCS-T, RCCS-M, and ALCS scores can indicate whether governance coverage or lifecycle conformance is degrading. Open dispute registers indicate whether remediation processes are functioning. Privacy incident summaries indicate whether data governance controls are effective. Vendor substitution logs indicate whether supply-chain risk is managed.
 
 **Boundary:** This section is a governance crosswalk for board reporting, not a corporate governance framework, securities law compliance opinion, or board fiduciary duty analysis. Detailed board reporting procedures and governance escalation frameworks are reserved for companion papers, as outlined in Chapter 16.
 
@@ -288,15 +288,15 @@ Authority drift detection (MRO-07), evidence partitioning (MRO-08), cross-projec
 
 ### 10.8.1 What Chapter 10 Has Established
 
-Chapter 10 has established the enterprise control crosswalk for AI Agent Lifecycle Governance. It has shown how lifecycle governance objects—MROs, RCCS dimensions, ALCS dimensions, and lifecycle records—map into enterprise control language: audit, insurance, procurement, board reporting, model risk management, cybersecurity, incident response, and monitoring.
+Chapter 10 has established the enterprise control crosswalk for AI Agent Lifecycle Governance. It has shown how lifecycle governance objects - MROs, RCCS-T/RCCS-M dimensions, ALCS dimensions, and lifecycle records - map into enterprise control language: audit, insurance, procurement, board reporting, model risk management, cybersecurity, incident response, and monitoring.
 
-The crosswalk demonstrates that lifecycle governance is not an abstract protocol or research model. It is a structured method for producing the evidence that enterprise controls require. RCCS and ALCS scores become procurement scorecard inputs. MROs become audit evidence requirements. Lifecycle conformance becomes vendor substitution readiness. Evidence partitioning becomes privacy-preserving validation. Accepted outcome compliance becomes board reporting on agentic risk.
+The crosswalk demonstrates that lifecycle governance is not an abstract protocol or research model. It is a structured method for producing the evidence that enterprise controls require. RCCS-T, RCCS-M, and ALCS scores can become bounded scorecard inputs. MROs become audit evidence requirements. Lifecycle conformance becomes vendor substitution readiness. Evidence partitioning becomes privacy-preserving validation. Accepted outcome compliance becomes board reporting on agentic risk.
 
 Enterprise adoption of agentic AI requires this crosswalk layer. Without it, lifecycle governance remains disconnected from enterprise control frameworks, procurement processes, board reporting structures, and audit requirements. With it, lifecycle governance becomes the evidence layer that enterprise controls can rely upon.
 
 The chapter has provided:
 - Enterprise control overlay mapping lifecycle governance to audit, insurance, and board reporting readiness (Section 10.1)
-- Enterprise control crosswalk tables mapping control topics to MROs, RCCS/ALCS dimensions, and evidence outputs (Section 10.2)
+- Enterprise control crosswalk tables mapping control topics to MROs, RCCS-T/RCCS-M/ALCS dimensions, and evidence outputs (Section 10.2)
 - Model risk management mapping showing how model changes propagate through lifecycle conformance (Section 10.3)
 - Cybersecurity control mapping showing how lifecycle governance supports cybersecurity under attack (Section 10.4)
 - Board reporting elements defining structured, auditable lifecycle risk reporting (Section 10.5)

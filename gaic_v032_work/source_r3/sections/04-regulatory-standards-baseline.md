@@ -12,6 +12,8 @@ The analysis does not claim that these frameworks are weak or absent. The claim 
 
 Each framework analyzed in this chapter contributes essential governance direction. The shared pattern across all frameworks is that they establish what must be governed, but they do not themselves define the lifecycle objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints. That engineering layer is the focus of Chapters 6 through 9.
 
+This distinction is the bridge to the paper's scoring model. Existing regulation supplies risk, accountability, transparency, oversight, privacy, record-keeping, and monitoring language. It does not consistently define the lifecycle responsibility objects needed by agentic and multi-agent systems. RCCS-T therefore measures traditional regulatory coverage, while later chapters introduce MROs and RCCS-M to ask whether that coverage can be expressed through lifecycle responsibility objects.
+
 ## 4.2 Regulatory Frameworks Baseline Table
 
 The table below summarizes the frameworks analyzed in this chapter, their type, relevant requirements, and the agentic gap that remains.

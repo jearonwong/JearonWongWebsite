@@ -481,29 +481,35 @@ Dimension Score: (3/5) × 100 × 0.85 = 51.0
 - ALCS scores require evidence; evidence level affects score multiplier
 - ALCS scores are not product rankings; they compare systems by agentic lifecycle responsibility primitives
 
-**ALCS vs RCCS distinction:**
+**ALCS vs RCCS-T / RCCS-M distinction:**
 
-- **RCCS** measures regulatory compliance coverage primitives (risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, monitoring)
+- **RCCS-T** measures traditional regulatory compliance coverage primitives (risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, monitoring)
+- **RCCS-M** measures whether regulatory obligations can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics
 - **ALCS** measures agentic lifecycle responsibility object maturity (human-role-to-MAS mapping, delegated authority boundary, agent-human role distinction, accepted outcome compliance, tool-action liability boundary, responsibility transfer, authority drift detection, MAS evidence partitioning, cross-project reuse compliance, privacy/GDPR lifecycle mapping, privacy-preserving third-party validation, evidence minimization, data subject rights vs evidence retention, third-party processor chain, vendor/model/runtime substitution conformance)
-- **RCCS** focuses on regulatory compliance coverage capabilities
+- **RCCS-T** focuses on traditional regulatory compliance coverage capabilities
+- **RCCS-M** focuses on MRO-adjusted regulatory coverage
 - **ALCS** focuses on agentic lifecycle responsibility tracking and accountability capabilities
-- Both are analytical tools, not legal compliance scores
+- All three profiles are analytical tools, not legal compliance scores
 
-**Composite score formula (from Phase 1B-8C):**
+**Optional composite worksheet formulas:**
 
 ```
-Composite Score = 0.40 × RCCS + 0.60 × ALCS
+Traditional Composite = 0.40 × RCCS-T + 0.60 × ALCS
+Agentic Composite = 0.40 × RCCS-M + 0.60 × ALCS
 
 Where:
-RCCS = Average of 10 RCCS dimension scores (0-100)
+RCCS-T = Average of traditional RCCS dimension scores (0-100)
+RCCS-M = MRO-adjusted regulatory coverage score (0-100)
 ALCS = Average of 15 ALCS dimension scores (0-100)
-Composite Score = Weighted average (0-100)
+Optional composites = Weighted worksheet views (0-100), not the main result display
 ```
 
 **Example:**
 
 ```
-RCCS Adjusted Score: 65.0 (across 10 dimensions, 0-100)
+RCCS-T Adjusted Score: 65.0 (across 10 dimensions, 0-100)
+RCCS-M Adjusted Score: 72.0 (MRO-adjusted, 0-100)
 ALCS Adjusted Score: 55.0 (across 15 dimensions, 0-100)
-Composite Score: 0.40 × 65.0 + 0.60 × 55.0 = 26.0 + 33.0 = 59.0
+Traditional Composite: 0.40 × 65.0 + 0.60 × 55.0 = 26.0 + 33.0 = 59.0
+Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8
 ```

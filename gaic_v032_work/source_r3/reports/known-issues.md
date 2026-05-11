@@ -1,7 +1,30 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-12 Two-Layer RCCS and Visual Repair)
+**Last Updated:** May 11, 2026 (Phase 1D-13B Global RCCS-M Integration)
+
+## Phase 1D-13B Global RCCS-M Integration
+
+### Status: PHASE 1D-13B GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+
+Phase 1D-13B is a targeted global integration pass. It does not reopen content expansion, recalculate scores, add systems, create rankings, or change Appendix G into a scored appendix. It aligns active source to the Phase 1D-12 three-profile result model.
+
+**Integration results:**
+
+1. RCCS-T / MRO / RCCS-M / ALCS is now the global explanatory spine across front matter, methodology chapters, system mappings, MPLP mapping, appendices, and conclusion.
+2. RCCS-M is defined as `RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score`.
+3. RCCS-M is consistently bounded as author analytical, forward-looking, and not current law, legal compliance proof, certification, regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
+4. Phase 1D-12 score ranges and fixed non-ranked system order are preserved.
+5. Appendix G remains qualitative, provisional, and no-score; numeric profiles remain only in Evaluation Results.
+6. Phase 1D-11 citation/source closure and Phase 1D-12 table wrapping repair remain intact.
+
+**Remaining limitations, not blockers:**
+
+1. Human final review should inspect the Phase 1D-13B HTML/PDF v7 artifacts, especially front matter, Chapters 7-9, Evaluation Results, Appendix B, Appendix G, References, and Conclusion.
+2. RCCS-M remains an author analytical model and should not be presented as a regulator-approved standard or procurement benchmark.
+3. MPLP's RCCS-M / ALCS mapping remains author analytical where not directly stated in official MPLP sources, with conflict-of-interest disclosure preserved.
+
+**Phase 1D-13B Decision:** PHASE 1D-13B GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
 
 ## Phase 1D-12 Two-Layer RCCS and Visual Repair
 

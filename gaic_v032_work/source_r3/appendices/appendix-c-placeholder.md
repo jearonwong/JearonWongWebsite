@@ -35,7 +35,7 @@ The following table defines evidence levels and their permitted use.
 | L4 | Vendor claims, marketing materials, blog posts | Positioning only; not capability claims | Low | Vendor claims require validation; marketing materials may overstate capability; blog posts are not authoritative |
 | L5 | Author inference, analytical framework, logical derivation | Framework design; gap analysis; analytical tools | Lowest | Author inference must be marked clearly; does not replace evidence; requires organizational interpretation |
 
-**Evidence level multipliers for RCCS/ALCS scoring:**
+**Evidence level multipliers for RCCS-T/RCCS-M/ALCS scoring:**
 
 - **L1:** 1.00
 - **L2:** 0.85
@@ -96,6 +96,7 @@ The white paper uses five source groups: L1 Binding Legal/Regulatory Sources, L1
 |-----------|-------------|------|---------|----------------|
 | AUTHOR-INFERENCE-MRO | Sixteen Missing Regulatory Objects (Author Inference) | Analytical framework | Chapter 6 | ✓ Marked as L5 |
 | AUTHOR-INFERENCE-RCCS | RCCS Analytical Framework (Author Inference) | Analytical framework | Chapter 7 | ✓ Marked as L5 |
+| AUTHOR-INFERENCE-RCCS-M | RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score (Author Inference) | Analytical framework | Chapters 6-9, Evaluation Results | ✓ Marked as L5; forward-looking author analytical model |
 | AUTHOR-INFERENCE-ALCS | ALCS Analytical Framework (Author Inference) | Analytical framework | Chapter 8 | ✓ Marked as L5 |
 | AUTHOR-INFERENCE-COMPOSITE | Composite Scoring Method (Author Inference) | Analytical framework | Chapter 9 | ✓ Marked as L5 |
 | AUTHOR-INFERENCE-SYSTEM-MAPPING | System Mapping Methodology (Author Inference) | Analytical framework | Chapters 11, 12 | ✓ Marked as L5 |
@@ -138,7 +139,8 @@ The following table provides the complete source register for the white paper.
 | MPLP-SPEC | MPLP Spec | L2 | Chapter 13 | Closed through MPLP docs entry point for protocol identity support | Preserve version/citation details during final proof |
 | VALIDATION-LAB-METHODOLOGY | Validation Lab Methodology | L2 | Chapter 14 | Methodology page cited and boundary narrowed | Retain as public-surface non-certifying example only |
 | AUTHOR-INFERENCE-MRO | Sixteen MROs (Author Inference) | L5 | Chapter 6 | ✓ Marked as L5 | Verify L5 marking in text |
-| AUTHOR-INFERENCE-RCCS | RCCS (Author Inference) | L5 | Chapter 7 | ✓ Marked as L5 | Verify L5 marking in text |
+| AUTHOR-INFERENCE-RCCS | RCCS-T / traditional RCCS framework (Author Inference) | L5 | Chapter 7 | ✓ Marked as L5 | Verify L5 marking in text |
+| AUTHOR-INFERENCE-RCCS-M | RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score (Author Inference) | L5 | Chapters 6-9, Evaluation Results | ✓ Marked as L5; author analytical, forward-looking, not current law | Preserve boundary wording and MPLP COI |
 | AUTHOR-INFERENCE-ALCS | ALCS (Author Inference) | L5 | Chapter 8 | ✓ Marked as L5 | Verify L5 marking in text |
 | AUTHOR-INFERENCE-COMPOSITE | Composite Scoring (Author Inference) | L5 | Chapter 9 | ✓ Marked as L5 | Verify L5 marking in text |
 | AUTHOR-INFERENCE-SYSTEM-MAPPING | System Mapping (Author Inference) | L5 | Chapters 11, 12 | ✓ Marked as L5 | Verify L5 marking in text |
@@ -174,7 +176,9 @@ The following table lists Phase 1D-11 source closure results after claim-level s
 
 - **L2 sources (official product documentation)** are referenced in Chapters 12, 13, and 14 and support documented product/protocol capability surfaces. Phase 1D-11 records closure dispositions for high-risk source pointers. L2 sources do not prove deployment practice, audit success, lifecycle responsibility-object implementation, or legal compliance.
 
-- **L5 sources (author inference)** are used in Chapters 6-9, 11-12, and 15 to define the analytical framework (MROs, RCCS, ALCS, Composite Scoring, System Mapping, Failure Scenarios). These sources are marked as author inference and do not replace evidence-based analysis.
+- **L5 sources (author inference)** are used in Chapters 6-9, 11-12, and 15 to define the analytical framework (MROs, RCCS-T, RCCS-M, ALCS, optional composite views, System Mapping, Failure Scenarios). These sources are marked as author inference and do not replace evidence-based analysis.
+
+- **AUTHOR-INFERENCE-RCCS-M** marks the MRO-adjusted regulatory coverage model. RCCS-M is an author analytical, forward-looking model grounded in MRO analysis. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a final vendor score, or an official standard.
 
 - **MPLP and Validation Lab sources** require special attention due to author conflict of interest. The author of this white paper is also the creator of MPLP and Validation Lab. Phase 1C follow-up verified that MPLP and Validation Lab remain positioned as examples, not required or exclusive solutions; publication-candidate QA must preserve that boundary.
 

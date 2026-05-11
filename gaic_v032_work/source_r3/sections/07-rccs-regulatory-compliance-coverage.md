@@ -6,23 +6,37 @@
 
 ## 7.0 Chapter Overview
 
-This chapter introduces the **Regulatory Compliance Coverage Score (RCCS)**, the first of two scoring frameworks used in this white paper. RCCS measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+This chapter introduces the **Regulatory Compliance Coverage Score (RCCS)** family used in this white paper. The original RCCS is treated as **RCCS-T — Traditional Regulatory Compliance Coverage Score** unless explicitly MRO-adjusted. RCCS-T measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+
+The chapter also defines **RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score**. RCCS-M asks whether those same regulatory obligations can be expressed through Missing Regulatory Objects: authority boundaries, responsibility mappings, accepted outcome states, evidence partitions, privacy lifecycle maps, substitution conformance records, and incident/remediation closure objects.
 
 RCCS is an analytical framework for comparing system capabilities against regulatory ideals. It is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is a structured method for evaluating whether a system provides the primitives, controls, and evidence mechanisms that existing regulation and governance frameworks increasingly require.
 
-The chapter defines the ten RCCS dimensions, explains the shared scoring procedure used for both RCCS and ALCS, and establishes clear boundaries around what RCCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 7.6 through 7.15.
+The chapter defines the ten RCCS dimensions, explains the shared scoring procedure used for RCCS-T, RCCS-M, and ALCS, and establishes clear boundaries around what RCCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 7.6 through 7.15.
 
 ---
 
 ## 7.1 What RCCS Measures
 
-RCCS measures how strongly a system covers existing regulatory and governance requirements. It evaluates whether a system provides the capabilities, controls, and evidence mechanisms that frameworks such as the EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, and Singapore MGF increasingly require.
+RCCS-T measures how strongly a system covers existing regulatory and governance requirements. It evaluates whether a system provides the capabilities, controls, and evidence mechanisms that frameworks such as the EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, and Singapore MGF increasingly require.
 
-RCCS is not a legal compliance score. A high RCCS score does not mean a system is legally compliant. A low RCCS score does not mean a system is non-compliant. Legal compliance depends on organizational practice, deployment context, jurisdiction, risk class, and how the system is used. RCCS measures system capability, not organizational conformance.
+RCCS-T and RCCS-M are not legal compliance scores. A high RCCS-T or RCCS-M score does not mean a system is legally compliant. A low score does not mean a system is non-compliant. Legal compliance depends on organizational practice, deployment context, jurisdiction, risk class, and how the system is used. RCCS measures system capability, not organizational conformance.
 
 RCCS is an analytical framework for comparing systems. It allows buyers, auditors, governance teams, and protocol designers to evaluate whether a system provides the primitives required to support regulatory obligations. It makes visible the difference between systems that provide governance controls and systems that provide only execution or observability features.
 
-The purpose of RCCS is to translate regulatory abstractions into measurable system capabilities. Regulation requires risk management, but what does that mean in a system? RCCS defines ten dimensions that operationalize regulatory requirements into system features that can be evaluated, compared, and improved. It is a bridge between regulatory language and engineering implementation.
+The purpose of RCCS-T is to translate regulatory abstractions into measurable system capabilities. Regulation requires risk management, but what does that mean in a system? RCCS-T defines ten dimensions that operationalize regulatory requirements into system features that can be evaluated, compared, and improved. It is a bridge between regulatory language and engineering implementation.
+
+RCCS-M adds the MRO adjustment. It asks a second question: can the regulatory coverage captured by RCCS-T be expressed through lifecycle responsibility objects that agentic systems can emit, inspect, replay, and validate? A governance dashboard may support RCCS-T. An authority boundary object, accepted outcome record, partitioned evidence chain, and substitution conformance record support RCCS-M.
+
+## 7.1.1 RCCS-T and RCCS-M
+
+**RCCS-T — Traditional Regulatory Compliance Coverage Score** measures familiar governance surfaces: risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+
+**RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score** measures whether those governance surfaces can be represented through Missing Regulatory Objects required for agentic lifecycle responsibility compliance.
+
+The distinction matters because enterprise governance platforms may show strong RCCS-T coverage through conventional dashboards, policies, documentation, controls, and monitoring. Lifecycle protocol systems may show stronger RCCS-M where they define explicit responsibility, authority, evidence, acceptance, privacy, substitution, and closure objects. This is a score-delta interpretation, not a product ranking.
+
+RCCS-M is an author analytical, forward-looking model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
 
 ---
 
@@ -64,7 +78,7 @@ The following table summarizes the ten dimensions, their regulatory sources, cor
 
 ## 7.3 Shared Scoring Procedure
 
-RCCS and ALCS use the same scoring procedure. This section defines the shared raw scoring scale, evidence confidence multiplier, dimension score formula, and cross-framework composite score calculation used throughout the white paper.
+RCCS-T, RCCS-M, and ALCS use the same evidence confidence procedure. This section defines the shared raw scoring scale, evidence confidence multiplier, and dimension score formula used throughout the white paper. Composite views are secondary and are defined in Chapter 9.
 
 ### 7.3.1 Raw Scoring Scale (0-5)
 
@@ -77,7 +91,7 @@ Each dimension is scored on a 0-5 raw scale based on the strength of system supp
 - **4 = Strong capability; validated evidence** - Strong primitives exist and are mostly integrated across the system's scope.
 - **5 = Complete capability demonstrated by implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts** - Legal text may establish a regulatory baseline but does not by itself prove implementation.
 
-This scale is applied consistently across all RCCS and ALCS dimensions. The score reflects system capability, not organizational practice. A system may score 5 on a dimension while the organization using it scores lower due to deployment gaps, policy weaknesses, or incomplete adoption.
+This scale is applied consistently across RCCS-T, RCCS-M, and ALCS dimensions. The score reflects system capability, not organizational practice. A system may score 5 on a dimension while the organization using it scores lower due to deployment gaps, policy weaknesses, or incomplete adoption.
 
 ### 7.3.2 Evidence Confidence Multiplier
 
@@ -125,9 +139,9 @@ Where:
 - Raw Score is the 0-5 capability score for each dimension
 - Evidence Confidence Multiplier is L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, or L5 = 0.35
 
-The RCCS framework score is the aggregate of adjusted RCCS dimension scores. The cross-framework composite score is defined in Chapter 9 as:
+The RCCS-T framework score is the aggregate of adjusted traditional RCCS dimension scores. RCCS-M uses the same regulatory dimension family but interprets each dimension through MRO coverage: whether the regulatory obligation is expressible as lifecycle responsibility objects.
 
-**Composite Score = 0.40 × RCCS + 0.60 × ALCS**
+Optional cross-framework composite views are defined in Chapter 9. They are secondary to the three-profile display and must not hide the distinction between RCCS-T, RCCS-M, and ALCS.
 
 The following table illustrates the calculation formula.
 
@@ -138,20 +152,20 @@ The following table illustrates the calculation formula.
 | Raw Score | 0-5 scale based on capability strength | Risk Management = 4 |
 | Evidence Multiplier | L1-L5 multiplier | L2 evidence = 0.85 |
 | Dimension Score | (Raw Score / 5) × 100 × Evidence Multiplier | (4 / 5) × 100 × 0.85 = 68.0 |
-| Framework Score | Aggregate of adjusted RCCS dimension scores | RCCS = aggregate RCCS score |
-| Cross-Framework Composite | 0.40 × RCCS + 0.60 × ALCS | See Chapter 9 |
+| Framework Score | Aggregate of adjusted RCCS dimension scores | RCCS-T or RCCS-M framework score |
+| Optional Composite View | Secondary calculation using RCCS-T or RCCS-M with ALCS | See Chapter 9 |
 
-This calculation method is used for both RCCS and ALCS. The only difference is the set of dimensions and their weights.
+This calculation method is used for RCCS-T, RCCS-M, and ALCS. The difference is the evaluation lens: RCCS-T asks about traditional regulatory coverage, RCCS-M asks about MRO-adjusted coverage, and ALCS asks about lifecycle conformance maturity.
 
 ---
 
 ## 7.4 RCCS Boundary Statement
 
-RCCS is an analytical scoring framework, not a legal compliance score. This boundary must be understood clearly to avoid misinterpretation.
+RCCS-T and RCCS-M are analytical scoring frameworks, not legal compliance scores. This boundary must be understood clearly to avoid misinterpretation.
 
 **What RCCS is:**
 - An analytical framework for comparing system capabilities against regulatory ideals
-- A structured method for evaluating whether a system provides governance primitives
+- A structured method for evaluating whether a system provides governance primitives and whether those primitives can be expressed through lifecycle responsibility objects
 - A tool for buyers, auditors, and governance teams to assess system readiness
 - A bridge between regulatory language and engineering implementation
 
@@ -163,7 +177,7 @@ RCCS is an analytical scoring framework, not a legal compliance score. This boun
 
 **Key boundary principles:**
 
-1. **High RCCS score does NOT mean legal compliance.** A system may score well on RCCS while the organization using it fails to comply with legal obligations due to deployment gaps, policy weaknesses, incomplete adoption, or jurisdictional differences.
+1. **High RCCS-T or RCCS-M score does NOT mean legal compliance.** A system may score well while the organization using it fails to comply with legal obligations due to deployment gaps, policy weaknesses, incomplete adoption, or jurisdictional differences.
 
 2. **Low RCCS score does NOT mean non-compliance.** A system may score lower on RCCS while the organization achieves compliance through compensating controls, manual processes, or alternative governance mechanisms.
 
@@ -171,7 +185,7 @@ RCCS is an analytical scoring framework, not a legal compliance score. This boun
 
 4. **RCCS is context-independent, but compliance is context-dependent.** RCCS evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors.
 
-The purpose of this boundary statement is to prevent over-claiming. RCCS is a useful analytical tool, but it is not a compliance certification. Organizations must not rely on RCCS scores as proof of legal compliance. Buyers must not treat high RCCS scores as a substitute for due diligence, legal review, or risk assessment.
+The purpose of this boundary statement is to prevent over-claiming. RCCS-T and RCCS-M are useful analytical tools, but they are not compliance certifications. Organizations must not rely on RCCS scores as proof of legal compliance. Buyers must not treat high RCCS scores as a substitute for due diligence, legal review, or risk assessment. RCCS-M must also not be presented as a regulator-approved benchmark or official standard.
 
 ---
 
@@ -622,8 +636,8 @@ The most common gap is monitoring for model performance but not for agent behavi
 
 ## 7.16 Chapter Summary
 
-This chapter introduced the Regulatory Compliance Coverage Score (RCCS), the first of two scoring frameworks used in this white paper. RCCS measures how strongly a system covers existing regulatory and governance requirements across ten dimensions: risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring. It is an analytical framework for comparing system capabilities against regulatory ideals, not a legal compliance certification.
+This chapter introduced the Regulatory Compliance Coverage Score (RCCS) family used in this white paper. RCCS-T measures how strongly a system covers existing regulatory and governance requirements across ten dimensions: risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring. RCCS-M asks whether that coverage can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics. Both are analytical frameworks for comparing system capabilities against regulatory ideals, not legal compliance certifications.
 
 The ten RCCS dimensions map directly to recurring requirements in EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, and Singapore MGF for Agentic AI. Risk management corresponds to EU AI Act Article 9 and NIST AI RMF core functions. Data governance corresponds to GDPR Article 5 and EU AI Act Article 10. Documentation corresponds to EU AI Act Article 11. Record-keeping corresponds to EU AI Act Article 12 and GDPR Article 30. Transparency corresponds to EU AI Act Article 13 and GDPR Articles 13-14. Human oversight corresponds to EU AI Act Article 14. Security corresponds to EU AI Act Article 15 and GDPR Article 32. Accountability corresponds to GDPR Article 5(2) and EU AI Act Article 26. Contestability corresponds to EU AI Act Article 86 and GDPR Article 22. Monitoring corresponds to EU AI Act Article 72. These mappings demonstrate that RCCS is grounded in existing regulatory requirements, not speculative future obligations.
 
-RCCS provides a baseline for evaluating whether systems provide the governance primitives that regulation increasingly requires. However, RCCS alone is insufficient for agentic systems. A system may score well on RCCS while lacking the lifecycle objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints. This is where ALCS becomes necessary. Chapter 8 introduces the Agentic Lifecycle Conformance Score (ALCS), which measures a different layer: whether a system supports the sixteen Missing Regulatory Objects that enable lifecycle responsibility compliance in multi-agent execution. RCCS and ALCS together provide a dual-layer assessment of system governance capability.
+RCCS-T provides a baseline for evaluating whether systems provide the governance primitives that regulation increasingly requires. However, traditional coverage alone is insufficient for agentic systems. A system may score well on RCCS-T while lacking the lifecycle objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints. RCCS-M makes that missing adjustment explicit. Chapter 8 introduces the Agentic Lifecycle Conformance Score (ALCS), which measures a different layer: whether lifecycle responsibility conformance is mature across the object set. RCCS-T, RCCS-M, and ALCS together provide a three-profile assessment of system governance capability.

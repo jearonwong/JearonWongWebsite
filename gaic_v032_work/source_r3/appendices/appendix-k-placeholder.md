@@ -67,7 +67,7 @@ Phase 1A established the clean source foundation:
 
 | Boundary Area | Risk | Remediation Applied | Remaining Check | Phase |
 |---------------|------|---------------------|-----------------|-------|
-| RCCS/ALCS non-legal-score boundary | Readers may treat analytical scores as legal determinations | Repeated boundary language across chapters and appendices | Phase 1C consistency review completed; verify in final proof | Phase 1A / 1B |
+| RCCS-T/RCCS-M/ALCS non-legal-score boundary | Readers may treat analytical scores as legal determinations | Repeated boundary language across chapters and appendices; RCCS-M marked as author analytical and forward-looking | Phase 1D-13B consistency review completed; verify in final proof | Phase 1A / 1B / 1D-13B |
 | MPLP non-required / non-exclusive boundary | MPLP could be misread as required or sufficient by itself | Disclosed author relationship and framed MPLP as one protocol path | Phase 1C wording review completed; verify in final proof | Phase 1B-4 |
 | Validation Lab non-certifying boundary | Validation Lab could be misread as an approval body | Framed as a non-certifying evidence adjudication example | URL and boundary language reviewed at entry-point level; verify in final proof | Phase 1B-5 |
 | Appendix G no-score/no-ranking boundary | Provisional assessment could be misused as vendor ordering | Removed scores, ordered comparisons, and selection language; Phase 1C follow-up preserved revalidated provisional status | Verify no score/ranking language in final proof | Phase 1B-9C / 1B-9D / 1C |

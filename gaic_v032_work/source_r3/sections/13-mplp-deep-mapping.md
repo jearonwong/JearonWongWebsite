@@ -10,7 +10,7 @@ MPLP (Multi-Agent Lifecycle Protocol) appears in this white paper because it is 
 
 **Because MPLP is created by the author of this white paper, the mapping must be more explicit, not less explicit. The correct response to conflict of interest is not silence; it is transparent boundary discipline.**
 
-This chapter maps MPLP's protocol semantics to the Missing Regulatory Objects, RCCS dimensions, and ALCS dimensions. Official MPLP documentation was located during claim-level source review, but protocol-to-MRO/ALCS mapping remains an evidence-qualified analytical interpretation unless the protocol text directly defines the relevant lifecycle object. MPLP mapping remains protocol-level semantic fit, not implementation conformance. The chapter distinguishes protocol-level fit from implementation evidence, deployment maturity, enterprise adoption, auditor acceptance, insurer acceptance, and regulatory recognition. The chapter closes with explicit non-claim discipline to prevent overclaim.
+This chapter maps MPLP's protocol semantics to the Missing Regulatory Objects, RCCS-T, RCCS-M, and ALCS dimensions. Official MPLP documentation was located during claim-level source review, but protocol-to-MRO/RCCS-M/ALCS mapping remains an evidence-qualified analytical interpretation unless the protocol text directly defines the relevant lifecycle object. MPLP mapping remains protocol-level semantic fit, not implementation conformance. The chapter distinguishes protocol-level fit from implementation evidence, deployment maturity, enterprise adoption, auditor acceptance, insurer acceptance, and regulatory recognition. The chapter closes with explicit non-claim discipline to prevent overclaim.
 
 ---
 
@@ -23,7 +23,7 @@ MPLP is a lifecycle protocol path for expressing agentic responsibility objects.
 | Claim Area | Allowed Framing | Forbidden Framing |
 |------------|-----------------|-------------------|
 | Protocol identity | MPLP is a lifecycle protocol path for expressing agentic responsibility objects | MPLP is the official standard; MPLP is required for compliance |
-| Compliance relationship | MPLP may map strongly to ALCS because ALCS measures lifecycle responsibility objects | MPLP certifies compliance; MPLP proves legal compliance |
+| Compliance relationship | MPLP may show limited RCCS-T product-platform coverage while mapping strongly to RCCS-M and ALCS because those profiles measure lifecycle responsibility semantics | MPLP certifies compliance; MPLP proves legal compliance |
 | Certification | MPLP can be evaluated as one example of protocol-level lifecycle governance | MPLP is a certification program; MPLP certifies systems |
 | Legal authority | MPLP defines protocol semantics for lifecycle governance | MPLP is a regulator; MPLP is a legal authority |
 | Vendor status | MPLP is a protocol specification | MPLP is a cloud platform; MPLP is a vendor product |
@@ -75,14 +75,18 @@ The following table maps MPLP protocol semantics to the sixteen Missing Regulato
 
 ---
 
-## 13.4 MPLP Mapping to RCCS
+## 13.4 MPLP Mapping to RCCS-T and RCCS-M
 
-MPLP can support RCCS where protocol semantics create evidence, accountability, traceability, and governance primitives. However, RCCS also depends on organizational controls, deployment environment, security operations, data governance policy, and legal interpretation. MPLP alone does not satisfy RCCS.
+MPLP should not be read as weak merely because it is not an enterprise governance SaaS. The paper distinguishes two regulatory-coverage profiles. **RCCS-T** measures traditional productized governance coverage: risk dashboards, organizational policy workflows, cloud security controls, documentation management, monitoring, and compliance operations. MPLP may be limited on that product-platform layer. **RCCS-M** measures whether regulatory obligations can be expressed through Missing Regulatory Objects. MPLP may map strongly on that layer because its protocol semantics are designed around lifecycle responsibility objects.
 
-**Table T-13-03: MPLP Mapping to RCCS Dimensions**
+MPLP can support RCCS-M where protocol semantics create evidence, accountability, traceability, accepted-outcome records, authority boundaries, responsibility transfer, and substitution conformance. However, MPLP alone does not satisfy either RCCS-T or RCCS-M in deployment. Both profiles still depend on implementation, organizational controls, deployment environment, security operations, data governance policy, and legal interpretation.
+
+**Table T-13-03: MPLP Mapping to RCCS-T and RCCS-M Dimensions**
 
 | RCCS Dimension | Mapping Strength | Why MPLP May Help | Boundary / Evidence Limit |
 |----------------|------------------|-------------------|---------------------------|
+| RCCS-T overall product-platform coverage | Partial to Moderate | Protocol semantics may support governance evidence, but MPLP is not a productized governance dashboard or cloud compliance platform | Requires product implementation, enterprise integration, organizational policy workflow, and operational controls |
+| RCCS-M overall MRO-adjusted coverage | Strong | Protocol semantics map strongly to MRO-like authority, evidence, accepted-outcome, transfer, and substitution objects | Author analytical mapping where not directly stated; requires implementation conformance |
 | RCCS-01: Risk Management | Moderate | Protocol semantics can support risk documentation and evidence | Requires organizational risk management process; requires risk assessment integration |
 | RCCS-02: Data Governance | Moderate | Data-flow semantics can support data lineage and lifecycle tracking | Requires data governance policy; requires data quality controls |
 | RCCS-03: Documentation | Moderate | Protocol semantics can generate lifecycle documentation | Requires documentation standards; requires version control integration |
@@ -158,7 +162,7 @@ The following table explicitly restates forbidden claims to prevent overclaim.
 | Regulatory recognition | MPLP adoption requires regulatory interpretation | MPLP is regulator-approved; MPLP is the official standard; MPLP is mandated by regulation |
 | Enterprise readiness | MPLP requires implementation validation and enterprise integration | MPLP proves enterprise readiness; MPLP is production-ready; MPLP guarantees operational effectiveness |
 | Validation Lab | Validation Lab may serve as a non-certifying evidence adjudication example | Validation Lab certifies compliance; Validation Lab is a certification authority; Validation Lab proves legal compliance |
-| RCCS/ALCS | MPLP may map strongly to ALCS dimensions; actual deployment requires implementation evidence | RCCS/ALCS proves legal compliance; high MPLP alignment guarantees compliance; MPLP satisfies all RCCS/ALCS requirements |
+| RCCS-T/RCCS-M/ALCS | MPLP may have limited RCCS-T product-platform coverage while mapping strongly to RCCS-M and ALCS dimensions; actual deployment requires implementation evidence | RCCS-T/RCCS-M/ALCS proves legal compliance; high MPLP alignment guarantees compliance; MPLP satisfies all scoring requirements |
 | Market adoption | MPLP adoption requires market validation and organizational acceptance | MPLP is industry-standard; MPLP is universally adopted; MPLP is the only solution |
 | System comparison | MPLP can be compared to other systems by responsibility semantics | Other systems are non-compliant; MPLP is superior; systems without MPLP fail compliance |
 
@@ -170,4 +174,4 @@ Chapter 13 has mapped MPLP's protocol semantics to lifecycle responsibility obje
 
 **Chapter 14 must not become an endorsement or certification claim.** Validation Lab is referenced as one example of how evidence-based validation can support lifecycle governance without creating a certification program. The paper evaluates validation patterns, not validation products.
 
-The bridge from protocol semantics (Chapter 13) to validation patterns (Chapter 14) is the recognition that protocol-level fit must be validated through evidence, not assumed through design. MPLP's strong ALCS mapping creates validation opportunities, but validation itself requires independent evidence, not protocol authority.
+The bridge from protocol semantics (Chapter 13) to validation patterns (Chapter 14) is the recognition that protocol-level fit must be validated through evidence, not assumed through design. MPLP's strong RCCS-M and ALCS mapping creates validation opportunities, but validation itself requires independent evidence, not protocol authority.

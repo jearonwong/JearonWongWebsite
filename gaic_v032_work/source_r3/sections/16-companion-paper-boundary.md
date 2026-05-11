@@ -6,7 +6,7 @@
 
 ## 16.0 Why Companion Paper Boundaries Matter
 
-This white paper serves as the primary framework document for AI Agent Lifecycle Governance. It defines the semantic and engineering layer for agentic and multi-agent system compliance. It introduces Missing Regulatory Objects, dual-layer scoring frameworks, enterprise control crosswalks, system positioning, and adoption pathways. Because the subject intersects compliance, audit, assurance, insurance, and enterprise procurement, clear scope boundaries are necessary.
+This white paper serves as the primary framework document for AI Agent Lifecycle Governance. It defines the semantic and engineering layer for agentic and multi-agent system compliance. It introduces Missing Regulatory Objects, the RCCS-T/RCCS-M/ALCS three-profile analytical model, enterprise control crosswalks, system positioning, and adoption pathways. Because the subject intersects compliance, audit, assurance, insurance, and enterprise procurement, clear scope boundaries are necessary.
 
 Without companion-paper boundaries, the main white paper could become overloaded with audit methodology, insurance underwriting models, actuarial analysis, legal opinions, certification procedures, and procurement recommendations. That would dilute its core purpose and make it unreadable for the audiences who need lifecycle governance clarity.
 
@@ -18,7 +18,7 @@ Two companion papers are planned:
 
 2. **Agentic AI Insurability White Paper 2026** — planned to define risk classification, tool-action liability, loss attribution, claim replay evidence, premium differentiation logic, exclusion triggers, and underwriting implications.
 
-This chapter clarifies the role of each paper and prevents scope confusion. It ensures that readers understand what the main white paper does and does not claim. It establishes non-claim discipline for legal, audit, assurance, insurance, RCCS/ALCS, MPLP, Validation Lab, and system mapping boundaries.
+This chapter clarifies the role of each paper and prevents scope confusion. It ensures that readers understand what the main white paper does and does not claim. It establishes non-claim discipline for legal, audit, assurance, insurance, RCCS-T/RCCS-M/ALCS, MPLP, Validation Lab, and system mapping boundaries.
 
 ---
 
@@ -30,9 +30,10 @@ The main white paper covers the following topics at framework-entry level:
 - AI Agent Lifecycle Governance definition and lifecycle chain
 - Regulatory and standards baseline analysis
 - Missing Regulatory Objects (MRO-01 through MRO-16)
-- RCCS (Regulatory Compliance Coverage Score) framework
+- RCCS-T (Traditional Regulatory Compliance Coverage Score) framework
+- RCCS-M (MRO-Adjusted Regulatory Compliance Coverage Score) framework
 - ALCS (Agentic Lifecycle Conformance Score) framework
-- Composite dual-layer scoring profile
+- Three-profile analytical model with optional composite worksheet views
 - Enterprise control crosswalk and procurement scorecard inputs
 - System positioning and comparative field mappings
 - MPLP boundary and non-claim discipline
@@ -64,7 +65,7 @@ The main white paper provides the primary framework layer. Detailed assurance pr
 
 ## 16.2 Companion Paper 1 — Agentic AI Evidence & Assurance White Paper 2026
 
-The **Agentic AI Evidence & Assurance White Paper 2026** is planned to define the audit, control testing, and validation methodology for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into audit control objectives, evidence requirements, and attestation readiness.
+The **Agentic AI Evidence & Assurance White Paper 2026** is planned to define the audit, control testing, and validation methodology for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS-T, RCCS-M, and ALCS into audit control objectives, evidence requirements, and attestation readiness.
 
 **Intended Scope:**
 
@@ -104,7 +105,7 @@ The Evidence & Assurance companion paper is expected to clarify that Validation 
 
 ## 16.3 Companion Paper 2 — Agentic AI Insurability White Paper 2026
 
-The **Agentic AI Insurability White Paper 2026** is planned to define the risk classification, loss attribution, and underwriting implications for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS, and ALCS into insurability criteria, claim replay evidence, and premium differentiation logic.
+The **Agentic AI Insurability White Paper 2026** is planned to define the risk classification, loss attribution, and underwriting implications for agentic systems. When published, it is expected to build on the lifecycle governance framework defined in the main white paper and translate MROs, RCCS-T, RCCS-M, and ALCS into insurability criteria, claim replay evidence, and premium differentiation logic.
 
 **Intended Scope:**
 
@@ -136,7 +137,7 @@ The Insurability companion paper is not intended to:
 - Replace insurance broker, underwriter, or claims adjuster judgment
 - Define claim settlement procedures or dispute resolution mechanisms
 
-The Insurability companion paper is expected to provide a framework for analyzing insurability implications. It is not intended to replace professional insurance judgment. It is not intended to claim that RCCS or ALCS scores determine premiums. It is not intended to claim that MPLP conformance guarantees insurability. It is expected to clarify that insurability depends on underwriting judgment, actuarial analysis, legal review, and risk appetite, not only on lifecycle conformance scores.
+The Insurability companion paper is expected to provide a framework for analyzing insurability implications. It is not intended to replace professional insurance judgment. It is not intended to claim that RCCS-T, RCCS-M, or ALCS scores determine premiums. It is not intended to claim that MPLP conformance guarantees insurability. It is expected to clarify that insurability depends on underwriting judgment, actuarial analysis, legal review, and risk appetite, not only on lifecycle conformance scores.
 
 ---
 
@@ -158,7 +159,7 @@ The following tables clarify which topics are covered in the main white paper an
 | **Operating Effectiveness** | Not covered | Defines how to evaluate whether controls are operating as intended |
 | **Attestation Readiness** | Mentions attestation as downstream implication | Defines what evidence is required for third-party attestation or assurance engagement |
 | **Privacy-Preserving Validation** | Defines MRO-11 and MRO-12 as lifecycle requirements | Defines validation procedures, selective disclosure, and privacy-preserving evidence adjudication |
-| **Enterprise Procurement** | Provides procurement scorecard inputs based on RCCS/ALCS | Not primary scope; procurement decisions remain enterprise judgment |
+| **Enterprise Procurement** | Provides procurement scorecard inputs based on RCCS-T/RCCS-M/ALCS | Not primary scope; procurement decisions remain enterprise judgment |
 | **Board Reporting** | Provides board reporting elements for agentic risk | Not primary scope; board reporting remains enterprise governance responsibility |
 
 ### Table T-16-01B: Main Paper vs Insurability Boundary
@@ -169,7 +170,7 @@ The following tables clarify which topics are covered in the main white paper an
 | **Dispute-Ready Replay** | Defines evidence chain and replay as lifecycle requirements | Defines claim replay procedures, dispute-ready evidence structure, and claim settlement implications |
 | **Claim Replay** | Mentions claim replay as downstream implication of evidence chain | Defines claim replay methodology, evidence requirements, and dispute resolution procedures |
 | **Loss Attribution** | Defines authority boundary and responsibility transfer as MROs | Defines loss attribution methodology, liability analysis, and coverage boundary implications |
-| **Risk Classification** | Provides RCCS/ALCS scores as risk inputs; does not claim scores determine risk classification | Analyzes how lifecycle conformance affects risk classification for underwriting purposes |
+| **Risk Classification** | Provides RCCS-T/RCCS-M/ALCS scores as risk inputs; does not claim scores determine risk classification | Analyzes how lifecycle conformance affects risk classification for underwriting purposes |
 | **Premium Differentiation** | Mentions premium differentiation as potential downstream implication | Analyzes premium differentiation logic without defining actual pricing or actuarial models |
 | **Exclusion Triggers** | Defines authority drift and autonomous action boundaries as lifecycle risks | Analyzes exclusion trigger implications for coverage boundaries |
 | **Incident Remediation Closure** | Defines MRO-16 (Incident, Dispute, and Remediation Closure) as lifecycle requirement | Defines remediation closure verification for claim settlement and coverage restoration |
@@ -199,9 +200,9 @@ This section establishes explicit boundaries for what the main white paper does 
 
 - **This white paper is not a certification program.** It does not certify compliance, issue conformity assessments, or provide regulatory approval. Certification requires accredited conformity assessment bodies.
 
-- **This white paper does not certify compliance.** RCCS and ALCS are analytical frameworks, not legal compliance scores. High scores do not guarantee compliance. Low scores do not prove non-compliance.
+- **This white paper does not certify compliance.** RCCS-T, RCCS-M, and ALCS are analytical frameworks, not legal compliance scores. High scores do not guarantee compliance. Low scores do not prove non-compliance.
 
-- **RCCS and ALCS are analytical frameworks, not legal compliance scores.** They provide structured inputs for risk assessment, procurement, audit, and insurance analysis. They do not replace professional judgment.
+- **RCCS-T, RCCS-M, and ALCS are analytical frameworks, not legal compliance scores.** They provide structured inputs for risk assessment, procurement, audit, and insurance analysis. They do not replace professional judgment. RCCS-M is author analytical and forward-looking, not current law or a regulator-approved benchmark.
 
 - **MPLP is a lifecycle protocol path, not a regulator, certification body, or exclusive compliance method.** MPLP conformance does not guarantee compliance. Non-MPLP systems are not automatically non-compliant. MPLP is one example of how lifecycle governance could be structured.
 
@@ -214,7 +215,7 @@ This section establishes explicit boundaries for what the main white paper does 
 | **Legal** | "This framework may help inform compliance analysis" / "Legal compliance requires professional legal judgment" | "Regulator-approved" / "Certified compliant" / "Guarantees legal compliance" / "Official legal standard" |
 | **Audit / Assurance** | "This framework provides audit readiness inputs" / "Audit opinions require professional audit judgment" | "Certifies audit compliance" / "Issues audit opinions" / "Replaces internal audit" / "Guaranteed audit-ready" |
 | **Insurance** | "This framework may inform insurability analysis" / "Underwriting requires professional insurance judgment" | "Guaranteed insurable" / "Sets premiums" / "Defines policy wording" / "Replaces underwriting judgment" |
-| **RCCS / ALCS** | "Analytical frameworks for risk assessment" / "Structured inputs for professional judgment" | "Legal compliance scores" / "Certification scores" / "Guarantees compliance" / "The only scoring method" |
+| **RCCS-T / RCCS-M / ALCS** | "Analytical frameworks for risk assessment" / "Structured inputs for professional judgment" / "RCCS-M is author analytical and forward-looking" | "Legal compliance scores" / "Certification scores" / "Guarantees compliance" / "The only scoring method" / "Regulator-approved benchmark" |
 | **MPLP** | "One example of lifecycle protocol implementation" / "Not required for compliance" | "Required for compliance" / "The only solution" / "Official standard" / "Regulator-mandated" |
 | **Validation Lab** | "Non-certifying evidence adjudication example" / "One approach to privacy-preserving validation" | "Certification authority" / "Certifies compliance" / "Required for compliance" / "Regulator-approved" / "Official validator" |
 | **System Mapping** | "Comparative analysis of lifecycle conformance strength" / "Not endorsements or certifications" | "Certified systems" / "Approved vendors" / "Guaranteed compliant" / "Official rankings" |
@@ -225,7 +226,7 @@ When interpreting this white paper, readers should understand that:
 
 1. **Framework, not mandate:** This white paper defines a governance framework. It does not mandate specific implementations, vendors, or methods.
 
-2. **Inputs, not conclusions:** RCCS, ALCS, MROs, and system mappings provide structured inputs for professional judgment. They do not replace legal, audit, insurance, actuarial, or procurement judgment.
+2. **Inputs, not conclusions:** RCCS-T, RCCS-M, ALCS, MROs, and system mappings provide structured inputs for professional judgment. They do not replace legal, audit, insurance, actuarial, or procurement judgment.
 
 3. **Examples, not requirements:** MPLP and Validation Lab are examples of how lifecycle governance could be implemented. They are not required for compliance. Other approaches may be equally valid.
 
@@ -241,7 +242,7 @@ The companion-paper boundary clarifies adoption sequencing for enterprises, audi
 
 **Recommended Adoption Sequence:**
 
-1. **Use the main white paper** to understand the AI Agent Lifecycle Governance primary framework layer, Missing Regulatory Objects, RCCS/ALCS scoring, enterprise control crosswalk, and system positioning. This provides the conceptual foundation and framework-entry understanding.
+1. **Use the main white paper** to understand the AI Agent Lifecycle Governance primary framework layer, Missing Regulatory Objects, RCCS-T/RCCS-M/ALCS scoring, enterprise control crosswalk, and system positioning. This provides the conceptual foundation and framework-entry understanding.
 
 2. **Use the Evidence & Assurance companion paper** (when published) for audit readiness, control testing methodology, evidence sufficiency analysis, attestation preparation, and privacy-preserving validation procedures. This provides the assurance methodology layer.
 

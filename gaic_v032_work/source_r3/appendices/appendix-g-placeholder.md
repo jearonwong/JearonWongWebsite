@@ -14,7 +14,8 @@ This appendix provides expanded system-by-system assessments for eight represent
 - **L2 product documentation is source-bound, not final proof.** Product documentation can support documented capability surfaces; it does not prove deployment practice, audit success, or lifecycle responsibility-object implementation.
 - **This is not a product ordering.** Systems are assessed by capability posture, not ordered by quality, market position, or procurement suitability.
 - **This is not a procurement recommendation.** Organizations must evaluate systems within their own legal, regulatory, operational, and business context.
-- **This is not certification.** Assessments measure capability posture against analytical frameworks (RCCS/ALCS), not legal compliance, regulatory approval, or certification status.
+- **This is not certification.** Assessments measure capability posture against analytical frameworks (RCCS-T/RCCS-M/ALCS), not legal compliance, regulatory approval, or certification status.
+- **Numerical profiles are not in Appendix G.** Numeric RCCS-T / RCCS-M / ALCS profiles appear only in the Evaluation Results section. Appendix G remains qualitative, provisional, and no-score.
 - **Assessments are context-independent.** Organizations must interpret assessments within their legal, regulatory, and operational context.
 - **Low provisional posture does not prove non-compliance or poor product quality.** It indicates gaps in publicly visible evidence for specific capability primitives.
 - **High provisional posture does not prove legal compliance, enterprise readiness, or operational effectiveness.** It indicates stronger publicly visible evidence for specific capability primitives.
@@ -37,8 +38,9 @@ Each system assessment uses a qualitative provisional posture framework across k
 
 **Assessment areas:**
 
-1. **Regulatory Compliance Coverage Primitives (RCCS-aligned):** Risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, monitoring
-2. **Agentic Lifecycle Responsibility Objects (ALCS-aligned):** Human-role-to-MAS mapping, delegated authority boundary, agent-human role distinction, accepted outcome compliance, tool-action liability boundary, responsibility transfer, authority drift detection, MAS evidence partitioning, cross-project reuse compliance, privacy/GDPR lifecycle mapping, privacy-preserving validation, evidence minimization, data subject rights vs retention, processor chain tracking, vendor/model/runtime substitution conformance
+1. **Traditional Regulatory Compliance Coverage Primitives (RCCS-T-aligned):** Risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, monitoring
+2. **MRO-Adjusted Regulatory Coverage (RCCS-M-aligned):** Whether traditional governance obligations are expressible through Missing Regulatory Objects such as authority boundaries, accepted outcomes, evidence partitioning, responsibility transfer, privacy lifecycle mapping, substitution conformance, and remediation closure
+3. **Agentic Lifecycle Responsibility Objects (ALCS-aligned):** Human-role-to-MAS mapping, delegated authority boundary, agent-human role distinction, accepted outcome compliance, tool-action liability boundary, responsibility transfer, authority drift detection, MAS evidence partitioning, cross-project reuse compliance, privacy/GDPR lifecycle mapping, privacy-preserving validation, evidence minimization, data subject rights vs retention, processor chain tracking, vendor/model/runtime substitution conformance
 
 **Provisional posture levels:**
 
@@ -105,7 +107,7 @@ Each system assessment uses a qualitative provisional posture framework across k
 
 **MPLP Boundary Note:**
 
-MPLP is positioned as a lifecycle protocol path with strong provisional ALCS semantic alignment at the protocol specification level. Protocol fit does not prove implementation conformance, legal compliance, enterprise readiness, adoption, or operational effectiveness. MPLP is not required, not exclusive, not certified, and not regulator-approved. Organizations may use MPLP, alternative protocols, or implementer-built solutions based on their requirements.
+MPLP is positioned as a lifecycle protocol path with limited traditional RCCS-T product-platform coverage and strong provisional RCCS-M / ALCS semantic alignment at the protocol specification level. Protocol fit does not prove implementation conformance, legal compliance, enterprise readiness, adoption, or operational effectiveness. MPLP is not required, not exclusive, not certified, and not regulator-approved. Organizations may use MPLP, alternative protocols, or implementer-built solutions based on their requirements.
 
 **Provisional Status:** REVALIDATED PROVISIONAL — Official MPLP documentation entry point located. Protocol identity is L2-supported; protocol-to-MRO/ALCS mapping remains L5 analytical interpretation unless directly stated in protocol text. Implementation conformance remains unresolved.
 

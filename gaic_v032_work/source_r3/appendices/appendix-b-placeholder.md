@@ -6,17 +6,17 @@
 
 ## B.0 Scorecard Boundary
 
-This appendix provides reusable RCCS/ALCS scorecard templates for system evaluation and gap analysis. These templates are analytical tools, not legal compliance scores, certifications, or regulatory approvals.
+This appendix provides reusable RCCS-T / RCCS-M / ALCS scorecard templates for system evaluation and gap analysis. These templates are analytical tools, not legal compliance scores, certifications, or regulatory approvals. The three-profile view is primary; optional composite views are worksheet aids only.
 
 **Boundary statement:**
 
-- **Scorecards are analytical tools only.** RCCS and ALCS scores measure regulatory compliance coverage and lifecycle responsibility object maturity. They do not prove legal compliance, regulatory approval, or certification.
+- **Scorecards are analytical tools only.** RCCS-T measures traditional regulatory compliance coverage, RCCS-M measures MRO-adjusted regulatory coverage, and ALCS measures lifecycle responsibility object maturity. They do not prove legal compliance, regulatory approval, or certification.
 
-- **High scores do not guarantee compliance.** A high RCCS or ALCS score indicates that a system provides primitives for regulatory compliance coverage or lifecycle responsibility objects. It does not prove that the system is legally compliant, operationally effective, or enterprise-ready.
+- **High scores do not guarantee compliance.** A high RCCS-T, RCCS-M, or ALCS score indicates that a system provides primitives for regulatory compliance coverage or lifecycle responsibility objects. It does not prove that the system is legally compliant, operationally effective, or enterprise-ready.
 
-- **Low scores do not prove non-compliance.** A low RCCS or ALCS score indicates gaps in regulatory compliance coverage or lifecycle responsibility object maturity. It does not prove that the system is non-compliant, unsafe, or unsuitable for deployment.
+- **Low scores do not prove non-compliance.** A low RCCS-T, RCCS-M, or ALCS score indicates gaps in traditional regulatory coverage, MRO-adjusted coverage, or lifecycle responsibility object maturity. It does not prove that the system is non-compliant, unsafe, or unsuitable for deployment.
 
-- **Scores are context-independent.** RCCS and ALCS scores measure system capability, not organizational practice. Organizations must interpret scores within their legal, regulatory, and operational context.
+- **Scores are context-independent.** RCCS-T, RCCS-M, and ALCS scores measure system capability, not organizational practice. Organizations must interpret scores within their legal, regulatory, and operational context.
 
 - **Scores require evidence.** All scores must be supported by evidence. The evidence level (L1-L5) affects the score multiplier. Scores without evidence are not valid.
 
@@ -26,9 +26,9 @@ This appendix provides reusable RCCS/ALCS scorecard templates for system evaluat
 
 ## B.1 Dimension-Level Scoring Template
 
-The following template supports dimension-level scoring for RCCS and ALCS dimensions.
+The following template supports dimension-level scoring for RCCS-T, RCCS-M, and ALCS dimensions.
 
-**Table T-B-01: RCCS/ALCS Dimension Scorecard Template**
+**Table T-B-01: RCCS-T / RCCS-M / ALCS Dimension Scorecard Template**
 
 | System | Dimension | Raw Score 0-5 | Evidence Level | Multiplier | Adjusted Score | Justification | Boundary Note |
 |--------|-----------|---------------|----------------|------------|----------------|---------------|---------------|
@@ -82,38 +82,33 @@ boundary_note: "Score measures capability, not organizational practice; does not
 
 ---
 
-## B.3 Composite Score Template
+## B.3 Three-Profile and Optional Composite Template
 
-The following template supports composite score calculation combining RCCS and ALCS.
+The following template supports the primary three-profile view and optional composite calculations. A single composite score should not be used as the main result display because it can hide the difference between traditional governance coverage and MRO-adjusted lifecycle coverage.
 
-**Table T-B-02: Composite Analytical Score Worksheet**
+**Table T-B-02: Three-Profile Analytical Score Worksheet**
 
-| System | RCCS Adjusted Score 0-100 | ALCS Adjusted Score 0-100 | RCCS Weight | ALCS Weight | Composite Analytical Score 0-100 | Interpretation Boundary |
-|--------|----------------------------|----------------------------|-------------|-------------|----------------------------------|------------------------|
-| Example System A | 65.0 | 55.0 | 0.40 | 0.60 | 59.0 | Analytical score; not legal compliance proof or procurement ranking |
-| Example System B | 72.0 | 48.0 | 0.40 | 0.60 | 57.6 | Analytical score; not legal compliance proof or deployment readiness threshold |
-| Example System C | 45.0 | 70.0 | 0.40 | 0.60 | 60.0 | Analytical score; not vendor ranking or certification signal |
+| System | RCCS-T 0-100 | RCCS-M 0-100 | ALCS 0-100 | Optional Traditional Composite | Optional Agentic Composite | Interpretation Boundary |
+|--------|--------------|--------------|------------|-------------------------------|----------------------------|------------------------|
+| Example System A | 65.0 | 72.0 | 55.0 | 59.0 | 61.8 | Analytical worksheet view; not legal compliance proof or procurement ranking |
+| Example System B | 82.0 | 60.0 | 58.0 | 67.6 | 58.8 | Analytical worksheet view; not legal compliance proof or deployment readiness threshold |
+| Example System C | 48.0 | 78.0 | 80.0 | 67.2 | 79.2 | Analytical worksheet view; not vendor ranking or certification signal |
 
-**Composite score formula:**
+**Optional composite formulas:**
 
 ```
-Composite Score = (RCCS Adjusted Score × RCCS Weight) + (ALCS Adjusted Score × ALCS Weight)
+Traditional Composite = (RCCS-T × 0.40) + (ALCS × 0.60)
+Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)
 ```
-
-**Default weights:**
-
-- **RCCS Weight:** 0.40
-- **ALCS Weight:** 0.60
 
 **Interpretation guidance:**
 
-- **Composite score 80-100:** Strong regulatory compliance coverage and lifecycle responsibility object maturity; does not prove legal compliance
-- **Composite score 60-79:** Moderate regulatory compliance coverage and lifecycle responsibility object maturity; gaps may exist
-- **Composite score 40-59:** Partial regulatory compliance coverage and lifecycle responsibility object maturity; significant gaps may exist
-- **Composite score 20-39:** Weak regulatory compliance coverage and lifecycle responsibility object maturity; major gaps may exist
-- **Composite score 0-19:** Minimal regulatory compliance coverage and lifecycle responsibility object maturity; fundamental gaps may exist
+- **RCCS-T:** Traditional regulatory and governance coverage
+- **RCCS-M:** MRO-adjusted regulatory coverage; author analytical and forward-looking
+- **ALCS:** Lifecycle responsibility conformance maturity
+- **Optional composites:** Secondary worksheet views only; never a ranking, final vendor score, legal compliance proof, certification signal, regulatory approval signal, or procurement recommendation
 
-These bands are analytical interpretation bands only. They are not legal compliance thresholds, deployment readiness thresholds, procurement thresholds, or certification cutoffs.
+Any numerical bands are analytical interpretation bands only. They are not legal compliance thresholds, deployment readiness thresholds, procurement thresholds, or certification cutoffs.
 
 ---
 
@@ -157,4 +152,4 @@ The following template supports negative control to prevent overclaim.
 - **Distinguish adjacent capabilities from lifecycle responsibility objects.** Many systems have features that are adjacent to lifecycle governance but do not constitute lifecycle responsibility objects.
 - **Require explicit evidence for lifecycle responsibility objects.** Approval buttons, logs, access control, task completion, and data export are not lifecycle responsibility objects unless they include the required fields and workflows.
 - **Prevent overclaim.** Negative control prevents scoring systems for adjacent capabilities that do not meet lifecycle responsibility object requirements.
-- **Document why adjacent capabilities do not count.** Negative control checklist explains why specific capabilities do not count toward RCCS/ALCS scores.
+- **Document why adjacent capabilities do not count.** Negative control checklist explains why specific capabilities do not count toward RCCS-T/RCCS-M/ALCS scores.

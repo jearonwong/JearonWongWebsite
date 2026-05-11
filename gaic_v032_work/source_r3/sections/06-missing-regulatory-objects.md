@@ -927,4 +927,12 @@ Existing regulation and governance frameworks increasingly require human oversig
 
 These objects are necessary because agentic AI is not only model output. It is organized work that moves from intent to accepted outcome through delegation, execution, evidence collection, review, acceptance, dispute, remediation, and reuse. If that work cannot be proven under controlled authority, evidence, privacy, and remediation constraints, it remains difficult to audit, insure, delegate, reuse, and scale. This is why AI Agent Lifecycle Governance is not a philosophical category. It is an operational prerequisite for agentic AI becoming trusted enterprise infrastructure.
 
-The next chapters introduce two scoring frameworks that measure how systems map to these objects. RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. Together, they provide a dual-layer assessment of whether a system can prove lifecycle responsibility compliance.
+The next chapters introduce the three-profile analytical model that measures how systems map to these objects. RCCS-T measures traditional regulatory compliance coverage. MROs provide the adjustment layer that asks whether that coverage can be represented as lifecycle responsibility objects. RCCS-M measures MRO-adjusted regulatory coverage. ALCS measures lifecycle conformance maturity.
+
+Conceptually:
+
+```text
+RCCS-T + MRO Coverage = RCCS-M
+```
+
+This is an analytical model, not a legal formula, certification, regulator-approved scoring method, final vendor score, ranking, or procurement recommendation. Its purpose is to make the transition visible: regulatory language names the governance expectation; MROs define the lifecycle responsibility object; RCCS-M evaluates whether the traditional regulatory surface can be expressed through that object layer.

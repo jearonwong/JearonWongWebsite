@@ -6,11 +6,11 @@
 
 ## 8.0 Chapter Overview
 
-This chapter introduces the **Agentic Lifecycle Conformance Score (ALCS)**, the second of two scoring frameworks used in this white paper. ALCS measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance. It evaluates whether a system can express the sixteen Missing Regulatory Objects introduced in Chapter 6.
+This chapter introduces the **Agentic Lifecycle Conformance Score (ALCS)**, the lifecycle conformance profile used alongside RCCS-T and RCCS-M in this white paper. ALCS measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance. It evaluates whether a system can express the sixteen Missing Regulatory Objects introduced in Chapter 6.
 
 ALCS is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is an analytical framework for comparing system capabilities against lifecycle responsibility requirements. A system can have a strong RCCS score and still have a weak ALCS score. That is not a contradiction. It means the system may be strong in existing regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work.
 
-RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. These are different layers, not competing scores. RCCS evaluates whether a system provides the governance primitives that existing regulation requires. ALCS evaluates whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries.
+RCCS-T measures traditional regulatory compliance coverage. RCCS-M measures whether that coverage can be expressed through Missing Regulatory Objects. ALCS measures agentic lifecycle conformance. These are different layers, not competing scores. RCCS-M asks whether regulatory obligations can be represented through MROs. ALCS asks whether lifecycle responsibility conformance is mature across responsibility, authority, evidence, privacy, substitution, and remediation.
 
 The chapter defines the fifteen ALCS dimensions, explains the ALCS-to-MRO mapping, references the shared scoring procedure established in Chapter 7, and establishes clear boundaries around what ALCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 8.7 through 8.21 and expanded in Appendix F.
 
@@ -26,7 +26,7 @@ ALCS is an analytical framework for comparing systems. It allows buyers, auditor
 
 The purpose of ALCS is to translate the sixteen Missing Regulatory Objects into measurable system capabilities. Regulation requires human oversight, but what does that mean in a multi-agent system? ALCS defines fifteen dimensions that operationalize lifecycle responsibility requirements into system features that can be evaluated, compared, and improved. It is a bridge between regulatory abstractions and lifecycle implementation.
 
-A system can have a strong RCCS score and a weak ALCS score. This is not a contradiction. It means the system may provide strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking the deeper lifecycle responsibility objects required to prove authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance in multi-agent execution. RCCS measures regulatory compliance coverage. ALCS measures agentic lifecycle conformance. Both are necessary. Neither alone is sufficient.
+A system can have a strong RCCS-T score and weaker RCCS-M or ALCS scores. This is not a contradiction. It means the system may provide strong traditional regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking the deeper lifecycle responsibility objects required to prove authority boundaries, responsibility transfer, evidence partitioning, privacy lifecycle mapping, and vendor substitution conformance in multi-agent execution. RCCS-M and ALCS are related but not identical: RCCS-M adjusts regulatory coverage through MROs, while ALCS evaluates lifecycle conformance maturity.
 
 ---
 
@@ -112,7 +112,7 @@ This mapping demonstrates that ALCS dimensions are operationalized versions of M
 
 ## 8.3.1 Treatment of MRO-16 as a Cross-Cutting Closure Requirement
 
-MRO-16 (Incident, Dispute, and Remediation Closure) is not directly mapped to a single ALCS dimension. Instead, it is treated as a cross-cutting lifecycle capability that is evaluated through multiple dimensions and scoring logic across both RCCS and ALCS.
+MRO-16 (Incident, Dispute, and Remediation Closure) is not directly mapped to a single ALCS dimension. Instead, it is treated as a cross-cutting lifecycle capability that is evaluated through multiple dimensions and scoring logic across RCCS-T, RCCS-M, and ALCS.
 
 ALCS directly operationalizes fifteen dimension-level MROs (MRO-01 through MRO-15). MRO-16 is cross-cutting rather than omitted. It is evaluated through contestability, monitoring, accepted outcome, evidence partitioning, evidence minimization, and remediation-related scoring logic. This prevents incident, dispute, and remediation closure from being treated as a narrow isolated dimension and instead recognizes it as a lifecycle-wide capability.
 
@@ -156,11 +156,12 @@ ALCS uses the same scoring procedure as RCCS. This ensures consistency and compa
 
 **Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier**
 
-**Composite score formula:** RCCS and ALCS are combined only at the cross-framework layer:
+**Optional composite views:** RCCS-T, RCCS-M, and ALCS may be combined only as secondary analytical views:
 
-**Composite Score = 0.40 × RCCS + 0.60 × ALCS**
+- **Traditional Composite = 0.40 × RCCS-T + 0.60 × ALCS**
+- **Agentic Composite = 0.40 × RCCS-M + 0.60 × ALCS**
 
-For complete details on the scoring procedure, including scoring rationale, evidence hierarchy, and calculation examples, see Chapter 7.3.
+The primary result display remains the three-profile view: RCCS-T, RCCS-M, and ALCS. Composite views must not be used as legal compliance proof, final vendor scores, rankings, certification signals, or procurement recommendations. For complete details on the scoring procedure, including scoring rationale, evidence hierarchy, and calculation examples, see Chapter 7.3 and Chapter 9.
 
 ---
 
@@ -190,15 +191,15 @@ ALCS is an analytical scoring framework, not a legal compliance score. This boun
 
 4. **ALCS is context-independent, but compliance is context-dependent.** ALCS evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors. A system with a high ALCS score may still be non-compliant in specific contexts, and a system with a low ALCS score may be compliant in other contexts.
 
-**Relationship between RCCS and ALCS:**
+**Relationship between RCCS-T, RCCS-M, and ALCS:**
 
-RCCS and ALCS measure different layers. RCCS measures regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. ALCS measures agentic lifecycle conformance: whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable.
+RCCS-T, RCCS-M, and ALCS measure different layers. RCCS-T measures traditional regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. RCCS-M measures whether that regulatory coverage can be expressed through Missing Regulatory Objects. ALCS measures agentic lifecycle conformance: whether a system provides mature lifecycle responsibility objects that make agentic responsibility auditable, provable, and transferable.
 
-A system can have strong RCCS and weak ALCS. This means the system provides strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking deeper lifecycle responsibility objects for multi-agent execution. This is not a contradiction. It reflects the reality that existing regulation focuses on model governance and platform controls while lifecycle responsibility semantics for multi-agent systems are still emerging.
+A system can have strong RCCS-T and weaker RCCS-M or ALCS. This means the system provides strong regulatory compliance coverage through risk management, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring capabilities while lacking deeper lifecycle responsibility objects for multi-agent execution. This is not a contradiction. It reflects the reality that existing regulation focuses on model governance and platform controls while lifecycle responsibility semantics for multi-agent systems are still emerging.
 
-A system can have weak RCCS and strong ALCS. This means the system provides strong lifecycle objects for expressing agentic responsibility while lacking broader regulatory compliance coverage. This is less common but possible for specialized lifecycle protocols or agent frameworks that focus on responsibility semantics without providing full governance platform capabilities.
+A system can have weaker RCCS-T and stronger RCCS-M or ALCS. This means the system provides strong lifecycle objects for expressing agentic responsibility while lacking broader productized governance coverage. This pattern is possible for specialized lifecycle protocols or agent frameworks that focus on responsibility semantics without providing full governance platform capabilities.
 
-Both RCCS and ALCS are necessary. Neither alone is sufficient. RCCS ensures that systems meet existing regulatory requirements. ALCS ensures that systems can prove lifecycle responsibility in multi-agent execution. Together, they provide a dual-layer assessment of system governance capability.
+All three profiles are necessary. RCCS-T shows conventional governance coverage. RCCS-M shows whether that coverage survives MRO adjustment. ALCS shows lifecycle conformance maturity. Together, they provide a three-profile assessment of system governance capability.
 
 The purpose of this boundary statement is to prevent over-claiming. ALCS is a useful analytical tool, but it is not a compliance certification. Organizations must not rely on ALCS scores as proof of legal compliance. Buyers must not treat high ALCS scores as a substitute for due diligence, legal review, or risk assessment. ALCS measures system capability to express lifecycle objects. Legal compliance requires organizational practice, deployment context, and jurisdictional analysis.
 
@@ -780,4 +781,4 @@ This chapter introduced the Agentic Lifecycle Conformance Score (ALCS), a framew
 
 The fifteen ALCS dimensions operationalize the sixteen MROs into system features that can be evaluated, scored, and improved. Human-role-to-MAS responsibility mapping ensures that human organizational accountability is explicitly linked to agent execution responsibilities. Delegated authority boundaries distinguish technical permission from business authority. Agent role definitions carry governance semantics beyond execution personas. Accepted outcome compliance separates execution completion from outcome acceptance. Tool-action liability boundaries record accountability for consequential actions. Responsibility transfer semantics make agent handoffs auditable. Authority drift detection prevents unauthorized authority transitions. MAS evidence partitioning enables selective disclosure and reconstruction. Cross-project reuse compliance enforces revalidation when workflows move between contexts. Privacy lifecycle mapping tracks personal data flows across agents, tools, and memory. Privacy-preserving validation supports external verification without raw data disclosure. Evidence minimization limits retention to governance purposes. Data subject rights reconciliation balances erasure requests with evidence obligations. Processor chain tracking maintains visibility into third-party data handling. Vendor substitution conformance ensures that optionality does not become governance drift.
 
-ALCS complements RCCS by measuring a different layer. RCCS evaluates regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. ALCS evaluates agentic lifecycle conformance: whether a system provides the lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries. A system can have strong RCCS and weak ALCS, meaning it provides strong regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work. Both layers are necessary. Neither alone is sufficient. Chapter 9 introduces composite scoring, which combines RCCS and ALCS into system-level assessments that reflect both regulatory compliance coverage and agentic lifecycle conformance.
+ALCS complements RCCS-T and RCCS-M by measuring a different layer. RCCS-T evaluates traditional regulatory compliance coverage. RCCS-M evaluates whether that coverage can be expressed through Missing Regulatory Objects. ALCS evaluates agentic lifecycle conformance: whether a system provides mature lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries. A system can have strong RCCS-T and weaker ALCS, meaning it provides strong regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work. A system can also have stronger RCCS-M and ALCS because it defines lifecycle responsibility semantics while lacking productized governance-platform coverage. Chapter 9 explains why the three-profile view is primary and any composite calculation is secondary.

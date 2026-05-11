@@ -6,11 +6,11 @@
 
 ## H.0 Procurement Boundary
 
-This appendix provides an enterprise procurement-oriented checklist and scorecard template for evaluating agentic AI systems using RCCS, ALCS, and lifecycle governance requirements.
+This appendix provides an enterprise procurement-oriented checklist and scorecard template for evaluating agentic AI systems using RCCS-T, RCCS-M, ALCS, and lifecycle governance requirements.
 
 This appendix is a buyer diligence aid. It is not a procurement recommendation, vendor ranking, legal compliance determination, certification checklist, market endorsement, or substitute for human review. It helps enterprise buyers ask better governance questions before adopting agentic AI systems.
 
-The scorecard may reference RCCS and ALCS dimensions as analytical prompts. It must not be read as proof that a vendor, platform, protocol, or implementation is legally compliant, operationally effective, enterprise-ready, certified, or regulator-approved.
+The scorecard may reference RCCS-T, RCCS-M, and ALCS dimensions as analytical prompts. It must not be read as proof that a vendor, platform, protocol, or implementation is legally compliant, operationally effective, enterprise-ready, certified, or regulator-approved. RCCS-M remains author analytical and forward-looking, not current law or a procurement benchmark.
 
 Appendix G may be used only as an example of qualitative provisional assessment categories. Appendix G provisional postures must not be reused as vendor selection advice without enterprise-specific review, page-level citation support, and accountable buyer judgment.
 
@@ -23,7 +23,7 @@ Enterprises should use this scorecard during early diligence, request-for-inform
 Recommended use sequence:
 
 1. Identify the intended agentic AI use case, deployment context, and lifecycle risk profile.
-2. Select the relevant RCCS and ALCS dimensions for that use case.
+2. Select the relevant RCCS-T, RCCS-M, and ALCS dimensions for that use case.
 3. Request evidence from vendors or implementation teams using the evidence request template.
 4. Record gaps, red flags, and unresolved assumptions.
 5. Escalate material gaps to legal, security, privacy, risk, procurement, and business owners.
@@ -37,7 +37,7 @@ This appendix does not tell an enterprise which system to buy. It supports disci
 
 **Table T-H-01: Enterprise Procurement Scorecard**
 
-| Area | Procurement Question | Related RCCS/ALCS | Required Vendor Evidence | Red Flag | Buyer Note |
+| Area | Procurement Question | Related RCCS-T/RCCS-M/ALCS | Required Vendor Evidence | Red Flag | Buyer Note |
 |------|----------------------|-------------------|--------------------------|----------|------------|
 | Governance scope | What agentic workflows, tools, models, and runtime components are covered by the governance controls? | RCCS-03, ALCS-15 | Scope statement, architecture diagram, runtime inventory | Governance claims cover only model behavior while agent workflow remains undefined | Confirm whether controls apply to the full lifecycle, not only model invocation |
 | Risk management | How are agentic risks identified, assessed, mitigated, and monitored over time? | RCCS-01, RCCS-10 | Risk register template, monitoring policy, escalation workflow | Risk management is described only as a general platform feature | Require AI-agent-specific risk handling evidence |
@@ -113,7 +113,7 @@ The checklist should be completed by a cross-functional review group. Procuremen
 |-----------------|------------------------------|--------------------------|-----------------------|
 | RFI/RFP design | Structured governance questions and evidence requests | Automatic vendor filtering or vendor ordering | Procurement, risk, legal, privacy, security |
 | Architecture review | Identification of lifecycle governance evidence gaps | Proof of production readiness | Architecture, security, platform owner |
-| Risk review | Mapping of visible evidence to RCCS/ALCS prompts | Legal compliance determination | Risk, legal, compliance |
+| Risk review | Mapping of visible evidence to RCCS-T/RCCS-M/ALCS prompts | Legal compliance determination | Risk, legal, compliance |
 | Privacy review | Identification of retention and data subject rights questions | Privacy law conclusion | Privacy, legal, data governance |
 | Contract negotiation | Evidence requirements and control expectations | Contract sufficiency determination | Legal, procurement, business owner |
 | Deployment gate | Checklist for unresolved assumptions | Certification or approval | Enterprise governance board or equivalent owner |

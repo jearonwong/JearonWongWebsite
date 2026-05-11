@@ -1,7 +1,7 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-12 Two-Layer RCCS and Visual Repair
+**Phase:** 1D-13B Global RCCS-M Integration
 **Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
 **Last Updated:** May 11, 2026
 
@@ -20,6 +20,8 @@ Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and conf
 Phase 1D-11 closes the high-risk citation/source evidence blockers without swallowing them as vague limitations. OpenAI platform-guide HTTP 403 is retained as an access note only because accessible official OpenAI Agents SDK Python and JavaScript docs replace it for narrowed SDK-surface claims. Validation Lab is limited to a public-surface, non-certifying evidence adjudication example. MPLP identity is source-bound, while GAIC MRO/ALCS mappings remain author analytical mapping where not directly stated. Product/platform documentation supports capability surfaces, not lifecycle compliance proof.
 
 Phase 1D-12 adds the final two-layer RCCS presentation and repairs the table wrapping blocker. Evaluation Results now distinguishes RCCS-T (traditional governance coverage), RCCS-M (MRO-adjusted agentic regulatory coverage), and ALCS (lifecycle responsibility conformance). MPLP remains in the fixed-order comparison with limited RCCS-T product/platform coverage and strong RCCS-M/ALCS lifecycle-object semantics. Tables must not use wrapping rules that create single-letter vertical columns.
+
+Phase 1D-13B globally integrates the Phase 1D-12 model into active source. RCCS-T / MRO / RCCS-M / ALCS is the explanatory spine across front matter, methodology, mappings, appendices, and conclusion. Appendix G remains qualitative and no-score, while numeric RCCS-T/RCCS-M/ALCS profiles remain only in Evaluation Results. RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
 
 ## VI Principles
 
@@ -87,7 +89,7 @@ Do not scale typography with viewport width. Letter spacing remains normal.
 | Thesis callout | Charcoal or pale blue panel, one focused claim |
 | Evidence badge | Small monospace pill: L1-L5 |
 | MRO/RCCS/ALCS badge | Small registry-blue or slate monospace pill |
-| Figure card | Bordered panel with figure label, flow lane, interpretation text |
+| Figure card | Bordered panel with figure label, flow lane, interpretation text; F-04 uses RCCS-T -> MRO Adjustment Layer -> RCCS-M -> ALCS |
 | Chart card | Print-safe SVG or CSS chart with source-data boundary note |
 | Evaluation profile card | Source-qualified RCCS-T/RCCS-M/ALCS posture, visible strength, lifecycle gap, evidence basis, and boundary per system |
 | Score overview table | Fixed-order RCCS-T/RCCS-M/ALCS provisional analytical scores, score ranges, confidence labels, and source-boundary notes |

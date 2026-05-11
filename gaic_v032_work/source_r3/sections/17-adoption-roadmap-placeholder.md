@@ -6,7 +6,7 @@
 
 ## 17.0 Why Adoption Roadmap Matters
 
-AI Agent Lifecycle Governance is not a theoretical framework. It is a practical necessity for enterprises deploying agentic AI systems. The previous chapters have defined the missing layer (Chapter 2), identified the sixteen Missing Regulatory Objects (Chapter 6), introduced RCCS and ALCS as analytical frameworks (Chapters 7-8), mapped existing systems (Chapters 11-12), examined evidence-based validation patterns (Chapter 14), and demonstrated enterprise failure scenarios (Chapter 15).
+AI Agent Lifecycle Governance is not a theoretical framework. It is a practical necessity for enterprises deploying agentic AI systems. The previous chapters have defined the missing layer (Chapter 2), identified the sixteen Missing Regulatory Objects (Chapter 6), introduced RCCS-T, RCCS-M, and ALCS as analytical frameworks (Chapters 7-8), mapped existing systems (Chapters 11-12), examined evidence-based validation patterns (Chapter 14), and demonstrated enterprise failure scenarios (Chapter 15).
 
 **This chapter translates the framework into an enterprise adoption roadmap.** The roadmap is designed for enterprises that recognize the lifecycle governance gap and want to operationalize lifecycle responsibility objects before scaling autonomous or multi-agent workflows.
 
@@ -80,7 +80,7 @@ Lifecycle governance should integrate with existing enterprise controls, not rep
 | Security / Access Management | Extend access controls to include delegated authority boundaries; implement authority drift detection; add tool-action authorization | MRO-02: Delegated Authority Boundary; MRO-05: Tool-Action Liability Boundary; MRO-07: Authority Drift | Authority grant records; tool-action authorization records; boundary violation alerts; drift detection logs |
 | Procurement / Vendor Management | Extend vendor management to include processor/subprocessor chain mapping; add vendor/runtime substitution conformance validation | MRO-14: Third-Party Processor/Subprocessor Chain; MRO-15: Vendor/Model/Runtime Substitution Conformance | Processor agreements; subprocessor chain records; substitution records; conformance validation records |
 | Incident Response | Extend incident response to include lifecycle-specific incident types; add incident/dispute/remediation closure workflow | MRO-16: Incident, Dispute, and Remediation Closure | Incident records; affected outcome records; remediation records; closure acceptance records; customer impact assessment records |
-| Compliance / Regulatory Reporting | Extend compliance reporting to include lifecycle responsibility objects; add RCCS/ALCS as analytical tools (not legal scores) | MRO-01: Human Role to MAS Responsibility Mapping; MRO-04: Accepted Outcome Compliance | Role assignment records; acceptance records; review records; escalation records; RCCS/ALCS analytical reports (not legal compliance scores) |
+| Compliance / Regulatory Reporting | Extend compliance reporting to include lifecycle responsibility objects; add RCCS-T/RCCS-M/ALCS as analytical tools (not legal scores) | MRO-01: Human Role to MAS Responsibility Mapping; MRO-04: Accepted Outcome Compliance | Role assignment records; acceptance records; review records; escalation records; RCCS-T/RCCS-M/ALCS analytical reports (not legal compliance scores) |
 | Model Risk Management | Extend model risk management to include lifecycle risk; add authority-transition influence monitoring; add model substitution conformance | MRO-07: Authority Drift; MRO-15: Vendor/Model/Runtime Substitution Conformance | Model inventory; model version records; authority baseline records; drift detection logs; substitution conformance validation records |
 | Business Continuity / Rollback | Extend business continuity to include agentic workflow rollback; add cross-project reuse compliance; add context boundary validation | MRO-09: Cross-Project Reuse Compliance | Reuse records; reset validation records; reauthorization records; context boundary records; rollback capability validation records |
 
@@ -111,20 +111,20 @@ Enterprises should operationalize lifecycle responsibility objects in stages. Th
 
 ## 17.5 Measuring Progress and Demonstrating Conformance
 
-Enterprises should measure progress using lifecycle responsibility objects as evidence artifacts, not using RCCS/ALCS as legal compliance scores. The following table clarifies how RCCS and ALCS should be used in adoption.
+Enterprises should measure progress using lifecycle responsibility objects as evidence artifacts, not using RCCS-T/RCCS-M/ALCS as legal compliance scores. The following table clarifies how RCCS-T, RCCS-M, and ALCS should be used in adoption.
 
-**Table T-17-05: RCCS/ALCS Use in Adoption**
+**Table T-17-05: RCCS-T / RCCS-M / ALCS Use in Adoption**
 
-| Use Case | RCCS Role | ALCS Role | Boundary |
-|----------|-----------|-----------|----------|
-| Gap analysis | RCCS dimensions identify regulatory compliance coverage gaps (e.g., RCCS-04 Record-Keeping, RCCS-06 Human Oversight) | ALCS dimensions identify lifecycle responsibility object gaps (e.g., ALCS-02 Delegated Authority Boundary, ALCS-04 Accepted Outcome Compliance, ALCS-06 Responsibility Transfer Across Agents) | RCCS/ALCS are analytical tools, not legal compliance scores; gaps identified by RCCS/ALCS require organizational interpretation and legal review |
-| Pilot project baseline | RCCS baseline measures regulatory compliance coverage before pilot; RCCS post-pilot measures improvement | ALCS baseline measures lifecycle responsibility object maturity before pilot; ALCS post-pilot measures improvement | RCCS/ALCS baselines are internal analytical tools; they do not prove legal compliance or regulatory approval |
-| System evaluation | RCCS posture helps evaluate whether a system provides regulatory compliance coverage primitives | ALCS posture helps evaluate whether a system provides lifecycle responsibility object primitives | RCCS/ALCS postures are analytical tools for system posture review (Chapter 11-12); they are not product rankings, certifications, or procurement recommendations |
-| Audit readiness | RCCS dimensions map to audit control objectives (e.g., RCCS-04 Record-Keeping → audit trail requirements) | ALCS dimensions map to lifecycle responsibility objects that auditors may request (e.g., ALCS-08 MAS Evidence Partitioning → evidence reconstruction) | RCCS/ALCS help prepare for audit but do not replace audit opinions, assurance reports, or legal compliance determinations |
-| Evidence-based validation | RCCS dimensions help identify what regulatory compliance evidence should be validated | ALCS dimensions help identify what lifecycle responsibility objects should be validated | RCCS/ALCS help scope validation but do not replace validation protocols, validation providers, or validation results |
-| Continuous improvement | RCCS dimensions help monitor regulatory compliance coverage over time | ALCS dimensions help monitor lifecycle responsibility object maturity over time | RCCS/ALCS are monitoring tools, not legal compliance scores; continuous improvement requires organizational governance, not just scoring |
+| Use Case | RCCS-T Role | RCCS-M Role | ALCS Role | Boundary |
+|----------|-------------|-------------|-----------|----------|
+| Gap analysis | Identifies traditional regulatory compliance coverage gaps (e.g., RCCS-04 Record-Keeping, RCCS-06 Human Oversight) | Identifies where regulatory obligations are not yet expressible through MROs | Identifies lifecycle responsibility object gaps (e.g., ALCS-02 Delegated Authority Boundary, ALCS-04 Accepted Outcome Compliance, ALCS-06 Responsibility Transfer Across Agents) | RCCS-T/RCCS-M/ALCS are analytical tools, not legal compliance scores; gaps require organizational interpretation and legal review |
+| Pilot project baseline | Measures regulatory compliance coverage before and after pilot | Measures MRO-adjusted regulatory coverage before and after pilot | Measures lifecycle responsibility object maturity before and after pilot | Baselines are internal analytical tools; they do not prove legal compliance or regulatory approval |
+| System evaluation | Helps evaluate whether a system provides regulatory compliance coverage primitives | Helps evaluate whether a system expresses those primitives as lifecycle responsibility objects | Helps evaluate whether a system provides lifecycle responsibility object primitives | Postures are analytical tools for system posture review (Chapters 11-12); they are not product rankings, certifications, or procurement recommendations |
+| Audit readiness | Maps traditional dimensions to audit control objectives | Maps MRO-adjusted coverage to evidence objects auditors may request | Maps lifecycle responsibility objects to evidence reconstruction needs | Scores help prepare for audit but do not replace audit opinions, assurance reports, or legal compliance determinations |
+| Evidence-based validation | Identifies what regulatory compliance evidence should be validated | Identifies what MRO-adjusted coverage should be validated | Identifies what lifecycle responsibility objects should be validated | Scores help scope validation but do not replace validation protocols, validation providers, or validation results |
+| Continuous improvement | Monitors regulatory compliance coverage over time | Monitors whether coverage is becoming more lifecycle-object expressible | Monitors lifecycle responsibility object maturity over time | Scores are monitoring tools, not legal compliance scores; continuous improvement requires organizational governance, not just scoring |
 
-**Interpretation:** RCCS and ALCS are analytical tools that help enterprises measure progress and identify gaps. They are not legal compliance scores, certifications, or regulatory approvals. Enterprises should use RCCS/ALCS to inform organizational governance decisions, not to replace legal review or regulatory interpretation.
+**Interpretation:** RCCS-T, RCCS-M, and ALCS are analytical tools that help enterprises measure progress and identify gaps. They are not legal compliance scores, certifications, or regulatory approvals. RCCS-M is author analytical and forward-looking, not current law or a regulator-approved benchmark. Enterprises should use RCCS-T/RCCS-M/ALCS to inform organizational governance decisions, not to replace legal review or regulatory interpretation.
 
 ---
 
@@ -138,7 +138,7 @@ Scaling from pilot to production requires organizational commitment, integration
 
 3. **Operationalize all lifecycle responsibility objects:** Use Table T-17-04 to operationalize all lifecycle responsibility objects across all agentic workflows. Ensure that authority boundaries, responsibility mappings, evidence chains, privacy mappings, validation protocols, and remediation workflows are operational.
 
-4. **Implement continuous improvement:** Monitor lifecycle governance effectiveness using lifecycle responsibility objects as evidence artifacts. Use RCCS/ALCS as analytical tools to identify gaps and measure progress. Implement continuous improvement workflows to address gaps and refine lifecycle governance as agentic systems evolve.
+4. **Implement continuous improvement:** Monitor lifecycle governance effectiveness using lifecycle responsibility objects as evidence artifacts. Use RCCS-T/RCCS-M/ALCS as analytical tools to identify gaps and measure progress. Implement continuous improvement workflows to address gaps and refine lifecycle governance as agentic systems evolve.
 
 5. **Prepare for evidence-based validation:** Implement privacy-preserving validation protocols (e.g., evidence-based validation pattern from Chapter 14) to prepare for qualified review, which may include internal governance review, audit review, validation provider review, or other context-appropriate reviewers. Ensure that evidence can be reviewed without exposing sensitive data.
 
@@ -152,10 +152,10 @@ Scaling from pilot to production requires organizational commitment, integration
 
 ## 17.7 Bridge to Conclusion
 
-Chapter 17 has presented an adoption roadmap for enterprises implementing AI Agent Lifecycle Governance. The roadmap provides a staged path from lifecycle governance awareness (Stage 0) to scaled operational capability (Stage 7). The roadmap integrates lifecycle governance with existing enterprise controls and uses RCCS/ALCS as analytical tools, not legal compliance scores.
+Chapter 17 has presented an adoption roadmap for enterprises implementing AI Agent Lifecycle Governance. The roadmap provides a staged path from lifecycle governance awareness (Stage 0) to scaled operational capability (Stage 7). The roadmap integrates lifecycle governance with existing enterprise controls and uses RCCS-T/RCCS-M/ALCS as analytical tools, not legal compliance scores.
 
 **The bridge from adoption roadmap (Chapter 17) to conclusion (Chapter 18) is the recognition that AI Agent Lifecycle Governance is not a theoretical framework. It is a practical necessity for enterprises deploying agentic AI systems.**
 
-The white paper has defined the missing layer (Chapter 2), identified the sixteen Missing Regulatory Objects (Chapter 6), introduced RCCS and ALCS as analytical frameworks (Chapters 7-8), mapped existing systems (Chapters 11-12), examined evidence-based validation patterns (Chapter 14), demonstrated enterprise failure scenarios (Chapter 15), and presented an adoption roadmap (Chapter 17).
+The white paper has defined the missing layer (Chapter 2), identified the sixteen Missing Regulatory Objects (Chapter 6), introduced RCCS-T, RCCS-M, and ALCS as analytical frameworks (Chapters 7-8), mapped existing systems (Chapters 11-12), examined evidence-based validation patterns (Chapter 14), demonstrated enterprise failure scenarios (Chapter 15), and presented an adoption roadmap (Chapter 17).
 
 Chapter 18 will conclude the white paper with a restatement of the core thesis, a summary of contributions, a statement of boundaries, and a call to action.

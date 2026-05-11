@@ -12,7 +12,7 @@ This paper is a technical governance analysis, not legal advice. It translates r
 
 The paper does not claim that current AI regulation is absent or weak. The claim is narrower and more technical: current regulation and governance frameworks increasingly require human oversight, logging, documentation, monitoring, accountability, transparency, and privacy controls, but they do not yet fully specify the lifecycle objects required to prove those properties inside dynamic agentic and multi-agent execution.
 
-This full research edition expands the v0.3 framework into a publication-grade white paper. Its purpose is to define a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a dual scoring framework, system-specific mappings, comparative matrices, and implementation templates.
+This full research edition expands the v0.3 framework into a publication-grade white paper. Its purpose is to define a missing semantic and engineering layer for AI agent and multi-agent system compliance. It is deliberately more detailed than an executive brief: the paper introduces a terminology layer, an object model, a three-profile analytical model, system-specific mappings, comparative matrices, and implementation templates.
 
 ## 1.2 Intended Audience
 
@@ -52,7 +52,7 @@ The methodology uses a layered approach:
 
 3. **Define Missing Regulatory Objects** that make those obligations testable. These are not proposed legal mandates. They are engineering objects that appear necessary if existing regulatory ideals are to become auditable in multi-agent execution.
 
-4. **Introduce RCCS and ALCS scoring** to separate ordinary governance coverage from lifecycle conformance. RCCS measures how strongly a system covers existing regulatory and governance requirements. ALCS measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance.
+4. **Introduce RCCS-T, RCCS-M, and ALCS scoring** to separate ordinary governance coverage, MRO-adjusted regulatory coverage, and lifecycle conformance. RCCS-T measures how strongly a system covers existing regulatory and governance requirements. RCCS-M measures whether that coverage can be expressed through Missing Regulatory Objects. ALCS measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance.
 
 5. **Map representative systems** against those objects based on publicly available evidence. The comparison is not a ranking of product quality. It is a map of responsibility semantics.
 
@@ -85,14 +85,14 @@ The controls used to limit over-claiming are as follows:
 - **MPLP** is treated as a protocol path, not a regulator
 - **Validation Lab** is treated as non-certifying evidence adjudication, not legal certification
 - Other platforms are evaluated for their own strengths rather than dismissed
-- Scoring claims are separated into regulatory coverage and lifecycle conformance evidence levels
+- Scoring claims are separated into traditional regulatory coverage, MRO-adjusted regulatory coverage, and lifecycle conformance evidence levels
 - The paper distinguishes a conceptual object model from real-world legal compliance
 
 | **Boundary** | **Required Wording** | **Forbidden Wording** |
 |--------------|----------------------|-----------------------|
 | MPLP | A lifecycle protocol path for expressing agentic responsibility objects | The only compliant standard |
 | Validation Lab | A non-certifying evidence adjudication example | A certification authority |
-| RCCS/ALCS | A proposed analytical scoring framework | A regulator-approved benchmark |
+| RCCS-T/RCCS-M/ALCS | A proposed analytical scoring framework; RCCS-M is author analytical and forward-looking | A regulator-approved benchmark |
 | System mapping | A mapping of public primitives to lifecycle objects | A final legal compliance judgment |
 | AI Agent Lifecycle Governance | A missing semantic and engineering layer | A binding regulatory standard |
 
