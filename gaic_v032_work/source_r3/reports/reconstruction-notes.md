@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-9 Evaluation Results and Semantic Table Reflow)
+**Last Updated:** May 11, 2026 (Phase 1D-10 Scored Evaluation Results and Table Layout Repair)
 
 ## Reconstruction Strategy
 
@@ -38,6 +38,7 @@ R3 uses phased reconstruction:
 17. **Phase 1D-7:** HTML-first publication renderer with HTML/PDF visual authority and DOCX derivative (◐ HTML PUBLICATION DRAFT GENERATED / QA REQUIRED)
 18. **Phase 1D-8:** HTML publication refinement with pagination rules, safe charts, object-card rendering, table typography, and References / Sources section (◐ HTML PUBLICATION REFINEMENT GENERATED / QA REQUIRED)
 19. **Phase 1D-9:** Evaluation results layer and semantic table reflow with non-ranking RCCS/ALCS profiles, result-first chapter panels, and publication table semantics (◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED)
+20. **Phase 1D-10:** Scored evaluation results and table layout repair with provisional RCCS/ALCS score ranges, confidence labels, score visuals, stronger result hierarchy, and semantic table readability repair (◐ SCORED EVALUATION RESULTS GENERATED / QA REQUIRED)
 
 ## Source Hierarchy
 
@@ -80,6 +81,10 @@ Phase 1D-8 keeps the HTML-first foundation and refines it for publication behavi
 ### Decision 7: Add Results Without Rankings
 
 Phase 1D-9 adds evaluation results as qualitative, source-qualified analytical profiles rather than final vendor scores. The white paper may show RCCS/ALCS posture patterns, lifecycle strengths, gaps, evidence basis, and boundary notes, but it must not sort systems as a leaderboard, recommend procurement, certify compliance, or claim legal/regulatory approval.
+
+### Decision 8: Scores Are Allowed When Bounded
+
+Phase 1D-10 corrects the over-conservative result layer by allowing explicit RCCS/ALCS provisional analytical scores and ranges. The scores are visible to readers, but they remain source-qualified, confidence-labeled, fixed-order, and non-ranking. They are not final vendor scores, legal compliance proof, certification, regulatory approval, deployment-readiness guarantees, or procurement recommendations.
 
 ## Lessons from R2
 
@@ -693,6 +698,64 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - Publication candidate readiness is not declared because citation pinning/access QA remains unresolved.
 
 **Phase 1D-9 Status:** ◐ EVALUATION RESULTS AND TABLE REFLOW GENERATED / QA REQUIRED.
+
+## Phase 1D-10 Notes (May 11, 2026)
+
+**Scope:** Scored RCCS/ALCS evaluation results, result-led chapter hierarchy, score visualizations, semantic table layout repair, and citation-status clarity on top of the Phase 1D-9 HTML-first renderer.
+
+**Actions completed:**
+
+1. Added `scripts/generate_r3_phase1d10_html_publication.py` as the Phase 1D-10 HTML publication generator.
+2. Generated fresh full HTML, PDF, DOCX derivative, PDF text, 523 rendered page PNGs, contact sheets, and generation log under `out/phase_1d10/html_publication/`.
+3. Updated `design/gaic-html-publication-style.md` with scored profile, score overview table, RCCS/ALCS grouped score chart, score-map, confidence-label, and semantic table layout rules.
+4. Upgraded the publication-facing evaluation section to `Evaluation Results: RCCS / ALCS Provisional Analytical Profiles`.
+5. Added explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all eight evaluated systems.
+6. Added non-ranking score visuals: RCCS/ALCS grouped score comparison, RCCS/ALCS score map, and retained system x dimension heatmap.
+7. Strengthened Chapter 1-18 result-first opening panels to distinguish Main Result, Method / Lens, Evidence Basis, and Key Takeaway / Boundary.
+8. Repaired semantic table layout for long evidence rubrics and system mapping tables, including T-08-13 rubric card reflow.
+9. Created Phase 1D-10 scoring feasibility, score model, score visualization, score visuals QA, semantic table layout, table layout QA, chapter hierarchy, citation status, visual QA, content preservation, boundary, and DOCX derivative reports.
+
+**Generation result:**
+
+- Full HTML/PDF/DOCX derivative generated from active `source_r3` Markdown only.
+- PDF page count: 523 A4 pages.
+- Rendered PNG pages: 523.
+- Active source table IDs: 170; generated HTML/PDF retain all active table IDs.
+- Figures F-01 through F-11 retained.
+- Evaluation scores: 8/8 systems have RCCS and ALCS score/range/confidence.
+- Chapter hierarchy panels: 18/18 chapters present.
+- T-08-13 renders as rubric card reflow.
+- Appendix E rubrics reflowed: 10/10.
+- Appendix F rubrics reflowed: 15/15.
+- Appendix G system tables reflowed: 9/9.
+- Rubric card reflows: 50.
+- System profile card reflows: 30.
+- Semantic row card reflows: 25.
+- Semantic column splits: 8.
+- Forbidden positive blocker count: 0.
+- Citation blockers: 1 category remains, covering final page-level citation pinning/access QA.
+
+**RCCS / ALCS provisional score summary:**
+
+1. MPLP: RCCS 57 (52-62), ALCS 84 (80-88), confidence: Partially source-bound / L5 analytical inference.
+2. IBM watsonx.governance: RCCS 82 (78-86), ALCS 58 (53-63), confidence: Partially source-bound.
+3. Microsoft Azure AI Foundry: RCCS 80 (76-84), ALCS 62 (57-67), confidence: Partially source-bound.
+4. AWS Bedrock + Guardrails + AgentCore: RCCS 78 (74-83), ALCS 60 (55-65), confidence: Partially source-bound.
+5. Google Vertex AI + ADK + Model Armor: RCCS 79 (75-84), ALCS 61 (56-66), confidence: Partially source-bound.
+6. LangGraph + LangSmith: RCCS 60 (55-65), ALCS 80 (76-84), confidence: Partially source-bound.
+7. OpenAI Agents SDK: RCCS 58 (52-63), ALCS 64 (58-69), confidence: Source-pointer pending / access caveat.
+8. CrewAI: RCCS 48 (42-54), ALCS 63 (58-68), confidence: Partially source-bound / L5 analytical inference.
+
+**Boundary discipline:**
+
+- No substantive source content was removed or summarized.
+- No old DOCX/PDF artifact was used as input.
+- No vendor ranking, final vendor score, procurement recommendation, legal compliance proof claim, certification claim, regulatory approval claim, or stronger MPLP / Validation Lab claim was introduced.
+- Scores are provisional analytical profiles with confidence labels and fixed non-ranked display order.
+- Appendix G remains revalidated provisional, qualitative/source-qualified, non-ranking, and no final-vendor-score.
+- Publication candidate readiness is not declared because citation pinning/access QA remains unresolved.
+
+**Phase 1D-10 Status:** ◐ SCORED EVALUATION RESULTS GENERATED / QA REQUIRED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 

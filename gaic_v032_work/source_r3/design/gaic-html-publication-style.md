@@ -1,8 +1,8 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-9 Evaluation Results and Semantic Table Reflow
-**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF EVALUATION RESULTS DRAFT
+**Phase:** 1D-10 Scored Evaluation Results and Table Layout Repair
+**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF SCORED EVALUATION DRAFT
 **Last Updated:** May 11, 2026
 
 ## Visual Position
@@ -13,7 +13,9 @@ The HTML/PDF artifact is the visual source of truth. DOCX is an editable derivat
 
 Phase 1D-8 extended the Phase 1D-7 HTML-first foundation with stricter publication rules: chapters and appendices begin on new print pages, ordinary tables and code templates may split when needed, deterministic charts are rendered as print-safe SVG, body code-like examples can become reader-friendly object cards, and the final publication includes a References / Sources section.
 
-Phase 1D-9 adds the missing evaluation-results layer and semantic table-type system. Publication-facing system results are expressed as qualitative, source-qualified RCCS/ALCS analytical profiles, not rankings or final vendor scores. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
+Phase 1D-9 added the missing evaluation-results layer and semantic table-type system. Publication-facing system results were expressed as qualitative, source-qualified RCCS/ALCS analytical profiles, not rankings or final vendor scores.
+
+Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all evaluated systems. These scores are publication-facing result signals, but they are not final vendor scores, rankings, procurement recommendations, certifications, regulatory approval signals, legal compliance proof, or deployment-readiness guarantees. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
 
 ## VI Principles
 
@@ -84,7 +86,9 @@ Do not scale typography with viewport width. Letter spacing remains normal.
 | Figure card | Bordered panel with figure label, flow lane, interpretation text |
 | Chart card | Print-safe SVG or CSS chart with source-data boundary note |
 | Evaluation profile card | Source-qualified RCCS/ALCS posture, visible strength, lifecycle gap, evidence basis, and boundary per system |
-| RCCS/ALCS posture map | Qualitative quadrant chart; no numeric final scores, no rank order, no procurement quadrant |
+| Score overview table | Fixed-order RCCS/ALCS provisional analytical scores, score ranges, confidence labels, and source-boundary notes |
+| RCCS/ALCS score comparison | Grouped bar chart with fixed source order; no score sorting, leaderboard, or winner framing |
+| RCCS/ALCS posture map | Provisional analytical score map; no final scores, no rank order, no procurement quadrant |
 | System heatmap | Strong / Partial / Limited / Not visible qualitative cells only; no leaderboard coloring |
 | Object card | Reader-facing rendering of short lifecycle object/code examples in body chapters |
 | Table | Fixed layout where possible, shaded header, compact cell padding, repeat headers in print when supported |
@@ -121,9 +125,21 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 - no vendor ranking;
 - no final vendor assessment;
 - no final vendor score;
+- no score sorting or leaderboard framing;
 - Appendix G remains qualitative, source-qualified, provisional, non-ranking, and no-score.
 
-## Phase 1D-9 Semantic Table Classes
+## Phase 1D-10 Scored Result Components
+
+| Component | Rule |
+|---|---|
+| Provisional score cell | Show `0-100` score plus range; label as `Provisional Analytical Score` |
+| Confidence label | Use Source-bound, Partially source-bound, L5 analytical inference, or Source-pointer pending language |
+| Score chart | Display systems in fixed source order, not score order |
+| Score map | Use axis labels for RCCS and ALCS only; no leader/winner quadrant |
+| Scored profile card | Lead with score/range/confidence, then visible strength, lifecycle gap, evidence basis, and boundary |
+| Boundary note | Repeat that scores are analytical profiles, not final vendor scores, rankings, legal proof, certifications, regulatory approval, or procurement recommendations |
+
+## Phase 1D-10 Semantic Table Classes
 
 | Semantic Type | CSS Class / Rendering | Publication Intent |
 |---|---|---|

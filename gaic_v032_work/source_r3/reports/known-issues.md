@@ -1,7 +1,90 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-9 Evaluation Results and Semantic Table Reflow)
+**Last Updated:** May 11, 2026 (Phase 1D-10 Scored Evaluation Results and Table Layout Repair)
+
+## Phase 1D-10 Scored Evaluation Results and Table Layout Repair
+
+### Status: PHASE 1D-10 SCORED EVALUATION RESULTS GENERATED / QA REQUIRED
+
+Phase 1D-10 builds on the accepted HTML-first renderer and the Phase 1D-9 qualitative profile layer. It adds explicit non-ranking RCCS/ALCS provisional analytical scores and ranges for all eight evaluated systems, confidence labels, scored profile cards, grouped RCCS/ALCS score visualizations, a stronger result-first chapter hierarchy, semantic table layout repair, and a clearer citation-status layer. HTML/PDF remain the visual source of truth; DOCX remains an editable derivative.
+
+**Generated artifacts:**
+
+1. `out/phase_1d10/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v4.html`
+2. `out/phase_1d10/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v4.pdf`
+3. `out/phase_1d10/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v4.docx`
+4. `out/phase_1d10/html_publication/rendered_pdf_pages/page-001.png` through `page-523.png`
+5. `out/phase_1d10/html_publication/phase_1d10_generation_log.json`
+6. `out/phase_1d10/html_publication/phase_1d10_front_matter_contact_sheet.png`
+7. `out/phase_1d10/html_publication/phase_1d10_charts_overview_contact_sheet.png`
+8. `out/phase_1d10/html_publication/phase_1d10_evaluation_results_contact_sheet.png`
+9. `out/phase_1d10/html_publication/phase_1d10_rccs_alcs_visual_profiles_contact_sheet.png`
+10. `out/phase_1d10/html_publication/phase_1d10_figure_pages_contact_sheet.png`
+11. `out/phase_1d10/html_publication/phase_1d10_high_risk_tables_contact_sheet.png`
+12. `out/phase_1d10/html_publication/phase_1d10_rubric_examples_contact_sheet.png`
+13. `out/phase_1d10/html_publication/phase_1d10_system_mapping_examples_contact_sheet.png`
+14. `out/phase_1d10/html_publication/phase_1d10_references_contact_sheet.png`
+15. `out/phase_1d10/html_publication/phase_1d10_appendix_final_pages_contact_sheet.png`
+
+**Reports created:**
+
+1. `reports/phase-1d10-scoring-feasibility-audit.md`
+2. `reports/phase-1d10-provisional-score-model.md`
+3. `reports/phase-1d10-rccs-alcs-score-visualization-report.md`
+4. `reports/phase-1d10-score-visuals-qa.md`
+5. `reports/phase-1d10-semantic-table-layout-report.md`
+6. `reports/phase-1d10-table-layout-qa.md`
+7. `reports/phase-1d10-chapter-result-hierarchy-report.md`
+8. `reports/phase-1d10-citation-status-layer-report.md`
+9. `reports/phase-1d10-evaluation-results-architecture.md`
+10. `reports/phase-1d10-rccs-alcs-visual-results-plan.md`
+11. `reports/phase-1d10-chapter-hierarchy-report.md`
+12. `reports/phase-1d10-semantic-table-type-system.md`
+13. `reports/phase-1d10-rubric-table-reflow-report.md`
+14. `reports/phase-1d10-system-table-reflow-report.md`
+15. `reports/phase-1d10-source-citation-layer-report.md`
+16. `reports/phase-1d10-html-publication-generation-report.md`
+17. `reports/phase-1d10-html-visual-qa.md`
+18. `reports/phase-1d10-evaluation-results-qa.md`
+19. `reports/phase-1d10-content-preservation-qa.md`
+20. `reports/phase-1d10-boundary-claim-qa.md`
+21. `reports/phase-1d10-docx-derivative-qa.md`
+
+**Pass / warning results:**
+
+1. HTML/PDF/DOCX derivative generated from active source: PASS.
+2. Old DOCX/PDF used as input: NO.
+3. PDF page rendering: PASS, 523 A4 pages rendered to PNG.
+4. Evaluation results layer: PASS; all eight systems have RCCS/ALCS score or range and confidence labels.
+5. Score visuals: PASS; grouped RCCS/ALCS score chart, score map, and dimension heatmap generated in fixed non-ranked order.
+6. Chapter hierarchy: PASS; 18/18 chapters render result-first panels.
+7. Table layout: PASS for QA draft; T-08-13 renders as rubric card reflow, Appendix E rubrics reflowed 10/10, Appendix F rubrics reflowed 15/15, and Appendix G system tables reflowed 9/9.
+8. Content preservation QA: PASS; Chapters 1-18, Appendices A-K, all 170 active table IDs, and F-01 through F-11 retained.
+9. Boundary/forbidden-claim QA: PASS; positive blocker count 0.
+10. DOCX derivative QA: GENERATED; DOCX is editable derivative only and is not the visual authority.
+
+**RCCS / ALCS provisional score summary:**
+
+1. MPLP: RCCS 57 (52-62), ALCS 84 (80-88), confidence: Partially source-bound / L5 analytical inference.
+2. IBM watsonx.governance: RCCS 82 (78-86), ALCS 58 (53-63), confidence: Partially source-bound.
+3. Microsoft Azure AI Foundry: RCCS 80 (76-84), ALCS 62 (57-67), confidence: Partially source-bound.
+4. AWS Bedrock + Guardrails + AgentCore: RCCS 78 (74-83), ALCS 60 (55-65), confidence: Partially source-bound.
+5. Google Vertex AI + ADK + Model Armor: RCCS 79 (75-84), ALCS 61 (56-66), confidence: Partially source-bound.
+6. LangGraph + LangSmith: RCCS 60 (55-65), ALCS 80 (76-84), confidence: Partially source-bound.
+7. OpenAI Agents SDK: RCCS 58 (52-63), ALCS 64 (58-69), confidence: Source-pointer pending / access caveat.
+8. CrewAI: RCCS 48 (42-54), ALCS 63 (58-68), confidence: Partially source-bound / L5 analytical inference.
+
+**Remaining blockers:**
+
+1. Final page-level citation pinning remains incomplete for several high-risk L2 product/protocol references.
+2. OpenAI platform guide still returns HTTP 403 and cannot be treated as fully pinned/rendered.
+3. Validation Lab methodology-specific support remains boundary-limited unless a release-approved methodology citation is pinned.
+4. MPLP docs/spec references remain source-bound for protocol identity but analytical for MRO/ALCS mapping where not directly stated.
+5. Product/protocol L2 references still include source-pointer queues.
+6. Publication candidate readiness is not declared.
+
+**Phase 1D-10 Decision:** PHASE 1D-10 SCORED EVALUATION RESULTS GENERATED / QA REQUIRED.
 
 ## Phase 1D-9 Evaluation Results and Semantic Table Reflow
 
