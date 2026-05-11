@@ -1,7 +1,7 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-13B Global RCCS-M Integration
+**Phase:** 1D-13D Chapter 7 RCCS-T/M Methodology Correction
 **Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
 **Last Updated:** May 11, 2026
 
@@ -22,6 +22,8 @@ Phase 1D-11 closes the high-risk citation/source evidence blockers without swall
 Phase 1D-12 adds the final two-layer RCCS presentation and repairs the table wrapping blocker. Evaluation Results now distinguishes RCCS-T (traditional governance coverage), RCCS-M (MRO-adjusted agentic regulatory coverage), and ALCS (lifecycle responsibility conformance). MPLP remains in the fixed-order comparison with limited RCCS-T product/platform coverage and strong RCCS-M/ALCS lifecycle-object semantics. Tables must not use wrapping rules that create single-letter vertical columns.
 
 Phase 1D-13B globally integrates the Phase 1D-12 model into active source. RCCS-T / MRO / RCCS-M / ALCS is the explanatory spine across front matter, methodology, mappings, appendices, and conclusion. Appendix G remains qualitative and no-score, while numeric RCCS-T/RCCS-M/ALCS profiles remain only in Evaluation Results. RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
+
+Phase 1D-13D completes the Chapter 7 methodology layer. Chapter 7 now treats RCCS-T and RCCS-M as the same ten dimensions and weights with different scoring lenses, and includes T-07-01A / T-07-02A methodology tables. Appendix E adds T-E-11 as the RCCS-M Adjustment Matrix while preserving T-E-01 through T-E-10 as RCCS-T baseline rubrics. These wide methodology matrices should use the existing semantic row-card / split-table rendering rules rather than narrow columns that could reintroduce vertical word breaks.
 
 ## VI Principles
 

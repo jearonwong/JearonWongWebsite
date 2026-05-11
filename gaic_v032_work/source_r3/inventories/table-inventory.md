@@ -75,7 +75,9 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | Table ID | Title | Location | Status | Layout Notes |
 |----------|-------|----------|--------|--------------|
 | T-07-01 | RCCS Dimensions Summary | Chapter 7 | ✓ Filled (1A-3.5) | Landscape recommended, 4 columns |
+| T-07-01A | RCCS-T Dimension to RCCS-M MRO Adjustment Test | Chapter 7 | ✓ Filled (Phase 1D-13D) | Landscape / semantic row-card recommended, 6 columns |
 | T-07-02 | RCCS Composite Score Calculation Formula | Chapter 7 | ✓ Filled (1A-3.5) | Portrait, 3 columns |
+| T-07-02A | RCCS-T vs RCCS-M 0-5 Scoring Lens | Chapter 7 | ✓ Filled (Phase 1D-13D) | Landscape / semantic row-card recommended, 5 columns |
 | T-07-03 | RCCS-01: Risk Management Scoring Rubric | Chapter 7 | ✓ Filled (1A-3.6) | Portrait, scoring rubric |
 | T-07-04 | RCCS-02: Data Governance Scoring Rubric | Chapter 7 | ✓ Filled (1A-3.6) | Portrait, scoring rubric |
 | T-07-05 | RCCS-03: Documentation Scoring Rubric | Chapter 7 | ✓ Filled (1A-3.6) | Portrait, scoring rubric |
@@ -207,6 +209,7 @@ This inventory tracks all tables in the white paper for consistency, numbering, 
 | T-E-08 | RCCS-08 Accountability Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
 | T-E-09 | RCCS-09 Contestability Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
 | T-E-10 | RCCS-10 Monitoring Detailed Rubric | Appendix E | ✓ Filled (1B-9) | Landscape, 6 columns |
+| T-E-11 | RCCS-M Adjustment Matrix | Appendix E | ✓ Filled (Phase 1D-13D) | Landscape / semantic row-card recommended, 5 columns |
 | T-F-01 | ALCS-01 Human-Role-to-MAS Responsibility Mapping Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |
 | T-F-02 | ALCS-02 Delegated Authority Boundary Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |
 | T-F-03 | ALCS-03 Agent Role vs Human Role Distinction Detailed Rubric | Appendix F | ✓ Filled (1B-9, corrected 1B-9C) | Landscape, 6 columns |

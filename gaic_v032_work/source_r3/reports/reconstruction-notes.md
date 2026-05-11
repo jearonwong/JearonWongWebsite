@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-13B Global RCCS-M Integration)
+**Last Updated:** May 11, 2026 (Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction)
 
 ## Reconstruction Strategy
 
@@ -42,6 +42,7 @@ R3 uses phased reconstruction:
 21. **Phase 1D-11:** Citation/source evidence closure with OpenAI source replacement, Validation Lab public-methodology narrowing, MPLP source-bound/analytical split, L2 product reference closure, score evidence integrity QA, and regenerated HTML/PDF/DOCX derivative (✓ CITATION SOURCE CLOSURE COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 22. **Phase 1D-12:** Two-layer RCCS model and final table visual repair with RCCS-T/RCCS-M/ALCS result profiles, MPLP interpretation clarification, score chart update, table wrapping root-cause repair, and regenerated HTML/PDF/DOCX derivative (✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 23. **Phase 1D-13B:** Targeted global RCCS-M integration with RCCS-T / MRO / RCCS-M / ALCS as the explanatory spine across active source, while preserving 1D-12 score ranges, 1D-11 source closure, Appendix G qualitative/no-score posture, and publication boundaries (✓ GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+24. **Phase 1D-13D:** Targeted Chapter 7 RCCS-T/M methodology correction with same-dimension/two-lens scoring, T-07-01A MRO adjustment test, T-07-02A 0-5 scoring-lens table, and Appendix E T-E-11 RCCS-M Adjustment Matrix, while preserving scores and boundaries (✓ CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -101,6 +102,10 @@ Phase 1D-12 corrects an over-blunt RCCS presentation by preserving MPLP in the c
 ### Decision 11: Integrate RCCS-M Globally Without Reopening Scores
 
 Phase 1D-13B applies the Phase 1D-13A research finding that Phase 1D-12 fixed the result layer but not the global narrative layer. The implementation updates active source so RCCS-T, MRO, RCCS-M, and ALCS form the paper's explanatory spine. It does not recalculate scores, add systems, create a ranking, or turn Appendix G into a scored appendix. Numeric RCCS-T/RCCS-M/ALCS profiles remain in Evaluation Results only; Appendix G remains qualitative and provisional.
+
+### Decision 12: Complete Chapter 7 as the Operational RCCS-T/M Methodology
+
+Phase 1D-13D applies the Phase 1D-13C research finding that global RCCS-M framing was present but Chapter 7 still lacked a fully operational scoring method. The implementation keeps the canonical ten RCCS dimensions and weights, then explains that RCCS-T and RCCS-M are separate scoring lenses over the same dimension family. Chapter 7 now includes T-07-01A for RCCS-T dimension to RCCS-M MRO adjustment tests, T-07-02A for 0-5 scoring differences, distinct traditional/MRO evidence requirements, and compact RCCS-M adjustment notes for each dimension rubric. Appendix E keeps T-E-01 through T-E-10 as RCCS-T baseline rubrics and adds T-E-11 as the RCCS-M Adjustment Matrix. No score recalculation, ranking, legal compliance proof, certification claim, or procurement recommendation was introduced.
 
 ## Lessons from R2
 

@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-13B Global RCCS-M Integration)
+**Last Updated:** May 11, 2026 (Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction)
+
+## Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction
+
+### Status: PHASE 1D-13D CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+
+Phase 1D-13D is a targeted methodology correction. It does not reopen global content expansion, recalculate scores, add systems, create rankings, or change Appendix G into a scored appendix. It closes the Chapter 7 method gap identified in Phase 1D-13C research.
+
+**Correction results:**
+
+1. Chapter 7 now states that RCCS-T and RCCS-M use the same ten dimension names and weights but different scoring lenses.
+2. T-07-01A maps each RCCS-T dimension to the RCCS-M MRO adjustment test, related MROs, required MRO evidence, and negative controls.
+3. T-07-02A explains how raw scores 0-5 differ under RCCS-T and RCCS-M.
+4. Chapter 7 now separates traditional evidence from MRO evidence and clarifies that RCCS-T and RCCS-M raw scores are assigned separately.
+5. Existing compact RCCS rubrics are preserved and each includes a RCCS-M adjustment note.
+6. Appendix E is reframed as RCCS-T detailed rubrics plus T-E-11 RCCS-M Adjustment Matrix; T-E-01 through T-E-10 remain intact.
+7. Appendix B distinguishes profile/lens and score-delta notes; Chapter 9 cross-references Chapter 7 for operational scoring-lens methodology.
+
+**Remaining limitations, not blockers:**
+
+1. Human final review should inspect Phase 1D-13D Chapter 7, Appendix E, scoring methodology contact sheets, and Evaluation Results.
+2. RCCS-M remains an author analytical model and should not be presented as current law, certification, legal compliance proof, a regulator-approved benchmark, or procurement benchmark.
+3. Existing score ranges are preserved; future score changes require separate score-rationale validation.
+
+**Phase 1D-13D Decision:** PHASE 1D-13D CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
 
 ## Phase 1D-13B Global RCCS-M Integration
 

@@ -1,16 +1,22 @@
-# Appendix E — RCCS Detailed Scoring Rubrics
+# Appendix E — RCCS-T Detailed Rubrics and RCCS-M Adjustment Matrix
 
 **Version:** v0.3.2-FRC-R3  
 
 ---
 
-## E.0 RCCS Rubric Boundary
+## E.0 RCCS-T / RCCS-M Rubric Boundary
 
-This appendix provides detailed scoring rubrics for all ten RCCS (Regulatory Compliance Coverage Score) dimensions. These rubrics are analytical tools for evaluating system capability to support regulatory compliance coverage primitives. They are not legal compliance scores, certifications, or regulatory approvals.
+This appendix provides detailed scoring rubrics for all ten RCCS (Regulatory Compliance Coverage Score) dimensions. The existing detailed rubrics serve as **RCCS-T baseline rubrics**: they evaluate traditional regulatory and governance coverage primitives such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+
+RCCS-M uses the same ten dimensions and weights but applies MRO adjustment tests. RCCS-M evaluates whether the traditional regulatory obligation can be represented as Missing Regulatory Objects and lifecycle responsibility semantics. High RCCS-T does not automatically imply high RCCS-M.
+
+These rubrics are analytical tools for evaluating system capability. They are not legal compliance scores, certifications, regulatory approvals, legal compliance proof, regulator-approved benchmarks, procurement benchmarks, final vendor scores, or rankings.
 
 **Boundary statement:**
 
-- **RCCS measures regulatory compliance coverage primitives.** RCCS evaluates whether a system provides primitives that can support regulatory compliance coverage requirements. It does not prove legal compliance, regulatory approval, certification, audit readiness, or operational effectiveness.
+- **RCCS-T measures traditional regulatory compliance coverage primitives.** RCCS-T evaluates whether a system provides primitives that can support familiar regulatory compliance coverage requirements. It does not prove legal compliance, regulatory approval, certification, audit readiness, or operational effectiveness.
+
+- **RCCS-M measures MRO-adjusted regulatory coverage.** RCCS-M evaluates whether those same obligations can be expressed through lifecycle responsibility objects such as authority boundaries, responsibility mappings, accepted outcome states, partitioned evidence, privacy lifecycle maps, substitution conformance records, and incident/dispute/remediation closure records.
 
 - **High RCCS scores do not prove legal compliance.** A high RCCS score indicates that a system provides primitives for regulatory compliance coverage. It does not prove that the system is legally compliant, operationally effective, or enterprise-ready.
 
@@ -20,16 +26,17 @@ This appendix provides detailed scoring rubrics for all ten RCCS (Regulatory Com
 
 - **RCCS scores require evidence.** All scores must be supported by evidence. The evidence level (L1-L5) affects the score multiplier using the canonical formula from Phase 1B-8C.
 
-- **RCCS scores are not product rankings.** Rubrics compare systems by regulatory compliance coverage primitives, not product quality, market leadership, or procurement suitability.
+- **RCCS scores are not product rankings.** Rubrics compare systems by regulatory compliance coverage primitives and MRO-adjusted lifecycle object expression, not product quality, market leadership, or procurement suitability.
 
 ---
 
-## E.1 How to Use RCCS Rubrics
+## E.1 How to Use RCCS-T and RCCS-M Rubrics
 
 **Scoring process:**
 
-1. **Assess raw capability (0-5)** based on system capability against the rubric
-2. **Identify evidence level (L1-L5)** based on source type
+1. **Assess RCCS-T raw capability (0-5)** based on traditional governance/control coverage against the detailed rubric
+2. **Assess RCCS-M raw capability (0-5)** using the RCCS-M adjustment matrix in Table T-E-11
+3. **Identify evidence level (L1-L5)** based on source type for each lens
 3. **Apply evidence multiplier** using canonical formula: Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier
 4. **Document justification** explaining why the raw score and evidence level were assigned
 5. **Add boundary note** clarifying what the score does and does not prove
@@ -55,7 +62,7 @@ In score-5 rows, legal references identify the regulatory baseline only. They do
 
 **Negative controls:**
 
-Each rubric includes negative controls to prevent overclaim. Negative controls distinguish adjacent capabilities from regulatory compliance coverage primitives.
+Each rubric includes negative controls to prevent overclaim. Negative controls distinguish adjacent capabilities from regulatory compliance coverage primitives. For RCCS-M, negative controls also prevent ordinary feature support from being treated as lifecycle responsibility object expression.
 
 ---
 
@@ -271,7 +278,35 @@ Each rubric includes negative controls to prevent overclaim. Negative controls d
 
 ---
 
-## E.3 RCCS Evidence Requirements
+## E.3 RCCS-M Adjustment Matrix
+
+RCCS-M uses the same ten RCCS dimensions as RCCS-T, but each dimension is tested for lifecycle responsibility object expression. Table T-E-11 is the reusable adjustment matrix for scoring RCCS-M. It aligns with Table T-07-01A in Chapter 7 and provides the practical evidence tests evaluators should apply.
+
+**Table T-E-11: RCCS-M Adjustment Matrix**
+
+| RCCS-T Dimension | RCCS-M Adjustment Question | Related MROs | Required MRO Evidence | Negative Control |
+|------------------|----------------------------|--------------|-----------------------|------------------|
+| RCCS-01 Risk Management | Are risks linked to lifecycle authority, evidence, mitigation, monitoring, and incident/dispute/remediation closure objects? | MRO-02, MRO-07, MRO-08, MRO-16 | Risk object, authority boundary, mitigation record, evidence pointer, monitoring/closure record | Risk register or dashboard without lifecycle linkage |
+| RCCS-02 Data Governance | Are data flows mapped across agents, tools, memory, evidence stores, privacy boundaries, reuse contexts, and processor/subprocessor chains? | MRO-08, MRO-10, MRO-12, MRO-13, MRO-14 | Lifecycle data-flow map, selective disclosure profile, retention/erasure policy, processor chain record | Dataset lineage without agent/runtime lifecycle mapping |
+| RCCS-03 Documentation | Does documentation bind intent, plan, authority, role, evidence, accepted outcome, privacy boundary, and substitution context? | MRO-01, MRO-02, MRO-04, MRO-08, MRO-15 | Versioned lifecycle documentation, object schema, trace manifest, substitution record | Static model card or system card without lifecycle responsibility objects |
+| RCCS-04 Record-Keeping | Are records partitioned by role, authority boundary, agent/tool action, evidence pointer, privacy boundary, accepted outcome, and closure state? | MRO-08, MRO-12, MRO-13, MRO-16 | Partitioned evidence chain, evidence pointer, disclosure policy, closure record | Generic logs without lifecycle responsibility partitioning |
+| RCCS-05 Transparency | Can disclosure be tied to lifecycle evidence, role, authority, accepted outcome, privacy boundary, selective disclosure, and dispute path? | MRO-04, MRO-08, MRO-11, MRO-12, MRO-16 | Evidence-linked explanation, disclosure profile, redacted validation pack, dispute replay record | Explanation UI without lifecycle evidence or selective disclosure |
+| RCCS-06 Human Oversight | Is oversight bound to human-role responsibility, delegated authority scope, escalation, drift detection, and accepted outcome authority? | MRO-01, MRO-02, MRO-03, MRO-04, MRO-07 | Human-role map, authority grant, escalation path, acceptance state, drift alert | Generic approve/reject UI without responsibility or authority scope |
+| RCCS-07 Security | Are security controls linked to delegated authority, tool-action liability, lifecycle evidence, privacy boundaries, and selective disclosure rules? | MRO-02, MRO-05, MRO-08, MRO-10, MRO-12 | Delegated authority record, tool-action liability object, evidence partition, privacy boundary | Access control treated as delegated authority proof |
+| RCCS-08 Accountability | Are accountability relationships represented as human/agent responsibility mappings, transfer records, accepted outcome states, and liability records? | MRO-01, MRO-03, MRO-04, MRO-05, MRO-06 | Responsibility map, agent role boundary, transfer record, acceptance record, liability record | User role assignment without responsibility continuity |
+| RCCS-09 Contestability | Can challenged outcomes be replayed with evidence, reviewer role, accepted/rejected state, remediation action, selective disclosure, and closure acceptance? | MRO-04, MRO-08, MRO-12, MRO-13, MRO-16 | Dispute replay pack, evidence manifest, remediation record, closure acceptance | Customer support ticket without lifecycle replay or closure |
+| RCCS-10 Monitoring | Does monitoring detect authority drift, lifecycle drift, substitution change, privacy events, incidents, reuse/revalidation needs, and remediation closure? | MRO-07, MRO-09, MRO-10, MRO-15, MRO-16 | Drift event, reuse/revalidation record, privacy event record, substitution conformance record, incident closure | General observability dashboard without responsibility-object monitoring |
+
+**Examples:**
+
+- Generic logs can support RCCS-T Record-Keeping but not RCCS-M unless partitioned by authority, agent/tool action, evidence pointer, privacy boundary, accepted outcome, and closure state.
+- Approval UI can support RCCS-T Human Oversight but not RCCS-M unless bound to human-role responsibility, delegated scope, escalation, drift detection, and accepted outcome authority.
+
+RCCS-M remains author analytical, forward-looking, and MRO-adjusted. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a final vendor score, or an official standard.
+
+---
+
+## E.4 RCCS Evidence Requirements
 
 **Evidence hierarchy:**
 
@@ -303,7 +338,7 @@ Dimension Score: (4/5) × 100 × 0.85 = 68.0
 
 ---
 
-## E.4 RCCS Scoring Notes and Negative Controls
+## E.5 RCCS Scoring Notes and Negative Controls
 
 **Negative controls prevent overclaim:**
 
@@ -355,3 +390,4 @@ Dimension Score: (4/5) × 100 × 0.85 = 68.0
 - RCCS scores are context-independent; organizations must interpret within their legal, regulatory, and operational context
 - RCCS scores require evidence; evidence level affects score multiplier
 - RCCS scores are not product rankings; they compare systems by regulatory compliance coverage primitives
+- RCCS-M is author analytical, forward-looking, and MRO-adjusted; it is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, or a final vendor score

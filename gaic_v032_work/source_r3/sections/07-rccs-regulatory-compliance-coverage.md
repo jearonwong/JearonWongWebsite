@@ -6,45 +6,40 @@
 
 ## 7.0 Chapter Overview
 
-This chapter introduces the **Regulatory Compliance Coverage Score (RCCS)** family used in this white paper. The original RCCS is treated as **RCCS-T — Traditional Regulatory Compliance Coverage Score** unless explicitly MRO-adjusted. RCCS-T measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+This chapter defines the two RCCS scoring lenses used in this white paper:
 
-The chapter also defines **RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score**. RCCS-M asks whether those same regulatory obligations can be expressed through Missing Regulatory Objects: authority boundaries, responsibility mappings, accepted outcome states, evidence partitions, privacy lifecycle maps, substitution conformance records, and incident/remediation closure objects.
+- **RCCS-T — Traditional Regulatory Compliance Coverage Score** measures how strongly a system covers existing regulatory and governance requirements such as risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
+- **RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score** measures whether those same regulatory obligations can be represented as Missing Regulatory Objects and lifecycle responsibility semantics.
 
-RCCS is an analytical framework for comparing system capabilities against regulatory ideals. It is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is a structured method for evaluating whether a system provides the primitives, controls, and evidence mechanisms that existing regulation and governance frameworks increasingly require.
+RCCS-T and RCCS-M use the **same 10 dimension names and weights**. They differ in scoring lens. RCCS-T asks whether the system provides traditional governance and control coverage. RCCS-M asks whether the same regulatory obligation is expressed as inspectable, replayable, evidence-linked lifecycle responsibility objects.
 
-The chapter defines the ten RCCS dimensions, explains the shared scoring procedure used for RCCS-T, RCCS-M, and ALCS, and establishes clear boundaries around what RCCS measures and what it does not measure. Detailed scoring rubrics for each dimension are provided in sections 7.6 through 7.15.
+RCCS is an analytical framework for comparing system capabilities against regulatory ideals. It is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is a structured method for evaluating whether a system provides the primitives, controls, evidence mechanisms, and lifecycle objects that existing regulation and agentic/MAS governance increasingly require.
+
+This chapter defines the ten RCCS dimensions, the RCCS-M adjustment test, the separate 0-5 scoring lens for RCCS-T and RCCS-M, evidence requirements for each lens, and the shared calculation method. Compact dimension rubrics begin in section 7.11; Appendix E provides the detailed RCCS-T baseline rubrics and RCCS-M adjustment matrix.
 
 ---
 
-## 7.1 What RCCS Measures
+## 7.1 Why Traditional RCCS Is Necessary but Insufficient
 
 RCCS-T measures how strongly a system covers existing regulatory and governance requirements. It evaluates whether a system provides the capabilities, controls, and evidence mechanisms that frameworks such as the EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, and Singapore MGF increasingly require.
 
 RCCS-T and RCCS-M are not legal compliance scores. A high RCCS-T or RCCS-M score does not mean a system is legally compliant. A low score does not mean a system is non-compliant. Legal compliance depends on organizational practice, deployment context, jurisdiction, risk class, and how the system is used. RCCS measures system capability, not organizational conformance.
 
-RCCS is an analytical framework for comparing systems. It allows buyers, auditors, governance teams, and protocol designers to evaluate whether a system provides the primitives required to support regulatory obligations. It makes visible the difference between systems that provide governance controls and systems that provide only execution or observability features.
-
 The purpose of RCCS-T is to translate regulatory abstractions into measurable system capabilities. Regulation requires risk management, but what does that mean in a system? RCCS-T defines ten dimensions that operationalize regulatory requirements into system features that can be evaluated, compared, and improved. It is a bridge between regulatory language and engineering implementation.
+
+Traditional coverage is necessary but insufficient for agentic and multi-agent systems. A governance dashboard, audit log, or approval workflow can support RCCS-T while still failing to express who held responsibility, what authority was delegated, which agent or tool acted, what evidence was partitioned, whether the outcome was accepted, and how incident or substitution closure was proven. High RCCS-T does not automatically imply high RCCS-M.
 
 RCCS-M adds the MRO adjustment. It asks a second question: can the regulatory coverage captured by RCCS-T be expressed through lifecycle responsibility objects that agentic systems can emit, inspect, replay, and validate? A governance dashboard may support RCCS-T. An authority boundary object, accepted outcome record, partitioned evidence chain, and substitution conformance record support RCCS-M.
 
-## 7.1.1 RCCS-T and RCCS-M
-
-**RCCS-T — Traditional Regulatory Compliance Coverage Score** measures familiar governance surfaces: risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring.
-
-**RCCS-M — MRO-Adjusted Regulatory Compliance Coverage Score** measures whether those governance surfaces can be represented through Missing Regulatory Objects required for agentic lifecycle responsibility compliance.
-
 The distinction matters because enterprise governance platforms may show strong RCCS-T coverage through conventional dashboards, policies, documentation, controls, and monitoring. Lifecycle protocol systems may show stronger RCCS-M where they define explicit responsibility, authority, evidence, acceptance, privacy, substitution, and closure objects. This is a score-delta interpretation, not a product ranking.
-
-RCCS-M is an author analytical, forward-looking model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
 
 ---
 
-## 7.2 RCCS Dimensions Overview
+## 7.2 RCCS-T Dimensions
 
-RCCS evaluates systems across ten dimensions. Each dimension corresponds to a recurring regulatory requirement. The dimensions are weighted to reflect their relative importance in the regulatory baseline analyzed in Chapter 4.
+RCCS-T and RCCS-M share the same 10 dimension names and weights. The dimensions correspond to recurring regulatory and governance requirements. The scoring lenses differ: RCCS-T evaluates traditional governance/control coverage, while RCCS-M evaluates whether that coverage is expressible through lifecycle responsibility objects.
 
-The ten RCCS dimensions are:
+The ten shared RCCS dimensions are:
 
 1. **Risk Management (20%)** - Does the system support risk identification, assessment, and mitigation across the AI lifecycle?
 2. **Data Governance (10%)** - Does the system track data lineage, quality, and lifecycle management?
@@ -57,7 +52,7 @@ The ten RCCS dimensions are:
 9. **Contestability (5%)** - Does the system support dispute and appeal mechanisms?
 10. **Monitoring (10%)** - Does the system support continuous monitoring and incident detection?
 
-The following table summarizes the ten dimensions, their regulatory sources, core questions, and weights.
+The following table summarizes the ten dimensions, their regulatory sources, core questions, and weights. The table is the baseline for both RCCS-T and RCCS-M; section 7.4 explains the MRO adjustment test that changes the RCCS-M raw score.
 
 **Table T-07-01: RCCS Dimensions Summary**
 
@@ -76,28 +71,80 @@ The following table summarizes the ten dimensions, their regulatory sources, cor
 
 ---
 
-## 7.3 Shared Scoring Procedure
+## 7.3 RCCS-M: MRO-Adjusted Interpretation of RCCS
 
-RCCS-T, RCCS-M, and ALCS use the same evidence confidence procedure. This section defines the shared raw scoring scale, evidence confidence multiplier, and dimension score formula used throughout the white paper. Composite views are secondary and are defined in Chapter 9.
+RCCS-M measures whether traditional regulatory obligations can be represented as Missing Regulatory Objects and lifecycle responsibility semantics. Operationally, RCCS-M asks whether a regulatory obligation is represented as inspectable, replayable, evidence-linked lifecycle responsibility objects.
 
-### 7.3.1 Raw Scoring Scale (0-5)
+The MRO adjustment changes what counts as strong support. For example:
 
-Each dimension is scored on a 0-5 raw scale based on the strength of system support:
+- Risk management becomes stronger when risks are linked to lifecycle risk objects, authority boundaries, mitigations, monitoring evidence, and incident closure.
+- Human oversight becomes stronger when approval is bound to human-role responsibility, delegated authority, escalation, and accepted outcome authority.
+- Record-keeping becomes stronger when logs become partitioned evidence chains tied to role, agent/tool action, authority boundary, privacy boundary, and accepted outcome.
+- Monitoring becomes stronger when runtime observation includes authority drift, substitution conformance, privacy lifecycle events, and incident/dispute/remediation closure.
 
-- **0 = No capability; no evidence** - The system does not provide the capability, or no evidence is available to evaluate it.
-- **1 = Minimal capability; weak evidence** - Documentation mentions the capability, but no implementation primitives are evident.
-- **2 = Partial capability; some evidence** - Some primitives exist, but coverage is incomplete or limited to specific contexts.
-- **3 = Moderate capability; documented evidence** - Most primitives exist, with some gaps or limitations in integration or coverage.
-- **4 = Strong capability; validated evidence** - Strong primitives exist and are mostly integrated across the system's scope.
-- **5 = Complete capability demonstrated by implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts** - Legal text may establish a regulatory baseline but does not by itself prove implementation.
+RCCS-M is an author analytical, forward-looking model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
 
-This scale is applied consistently across RCCS-T, RCCS-M, and ALCS dimensions. The score reflects system capability, not organizational practice. A system may score 5 on a dimension while the organization using it scores lower due to deployment gaps, policy weaknesses, or incomplete adoption.
+---
 
-### 7.3.2 Evidence Confidence Multiplier
+## 7.4 Dimension Mapping: RCCS-T Dimension to MRO Adjustment Test
 
-The evidence multiplier adjusts the dimension score based on the quality and verifiability of evidence used to evaluate the system. It reflects the confidence level in the scoring assessment.
+**Table T-07-01A: RCCS-T Dimension to RCCS-M MRO Adjustment Test**
 
-Evidence multiplier values:
+| RCCS-T Dimension | Traditional RCCS-T Test | RCCS-M Adjustment Question | Related MROs | Required MRO Evidence | Negative Control |
+|------------------|-------------------------|----------------------------|--------------|-----------------------|------------------|
+| RCCS-01 Risk Management | Does the system identify, assess, mitigate, and monitor AI risks? | Are risks linked to lifecycle authority, evidence, mitigation, monitoring, and closure objects? | MRO-02, MRO-07, MRO-08, MRO-16 | Risk object, authority boundary, mitigation record, evidence pointer, monitoring/closure record | Risk register without lifecycle linkage |
+| RCCS-02 Data Governance | Does the system govern data quality, lineage, access, retention, and lifecycle handling? | Are data flows mapped across agents, tools, memory, evidence stores, privacy boundaries, and reuse contexts? | MRO-08, MRO-10, MRO-12, MRO-13, MRO-14 | Lifecycle data-flow map, selective disclosure profile, retention/erasure policy, processor chain record | Dataset lineage without agent/runtime lifecycle mapping |
+| RCCS-03 Documentation | Does the system produce and maintain technical and governance documentation? | Does documentation bind intent, plan, authority, role, evidence, accepted outcome, and substitution context? | MRO-01, MRO-02, MRO-04, MRO-08, MRO-15 | Versioned lifecycle documentation, object schema, trace manifest, substitution record | Static model card without lifecycle responsibility objects |
+| RCCS-04 Record-Keeping | Does the system record relevant events, logs, and audit trails? | Are records partitioned by role, authority boundary, agent/tool action, evidence pointer, privacy boundary, and accepted outcome? | MRO-08, MRO-12, MRO-13, MRO-16 | Partitioned evidence chain, evidence pointer, disclosure policy, closure record | Generic logs without lifecycle responsibility partitioning |
+| RCCS-05 Transparency | Does the system disclose purpose, behavior, limitations, and relevant decision factors? | Can disclosure be tied to lifecycle evidence, role, authority, accepted outcome, privacy boundary, and dispute path? | MRO-04, MRO-08, MRO-11, MRO-12, MRO-16 | Evidence-linked explanation, disclosure profile, redacted validation pack, dispute replay record | Explanation UI without lifecycle evidence or selective disclosure |
+| RCCS-06 Human Oversight | Does the system support human review, approval, intervention, and escalation? | Is oversight bound to human-role responsibility, delegated scope, escalation, and accepted outcome authority? | MRO-01, MRO-02, MRO-03, MRO-04, MRO-07 | Human-role map, authority grant, escalation path, acceptance state, drift alert | Generic approve/reject UI without responsibility or authority scope |
+| RCCS-07 Security | Does the system implement access, authentication, authorization, and security monitoring controls? | Are security controls linked to delegated authority, tool-action liability, lifecycle evidence, and privacy-limited disclosure? | MRO-02, MRO-05, MRO-08, MRO-10, MRO-12 | Delegated authority record, tool-action liability object, evidence partition, privacy boundary | Access control treated as delegated authority proof |
+| RCCS-08 Accountability | Does the system assign roles, responsibilities, policies, and escalation paths? | Are accountability relationships represented as human/agent responsibility mappings, transfer records, and accepted outcome states? | MRO-01, MRO-03, MRO-04, MRO-05, MRO-06 | Responsibility map, agent role boundary, transfer record, acceptance record, liability record | User role assignment without responsibility continuity |
+| RCCS-09 Contestability | Does the system support dispute, appeal, investigation, correction, and remediation workflows? | Can challenged outcomes be replayed with evidence, reviewer role, accepted/rejected state, remediation action, and closure? | MRO-04, MRO-08, MRO-12, MRO-13, MRO-16 | Dispute replay pack, evidence manifest, remediation record, closure acceptance | Customer support ticket without lifecycle replay or closure |
+| RCCS-10 Monitoring | Does the system monitor performance, drift, incidents, and continuous improvement? | Does monitoring detect authority drift, lifecycle drift, substitution change, privacy events, incidents, and remediation closure? | MRO-07, MRO-09, MRO-10, MRO-15, MRO-16 | Drift event, reuse/revalidation record, privacy event record, substitution conformance record, incident closure | General observability dashboard without responsibility-object monitoring |
+
+---
+
+## 7.5 Scoring Criteria: How 0-5 Differs Under RCCS-T and RCCS-M
+
+RCCS-T and RCCS-M use the same 0-5 raw score range, but the meaning of each raw score differs because they use different scoring lenses.
+
+**Table T-07-02A: RCCS-T vs RCCS-M 0-5 Scoring Lens**
+
+| Raw Score | RCCS-T Meaning | RCCS-M Meaning | Evidence Difference | Negative Control |
+|-----------|----------------|----------------|---------------------|------------------|
+| 0 | No visible traditional coverage | No lifecycle object expression | No credible evidence for either lens | Absence of public feature or object support |
+| 1 | Policy, concept, or marketing mention only | MRO concept implied but not represented as an object or evidence artifact | RCCS-T may rely on weak public mention; RCCS-M needs at least identifiable lifecycle-object semantics | Governance language without implementation or object evidence |
+| 2 | Partial feature or control support | Partial lifecycle object support, mostly implementer-built or inferred | RCCS-T can count partial controls; RCCS-M requires a plausible but incomplete mapping to MRO evidence | Adjacent feature treated as lifecycle object |
+| 3 | Documented operational control | Documented object-level mapping for some lifecycle responsibility objects | RCCS-T requires official feature/workflow documentation; RCCS-M requires documented role, authority, evidence, acceptance, privacy, substitution, or closure mapping | Workflow support without explicit responsibility semantics |
+| 4 | Strong operational control with evidence | Strong lifecycle object coverage with evidence pointers and responsibility/authority binding | RCCS-T requires strong control evidence; RCCS-M requires object records, schemas, protocol evidence, or replayable artifacts | Strong dashboard or log export without object partitioning |
+| 5 | Comprehensive traditional governance control with strong evidence | Inspectable, replayable, evidence-linked lifecycle responsibility object coverage across the relevant dimension | RCCS-T can be satisfied by comprehensive implementation or audit evidence; RCCS-M requires implementation evidence, formal audit evidence, protocol-level evidence, or validated operational artifacts showing lifecycle object conformance | Legal text or policy baseline treated as implementation proof |
+
+Legal text may establish a regulatory baseline but does not by itself prove RCCS-T implementation or RCCS-M lifecycle-object expression.
+
+---
+
+## 7.6 Evidence Requirements: Traditional Evidence vs MRO Evidence
+
+RCCS-T evidence and RCCS-M evidence are not the same.
+
+**RCCS-T evidence** may include dashboards, policies, documentation, risk workflows, audit logs, oversight features, control reports, monitoring views, governance console records, and official product documentation showing traditional governance/control coverage.
+
+**RCCS-M evidence** should show lifecycle responsibility object expression. Examples include authority boundary records, human-role responsibility maps, accepted outcome states, partitioned evidence chains, privacy lifecycle maps, substitution conformance records, incident/dispute/remediation closure records, replayable lifecycle traces, protocol schemas, object manifests, or validated operational artifacts.
+
+Official product documentation may support RCCS-T strongly while supporting RCCS-M only indirectly. When lifecycle responsibility objects are not directly documented, RCCS-M scoring should be marked as source-qualified or L5 author analytical inference rather than treated as source-bound proof.
+
+---
+
+## 7.7 Calculation Method
+
+RCCS-T and RCCS-M use the same dimension weights and the same normalized dimension formula:
+
+**Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier**
+
+RCCS-T raw scores and RCCS-M raw scores are assigned separately. The formula is shared; the scoring lens differs. RCCS-T raw scores evaluate traditional governance/control coverage. RCCS-M raw scores evaluate MRO-adjusted lifecycle responsibility object expression.
+
+The evidence multiplier adjusts each dimension score based on evidence quality:
 
 - **L1:** 1.00
 - **L2:** 0.85
@@ -105,17 +152,7 @@ Evidence multiplier values:
 - **L4:** 0.55
 - **L5:** 0.35
 
-The evidence multiplier is applied to each raw dimension score using the canonical normalized formula:
-
-**Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier**
-
-This ensures that scores based on weaker evidence are discounted appropriately.
-
-### 7.3.3 Dimension Weighting
-
-Each dimension has a weight that reflects its relative importance in the regulatory baseline. Weights are expressed as percentages and sum to 100% for each scoring framework.
-
-For RCCS, the weights are:
+Weights are fixed for this version of the white paper:
 - Risk Management: 20%
 - Human Oversight: 15%
 - Data Governance: 10%
@@ -129,19 +166,7 @@ For RCCS, the weights are:
 
 Weights are fixed for this version of the white paper. Future versions may adjust weights based on regulatory evolution or stakeholder feedback.
 
-### 7.3.4 RCCS Score Calculation
-
-RCCS is calculated from adjusted RCCS dimension scores. Each dimension first receives a raw score and evidence multiplier:
-
-**Dimension Score = (Raw Score / 5) × 100 × Evidence Confidence Multiplier**
-
-Where:
-- Raw Score is the 0-5 capability score for each dimension
-- Evidence Confidence Multiplier is L1 = 1.00, L2 = 0.85, L3 = 0.75, L4 = 0.55, or L5 = 0.35
-
-The RCCS-T framework score is the aggregate of adjusted traditional RCCS dimension scores. RCCS-M uses the same regulatory dimension family but interprets each dimension through MRO coverage: whether the regulatory obligation is expressible as lifecycle responsibility objects.
-
-Optional cross-framework composite views are defined in Chapter 9. They are secondary to the three-profile display and must not hide the distinction between RCCS-T, RCCS-M, and ALCS.
+RCCS-T and RCCS-M should not be averaged invisibly. The preferred publication-facing display is the three-profile view: RCCS-T, RCCS-M, and ALCS. Optional composite views are defined in Chapter 9 and remain secondary.
 
 The following table illustrates the calculation formula.
 
@@ -159,7 +184,7 @@ This calculation method is used for RCCS-T, RCCS-M, and ALCS. The difference is 
 
 ---
 
-## 7.4 RCCS Boundary Statement
+## 7.8 Boundary and Negative Controls
 
 RCCS-T and RCCS-M are analytical scoring frameworks, not legal compliance scores. This boundary must be understood clearly to avoid misinterpretation.
 
@@ -179,32 +204,43 @@ RCCS-T and RCCS-M are analytical scoring frameworks, not legal compliance scores
 
 1. **High RCCS-T or RCCS-M score does NOT mean legal compliance.** A system may score well while the organization using it fails to comply with legal obligations due to deployment gaps, policy weaknesses, incomplete adoption, or jurisdictional differences.
 
-2. **Low RCCS score does NOT mean non-compliance.** A system may score lower on RCCS while the organization achieves compliance through compensating controls, manual processes, or alternative governance mechanisms.
+2. **High RCCS-T does NOT mean lifecycle responsibility conformance.** Traditional governance coverage can be strong while authority, responsibility, evidence, privacy, substitution, and closure objects remain weak.
 
-3. **RCCS measures system capability, not organizational practice.** A system may provide strong governance primitives while the organization fails to use them. Conversely, an organization may achieve strong governance through processes that are not reflected in system capabilities.
+3. **High RCCS-M does NOT mean legal compliance or certification.** RCCS-M is author analytical and forward-looking; it is not current law, regulator-approved, a procurement benchmark, or a legal compliance proof.
 
-4. **RCCS is context-independent, but compliance is context-dependent.** RCCS evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors.
+4. **High ALCS does NOT mean regulatory compliance.** ALCS evaluates lifecycle conformance maturity; RCCS-T and RCCS-M still need to be read separately.
+
+5. **Low RCCS score does NOT mean non-compliance.** A system may score lower on RCCS while the organization achieves compliance through compensating controls, manual processes, or alternative governance mechanisms.
+
+6. **RCCS measures system capability, not organizational practice.** A system may provide strong governance primitives while the organization fails to use them. Conversely, an organization may achieve strong governance through processes that are not reflected in system capabilities.
+
+7. **RCCS is context-independent, but compliance is context-dependent.** RCCS evaluates system capabilities without regard to deployment context, risk class, jurisdiction, or use case. Legal compliance depends on all of these factors.
 
 The purpose of this boundary statement is to prevent over-claiming. RCCS-T and RCCS-M are useful analytical tools, but they are not compliance certifications. Organizations must not rely on RCCS scores as proof of legal compliance. Buyers must not treat high RCCS scores as a substitute for due diligence, legal review, or risk assessment. RCCS-M must also not be presented as a regulator-approved benchmark or official standard.
 
 ---
 
-## 7.5 Bridge to Dimension Sections
+## 7.9 Rubric Tables / Appendix E Bridge
 
-The following sections (7.6 through 7.15) detail each RCCS dimension. Each dimension section includes:
+The following sections (7.11 through 7.20) detail each RCCS dimension. Each dimension section includes:
 
 - **Regulatory basis** - Which frameworks and requirements inform the dimension
 - **Core question** - What the dimension evaluates
 - **Scoring criteria** - How to apply the 0-5 raw scale to system capabilities
+- **RCCS-M adjustment note** - How the dimension changes when evaluated through lifecycle responsibility objects
 - **System mapping guidance** - How to evaluate whether a system supports the dimension
 
-The dimension sections provide the detailed rubrics required to score systems consistently and reproducibly. They translate regulatory abstractions into concrete system features that can be evaluated through documentation review, API inspection, and evidence analysis.
+The compact chapter rubrics preserve the traditional RCCS-T baseline and add RCCS-M adjustment notes where practical. Appendix E contains the detailed RCCS-T rubrics plus the reusable RCCS-M adjustment matrix. Appendix E does not duplicate every RCCS-M rubric row; it provides the matrix that evaluators should apply to the ten shared dimensions.
 
-The body chapter includes compact dimension rubrics for reader continuity; Appendix E provides the reusable detailed RCCS scoring reference.
+## 7.10 What RCCS-T / RCCS-M Do Not Prove
+
+RCCS-T and RCCS-M do not prove legal compliance, certification, regulatory approval, audit success, deployment readiness, product quality, market leadership, or procurement suitability. They also do not replace ALCS. RCCS-T names traditional regulatory coverage. RCCS-M names MRO-adjusted regulatory coverage. ALCS names lifecycle conformance maturity.
+
+Chapter 9 explains how to interpret score deltas across RCCS-T, RCCS-M, and ALCS. A system with high RCCS-T and lower RCCS-M may have strong traditional governance surfaces but weaker lifecycle object expression. A system with lower RCCS-T and higher RCCS-M/ALCS may have strong lifecycle semantics but less productized governance-platform coverage. This difference is an analytical profile, not a ranking.
 
 ---
 
-## 7.6 RCCS-01: Risk Management
+## 7.11 RCCS-01: Risk Management
 
 ### Regulatory Basis
 
@@ -215,6 +251,10 @@ These frameworks converge on a shared expectation: AI systems must support conti
 ### Core Question
 
 **Does the system support risk identification, assessment, mitigation, and continuous monitoring across the AI lifecycle?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: are risks linked to lifecycle authority, evidence, mitigation, monitoring, and incident/dispute/remediation closure objects rather than only stored as a risk register or dashboard item?
 
 ### Scoring Rubric
 
@@ -247,7 +287,7 @@ The most common gap is risk assessment that exists for model development but doe
 
 ---
 
-## 7.7 RCCS-02: Data Governance
+## 7.12 RCCS-02: Data Governance
 
 ### Regulatory Basis
 
@@ -258,6 +298,10 @@ For agentic systems, data governance extends beyond training datasets to include
 ### Core Question
 
 **Does the system track data lineage, quality, lifecycle, and provenance across agent execution?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: are data flows mapped across agents, tools, memory, evidence stores, privacy boundaries, reuse contexts, retention rules, and processor/subprocessor chains?
 
 ### Scoring Rubric
 
@@ -290,7 +334,7 @@ The most common gap is data governance that covers training data but not runtime
 
 ---
 
-## 7.8 RCCS-03: Documentation
+## 7.13 RCCS-03: Documentation
 
 ### Regulatory Basis
 
@@ -301,6 +345,10 @@ Documentation is not merely a compliance artifact. It is the primary mechanism f
 ### Core Question
 
 **Does the system produce and maintain required technical documentation across the system lifecycle?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: does documentation bind intent, plan, authority, role, evidence, accepted outcome, privacy boundary, and substitution context as lifecycle responsibility records?
 
 ### Scoring Rubric
 
@@ -333,7 +381,7 @@ The most common gap is documentation that exists but is not version-controlled o
 
 ---
 
-## 7.9 RCCS-04: Record-Keeping
+## 7.14 RCCS-04: Record-Keeping
 
 ### Regulatory Basis
 
@@ -344,6 +392,10 @@ Record-keeping differs from documentation in that records capture what actually 
 ### Core Question
 
 **Does the system maintain audit trails and evidence records across agent execution?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: are records partitioned by human/agent role, authority boundary, agent/tool action, evidence pointer, privacy boundary, accepted outcome, and closure state rather than stored as generic logs?
 
 ### Scoring Rubric
 
@@ -376,7 +428,7 @@ The most common gap is logs that exist but are not structured for audit purposes
 
 ---
 
-## 7.10 RCCS-05: Transparency
+## 7.15 RCCS-05: Transparency
 
 ### Regulatory Basis
 
@@ -387,6 +439,10 @@ Transparency serves multiple purposes: enabling deployers to understand system b
 ### Core Question
 
 **Does the system provide explainability and disclosure mechanisms for agent decisions and outcomes?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: can explanations and disclosures be tied to lifecycle evidence, role, authority, accepted outcome, privacy boundary, selective disclosure, and dispute path?
 
 ### Scoring Rubric
 
@@ -419,7 +475,7 @@ The most common gap is model explainability that does not extend to agent decisi
 
 ---
 
-## 7.11 RCCS-06: Human Oversight
+## 7.16 RCCS-06: Human Oversight
 
 ### Regulatory Basis
 
@@ -430,6 +486,10 @@ Human oversight is the second-highest weighted RCCS dimension because it is the 
 ### Core Question
 
 **Does the system support human review, approval, intervention, and escalation across agent execution?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: is oversight bound to human-role responsibility, delegated authority scope, escalation path, drift detection, and accepted outcome authority rather than only an approve/reject UI?
 
 ### Scoring Rubric
 
@@ -462,7 +522,7 @@ The most common gap is human review that exists but is not mapped to responsibil
 
 ---
 
-## 7.12 RCCS-07: Security
+## 7.17 RCCS-07: Security
 
 ### Regulatory Basis
 
@@ -473,6 +533,10 @@ Security is foundational for all other governance controls. Without security, ri
 ### Core Question
 
 **Does the system implement security controls, access management, and threat protection across agent execution?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: are security controls linked to delegated authority, tool-action liability, evidence partitioning, privacy lifecycle boundaries, and selective disclosure rules?
 
 ### Scoring Rubric
 
@@ -505,7 +569,7 @@ The most common gap is platform security that does not extend to agent-to-agent 
 
 ---
 
-## 7.13 RCCS-08: Accountability
+## 7.18 RCCS-08: Accountability
 
 ### Regulatory Basis
 
@@ -516,6 +580,10 @@ Accountability is the principle that someone must be responsible for AI system d
 ### Core Question
 
 **Does the system assign responsibility and track accountability for agent decisions and outcomes?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: are accountability relationships represented as human-role-to-MAS responsibility mappings, agent role boundaries, responsibility transfer records, accepted outcome states, and liability records?
 
 ### Scoring Rubric
 
@@ -548,7 +616,7 @@ The most common gap is accountability for models but not for agent actions or to
 
 ---
 
-## 7.14 RCCS-09: Contestability
+## 7.19 RCCS-09: Contestability
 
 ### Regulatory Basis
 
@@ -559,6 +627,10 @@ Contestability is the principle that individuals affected by AI decisions must h
 ### Core Question
 
 **Does the system support dispute, appeal, and remediation mechanisms for agent decisions and outcomes?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: can challenged outcomes be replayed with partitioned evidence, reviewer role, accepted/rejected state, remediation action, selective disclosure, and closure acceptance?
 
 ### Scoring Rubric
 
@@ -591,7 +663,7 @@ The most common gap is contestability for final outputs but not for intermediate
 
 ---
 
-## 7.15 RCCS-10: Monitoring
+## 7.20 RCCS-10: Monitoring
 
 ### Regulatory Basis
 
@@ -602,6 +674,10 @@ Monitoring is the mechanism for detecting when systems deviate from expected beh
 ### Core Question
 
 **Does the system support continuous monitoring, incident detection, and drift detection across agent execution?**
+
+### RCCS-M Adjustment Note
+
+RCCS-M adjustment: does monitoring detect authority drift, lifecycle drift, privacy events, substitution changes, incidents, reuse/revalidation needs, and remediation closure?
 
 ### Scoring Rubric
 
@@ -634,7 +710,7 @@ The most common gap is monitoring for model performance but not for agent behavi
 
 ---
 
-## 7.16 Chapter Summary
+## 7.21 Chapter Summary
 
 This chapter introduced the Regulatory Compliance Coverage Score (RCCS) family used in this white paper. RCCS-T measures how strongly a system covers existing regulatory and governance requirements across ten dimensions: risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, contestability, and monitoring. RCCS-M asks whether that coverage can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics. Both are analytical frameworks for comparing system capabilities against regulatory ideals, not legal compliance certifications.
 

@@ -28,14 +28,16 @@ This appendix provides reusable RCCS-T / RCCS-M / ALCS scorecard templates for s
 
 The following template supports dimension-level scoring for RCCS-T, RCCS-M, and ALCS dimensions.
 
+RCCS-T and RCCS-M use the same dimension family but different scoring lenses. Scorecards should retain both values where evidence permits: RCCS-T for traditional governance/control coverage, RCCS-M for MRO-adjusted lifecycle responsibility object expression. The justification field should state which lens is being scored and whether the evidence supports the lens directly or only through analytical inference.
+
 **Table T-B-01: RCCS-T / RCCS-M / ALCS Dimension Scorecard Template**
 
-| System | Dimension | Raw Score 0-5 | Evidence Level | Multiplier | Adjusted Score | Justification | Boundary Note |
-|--------|-----------|---------------|----------------|------------|----------------|---------------|---------------|
-| Example System | RCCS-04: Record-Keeping | 4 | L2: Product Docs | 0.85 | 68.0 | System provides audit trail API and log export capability documented in official product docs | Score measures capability, not organizational practice; does not prove legal compliance |
-| Example System | ALCS-02: Delegated Authority Boundary | 3 | L3: Audit Report | 0.75 | 45.0 | System supports authority grant records and boundary violation alerts per third-party audit report | Score measures capability, not operational enforcement; does not prove regulatory approval |
-| Example System | RCCS-06: Human Oversight | 2 | L4: Vendor Claim | 0.55 | 22.0 | Vendor claims human-in-the-loop capability but no public documentation or audit evidence | Score reflects vendor claim only; requires validation; does not prove human oversight is operational |
-| Example System | RCCS-04: Record-Keeping | 5 | L1: EU AI Act Article 12 | 1.00 | 100.0 | EU AI Act Article 12 establishes record-keeping baseline; mapping system capability to Article 12 requirements is analytical interpretation | Score reflects regulatory baseline; mapping to system capability is analytical; does not prove legal compliance |
+| System | Profile / Lens | Dimension | Raw Score 0-5 | Evidence Level | Multiplier | Adjusted Score | Justification | Score-Delta Note | Boundary Note |
+|--------|----------------|-----------|---------------|----------------|------------|----------------|---------------|------------------|---------------|
+| Example System | RCCS-T | RCCS-04: Record-Keeping | 4 | L2: Product Docs | 0.85 | 68.0 | System provides audit trail API and log export capability documented in official product docs | Strong traditional record-keeping surface | Score measures capability, not organizational practice; does not prove legal compliance |
+| Example System | RCCS-M | RCCS-04: Record-Keeping | 2 | L5: Author Inference | 0.35 | 14.0 | Public evidence does not show records partitioned by role, authority boundary, agent/tool action, privacy boundary, and accepted outcome | Traditional logs do not automatically satisfy MRO evidence partitioning | RCCS-M is author analytical where object semantics are inferred |
+| Example System | ALCS | ALCS-02: Delegated Authority Boundary | 3 | L3: Audit Report | 0.75 | 45.0 | System supports authority grant records and boundary violation alerts per third-party audit report | Lifecycle conformance differs from RCCS-M regulatory coverage | Score measures capability, not operational enforcement; does not prove regulatory approval |
+| Example System | RCCS-T | RCCS-06: Human Oversight | 2 | L4: Vendor Claim | 0.55 | 22.0 | Vendor claims human-in-the-loop capability but no public documentation or audit evidence | Weak evidence limits both RCCS-T and RCCS-M confidence | Score reflects vendor claim only; requires validation; does not prove human oversight is operational |
 
 **Scoring rubric:**
 
@@ -72,11 +74,13 @@ The following template supports evidence-level adjustment for dimension scores.
 
 ```yaml
 dimension: RCCS-04 Record-Keeping
+profile_lens: RCCS-T
 raw_score: 4
 evidence_level: L2
 multiplier: 0.85
 adjusted_score: 68.0  # (4/5) × 100 × 0.85
 justification: "System provides audit trail API and log export capability documented in official product docs"
+score_delta_note: "RCCS-M may be lower unless records are partitioned by authority, agent/tool action, evidence pointer, privacy boundary, and accepted outcome"
 boundary_note: "Score measures capability, not organizational practice; does not prove legal compliance"
 ```
 
