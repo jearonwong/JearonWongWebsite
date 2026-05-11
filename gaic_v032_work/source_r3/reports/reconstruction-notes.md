@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
-**Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 8)
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Last Updated:** May 11, 2026 (Phase 1D-6 Final Regeneration and Publication QA)
 
 ## Reconstruction Strategy
 
@@ -34,6 +34,7 @@ R3 uses phased reconstruction:
 13. **Phase 1D-3:** Publication compression and narrative reflow into public white paper plus separate technical evidence pack (◐ PUBLIC WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 14. **Phase 1D-4:** Research-backed full-content continuous reflow (◐ FULL WHITE PAPER DRAFT GENERATED / QA REQUIRED)
 15. **Phase 1D-5:** Full-text editorial review pack, Waves 1-8 patches/review, and Wave 4A source restoration (✓ WAVE 8 CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED)
+16. **Phase 1D-6:** Final regeneration and publication QA from Wave 8-clean source (◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED)
 
 ## Source Hierarchy
 
@@ -518,6 +519,44 @@ Phase 1D-3 solved page count by reducing content into a 93-page public paper and
 - No final publication candidate was declared.
 
 **Phase 1D-5 Wave 8 Status:** ✓ CROSS-DOCUMENT REVIEW COMPLETE / FINAL REGENERATION REQUIRED / PUBLICATION CANDIDATE BLOCKED.
+
+## Phase 1D-6 Notes (May 11, 2026)
+
+**Scope:** Fresh full-white-paper regeneration from Wave 8-clean source, rendered PDF page generation, citation pinning/rendering QA, visual layout QA, table QA, figure QA, boundary claim QA, Appendix G final proofing, content preservation QA, and governance update.
+
+**Actions completed:**
+
+1. Created `scripts/generate_r3_phase1d6_final_whitepaper.py` as an auditable wrapper around the full-content generation pipeline.
+2. Generated fresh Markdown, DOCX, PDF, rendered PDF pages, and generation log under `out/phase_1d6/full_whitepaper/`.
+3. Confirmed old DOCX/PDF artifacts were not used as input.
+4. Rendered 233 PDF pages to PNG.
+5. Created visual contact sheets for first 20 pages, figure pages, high-risk table pages, appendix transitions, and final 10 pages.
+6. Ran table ID, figure, boundary, Appendix G, and content preservation checks against generated Markdown/PDF text.
+7. Ran citation URL sampling for high-risk source clusters.
+8. Created eight Phase 1D-6 QA reports.
+9. Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+**QA result:**
+
+- Fresh MD/DOCX/PDF generation: PASS.
+- Rendered page generation: PASS.
+- Visual layout QA: PASS for QA draft.
+- Table QA: PASS; all 170 active table IDs are present in generated Markdown and PDF text.
+- Figure QA: PASS; F-01 through F-11 render as DOCX-native panels.
+- Boundary / forbidden-claim QA: PASS with positive blocker count 0.
+- Appendix G final proofing: PASS for QA draft; Appendix G remains revalidated provisional, qualitative, no-score, and non-ranking.
+- Content preservation QA: PASS; front matter, Chapters 1-18, Appendices A-K, table IDs, figure panels, and boundary statements are retained.
+- Citation QA: BLOCKER. Final page-level citation pinning remains incomplete, OpenAI platform guide still returns HTTP 403, and some high-risk L2 product/protocol references remain source-pointer queues.
+
+**Artifacts generated:**
+
+1. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.md`
+2. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.docx`
+3. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.pdf`
+4. `out/phase_1d6/full_whitepaper/rendered_pdf_pages/page-001.png` through `page-233.png`
+5. `out/phase_1d6/full_whitepaper/phase_1d6_generation_log.json`
+
+**Phase 1D-6 Status:** ◐ QA REQUIRED / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1A-4.3 Notes (May 9, 2026)
 
@@ -1734,7 +1773,7 @@ Composite Score = 0.40 × RCCS + 0.60 × ALCS
 
 ## Phase 1B-9: Appendices E-G (RCCS/ALCS Detailed Rubrics and System Assessments)
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE
 
 ### Scope
@@ -1874,7 +1913,7 @@ Phase 1B-10: Appendices H-K (Enterprise Procurement, Source Audit, Gap Closure, 
 
 ## Phase 1B-9C: Appendix G Scope Correction + E/F Wording Hardening
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE
 
 ### Purpose
@@ -2049,7 +2088,7 @@ Phase 1B-10 (Appendices H-K: Enterprise Procurement, Source Audit, Gap Closure, 
 
 ## Phase 1B-9D: Final Governance Sync
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE
 
 ### Purpose
@@ -2095,7 +2134,7 @@ Phase 1B-10 can proceed with Appendices H-K after this governance sync. Phase 1B
 
 ## Phase 1B-10: Appendices H-K
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE
 
 ### Purpose
@@ -2130,7 +2169,7 @@ All appendices A-K are now filled. Phase 1C should proceed with global cleanup, 
 
 ## Phase 1C: Global Cleanup and Revalidation Preparation
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ◐ CLEANUP COMPLETE / FOLLOW-UP REQUIRED
 
 ### Purpose
@@ -2168,7 +2207,7 @@ This Phase 1C cleanup status was superseded by the Phase 1C follow-up claim-leve
 
 ## Phase 1C Follow-up: Claim-Level Source Binding
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE FOR CLAIM-LEVEL SOURCE BINDING / PHASE 1D BLOCKED
 
 ### Purpose
@@ -2211,7 +2250,7 @@ This claim-level source-binding status was superseded by the Phase 1C-FINAL cita
 
 ## Phase 1C-FINAL: Citation Pinning and Phase 1D Preflight
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ✓ COMPLETE / PHASE 1D READY
 
 ### Purpose
@@ -2252,7 +2291,7 @@ Phase 1D may proceed with DOCX/PDF generation, visual QA, citation rendering ver
 
 ## Phase 1D: Fresh R3 DOCX/PDF Draft Generation
 
-**Date:** May 10, 2026  
+**Date:** May 10, 2026
 **Status:** ◐ DRAFT GENERATED / QA REQUIRED / PUBLICATION CANDIDATE BLOCKED
 
 ### Purpose

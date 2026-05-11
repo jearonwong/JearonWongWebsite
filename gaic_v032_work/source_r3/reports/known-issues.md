@@ -1,7 +1,53 @@
 # Known Issues
 
-**Document:** GAIC-2026-v0.3.2-FRC-R3  
-**Last Updated:** May 11, 2026 (Phase 1D-5 Wave 8 Cross-Document Review)
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Last Updated:** May 11, 2026 (Phase 1D-6 Final Regeneration and Publication QA)
+
+## Phase 1D-6 Final Regeneration and Publication QA
+
+### Status: PHASE 1D-6 QA REQUIRED / PUBLICATION CANDIDATE BLOCKED
+
+Phase 1D-6 regenerated the full white paper from the latest Wave 8-clean active source. It did not use old DOCX/PDF artifacts as input and did not declare publication-candidate readiness.
+
+**Generated artifacts:**
+
+1. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.md`
+2. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.docx`
+3. `out/phase_1d6/full_whitepaper/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-Full-White-Paper-Publication-QA-Draft.pdf`
+4. `out/phase_1d6/full_whitepaper/rendered_pdf_pages/page-001.png` through `page-233.png`
+5. `out/phase_1d6/full_whitepaper/phase_1d6_generation_log.json`
+
+**QA reports created:**
+
+1. `reports/phase-1d6-final-regeneration-report.md`
+2. `reports/phase-1d6-citation-pinning-and-rendering-qa.md`
+3. `reports/phase-1d6-visual-layout-qa.md`
+4. `reports/phase-1d6-table-qa.md`
+5. `reports/phase-1d6-figure-qa.md`
+6. `reports/phase-1d6-boundary-claim-qa.md`
+7. `reports/phase-1d6-appendix-g-final-proofing.md`
+8. `reports/phase-1d6-content-preservation-qa.md`
+
+**Pass / warning results:**
+
+1. Fresh MD/DOCX/PDF generation from current source: PASS.
+2. PDF rendering to PNG: PASS, 233 pages rendered.
+3. Visual layout QA: PASS for QA draft; no blank pages, low-content pages, or clipping alerts detected.
+4. Table QA: PASS; generated Markdown and extracted PDF text contain all 170 active table IDs.
+5. Figure QA: PASS; F-01 through F-11 generated as DOCX-native panels and no figure placeholder residue detected.
+6. Boundary/forbidden-claim QA: PASS; positive blocker count 0.
+7. Appendix G final proofing: PASS for QA draft; Appendix G remains revalidated provisional, qualitative, non-ranking, and no-score.
+8. Content preservation QA: PASS; full source content retained and no reversion to the old 93-page or 539-page artifact models detected.
+
+**Remaining blockers:**
+
+1. Final page-level citation pinning is incomplete for several high-risk L2 product/protocol references.
+2. OpenAI platform guide still returns HTTP 403 and cannot be treated as fully pinned/rendered.
+3. Validation Lab methodology-specific support remains boundary-limited unless a release-approved methodology citation is pinned.
+4. MPLP docs/spec references remain source-bound for protocol identity but analytical for MRO/ALCS mapping where not directly stated.
+5. Publication candidate readiness is not declared.
+
+**Phase 1D-6 Decision:** PHASE 1D-6 QA REQUIRED / PUBLICATION CANDIDATE BLOCKED.
 
 ## Phase 1D-5 Full-Text Editorial Review Pack
 
