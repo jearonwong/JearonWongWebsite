@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (Publication Candidate Seal)
+**Last Updated:** May 12, 2026 (GAIC-R0 Cleanup and Release Hygiene)
 
 ## Reconstruction Strategy
 
@@ -46,6 +46,7 @@ R3 uses phased reconstruction:
 25. **Phase 1D-13E:** Professional HTML style-shell integration using the uploaded Professional-Final HTML as visual reference only, plus table blocker repair, Chapter 14 RCCS-M evidence bridge, Chapter 15 RCCS-M pressure-test bridge, terminology cleanup, and regenerated v9 HTML/PDF/DOCX with content-regression guard (✓ STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 26. **Phase 1D-13F:** Necessity-argument and protocol-boundary pass clarifying RCCS-M / ALCS as proposed necessary-dimension adequacy models, MPLP high scores as design alignment rather than independent validation, protocol proposal vs product/framework evaluation, interoperability/specification boundary, legal nuance, and publication-residue cleanup (✓ NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 27. **Publication Candidate Seal:** Approved Phase 1D-13F artifacts sealed into `out/publication_candidate/` with SHA256 manifest and seal report, using source commit `943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e`; no white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed (✓ PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY)
+28. **GAIC-R0 Cleanup and Release Hygiene:** Historical Phase 1D generated output directories, old rendered pages, old generated draft artifacts, and local conversion scratch outputs were removed from the current tree; sealed artifacts remain in `out/publication_candidate/`, their hashes remain unchanged, and historical intermediates remain recoverable through Git history and tag `gaic-v0.3.2-publication-candidate-sealed` (✓ CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE)
 
 ## Source Hierarchy
 
@@ -117,6 +118,10 @@ Phase 1D-13E uses `/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2
 ### Decision 14: Separate Necessity Argument From MPLP Implementation Sufficiency
 
 Phase 1D-13F clarifies that RCCS-M and ALCS are proposed analytical adequacy models for agentic lifecycle governance, not neutral legacy benchmarks, current law, certification, regulator-approved standards, procurement benchmarks, or third-party ratings. MPLP scores strongly under RCCS-M / ALCS because it was designed around the lifecycle responsibility objects the paper argues are structurally necessary. This is design alignment with the proposed object layer, not independent market validation or deployment proof. Chapter 13 now distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation and states that this paper defines the regulatory object gap and semantic object layer, not a complete wire-level interoperability specification.
+
+### Decision 15: Keep Only the Sealed Output Line in the Current Tree
+
+GAIC-R0 preserves history through Git rather than by keeping obsolete generated artifacts in the current repository tree. Old Phase 1D output folders, rendered page folders, contact sheets, draft HTML/PDF/DOCX artifacts, and local conversion scratch files were removed so public release, indexing, and future site work cannot accidentally expose stale draft versions. The sealed publication candidate remains under `out/publication_candidate/` and is the only white paper artifact source for R1 public release work. Historical intermediates remain recoverable from Git history and the annotated seal tag.
 
 ## Lessons from R2
 

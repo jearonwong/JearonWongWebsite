@@ -1,7 +1,35 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (Publication Candidate Seal)
+**Last Updated:** May 12, 2026 (GAIC-R0 Cleanup and Release Hygiene)
+
+## GAIC-R0 Cleanup and Release Hygiene
+
+### Status: GAIC-R0 CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE
+
+R0 removed historical generated draft/output clutter from the current repository tree after publication-candidate seal. This was a release-hygiene step only: no white paper content, sealed artifacts, scores, methodology, RCCS-T/RCCS-M/ALCS wording, protocol/product boundary language, or interoperability boundary language was changed.
+
+**Cleanup results:**
+
+1. The annotated tag `gaic-v0.3.2-publication-candidate-sealed` exists locally and on origin and points to sealed commit `448afd6f7d9ebef56b3e8afcd3c97c2f22b5daea`.
+2. Historical `source_r3/out/phase_*` generated output directories were removed from the current tree.
+3. Local untracked GAIC conversion scratch outputs, old v0.3.1 conversion artifacts, temporary LibreOffice profiles, local dependency folders, and `.DS_Store` files were removed.
+4. `out/publication_candidate/` remains the only generated white paper output directory under `source_r3/out/`.
+5. Sealed HTML/PDF/DOCX/log/manifest and `reports/publication-candidate-seal-report.md` remain preserved.
+6. Sealed HTML/PDF/DOCX/log SHA256 hashes remain unchanged.
+7. Historical intermediate artifacts remain recoverable via Git history and the seal tag.
+
+**Release rule after R0:**
+
+R1 public release work should use only `out/publication_candidate/` as the white paper artifact source. No old Phase 1D output directory should be treated as current or public-downloadable.
+
+**Remaining limitations, not blockers:**
+
+1. Human release review remains required before final public release.
+2. No public release page has been created in R0.
+3. WP2 and WP3 remain delayed/private institutional assets and are not public releases in this wave.
+
+**GAIC-R0 Decision:** GAIC-R0 CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE.
 
 ## Publication Candidate Seal
 
