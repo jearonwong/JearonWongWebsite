@@ -1,8 +1,8 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-13E Targeted RCCS-M Cleanup and Table Blocker Repair
-**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
+**Phase:** 1D-13F Methodological Position and Protocol Boundary
+**Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION CANDIDATE
 **Last Updated:** May 12, 2026
 
 ## Visual Position
@@ -26,6 +26,8 @@ Phase 1D-13B globally integrates the Phase 1D-12 model into active source. RCCS-
 Phase 1D-13D completes the Chapter 7 methodology layer. Chapter 7 now treats RCCS-T and RCCS-M as the same ten dimensions and weights with different scoring lenses, and includes T-07-01A / T-07-02A methodology tables. Appendix E adds T-E-11 as the RCCS-M Adjustment Matrix while preserving T-E-01 through T-E-10 as RCCS-T baseline rubrics. These wide methodology matrices should use the existing semantic row-card / split-table rendering rules rather than narrow columns that could reintroduce vertical word breaks.
 
 Phase 1D-13E repairs the remaining PDF table blocker by forcing the MRO / ALCS Dimension + Mapping Strength + Boundary / Evidence Limit table shape into semantic row cards where needed. It also adds the Chapter 14 RCCS-M evidence-confidence bridge and the Chapter 15 RCCS-M pressure-test bridge. The generated v9 artifacts must have zero vertical single-letter table pages, zero positive forbidden-claim blockers, and preserve source closure.
+
+Phase 1D-13F preserves the Phase 1D-13E professional shell and table blocker repair, then adds a publication-facing methodological-position layer. RCCS-M and ALCS are framed as proposed analytical adequacy models for agentic lifecycle governance. MPLP's strong RCCS-M / ALCS posture is design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority. Chapter 13 distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation and adds an interoperability/specification boundary.
 
 ## VI Principles
 

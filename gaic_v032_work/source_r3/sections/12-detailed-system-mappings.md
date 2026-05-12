@@ -167,7 +167,7 @@ MPLP is strong at lifecycle protocol semantics. It defines governance primitives
 | Implementation examples | Developer docs | L2 | Source-bound at entry-point level; deployment maturity remains unresolved |
 | Validation Lab methodology | Methodology / lab docs | L2 + L5 | Claim-level support remains boundary-limited; defer to Chapter 14 |
 
-Citation placeholders:
+Source references:
 - [MPLP-DOCS]
 - [MPLP-SPEC]
 
@@ -244,7 +244,7 @@ IBM watsonx.governance is strong at enterprise AI governance. It provides policy
 | Compliance workflows | Official product docs | L2 | narrowed / partially validated |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [IBM-WATSONX-GOVERNANCE-DOCS]
 
 ### RCCS Mapping Summary
@@ -318,7 +318,7 @@ Microsoft Azure AI Foundry is strong at cloud AI platform capabilities. It provi
 | Tracing and observability | Official product docs | L2 | narrowed / partially validated |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [MICROSOFT-AZURE-AI-FOUNDRY-DOCS]
 - [MICROSOFT-RESPONSIBLE-AI-DOCS]
 
@@ -393,7 +393,7 @@ AWS Bedrock / Guardrails / AgentCore is strong at cloud AI services. It provides
 | Enterprise security | Official product docs | L2 | source-bound at entry-point level |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [AWS-BEDROCK-DOCS]
 - [AWS-BEDROCK-GUARDRAILS-DOCS]
 - [AWS-AGENTCORE-DOCS]
@@ -470,7 +470,7 @@ Google Vertex AI / ADK / Model Armor is strong at cloud AI platform capabilities
 | Model evaluation and monitoring | Official product docs | L2 | narrowed / partially validated |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [GOOGLE-VERTEX-AI-DOCS]
 - [GOOGLE-ADK-DOCS]
 - [GOOGLE-MODEL-ARMOR-DOCS]
@@ -547,7 +547,7 @@ LangGraph / LangSmith is strong at agent orchestration and observability. It pro
 | Traces and observability | Official product docs | L2 | narrowed / partially validated |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [LANGGRAPH-DOCS]
 - [LANGSMITH-DOCS]
 
@@ -624,7 +624,7 @@ OpenAI Agents SDK is strong at agent execution and tool use. It provides model a
 | Developer primitives | Official product docs | L2 | narrowed / partially validated |
 | Agentic lifecycle objects | Official product docs | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [OPENAI-AGENTS-SDK-DOCS]
 - [OPENAI-TOOLS-DOCS]
 
@@ -701,7 +701,7 @@ CrewAI is strong at role-based agent composition and task orchestration. It prov
 | Agent role composition | Official docs or GitHub | L2 | source-bound at entry-point level |
 | Agentic lifecycle objects | Official docs or GitHub | L2 (if available) or L5 (author inference) | L5 analytical interpretation unless directly stated |
 
-Citation placeholders:
+Source references:
 - [CREWAI-DOCS]
 - [CREWAI-GITHUB]
 

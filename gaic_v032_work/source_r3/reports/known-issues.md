@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction)
+**Last Updated:** May 12, 2026 (Phase 1D-13F Methodological Position and Protocol Boundary)
+
+## Phase 1D-13F Methodological Position and Protocol Boundary
+
+### Status: PHASE 1D-13F METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+
+Phase 1D-13F is a targeted boundary and interpretation correction. It does not reopen scoring, add systems, create rankings, change Appendix G into a scored appendix, or claim legal compliance proof. It clarifies that RCCS-M and ALCS are proposed adequacy models for agentic lifecycle governance, not neutral legacy benchmarks or current law.
+
+**Correction results:**
+
+1. Front matter now includes an `Authorial Position and Evaluation Boundary` section.
+2. MPLP's strong RCCS-M / ALCS posture is framed as design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority.
+3. Chapter 13 now distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation.
+4. Chapter 13 now states an interoperability/specification boundary: this paper defines the object gap, MRO model, and evaluation logic, but not complete wire format, serialization grammar, validator rules, cross-system exchange semantics, or third-party conformance certification.
+5. Chapter 7 legal nuance now distinguishes EU AI Act Article 86 explanation-right context from GDPR Article 22 automated-decision safeguards.
+6. Publication-facing residue was cleaned or reframed as publication-candidate review language.
+7. Phase 1D-13E table blocker repair and professional shell remain preserved.
+
+**Remaining limitations, not blockers:**
+
+1. Human final review should inspect the Phase 1D-13F HTML/PDF publication-candidate artifact.
+2. MPLP implementation sufficiency still requires technical specification, runtime implementation, validator/conformance work, and independent evidence.
+3. RCCS-M remains author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, or procurement recommendation.
+
+**Phase 1D-13F Decision:** PHASE 1D-13F METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
 
 ## Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction
 

@@ -7,7 +7,7 @@
 **Document ID:** GACWP-2026-v0.3.2-FRC-R3  
 **Version:** v0.3.2 Final Release Candidate R3  
 **Trace Tag:** GACWP-2026-v0.3.2-FRC-R3  
-**Publication Note:** Publication Draft — non-legal technical governance analysis; not legal advice
+**Publication Note:** Publication Candidate — non-legal technical governance analysis prepared for review; not legal advice
 **Compiled:** May 2026  
 **Source Snapshot:** Sources available and checked as of May 2026  
 **Scope Snapshot:** Public-source technical governance analysis based on sources available and checked as of May 2026
@@ -33,7 +33,7 @@
 |-------|-------|
 | Document ID | GACWP-2026-v0.3.2-FRC-R3 |
 | Version | v0.3.2 Final Release Candidate R3 |
-| Status | Publication Draft — agenda-setting technical governance white paper; not legal advice |
+| Status | Publication Candidate — agenda-setting technical governance white paper prepared for review; not legal advice |
 | Author | Jearon Wong |
 | Author role | Protocol Architect for the Agent Era |
 | Author disclosure | Creator of MPLP — Multi-Agent Lifecycle Protocol |
@@ -105,6 +105,18 @@ This boundary discipline strengthens the paper. The argument does not need to cl
 
 ---
 
+## Authorial Position and Evaluation Boundary
+
+RCCS-M and ALCS are proposed analytical adequacy models for agentic lifecycle governance. They are not existing law, certification, regulator-approved standards, procurement benchmarks, final vendor scores, independent third-party ratings, or legal compliance proof.
+
+These models intentionally measure lifecycle-native governance capacity: responsibility objects, authority boundaries, evidence partitioning, accepted outcome, substitution conformance, privacy-aware validation, and remediation closure. They are not neutral legacy benchmarks for conventional model governance dashboards. They ask whether future Agent/MAS governance can represent the objects needed to make delegated work inspectable, replayable, reviewable, and accountable.
+
+MPLP is expected to score strongly under RCCS-M and ALCS because it was designed around lifecycle responsibility semantics. That result should be read as **design alignment with the proposed object layer**, not as independent market validation, certification, deployment proof, or procurement superiority.
+
+The central claim is not that "MPLP wins." The central claim is that future agentic and multi-agent compliance requires lifecycle responsibility objects. If a reader rejects the scoring model, the substantive dispute should be whether these lifecycle objects are necessary for governing agentic work, not whether the paper should hide the alignment between the proposed model and a protocol designed around that model.
+
+---
+
 ## Citation and Evidence Basis
 
 This paper uses a five-level evidence hierarchy to ensure that claims are grounded in verifiable sources rather than marketing language or conceptual speculation.
@@ -131,7 +143,7 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 ### Recommended Citation
 
-> Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Version v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3). May 2026. Publication URL to be assigned before release.
+> Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Version v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3). May 2026. Publication Candidate review edition.
 
 ### Short Citation
 
@@ -149,13 +161,13 @@ This hierarchy is necessary because the AI governance market has rapidly overloa
 
 | Version | Date | Trace Tag | Summary |
 |---------|------|-----------|---------|
-| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Expanded publication draft integrating lifecycle governance, MROs, RCCS-T / RCCS-M / ALCS scoring, evidence validation, enterprise failure scenarios, adoption roadmap, and technical appendices. |
+| v0.3.2-FRC-R3 | May 2026 | GACWP-2026-v0.3.2-FRC-R3 | Publication-candidate review edition integrating lifecycle governance, MROs, RCCS-T / RCCS-M / ALCS scoring, evidence validation, enterprise failure scenarios, adoption roadmap, and technical appendices. |
 | v0.3.1-PC | May 2026 | GACWP-2026-v0.3.1-PC | Publication candidate. Adds ALCS-to-MRO mapping, clarifies RCCS weighting and calculation reproducibility, updates Colorado AI Act status note as of 2026-05-07, aligns Singapore MGF wording with official four-part framing. |
 | v0.3-FULL | April 2026 | GACWP-2026-v0.3-FULL | Full research edition baseline (historical reference only) |
 
 ### Revision Note for v0.3.2-FRC-R3
 
-v0.3.2-FRC-R3 expands the white paper into a full publication draft with enterprise control mapping, lifecycle scoring, evidence validation, system assessment boundaries, adoption guidance, and technical appendices.
+v0.3.2-FRC-R3 expands the white paper into a full publication-candidate review edition with enterprise control mapping, lifecycle scoring, evidence validation, system assessment boundaries, adoption guidance, and technical appendices.
 
 **Key improvements in R3:**
 - Full lifecycle governance framing for agentic and multi-agent systems
@@ -339,7 +351,7 @@ This paper is written for AI governance leaders, enterprise architects, complian
 
 ### Document Status
 
-This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Publication Draft status. It remains subject to editorial review, citation review, visual proofing, and final release approval.
+This is **v0.3.2 Final Release Candidate R3 (GACWP-2026-v0.3.2-FRC-R3)** in Publication Candidate review status. It remains subject to editorial review, citation review, visual proofing, and final release approval.
 
 ---
 

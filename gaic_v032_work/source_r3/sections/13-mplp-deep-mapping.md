@@ -14,7 +14,29 @@ This chapter maps MPLP's protocol semantics to the Missing Regulatory Objects, R
 
 ---
 
-## 13.1 What MPLP Is and Is Not
+## 13.1 Protocol Proposal vs Product / Framework Benchmark
+
+MPLP is evaluated in this paper primarily as a **protocol-level semantic proposal**. Enterprise governance platforms, cloud services, orchestration frameworks, and developer SDKs are evaluated as product, platform, framework, or implementation surfaces. These are not identical maturity categories.
+
+A protocol proposal should be assessed by whether it defines necessary semantic objects, whether object boundaries are clear, whether independent implementations could target the same semantics, and whether conformance evidence can be generated and validated. A product or platform should also be assessed by deployment features, enterprise controls, operational tooling, market adoption, third-party implementation evidence, support maturity, and integration depth.
+
+This distinction explains the RCCS-T / RCCS-M / ALCS profile difference. Enterprise product platforms may score stronger on RCCS-T because they expose productized governance surfaces such as dashboards, policy workflows, documentation management, cloud controls, and monitoring consoles. MPLP may score stronger on RCCS-M and ALCS because it is designed around protocol-level lifecycle responsibility semantics: authority boundaries, responsibility transfer, accepted outcomes, evidence partitioning, substitution conformance, and remediation closure.
+
+MPLP's high RCCS-M / ALCS alignment should not be read as market adoption proof, independent validation, certification, deployment maturity, or procurement superiority. It is design alignment with the proposed lifecycle object layer. The central question is therefore whether those lifecycle responsibility objects are necessary for Agent/MAS governance. If they are necessary, a protocol designed around them should score strongly under models that measure them. If they are not necessary, the critique should show how agentic work can be governed without them.
+
+---
+
+## 13.2 Interoperability and Specification Boundary
+
+This white paper defines the regulatory object gap, the MRO object model, the RCCS-T / RCCS-M / ALCS evaluation logic, the lifecycle responsibility governance need, and the protocol-level adequacy argument. It is closer to the protocol problem-statement and semantic object layer than to a complete wire-level interoperability specification.
+
+This paper does not fully define the complete wire format, serialization grammar, all validation rules, full cross-system exchange semantics, or a complete third-party conformance test suite. Those belong to MPLP technical specification work, schema definition, Cognitive OS runtime mapping, and Validation Lab evidence/conformance evaluation.
+
+This boundary does not weaken the necessity argument. It separates agenda-setting governance theory and semantic object modeling from implementation-level protocol specification. A protocol path becomes more mature when its object model, schemas, validator rules, runtime mappings, test fixtures, and third-party conformance evidence become independently implementable and reviewable.
+
+---
+
+## 13.3 What MPLP Is and Is Not
 
 MPLP is a lifecycle protocol path for expressing agentic responsibility objects. It is not a certification program, regulator, legal authority, cloud platform, procurement recommendation, or exclusive compliance method.
 
@@ -34,7 +56,7 @@ MPLP is a lifecycle protocol path for expressing agentic responsibility objects.
 
 ---
 
-## 13.2 MPLP as a Lifecycle Protocol Path
+## 13.4 MPLP as a Lifecycle Protocol Path
 
 MPLP treats lifecycle responsibility as a first-class protocol concern. MPLP is relevant to AI Agent Lifecycle Governance because it provides explicit protocol-level semantics for context, plan, confirmation, trace/evidence, roles, dialogue/collaboration, extension, core semantics, and network/integration boundaries.
 
@@ -46,7 +68,7 @@ MPLP's protocol-level approach means it can express lifecycle responsibility obj
 
 ---
 
-## 13.3 MPLP Mapping to the 16 Missing Regulatory Objects
+## 13.5 MPLP Mapping to the 16 Missing Regulatory Objects
 
 The following table maps MPLP protocol semantics to the sixteen Missing Regulatory Objects defined in Chapter 6. Mapping strength reflects protocol-level semantic fit, not deployment conformance.
 
@@ -75,7 +97,7 @@ The following table maps MPLP protocol semantics to the sixteen Missing Regulato
 
 ---
 
-## 13.4 MPLP Mapping to RCCS-T and RCCS-M
+## 13.6 MPLP Mapping to RCCS-T and RCCS-M
 
 MPLP should not be read as weak merely because it is not an enterprise governance SaaS. The paper distinguishes two regulatory-coverage profiles. **RCCS-T** measures traditional productized governance coverage: risk dashboards, organizational policy workflows, cloud security controls, documentation management, monitoring, and compliance operations. MPLP may be limited on that product-platform layer. **RCCS-M** measures whether regulatory obligations can be expressed through Missing Regulatory Objects. MPLP may map strongly on that layer because its protocol semantics are designed around lifecycle responsibility objects.
 
@@ -100,7 +122,7 @@ MPLP can support RCCS-M where protocol semantics create evidence, accountability
 
 ---
 
-## 13.5 MPLP Mapping to ALCS
+## 13.7 MPLP Mapping to ALCS
 
 Because ALCS measures lifecycle responsibility objects, MPLP may map strongly to many ALCS dimensions. However, high protocol-level fit is not the same as deployment conformance.
 
@@ -128,7 +150,7 @@ Because ALCS measures lifecycle responsibility objects, MPLP may map strongly to
 
 ---
 
-## 13.6 Implementation, Adoption, and Evidence Limits
+## 13.8 Implementation, Adoption, and Evidence Limits
 
 MPLP can define lifecycle governance semantics, but the paper must not treat protocol design as equivalent to real-world conformance. The following table distinguishes protocol semantics from operational evidence.
 
@@ -148,7 +170,7 @@ The gap between protocol semantics and operational evidence is not a weakness of
 
 ---
 
-## 13.7 MPLP Non-Claim Discipline
+## 13.9 MPLP Non-Claim Discipline
 
 The following table explicitly restates forbidden claims to prevent overclaim.
 
@@ -168,10 +190,10 @@ The following table explicitly restates forbidden claims to prevent overclaim.
 
 ---
 
-## 13.8 Bridge to Evidence-Based Validation Pattern
+## 13.10 Bridge to Evidence-Based Validation Pattern
 
 Chapter 13 has mapped MPLP's protocol semantics to lifecycle responsibility objects. Chapter 14 will discuss evidence-based validation patterns and will treat Validation Lab only as a non-certifying evidence adjudication example.
 
 **Chapter 14 must not become an endorsement or certification claim.** Validation Lab is referenced as one example of how evidence-based validation can support lifecycle governance without creating a certification program. The paper evaluates validation patterns, not validation products.
 
-The bridge from protocol semantics (Chapter 13) to validation patterns (Chapter 14) is the recognition that protocol-level fit must be validated through evidence, not assumed through design. MPLP's strong RCCS-M and ALCS mapping creates validation opportunities, but validation itself requires independent evidence, not protocol authority.
+The bridge from protocol semantics (Chapter 13) to validation patterns (Chapter 14) is the recognition that protocol-level fit must be validated through evidence, not assumed through design. MPLP's strong RCCS-M and ALCS mapping creates validation opportunities, but validation itself requires independent evidence, not protocol authority. The roadmap from this paper therefore runs from MRO necessity and RCCS-M/ALCS adequacy modeling to MPLP technical specification, Cognitive OS runtime mapping, and Validation Lab-style evidence/conformance evaluation.

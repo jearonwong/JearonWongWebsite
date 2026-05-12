@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (Phase 1D-13E Style-Shell Integration and RCCS-M Cleanup)
+**Last Updated:** May 12, 2026 (Phase 1D-13F Methodological Position and Protocol Boundary)
 
 ## Reconstruction Strategy
 
@@ -44,6 +44,7 @@ R3 uses phased reconstruction:
 23. **Phase 1D-13B:** Targeted global RCCS-M integration with RCCS-T / MRO / RCCS-M / ALCS as the explanatory spine across active source, while preserving 1D-12 score ranges, 1D-11 source closure, Appendix G qualitative/no-score posture, and publication boundaries (✓ GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 24. **Phase 1D-13D:** Targeted Chapter 7 RCCS-T/M methodology correction with same-dimension/two-lens scoring, T-07-01A MRO adjustment test, T-07-02A 0-5 scoring-lens table, and Appendix E T-E-11 RCCS-M Adjustment Matrix, while preserving scores and boundaries (✓ CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 25. **Phase 1D-13E:** Professional HTML style-shell integration using the uploaded Professional-Final HTML as visual reference only, plus table blocker repair, Chapter 14 RCCS-M evidence bridge, Chapter 15 RCCS-M pressure-test bridge, terminology cleanup, and regenerated v9 HTML/PDF/DOCX with content-regression guard (✓ STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+26. **Phase 1D-13F:** Protocol-position and evaluation-boundary pass clarifying RCCS-M / ALCS as proposed adequacy models, MPLP high scores as design alignment rather than independent validation, protocol proposal vs product/framework evaluation, interoperability/specification boundary, legal nuance, and publication-residue cleanup (✓ METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -111,6 +112,10 @@ Phase 1D-13D applies the Phase 1D-13C research finding that global RCCS-M framin
 ### Decision 13: Borrow the Professional Shell, Not the Content
 
 Phase 1D-13E uses `/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html` only as a visual/layout reference. Its body content is rejected because it lacks the latest RCCS-T/RCCS-M methodology and contains old QA/draft status and old RCCS/ALCS-only language. The active `source_r3` Markdown remains the sole content source. The regenerated v9 HTML/PDF/DOCX uses a professional cover, metadata rhythm, callout style, table/card grammar, and section spacing while preserving RCCS-T, MRO Adjustment Layer / MRO-adjusted framing, RCCS-M, ALCS, T-07-01A, T-07-02A, T-E-11, Chapter 14/15 bridges, source closure, and boundary discipline. The vertical table blocker remains fixed with semantic row-card rendering for unsafe MRO/ALCS mapping tables.
+
+### Decision 14: Separate Necessity Argument From MPLP Implementation Sufficiency
+
+Phase 1D-13F clarifies that RCCS-M and ALCS are proposed analytical adequacy models for agentic lifecycle governance, not neutral legacy benchmarks, current law, certification, regulator-approved standards, procurement benchmarks, or third-party ratings. MPLP scores strongly under RCCS-M / ALCS because it was designed around the lifecycle responsibility objects the paper argues are structurally necessary. This is design alignment with the proposed object layer, not independent market validation or deployment proof. Chapter 13 now distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation and states that this paper defines the regulatory object gap and semantic object layer, not a complete wire-level interoperability specification.
 
 ## Lessons from R2
 
