@@ -2,7 +2,8 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
-import { aiAgentLifecycleColumn, pageRegistry } from "../../data/site";
+import { aiAgentLifecycleColumn, pageRegistry, siteConfig } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
 const essays = (await getCollection("essays")).sort(
   (left, right) =>
@@ -21,11 +22,55 @@ const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
 const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
+const canonicalPath = "/essays/";
+const essaysUrl = absoluteUrl(canonicalPath);
+const essaysKeywords = [
+  "Jearon Wong essays",
+  "AI Agent Lifecycle",
+  "Agentic Delivery",
+  "Agentic Lifecycle Governance",
+  "MPLP",
+  "AI agent governance",
+  "multi-agent systems"
+];
+const essaysCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${essaysUrl}#webpage`,
+  url: essaysUrl,
+  name: pageRegistry.essays.title,
+  description: pageRegistry.essays.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${essaysUrl}#essay-list`
+  }
+};
+const essaysItemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${essaysUrl}#essay-list`,
+  name: "Jearon Wong Essays",
+  itemListElement: essays.map((essay, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: essay.data.title,
+    url: absoluteUrl(`/essays/${essay.slug}/`)
+  }))
+};
+const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
+  { name: "Home", path: "/" },
+  { name: "Essays", path: canonicalPath }
+]);
 ---
 
 <BaseLayout
   title="Essays"
   description={pageRegistry.essays.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[essaysCollectionJsonLd, essaysItemListJsonLd, essaysBreadcrumbJsonLd]}
+  keywords={essaysKeywords}
   ogImagePath="/social/og-essays.png"
   ogImageAlt="Essays — Registry Logbook by Jearon Wong"
 >

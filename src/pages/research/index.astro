@@ -2,12 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import { pageRegistry, siteConfig } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
+const canonicalPath = "/research/";
+const researchUrl = absoluteUrl(canonicalPath);
 const researchJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": `${siteConfig.siteUrl}/research/#webpage`,
-  url: `${siteConfig.siteUrl}/research/`,
+  "@id": `${researchUrl}#webpage`,
+  url: researchUrl,
   name: pageRegistry.research.title,
   description: pageRegistry.research.lead,
   isPartOf: {
@@ -19,16 +22,34 @@ const researchJsonLd = {
   mainEntity: {
     "@type": "CreativeWork",
     name: "Global AI Compliance White Paper 2026",
-    url: `${siteConfig.siteUrl}/research/global-ai-compliance-white-paper-2026/`
+    url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
   }
 };
+const researchItemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${researchUrl}#research-list`,
+  name: "Jearon Wong Research",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Global AI Compliance White Paper 2026",
+      url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
+    }
+  ]
+};
+const researchBreadcrumbJsonLd = createBreadcrumbJsonLd(researchUrl, [
+  { name: "Home", path: "/" },
+  { name: "Research", path: canonicalPath }
+]);
 ---
 
 <BaseLayout
   title={pageRegistry.research.title}
   description={pageRegistry.research.lead}
-  canonicalPath="/research/"
-  jsonLd={[researchJsonLd]}
+  canonicalPath={canonicalPath}
+  jsonLd={[researchJsonLd, researchItemListJsonLd, researchBreadcrumbJsonLd]}
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt="Research — White Paper Ledger by Jearon Wong"
 >

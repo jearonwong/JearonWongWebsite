@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
 import SiteFooter from "../components/SiteFooter.astro";
-import { siteConfig, siteSemanticBaseline, socialLinks } from "../data/site";
+import { createPersonJsonLd, createWebsiteJsonLd } from "../data/schema";
+import { siteConfig } from "../data/site";
 
 interface Props {
   title?: string;
@@ -47,53 +48,8 @@ const socialTitle = shareTitle ?? pageTitle;
 const socialDescription = shareDescription ?? description;
 const twitterCardTitle = twitterTitle ?? shareTitle ?? pageTitle;
 const twitterCardDescription = twitterDescription ?? shareDescription ?? description;
-const websiteJsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${siteConfig.siteUrl}#website`,
-  url: siteConfig.siteUrl,
-  name: siteConfig.title,
-  description: siteConfig.description
-});
-const personJsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${siteConfig.siteUrl}#person`,
-  name: siteConfig.author.name,
-  url: siteConfig.siteUrl,
-  jobTitle: siteConfig.author.role,
-  image: new URL(siteConfig.author.image, siteConfig.siteUrl).toString(),
-  description: `${siteSemanticBaseline.identityAnchor}. ${siteSemanticBaseline.fieldDefinitionStatement} ${siteSemanticBaseline.agenticDeliveryDefinition}`,
-  knowsAbout: [
-    "AI Agent Lifecycle",
-    "Agentic Delivery",
-    "Multi-Agent Lifecycle Governance",
-    "MPLP",
-    "Confirmation Boundary",
-    "Evidence Chain",
-    "Semantic Loss",
-    "Execution is not Delivery",
-    "lifecycle protocol",
-    "accountable outcomes",
-    "accountable delivery",
-    "Cognitive OS",
-    "SoloCrew",
-    "Validation Lab",
-    "Lifecycle Role Decomposition",
-    "Lifecycle-Governed Agent Workflow",
-    "evidence adjudication",
-    "protocol engineering",
-    "agent governance",
-    "production-grade AI agents",
-    "AI agents",
-    "multi-agent systems",
-    "AI agent governance",
-    "agent orchestration accountability",
-    "AI agent infrastructure",
-    "production AI agent systems"
-  ],
-  sameAs: socialLinks.map(l => l.href)
-});
+const websiteJsonLd = JSON.stringify(createWebsiteJsonLd());
+const personJsonLd = JSON.stringify(createPersonJsonLd());
 ---
 
 <!doctype html>

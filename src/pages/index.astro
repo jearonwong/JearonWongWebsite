@@ -14,6 +14,7 @@ import {
   siteSemanticBaseline,
   socialLinks
 } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd, siteEntityTerms } from "../data/schema";
 
 const allEssays = (await getCollection("essays"))
   .sort((left, right) =>
@@ -41,13 +42,84 @@ const writingTracks = [
   { name: "AI Programming & Delivery Systems", desc: "Runtime architecture, state management, and operating constraints for protocol-aware agents." },
   { name: "Agent Stack Commentary", desc: "Analysis and perspective on the evolving agent infrastructure landscape." }
 ];
+const canonicalPath = "/";
+const homepageUrl = absoluteUrl(canonicalPath);
+const homepageDescription =
+  "Jearon Wong is the Protocol Architect for the Agent Era, defining AI Agent Lifecycle, Agentic Lifecycle Governance, MPLP, and AI agent governance for accountable AI agent work.";
+const homepageKeywords = [
+  "Jearon Wong",
+  "Protocol Architect for the Agent Era",
+  "AI Agent Lifecycle",
+  "Agentic Lifecycle Governance",
+  "AI Agent Governance",
+  "Agentic Delivery",
+  "MPLP",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS"
+];
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${homepageUrl}#webpage`,
+  url: homepageUrl,
+  name: siteConfig.title,
+  headline: "Jearon Wong — Protocol Architect for the Agent Era",
+  description: homepageDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  about: siteEntityTerms.map((term) => ({
+    "@type": "Thing",
+    name: term
+  })),
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  hasPart: [
+    {
+      "@type": "TechArticle",
+      name: "Global AI Compliance White Paper 2026",
+      url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
+    },
+    {
+      "@type": "WebPage",
+      name: "Agentic Lifecycle Governance",
+      url: absoluteUrl("/concepts/agentic-lifecycle-governance/")
+    },
+    {
+      "@type": "CollectionPage",
+      name: "Applied Agentic Governance Playbooks",
+      url: absoluteUrl("/playbooks/")
+    }
+  ]
+};
+const profilePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${homepageUrl}#profile`,
+  url: homepageUrl,
+  name: "Jearon Wong",
+  description: homepageDescription,
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  }
+};
+const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
+  { name: "Home", path: "/" }
+]);
 ---
 
 <BaseLayout
   title={siteConfig.title}
-  description={siteConfig.description}
+  description={homepageDescription}
+  canonicalPath={canonicalPath}
   shareTitle={siteSemanticBaseline.identityAnchor}
-  shareDescription={`${siteSemanticBaseline.fieldDefinitionStatement} AI agents will not become real infrastructure until execution becomes accountable delivery.`}
+  shareDescription={homepageDescription}
+  twitterTitle={siteSemanticBaseline.identityAnchor}
+  twitterDescription={homepageDescription}
+  jsonLd={[homepageJsonLd, profilePageJsonLd, homepageBreadcrumbJsonLd]}
+  keywords={homepageKeywords}
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt={`${siteSemanticBaseline.identityAnchor}: AI Agent Lifecycle and accountable delivery.`}
 >

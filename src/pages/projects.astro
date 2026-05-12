@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
-import { getProjectBySlug, homepageActions, pageRegistry, siteSemanticBaseline } from "../data/site";
+import { getProjectBySlug, homepageActions, pageRegistry, siteConfig, siteSemanticBaseline } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
 const protocolPathProject = getProjectBySlug("mplp");
 const proofPathProjects = ["cognitive-os", "solocrew", "validation-lab"]
@@ -14,11 +15,59 @@ const projectBoundaryNotes = [
   "SoloCrew is a delivery proof path, not finished commercial proof.",
   "Validation Lab is MPLP evidence adjudication, not a credentialing body or general validation service."
 ];
+const canonicalPath = "/projects/";
+const projectsUrl = absoluteUrl(canonicalPath);
+const allProjects = [protocolPathProject, ...proofPathProjects].filter(
+  (project): project is NonNullable<ReturnType<typeof getProjectBySlug>> => Boolean(project)
+);
+const projectsKeywords = [
+  "MPLP",
+  "Cognitive OS",
+  "SoloCrew",
+  "Validation Lab",
+  "AI Agent Lifecycle",
+  "Agentic Delivery",
+  "Agentic Lifecycle Governance",
+  "AI agent governance"
+];
+const projectsCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${projectsUrl}#webpage`,
+  url: projectsUrl,
+  name: pageRegistry.projects.title,
+  description: pageRegistry.projects.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${projectsUrl}#project-list`
+  }
+};
+const projectsItemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${projectsUrl}#project-list`,
+  name: "Agentic Delivery protocol path and proof path",
+  itemListElement: allProjects.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: project.name,
+    url: absoluteUrl(`/projects/${project.slug}/`)
+  }))
+};
+const projectsBreadcrumbJsonLd = createBreadcrumbJsonLd(projectsUrl, [
+  { name: "Home", path: "/" },
+  { name: "Projects", path: canonicalPath }
+]);
 ---
 
 <BaseLayout
   title={pageRegistry.projects.title}
   description={pageRegistry.projects.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[projectsCollectionJsonLd, projectsItemListJsonLd, projectsBreadcrumbJsonLd]}
+  keywords={projectsKeywords}
   ogImagePath="/social/og-projects.png"
   ogImageAlt="Projects — Evidence Ledger by Jearon Wong"
 >

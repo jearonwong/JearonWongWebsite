@@ -78,7 +78,7 @@ export const siteSemanticBaseline = {
 export const siteConfig = {
   title: "Jearon Wong — Protocol Architect for the Agent Era",
   description:
-    "Jearon Wong defines AI Agent Lifecycle and Agentic Delivery: governance and delivery architecture for production AI agents, multi-agent systems, and accountable work from intent to accepted outcome.",
+    "Jearon Wong is the Protocol Architect for the Agent Era, defining AI Agent Lifecycle, Agentic Lifecycle Governance, MPLP, and AI agent governance for accountable work from intent to accepted outcome.",
   siteUrl: "https://www.jearonwong.com",
   socialImagePath: "/social/jearonwong-og.png",
   xHandle: "@jearonwong",

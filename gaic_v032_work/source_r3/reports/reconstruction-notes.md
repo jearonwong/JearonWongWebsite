@@ -2714,4 +2714,31 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains framed as one protocol path, not required, exclusive, certified, or already an industry standard.
 - WP2/WP3 content was not created in this wave.
 
-**GAIC-R3B Status:** ✓ APPLIED PLAYBOOK MESH COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING.
+**GAIC-R3B Status:** ✓ APPLIED PLAYBOOK MESH COMPLETE / READY FOR SITEWIDE SEO/GEO TECHNICAL HARDENING.
+
+## GAIC-R3C Notes (May 13, 2026)
+
+**Scope:** Sitewide SEO/GEO technical hardening after GAIC release, Concept Core, Core Entity Mesh, and Applied Playbook Mesh.
+
+**Actions completed:**
+
+1. Added `src/data/schema.ts` as the reusable schema utility layer for site entity terms, absolute URLs, Person JSON-LD, WebSite JSON-LD, and BreadcrumbList JSON-LD.
+2. Updated `BaseLayout` to emit centralized WebSite and Person schema on public pages while preserving page-specific JSON-LD injection.
+3. Hardened homepage metadata, canonical URL, keywords, WebPage/ProfilePage/Breadcrumb JSON-LD, and identity graph links.
+4. Hardened About metadata and schema with AboutPage, ProfilePage, BreadcrumbList, and visible identity links to GAIC, Agentic Lifecycle Governance, MPLP, and Projects.
+5. Hardened Concepts index with CollectionPage, DefinedTermSet, BreadcrumbList, and entity keywords while preserving the dynamic concept architecture.
+6. Hardened Research index with CollectionPage, ItemList, and BreadcrumbList while preserving the GAIC hub and public artifact release surface.
+7. Hardened Essays index/detail pages with CollectionPage, ItemList, WebPage, Article, BreadcrumbList, CreativeWorkSeries, and de-duplicated entity keywords.
+8. Hardened Projects index/detail pages with CollectionPage, ItemList, WebPage, CreativeWork, BreadcrumbList, related links, and repository/site references where present.
+9. Hardened Lifecycle metadata with breadcrumb and entity keywords.
+10. Updated `public/llms.txt` with a concise entity map connecting Jearon Wong, Agentic Lifecycle Governance, Global AI Compliance White Paper 2026, MRO, RCCS-M, ALCS, MPLP, Evidence Chain, Accepted Outcome, Authority Boundary, and Applied Playbooks.
+11. Ran typecheck, lint, build, `git diff --check`, built HTML schema inspection, sitemap/canonical/path exposure checks, and sealed/public artifact hash verification.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No legal compliance proof, certification, regulator-approval, procurement recommendation, vendor ranking, MPLP exclusivity, or MPLP current-industry-standard claim introduced.
+- No WP2/WP3 content and no external visibility/backlink campaign created in this wave.
+
+**GAIC-R3C Status:** ✓ SITEWIDE SEO/GEO TECHNICAL HARDENING COMPLETE / READY FOR SEARCH VISIBILITY AND AUTHORITY SIGNAL LAYER.

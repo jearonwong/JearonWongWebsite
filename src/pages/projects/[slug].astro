@@ -11,6 +11,7 @@ import {
   siteConfig,
   siteSemanticBaseline
 } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
 export async function getStaticPaths() {
   return ["mplp", "cognitive-os", "solocrew", "validation-lab"].map((slug) => ({
@@ -40,23 +41,75 @@ const previousProof = graphPosition.previous;
 const nextProof = graphPosition.next;
 const projectMetaDescription = project.shareDescription ?? `${project.summary} ${project.proves}`;
 const projectUrl = new URL(`/projects/${project.slug}/`, siteConfig.siteUrl).toString();
+const projectKeywords = Array.from(new Set([
+  project.name,
+  project.status,
+  project.proofRole,
+  "AI Agent Lifecycle",
+  "Agentic Delivery",
+  "Agentic Lifecycle Governance",
+  "AI agent governance",
+  "MPLP",
+  ...(project.relatedIdeas ?? []),
+  ...relatedConcepts.map((concept) => concept.term)
+]));
+const projectBreadcrumbJsonLd = createBreadcrumbJsonLd(projectUrl, [
+  { name: "Home", path: "/" },
+  { name: "Projects", path: "/projects/" },
+  { name: project.name, path: `/projects/${project.slug}/` }
+]);
+const projectWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${projectUrl}#webpage`,
+  url: projectUrl,
+  name: project.name,
+  description: projectMetaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  breadcrumb: {
+    "@id": `${projectUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${projectUrl}#project`
+  }
+};
 const projectJsonLd = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
+  "@id": `${projectUrl}#project`,
   name: project.name,
   description: projectMetaDescription,
-  url: `${siteConfig.siteUrl}/projects/${project.slug}/`,
+  url: projectUrl,
+  mainEntityOfPage: {
+    "@id": `${projectUrl}#webpage`
+  },
   isPartOf: {
     "@type": "CreativeWork",
     name: "Agentic Delivery protocol path and proof path",
-    description: siteSemanticBaseline.referencePathDefinition
+    description: siteSemanticBaseline.referencePathDefinition,
+    url: absoluteUrl("/projects/")
   },
   author: {
-    "@type": "Person",
-    name: siteConfig.author.name,
-    jobTitle: siteConfig.author.role
+    "@id": `${siteConfig.siteUrl}#person`
   },
-  about: [project.status, "AI Agent Lifecycle", "Agentic Delivery", "MPLP", ...(project.relatedIdeas ?? [])]
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  keywords: projectKeywords,
+  about: projectKeywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  relatedLink: [
+    absoluteUrl("/lifecycle/"),
+    absoluteUrl("/concepts/agentic-lifecycle-governance/"),
+    absoluteUrl("/research/global-ai-compliance-white-paper-2026/"),
+    ...relatedConcepts.map((concept) => absoluteUrl(`/concepts/${concept.slug}/`))
+  ],
+  sameAs: project.evidence?.website ? [project.evidence.website] : undefined,
+  codeRepository: project.evidence?.repo
 };
 ---
 
@@ -65,7 +118,9 @@ const projectJsonLd = {
   description={projectMetaDescription}
   shareTitle={`${project.name} — ${project.status}`}
   shareDescription={project.shareDescription ?? projectMetaDescription}
-  jsonLd={[projectJsonLd]}
+  canonicalPath={`/projects/${project.slug}/`}
+  jsonLd={[projectWebPageJsonLd, projectJsonLd, projectBreadcrumbJsonLd]}
+  keywords={projectKeywords}
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt={`${project.name} — ${project.status} in the Agentic Delivery protocol path and proof path`}
 >

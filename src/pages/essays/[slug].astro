@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import SocialShare from "../../components/SocialShare.astro";
 import { getProjectByName, getProjectGraphPosition, getTheoryClusterName, siteConfig } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays");
@@ -68,9 +69,40 @@ const essayShareDescription = essay.data.shareDescription ?? essay.data.descript
 const essayShareImage = essay.data.shareImage ?? siteConfig.socialImagePath;
 const essayShareImageAlt = essay.data.shareImageAlt ?? `${essay.data.title} — ${siteConfig.author.name}`;
 const essayUrl = new URL(`/essays/${canonicalSlug}/`, siteConfig.siteUrl).toString();
+const essayKeywords = Array.from(new Set([
+  ...essay.data.tags,
+  ideaName,
+  essay.data.projectProof,
+  "AI Agent Lifecycle",
+  "Agentic Delivery",
+  "AI agent governance"
+]));
+const essayBreadcrumbJsonLd = createBreadcrumbJsonLd(essayUrl, [
+  { name: "Home", path: "/" },
+  { name: "Essays", path: "/essays/" },
+  { name: essay.data.title, path: `/essays/${canonicalSlug}/` }
+]);
+const essayWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${essayUrl}#webpage`,
+  url: essayUrl,
+  name: essay.data.title,
+  description: essay.data.description,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  breadcrumb: {
+    "@id": `${essayUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${essayUrl}#article`
+  }
+};
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${essayUrl}#article`,
   headline: essay.data.title,
   description: essay.data.description,
   datePublished: essay.data.publishDate.toISOString(),
@@ -81,12 +113,23 @@ const articleJsonLd = {
   publisher: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  mainEntityOfPage: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
-  url: `${siteConfig.siteUrl}/essays/${canonicalSlug}/`,
+  mainEntityOfPage: {
+    "@id": `${essayUrl}#webpage`
+  },
+  url: essayUrl,
   image: articleImages.length > 0 ? articleImages : new URL(essayShareImage, siteConfig.siteUrl).toString(),
   thumbnailUrl: primaryArticleImage?.thumbnailUrl,
   associatedMedia: articleImages.length > 0 ? articleImages : undefined,
-  about: [ideaName, ...(essay.data.relatedProjects ?? [])]
+  keywords: essayKeywords,
+  about: essayKeywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  isPartOf: {
+    "@type": "CreativeWorkSeries",
+    name: essay.data.series ?? "Jearon Wong Essays",
+    url: absoluteUrl("/essays/")
+  }
 };
 ---
 
@@ -96,7 +139,8 @@ const articleJsonLd = {
   canonicalPath={`/essays/${canonicalSlug}/`}
   noindex={isLegacy}
   ogType="article"
-  jsonLd={[articleJsonLd]}
+  jsonLd={[essayWebPageJsonLd, articleJsonLd, essayBreadcrumbJsonLd]}
+  keywords={essayKeywords}
   shareTitle={essayShareTitle}
   shareDescription={essayShareDescription}
   ogImagePath={essayShareImage}

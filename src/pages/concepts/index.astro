@@ -2,14 +2,29 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import { aiAgentLifecycleColumn, concepts, pageRegistry, siteConfig, siteSemanticBaseline } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
+const canonicalPath = "/concepts/";
+const conceptsUrl = absoluteUrl(canonicalPath);
+const conceptsKeywords = [
+  "Concepts",
+  "AI Agent Lifecycle",
+  "Agentic Lifecycle Governance",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS",
+  "MPLP",
+  "Evidence Chain",
+  "Accepted Outcome",
+  "Authority Boundary"
+];
 const conceptSetJsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  "@id": `${siteConfig.siteUrl}/concepts/#defined-term-set`,
+  "@id": `${conceptsUrl}#defined-term-set`,
   name: pageRegistry.concepts.title,
   description: pageRegistry.concepts.lead,
-  url: `${siteConfig.siteUrl}/concepts/`,
+  url: conceptsUrl,
   creator: {
     "@id": `${siteConfig.siteUrl}#person`
   },
@@ -25,10 +40,31 @@ const conceptSetJsonLd = {
       name: "Agentic Lifecycle Governance",
       description:
         "Agentic Lifecycle Governance explains why AI agent and multi-agent compliance requires lifecycle responsibility objects, Missing Regulatory Objects, RCCS-M, and ALCS.",
-      url: `${siteConfig.siteUrl}/concepts/agentic-lifecycle-governance/`
+      url: absoluteUrl("/concepts/agentic-lifecycle-governance/")
     }
   ]
 };
+const conceptsCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${conceptsUrl}#webpage`,
+  url: conceptsUrl,
+  name: pageRegistry.concepts.title,
+  description: pageRegistry.concepts.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${conceptsUrl}#defined-term-set`
+  },
+  breadcrumb: {
+    "@id": `${conceptsUrl}#breadcrumb`
+  }
+};
+const conceptsBreadcrumbJsonLd = createBreadcrumbJsonLd(conceptsUrl, [
+  { name: "Home", path: "/" },
+  { name: "Concepts", path: canonicalPath }
+]);
 const gaicEntitySlugs = new Set([
   "missing-regulatory-objects",
   "rccs-m",
@@ -112,8 +148,9 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
 <BaseLayout
   title={pageRegistry.concepts.title}
   description={pageRegistry.concepts.lead}
-  canonicalPath="/concepts/"
-  jsonLd={[conceptSetJsonLd]}
+  canonicalPath={canonicalPath}
+  jsonLd={[conceptsCollectionJsonLd, conceptSetJsonLd, conceptsBreadcrumbJsonLd]}
+  keywords={conceptsKeywords}
   ogImagePath="/social/og-concepts.png"
   ogImageAlt="Concepts — Reference Layer by Jearon Wong"
 >

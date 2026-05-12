@@ -2,11 +2,70 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aboutSpecs, contentRouteRoles, pageRegistry, siteThesis, socialLinks, siteConfig } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd, siteEntityTerms } from "../data/schema";
+
+const canonicalPath = "/about/";
+const aboutUrl = absoluteUrl(canonicalPath);
+const aboutDescription =
+  "Jearon Wong — Protocol Architect for the Agent Era. Identity page for AI Agent Lifecycle, Agentic Lifecycle Governance, MPLP, GAIC, and accountable AI agent delivery.";
+const aboutKeywords = [
+  "Jearon Wong",
+  "Protocol Architect for the Agent Era",
+  "AI Agent Lifecycle",
+  "Agentic Lifecycle Governance",
+  "Global AI Compliance White Paper 2026",
+  "MPLP",
+  "AI agent governance"
+];
+const profilePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${aboutUrl}#profile`,
+  url: aboutUrl,
+  name: "Jearon Wong — Protocol Architect for the Agent Era",
+  description: aboutDescription,
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  about: siteEntityTerms.map((term) => ({
+    "@type": "Thing",
+    name: term
+  }))
+};
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${aboutUrl}#webpage`,
+  url: aboutUrl,
+  name: pageRegistry.about.title,
+  description: aboutDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  relatedLink: [
+    absoluteUrl("/research/global-ai-compliance-white-paper-2026/"),
+    absoluteUrl("/concepts/agentic-lifecycle-governance/"),
+    absoluteUrl("/projects/mplp/"),
+    absoluteUrl("/projects/")
+  ]
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
+  { name: "Home", path: "/" },
+  { name: "About", path: canonicalPath }
+]);
 ---
 
 <BaseLayout
   title="About"
-  description={pageRegistry.about.lead}
+  description={aboutDescription}
+  canonicalPath={canonicalPath}
+  shareTitle="Jearon Wong — Protocol Architect for the Agent Era"
+  shareDescription={aboutDescription}
+  jsonLd={[aboutPageJsonLd, profilePageJsonLd, breadcrumbJsonLd]}
+  keywords={aboutKeywords}
   ogImagePath="/social/og-about.png"
   ogImageAlt="Jearon Wong — Protocol Architect for the Agent Era"
 >
@@ -47,6 +106,12 @@ import { aboutSpecs, contentRouteRoles, pageRegistry, siteThesis, socialLinks, s
             <p>
               His work develops AI Agent Lifecycle, Agentic Delivery, and MPLP as a protocol path for accountable agent work.
             </p>
+          </div>
+          <div class="identity-routes">
+            <a href="/research/global-ai-compliance-white-paper-2026/">Global AI Compliance White Paper 2026</a>
+            <a href="/concepts/agentic-lifecycle-governance/">Agentic Lifecycle Governance</a>
+            <a href="/projects/mplp/">MPLP protocol path</a>
+            <a href="/projects/">Projects proof path</a>
           </div>
         </div>
 
@@ -123,6 +188,24 @@ import { aboutSpecs, contentRouteRoles, pageRegistry, siteThesis, socialLinks, s
     text-decoration: none;
   }
   .spec-narrative .prose a:hover {
+    color: var(--current-text);
+  }
+  .identity-routes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin-top: 1.35rem;
+  }
+  .identity-routes a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .identity-routes a:hover {
     color: var(--current-text);
   }
   @media (max-width: 768px) {

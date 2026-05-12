@@ -4,6 +4,21 @@ Site: https://www.jearonwong.com/
 
 Jearon Wong is the Protocol Architect for the Agent Era.
 
+## Entity Map
+
+- Person: Jearon Wong
+  Role: Protocol Architect for the Agent Era
+  About: AI Agent Lifecycle, Agentic Lifecycle Governance, Agentic Delivery, MPLP, Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, Evidence Chain, Accepted Outcome, Authority Boundary, Harness Engineering.
+- Primary field: AI Agent Lifecycle
+  Definition: the accountable lifecycle of agent work from intent to accepted outcome.
+- Governance concept: Agentic Lifecycle Governance
+  Definition: AI agent compliance cannot stop at model governance; it requires lifecycle responsibility objects.
+- Research anchor: Global AI Compliance White Paper 2026
+  Version: v0.3.2 Public Edition. Internal trace: GACWP-2026-v0.3.2-FRC-R3.
+- Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
+- Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
+- Applied layer: Applied Agentic Governance Playbooks.
+
 Execution is not Delivery.
 
 AI agents will not become real infrastructure until execution becomes accountable delivery.
