@@ -2742,3 +2742,31 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No WP2/WP3 content and no external visibility/backlink campaign created in this wave.
 
 **GAIC-R3C Status:** ✓ SITEWIDE SEO/GEO TECHNICAL HARDENING COMPLETE / READY FOR SEARCH VISIBILITY AND AUTHORITY SIGNAL LAYER.
+
+## GAIC-R3D Notes (May 13, 2026)
+
+**Scope:** Search visibility, answer-engine monitoring, Concepts Map / Entity Mesh, live-verification checklist, and authority-signal planning after R3C sitewide SEO/GEO technical hardening.
+
+**Actions completed:**
+
+1. Added a restrained GAIC white paper Research Release / Evidence Release panel below the homepage hero with white paper hub, PDF, and Concept Core CTAs.
+2. Created `/concepts/map/` as a visible Concepts Map / Entity Mesh surface using accessible Astro/HTML/CSS, without Mermaid, D3, or heavy runtime dependencies.
+3. Added the required semantic chain: Jearon Wong -> Protocol Architect for the Agent Era -> Agentic Lifecycle Governance -> Global AI Compliance White Paper 2026 -> Missing Regulatory Objects -> RCCS-M -> ALCS -> MPLP -> Applied Playbooks.
+4. Added supporting map nodes for AI Agent Lifecycle, Agentic Delivery, Authority Boundary, Accepted Outcome, Evidence Chain, Confirmation Boundary, Harness Engineering, and Lifecycle Responsibility Objects.
+5. Added Concepts Map metadata and JSON-LD through WebPage, ItemList, DefinedTermSet, BreadcrumbList, plus existing WebSite/Person graph from `BaseLayout`.
+6. Updated Concepts index, Agentic Lifecycle Governance Concept Core, GAIC white paper hub, Playbooks index, and `public/llms.txt` to link to the Concepts Map.
+7. Created deploy/live sitemap, robots, and canonical verification checklist for post-deployment public QA.
+8. Created answer-engine query matrix for Google / AI Overview, Bing / Copilot, Perplexity, ChatGPT, Claude, Gemini, and Grok with no fabricated results.
+9. Created Search Console / Bing Webmaster submission checklist and priority URL inspection list.
+10. Created owned-channel, target-citation, launch-sequence, and backlink guardrail plan without claiming external authority signals already exist.
+11. Ran typecheck, lint, build, `git diff --check`, sitemap route checks, Concepts Map JSON-LD inspection, sealed/public artifact hash verification, and rendered local browser validation for homepage and Concepts Map.
+
+**Boundary discipline:**
+
+- No sealed artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No legal compliance proof, certification, regulator-approval, procurement recommendation, vendor ranking, fake backlink, fake external citation, search ranking claim, or answer-engine pickup claim introduced.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
+- WP2/WP3 content was not created.
+
+**GAIC-R3D Status:** ✓ SEARCH VISIBILITY, ANSWER ENGINE, AND AUTHORITY SIGNAL LAYER COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING.

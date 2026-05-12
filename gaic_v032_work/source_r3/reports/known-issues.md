@@ -1978,3 +1978,28 @@ Remaining work:
 - External indexing, backlink/authority signals, answer-engine monitoring, and visibility observation remain future R3D work.
 
 **GAIC-R3C Status:** ✓ SITEWIDE SEO/GEO TECHNICAL HARDENING COMPLETE / READY FOR SEARCH VISIBILITY AND AUTHORITY SIGNAL LAYER
+
+---
+
+## GAIC-R3D Known Issues
+
+### None Blocking Whitepaper Trilogy Planning
+
+R3D completed the site visibility, entity navigation, monitoring checklist, and authority-signal planning layer without changing sealed white paper artifacts, white paper content, RCCS-T/RCCS-M/ALCS scoring, methodology, or the publication candidate manifest.
+
+Validation scope:
+- Homepage GAIC release panel added below the hero.
+- `/concepts/map/` created as the visible Concepts Map / Entity Mesh surface.
+- Concepts Map links to canonical concept, research, project, and playbook routes.
+- Concepts index, Concept Core, white paper hub, Playbooks index, and `llms.txt` link to the Concepts Map.
+- Answer-engine query matrix created with `to be tested` fields only; no rankings or citations fabricated.
+- Search Console / Bing Webmaster submission checklist created; no submission completion claimed.
+- Authority signal / backlink plan created; no external mentions or backlinks fabricated.
+- Build-level sitemap/canonical/schema checks pass after R3D.
+- Sealed artifact hashes and public copy hashes remain unchanged.
+
+Remaining work:
+- Public/live sitemap, robots, canonical, Search Console, Bing Webmaster, and answer-engine checks require deployment of the R3D commit before final observation.
+- External authority signals require actual owned-channel publication and outreach; R3D provides the plan, not fabricated backlinks.
+
+**GAIC-R3D Status:** ✓ SEARCH VISIBILITY, ANSWER ENGINE, AND AUTHORITY SIGNAL LAYER COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING

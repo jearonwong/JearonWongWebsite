@@ -90,6 +90,9 @@ const breadcrumbJsonLd = {
       <a href="/research/global-ai-compliance-white-paper-2026/" class="registry-annotation playbooks-hero-link">
         <span class="registry-key">AUTHORITY_SOURCE</span>: <span class="registry-value">GAIC WHITE PAPER</span>
       </a>
+      <a href="/concepts/map/" class="registry-annotation playbooks-hero-link">
+        <span class="registry-key">ENTITY_MESH</span>: <span class="registry-value">CONCEPTS MAP</span>
+      </a>
     </div>
   </RegistryPageHero>
 
@@ -105,6 +108,10 @@ const breadcrumbJsonLd = {
           ALCS, and MPLP to practical search intents: rollback, verification, auditability, coding agents,
           human role responsibility, vendor-based agent workflows, and Harness Engineering.
         </p>
+        <div class="playbook-index-links">
+          <a href="/concepts/map/">Open Concepts Map / Entity Mesh</a>
+          <a href="/concepts/agentic-lifecycle-governance/">Open Concept Core</a>
+        </div>
       </section>
 
       <section class="playbook-grid" aria-label="Applied agentic governance playbooks">
@@ -180,6 +187,27 @@ const breadcrumbJsonLd = {
     color: var(--current-muted);
     font-size: 1rem;
     line-height: 1.7;
+  }
+
+  .playbook-index-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .playbook-index-links a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .playbook-index-links a:hover {
+    color: var(--current-text);
   }
 
   .playbook-grid {

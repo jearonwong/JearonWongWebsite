@@ -18,6 +18,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
+- Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
 
 Execution is not Delivery.
 
@@ -56,8 +57,9 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Research: https://www.jearonwong.com/research/
 - Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
 - Agentic Lifecycle Governance Concept Core: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
+- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
 - Applied Agentic Governance Playbooks: https://www.jearonwong.com/playbooks/
-- Concepts map: https://www.jearonwong.com/concepts/
+- Concepts index: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
 - About: https://www.jearonwong.com/about/
@@ -74,6 +76,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 ## Core Concepts
 
+- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
+  Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, and applied playbooks. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
 - AI Agent Lifecycle: https://www.jearonwong.com/concepts/ai-agent-lifecycle/
 - Agentic Delivery: https://www.jearonwong.com/concepts/agentic-delivery/
 - Agentic Lifecycle Governance: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/

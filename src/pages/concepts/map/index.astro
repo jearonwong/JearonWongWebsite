@@ -1,0 +1,776 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import { siteConfig } from "../../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
+
+const canonicalPath = "/concepts/map/";
+const pageUrl = absoluteUrl(canonicalPath);
+const metaDescription =
+  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, and applied playbooks.";
+const keywords = [
+  "Concepts Map",
+  "Entity Mesh",
+  "Jearon Wong",
+  "Agentic Lifecycle Governance",
+  "Global AI Compliance White Paper 2026",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS",
+  "MPLP",
+  "Evidence Chain",
+  "Accepted Outcome",
+  "Authority Boundary",
+  "Harness Engineering",
+  "Applied Agentic Governance Playbooks"
+];
+const mapNodes = [
+  {
+    id: "jearon-wong",
+    label: "Jearon Wong",
+    layer: "Identity Layer",
+    href: "/about/",
+    description: "Author identity and site entity anchor."
+  },
+  {
+    id: "protocol-architect",
+    label: "Protocol Architect for the Agent Era",
+    layer: "Identity Layer",
+    href: "/about/",
+    description: "Public role anchor for the AI agent lifecycle body of work."
+  },
+  {
+    id: "ai-agent-lifecycle",
+    label: "AI Agent Lifecycle",
+    layer: "Category Layer",
+    href: "/concepts/ai-agent-lifecycle/",
+    description: "The accountable lifecycle of agent work from intent to accepted outcome."
+  },
+  {
+    id: "agentic-delivery",
+    label: "Agentic Delivery",
+    layer: "Category Layer",
+    href: "/concepts/agentic-delivery/",
+    description: "The missing layer between agent execution and accountable outcomes."
+  },
+  {
+    id: "agentic-lifecycle-governance",
+    label: "Agentic Lifecycle Governance",
+    layer: "Category Layer",
+    href: "/concepts/agentic-lifecycle-governance/",
+    description: "The governance model for lifecycle responsibility in AI agent and multi-agent work."
+  },
+  {
+    id: "gaic",
+    label: "Global AI Compliance White Paper 2026",
+    layer: "Authority Source",
+    href: "/research/global-ai-compliance-white-paper-2026/",
+    description: "The public research authority source for MRO, RCCS-M, ALCS, and lifecycle responsibility governance."
+  },
+  {
+    id: "mro",
+    label: "Missing Regulatory Objects",
+    layer: "Governance Object Layer",
+    href: "/concepts/missing-regulatory-objects/",
+    description: "Lifecycle responsibility objects missing from model-centric governance."
+  },
+  {
+    id: "lro",
+    label: "Lifecycle Responsibility Objects",
+    layer: "Governance Object Layer",
+    href: "/concepts/lifecycle-responsibility-objects/",
+    description: "The object layer behind Agentic Lifecycle Governance."
+  },
+  {
+    id: "rccs-m",
+    label: "RCCS-M",
+    layer: "Measurement Layer",
+    href: "/concepts/rccs-m/",
+    description: "MRO-adjusted Regulatory Compliance Coverage Score."
+  },
+  {
+    id: "alcs",
+    label: "ALCS",
+    layer: "Measurement Layer",
+    href: "/concepts/alcs/",
+    description: "Agentic Lifecycle Conformance Score."
+  },
+  {
+    id: "mplp",
+    label: "MPLP",
+    layer: "Protocol Path",
+    href: "/projects/mplp/",
+    description: "One protocol path for expressing lifecycle responsibility semantics."
+  },
+  {
+    id: "authority-boundary",
+    label: "Authority Boundary",
+    layer: "Primitive Concepts",
+    href: "/concepts/authority-boundary/",
+    description: "Defines who may authorize agentic action and under what scope."
+  },
+  {
+    id: "accepted-outcome",
+    label: "Accepted Outcome",
+    layer: "Primitive Concepts",
+    href: "/concepts/accepted-outcome/",
+    description: "The point where agent work becomes reviewable, attributable, and accepted responsibility."
+  },
+  {
+    id: "evidence-chain",
+    label: "Evidence Chain",
+    layer: "Primitive Concepts",
+    href: "/concepts/lifecycle-evidence/",
+    description: "Structured proof for review, replay, dispute, remediation, and acceptance."
+  },
+  {
+    id: "confirmation-boundary",
+    label: "Confirmation Boundary",
+    layer: "Primitive Concepts",
+    href: "/concepts/confirmation-boundary/",
+    description: "The point where autonomous execution becomes authorized responsibility."
+  },
+  {
+    id: "harness-engineering",
+    label: "Harness Engineering",
+    layer: "Applied Layer",
+    href: "/playbooks/harness-engineering-for-ai-agents/",
+    description: "Wrapping agent execution with lifecycle boundaries, evidence capture, rollback, remediation, and acceptance."
+  },
+  {
+    id: "applied-playbooks",
+    label: "Applied Playbooks",
+    layer: "Applied Layer",
+    href: "/playbooks/",
+    description: "Practical guides for rollback, verification, auditability, vendor workflows, and human-role mapping."
+  }
+];
+const relationGroups = [
+  {
+    name: "Identity Layer",
+    relation: "Jearon Wong -> Protocol Architect for the Agent Era",
+    nodes: ["Jearon Wong", "Protocol Architect for the Agent Era"],
+    body: "The identity layer anchors the author, role, and sitewide Person entity."
+  },
+  {
+    name: "Category Layer",
+    relation: "AI Agent Lifecycle -> Agentic Delivery -> Agentic Lifecycle Governance",
+    nodes: ["AI Agent Lifecycle", "Agentic Delivery", "Agentic Lifecycle Governance"],
+    body: "The category layer moves from the accountable lifecycle of agent work to the governance model used when compliance is treated as lifecycle responsibility."
+  },
+  {
+    name: "Governance Object Layer",
+    relation: "Agentic Lifecycle Governance -> Missing Regulatory Objects -> RCCS-M / ALCS",
+    nodes: ["Agentic Lifecycle Governance", "Missing Regulatory Objects", "RCCS-M", "ALCS"],
+    body: "The governance object layer names the missing lifecycle objects and the analytical models used to assess them."
+  },
+  {
+    name: "Protocol Path",
+    relation: "Missing Regulatory Objects / Lifecycle Responsibility Objects -> MPLP",
+    nodes: ["Missing Regulatory Objects", "Lifecycle Responsibility Objects", "MPLP"],
+    body: "MPLP is presented as one protocol path for lifecycle responsibility semantics, not as a required or certified implementation."
+  },
+  {
+    name: "Applied Layer",
+    relation: "RCCS-M / ALCS / MPLP -> Applied Playbooks",
+    nodes: ["RCCS-M", "ALCS", "MPLP", "Applied Playbooks"],
+    body: "The applied layer maps the concept system to rollback, auditability, human-role responsibility, and workflow-governance questions."
+  },
+  {
+    name: "Primitive Concepts",
+    relation: "Authority Boundary + Accepted Outcome + Evidence Chain + Confirmation Boundary + Harness Engineering",
+    nodes: ["Authority Boundary", "Accepted Outcome", "Evidence Chain", "Confirmation Boundary", "Harness Engineering"],
+    body: "These primitives make agentic lifecycle responsibility inspectable instead of leaving governance at log or approval language."
+  }
+];
+const primaryLinks = [
+  { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Concept Core" },
+  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+  { href: "/concepts/rccs-m/", label: "RCCS-M" },
+  { href: "/concepts/alcs/", label: "ALCS" },
+  { href: "/projects/mplp/", label: "MPLP" },
+  { href: "/playbooks/", label: "Applied playbooks" }
+];
+const semanticChain = [
+  { href: "/about/", label: "Jearon Wong" },
+  { href: "/about/", label: "Protocol Architect for the Agent Era" },
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+  { href: "/concepts/rccs-m/", label: "RCCS-M" },
+  { href: "/concepts/alcs/", label: "ALCS" },
+  { href: "/projects/mplp/", label: "MPLP" },
+  { href: "/playbooks/", label: "Applied Playbooks" }
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "Concepts Map / Entity Mesh",
+  description: metaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#entity-mesh`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  }
+};
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#entity-mesh`,
+  name: "GAIC and Agentic Lifecycle Governance Entity Mesh",
+  description: metaDescription,
+  itemListElement: mapNodes.map((node, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: node.label,
+    item: node.href ? absoluteUrl(node.href) : pageUrl
+  }))
+};
+const definedTermSetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": `${pageUrl}#defined-term-set`,
+  name: "Agentic Lifecycle Governance Entity Mesh",
+  description: metaDescription,
+  creator: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  hasDefinedTerm: mapNodes.map((node) => ({
+    "@type": "DefinedTerm",
+    name: node.label,
+    description: node.description,
+    url: absoluteUrl(node.href)
+  }))
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Concepts", path: "/concepts/" },
+  { name: "Concepts Map", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title="Concepts Map / Entity Mesh"
+  description={metaDescription}
+  shareTitle="Concepts Map / Entity Mesh"
+  shareDescription={metaDescription}
+  twitterTitle="Concepts Map / Entity Mesh"
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, itemListJsonLd, definedTermSetJsonLd, breadcrumbJsonLd]}
+  keywords={keywords}
+  ogImagePath="/social/og-concepts.png"
+  ogImageAlt="Concepts Map / Entity Mesh by Jearon Wong"
+>
+  <RegistryPageHero
+    title="Concepts Map / Entity Mesh"
+    objectType="GEO_NAVIGATION"
+    objectValue="VISIBLE_ENTITY_MESH"
+    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, and applied playbooks."
+  >
+    <div class="map-hero-links">
+      {primaryLinks.map((link) => (
+        <a href={link.href} class="registry-annotation map-hero-link">
+          <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <main class="shell map-shell">
+      <section class="map-opening registry-chassis" aria-labelledby="map-opening-title">
+        <div>
+          <div class="registry-annotation">
+            <span class="registry-key">MAP_PURPOSE</span>: <span class="registry-value">HUMAN_AND_MACHINE_NAVIGATION</span>
+          </div>
+          <h2 id="map-opening-title">The concept system in one navigable surface.</h2>
+          <p>
+            This map is a navigation layer, not a standard, certification, legal interpretation, or regulator-approved taxonomy.
+            It helps readers and crawlers follow the public relationship from author identity to research authority,
+            lifecycle responsibility objects, measurement models, protocol path, and applied playbooks.
+          </p>
+        </div>
+        <div class="map-opening__links" aria-label="Primary entity links">
+          {primaryLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
+      </section>
+
+      <section class="semantic-chain registry-chassis" aria-labelledby="semantic-chain-title">
+        <div class="registry-annotation">
+          <span class="registry-key">CANONICAL_CHAIN</span>: <span class="registry-value">IDENTITY_TO_APPLICATION</span>
+        </div>
+        <h2 id="semantic-chain-title">Canonical semantic chain.</h2>
+        <ol>
+          {semanticChain.map((node) => (
+            <li>
+              <a href={node.href}>{node.label}</a>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="entity-map registry-chassis" aria-labelledby="entity-map-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">VISIBLE_MESH</span>: <span class="registry-value">CANONICAL_NODES</span>
+          </div>
+          <h2 id="entity-map-title">Entity mesh.</h2>
+          <p>Routed nodes link to their canonical pages. The text list below is the accessibility equivalent of the visual map.</p>
+        </div>
+
+        <div class="mesh-flow" aria-hidden="true">
+          <div class="mesh-row mesh-row--identity">
+            <a href="/about/" class="mesh-node">Jearon Wong</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/about/" class="mesh-node mesh-node--wide">Protocol Architect for the Agent Era</a>
+          </div>
+          <div class="mesh-row mesh-row--category">
+            <a href="/concepts/ai-agent-lifecycle/" class="mesh-node">AI Agent Lifecycle</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/concepts/agentic-delivery/" class="mesh-node">Agentic Delivery</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/concepts/agentic-lifecycle-governance/" class="mesh-node mesh-node--strong">Agentic Lifecycle Governance</a>
+          </div>
+          <div class="mesh-row mesh-row--authority">
+            <a href="/research/global-ai-compliance-white-paper-2026/" class="mesh-node mesh-node--authority">Global AI Compliance White Paper 2026</a>
+          </div>
+          <div class="mesh-row mesh-row--governance">
+            <a href="/concepts/missing-regulatory-objects/" class="mesh-node mesh-node--strong">Missing Regulatory Objects</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/concepts/lifecycle-responsibility-objects/" class="mesh-node">Lifecycle Responsibility Objects</a>
+            <span class="mesh-branch" aria-hidden="true"></span>
+            <a href="/concepts/rccs-m/" class="mesh-node">RCCS-M</a>
+            <a href="/concepts/alcs/" class="mesh-node">ALCS</a>
+          </div>
+          <div class="mesh-row mesh-row--primitive">
+            <a href="/concepts/authority-boundary/" class="mesh-node">Authority Boundary</a>
+            <a href="/concepts/accepted-outcome/" class="mesh-node">Accepted Outcome</a>
+            <a href="/concepts/lifecycle-evidence/" class="mesh-node">Evidence Chain</a>
+            <a href="/concepts/confirmation-boundary/" class="mesh-node">Confirmation Boundary</a>
+          </div>
+          <div class="mesh-row mesh-row--applied">
+            <a href="/projects/mplp/" class="mesh-node mesh-node--protocol">MPLP</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/playbooks/harness-engineering-for-ai-agents/" class="mesh-node">Harness Engineering</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/playbooks/" class="mesh-node mesh-node--strong">Applied Playbooks</a>
+          </div>
+        </div>
+
+        <ol class="map-text-equivalent" aria-label="Text equivalent of entity mesh">
+          {mapNodes.map((node) => (
+            <li>
+              <a href={node.href}>{node.label}</a>
+              <span>{node.layer}</span>
+              <p>{node.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="relation-grid" aria-labelledby="relation-groups-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">RELATION_GROUPS</span>
+          </div>
+          <h2 id="relation-groups-title">Relation groups.</h2>
+          <p>These groups describe the intended reading path without inventing external authority signals.</p>
+        </div>
+        <div class="relation-card-grid">
+          {relationGroups.map((group, index) => (
+            <article class="registry-chassis relation-card">
+              <div class="registry-annotation">
+                <span class="registry-key">GROUP_{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <h3>{group.name}</h3>
+              <p class="relation-card__relation">{group.relation}</p>
+              <p>{group.body}</p>
+              <div class="relation-card__nodes">
+                {group.nodes.map((node) => <span>{node}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis boundary-panel" aria-labelledby="map-boundary-title">
+        <div class="registry-annotation">
+          <span class="registry-key">BOUNDARY</span>: <span class="registry-value">NON_CLAIM</span>
+        </div>
+        <h2 id="map-boundary-title">Boundary statement.</h2>
+        <p>
+          This map is an author-maintained semantic navigation surface. It is not legal advice,
+          legal compliance proof, certification, regulator-approved guidance, vendor ranking,
+          procurement recommendation, or evidence of search ranking improvement.
+        </p>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .map-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .map-hero-link {
+    text-decoration: none;
+  }
+
+  .map-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .map-shell {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .map-opening,
+  .semantic-chain,
+  .entity-map,
+  .boundary-panel {
+    padding: var(--registry-panel-padding);
+  }
+
+  .map-opening {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .map-opening h2,
+  .semantic-chain h2,
+  .entity-map h2,
+  .boundary-panel h2,
+  .registry-section-heading h2 {
+    margin: 0.85rem 0 0;
+    color: var(--current-text);
+    font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .map-opening p,
+  .semantic-chain p,
+  .entity-map .registry-section-heading p,
+  .boundary-panel p,
+  .registry-section-heading p {
+    max-width: var(--lead-measure);
+    margin: 0.9rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .semantic-chain {
+    display: grid;
+    gap: 1.25rem;
+    border-left: 3px solid var(--accent-signal);
+  }
+
+  .semantic-chain ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .semantic-chain li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .semantic-chain li:not(:last-child)::after {
+    content: "->";
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .semantic-chain a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.15rem;
+    padding: 0.48rem 0.68rem;
+    border: 1px solid var(--current-border);
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .semantic-chain a:hover {
+    border-color: var(--accent-signal);
+    color: var(--accent-signal);
+  }
+
+  .map-opening__links {
+    display: grid;
+    gap: 0;
+    align-content: start;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .map-opening__links a {
+    padding: 0.82rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .map-opening__links a:hover {
+    color: var(--accent-signal);
+  }
+
+  .entity-map {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .mesh-flow {
+    display: grid;
+    gap: 0.85rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-x: auto;
+  }
+
+  .mesh-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .mesh-row--governance,
+  .mesh-row--primitive {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mesh-node {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.25rem;
+    max-width: min(100%, 24rem);
+    padding: 0.55rem 0.78rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(241, 245, 249, 0.92);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .mesh-node:hover {
+    border-color: var(--accent-proof);
+    color: #ffffff;
+  }
+
+  .mesh-node--wide {
+    min-width: min(100%, 18rem);
+  }
+
+  .mesh-node--strong {
+    border-color: rgba(34, 211, 238, 0.48);
+  }
+
+  .mesh-node--authority {
+    border-color: rgba(245, 158, 11, 0.48);
+    color: #f8fafc;
+  }
+
+  .mesh-node--protocol {
+    border-color: rgba(59, 130, 246, 0.54);
+  }
+
+  .mesh-arrow {
+    color: rgba(148, 163, 184, 0.84);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+
+  .mesh-branch {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .map-text-equivalent {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .map-text-equivalent li {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 1rem 1rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .map-text-equivalent a {
+    color: var(--current-text);
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  .map-text-equivalent a:hover {
+    color: var(--accent-signal);
+  }
+
+  .map-text-equivalent span {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .map-text-equivalent p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .relation-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .relation-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .relation-card {
+    display: grid;
+    gap: 0.8rem;
+    align-content: start;
+    padding: var(--registry-card-padding);
+  }
+
+  .relation-card h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.25rem;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  .relation-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .relation-card__relation {
+    color: var(--current-text) !important;
+    font-family: var(--font-mono);
+    font-size: 0.76rem !important;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+
+  .relation-card__nodes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding-top: 0.4rem;
+  }
+
+  .relation-card__nodes span {
+    padding: 0.35rem 0.48rem;
+    border: 1px solid var(--current-border);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .boundary-panel {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  @media (max-width: 860px) {
+    .map-opening,
+    .relation-card-grid,
+    .map-text-equivalent {
+      grid-template-columns: 1fr;
+    }
+
+    .map-text-equivalent li {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .map-hero-links {
+      gap: 0.65rem;
+    }
+
+    .mesh-flow {
+      padding: 0.85rem;
+    }
+
+    .mesh-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
+
+    .mesh-arrow {
+      display: none;
+    }
+
+    .mesh-node {
+      justify-content: flex-start;
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+</style>

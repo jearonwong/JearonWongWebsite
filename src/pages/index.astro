@@ -155,12 +155,38 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     </section>
   </div>
 
-  <!-- 2. Stack Architecture -->
+  <!-- 2. GAIC Research Release -->
+  <section class="zone-a registry-grid gaic-release-band" aria-labelledby="gaic-release-title">
+    <div class="shell">
+      <div class="gaic-release-panel registry-chassis">
+        <div class="gaic-release-copy">
+          <div class="registry-annotation gaic-release-label">
+            <span class="registry-key">RESEARCH RELEASE</span>: <span class="registry-value">GLOBAL AI COMPLIANCE WHITE PAPER 2026</span>
+          </div>
+          <h2 id="gaic-release-title">Global AI Compliance White Paper 2026</h2>
+          <p class="gaic-release-thesis">
+            AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.
+          </p>
+          <p class="gaic-release-support">
+            A 425-page public research candidate defining Missing Regulatory Objects, RCCS-M, ALCS,
+            and lifecycle responsibility governance for AI agent and multi-agent systems.
+          </p>
+        </div>
+        <div class="gaic-release-actions" aria-label="Global AI Compliance White Paper actions">
+          <a href="/research/global-ai-compliance-white-paper-2026/" class="button button-primary">Read the White Paper</a>
+          <a href="/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf" class="button button-outline">Download PDF</a>
+          <a href="/concepts/agentic-lifecycle-governance/" class="button button-outline">Explore Concept Core</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Stack Architecture -->
   <div class="zone-b page-body page-body--stack">
     <CoreArchitectureMap />
   </div>
 
-  <!-- 3. Core Thesis -->
+  <!-- 4. Core Thesis -->
   <section class="zone-a registry-grid core-thesis-band">
     <div class="shell core-thesis-layout">
       <div class="core-thesis-copy">
@@ -205,7 +231,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   </section>
 
   <div class="zone-b page-body">
-    <!-- 4. AI Agent Lifecycle Category Bridge -->
+    <!-- 5. AI Agent Lifecycle Category Bridge -->
     <section class="shell section-rhythm lifecycle-category-bridge">
       <div class="registry-chassis lifecycle-bridge-panel">
         <div class="registry-annotation" style="margin-bottom: 0.85rem;">
@@ -228,7 +254,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       </div>
     </section>
 
-    <!-- 5. Protocol Path and Proof Path -->
+    <!-- 6. Protocol Path and Proof Path -->
     <section id="proof" class="shell section-rhythm">
       <div class="section-header">
         <h2>Protocol Path and Proof Path</h2>
@@ -246,7 +272,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       </div>
     </section>
 
-    <!-- 6. Reading Path -->
+    <!-- 7. Reading Path -->
     {readingPathEntries.length > 0 && (
       <section class="shell section-rhythm" style="padding-top: 2rem;">
       <div class="section-header">
@@ -269,7 +295,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       </section>
     )}
 
-    <!-- 7. Writing Tracks -->
+    <!-- 8. Writing Tracks -->
     <section class="shell section-rhythm" style="padding-top: 2rem;">
       <div class="section-header">
         <h2>Writing tracks.</h2>
@@ -285,7 +311,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       </div>
     </section>
 
-    <!-- 8. Contact / Signal -->
+    <!-- 9. Contact / Signal -->
     <section class="shell section-rhythm quiet-close" style="padding-top: 2rem;">
       <div class="close-content">
         <h2>Get in touch.</h2>
@@ -397,6 +423,66 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+  }
+
+  /* -- GAIC Research Release -- */
+  .gaic-release-band {
+    padding: clamp(2rem, 4vw, 3.5rem) 0;
+    border-top: 1px solid var(--border-registry);
+    border-bottom: 1px solid var(--border-registry);
+  }
+
+  .gaic-release-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+    padding: var(--registry-panel-padding);
+    background: rgba(26, 26, 26, 0.82);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .gaic-release-label {
+    margin-bottom: 1rem;
+  }
+
+  .gaic-release-panel h2 {
+    max-width: 15ch;
+    margin: 0;
+    color: var(--text-registry-primary);
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 0.98;
+    letter-spacing: 0;
+  }
+
+  .gaic-release-thesis {
+    max-width: 48rem;
+    margin: 1rem 0 0;
+    color: rgba(241, 245, 249, 0.9);
+    font-size: clamp(1.08rem, 1.55vw, 1.28rem);
+    font-weight: 650;
+    line-height: 1.5;
+  }
+
+  .gaic-release-support {
+    max-width: 58rem;
+    margin: 0.85rem 0 0;
+    color: rgba(148, 163, 184, 0.82);
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
+  .gaic-release-actions {
+    display: grid;
+    gap: 0.75rem;
+    align-content: center;
+  }
+
+  .gaic-release-actions .button {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
   }
 
   /* ── Sections ── */
@@ -761,6 +847,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       min-height: auto;
       padding-top: 6.1rem;
       padding-bottom: 4.25rem;
+    }
+    .gaic-release-panel {
+      grid-template-columns: 1fr;
     }
   }
 

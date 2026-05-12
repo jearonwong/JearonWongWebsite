@@ -16,7 +16,9 @@ const conceptsKeywords = [
   "MPLP",
   "Evidence Chain",
   "Accepted Outcome",
-  "Authority Boundary"
+  "Authority Boundary",
+  "Concepts Map",
+  "Entity Mesh"
 ];
 const conceptSetJsonLd = {
   "@context": "https://schema.org",
@@ -167,6 +169,9 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
       <a href="/projects/mplp/" class="registry-annotation concepts-hero-link">
         <span class="registry-key">PROTOCOL_PATH</span>: <span class="registry-value">MPLP</span>
       </a>
+      <a href="/concepts/map/" class="registry-annotation concepts-hero-link">
+        <span class="registry-key">ENTITY_MESH</span>: <span class="registry-value">CONCEPTS MAP</span>
+      </a>
     </div>
   </RegistryPageHero>
 
@@ -184,6 +189,7 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
         </p>
         <p class="concept-opening__copy">
           For quote-ready citation anchors, see <a href="/definitions/" class="concept-card__link">Definitions</a>.
+          For the visible semantic navigation surface, see <a href="/concepts/map/" class="concept-card__link">Concepts Map / Entity Mesh</a>.
         </p>
       </section>
 
@@ -199,6 +205,7 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
           <div class="concept-path__links">
             <a href="/concepts/ai-agent-lifecycle/">AI Agent Lifecycle definition</a>
             <a href="/concepts/agentic-delivery/">Agentic Delivery definition</a>
+            <a href="/concepts/map/">Concepts Map / Entity Mesh</a>
             <a href="/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/">Origin essay</a>
             <a href="/projects/mplp/">MPLP protocol path</a>
           </div>
