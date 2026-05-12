@@ -40,6 +40,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - AI Agent Lifecycle field definition: https://www.jearonwong.com/lifecycle/
 - Research: https://www.jearonwong.com/research/
 - Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
+- Agentic Lifecycle Governance Concept Core: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
 - Concepts map: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
@@ -59,6 +60,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - AI Agent Lifecycle: https://www.jearonwong.com/concepts/ai-agent-lifecycle/
 - Agentic Delivery: https://www.jearonwong.com/concepts/agentic-delivery/
+- Agentic Lifecycle Governance: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
+  Agentic Lifecycle Governance explains why AI agent compliance cannot stop at model governance. It treats compliance as lifecycle responsibility across authorization, evidence, accepted outcome, dispute, remediation, and substitution. It introduces Missing Regulatory Objects, RCCS-M, ALCS, and MPLP as one protocol path.
 - Confirmation Boundary: https://www.jearonwong.com/concepts/confirmation-boundary/
 - Evidence Chain: https://www.jearonwong.com/concepts/lifecycle-evidence/
 - Multi-Agent Lifecycle Governance: https://www.jearonwong.com/lifecycle/

@@ -1,7 +1,32 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R1 Public Release Page)
+**Last Updated:** May 12, 2026 (GAIC-R2 Concept Core)
+
+## GAIC-R2 Agentic Lifecycle Governance Concept Core
+
+### Status: GAIC-R2 CONCEPT CORE COMPLETE / READY FOR ENTITY MESH
+
+R2 created the public Agentic Lifecycle Governance Concept Core as a concept entry layer for the sealed Global AI Compliance White Paper 2026. This was a public concept-surface step only: no white paper content, sealed artifacts, scores, methodology, RCCS-T/RCCS-M/ALCS wording, protocol/product boundary language, or interoperability boundary language was changed.
+
+**Concept Core results:**
+
+1. `/concepts/agentic-lifecycle-governance/` created.
+2. Page is category-first and explains the shift from model governance to lifecycle responsibility governance.
+3. Missing Regulatory Objects are defined with a compact 16-object overview grouped into four clusters.
+4. RCCS-T, RCCS-M, and ALCS are explained briefly without platform scores or rankings.
+5. MPLP is framed as one protocol path, not a required or exclusive implementation path.
+6. White paper hub, PDF, HTML, and citation are linked as authority routes.
+7. Metadata, JSON-LD, Concepts index link, white paper hub link, sitemap route, and `llms.txt` entry are complete.
+8. Typecheck, lint, build, and `git diff --check` pass.
+
+**Remaining limitations, not blockers:**
+
+1. Optional 2-3 page Concept Core PDF was not generated because the site has no existing lightweight page-PDF pipeline and R2 did not add a new heavy dependency.
+2. Entity Mesh remains the next release wave.
+3. WP2 and WP3 remain delayed/private institutional assets and are not public releases in this wave.
+
+**GAIC-R2 Decision:** GAIC-R2 CONCEPT CORE COMPLETE / READY FOR ENTITY MESH.
 
 ## GAIC-R1 Public Release Page
 

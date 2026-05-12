@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R1 Public Release Page)
+**Last Updated:** May 12, 2026 (GAIC-R2 Concept Core)
 
 ## Reconstruction Strategy
 
@@ -48,6 +48,7 @@ R3 uses phased reconstruction:
 27. **Publication Candidate Seal:** Approved Phase 1D-13F artifacts sealed into `out/publication_candidate/` with SHA256 manifest and seal report, using source commit `943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e`; no white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed (✓ PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY)
 28. **GAIC-R0 Cleanup and Release Hygiene:** Historical Phase 1D generated output directories, old rendered pages, old generated draft artifacts, and local conversion scratch outputs were removed from the current tree; sealed artifacts remain in `out/publication_candidate/`, their hashes remain unchanged, and historical intermediates remain recoverable through Git history and tag `gaic-v0.3.2-publication-candidate-sealed` (✓ CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE)
 29. **GAIC-R1 Public Release Page:** Public Research index and GAIC white paper hub were created; sealed artifacts were copied into the public site asset path with matching SHA256 hashes; citation/download/checksum surface, boundary statement, metadata/JSON-LD, sitemap exposure, and `llms.txt` entry were completed without modifying sealed artifacts or white paper content (✓ PUBLIC RELEASE PAGE COMPLETE / READY FOR CONCEPT CORE)
+30. **GAIC-R2 Agentic Lifecycle Governance Concept Core:** Public Concept Core route created for the 2-3 minute concept entry layer; Concepts index, white paper hub, metadata/JSON-LD, sitemap, and `llms.txt` connected; the page is category-first, MRO/RCCS-M/ALCS-focused, and frames MPLP as one protocol path only (✓ CONCEPT CORE COMPLETE / READY FOR ENTITY MESH)
 
 ## Source Hierarchy
 
@@ -127,6 +128,10 @@ GAIC-R0 preserves history through Git rather than by keeping obsolete generated 
 ### Decision 16: Publish a Release Surface, Not a New White Paper
 
 GAIC-R1 exposes the sealed publication candidate through the public site without regenerating or editing the white paper. The public source of download truth is `public/research/global-ai-compliance-white-paper-2026/`, populated from `out/publication_candidate/` with matching hashes. The hub provides citation, checksum, boundary, source-commit, and structured-data context. It does not create Concept Core, WP2, WP3, a subscription gate, or new substantive claims.
+
+### Decision 17: Make the Concept Understandable Before Expanding the Entity Mesh
+
+GAIC-R2 creates a short Concept Core before the broader Entity Mesh. The page is not a white paper summary and not an MPLP sales page. It gives readers and crawlers the category spine: the compliance unit has changed; model governance is necessary but insufficient; agentic/MAS governance requires lifecycle responsibility objects; Missing Regulatory Objects define the object layer; RCCS-M and ALCS measure that layer; MPLP is one protocol path. This keeps the public release understandable before adding more entity-distribution pages.
 
 ## Lessons from R2
 

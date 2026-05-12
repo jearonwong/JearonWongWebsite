@@ -1,0 +1,820 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteHeader from "../../../components/SiteHeader.astro";
+import { siteConfig } from "../../../data/site";
+
+const canonicalPath = "/concepts/agentic-lifecycle-governance/";
+const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const whitePaperPdf = "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf";
+const whitePaperHtml = "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html";
+const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Responsibility. v0.3.2 Public Edition. JearonWong.com, 2026.";
+const metaDescription = "A concise concept definition by Jearon Wong explaining why AI agent compliance requires lifecycle responsibility objects, Missing Regulatory Objects, RCCS-M, ALCS, and MPLP as a protocol path.";
+const keywords = [
+  "Agentic Lifecycle Governance",
+  "AI Agent Governance",
+  "Multi-Agent Systems Governance",
+  "Missing Regulatory Objects",
+  "Lifecycle Responsibility Objects",
+  "RCCS-M",
+  "ALCS",
+  "MPLP",
+  "Multi-Agent Lifecycle Protocol",
+  "Evidence Chain",
+  "Accepted Outcome",
+  "Authority Boundary"
+];
+const comparisonRows = [
+  {
+    model: "Is the model documented?",
+    lifecycle: "Who authorized this agent action?"
+  },
+  {
+    model: "Is the output safe?",
+    lifecycle: "Which human role owns the accepted outcome?"
+  },
+  {
+    model: "Are risks monitored?",
+    lifecycle: "What evidence proves the work boundary?"
+  },
+  {
+    model: "Can the model be evaluated?",
+    lifecycle: "Can the work be replayed, disputed, remediated, or rolled back?"
+  },
+  {
+    model: "Is the deployment controlled?",
+    lifecycle: "What happens when a tool, runtime, or model is substituted?"
+  }
+];
+const mroClusters = [
+  {
+    name: "Authority and Responsibility",
+    items: [
+      "Intent object: records the work purpose and active constraints.",
+      "Authority boundary: names who may authorize consequential action.",
+      "Role responsibility: binds agent work to accountable human or organizational roles.",
+      "Accepted outcome: records when work becomes accepted responsibility."
+    ]
+  },
+  {
+    name: "Evidence and Traceability",
+    items: [
+      "Evidence chain: preserves inspectable proof from intent to accepted outcome.",
+      "Decision trace: records why a plan or action was selected.",
+      "Execution boundary: separates permitted action from out-of-scope behavior.",
+      "Review state: records what was reviewed, by whom, and under which criteria."
+    ]
+  },
+  {
+    name: "Privacy and Cross-Project Reuse",
+    items: [
+      "Context boundary: distinguishes active context from stale or background material.",
+      "Reuse permission: governs when prior work may be reused across tasks or projects.",
+      "Data minimization object: limits what evidence or context may be retained.",
+      "Cross-system handoff: records responsibility when work moves across tools or agents."
+    ]
+  },
+  {
+    name: "Substitution, Dispute, and Remediation",
+    items: [
+      "Substitution record: preserves responsibility when a model, tool, or runtime changes.",
+      "Dispute object: makes challenge, review, and disagreement inspectable.",
+      "Remediation closure: records corrective action and closure state.",
+      "Lifecycle continuity: keeps responsibility attached across sessions, agents, and changes."
+    ]
+  }
+];
+const scoreModels = [
+  {
+    name: "RCCS-T",
+    title: "Traditional coverage",
+    body: "RCCS-T asks what traditional governance already tends to measure: documentation, risk management, monitoring, transparency, oversight, and familiar compliance-control surfaces."
+  },
+  {
+    name: "RCCS-M",
+    title: "MRO-adjusted coverage",
+    body: "RCCS-M asks what governance must measure after Missing Regulatory Objects are introduced: whether obligations can be expressed through authority, evidence, accepted outcome, substitution, dispute, and remediation objects."
+  },
+  {
+    name: "ALCS",
+    title: "Lifecycle coherence",
+    body: "ALCS asks whether lifecycle responsibility remains coherent across intent, authority, evidence, accepted outcome, dispute, and closure."
+  }
+];
+const internalLinks = [
+  { href: whitePaperHub, label: "White paper hub" },
+  { href: "/lifecycle/", label: "AI Agent Lifecycle" },
+  { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle definition" },
+  { href: "/concepts/agentic-delivery/", label: "Agentic Delivery" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/confirmation-boundary/", label: "Confirmation Boundary" },
+  { href: "/projects/mplp/", label: "MPLP protocol path" }
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "Agentic Lifecycle Governance",
+  description: metaDescription,
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#defined-term`
+  },
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  citation: `${siteConfig.siteUrl}${whitePaperHub}`
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#concept-core`,
+  headline: "Agentic Lifecycle Governance",
+  alternativeHeadline: "Why AI Agent Compliance Requires Lifecycle Responsibility Objects",
+  description: metaDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-12",
+  dateModified: "2026-05-12",
+  keywords,
+  about: keywords.map((term) => ({
+    "@type": "Thing",
+    name: term
+  })),
+  citation: `${siteConfig.siteUrl}${whitePaperHub}`,
+  isBasedOn: {
+    "@type": "TechArticle",
+    name: "Global AI Compliance White Paper 2026",
+    url: `${siteConfig.siteUrl}${whitePaperHub}`
+  }
+};
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": `${pageUrl}#defined-term`,
+  name: "Agentic Lifecycle Governance",
+  description: "Agentic Lifecycle Governance is the governance model for AI agent and multi-agent work where compliance attaches to lifecycle responsibility objects, not only to model behavior.",
+  url: pageUrl,
+  keywords,
+  inDefinedTermSet: {
+    "@id": `${siteConfig.siteUrl}/concepts/#defined-term-set`,
+    "@type": "DefinedTermSet",
+    name: "Concepts for AI Agent Lifecycle"
+  }
+};
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${pageUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Concepts",
+      item: `${siteConfig.siteUrl}/concepts/`
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Agentic Lifecycle Governance",
+      item: pageUrl
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Agentic Lifecycle Governance"
+  description={metaDescription}
+  shareTitle="Agentic Lifecycle Governance"
+  shareDescription={metaDescription}
+  twitterTitle="Agentic Lifecycle Governance"
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  ogType="article"
+  jsonLd={[pageJsonLd, articleJsonLd, definedTermJsonLd, breadcrumbJsonLd]}
+  keywords={keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Agentic Lifecycle Governance by Jearon Wong"
+>
+  <div class="zone-a registry-grid concept-core-hero-shell">
+    <SiteHeader />
+    <section class="shell concept-core-hero">
+      <div class="concept-core-hero__copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/concepts/">Concepts</a>
+        </nav>
+        <h1>Agentic Lifecycle Governance</h1>
+        <p class="concept-core-subtitle">Why AI Agent Compliance Requires Lifecycle Responsibility Objects</p>
+        <p class="concept-core-thesis">
+          AI agent compliance cannot stop at model governance. Once agents plan, call tools, delegate work,
+          reuse context, and produce accepted outcomes, compliance becomes a lifecycle responsibility problem.
+        </p>
+        <div class="hero-actions" aria-label="Concept Core actions">
+          <a href="#concept-core" class="button button-primary">Read the concept core</a>
+          <a href={whitePaperHub} class="button button-outline">Open white paper</a>
+        </div>
+      </div>
+      <aside class="concept-core-ledger" aria-label="Concept spine">
+        <div class="registry-annotation">
+          <span class="registry-key">CONCEPT_CORE</span>: <span class="registry-value">ENTRY_LAYER</span>
+        </div>
+        <ol>
+          <li>The compliance unit has changed.</li>
+          <li>Model governance is necessary but insufficient.</li>
+          <li>Agentic and MAS governance require Missing Regulatory Objects.</li>
+          <li>RCCS-M and ALCS measure the object layer.</li>
+          <li>MPLP is one protocol path.</li>
+        </ol>
+      </aside>
+    </section>
+  </div>
+
+  <div id="concept-core" class="zone-b page-body page-body--standard">
+    <article class="shell concept-core-stack">
+      <section class="concept-section concept-split">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">SHIFT</span>: <span class="registry-value">COMPLIANCE_UNIT</span>
+          </div>
+          <h2>The compliance unit has changed.</h2>
+        </div>
+        <div class="reading-copy">
+          <p>
+            Model governance asks whether the model is safe, documented, evaluated, and controlled.
+            Agentic governance asks what happens after a model becomes part of a working lifecycle.
+          </p>
+          <p>
+            Once an AI agent plans, calls tools, delegates work, reuses context, crosses sessions, or
+            produces an accepted outcome, the governance target is no longer only the model. The target
+            is the lifecycle responsibility carried by the work.
+          </p>
+        </div>
+      </section>
+
+      <section class="concept-section" aria-labelledby="comparison-title">
+        <div class="section-heading-row">
+          <div>
+            <div class="registry-annotation section-tag">
+              <span class="registry-key">COMPARISON</span>: <span class="registry-value">MODEL_TO_LIFECYCLE</span>
+            </div>
+            <h2 id="comparison-title">What model governance cannot answer.</h2>
+          </div>
+        </div>
+        <div class="comparison-table" aria-label="Model governance and lifecycle governance comparison">
+          <div class="comparison-head">
+            <span>Model governance can ask</span>
+            <span>Lifecycle governance must ask</span>
+          </div>
+          {comparisonRows.map((row) => (
+            <div class="comparison-row">
+              <p>{row.model}</p>
+              <p>{row.lifecycle}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-section concept-split" aria-labelledby="mro-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">OBJECT_LAYER</span>: <span class="registry-value">MRO</span>
+          </div>
+          <h2 id="mro-title">Missing Regulatory Objects.</h2>
+          <p class="section-lead">
+            Missing Regulatory Objects are the lifecycle responsibility objects that current
+            model-centric governance does not consistently define for agentic and multi-agent systems.
+          </p>
+        </div>
+        <div class="mro-cluster-grid">
+          {mroClusters.map((cluster) => (
+            <section class="mro-cluster">
+              <h3>{cluster.name}</h3>
+              <ul>
+                {cluster.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-section" aria-labelledby="scores-title">
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">NINETY_SECONDS</span>: <span class="registry-value">RCCS_T_RCCS_M_ALCS</span>
+        </div>
+        <h2 id="scores-title">RCCS-T / RCCS-M / ALCS in 90 seconds.</h2>
+        <div class="score-model-grid">
+          {scoreModels.map((model) => (
+            <article class="score-model-card">
+              <span>{model.name}</span>
+              <h3>{model.title}</h3>
+              <p>{model.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-section concept-split" aria-labelledby="mplp-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">PROTOCOL_PATH</span>: <span class="registry-value">MPLP</span>
+          </div>
+          <h2 id="mplp-title">Where MPLP fits.</h2>
+        </div>
+        <div class="reading-copy">
+          <p>
+            MPLP is one protocol path designed around lifecycle responsibility semantics. In the white
+            paper, it matters because it shows how authority, evidence, accepted outcome, substitution,
+            dispute, and remediation can become protocol-level objects.
+          </p>
+          <p>
+            That does not make MPLP certification, regulator approval, legal proof, or a required
+            implementation path. The category claim comes first: agentic lifecycle governance requires
+            lifecycle responsibility objects. MPLP is one way to express that object layer.
+          </p>
+          <a href="/projects/mplp/" class="inline-registry-link">Open MPLP protocol path</a>
+        </div>
+      </section>
+
+      <section class="concept-section release-bridge" aria-labelledby="white-paper-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">AUTHORITY_SOURCE</span>: <span class="registry-value">WHITE_PAPER</span>
+          </div>
+          <h2 id="white-paper-title">Read the full white paper.</h2>
+          <p>
+            The Concept Core is a short entry layer. The full Global AI Compliance White Paper 2026
+            contains the methodology, boundaries, object model, RCCS-M / ALCS argument, and source notes.
+          </p>
+        </div>
+        <div class="artifact-actions">
+          <a href={whitePaperHub} class="artifact-action">
+            <span>Hub</span>
+            <strong>Open white paper hub</strong>
+          </a>
+          <a href={whitePaperPdf} class="artifact-action">
+            <span>PDF</span>
+            <strong>Download PDF</strong>
+          </a>
+          <a href={whitePaperHtml} class="artifact-action">
+            <span>HTML</span>
+            <strong>Read HTML</strong>
+          </a>
+        </div>
+        <div class="citation-strip">
+          <strong>Citation</strong>
+          <p>{citationText}</p>
+        </div>
+      </section>
+
+      <section class="concept-section concept-split boundary-section" aria-labelledby="boundary-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">BOUNDARY</span>: <span class="registry-value">NON_CLAIM</span>
+          </div>
+          <h2 id="boundary-title">Boundary statement.</h2>
+        </div>
+        <div class="reading-copy">
+          <p>
+            This concept page summarizes an author-analytical governance model. It is not legal advice,
+            legal compliance proof, certification, regulator-approved guidance, vendor ranking, or
+            procurement recommendation.
+          </p>
+        </div>
+      </section>
+
+      <section class="concept-section internal-links-section" aria-labelledby="internal-links-title">
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">CONCEPT_GRAPH</span>: <span class="registry-value">RELATED_ROUTES</span>
+        </div>
+        <h2 id="internal-links-title">Follow the concept graph.</h2>
+        <div class="internal-link-grid">
+          {internalLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .concept-core-hero-shell {
+    min-height: 100svh;
+    border-bottom: 1px solid var(--border-registry);
+  }
+
+  .concept-core-hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding-top: clamp(7rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 6vw, 6rem);
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-registry-muted);
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent-proof);
+  }
+
+  .concept-core-hero h1 {
+    max-width: 12ch;
+    margin: 0;
+    color: var(--text-registry-primary);
+    font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+    line-height: 0.9;
+    letter-spacing: 0;
+  }
+
+  .concept-core-subtitle {
+    max-width: 46rem;
+    margin: 1.25rem 0 0;
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+    font-size: clamp(0.86rem, 1.1vw, 1rem);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .concept-core-thesis {
+    max-width: 52rem;
+    margin: 1.4rem 0 0;
+    color: rgba(241, 245, 249, 0.76);
+    font-size: clamp(1.06rem, 1.65vw, 1.25rem);
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .concept-core-ledger {
+    display: grid;
+    gap: 1.2rem;
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--border-registry);
+    background: rgba(26, 26, 26, 0.84);
+    backdrop-filter: blur(10px);
+  }
+
+  .concept-core-ledger ol {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    color: rgba(241, 245, 249, 0.78);
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .concept-core-ledger li::marker {
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+  }
+
+  .concept-core-stack {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .concept-section {
+    display: grid;
+    gap: 1.35rem;
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .concept-section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .concept-split {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .section-tag {
+    margin-bottom: 0.85rem;
+  }
+
+  .concept-section h2 {
+    max-width: 16ch;
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 0.98;
+    letter-spacing: 0;
+  }
+
+  .section-lead,
+  .release-bridge p,
+  .reading-copy p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1.04rem;
+    line-height: 1.75;
+  }
+
+  .section-lead {
+    max-width: 44ch;
+    margin-top: 1rem;
+  }
+
+  .reading-copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .comparison-table {
+    display: grid;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .comparison-head,
+  .comparison-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: 2rem;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .comparison-head span {
+    padding: 0.85rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+
+  .comparison-row p {
+    margin: 0;
+    padding: 1rem 0;
+    color: var(--current-text);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .comparison-row p:first-child {
+    color: var(--current-muted);
+  }
+
+  .mro-cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .mro-cluster,
+  .score-model-card,
+  .citation-strip {
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+  }
+
+  .mro-cluster {
+    padding: var(--registry-card-padding);
+  }
+
+  .mro-cluster h3,
+  .score-model-card h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.1rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .mro-cluster ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 1rem 0 0;
+    padding-left: 1rem;
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .mro-cluster li::marker {
+    color: var(--accent-signal);
+  }
+
+  .score-model-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .score-model-card {
+    display: grid;
+    gap: 0.8rem;
+    padding: var(--registry-card-padding);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .score-model-card span,
+  .artifact-action span,
+  .citation-strip strong {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+
+  .score-model-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .inline-registry-link {
+    width: fit-content;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .inline-registry-link:hover {
+    color: var(--current-text);
+  }
+
+  .release-bridge {
+    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.55fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .release-bridge .artifact-actions,
+  .citation-strip {
+    grid-column: 1 / -1;
+  }
+
+  .artifact-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .artifact-action {
+    display: grid;
+    gap: 0.6rem;
+    min-height: 8rem;
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .artifact-action:hover {
+    border-color: var(--accent-signal);
+  }
+
+  .artifact-action strong {
+    font-size: 1.2rem;
+    line-height: 1.15;
+  }
+
+  .citation-strip {
+    display: grid;
+    gap: 0.75rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .citation-strip p {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .boundary-section {
+    padding: var(--registry-panel-padding);
+    border: 1px solid var(--current-border);
+    border-left: 3px solid var(--accent-caution);
+    background: var(--current-surface);
+  }
+
+  .internal-links-section h2 {
+    max-width: none;
+  }
+
+  .internal-link-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .internal-link-grid a {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .internal-link-grid a:hover {
+    color: var(--current-text);
+  }
+
+  @media (max-width: 920px) {
+    .concept-core-hero,
+    .concept-split,
+    .release-bridge,
+    .comparison-head,
+    .comparison-row,
+    .score-model-grid,
+    .artifact-actions,
+    .internal-link-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .concept-core-hero {
+      min-height: auto;
+      align-items: start;
+    }
+
+    .mro-cluster-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .concept-core-hero-shell,
+    .concept-core-hero {
+      min-height: auto;
+    }
+
+    .concept-core-hero {
+      padding-top: 6.75rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .concept-core-hero h1 {
+      font-size: clamp(2.4rem, 12vw, 3.4rem);
+    }
+
+    .concept-core-stack {
+      gap: var(--space-6);
+    }
+
+    .concept-section {
+      padding-bottom: var(--space-6);
+    }
+  }
+</style>

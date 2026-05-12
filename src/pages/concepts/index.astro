@@ -13,12 +13,21 @@ const conceptSetJsonLd = {
   creator: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  hasDefinedTerm: concepts.map((concept) => ({
-    "@type": "DefinedTerm",
-    name: concept.term,
-    description: concept.definition,
-    url: `${siteConfig.siteUrl}/concepts/${concept.slug}/`
-  }))
+  hasDefinedTerm: [
+    ...concepts.map((concept) => ({
+      "@type": "DefinedTerm",
+      name: concept.term,
+      description: concept.definition,
+      url: `${siteConfig.siteUrl}/concepts/${concept.slug}/`
+    })),
+    {
+      "@type": "DefinedTerm",
+      name: "Agentic Lifecycle Governance",
+      description:
+        "Agentic Lifecycle Governance explains why AI agent and multi-agent compliance requires lifecycle responsibility objects, Missing Regulatory Objects, RCCS-M, and ALCS.",
+      url: `${siteConfig.siteUrl}/concepts/agentic-lifecycle-governance/`
+    }
+  ]
 };
 const primaryConceptStack = [
   {
@@ -34,6 +43,14 @@ const primaryConceptStack = [
     description: siteSemanticBaseline.agenticDeliveryDefinition,
     href: "/concepts/agentic-delivery/",
     linkLabel: "Open definition"
+  },
+  {
+    term: "Agentic Lifecycle Governance",
+    role: "Compliance concept core",
+    description:
+      "Agentic Lifecycle Governance explains why AI agent and multi-agent compliance requires lifecycle responsibility objects, Missing Regulatory Objects, RCCS-M, and ALCS.",
+    href: "/concepts/agentic-lifecycle-governance/",
+    linkLabel: "Open concept core"
   },
   {
     term: "MPLP",
@@ -73,6 +90,7 @@ const primaryConceptStack = [
 ];
 const primaryConceptPageSlugs = new Set([
   "ai-agent-lifecycle",
+  "agentic-lifecycle-governance",
   "agentic-delivery",
   "confirmation-boundary",
   "lifecycle-evidence"
