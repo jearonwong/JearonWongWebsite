@@ -1,0 +1,254 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import { appliedPlaybooks, contentRouteRoles, pageRegistry, siteConfig } from "../../data/site";
+
+const canonicalPath = "/playbooks/";
+const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
+const keywords = [
+  "Applied Agentic Governance Playbooks",
+  "AI agent rollback",
+  "AI coding agent auditability",
+  "Human-in-the-loop limits",
+  "OpenAI agent governance",
+  "Anthropic Claude agent governance",
+  "DeepSeek agent governance",
+  "Kimi agent governance",
+  "Harness Engineering",
+  "Agentic Lifecycle Governance",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS"
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: pageRegistry.playbooks.title,
+  description: pageRegistry.playbooks.lead,
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#playbook-list`
+  }
+};
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#playbook-list`,
+  name: "Applied Agentic Governance Playbooks",
+  itemListElement: appliedPlaybooks.map((playbook, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: playbook.title,
+    url: `${siteConfig.siteUrl}/playbooks/${playbook.slug}/`
+  }))
+};
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${pageUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Playbooks",
+      item: pageUrl
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={pageRegistry.playbooks.title}
+  description={pageRegistry.playbooks.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, itemListJsonLd, breadcrumbJsonLd]}
+  ogType="website"
+  keywords={keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Applied Agentic Governance Playbooks by Jearon Wong"
+>
+  <RegistryPageHero
+    title={pageRegistry.playbooks.title}
+    objectType={pageRegistry.playbooks.objectType}
+    objectValue={pageRegistry.playbooks.objectValue}
+    lead={pageRegistry.playbooks.lead}
+  >
+    <div class="playbooks-hero-links">
+      <a href="/concepts/agentic-lifecycle-governance/" class="registry-annotation playbooks-hero-link">
+        <span class="registry-key">CONCEPT_CORE</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
+      </a>
+      <a href="/research/global-ai-compliance-white-paper-2026/" class="registry-annotation playbooks-hero-link">
+        <span class="registry-key">AUTHORITY_SOURCE</span>: <span class="registry-value">GAIC WHITE PAPER</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <section class="shell playbook-index-shell">
+      <section class="registry-chassis playbook-index-intro">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.playbooks.question}</span>
+        </div>
+        <h2>Applied governance for real agent-work questions.</h2>
+        <p>
+          These playbooks connect Agentic Lifecycle Governance, Missing Regulatory Objects, RCCS-M,
+          ALCS, and MPLP to practical search intents: rollback, verification, auditability, coding agents,
+          human role responsibility, vendor-based agent workflows, and Harness Engineering.
+        </p>
+      </section>
+
+      <section class="playbook-grid" aria-label="Applied agentic governance playbooks">
+        {appliedPlaybooks.map((playbook, index) => (
+          <article class="registry-chassis playbook-card">
+            <div class="registry-annotation" style="margin-bottom: 0.75rem;">
+              <span class="registry-key">PLAYBOOK_{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <h2><a href={`/playbooks/${playbook.slug}/`}>{playbook.title}</a></h2>
+            <p>{playbook.seoDescription}</p>
+            <a href={`/playbooks/${playbook.slug}/`} class="playbook-card__link">Open playbook</a>
+          </article>
+        ))}
+      </section>
+
+      <section class="registry-chassis playbook-boundary">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">BOUNDARY</span>: <span class="registry-value">NON_CLAIM</span>
+        </div>
+        <p>
+          These pages are independent lifecycle governance playbooks. They are not official vendor
+          documentation, legal advice, legal compliance proof, certification, regulator-approved guidance,
+          vendor rankings, or procurement recommendations.
+        </p>
+      </section>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .playbooks-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .playbooks-hero-link {
+    text-decoration: none;
+  }
+
+  .playbooks-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .playbook-index-shell {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .playbook-index-intro,
+  .playbook-boundary {
+    padding: var(--registry-panel-padding);
+  }
+
+  .playbook-index-intro {
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .playbook-index-intro h2 {
+    max-width: 18em;
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  .playbook-index-intro p,
+  .playbook-boundary p {
+    max-width: var(--content-measure);
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .playbook-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .playbook-card {
+    display: grid;
+    align-content: start;
+    gap: 0.85rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .playbook-card h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.25rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .playbook-card h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .playbook-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .playbook-card__link {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .playbook-card h2 a:hover,
+  .playbook-card__link:hover {
+    color: var(--current-text);
+  }
+
+  .playbook-boundary {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  @media (max-width: 840px) {
+    .playbook-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .playbook-index-shell {
+      gap: var(--space-4);
+    }
+
+    .playbook-index-intro,
+    .playbook-boundary,
+    .playbook-card {
+      padding: var(--registry-card-padding);
+    }
+  }
+</style>

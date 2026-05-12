@@ -466,7 +466,7 @@ export const contentRouteRoles = {
   },
   playbooks: {
     question: "How do you operate according to the thesis?",
-    job: "Translate Agentic Delivery into repeatable operating methods."
+    job: "Translate Agentic Lifecycle Governance into applied rollback, verification, auditability, human-role, vendor-workflow, and harness-engineering playbooks."
   },
   about: {
     question: "Who is maintaining this thesis and stack?",
@@ -1437,10 +1437,10 @@ export const pageRegistry = {
     lead: "The binding conditions that make delegated agent work accountable across a lifecycle."
   },
   playbooks: {
-    title: "Playbooks",
+    title: "Applied Agentic Governance Playbooks",
     objectType: "PAGE_ROLE",
-    objectValue: "METHODS APPENDIX",
-    lead: "Repeatable methods for turning Agentic Delivery from a thesis into an operating discipline."
+    objectValue: "APPLIED GOVERNANCE",
+    lead: "Practical guides for making AI agent and multi-agent workflows more rollbackable, verifiable, auditable, and lifecycle-governed."
   },
   contact: {
     title: "Contact",
@@ -1861,6 +1861,443 @@ export const playbookModules = [
     steps: ["Decision path", "Confirmations", "Evidence", "Acceptance state"]
   }
 ];
+
+export interface PlaybookLink {
+  href: string;
+  label: string;
+}
+
+export interface PlaybookEntry {
+  slug: string;
+  title: string;
+  seoTitle: string;
+  seoDescription: string;
+  definition: string;
+  insufficiency: string;
+  checklist: string[];
+  relatedMros: string[];
+  rccsAlcs: string;
+  protocolPath: string;
+  boundary: string;
+  relatedLinks: PlaybookLink[];
+  keywords: string[];
+  vendorBoundary?: string;
+  sourceDiscipline?: string;
+}
+
+const commonGaicPlaybookLinks: PlaybookLink[] = [
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+  { href: "/concepts/rccs-m/", label: "RCCS-M" },
+  { href: "/concepts/alcs/", label: "ALCS" }
+];
+
+export const appliedPlaybooks: PlaybookEntry[] = [
+  {
+    slug: "ai-agent-rollback-verification",
+    title: "AI Agent Rollback and Verification",
+    seoTitle: "AI Agent Rollback and Verification",
+    seoDescription:
+      "A lifecycle governance playbook for making AI agent rollback, verification, evidence chains, accepted outcomes, and remediation closure inspectable.",
+    definition:
+      "AI agent rollback and verification is the practice of making agent work reversible enough to inspect, dispute, remediate, and close without reducing rollback to a retry or a version-history restore.",
+    insufficiency:
+      "Ordinary model or tool governance can show that a model responded, a workflow ran, or a log exists. It usually does not prove which accepted outcome state must be unwound, who authorized the reversal, what evidence supports the rollback, or when remediation is closed.",
+    checklist: [
+      "Separate rollback from retry: retry repeats execution, while rollback restores lifecycle responsibility to a known accepted or reviewable state.",
+      "Record the authority boundary for the rollback decision before consequential reversal begins.",
+      "Preserve the evidence chain that explains the original action, the rollback trigger, and the verification result.",
+      "Identify the accepted outcome state affected by the rollback.",
+      "Record remediation closure after correction, dispute handling, or rejection is complete.",
+      "Keep model, tool, and runtime substitution records attached to the rollback path."
+    ],
+    relatedMros: [
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Dispute object",
+      "Remediation closure",
+      "Substitution record"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because rollback governance depends on lifecycle responsibility objects, not only logs. ALCS is relevant because rollback must preserve responsibility continuity across intent, authority, evidence, accepted outcome, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP can be one protocol path for expressing rollback as lifecycle state with authority, evidence, and remediation records. It is not required, exclusive, certified, or regulator-approved.",
+    boundary:
+      "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/projects/mplp/", label: "MPLP protocol path" }
+    ],
+    keywords: [
+      "AI agent rollback",
+      "AI agent verification",
+      "Evidence Chain",
+      "Accepted Outcome",
+      "Authority Boundary",
+      "agentic lifecycle governance"
+    ]
+  },
+  {
+    slug: "ai-coding-agent-auditability",
+    title: "AI Coding Agent Auditability",
+    seoTitle: "AI Coding Agent Auditability",
+    seoDescription:
+      "A lifecycle governance playbook for making AI coding agent work reviewable, reversible, test-evidenced, and accepted by accountable human roles.",
+    definition:
+      "AI coding agent auditability means coding-agent work remains inspectable from prompt or task intent through plan, code diff, tests, human review, accepted outcome, rollback path, and remediation.",
+    insufficiency:
+      "A code diff, chat transcript, or CI result can be useful evidence, but none of them alone proves the work boundary, why the change was authorized, which tests support it, who accepted it, or how drift and remediation were closed.",
+    checklist: [
+      "Record the prompt or task intent and active constraints before the coding agent begins.",
+      "Separate the plan boundary from the change boundary so review can distinguish intended work from incidental edits.",
+      "Attach code diff evidence to the task intent, not only to a commit.",
+      "Attach test evidence, typecheck output, build output, or explicit unavailable-test notes.",
+      "Record human acceptance as an accepted outcome rather than silent merge success.",
+      "Keep a rollback path for changed files, configuration, generated artifacts, and dependency movement.",
+      "Track drift and remediation when the coding agent departs from the approved plan."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Authority boundary",
+      "Evidence chain",
+      "Review state",
+      "Accepted outcome",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M asks whether coding-agent governance can express the needed object layer. ALCS asks whether responsibility stays coherent as work moves from task intent to diff, tests, review, acceptance, rollback, and closure.",
+    protocolPath:
+      "MPLP is one protocol path for modeling coding-agent work as lifecycle records. It should be treated as one possible protocol expression, not as a mandatory implementation route.",
+    boundary:
+      "This playbook is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/confirmation-boundary/", label: "Confirmation Boundary" }
+    ],
+    keywords: [
+      "AI coding agent auditability",
+      "coding agent governance",
+      "code diff evidence",
+      "agent rollback path",
+      "human acceptance",
+      "Evidence Chain"
+    ]
+  },
+  {
+    slug: "human-role-to-mas-responsibility",
+    title: "Human Role to Multi-Agent Responsibility Mapping",
+    seoTitle: "Human Role to Multi-Agent Responsibility Mapping",
+    seoDescription:
+      "A governance playbook for mapping human roles, delegated authority, accepted outcome ownership, dispute handling, and remediation in multi-agent systems.",
+    definition:
+      "Human role to multi-agent responsibility mapping is the practice of translating human work roles into lifecycle responsibility objects before agent roles execute or delegate work.",
+    insufficiency:
+      "Human-in-the-loop is necessary but insufficient when the loop does not name the human role, delegated authority, accepted outcome owner, dispute owner, remediation owner, or cross-project reuse boundary.",
+    checklist: [
+      "Name the human role that owns intent, authority, review, acceptance, dispute, and remediation.",
+      "Separate agent role labels from the human responsibility they represent.",
+      "Define delegated authority before tool action or downstream agent delegation occurs.",
+      "Assign accepted outcome ownership to a human or organizational role.",
+      "Assign dispute and remediation ownership before failures appear.",
+      "Apply cross-project reuse caution when context, evidence, or generated work may move between projects."
+    ],
+    relatedMros: [
+      "Role responsibility",
+      "Authority boundary",
+      "Accepted outcome",
+      "Cross-system handoff",
+      "Reuse permission",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because role mapping must become lifecycle-object coverage. ALCS is relevant because responsibility can fragment when work crosses multiple agents, tools, projects, or review states.",
+    protocolPath:
+      "MPLP can express role, authority, evidence, and outcome boundaries as one protocol path. It is not presented as the only or required path.",
+    boundary:
+      "This playbook is an analytical governance guide. It is not legal advice, certification, legal compliance proof, regulator-approved guidance, vendor ranking, or procurement recommendation.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+      { href: "/lifecycle/", label: "AI Agent Lifecycle" }
+    ],
+    keywords: [
+      "multi-agent responsibility mapping",
+      "human in the loop limits",
+      "Lifecycle Responsibility Objects",
+      "delegated authority",
+      "accepted outcome owner",
+      "multi-agent systems governance"
+    ]
+  },
+  {
+    slug: "openai-agent-governance",
+    title: "Lifecycle Governance Checklist for OpenAI Agent Workflows",
+    seoTitle: "Lifecycle Governance Checklist for OpenAI Agent Workflows",
+    seoDescription:
+      "An independent lifecycle governance checklist for workflows built with OpenAI tooling, focused on intent, tool authority, evidence chains, accepted outcomes, rollback, remediation, and substitution.",
+    definition:
+      "Lifecycle governance for OpenAI agent workflows means applying lifecycle responsibility questions to workflows built with OpenAI tooling: what was intended, what tool authority was granted, what evidence was captured, what outcome was accepted, and how rollback or remediation would occur.",
+    insufficiency:
+      "Model or API documentation can describe a technical surface, but it does not by itself answer who authorized a workflow, what evidence proves a work boundary, which human role accepted the outcome, or how model, tool, or runtime substitution affects responsibility.",
+    checklist: [
+      "State the workflow intent and the allowed tool authority before execution.",
+      "Capture an evidence chain that can support review, replay, dispute, and remediation.",
+      "Define the accepted outcome state and the human role that can accept or reject it.",
+      "Record rollback and remediation expectations before consequential work is delegated.",
+      "Track model, tool, prompt, runtime, or harness substitution as a lifecycle responsibility event.",
+      "Separate product/API documentation from lifecycle responsibility evidence."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because governance coverage must be expressible as lifecycle responsibility objects. ALCS is relevant because OpenAI-based agent workflows still need responsibility continuity across intent, authority, evidence, acceptance, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP is one possible protocol path for expressing lifecycle responsibility semantics around agent workflows. This page does not present MPLP as required, exclusive, certified, or an industry standard.",
+    boundary:
+      "This page is an independent lifecycle governance checklist. It is not official vendor documentation, endorsement, certification, legal advice, or procurement recommendation.",
+    vendorBoundary:
+      "This page does not evaluate OpenAI products or claim affiliation with OpenAI. It uses generic lifecycle governance language for workflows built with OpenAI tooling.",
+    sourceDiscipline:
+      "No current OpenAI feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    keywords: [
+      "OpenAI agent governance",
+      "OpenAI agent workflow checklist",
+      "AI agent governance",
+      "Evidence Chain",
+      "Accepted Outcome",
+      "RCCS-M"
+    ]
+  },
+  {
+    slug: "anthropic-agent-governance",
+    title: "Lifecycle Governance Checklist for Anthropic / Claude Agent Workflows",
+    seoTitle: "Lifecycle Governance Checklist for Anthropic / Claude Agent Workflows",
+    seoDescription:
+      "An independent lifecycle governance checklist for Anthropic / Claude agent workflows, focused on authority, evidence, accepted outcomes, rollback, remediation, and substitution.",
+    definition:
+      "Lifecycle governance for Anthropic / Claude agent workflows means applying lifecycle responsibility questions to workflows built with Anthropic or Claude tooling without treating model capability, prompting, or tool use as a complete governance layer.",
+    insufficiency:
+      "A useful model, tool workflow, or review step does not by itself establish lifecycle responsibility. The governance question remains: who authorized the work, what evidence supports it, who accepted the outcome, and how substitution, dispute, or remediation is handled.",
+    checklist: [
+      "State intent, active constraints, and allowed tool authority before execution.",
+      "Keep evidence partitioned enough for replay, dispute, and remediation.",
+      "Assign accepted outcome ownership to a human or organizational role.",
+      "Record rollback and remediation paths for agent-produced work.",
+      "Track model, tool, prompt, runtime, or harness substitution.",
+      "Keep lifecycle responsibility separate from product feature descriptions."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Dispute object"
+    ],
+    rccsAlcs:
+      "RCCS-M asks whether the workflow can express lifecycle responsibility objects. ALCS asks whether those objects remain coherent from intent through accepted outcome, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP is one protocol path for lifecycle responsibility semantics. This page does not claim MPLP is required for Anthropic or Claude workflows.",
+    boundary:
+      "This page is an independent lifecycle governance checklist. It is not official vendor documentation, endorsement, certification, legal advice, or procurement recommendation.",
+    vendorBoundary:
+      "This page does not evaluate Anthropic products, Claude products, or claim affiliation with Anthropic. It uses generic lifecycle governance language for workflows built with Anthropic / Claude tooling.",
+    sourceDiscipline:
+      "No current Anthropic or Claude feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    keywords: [
+      "Anthropic agent governance",
+      "Claude agent workflow governance",
+      "AI agent governance checklist",
+      "Evidence Chain",
+      "Authority Boundary",
+      "ALCS"
+    ]
+  },
+  {
+    slug: "deepseek-agent-governance",
+    title: "Lifecycle Governance Checklist for DeepSeek-Based Agent Workflows",
+    seoTitle: "Lifecycle Governance Checklist for DeepSeek-Based Agent Workflows",
+    seoDescription:
+      "An independent lifecycle governance checklist for DeepSeek-based agent workflows, focused on lifecycle responsibility, evidence, accepted outcomes, rollback, remediation, and substitution.",
+    definition:
+      "Lifecycle governance for DeepSeek-based agent workflows means applying lifecycle responsibility questions to workflows that use DeepSeek tooling or models without treating model selection as a complete governance answer.",
+    insufficiency:
+      "Model selection, output review, or logs can support governance, but they do not by themselves establish authority boundaries, evidence chains, accepted outcome ownership, rollback paths, or remediation closure.",
+    checklist: [
+      "Define workflow intent, active constraints, and tool authority before execution.",
+      "Capture evidence that can support review, replay, dispute, and remediation.",
+      "Name the accepted outcome owner and acceptance criteria.",
+      "Define rollback and remediation paths for generated or tool-mediated work.",
+      "Track model, tool, prompt, runtime, or harness substitution.",
+      "Separate lifecycle governance evidence from claims about model capability."
+    ],
+    relatedMros: [
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Dispute object",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because governance coverage must include lifecycle objects beyond model documentation. ALCS is relevant because responsibility must remain coherent as work moves through delegation, evidence, acceptance, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP is one possible protocol path for lifecycle responsibility records. It is not required, exclusive, certified, or regulator-approved.",
+    boundary:
+      "This page is an independent lifecycle governance checklist. It is not official vendor documentation, endorsement, certification, legal advice, or procurement recommendation.",
+    vendorBoundary:
+      "This page does not evaluate DeepSeek products or claim affiliation with DeepSeek. It uses generic lifecycle governance language for DeepSeek-based workflows.",
+    sourceDiscipline:
+      "No current DeepSeek feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" }
+    ],
+    keywords: [
+      "DeepSeek agent governance",
+      "DeepSeek workflow governance",
+      "AI agent lifecycle governance",
+      "Missing Regulatory Objects",
+      "RCCS-M",
+      "ALCS"
+    ]
+  },
+  {
+    slug: "kimi-agent-governance",
+    title: "Lifecycle Governance Checklist for Kimi-Based Agent Workflows",
+    seoTitle: "Lifecycle Governance Checklist for Kimi-Based Agent Workflows",
+    seoDescription:
+      "An independent lifecycle governance checklist for Kimi-based agent workflows, focused on evidence chains, authority boundaries, accepted outcomes, rollback, remediation, and substitution.",
+    definition:
+      "Lifecycle governance for Kimi-based agent workflows means applying lifecycle responsibility questions to workflows built with Moonshot AI / Kimi tooling without treating model use or workflow execution as complete governance.",
+    insufficiency:
+      "A workflow can be useful and still leave lifecycle responsibility undefined. Governance still needs authority boundaries, evidence partitioning, accepted outcome ownership, substitution records, dispute handling, and remediation closure.",
+    checklist: [
+      "State workflow intent and active constraints before execution.",
+      "Define allowed tool authority and the human role responsible for consequential action.",
+      "Capture an evidence chain for review, replay, dispute, and remediation.",
+      "Define accepted outcome ownership and acceptance criteria.",
+      "Record rollback and remediation paths for generated or tool-mediated work.",
+      "Track model, tool, prompt, runtime, or harness substitution."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M asks whether the governance object layer is present. ALCS asks whether lifecycle responsibility remains coherent when work crosses intent, authority, evidence, acceptance, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP is one protocol path for lifecycle responsibility semantics. It is not presented as required, exclusive, certified, regulator-approved, or already an industry standard.",
+    boundary:
+      "This page is an independent lifecycle governance checklist. It is not official vendor documentation, endorsement, certification, legal advice, or procurement recommendation.",
+    vendorBoundary:
+      "This page does not evaluate Moonshot AI / Kimi products or claim affiliation with Moonshot AI or Kimi. It uses generic lifecycle governance language for Kimi-based workflows.",
+    sourceDiscipline:
+      "No current Moonshot AI or Kimi feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    keywords: [
+      "Kimi agent governance",
+      "Moonshot AI Kimi governance",
+      "AI agent workflow governance",
+      "Authority Boundary",
+      "Evidence Chain",
+      "Accepted Outcome"
+    ]
+  },
+  {
+    slug: "harness-engineering-for-ai-agents",
+    title: "Harness Engineering for AI Agents",
+    seoTitle: "Harness Engineering for AI Agents",
+    seoDescription:
+      "A definition-first playbook for Harness Engineering: wrapping AI agent execution with context boundaries, authority boundaries, evidence capture, rollback, remediation, and accepted outcome.",
+    definition:
+      "Harness Engineering is the discipline of wrapping agent execution with lifecycle boundaries, evidence capture, configuration, rollback, remediation, and acceptance so prompts do not have to carry governance alone.",
+    insufficiency:
+      "Prompt engineering can improve instructions, but prompts cannot reliably carry lifecycle governance by themselves. A prompt cannot substitute for context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback paths, remediation closure, or accepted outcome state.",
+    checklist: [
+      "Define the context boundary so active, stale, background, and cross-project context are separated.",
+      "Define the authority boundary before consequential action or tool use.",
+      "Capture evidence that supports review, replay, dispute, and remediation.",
+      "Represent plan, confirmation, and trace as durable lifecycle records.",
+      "Define rollback and remediation behavior before failure occurs.",
+      "Record accepted outcome state and the human role that can accept or reject work."
+    ],
+    relatedMros: [
+      "Context boundary",
+      "Authority boundary",
+      "Evidence chain",
+      "Decision trace",
+      "Accepted outcome",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because a harness can make lifecycle responsibility objects explicit. ALCS is relevant because the harness must keep those objects coherent across execution, review, dispute, remediation, and closure.",
+    protocolPath:
+      "MPLP and Cognitive OS can be understood as possible paths for protocol semantics and runtime state around harnessed agent work. They are not required implementations.",
+    boundary:
+      "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/projects/mplp/", label: "MPLP protocol path" },
+      { href: "/projects/cognitive-os/", label: "Cognitive OS runtime path" }
+    ],
+    keywords: [
+      "Harness Engineering",
+      "AI agent harness",
+      "prompt engineering vs harness engineering",
+      "context boundary",
+      "authority boundary",
+      "agent rollback",
+      "accepted outcome"
+    ]
+  }
+];
+
+export function getAppliedPlaybookBySlug(slug: string) {
+  return appliedPlaybooks.find((playbook) => playbook.slug === slug);
+}
 
 export const newsletterPromise = {
   headline:

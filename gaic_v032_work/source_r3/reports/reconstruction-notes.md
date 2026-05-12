@@ -2690,3 +2690,28 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - Appendix G remains qualitative/no-score.
 
 **Phase 1D-13E Status:** ✓ TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
+
+## GAIC-R3B Notes (May 12, 2026)
+
+**Scope:** Applied playbook mesh for real user search intents after R3A core entity mesh.
+
+**Actions completed:**
+
+1. Reused the existing Astro site architecture and `src/data/site.ts` registry style.
+2. Converted `/playbooks/` from a methods appendix into the applied governance playbook index.
+3. Added dynamic playbook route generation through `src/pages/playbooks/[slug].astro`.
+4. Created eight required applied playbook routes: rollback and verification, coding-agent auditability, human-role-to-MAS responsibility mapping, OpenAI workflow governance, Anthropic / Claude workflow governance, DeepSeek workflow governance, Kimi workflow governance, and Harness Engineering.
+5. Added metadata and JSON-LD for the playbook index and each playbook page using `CollectionPage`, `ItemList`, `WebPage`, `TechArticle`, and `BreadcrumbList` structures where appropriate.
+6. Updated Concept Core, GAIC white paper hub, R3A entity pages, and `llms.txt` to connect the applied playbook mesh back to Agentic Lifecycle Governance, the GAIC white paper, MRO, RCCS-M, ALCS, Evidence Chain, Accepted Outcome, and Authority Boundary.
+7. Kept vendor pages as independent lifecycle governance checklists. No official-doc, endorsement, certification, product-evaluation, procurement, affiliation, or current-feature claims were introduced.
+8. Preserved sealed artifact integrity and did not modify white paper content, public white paper artifacts, scores, methodology, or publication candidate manifest.
+
+**Boundary discipline:**
+
+- No platform scores or vendor rankings.
+- No procurement recommendations.
+- No legal compliance proof, certification, or regulator-approval claims.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, or already an industry standard.
+- WP2/WP3 content was not created in this wave.
+
+**GAIC-R3B Status:** ✓ APPLIED PLAYBOOK MESH COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING.

@@ -1,0 +1,434 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import {
+  appliedPlaybooks,
+  getAppliedPlaybookBySlug,
+  siteConfig
+} from "../../data/site";
+
+export function getStaticPaths() {
+  return appliedPlaybooks.map((playbook) => ({
+    params: { slug: playbook.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const playbook = slug ? getAppliedPlaybookBySlug(slug) : undefined;
+
+if (!playbook) {
+  throw new Error(`Unknown playbook: ${slug}`);
+}
+
+const canonicalPath = `/playbooks/${playbook.slug}/`;
+const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
+const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: playbook.title,
+  description: playbook.seoDescription,
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#article`
+  },
+  citation: `${siteConfig.siteUrl}${whitePaperHub}`
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#article`,
+  headline: playbook.title,
+  description: playbook.seoDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-12",
+  dateModified: "2026-05-12",
+  keywords: playbook.keywords,
+  about: playbook.keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  isBasedOn: [
+    {
+      "@type": "TechArticle",
+      name: "Global AI Compliance White Paper 2026",
+      url: `${siteConfig.siteUrl}${whitePaperHub}`
+    },
+    {
+      "@type": "WebPage",
+      name: "Agentic Lifecycle Governance",
+      url: `${siteConfig.siteUrl}${conceptCorePath}`
+    }
+  ]
+};
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${pageUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Playbooks",
+      item: `${siteConfig.siteUrl}/playbooks/`
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: playbook.title,
+      item: pageUrl
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={playbook.seoTitle}
+  description={playbook.seoDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
+  ogType="article"
+  keywords={playbook.keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt={`${playbook.title} by Jearon Wong`}
+>
+  <RegistryPageHero
+    title={playbook.title}
+    objectType="APPLIED_PLAYBOOK"
+    objectValue="AGENTIC GOVERNANCE"
+    lead={playbook.seoDescription}
+  >
+    <div class="playbook-hero-links">
+      <a href="/playbooks/" class="registry-annotation playbook-hero-link">
+        <span class="registry-key">BACK_TO</span>: <span class="registry-value">PLAYBOOKS</span>
+      </a>
+      <a href={conceptCorePath} class="registry-annotation playbook-hero-link">
+        <span class="registry-key">CONCEPT_CORE</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <article class="shell playbook-detail-shell">
+      <aside class="registry-chassis playbook-sidebar" aria-label={`${playbook.title} reference`}>
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">PLAYBOOK_RECORD</span>
+        </div>
+        <p class="sidebar-title">{playbook.title}</p>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Core routes</p>
+          <div class="sidebar-links">
+            <a href={conceptCorePath}>Agentic Lifecycle Governance</a>
+            <a href={whitePaperHub}>Global AI Compliance White Paper 2026</a>
+            <a href="/concepts/missing-regulatory-objects/">Missing Regulatory Objects</a>
+            <a href="/concepts/rccs-m/">RCCS-M</a>
+            <a href="/concepts/alcs/">ALCS</a>
+          </div>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Primary entities</p>
+          <div class="keyword-list">
+            {playbook.keywords.map((keyword) => (
+              <span>{keyword}</span>
+            ))}
+          </div>
+        </div>
+      </aside>
+
+      <div class="playbook-article">
+        <section class="registry-chassis definition-panel">
+          <div class="registry-annotation" style="margin-bottom: 1rem;">
+            <span class="registry-key">DEFINITION</span>
+          </div>
+          <p>{playbook.definition}</p>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Why ordinary model/tool governance is insufficient</h2>
+          <p>{playbook.insufficiency}</p>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Lifecycle governance checklist</h2>
+          <ol class="checklist">
+            {playbook.checklist.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ol>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Related Missing Regulatory Objects</h2>
+          <div class="mro-list">
+            {playbook.relatedMros.map((item) => (
+              <span>{item}</span>
+            ))}
+          </div>
+        </section>
+
+        <section class="playbook-section">
+          <h2>RCCS-M / ALCS relevance</h2>
+          <p>{playbook.rccsAlcs}</p>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Protocol path: MPLP as one option</h2>
+          <p>{playbook.protocolPath}</p>
+        </section>
+
+        {playbook.vendorBoundary && (
+          <section class="playbook-section vendor-boundary">
+            <h2>Vendor boundary</h2>
+            <p>{playbook.vendorBoundary}</p>
+            {playbook.sourceDiscipline && <p>{playbook.sourceDiscipline}</p>}
+          </section>
+        )}
+
+        <section class="playbook-section boundary-section">
+          <h2>Boundary statement</h2>
+          <p>{playbook.boundary}</p>
+        </section>
+
+        <section class="relation-grid" aria-label={`${playbook.title} related links`}>
+          <article class="registry-chassis relation-panel">
+            <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+              <span class="registry-key">RELATED_LINKS</span>
+            </div>
+            <h2>Related concepts and source routes</h2>
+            <div class="term-link-grid">
+              {playbook.relatedLinks.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))}
+            </div>
+          </article>
+        </section>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .playbook-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .playbook-hero-link {
+    text-decoration: none;
+  }
+
+  .playbook-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .playbook-detail-shell {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1080px;
+  }
+
+  .playbook-sidebar {
+    position: sticky;
+    top: 7rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .sidebar-title {
+    margin: 0;
+    font-family: var(--font-display);
+    color: var(--current-text);
+    font-size: 1.25rem;
+    font-weight: 760;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .sidebar-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .sidebar-label {
+    margin: 0 0 0.75rem;
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-links,
+  .keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .sidebar-links a {
+    color: var(--accent-signal);
+    font-size: 0.86rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .keyword-list span,
+  .mro-list span {
+    display: inline-flex;
+    padding: 0.3rem 0.45rem;
+    border: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .playbook-article {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .definition-panel {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .definition-panel p,
+  .playbook-section p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1.05rem;
+    line-height: 1.72;
+  }
+
+  .definition-panel p {
+    color: var(--current-text);
+  }
+
+  .playbook-section {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .playbook-section h2,
+  .relation-panel h2 {
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: 1.45rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .checklist {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding-left: 1.35rem;
+  }
+
+  .checklist li {
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 0.2rem;
+  }
+
+  .mro-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .vendor-boundary {
+    border-left: 3px solid var(--accent-signal);
+    padding-left: var(--registry-card-padding);
+  }
+
+  .vendor-boundary p + p {
+    margin-top: 0.85rem;
+  }
+
+  .boundary-section {
+    border-left: 3px solid var(--accent-caution);
+    padding-left: var(--registry-card-padding);
+  }
+
+  .relation-grid {
+    display: grid;
+  }
+
+  .relation-panel {
+    padding: var(--registry-card-padding);
+  }
+
+  .term-link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+  }
+
+  .term-link-grid a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .sidebar-links a:hover,
+  .term-link-grid a:hover {
+    color: var(--current-text);
+  }
+
+  @media (max-width: 920px) {
+    .playbook-detail-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .playbook-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .playbook-detail-shell {
+      gap: 2rem;
+    }
+
+    .playbook-sidebar,
+    .definition-panel,
+    .relation-panel {
+      padding: var(--registry-card-padding);
+    }
+
+    .definition-panel p,
+    .playbook-section p {
+      font-size: 0.98rem;
+      line-height: 1.68;
+    }
+  }
+</style>
