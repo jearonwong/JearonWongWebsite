@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R0 Cleanup and Release Hygiene)
+**Last Updated:** May 12, 2026 (GAIC-R1 Public Release Page)
 
 ## Reconstruction Strategy
 
@@ -47,6 +47,7 @@ R3 uses phased reconstruction:
 26. **Phase 1D-13F:** Necessity-argument and protocol-boundary pass clarifying RCCS-M / ALCS as proposed necessary-dimension adequacy models, MPLP high scores as design alignment rather than independent validation, protocol proposal vs product/framework evaluation, interoperability/specification boundary, legal nuance, and publication-residue cleanup (✓ NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 27. **Publication Candidate Seal:** Approved Phase 1D-13F artifacts sealed into `out/publication_candidate/` with SHA256 manifest and seal report, using source commit `943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e`; no white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed (✓ PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY)
 28. **GAIC-R0 Cleanup and Release Hygiene:** Historical Phase 1D generated output directories, old rendered pages, old generated draft artifacts, and local conversion scratch outputs were removed from the current tree; sealed artifacts remain in `out/publication_candidate/`, their hashes remain unchanged, and historical intermediates remain recoverable through Git history and tag `gaic-v0.3.2-publication-candidate-sealed` (✓ CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE)
+29. **GAIC-R1 Public Release Page:** Public Research index and GAIC white paper hub were created; sealed artifacts were copied into the public site asset path with matching SHA256 hashes; citation/download/checksum surface, boundary statement, metadata/JSON-LD, sitemap exposure, and `llms.txt` entry were completed without modifying sealed artifacts or white paper content (✓ PUBLIC RELEASE PAGE COMPLETE / READY FOR CONCEPT CORE)
 
 ## Source Hierarchy
 
@@ -122,6 +123,10 @@ Phase 1D-13F clarifies that RCCS-M and ALCS are proposed analytical adequacy mod
 ### Decision 15: Keep Only the Sealed Output Line in the Current Tree
 
 GAIC-R0 preserves history through Git rather than by keeping obsolete generated artifacts in the current repository tree. Old Phase 1D output folders, rendered page folders, contact sheets, draft HTML/PDF/DOCX artifacts, and local conversion scratch files were removed so public release, indexing, and future site work cannot accidentally expose stale draft versions. The sealed publication candidate remains under `out/publication_candidate/` and is the only white paper artifact source for R1 public release work. Historical intermediates remain recoverable from Git history and the annotated seal tag.
+
+### Decision 16: Publish a Release Surface, Not a New White Paper
+
+GAIC-R1 exposes the sealed publication candidate through the public site without regenerating or editing the white paper. The public source of download truth is `public/research/global-ai-compliance-white-paper-2026/`, populated from `out/publication_candidate/` with matching hashes. The hub provides citation, checksum, boundary, source-commit, and structured-data context. It does not create Concept Core, WP2, WP3, a subscription gate, or new substantive claims.
 
 ## Lessons from R2
 

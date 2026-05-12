@@ -1001,6 +1001,7 @@ export function getConceptBySlug(slug: string) {
 export const primaryNav = [
   { href: "/lifecycle/", label: "Lifecycle" },
   { href: "/essays/", label: "Essays" },
+  { href: "/research/", label: "Research" },
   { href: "/projects/", label: "Projects" },
   { href: "/about/", label: "About" },
   { href: "/newsletter/", label: "Newsletter" }
@@ -1085,6 +1086,12 @@ export const pageRegistry = {
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPT MAP",
     lead: "Concepts is the reference layer behind the AI Agent Lifecycle mainline. It is not the main human journey."
+  },
+  research: {
+    title: "Research",
+    objectType: "PAGE_ROLE",
+    objectValue: "WHITE PAPER LEDGER",
+    lead: "Formal research assets for AI Agent Lifecycle, Agentic Delivery, and governance models for agentic and multi-agent systems."
   },
   definitions: {
     title: "Definitions for the Agent Era",

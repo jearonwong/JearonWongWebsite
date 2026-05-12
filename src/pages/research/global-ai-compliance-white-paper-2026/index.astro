@@ -1,0 +1,712 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteHeader from "../../../components/SiteHeader.astro";
+import { siteConfig } from "../../../data/site";
+
+const assetBase = "/research/global-ai-compliance-white-paper-2026";
+const canonicalPath = "/research/global-ai-compliance-white-paper-2026/";
+const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
+const pdfUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.pdf`;
+const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.html`;
+const docxUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.docx`;
+const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
+const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
+const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Responsibility. v0.3.2 Public Edition. JearonWong.com, 2026.";
+const metaDescription = "A 2026 white paper by Jearon Wong defining Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.";
+const shaRows = [
+  {
+    label: "PDF",
+    value: "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643"
+  },
+  {
+    label: "HTML",
+    value: "0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af"
+  },
+  {
+    label: "DOCX",
+    value: "b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa"
+  }
+];
+const keyConcepts = [
+  "Missing Regulatory Objects",
+  "RCCS-T",
+  "RCCS-M",
+  "ALCS",
+  "Agentic Lifecycle Governance",
+  "MPLP as protocol path"
+];
+const internalLinks = [
+  { href: "/about/", label: "About Jearon Wong" },
+  { href: "/projects/mplp/", label: "MPLP protocol path" },
+  { href: "/lifecycle/", label: "AI Agent Lifecycle" },
+  { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle definition" },
+  { href: "/concepts/agentic-delivery/", label: "Agentic Delivery definition" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/", label: "Lifecycle governance essay" }
+];
+const aboutTerms = [
+  "Jearon Wong",
+  "Global AI Compliance White Paper 2026",
+  "Agentic Lifecycle Governance",
+  "AI Agent Governance",
+  "Multi-Agent Systems Governance",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS",
+  "MPLP",
+  "Multi-Agent Lifecycle Protocol",
+  "Evidence Chain",
+  "Accepted Outcome",
+  "Authority Boundary"
+];
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#whitepaper`,
+  headline: "Global AI Compliance White Paper 2026",
+  alternativeHeadline: "From Model Governance to Agentic Lifecycle Responsibility",
+  description: metaDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-12",
+  dateModified: "2026-05-12",
+  version: "v0.3.2 Public Edition",
+  creativeWorkStatus: "PublicationCandidate",
+  citation: citationText,
+  keywords: aboutTerms,
+  about: aboutTerms.map((term) => ({
+    "@type": "Thing",
+    name: term
+  })),
+  encoding: [
+    {
+      "@type": "MediaObject",
+      encodingFormat: "application/pdf",
+      contentUrl: pdfUrl,
+      sha256: shaRows[0].value
+    },
+    {
+      "@type": "MediaObject",
+      encodingFormat: "text/html",
+      contentUrl: htmlUrl,
+      sha256: shaRows[1].value
+    },
+    {
+      "@type": "MediaObject",
+      encodingFormat: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      contentUrl: docxUrl,
+      sha256: shaRows[2].value
+    }
+  ],
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`
+  }
+};
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "Global AI Compliance White Paper 2026",
+  description: metaDescription,
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#whitepaper`
+  }
+};
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${pageUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Research",
+      item: `${siteConfig.siteUrl}/research/`
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Global AI Compliance White Paper 2026",
+      item: pageUrl
+    }
+  ]
+};
+const definedTermSetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": `${pageUrl}#defined-terms`,
+  name: "Global AI Compliance White Paper 2026 Terms",
+  description: "Key terms introduced or used by the Global AI Compliance White Paper 2026.",
+  hasDefinedTerm: [
+    "Missing Regulatory Objects",
+    "RCCS-T",
+    "RCCS-M",
+    "ALCS",
+    "Agentic Lifecycle Governance",
+    "MPLP"
+  ].map((term) => ({
+    "@type": "DefinedTerm",
+    name: term,
+    inDefinedTermSet: `${pageUrl}#defined-terms`
+  }))
+};
+---
+
+<BaseLayout
+  title="Global AI Compliance White Paper 2026"
+  description={metaDescription}
+  shareTitle="Global AI Compliance White Paper 2026"
+  shareDescription={metaDescription}
+  twitterTitle="Global AI Compliance White Paper 2026"
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  ogType="article"
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, definedTermSetJsonLd]}
+  keywords={aboutTerms}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Global AI Compliance White Paper 2026 by Jearon Wong"
+>
+  <div class="zone-a registry-grid release-hero-shell">
+    <SiteHeader />
+    <section class="shell release-hero">
+      <div class="release-hero__copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/research/">Research</a>
+        </nav>
+        <h1>Global AI Compliance White Paper 2026</h1>
+        <p class="release-subtitle">From Model Governance to Agentic Lifecycle Responsibility</p>
+        <p class="release-thesis">
+          Model governance is necessary but insufficient for AI agent and multi-agent systems.
+          Agentic compliance requires lifecycle responsibility objects: authority boundaries,
+          evidence partitioning, accepted outcomes, substitution conformance, and remediation closure.
+        </p>
+        <div class="hero-actions" aria-label="White paper actions">
+          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.pdf`} class="button button-primary">Download PDF</a>
+          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.html`} class="button button-outline">Read full HTML</a>
+          <a href="#cite" class="button button-outline">Cite this paper</a>
+        </div>
+      </div>
+      <aside class="release-meta-panel" aria-label="Release metadata">
+        <div class="registry-annotation">
+          <span class="registry-key">VERSION</span>: <span class="registry-value">v0.3.2 Public Edition</span>
+        </div>
+        <div class="meta-line">
+          <span>Internal trace</span>
+          <strong>GACWP-2026-v0.3.2-FRC-R3</strong>
+        </div>
+        <div class="meta-line">
+          <span>Status</span>
+          <strong>Publication candidate sealed for human release review.</strong>
+        </div>
+        <div class="meta-line">
+          <span>Page count</span>
+          <strong>425</strong>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <div class="zone-b page-body page-body--standard">
+    <article class="shell release-stack">
+      <section class="release-section release-grid">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">CORE_THESIS</span>
+          </div>
+          <h2>AI Agent / MAS compliance is lifecycle responsibility compliance.</h2>
+          <p class="section-lead">
+            The paper defines a governance object layer for agentic work: what must remain attached
+            to authority, evidence, validation, substitution, and remediation after model execution ends.
+          </p>
+        </div>
+        <div class="concept-ledger">
+          {keyConcepts.map((concept, index) => (
+            <span><strong>{String(index + 1).padStart(2, "0")}</strong>{concept}</span>
+          ))}
+        </div>
+      </section>
+
+      <section class="release-section" aria-labelledby="download-title">
+        <div class="section-heading-row">
+          <div>
+            <div class="registry-annotation section-tag">
+              <span class="registry-key">ARTIFACTS</span>
+            </div>
+            <h2 id="download-title">Download and read.</h2>
+          </div>
+          <a href={manifestUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">View manifest</a>
+        </div>
+        <div class="artifact-grid">
+          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.pdf`} class="artifact-card">
+            <span class="artifact-kind">PDF</span>
+            <strong>Download PDF</strong>
+            <span>Visual review artifact</span>
+          </a>
+          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.html`} class="artifact-card">
+            <span class="artifact-kind">HTML</span>
+            <strong>Read full HTML</strong>
+            <span>HTML/PDF visual authority</span>
+          </a>
+          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.docx`} class="artifact-card">
+            <span class="artifact-kind">DOCX</span>
+            <strong>Download DOCX derivative</strong>
+            <span>Editable derivative</span>
+          </a>
+          <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
+            <span class="artifact-kind">JSON</span>
+            <strong>Manifest / checksums</strong>
+            <span>Seal metadata</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="cite" class="release-section release-grid" aria-labelledby="citation-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">CITATION</span>
+          </div>
+          <h2 id="citation-title">Cite this paper.</h2>
+          <p class="citation-block">{citationText}</p>
+        </div>
+        <div class="boundary-panel">
+          <strong>Boundary statement</strong>
+          <p>
+            This paper introduces author-analytical governance models and protocol-level concepts.
+            It is not legal advice, legal compliance proof, certification, regulator-approved benchmark,
+            vendor ranking, or procurement recommendation.
+          </p>
+        </div>
+      </section>
+
+      <section class="release-section" aria-labelledby="integrity-title">
+        <div class="section-heading-row">
+          <div>
+            <div class="registry-annotation section-tag">
+              <span class="registry-key">INTEGRITY</span>
+            </div>
+            <h2 id="integrity-title">Artifact integrity.</h2>
+          </div>
+          <a href={checksumUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">Open checksum file</a>
+        </div>
+        <div class="integrity-grid">
+          <div class="commit-ledger">
+            <div><span>Source commit</span><strong>943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e</strong></div>
+            <div><span>Seal commit</span><strong>448afd6f7d9ebef56b3e8afcd3c97c2f22b5daea</strong></div>
+            <div><span>Cleanup commit</span><strong>a9c5747efb36915470721c11855142f7c7fa9b25</strong></div>
+            <div><span>Page count</span><strong>425</strong></div>
+          </div>
+          <div class="checksum-table" aria-label="SHA256 checksums">
+            {shaRows.map((row) => (
+              <div class="checksum-row">
+                <span>{row.label}</span>
+                <code>{row.value}</code>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="release-section release-grid" aria-labelledby="context-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">CONTEXT</span>
+          </div>
+          <h2 id="context-title">Follow the surrounding concept graph.</h2>
+          <p class="section-lead">
+            R1 publishes the white paper release surface only. A shorter Agentic Lifecycle Governance
+            Concept Core will follow as a separate release wave.
+          </p>
+        </div>
+        <div class="internal-link-grid">
+          {internalLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .release-hero-shell {
+    min-height: 100svh;
+    border-bottom: 1px solid var(--border-registry);
+  }
+
+  .release-hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding-top: clamp(7rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 6vw, 6rem);
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-registry-muted);
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent-proof);
+  }
+
+  .release-hero h1 {
+    max-width: 12ch;
+    margin: 0;
+    color: var(--text-registry-primary);
+    font-size: clamp(3.4rem, 8vw, 7.2rem);
+    line-height: 0.9;
+    letter-spacing: 0;
+  }
+
+  .release-subtitle {
+    max-width: 42rem;
+    margin: 1.25rem 0 0;
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .release-thesis {
+    max-width: 50rem;
+    margin: 1.4rem 0 0;
+    color: rgba(241, 245, 249, 0.76);
+    font-size: clamp(1.06rem, 1.65vw, 1.25rem);
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .release-meta-panel {
+    display: grid;
+    gap: 1.1rem;
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--border-registry);
+    background: rgba(26, 26, 26, 0.84);
+    backdrop-filter: blur(10px);
+  }
+
+  .meta-line {
+    display: grid;
+    gap: 0.35rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-registry);
+  }
+
+  .meta-line span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--text-registry-muted);
+    text-transform: uppercase;
+  }
+
+  .meta-line strong {
+    color: var(--text-registry-primary);
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  .release-stack {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .release-section {
+    display: grid;
+    gap: 1.35rem;
+  }
+
+  .release-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.55fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .section-tag {
+    margin-bottom: 0.85rem;
+  }
+
+  .release-section h2 {
+    max-width: 17ch;
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 0.98;
+    letter-spacing: 0;
+  }
+
+  .section-lead {
+    max-width: 66ch;
+    margin: 1rem 0 0;
+    color: var(--current-muted);
+    font-size: 1.04rem;
+    line-height: 1.75;
+  }
+
+  .concept-ledger {
+    display: grid;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .concept-ledger span {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+  }
+
+  .concept-ledger strong {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-signal);
+    letter-spacing: 0.08em;
+  }
+
+  .section-heading-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: end;
+  }
+
+  .section-side-link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .section-side-link:hover {
+    color: var(--current-text);
+  }
+
+  .artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .artifact-card {
+    display: grid;
+    align-content: start;
+    min-height: 12rem;
+    padding: var(--registry-supporting-card-padding);
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+
+  .artifact-card:hover {
+    border-color: var(--accent-signal);
+    transform: translateY(-2px);
+  }
+
+  .artifact-kind {
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-signal);
+    letter-spacing: 0.08em;
+  }
+
+  .artifact-card strong {
+    color: var(--current-text);
+    font-size: 1.06rem;
+    line-height: 1.25;
+  }
+
+  .artifact-card span:last-child {
+    margin-top: 0.65rem;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .citation-block {
+    margin: 1rem 0 0;
+    padding: 1.2rem 1.35rem;
+    border-left: 3px solid var(--accent-proof);
+    background: var(--current-surface);
+    color: var(--current-text);
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .boundary-panel {
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--current-border);
+    background: #111111;
+    color: var(--text-registry-primary);
+  }
+
+  .boundary-panel strong {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .boundary-panel p {
+    margin: 0;
+    color: rgba(241, 245, 249, 0.76);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .integrity-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .commit-ledger,
+  .checksum-table {
+    border: 1px solid var(--current-border);
+    background: var(--current-surface);
+  }
+
+  .commit-ledger div,
+  .checksum-row {
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .commit-ledger div:last-child,
+  .checksum-row:last-child {
+    border-bottom: 0;
+  }
+
+  .commit-ledger span,
+  .checksum-row span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent-signal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .commit-ledger strong,
+  .checksum-row code {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .internal-link-grid {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .internal-link-grid a {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+    font-weight: 650;
+  }
+
+  .internal-link-grid a:hover {
+    color: var(--accent-signal);
+  }
+
+  @media (max-width: 980px) {
+    .release-hero,
+    .release-grid,
+    .integrity-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .artifact-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .release-hero h1 {
+      max-width: 11ch;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .release-hero {
+      padding-top: 6.75rem;
+    }
+
+    .release-hero h1 {
+      font-size: clamp(2.75rem, 18vw, 4rem);
+    }
+
+    .hero-actions,
+    .section-heading-row {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .hero-actions .button {
+      width: 100%;
+    }
+
+    .artifact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

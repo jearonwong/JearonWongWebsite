@@ -38,10 +38,22 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - Homepage: https://www.jearonwong.com/
 - AI Agent Lifecycle field definition: https://www.jearonwong.com/lifecycle/
+- Research: https://www.jearonwong.com/research/
+- Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
 - Concepts map: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
 - About: https://www.jearonwong.com/about/
+
+## White Papers
+
+- Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
+  v0.3.2 Public Edition. Internal trace: GACWP-2026-v0.3.2-FRC-R3. Defines Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.
+  PDF: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf
+  HTML: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
+  DOCX derivative: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.docx
+  Manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
+  Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 
 ## Core Concepts
 

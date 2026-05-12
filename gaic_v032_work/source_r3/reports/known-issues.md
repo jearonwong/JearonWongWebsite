@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R0 Cleanup and Release Hygiene)
+**Last Updated:** May 12, 2026 (GAIC-R1 Public Release Page)
+
+## GAIC-R1 Public Release Page
+
+### Status: GAIC-R1 PUBLIC RELEASE PAGE COMPLETE / READY FOR CONCEPT CORE
+
+R1 created the public release surface for the sealed Global AI Compliance White Paper 2026 publication candidate. This was a site publication-surface step only: no white paper content, sealed artifacts, scores, methodology, RCCS-T/RCCS-M/ALCS wording, protocol/product boundary language, or interoperability boundary language was changed.
+
+**Release page results:**
+
+1. `/research/` created as a Research / White Papers index.
+2. `/research/global-ai-compliance-white-paper-2026/` created as the canonical white paper hub.
+3. Public copies of the sealed PDF, HTML, DOCX derivative, generation log, manifest, seal report, and checksum file were placed under `public/research/global-ai-compliance-white-paper-2026/`.
+4. Public HTML/PDF/DOCX/log hashes match the sealed publication-candidate hashes exactly.
+5. The hub includes download links, citation block, boundary statement, source/seal/cleanup commit references, checksum table, page count, and Concept Core follow-up note.
+6. SEO/GEO metadata, JSON-LD, sitemap inclusion, primary Research navigation, internal links, and `llms.txt` white paper entry are complete.
+7. Typecheck, lint, and build pass.
+
+**Remaining limitations, not blockers:**
+
+1. The white paper remains a publication candidate sealed for human release review, not a legal/compliance certification.
+2. Concept Core is intentionally deferred to the next release wave.
+3. WP2 and WP3 remain delayed/private institutional assets and are not public releases in this wave.
+
+**GAIC-R1 Decision:** GAIC-R1 PUBLIC RELEASE PAGE COMPLETE / READY FOR CONCEPT CORE.
 
 ## GAIC-R0 Cleanup and Release Hygiene
 
