@@ -935,4 +935,4 @@ Conceptually:
 RCCS-T + MRO Coverage = RCCS-M
 ```
 
-This is an analytical model, not a legal formula, certification, regulator-approved scoring method, final vendor score, ranking, or procurement recommendation. Its purpose is to make the transition visible: regulatory language names the governance expectation; MROs define the lifecycle responsibility object; RCCS-M evaluates whether the traditional regulatory surface can be expressed through that object layer.
+This is an analytical model, not a legal formula, certification, regulator-approved scoring method, vendor ranking, or procurement recommendation. Its purpose is to make the transition visible: regulatory language names the governance expectation; MROs define the lifecycle responsibility object; RCCS-M evaluates whether the traditional regulatory surface can be expressed through that object layer.

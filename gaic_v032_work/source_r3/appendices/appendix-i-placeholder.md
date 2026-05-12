@@ -127,4 +127,4 @@ Phase 1D-11 located, validated, replaced, or narrowed the high-priority L2 group
 | Citation inventory | Internal ledger | PHASE 1D-11 CITATION SOURCE CLOSURE COMPLETE — HIGH-RISK BLOCKERS CLOSED | Remaining limitations explicit | Preserve closure ledger through final proof |
 | Source coverage matrix | Internal ledger | PHASE 1D-11 CITATION SOURCE CLOSURE COMPLETE — HIGH-RISK BLOCKERS CLOSED | Claim-label preservation verified in generated artifact | Preserve source labels during final proof |
 
-The source coverage matrix has been updated through Phase 1D-11 as a coverage and closure ledger. Appendix G remains revalidated provisional, not final, and no score is a final vendor score, ranking, procurement recommendation, certification, or legal compliance proof.
+The source coverage matrix has been updated through Phase 1D-11 as a coverage and closure ledger. Appendix G remains revalidated provisional, not final, and no score is a vendor ranking, procurement recommendation, certification, or legal compliance proof.

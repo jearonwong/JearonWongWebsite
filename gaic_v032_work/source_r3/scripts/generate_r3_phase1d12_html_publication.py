@@ -196,7 +196,7 @@ SYSTEM_PROFILES = [
         "alcs_range": "80-88",
         "confidence": "Partially source-bound / L5 analytical inference",
         "score_basis": "Protocol materials support lifecycle semantics; traditional product-governance posture remains implementation-dependent, while MRO-adjusted mapping is strong but author analytical.",
-        "score_safety": "Range-backed score is safe as a provisional analytical profile, not as a final vendor score.",
+        "score_safety": "Range-backed score is safe as a provisional analytical profile, not as a vendor ranking or procurement selection signal.",
         "x": 88,
         "y": 84,
         "visible_strength": "Protocol-level lifecycle semantics for responsibility objects, evidence pointers, and closure records.",
@@ -291,7 +291,7 @@ SYSTEM_PROFILES = [
         "lifecycle_gap": "Lifecycle responsibility object coverage depends on how teams bind ADK/runtime behavior to evidence and accountability controls.",
         "evidence_basis": "Official Google documentation; agentic lifecycle conformance is mapped analytically where not directly specified.",
         "interpretation": "Google shows strong RCCS-T across platform governance, safety, and operational AI services. RCCS-M remains partial because lifecycle responsibility object conformance depends on how ADK and platform services are bound to enterprise evidence and accountability records.",
-        "boundary": "Source-qualified posture only; no vendor ordering or final vendor score.",
+        "boundary": "Source-qualified posture only; no vendor ordering or procurement selection signal.",
     },
     {
         "system": "LangGraph + LangSmith",
@@ -403,7 +403,7 @@ CHAPTER_HIERARCHY = {
     "06-missing-regulatory-objects.md": ("Sixteen MROs define the missing lifecycle responsibility layer.", "Without these objects, authority, evidence, privacy, substitution, and closure remain implicit.", "Canonical MRO dictionary and object field model.", "MROs provide analytical object structure, not a certification checklist."),
     "07-rccs-regulatory-compliance-coverage.md": ("RCCS measures traditional regulatory coverage separately from lifecycle conformance.", "Separating RCCS prevents model governance strength from being mistaken for agentic lifecycle assurance.", "RCCS dimensions, rubrics, and evidence multipliers.", "RCCS is not a legal compliance score and does not prove implementation."),
     "08-alcs-agentic-lifecycle-conformance.md": ("ALCS measures lifecycle conformance surfaces that RCCS alone does not capture.", "Agentic systems need authority, responsibility, evidence, privacy, substitution, and closure posture review.", "ALCS dimensions mapped to MROs.", "ALCS is an analytical lifecycle posture model, not deployment-readiness certification."),
-    "09-composite-scoring-method.md": ("RCCS-T, RCCS-M, and ALCS can be combined analytically, but evidence confidence changes interpretation.", "A high conceptual score without source support should not be treated as strong posture.", "Canonical multipliers and composite formula.", "Composite outputs are provisional analytical profiles, not final vendor scores."),
+    "09-composite-scoring-method.md": ("RCCS-T, RCCS-M, and ALCS can be combined analytically, but evidence confidence changes interpretation.", "A high conceptual score without source support should not be treated as strong posture.", "Canonical multipliers and composite formula.", "Composite outputs are provisional analytical profiles, not vendor rankings."),
     "10-enterprise-control-crosswalk.md": ("Lifecycle objects can be translated into enterprise controls and procurement questions.", "Governance must connect lifecycle semantics to board, risk, security, privacy, and procurement operations.", "Control crosswalk and enterprise adoption mapping.", "The crosswalk supports due diligence; it does not recommend vendors."),
     "11-comparative-field.md": ("Current systems expose different lifecycle strengths and gaps by category.", "Readers need category context before reading system mappings.", "Qualitative positioning across protocol, platform, SDK, and orchestration categories.", "The comparison is source-qualified and non-ranking."),
     "12-detailed-system-mappings.md": ("System mappings show uneven visible coverage across RCCS-T/RCCS-M/ALCS/MRO surfaces.", "The paper needs explicit profiles so readers can separate method, result, and evidence.", "Source-qualified mapping across eight evaluated systems.", "Profiles are provisional, evidence-bound, and not procurement recommendations."),
@@ -939,7 +939,7 @@ def svg_quadrant_chart(chart_id: str, title: str, profiles: list[dict[str, str]]
         )
     pieces.extend(
         [
-        '<text x="92" y="474" class="chart-note">Positions use RCCS-M and ALCS provisional analytical scores in fixed source order; no leaderboard or final vendor score is implied.</text>',
+        '<text x="92" y="474" class="chart-note">Positions use RCCS-M and ALCS provisional analytical scores in fixed source order; no leaderboard or procurement selection signal is implied.</text>',
             "</svg>",
         ]
     )
@@ -1090,9 +1090,9 @@ def chart_blocks() -> tuple[dict[str, str], list[ChartRecord]]:
         "grouped bar chart",
         score_bar_svg,
         "The chart separates traditional governance coverage (RCCS-T), MRO-adjusted agentic regulatory coverage (RCCS-M), and lifecycle conformance (ALCS). This makes MPLP's protocol-level lifecycle strength visible without inflating its traditional product-governance score.",
-        "Scores are analytical profiles, not final vendor scores, rankings, legal compliance proof, certifications, regulatory approval signals, or procurement recommendations.",
+        "Scores are analytical profiles, not vendor rankings, legal compliance proof, certifications, regulatory approval signals, or procurement recommendations.",
     )
-    records.append(ChartRecord("chart-rccs-alcs-score-bars", "RCCS-T / RCCS-M / ALCS Provisional Analytical Score Comparison", "grouped bar chart", "Evaluation Results", "Provisional RCCS-T/RCCS-M/ALCS score ranges from source-qualified profiles", "Fixed order; no ranking or final vendor score", True))
+    records.append(ChartRecord("chart-rccs-alcs-score-bars", "RCCS-T / RCCS-M / ALCS Provisional Analytical Score Comparison", "grouped bar chart", "Evaluation Results", "Provisional RCCS-T/RCCS-M/ALCS score ranges from source-qualified profiles", "Fixed order; no ranking or procurement selection signal", True))
 
     quadrant_svg = svg_quadrant_chart(
         "chart-rccs-alcs-quadrant",
@@ -1105,7 +1105,7 @@ def chart_blocks() -> tuple[dict[str, str], list[ChartRecord]]:
         "score scatter / quadrant chart",
         quadrant_svg,
         "The chart places evaluated systems by MRO-adjusted regulatory coverage and lifecycle conformance, so the reader can see the agentic lifecycle result pattern without converting the comparison into a leaderboard.",
-        "Positions are not final vendor scores, rankings, procurement recommendations, certification claims, or legal compliance proof.",
+        "Positions are not vendor rankings, procurement recommendations, certification claims, or legal compliance proof.",
     )
     records.append(ChartRecord("chart-rccs-alcs-quadrant", "RCCS-M / ALCS Provisional Analytical Score Map", "score scatter / quadrant chart", "Evaluation Results", "Provisional RCCS-M/ALCS scores from source-qualified profiles", "No rank order or final scores", True))
 
@@ -1188,7 +1188,7 @@ def evaluation_results_html(chart_html: dict[str, str]) -> str:
         [
             '<section class="evaluation-results chapter" id="evaluation-results-rccs-t-rccs-m-alcs-provisional-analytical-profiles">',
             "<h1>Evaluation Results: RCCS-T / RCCS-M / ALCS Provisional Analytical Profiles</h1>",
-            '<div class="chapter-finding-panel evaluation-finding"><div><strong>Main Result</strong><span>Traditional regulatory coverage and agentic lifecycle regulatory coverage are not the same. RCCS-T captures familiar governance surfaces; RCCS-M shows whether those obligations can be expressed through MRO-style lifecycle responsibility objects.</span></div><div><strong>Method</strong><span>Scores use the 0-100 provisional analytical scale, source-qualified evidence labels, and bounded RCCS-T/RCCS-M/ALCS interpretation.</span></div><div><strong>Boundary</strong><span>Scores are not final vendor scores, rankings, procurement recommendations, certifications, regulatory approval signals, or legal compliance proof.</span></div></div>',
+            '<div class="chapter-finding-panel evaluation-finding"><div><strong>Main Result</strong><span>Traditional regulatory coverage and agentic lifecycle regulatory coverage are not the same. RCCS-T captures familiar governance surfaces; RCCS-M shows whether those obligations can be expressed through MRO-style lifecycle responsibility objects.</span></div><div><strong>Method</strong><span>Scores use the 0-100 provisional analytical scale, source-qualified evidence labels, and bounded RCCS-T/RCCS-M/ALCS interpretation.</span></div><div><strong>Boundary</strong><span>Scores are not vendor rankings, procurement recommendations, certifications, regulatory approval signals, or legal compliance proof.</span></div></div>',
             "<h2>How to Read the Scores</h2>",
             "<p>Each system receives three profile signals. <strong>RCCS-T</strong> measures traditional regulatory and governance coverage such as risk management, data governance, documentation, records, transparency, human oversight, security, accountability, contestability, and monitoring. <strong>RCCS-M</strong> measures whether those obligations are expressible through Missing Regulatory Objects required for agentic lifecycle responsibility compliance. <strong>ALCS</strong> measures lifecycle responsibility conformance. Ranges show uncertainty where source support is mixed, access-limited, or partly inferential.</p>",
             '<div class="score-legend"><div><strong>RCCS-T</strong>Traditional Regulatory Compliance Coverage Score.</div><div><strong>RCCS-M</strong>MRO-Adjusted Regulatory Compliance Coverage Score.</div><div><strong>ALCS</strong>Agentic Lifecycle Conformance Score.</div></div>',
@@ -4234,7 +4234,7 @@ The active source supports publication-facing **provisional analytical scores/ra
 
 - Exact operational conformance remains unverified.
 - Scores are displayed in fixed source order, not score order.
-- Scores are not final vendor scores, rankings, procurement recommendations, legal compliance proof, certifications, regulatory approval signals, or deployment-readiness guarantees.
+- Scores are not vendor rankings, procurement recommendations, legal compliance proof, certifications, regulatory approval signals, or deployment-readiness guarantees.
 - OpenAI platform guide HTTP 403 is a non-blocking access note after accessible official SDK documentation replaced it for narrowed SDK-surface claims.
 - Product/platform source gaps are reflected in confidence labels and L5 analytical mapping notes rather than hidden behind false precision.
 """,
@@ -4255,7 +4255,7 @@ The active source supports publication-facing **provisional analytical scores/ra
 - Label: Provisional Analytical Score.
 - Confidence labels: Source-bound, Partially source-bound, L5 analytical inference, and platform-guide access note where applicable.
 - Display order: fixed system order from the source mapping, not score order.
-- Boundary: Scores are analytical profiles, not final vendor scores, rankings, legal compliance proof, certifications, regulatory approval signals, or procurement recommendations.
+- Boundary: Scores are analytical profiles, not vendor rankings, legal compliance proof, certifications, regulatory approval signals, or procurement recommendations.
 
 ## Scores
 

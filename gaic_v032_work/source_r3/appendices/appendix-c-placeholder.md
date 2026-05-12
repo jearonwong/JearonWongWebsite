@@ -178,7 +178,7 @@ The following table lists Phase 1D-11 source closure results after claim-level s
 
 - **L5 sources (author inference)** are used in Chapters 6-9, 11-12, and 15 to define the analytical framework (MROs, RCCS-T, RCCS-M, ALCS, optional composite views, System Mapping, Failure Scenarios). These sources are marked as author inference and do not replace evidence-based analysis.
 
-- **AUTHOR-INFERENCE-RCCS-M** marks the MRO-adjusted regulatory coverage model. RCCS-M is an author analytical, forward-looking model grounded in MRO analysis. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a final vendor score, or an official standard.
+- **AUTHOR-INFERENCE-RCCS-M** marks the MRO-adjusted regulatory coverage model. RCCS-M is an author analytical, forward-looking model grounded in MRO analysis. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a vendor ranking, or an official standard.
 
 - **MPLP and Validation Lab sources** require special attention due to author conflict of interest. The author of this white paper is also the creator of MPLP and Validation Lab. Phase 1C follow-up verified that MPLP and Validation Lab remain positioned as examples, not required or exclusive solutions; publication-candidate QA must preserve that boundary.
 

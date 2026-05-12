@@ -43,7 +43,7 @@
 | Primary thesis | AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance. |
 | Protocol boundary | MPLP is discussed as a lifecycle protocol path, not as a certification program, legal authority, cloud platform, or exclusive compliance method. |
 | Validation boundary | Validation Lab is referenced as a non-certifying evidence adjudication example, not as a regulator, conformity assessment body, certification authority, market endorsement program, or legal compliance certification mechanism. |
-| Scoring boundary | RCCS-T / RCCS-M / ALCS is a three-profile analytical model, not legal compliance proof, certification, a regulator-approved benchmark, a final vendor score, a ranking, or procurement advice. |
+| Scoring boundary | RCCS-T / RCCS-M / ALCS is a three-profile analytical model, not legal compliance proof, certification, a regulator-approved benchmark, a vendor ranking, or procurement advice. |
 | System mapping boundary | System mappings are responsibility-semantics comparisons, not product endorsements or procurement recommendations. |
 
 ---
@@ -285,7 +285,7 @@ Conceptual flow:
 RCCS-T -> MRO Adjustment Layer -> RCCS-M -> ALCS
 ```
 
-RCCS-M is an author analytical, forward-looking, MRO-adjusted model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, a final vendor score, ranking, or procurement recommendation.
+RCCS-M is an author analytical, forward-looking, MRO-adjusted model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, vendor ranking, or procurement recommendation.
 
 ### Missing Regulatory Objects
 

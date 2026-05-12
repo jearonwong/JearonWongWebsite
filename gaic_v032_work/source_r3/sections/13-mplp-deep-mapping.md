@@ -23,12 +23,12 @@ MPLP is a lifecycle protocol path for expressing agentic responsibility objects.
 | Claim Area | Allowed Framing | Forbidden Framing |
 |------------|-----------------|-------------------|
 | Protocol identity | MPLP is a lifecycle protocol path for expressing agentic responsibility objects | MPLP is the official standard; MPLP is required for compliance |
-| Compliance relationship | MPLP may show limited RCCS-T product-platform coverage while mapping strongly to RCCS-M and ALCS because those profiles measure lifecycle responsibility semantics | MPLP certifies compliance; MPLP proves legal compliance |
-| Certification | MPLP can be evaluated as one example of protocol-level lifecycle governance | MPLP is a certification program; MPLP certifies systems |
+| Compliance relationship | MPLP may show limited RCCS-T product-platform coverage while mapping strongly to RCCS-M and ALCS because those profiles measure lifecycle responsibility semantics | MPLP issues compliance certificates; MPLP proves legal compliance |
+| Certification | MPLP can be evaluated as one example of protocol-level lifecycle governance | MPLP is a certification program; MPLP issues system certificates |
 | Legal authority | MPLP defines protocol semantics for lifecycle governance | MPLP is a regulator; MPLP is a legal authority |
 | Vendor status | MPLP is a protocol specification | MPLP is a cloud platform; MPLP is a vendor product |
 | Implementation maturity | MPLP requires implementation validation and enterprise integration | MPLP is production-ready; MPLP proves deployment maturity |
-| Validation Lab relationship | Validation Lab may be referenced separately as a non-certifying evidence adjudication example | Validation Lab certifies compliance; Validation Lab is a certification authority |
+| Validation Lab relationship | Validation Lab may be referenced separately as a non-certifying evidence adjudication example | Validation Lab issues compliance certificates; Validation Lab is a certification authority |
 | Industry adoption | MPLP adoption requires market validation | MPLP is industry-standard; MPLP is regulator-approved |
 | System mapping | MPLP can be compared to other systems by responsibility semantics | Other systems are non-compliant; MPLP is the only solution |
 
@@ -156,12 +156,12 @@ The following table explicitly restates forbidden claims to prevent overclaim.
 
 | Area | Permitted Statement | Prohibited Statement |
 |------|---------------------|----------------------|
-| Compliance | MPLP is one lifecycle protocol path; MPLP may express lifecycle responsibility objects | MPLP is required for compliance; MPLP certifies compliance; MPLP proves legal compliance |
-| Certification | MPLP can be evaluated as one example of protocol-level lifecycle governance | MPLP is a certification program; MPLP certifies systems; MPLP guarantees compliance |
+| Compliance | MPLP is one lifecycle protocol path; MPLP may express lifecycle responsibility objects | MPLP is required for compliance; MPLP issues compliance certificates; MPLP proves legal compliance |
+| Certification | MPLP can be evaluated as one example of protocol-level lifecycle governance | MPLP is a certification program; MPLP issues system certificates; MPLP guarantees compliance |
 | Legal authority | MPLP defines protocol semantics for lifecycle governance | MPLP is a regulator; MPLP is a legal authority; MPLP is regulator-approved |
 | Regulatory recognition | MPLP adoption requires regulatory interpretation | MPLP is regulator-approved; MPLP is the official standard; MPLP is mandated by regulation |
 | Enterprise readiness | MPLP requires implementation validation and enterprise integration | MPLP proves enterprise readiness; MPLP is production-ready; MPLP guarantees operational effectiveness |
-| Validation Lab | Validation Lab may serve as a non-certifying evidence adjudication example | Validation Lab certifies compliance; Validation Lab is a certification authority; Validation Lab proves legal compliance |
+| Validation Lab | Validation Lab may serve as a non-certifying evidence adjudication example | Validation Lab issues compliance certificates; Validation Lab is a certification authority; Validation Lab proves legal compliance |
 | RCCS-T/RCCS-M/ALCS | MPLP may have limited RCCS-T product-platform coverage while mapping strongly to RCCS-M and ALCS dimensions; actual deployment requires implementation evidence | RCCS-T/RCCS-M/ALCS proves legal compliance; high MPLP alignment guarantees compliance; MPLP satisfies all scoring requirements |
 | Market adoption | MPLP adoption requires market validation and organizational acceptance | MPLP is industry-standard; MPLP is universally adopted; MPLP is the only solution |
 | System comparison | MPLP can be compared to other systems by responsibility semantics | Other systems are non-compliant; MPLP is superior; systems without MPLP fail compliance |

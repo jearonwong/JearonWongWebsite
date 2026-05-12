@@ -10,7 +10,7 @@ This appendix provides detailed scoring rubrics for all ten RCCS (Regulatory Com
 
 RCCS-M uses the same ten dimensions and weights but applies MRO adjustment tests. RCCS-M evaluates whether the traditional regulatory obligation can be represented as Missing Regulatory Objects and lifecycle responsibility semantics. High RCCS-T does not automatically imply high RCCS-M.
 
-These rubrics are analytical tools for evaluating system capability. They are not legal compliance scores, certifications, regulatory approvals, legal compliance proof, regulator-approved benchmarks, procurement benchmarks, final vendor scores, or rankings.
+These rubrics are analytical tools for evaluating system capability. They are not legal compliance scores, certifications, regulatory approvals, legal compliance proof, regulator-approved benchmarks, procurement benchmarks, vendor rankings, or procurement selection signals.
 
 **Boundary statement:**
 
@@ -302,7 +302,7 @@ RCCS-M uses the same ten RCCS dimensions as RCCS-T, but each dimension is tested
 - Generic logs can support RCCS-T Record-Keeping but not RCCS-M unless partitioned by authority, agent/tool action, evidence pointer, privacy boundary, accepted outcome, and closure state.
 - Approval UI can support RCCS-T Human Oversight but not RCCS-M unless bound to human-role responsibility, delegated scope, escalation, drift detection, and accepted outcome authority.
 
-RCCS-M remains author analytical, forward-looking, and MRO-adjusted. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a final vendor score, or an official standard.
+RCCS-M remains author analytical, forward-looking, and MRO-adjusted. It is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, a vendor ranking, or an official standard.
 
 ---
 
@@ -390,4 +390,4 @@ Dimension Score: (4/5) × 100 × 0.85 = 68.0
 - RCCS scores are context-independent; organizations must interpret within their legal, regulatory, and operational context
 - RCCS scores require evidence; evidence level affects score multiplier
 - RCCS scores are not product rankings; they compare systems by regulatory compliance coverage primitives
-- RCCS-M is author analytical, forward-looking, and MRO-adjusted; it is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, or a final vendor score
+- RCCS-M is author analytical, forward-looking, and MRO-adjusted; it is not current law, certification, legal compliance proof, a regulator-approved benchmark, a procurement benchmark, or a vendor ranking

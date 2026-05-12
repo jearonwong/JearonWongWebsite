@@ -1,0 +1,3476 @@
+{
+  "generated_at": "2026-05-12T10:52:25",
+  "phase": "1D-13E",
+  "artifact": "html_publication_targeted_rccs_m_cleanup_and_table_blocker_repair",
+  "phase_1d12_status": "PHASE 1D-13E TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
+  "root": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3",
+  "branch": "main",
+  "source_commit": "7b6e1133ca3ae5db95128c7cb3b15a4ce58bae2f",
+  "origin_head": "7b6e1133ca3ae5db95128c7cb3b15a4ce58bae2f\tHEAD",
+  "source_files": [
+    "sections/00-front-matter.md",
+    "sections/01-scope-methodology.md",
+    "sections/02-missing-layer.md",
+    "sections/03-agentic-ai-breaks-model-compliance.md",
+    "sections/04-regulatory-standards-baseline.md",
+    "sections/05-regulatory-language-to-engineering-objects.md",
+    "sections/06-missing-regulatory-objects.md",
+    "sections/07-rccs-regulatory-compliance-coverage.md",
+    "sections/08-alcs-agentic-lifecycle-conformance.md",
+    "sections/09-composite-scoring-method.md",
+    "sections/10-enterprise-control-crosswalk.md",
+    "sections/11-comparative-field.md",
+    "sections/12-detailed-system-mappings.md",
+    "sections/13-mplp-deep-mapping.md",
+    "sections/14-evidence-validation-placeholder.md",
+    "sections/15-failure-scenarios-placeholder.md",
+    "sections/16-companion-paper-boundary.md",
+    "sections/17-adoption-roadmap-placeholder.md",
+    "sections/18-conclusion-placeholder.md",
+    "appendices/appendix-a-placeholder.md",
+    "appendices/appendix-b-placeholder.md",
+    "appendices/appendix-c-placeholder.md",
+    "appendices/appendix-d-placeholder.md",
+    "appendices/appendix-e-placeholder.md",
+    "appendices/appendix-f-placeholder.md",
+    "appendices/appendix-g-placeholder.md",
+    "appendices/appendix-h-placeholder.md",
+    "appendices/appendix-i-placeholder.md",
+    "appendices/appendix-j-placeholder.md",
+    "appendices/appendix-k-placeholder.md"
+  ],
+  "html_path": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/out/phase_1d13e/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v9.html",
+  "pdf_path": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/out/phase_1d13e/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v9.pdf",
+  "docx_path": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/out/phase_1d13e/html_publication/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v9.docx",
+  "pdf_text_path": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/out/phase_1d13e/html_publication/phase_1d13e_pdf_text.txt",
+  "output_directory": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/out/phase_1d13e/html_publication",
+  "design_system": "design/gaic-html-publication-style.md",
+  "style_reference_report": "reports/phase-1d7-genspark-style-analysis.md",
+  "architecture_report": "reports/phase-1d7-html-renderer-architecture.md",
+  "fresh_generation_from_source_r3_only": true,
+  "old_docx_pdf_used_as_input": false,
+  "genspark_text_used_as_content": false,
+  "html_pdf_visual_source_of_truth": true,
+  "docx_editable_derivative": true,
+  "publication_candidate_declared": true,
+  "final_publication_declared": false,
+  "pdf_export_engine": "Chrome headless print-to-PDF",
+  "docx_export_engine": "python-docx from same Phase 1D-13E structured source",
+  "docx_export_stdout": "python-docx editable derivative from Phase 1D-12 structured source",
+  "pdf_page_count": 448,
+  "rendered_page_count": 448,
+  "table_records": [
+    {
+      "table_id": "T-FM-01",
+      "caption": "Table T-FM-01: Document Control and Positioning",
+      "source_file": "sections/00-front-matter.md",
+      "rows": 15,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-FM-02",
+      "caption": "Table T-FM-02: Publication Scope Boundaries",
+      "source_file": "sections/00-front-matter.md",
+      "rows": 7,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-FM-03",
+      "caption": "Table T-FM-03: Conflict of Interest Boundary Controls",
+      "source_file": "sections/00-front-matter.md",
+      "rows": 6,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-FM-04",
+      "caption": "Table T-FM-04: Evidence Levels",
+      "source_file": "sections/00-front-matter.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-FM-05",
+      "caption": "Table T-FM-05: Version History",
+      "source_file": "sections/00-front-matter.md",
+      "rows": 4,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-01-01",
+      "caption": "Table T-01-01: In Scope / Out of Scope",
+      "source_file": "sections/01-scope-methodology.md",
+      "rows": 7,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-01-02",
+      "caption": "Table T-01-02: Evidence Basis Levels (detailed)",
+      "source_file": "sections/01-scope-methodology.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/01-scope-methodology.md",
+      "rows": 6,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-02-01",
+      "caption": "Table T-02-01: Governance Layer Comparison",
+      "source_file": "sections/02-missing-layer.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-03-01",
+      "caption": "Table T-03-01: Failure Mode Comparison",
+      "source_file": "sections/03-agentic-ai-breaks-model-compliance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-04-01",
+      "caption": "Table T-04-01: Regulatory Frameworks Baseline",
+      "source_file": "sections/04-regulatory-standards-baseline.md",
+      "rows": 8,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-05-01",
+      "caption": "Table T-05-01: Regulatory Language to Engineering Objects Mapping",
+      "source_file": "sections/05-regulatory-language-to-engineering-objects.md",
+      "rows": 10,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 17,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 16,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "rows": 6,
+      "cols": 2,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-01",
+      "caption": "Table T-07-01: RCCS Dimensions Summary",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-01A",
+      "caption": "Table T-07-01A: RCCS-T Dimension to RCCS-M MRO Adjustment Test",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 11,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-02A",
+      "caption": "Table T-07-02A: RCCS-T vs RCCS-M 0-5 Scoring Lens",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-02",
+      "caption": "Table T-07-02: RCCS Dimension Score Calculation Formula",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 6,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-03",
+      "caption": "Table T-07-03: RCCS-01 Risk Management Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-04",
+      "caption": "Table T-07-04: RCCS-02 Data Governance Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-05",
+      "caption": "Table T-07-05: RCCS-03 Documentation Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-06",
+      "caption": "Table T-07-06: RCCS-04 Record-Keeping Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-07",
+      "caption": "Table T-07-07: RCCS-05 Transparency Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-08",
+      "caption": "Table T-07-08: RCCS-06 Human Oversight Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-09",
+      "caption": "Table T-07-09: RCCS-07 Security Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-10",
+      "caption": "Table T-07-10: RCCS-08 Accountability Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-11",
+      "caption": "Table T-07-11: RCCS-09 Contestability Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-12",
+      "caption": "Table T-07-12: RCCS-10 Monitoring Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-01",
+      "caption": "Table T-08-01: ALCS Dimensions Summary",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 16,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-02",
+      "caption": "Table T-08-02: ALCS-to-MRO Mapping",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 16,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-02A",
+      "caption": "Table T-08-02A: MRO-16 Evaluation Path",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-03",
+      "caption": "Table T-08-03: ALCS-01 Human-Role-to-MAS Responsibility Mapping Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-04",
+      "caption": "Table T-08-04: ALCS-02 Delegated Authority Boundary Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-05",
+      "caption": "Table T-08-05: ALCS-03 Agent Role vs Human Role Distinction Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-06",
+      "caption": "Table T-08-06: ALCS-04 Accepted Outcome Compliance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-07",
+      "caption": "Table T-08-07: ALCS-05 Tool-Action Liability Boundary Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-08",
+      "caption": "Table T-08-08: ALCS-06 Responsibility Transfer Across Agents Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-09",
+      "caption": "Table T-08-09: ALCS-07 Authority Drift Detection Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-10",
+      "caption": "Table T-08-10: ALCS-08 MAS Evidence Partitioning Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-11",
+      "caption": "Table T-08-11: ALCS-09 Cross-Project Reuse Compliance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-12",
+      "caption": "Table T-08-12: ALCS-10 Privacy/GDPR Lifecycle Mapping Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-13",
+      "caption": "Table T-08-13: ALCS-11 Privacy-Preserving Third-Party Validation Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-14",
+      "caption": "Table T-08-14: ALCS-12 Evidence Minimization and Selective Disclosure Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-15",
+      "caption": "Table T-08-15: ALCS-13 Data Subject Rights vs Evidence Retention Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-16",
+      "caption": "Table T-08-16: ALCS-14 Third-Party Processor/Subprocessor Chain Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-17",
+      "caption": "Table T-08-17: ALCS-15 Vendor/Model/Runtime Substitution Conformance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-09-01",
+      "caption": "Table T-09-01: Composite Score Calculation Example",
+      "source_file": "sections/09-composite-scoring-method.md",
+      "rows": 9,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-09-02",
+      "caption": "Table T-09-02: Evidence Multiplier Values",
+      "source_file": "sections/09-composite-scoring-method.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-09-03",
+      "caption": "Table T-09-03: RCCS-T / RCCS-M / ALCS Interpretation Matrix",
+      "source_file": "sections/09-composite-scoring-method.md",
+      "rows": 5,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 13,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 13,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-10-02",
+      "caption": "Table T-10-02: Model Risk Management in Agentic Systems",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-10-03",
+      "caption": "Table T-10-03: Cybersecurity Control Mapping",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-10-04",
+      "caption": "Table T-10-04: Board Reporting Elements for Agentic AI",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-10-05",
+      "caption": "Table T-10-05: Agentic AI Procurement Scorecard",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-10-06",
+      "caption": "Table T-10-06: Lifecycle Monitoring Indicators",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-11-01",
+      "caption": "Table T-11-01: Comparative Field Positioning Matrix",
+      "source_file": "sections/11-comparative-field.md",
+      "rows": 9,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-11-02",
+      "caption": "Table T-11-02: Comparison Boundary Table",
+      "source_file": "sections/11-comparative-field.md",
+      "rows": 9,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-01",
+      "caption": "Table T-12-01: System Mapping Evidence Scale",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 2,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 2,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-02",
+      "caption": "Table T-12-02: MPLP RCCS-T / RCCS-M Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 13,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-03",
+      "caption": "Table T-12-03: MPLP ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-04",
+      "caption": "Table T-12-04: IBM watsonx.governance RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-05",
+      "caption": "Table T-12-05: IBM watsonx.governance ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-06",
+      "caption": "Table T-12-06: Microsoft Azure AI Foundry RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-07",
+      "caption": "Table T-12-07: Microsoft Azure AI Foundry ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-08",
+      "caption": "Table T-12-08: AWS Bedrock / Guardrails / AgentCore RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-09",
+      "caption": "Table T-12-09: AWS Bedrock / Guardrails / AgentCore ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-10",
+      "caption": "Table T-12-10: Google Vertex AI / ADK / Model Armor RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-11",
+      "caption": "Table T-12-11: Google Vertex AI / ADK / Model Armor ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-12",
+      "caption": "Table T-12-12: LangGraph / LangSmith RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-13",
+      "caption": "Table T-12-13: LangGraph / LangSmith ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-14",
+      "caption": "Table T-12-14: OpenAI Agents SDK RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-15",
+      "caption": "Table T-12-15: OpenAI Agents SDK ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-16",
+      "caption": "Table T-12-16: CrewAI RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-17",
+      "caption": "Table T-12-17: CrewAI ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-18",
+      "caption": "Table T-12-18: Chapter 12 Synthesis Matrix",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-01",
+      "caption": "Table T-13-01: MPLP Boundary Statement",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 10,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-02",
+      "caption": "Table T-13-02: MPLP Mapping to the Sixteen Missing Regulatory Objects",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 17,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-13-03",
+      "caption": "Table T-13-03: MPLP Mapping to RCCS-T and RCCS-M Dimensions",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 13,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-04",
+      "caption": "Table T-13-04: MPLP Mapping to ALCS Dimensions",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 16,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-13-05",
+      "caption": "Table T-13-05: Protocol Semantics vs Operational Evidence",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 8,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-06",
+      "caption": "Table T-13-06: MPLP Non-Claim Discipline",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 10,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-14-01",
+      "caption": "Table T-14-01: Evidence-Based Validation Pattern Components",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-14-02",
+      "caption": "Table T-14-02: Evidence-Based Validation Pattern Boundary",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 8,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-14-03",
+      "caption": "Table T-14-03: Validation Lab Boundary Statement",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 8,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-14-04",
+      "caption": "Table T-14-04: Evidence-Based Validation Pattern Mapping to MROs and ALCS",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-01",
+      "caption": "Table T-15-01: Failure Mode Categories",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 5,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-02",
+      "caption": "Table T-15-02: Lifecycle Governance Gap to Failure Mapping",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 15,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-03",
+      "caption": "Table T-15-03: Failure Scenario Summary",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-04",
+      "caption": "Table T-15-04: Prevention and Remediation Patterns",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/16-companion-paper-boundary.md",
+      "rows": 13,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/16-companion-paper-boundary.md",
+      "rows": 12,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "sections/16-companion-paper-boundary.md",
+      "rows": 8,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-17-01",
+      "caption": "Table T-17-01: Adoption Maturity Levels",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-02",
+      "caption": "Table T-17-02: Pilot Project Selection Criteria",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 8,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-03",
+      "caption": "Table T-17-03: Existing Enterprise Control Integration",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 9,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-04",
+      "caption": "Table T-17-04: Adoption Roadmap by Stage",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-05",
+      "caption": "Table T-17-05: RCCS-T / RCCS-M / ALCS Use in Adoption",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-18-01",
+      "caption": "Table T-18-01: White Paper Contribution Summary",
+      "source_file": "sections/18-conclusion-placeholder.md",
+      "rows": 9,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-18-02",
+      "caption": "Table T-18-02: Non-Claims and Boundaries",
+      "source_file": "sections/18-conclusion-placeholder.md",
+      "rows": 9,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-A-01",
+      "caption": "Table T-A-01: Appendix A Template Index",
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "rows": 17,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-01",
+      "caption": "Table T-B-01: RCCS-T / RCCS-M / ALCS Dimension Scorecard Template",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 5,
+      "cols": 10,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-02",
+      "caption": "Table T-B-02: Three-Profile Analytical Score Worksheet",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 4,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-03",
+      "caption": "Table T-B-03: Score Delta Record",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 4,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-04",
+      "caption": "Table T-B-04: Negative Control Checklist",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-C-01",
+      "caption": "Table T-C-01: Evidence Level Policy",
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 4,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 19,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": null,
+      "caption": null,
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 8,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-C-02",
+      "caption": "Table T-C-02: Source Register",
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 34,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-C-03",
+      "caption": "Table T-C-03: Citation Revalidation Queue",
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 10,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "single table",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-D-01",
+      "caption": "Table T-D-01: Expanded Cross-System MRO Mapping",
+      "source_file": "appendices/appendix-d-placeholder.md",
+      "rows": 17,
+      "cols": 11,
+      "rendered_tables": 3,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-E-01",
+      "caption": "Table T-E-01: RCCS-01 Risk Management Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-02",
+      "caption": "Table T-E-02: RCCS-02 Data Governance Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-03",
+      "caption": "Table T-E-03: RCCS-03 Documentation Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-04",
+      "caption": "Table T-E-04: RCCS-04 Record-Keeping Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-05",
+      "caption": "Table T-E-05: RCCS-05 Transparency Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-06",
+      "caption": "Table T-E-06: RCCS-06 Human Oversight Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-07",
+      "caption": "Table T-E-07: RCCS-07 Security Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-08",
+      "caption": "Table T-E-08: RCCS-08 Accountability Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-09",
+      "caption": "Table T-E-09: RCCS-09 Contestability Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-10",
+      "caption": "Table T-E-10: RCCS-10 Monitoring Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-11",
+      "caption": "Table T-E-11: RCCS-M Adjustment Matrix",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 11,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-F-01",
+      "caption": "Table T-F-01: ALCS-01 Human-Role-to-MAS Responsibility Mapping Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-02",
+      "caption": "Table T-F-02: ALCS-02 Delegated Authority Boundary Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-03",
+      "caption": "Table T-F-03: ALCS-03 Agent Role vs Human Role Distinction Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-04",
+      "caption": "Table T-F-04: ALCS-04 Accepted Outcome Compliance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-05",
+      "caption": "Table T-F-05: ALCS-05 Tool-Action Liability Boundary Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-06",
+      "caption": "Table T-F-06: ALCS-06 Responsibility Transfer Across Agents Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-07",
+      "caption": "Table T-F-07: ALCS-07 Authority Drift Detection Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-08",
+      "caption": "Table T-F-08: ALCS-08 MAS Evidence Partitioning Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-09",
+      "caption": "Table T-F-09: ALCS-09 Cross-Project Reuse Compliance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-10",
+      "caption": "Table T-F-10: ALCS-10 Privacy/GDPR Lifecycle Mapping Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-11",
+      "caption": "Table T-F-11: ALCS-11 Privacy-Preserving Third-Party Validation Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-12",
+      "caption": "Table T-F-12: ALCS-12 Evidence Minimization and Selective Disclosure Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-13",
+      "caption": "Table T-F-13: ALCS-13 Data Subject Rights vs Evidence Retention Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-14",
+      "caption": "Table T-F-14: ALCS-14 Third-Party Processor/Subprocessor Chain Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-15",
+      "caption": "Table T-F-15: ALCS-15 Vendor/Model/Runtime Substitution Conformance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-01",
+      "caption": "Table T-G-01: MPLP Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-02",
+      "caption": "Table T-G-02: IBM watsonx.governance Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-03",
+      "caption": "Table T-G-03: Microsoft Azure AI Foundry Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-04",
+      "caption": "Table T-G-04: AWS Bedrock / Guardrails / AgentCore Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-05",
+      "caption": "Table T-G-05: Google Vertex AI / ADK / Model Armor Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-06",
+      "caption": "Table T-G-06: LangGraph / LangSmith Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-07",
+      "caption": "Table T-G-07: OpenAI Agents SDK Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-08",
+      "caption": "Table T-G-08: CrewAI Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-09",
+      "caption": "Table T-G-09: Cross-System Pattern Summary",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 12,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-01",
+      "caption": "Table T-H-01: Enterprise Procurement Scorecard",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 11,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-02",
+      "caption": "Table T-H-02: Vendor Evidence Request Template",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-03",
+      "caption": "Table T-H-03: Procurement Red Flag Checklist",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-04",
+      "caption": "Table T-H-04: Buyer Interpretation Boundary",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 7,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-01",
+      "caption": "Table T-I-01: Source Audit Register",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 21,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-02",
+      "caption": "Table T-I-02: URL Verification Queue",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 13,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-03",
+      "caption": "Table T-I-03: Evidence Level Reclassification Rules",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 8,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-04",
+      "caption": "Table T-I-04: Source Coverage Matrix Validation Checklist",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-01",
+      "caption": "Table T-J-01: v0.3.2 Gap Closure Coverage Matrix",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 16,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-02",
+      "caption": "Table T-J-02: Phase 1C Items and Current Disposition",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 13,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-03",
+      "caption": "Table T-J-03: Phase 1D Layout / Publication Items",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-01",
+      "caption": "Table T-K-01: Editorial Remediation Record",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 17,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-02",
+      "caption": "Table T-K-02: Boundary Hardening Record",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-03",
+      "caption": "Table T-K-03: Remaining Publication QA Actions",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    }
+  ],
+  "split_tables": [
+    {
+      "table_id": "T-07-01A",
+      "caption": "Table T-07-01A: RCCS-T Dimension to RCCS-M MRO Adjustment Test",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 11,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-02A",
+      "caption": "Table T-07-02A: RCCS-T vs RCCS-M 0-5 Scoring Lens",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-03",
+      "caption": "Table T-07-03: RCCS-01 Risk Management Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-04",
+      "caption": "Table T-07-04: RCCS-02 Data Governance Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-05",
+      "caption": "Table T-07-05: RCCS-03 Documentation Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-06",
+      "caption": "Table T-07-06: RCCS-04 Record-Keeping Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-07",
+      "caption": "Table T-07-07: RCCS-05 Transparency Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-08",
+      "caption": "Table T-07-08: RCCS-06 Human Oversight Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-09",
+      "caption": "Table T-07-09: RCCS-07 Security Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-10",
+      "caption": "Table T-07-10: RCCS-08 Accountability Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-11",
+      "caption": "Table T-07-11: RCCS-09 Contestability Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-07-12",
+      "caption": "Table T-07-12: RCCS-10 Monitoring Scoring Rubric",
+      "source_file": "sections/07-rccs-regulatory-compliance-coverage.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-03",
+      "caption": "Table T-08-03: ALCS-01 Human-Role-to-MAS Responsibility Mapping Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-04",
+      "caption": "Table T-08-04: ALCS-02 Delegated Authority Boundary Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-05",
+      "caption": "Table T-08-05: ALCS-03 Agent Role vs Human Role Distinction Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-06",
+      "caption": "Table T-08-06: ALCS-04 Accepted Outcome Compliance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-07",
+      "caption": "Table T-08-07: ALCS-05 Tool-Action Liability Boundary Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-08",
+      "caption": "Table T-08-08: ALCS-06 Responsibility Transfer Across Agents Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-09",
+      "caption": "Table T-08-09: ALCS-07 Authority Drift Detection Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-10",
+      "caption": "Table T-08-10: ALCS-08 MAS Evidence Partitioning Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-11",
+      "caption": "Table T-08-11: ALCS-09 Cross-Project Reuse Compliance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-12",
+      "caption": "Table T-08-12: ALCS-10 Privacy/GDPR Lifecycle Mapping Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-13",
+      "caption": "Table T-08-13: ALCS-11 Privacy-Preserving Third-Party Validation Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-14",
+      "caption": "Table T-08-14: ALCS-12 Evidence Minimization and Selective Disclosure Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-15",
+      "caption": "Table T-08-15: ALCS-13 Data Subject Rights vs Evidence Retention Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-16",
+      "caption": "Table T-08-16: ALCS-14 Third-Party Processor/Subprocessor Chain Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-08-17",
+      "caption": "Table T-08-17: ALCS-15 Vendor/Model/Runtime Substitution Conformance Scoring Rubric",
+      "source_file": "sections/08-alcs-agentic-lifecycle-conformance.md",
+      "rows": 7,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-09-03",
+      "caption": "Table T-09-03: RCCS-T / RCCS-M / ALCS Interpretation Matrix",
+      "source_file": "sections/09-composite-scoring-method.md",
+      "rows": 5,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-11-01",
+      "caption": "Table T-11-01: Comparative Field Positioning Matrix",
+      "source_file": "sections/11-comparative-field.md",
+      "rows": 9,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-01",
+      "caption": "Table T-12-01: System Mapping Evidence Scale",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-02",
+      "caption": "Table T-12-02: MPLP RCCS-T / RCCS-M Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 13,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-03",
+      "caption": "Table T-12-03: MPLP ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-04",
+      "caption": "Table T-12-04: IBM watsonx.governance RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-05",
+      "caption": "Table T-12-05: IBM watsonx.governance ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-06",
+      "caption": "Table T-12-06: Microsoft Azure AI Foundry RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-07",
+      "caption": "Table T-12-07: Microsoft Azure AI Foundry ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-08",
+      "caption": "Table T-12-08: AWS Bedrock / Guardrails / AgentCore RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-09",
+      "caption": "Table T-12-09: AWS Bedrock / Guardrails / AgentCore ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-10",
+      "caption": "Table T-12-10: Google Vertex AI / ADK / Model Armor RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-11",
+      "caption": "Table T-12-11: Google Vertex AI / ADK / Model Armor ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-12",
+      "caption": "Table T-12-12: LangGraph / LangSmith RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-13",
+      "caption": "Table T-12-13: LangGraph / LangSmith ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-14",
+      "caption": "Table T-12-14: OpenAI Agents SDK RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-15",
+      "caption": "Table T-12-15: OpenAI Agents SDK ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-16",
+      "caption": "Table T-12-16: CrewAI RCCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-17",
+      "caption": "Table T-12-17: CrewAI ALCS Mapping Summary",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 6,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-12-18",
+      "caption": "Table T-12-18: Chapter 12 Synthesis Matrix",
+      "source_file": "sections/12-detailed-system-mappings.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-02",
+      "caption": "Table T-13-02: MPLP Mapping to the Sixteen Missing Regulatory Objects",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 17,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-13-03",
+      "caption": "Table T-13-03: MPLP Mapping to RCCS-T and RCCS-M Dimensions",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 13,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-13-04",
+      "caption": "Table T-13-04: MPLP Mapping to ALCS Dimensions",
+      "source_file": "sections/13-mplp-deep-mapping.md",
+      "rows": 16,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-14-01",
+      "caption": "Table T-14-01: Evidence-Based Validation Pattern Components",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-14-04",
+      "caption": "Table T-14-04: Evidence-Based Validation Pattern Mapping to MROs and ALCS",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "rows": 11,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row-card reflow for vertical table blocker",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-01",
+      "caption": "Table T-15-01: Failure Mode Categories",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 5,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-02",
+      "caption": "Table T-15-02: Lifecycle Governance Gap to Failure Mapping",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 15,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-03",
+      "caption": "Table T-15-03: Failure Scenario Summary",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-15-04",
+      "caption": "Table T-15-04: Prevention and Remediation Patterns",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-01",
+      "caption": "Table T-17-01: Adoption Maturity Levels",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-02",
+      "caption": "Table T-17-02: Pilot Project Selection Criteria",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 8,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-03",
+      "caption": "Table T-17-03: Existing Enterprise Control Integration",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 9,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-04",
+      "caption": "Table T-17-04: Adoption Roadmap by Stage",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-17-05",
+      "caption": "Table T-17-05: RCCS-T / RCCS-M / ALCS Use in Adoption",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-18-01",
+      "caption": "Table T-18-01: White Paper Contribution Summary",
+      "source_file": "sections/18-conclusion-placeholder.md",
+      "rows": 9,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-18-02",
+      "caption": "Table T-18-02: Non-Claims and Boundaries",
+      "source_file": "sections/18-conclusion-placeholder.md",
+      "rows": 9,
+      "cols": 3,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-B-01",
+      "caption": "Table T-B-01: RCCS-T / RCCS-M / ALCS Dimension Scorecard Template",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 5,
+      "cols": 10,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-02",
+      "caption": "Table T-B-02: Three-Profile Analytical Score Worksheet",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 4,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-03",
+      "caption": "Table T-B-03: Score Delta Record",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 4,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-B-04",
+      "caption": "Table T-B-04: Negative Control Checklist",
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-C-02",
+      "caption": "Table T-C-02: Source Register",
+      "source_file": "appendices/appendix-c-placeholder.md",
+      "rows": 34,
+      "cols": 6,
+      "rendered_tables": 2,
+      "strategy": "semantic column split",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-D-01",
+      "caption": "Table T-D-01: Expanded Cross-System MRO Mapping",
+      "source_file": "appendices/appendix-d-placeholder.md",
+      "rows": 17,
+      "cols": 11,
+      "rendered_tables": 3,
+      "strategy": "semantic column split",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-E-01",
+      "caption": "Table T-E-01: RCCS-01 Risk Management Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-02",
+      "caption": "Table T-E-02: RCCS-02 Data Governance Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-03",
+      "caption": "Table T-E-03: RCCS-03 Documentation Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-04",
+      "caption": "Table T-E-04: RCCS-04 Record-Keeping Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-05",
+      "caption": "Table T-E-05: RCCS-05 Transparency Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-06",
+      "caption": "Table T-E-06: RCCS-06 Human Oversight Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-07",
+      "caption": "Table T-E-07: RCCS-07 Security Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-08",
+      "caption": "Table T-E-08: RCCS-08 Accountability Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-09",
+      "caption": "Table T-E-09: RCCS-09 Contestability Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-10",
+      "caption": "Table T-E-10: RCCS-10 Monitoring Detailed Rubric",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-E-11",
+      "caption": "Table T-E-11: RCCS-M Adjustment Matrix",
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "rows": 11,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "methodology matrix row-card reflow",
+      "high_risk": false
+    },
+    {
+      "table_id": "T-F-01",
+      "caption": "Table T-F-01: ALCS-01 Human-Role-to-MAS Responsibility Mapping Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-02",
+      "caption": "Table T-F-02: ALCS-02 Delegated Authority Boundary Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-03",
+      "caption": "Table T-F-03: ALCS-03 Agent Role vs Human Role Distinction Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-04",
+      "caption": "Table T-F-04: ALCS-04 Accepted Outcome Compliance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-05",
+      "caption": "Table T-F-05: ALCS-05 Tool-Action Liability Boundary Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-06",
+      "caption": "Table T-F-06: ALCS-06 Responsibility Transfer Across Agents Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-07",
+      "caption": "Table T-F-07: ALCS-07 Authority Drift Detection Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-08",
+      "caption": "Table T-F-08: ALCS-08 MAS Evidence Partitioning Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-09",
+      "caption": "Table T-F-09: ALCS-09 Cross-Project Reuse Compliance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-10",
+      "caption": "Table T-F-10: ALCS-10 Privacy/GDPR Lifecycle Mapping Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-11",
+      "caption": "Table T-F-11: ALCS-11 Privacy-Preserving Third-Party Validation Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-12",
+      "caption": "Table T-F-12: ALCS-12 Evidence Minimization and Selective Disclosure Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-13",
+      "caption": "Table T-F-13: ALCS-13 Data Subject Rights vs Evidence Retention Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-14",
+      "caption": "Table T-F-14: ALCS-14 Third-Party Processor/Subprocessor Chain Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-F-15",
+      "caption": "Table T-F-15: ALCS-15 Vendor/Model/Runtime Substitution Conformance Detailed Rubric",
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "rows": 7,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "rubric card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-01",
+      "caption": "Table T-G-01: MPLP Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-02",
+      "caption": "Table T-G-02: IBM watsonx.governance Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-03",
+      "caption": "Table T-G-03: Microsoft Azure AI Foundry Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-04",
+      "caption": "Table T-G-04: AWS Bedrock / Guardrails / AgentCore Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-05",
+      "caption": "Table T-G-05: Google Vertex AI / ADK / Model Armor Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-06",
+      "caption": "Table T-G-06: LangGraph / LangSmith Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-07",
+      "caption": "Table T-G-07: OpenAI Agents SDK Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-08",
+      "caption": "Table T-G-08: CrewAI Expanded Assessment",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 26,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-G-09",
+      "caption": "Table T-G-09: Cross-System Pattern Summary",
+      "source_file": "appendices/appendix-g-placeholder.md",
+      "rows": 12,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "system profile card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-01",
+      "caption": "Table T-H-01: Enterprise Procurement Scorecard",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 11,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-02",
+      "caption": "Table T-H-02: Vendor Evidence Request Template",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-03",
+      "caption": "Table T-H-03: Procurement Red Flag Checklist",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-H-04",
+      "caption": "Table T-H-04: Buyer Interpretation Boundary",
+      "source_file": "appendices/appendix-h-placeholder.md",
+      "rows": 7,
+      "cols": 4,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-01",
+      "caption": "Table T-I-01: Source Audit Register",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 21,
+      "cols": 7,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-02",
+      "caption": "Table T-I-02: URL Verification Queue",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 13,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-03",
+      "caption": "Table T-I-03: Evidence Level Reclassification Rules",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 8,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-I-04",
+      "caption": "Table T-I-04: Source Coverage Matrix Validation Checklist",
+      "source_file": "appendices/appendix-i-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-01",
+      "caption": "Table T-J-01: v0.3.2 Gap Closure Coverage Matrix",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 16,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-02",
+      "caption": "Table T-J-02: Phase 1C Items and Current Disposition",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 13,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-J-03",
+      "caption": "Table T-J-03: Phase 1D Layout / Publication Items",
+      "source_file": "appendices/appendix-j-placeholder.md",
+      "rows": 7,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-01",
+      "caption": "Table T-K-01: Editorial Remediation Record",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 17,
+      "cols": 6,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-02",
+      "caption": "Table T-K-02: Boundary Hardening Record",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 9,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    },
+    {
+      "table_id": "T-K-03",
+      "caption": "Table T-K-03: Remaining Publication QA Actions",
+      "source_file": "appendices/appendix-k-placeholder.md",
+      "rows": 6,
+      "cols": 5,
+      "rendered_tables": 1,
+      "strategy": "semantic row card reflow",
+      "high_risk": true
+    }
+  ],
+  "figure_records": [
+    {
+      "figure_id": "F-01",
+      "title": "AI Agent Lifecycle Governance Stack",
+      "source_file": "sections/00-front-matter.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-02",
+      "title": "Governance Stack / Missing Layer",
+      "source_file": "sections/02-missing-layer.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-03",
+      "title": "MRO Topology",
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-04",
+      "title": "RCCS-T / RCCS-M / ALCS Three-Profile Scoring Model",
+      "source_file": "sections/09-composite-scoring-method.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-06",
+      "title": "Enterprise Control Overlay for AI Agent Lifecycle Governance",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-07",
+      "title": "Model Risk in Agentic Lifecycle",
+      "source_file": "sections/10-enterprise-control-crosswalk.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-05",
+      "title": "Lifecycle Conformance Mapping Strength Heatmap",
+      "source_file": "sections/11-comparative-field.md",
+      "has_flow": true,
+      "has_interpretation": false
+    },
+    {
+      "figure_id": "F-08",
+      "title": "Evidence-Based Validation Pattern Flow",
+      "source_file": "sections/14-evidence-validation-placeholder.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-09",
+      "title": "Enterprise Failure Scenario Chain",
+      "source_file": "sections/15-failure-scenarios-placeholder.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-10",
+      "title": "Companion Paper Boundary Map",
+      "source_file": "sections/16-companion-paper-boundary.md",
+      "has_flow": true,
+      "has_interpretation": true
+    },
+    {
+      "figure_id": "F-11",
+      "title": "Stage 0-to-7 Adoption Roadmap",
+      "source_file": "sections/17-adoption-roadmap-placeholder.md",
+      "has_flow": true,
+      "has_interpretation": true
+    }
+  ],
+  "chart_records": [
+    {
+      "chart_id": "chart-evidence-multipliers",
+      "title": "Evidence Confidence Multipliers",
+      "chart_type": "bar chart",
+      "section_location": "Chapter 9",
+      "source_data": "Canonical L1-L5 multiplier values",
+      "boundary_note": "No vendor data or ranking",
+      "safe_for_publication": true
+    },
+    {
+      "chart_id": "chart-mro-category-distribution",
+      "title": "MRO Category Distribution",
+      "chart_type": "bar chart",
+      "section_location": "Chapter 6",
+      "source_data": "Sixteen canonical MROs grouped by lifecycle control surface",
+      "boundary_note": "Explanatory topology only",
+      "safe_for_publication": true
+    },
+    {
+      "chart_id": "chart-adoption-roadmap",
+      "title": "Stage 0-to-7 Adoption Roadmap",
+      "chart_type": "horizontal timeline",
+      "section_location": "Chapter 17",
+      "source_data": "Stage 0 through Stage 7 labels from Chapter 17",
+      "boundary_note": "Planning aid only",
+      "safe_for_publication": true
+    },
+    {
+      "chart_id": "chart-failure-scenario-distribution",
+      "title": "Enterprise Failure Scenario Distribution",
+      "chart_type": "bar chart",
+      "section_location": "Chapter 15",
+      "source_data": "Eight illustrative failure scenarios grouped by Chapter 15 category",
+      "boundary_note": "Not probability or empirical incident data",
+      "safe_for_publication": true
+    },
+    {
+      "chart_id": "chart-rccs-alcs-score-bars",
+      "title": "RCCS-T / RCCS-M / ALCS Provisional Analytical Score Comparison",
+      "chart_type": "grouped bar chart",
+      "section_location": "Evaluation Results",
+      "source_data": "Provisional RCCS-T/RCCS-M/ALCS score ranges from source-qualified profiles",
+      "boundary_note": "Fixed order; no ranking or procurement selection signal",
+      "safe_for_publication": true
+    },
+    {
+      "chart_id": "chart-rccs-alcs-quadrant",
+      "title": "RCCS-M / ALCS Provisional Analytical Score Map",
+      "chart_type": "score scatter / quadrant chart",
+      "section_location": "Evaluation Results",
+      "source_data": "Provisional RCCS-M/ALCS scores from source-qualified profiles",
+      "boundary_note": "No rank order or final scores",
+      "safe_for_publication": true
+    }
+  ],
+  "code_records": [
+    {
+      "source_file": "sections/00-front-matter.md",
+      "language": "text",
+      "line_count": 1,
+      "rendering": "code-block"
+    },
+    {
+      "source_file": "sections/06-missing-regulatory-objects.md",
+      "language": "text",
+      "line_count": 1,
+      "rendering": "code-block"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 15,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 23,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 23,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 23,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-a-placeholder.md",
+      "language": "yaml",
+      "line_count": 24,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "language": "yaml",
+      "line_count": 9,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-b-placeholder.md",
+      "language": "",
+      "line_count": 2,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "language": "",
+      "line_count": 5,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-e-placeholder.md",
+      "language": "",
+      "line_count": 5,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "language": "",
+      "line_count": 5,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "language": "",
+      "line_count": 5,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "language": "",
+      "line_count": 8,
+      "rendering": "template-code"
+    },
+    {
+      "source_file": "appendices/appendix-f-placeholder.md",
+      "language": "",
+      "line_count": 5,
+      "rendering": "template-code"
+    }
+  ],
+  "heading_count": 714,
+  "forbidden_positive_blockers": 0,
+  "citation_blockers": 0,
+  "final_unresolved_blockers": 0,
+  "remaining_limitations": [
+    "RCCS-M is an author analytical, forward-looking MRO-adjusted model; it is not current law, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.",
+    "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials, with conflict-of-interest disclosure preserved.",
+    "OpenAI platform guide remains HTTP 403 by curl; accessible official Python/JS Agents SDK docs replace it for retained SDK-surface claims.",
+    "Product/platform documentation supports visible capability surfaces only; lifecycle-object scoring remains evidence-qualified and provisional.",
+    "Appendix G remains qualitative and no-score; numeric RCCS-T/RCCS-M/ALCS profiles appear only in Evaluation Results."
+  ],
+  "qa_reports": [
+    "reports/phase-1d13e-preflight.md",
+    "reports/phase-1d13e-implementation-grounding.md",
+    "reports/phase-1d13e-vertical-table-blocker-audit.md",
+    "reports/phase-1d13e-table-rendering-repair-report.md",
+    "reports/phase-1d13e-table-visual-qa.md",
+    "reports/phase-1d13e-chapter14-rccs-m-evidence-qa.md",
+    "reports/phase-1d13e-chapter15-rccs-m-pressure-test-qa.md",
+    "reports/phase-1d13e-terminology-cleanup-qa.md",
+    "reports/phase-1d13e-visual-qa.md",
+    "reports/phase-1d13e-boundary-qa.md",
+    "reports/phase-1d13e-content-preservation-qa.md",
+    "reports/phase-1d13e-source-closure-preservation-qa.md"
+  ],
+  "qa_summary": {
+    "phase": "1D-13E",
+    "table_visual_blocker": "PASS",
+    "chapter14_rccs_m_evidence": "PASS",
+    "chapter15_rccs_m_pressure_test": "PASS",
+    "terminology_cleanup": "PASS",
+    "visual": "PASS",
+    "boundary": "PASS",
+    "content_preservation": "PASS",
+    "source_closure_preservation": "PASS",
+    "vertical_single_letter_pages": [],
+    "css_blockers": [],
+    "positive_blockers": 0,
+    "appendix_g_numeric_leaks": []
+  },
+  "phase_1d13e_status": "PHASE 1D-13E TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
+}

@@ -8,7 +8,7 @@
 
 This chapter introduces the **Agentic Lifecycle Conformance Score (ALCS)**, the lifecycle conformance profile used alongside RCCS-T and RCCS-M in this white paper. ALCS measures whether a system defines the agentic lifecycle objects required for lifecycle responsibility compliance. It evaluates whether a system can express the sixteen Missing Regulatory Objects introduced in Chapter 6.
 
-ALCS is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is an analytical framework for comparing system capabilities against lifecycle responsibility requirements. A system can have a strong RCCS score and still have a weak ALCS score. That is not a contradiction. It means the system may be strong in existing regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work.
+ALCS is not a legal compliance certification, not a conformity assessment, and not a regulatory approval. It is an analytical framework for comparing system capabilities against lifecycle responsibility requirements. A system can have a strong RCCS-T profile and still have a weak ALCS score. That is not a contradiction. It means the system may be strong in existing regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work.
 
 RCCS-T measures traditional regulatory compliance coverage. RCCS-M measures whether that coverage can be expressed through Missing Regulatory Objects. ALCS measures agentic lifecycle conformance. These are different layers, not competing scores. RCCS-M asks whether regulatory obligations can be represented through MROs. ALCS asks whether lifecycle responsibility conformance is mature across responsibility, authority, evidence, privacy, substitution, and remediation.
 
@@ -161,7 +161,7 @@ ALCS uses the same scoring procedure as RCCS. This ensures consistency and compa
 - **Traditional Composite = 0.40 × RCCS-T + 0.60 × ALCS**
 - **Agentic Composite = 0.40 × RCCS-M + 0.60 × ALCS**
 
-The primary result display remains the three-profile view: RCCS-T, RCCS-M, and ALCS. Composite views must not be used as legal compliance proof, final vendor scores, rankings, certification signals, or procurement recommendations. For complete details on the scoring procedure, including scoring rationale, evidence hierarchy, and calculation examples, see Chapter 7.3 and Chapter 9.
+The primary result display remains the three-profile view: RCCS-T, RCCS-M, and ALCS. Composite views must not be used as legal compliance proof, vendor rankings, certification signals, or procurement recommendations. For complete details on the scoring procedure, including scoring rationale, evidence hierarchy, and calculation examples, see Chapter 7.3 and Chapter 9.
 
 ---
 

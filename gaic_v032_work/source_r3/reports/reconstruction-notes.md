@@ -2621,3 +2621,41 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains in fixed non-ranked comparison order and carries the preserved conflict-of-interest / analytical-mapping boundary.
 
 **Phase 1D-12 Status:** ✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY.
+
+## Phase 1D-13E Notes (May 12, 2026)
+
+**Scope:** Targeted RCCS-M consistency cleanup and publication-blocking table rendering repair after Phase 1D-13D.
+
+**Actions completed:**
+
+1. Created `scripts/generate_r3_phase1d13e_html_publication.py` from the HTML-first renderer and generated v9 artifacts under `out/phase_1d13e/html_publication/`.
+2. Audited the Phase 1D-13D visual blocker: a table with `MRO / ALCS Dimension`, `Mapping Strength`, and `Boundary / Evidence Limit` rendered as vertical single-letter text in PDF.
+3. Repaired the blocker by forcing the unsafe MRO/ALCS mapping and boundary/evidence table shape into semantic row-card rendering while preserving table ID, caption, rows, and source content.
+4. Added safe table CSS overrides: no `word-break: break-all`, no `overflow-wrap: anywhere`, guarded table cell wrapping, and semantic classes for MRO mapping, evidence-limit, boundary-evidence, system-mapping, and RCCS-adjustment tables.
+5. Added Chapter 14 bridge text explaining Evidence-Based Validation as support for RCCS-M evidence confidence, not certification or legal compliance proof.
+6. Added Chapter 15 bridge text framing the eight illustrative/hypothetical enterprise failure scenarios as RCCS-M pressure tests.
+7. Completed minor RCCS-T/RCCS-M terminology cleanup in Chapters 8, 9, 11, and 12.
+8. Preserved Phase 1D-12 score ranges, Phase 1D-11 source closure, Phase 1D-13B global RCCS-M integration, Phase 1D-13D Chapter 7 methodology, Appendix G qualitative/no-score posture, and fixed non-ranked system order.
+
+**Generation result:**
+
+- PDF page count: 448 A4 pages.
+- Rendered PNG pages: 448.
+- Tables rendered: 189.
+- Split/reflowed tables: 118.
+- Figures: 11.
+- Charts: 6.
+- Vertical single-letter table pages after repair: 0.
+- Positive forbidden-claim blocker count: 0.
+- Citation blocker count: 0.
+- Final unresolved high-risk blockers: 0.
+
+**Boundary discipline:**
+
+- No score recalculation.
+- No new systems.
+- No vendor ranking or procurement recommendation.
+- No legal compliance proof, certification, or regulatory approval claim.
+- Appendix G remains qualitative/no-score.
+
+**Phase 1D-13E Status:** ✓ TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY.

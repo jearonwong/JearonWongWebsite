@@ -55,7 +55,7 @@ The canonical evidence multipliers are L1=1.00, L2=0.85, L3=0.75, L4=0.55, and L
 
 Public documentation may be incomplete. Absence of evidence is not evidence of absence. A system may provide a capability that is not documented publicly. A system may provide a capability that is documented but not yet validated by independent audit. A system may provide a capability that is in development but not yet released.
 
-This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. Numerical score ranges, where presented in the Evaluation Results section, are provisional analytical profiles with confidence labels and are not rankings, final vendor scores, procurement recommendations, certification signals, or legal compliance judgments.
+This chapter evaluates public evidence available as of May 2026. Vendor capability claims are source-qualified or marked as author inference. Numerical score ranges, where presented in the Evaluation Results section, are provisional analytical profiles with confidence labels and are not rankings, procurement recommendations, certification signals, or legal compliance judgments.
 
 ### Mapping Strength Scale
 
@@ -225,7 +225,7 @@ IBM watsonx.governance is an enterprise AI governance platform designed for poli
 IBM watsonx.governance is strong at enterprise AI governance. It provides policy enforcement, model governance, risk management workflows, compliance tracking, and enterprise integration capabilities. This makes IBM watsonx.governance relevant for organizations that require regulatory compliance coverage across the AI lifecycle.
 
 **What this paper evaluates:**
-- Whether IBM watsonx.governance provides governance primitives for RCCS dimensions
+- Whether IBM watsonx.governance provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether IBM watsonx.governance provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -299,7 +299,7 @@ Microsoft Azure AI Foundry is a cloud-native AI platform designed for model mana
 Microsoft Azure AI Foundry is strong at cloud AI platform capabilities. It provides model access, responsible AI tooling, content safety, tracing, observability, evaluation, and enterprise integration. This makes Microsoft Azure AI Foundry relevant for organizations that require cloud-native AI platform capabilities with responsible AI tooling.
 
 **What this paper evaluates:**
-- Whether Microsoft Azure AI Foundry provides governance primitives for RCCS dimensions
+- Whether Microsoft Azure AI Foundry provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether Microsoft Azure AI Foundry provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -374,7 +374,7 @@ AWS Bedrock / Guardrails / AgentCore is a cloud AI service suite designed for mo
 AWS Bedrock / Guardrails / AgentCore is strong at cloud AI services. It provides model access, guardrails, agent orchestration, tool use, and enterprise security integration. This makes AWS Bedrock / Guardrails / AgentCore relevant for organizations that require cloud-native AI services with guardrails and agent orchestration.
 
 **What this paper evaluates:**
-- Whether AWS Bedrock / Guardrails / AgentCore provides governance primitives for RCCS dimensions
+- Whether AWS Bedrock / Guardrails / AgentCore provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether AWS Bedrock / Guardrails / AgentCore provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -450,7 +450,7 @@ Google Vertex AI / ADK / Model Armor is a cloud AI platform suite designed for m
 Google Vertex AI / ADK / Model Armor is strong at cloud AI platform capabilities, agent development tooling, and model safety controls. It provides model access, agent development kit (ADK), model armor safety features, evaluation frameworks, and enterprise security integration. This makes Google Vertex AI / ADK / Model Armor relevant for organizations that require cloud-native AI platform capabilities with agent development and safety tooling.
 
 **What this paper evaluates:**
-- Whether Google Vertex AI / ADK / Model Armor provides governance primitives for RCCS dimensions
+- Whether Google Vertex AI / ADK / Model Armor provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether Google Vertex AI / ADK / Model Armor provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -527,7 +527,7 @@ LangGraph / LangSmith is an agent orchestration and observability framework desi
 LangGraph / LangSmith is strong at agent orchestration and observability. It provides workflow graphs, state management, checkpoints, traces, debugging, evaluation, and observability features. This makes LangGraph / LangSmith relevant for organizations that require agent orchestration with observability and debugging capabilities.
 
 **What this paper evaluates:**
-- Whether LangGraph / LangSmith provides governance primitives for RCCS dimensions
+- Whether LangGraph / LangSmith provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether LangGraph / LangSmith provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -604,7 +604,7 @@ OpenAI Agents SDK is a developer-focused agent execution framework designed for 
 OpenAI Agents SDK is strong at agent execution and tool use. It provides model access, tool calling, agent execution patterns, streaming, and developer-friendly APIs. This makes OpenAI Agents SDK relevant for developers building agentic applications with tool use and execution capabilities.
 
 **What this paper evaluates:**
-- Whether OpenAI Agents SDK provides governance primitives for RCCS dimensions
+- Whether OpenAI Agents SDK provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether OpenAI Agents SDK provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -681,7 +681,7 @@ CrewAI is a multi-agent collaboration and role-based orchestration framework des
 CrewAI is strong at role-based agent composition and task orchestration. It provides agent role labels, task assignment, multi-agent collaboration, and workflow orchestration features. This makes CrewAI relevant for developers building multi-agent systems with role-based collaboration patterns.
 
 **What this paper evaluates:**
-- Whether CrewAI provides governance primitives for RCCS dimensions
+- Whether CrewAI provides governance primitives for the RCCS-T/RCCS-M shared dimension family
 - Whether CrewAI provides lifecycle responsibility objects for ALCS dimensions
 - Whether public documentation supports RCCS-T, RCCS-M, and ALCS mapping
 
@@ -759,9 +759,9 @@ This chapter evaluated eight systems against RCCS-T, RCCS-M, and ALCS dimensions
 
 Systems like IBM watsonx.governance are designed for policy enforcement, model risk management, regulatory compliance coverage, and AI lifecycle management. They provide enterprise-grade governance capabilities for risk management, data governance, documentation, record-keeping, transparency, human oversight, security, accountability, and monitoring. This makes them relevant for organizations that require regulatory compliance coverage across the AI lifecycle.
 
-**2. Cloud AI platforms tend to show moderate-to-strong RCCS posture and partial-to-moderate ALCS posture depending on agent lifecycle object exposure.**
+**2. Cloud AI platforms tend to show moderate-to-strong RCCS-T posture, mixed RCCS-M posture, and partial-to-moderate ALCS posture depending on agent lifecycle object exposure.**
 
-Systems like Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, and Google Vertex AI / ADK / Model Armor provide cloud platform capabilities for model management, responsible AI tooling, content safety, tracing, evaluation, and enterprise integration. They show moderate-to-strong RCCS posture for cloud AI management, model governance, safety, evaluation, and monitoring. ALCS posture is partial-to-moderate and depends on whether the platform exposes lifecycle responsibility objects for authority boundaries, accepted outcomes, MAS evidence partitioning, and responsibility transfer.
+Systems like Microsoft Azure AI Foundry, AWS Bedrock / Guardrails / AgentCore, and Google Vertex AI / ADK / Model Armor provide cloud platform capabilities for model management, responsible AI tooling, content safety, tracing, evaluation, and enterprise integration. They show moderate-to-strong RCCS-T posture for cloud AI management, model governance, safety, evaluation, and monitoring. Their RCCS-M posture is more mixed because MRO-adjusted coverage depends on whether platform capabilities expose authority, evidence, accepted-outcome, privacy, substitution, and closure objects. ALCS posture is partial-to-moderate and depends on whether the platform exposes lifecycle responsibility objects for authority boundaries, accepted outcomes, MAS evidence partitioning, and responsibility transfer.
 
 **3. Agent orchestration frameworks tend to show useful execution and observability primitives but require additional lifecycle governance semantics.**
 

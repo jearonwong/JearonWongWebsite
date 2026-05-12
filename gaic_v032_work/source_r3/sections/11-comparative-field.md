@@ -156,7 +156,7 @@ The comparison is an analytical framework for comparing systems against RCCS-T, 
 
 Chapter 12 will provide detailed system mappings for each of the eight systems or categories in scope. For each system, Chapter 12 will evaluate:
 
-- **RCCS dimensions:** Risk Management, Data Governance, Documentation, Record-Keeping, Transparency, Human Oversight, Security, Accountability, Contestability, Monitoring
+- **RCCS-T/RCCS-M shared dimension family:** Risk Management, Data Governance, Documentation, Record-Keeping, Transparency, Human Oversight, Security, Accountability, Contestability, Monitoring
 - **ALCS dimensions:** Human-Role-to-MAS Responsibility Mapping, Delegated Authority Boundary, Agent Role vs Human Role Distinction, Accepted Outcome Compliance, Tool-Action Liability Boundary, Responsibility Transfer Across Agents, Authority Drift Detection, MAS Evidence Partitioning, Cross-Project Reuse Compliance, Privacy/GDPR Lifecycle Mapping, Privacy-Preserving Third-Party Validation, Evidence Minimization and Selective Disclosure, Data Subject Rights vs Evidence Retention, Third-Party Processor/Subprocessor Chain, Vendor/Model/Runtime Substitution Conformance
 - **Evidence basis:** What evidence supports the evaluation (L1, L2, L3, L4, or L5)
 - **Analytical posture:** qualitative RCCS-T/RCCS-M/ALCS mapping strength and evidence level; numerical profiles appear only in the Evaluation Results section when source-qualified and explicitly bounded

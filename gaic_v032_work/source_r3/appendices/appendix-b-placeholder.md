@@ -110,7 +110,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)
 - **RCCS-T:** Traditional regulatory and governance coverage
 - **RCCS-M:** MRO-adjusted regulatory coverage; author analytical and forward-looking
 - **ALCS:** Lifecycle responsibility conformance maturity
-- **Optional composites:** Secondary worksheet views only; never a ranking, final vendor score, legal compliance proof, certification signal, regulatory approval signal, or procurement recommendation
+- **Optional composites:** Secondary worksheet views only; never a ranking, procurement selection signal, legal compliance proof, certification signal, regulatory approval signal, or procurement recommendation
 
 Any numerical bands are analytical interpretation bands only. They are not legal compliance thresholds, deployment readiness thresholds, procurement thresholds, or certification cutoffs.
 

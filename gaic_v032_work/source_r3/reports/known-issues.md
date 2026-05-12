@@ -1760,3 +1760,23 @@ Phase 1B-8C corrected methodology inconsistencies in Appendices A-D identified d
 **Phase 1B-8C Status:** ✓ RESOLVED — Methodology integrity restored; safe to proceed to Phase 1B-9
 
 ---
+
+## Phase 1D-13E Known Issues
+
+### None Blocking Publication-Candidate Review
+
+Phase 1D-13E repaired the remaining PDF table rendering blocker found after Phase 1D-13D. The MRO/ALCS mapping table shape with `MRO / ALCS Dimension`, `Mapping Strength`, and `Boundary / Evidence Limit` is rendered as semantic row cards where needed, preventing single-letter vertical columns.
+
+Validation after regeneration:
+- Vertical single-letter table text: 0
+- Catastrophic column compression blockers: 0
+- Positive forbidden-claim blockers: 0
+- Citation/source blockers: 0
+- Appendix G numeric leaks: 0
+
+Content scope completed:
+- Chapter 14 now explains Evidence-Based Validation as support for RCCS-M evidence confidence, not certification.
+- Chapter 15 now frames the eight illustrative/hypothetical scenarios as RCCS-M pressure tests.
+- Chapters 8/9/11/12 terminology cleanup completed without score recalculation.
+
+**Phase 1D-13E Status:** ✓ TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY

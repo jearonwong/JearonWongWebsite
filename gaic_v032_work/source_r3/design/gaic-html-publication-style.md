@@ -1,9 +1,9 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-13D Chapter 7 RCCS-T/M Methodology Correction
+**Phase:** 1D-13E Targeted RCCS-M Cleanup and Table Blocker Repair
 **Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION-CANDIDATE REVIEW DRAFT
-**Last Updated:** May 11, 2026
+**Last Updated:** May 12, 2026
 
 ## Visual Position
 
@@ -13,17 +13,19 @@ The HTML/PDF artifact is the visual source of truth. DOCX is an editable derivat
 
 Phase 1D-8 extended the Phase 1D-7 HTML-first foundation with stricter publication rules: chapters and appendices begin on new print pages, ordinary tables and code templates may split when needed, deterministic charts are rendered as print-safe SVG, body code-like examples can become reader-friendly object cards, and the final publication includes a References / Sources section.
 
-Phase 1D-9 added the missing evaluation-results layer and semantic table-type system. Publication-facing system results were expressed as qualitative, source-qualified RCCS/ALCS analytical profiles, not rankings or final vendor scores.
+Phase 1D-9 added the missing evaluation-results layer and semantic table-type system. Publication-facing system results were expressed as qualitative, source-qualified RCCS/ALCS analytical profiles, not rankings or procurement selection signals.
 
-Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all evaluated systems. These scores are publication-facing result signals, but they are not final vendor scores, rankings, procurement recommendations, certifications, regulatory approval signals, legal compliance proof, or deployment-readiness guarantees. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
+Phase 1D-10 adds explicit RCCS/ALCS provisional analytical score ranges and confidence labels for all evaluated systems. These scores are publication-facing result signals, but they are not vendor rankings, procurement recommendations, certifications, regulatory approval signals, legal compliance proof, or deployment-readiness guarantees. Dense rubric, system mapping, scorecard, source, and governance tables can render as score cards, system profile cards, semantic row cards, or limited column-split tables depending on content role.
 
 Phase 1D-11 closes the high-risk citation/source evidence blockers without swallowing them as vague limitations. OpenAI platform-guide HTTP 403 is retained as an access note only because accessible official OpenAI Agents SDK Python and JavaScript docs replace it for narrowed SDK-surface claims. Validation Lab is limited to a public-surface, non-certifying evidence adjudication example. MPLP identity is source-bound, while GAIC MRO/ALCS mappings remain author analytical mapping where not directly stated. Product/platform documentation supports capability surfaces, not lifecycle compliance proof.
 
 Phase 1D-12 adds the final two-layer RCCS presentation and repairs the table wrapping blocker. Evaluation Results now distinguishes RCCS-T (traditional governance coverage), RCCS-M (MRO-adjusted agentic regulatory coverage), and ALCS (lifecycle responsibility conformance). MPLP remains in the fixed-order comparison with limited RCCS-T product/platform coverage and strong RCCS-M/ALCS lifecycle-object semantics. Tables must not use wrapping rules that create single-letter vertical columns.
 
-Phase 1D-13B globally integrates the Phase 1D-12 model into active source. RCCS-T / MRO / RCCS-M / ALCS is the explanatory spine across front matter, methodology, mappings, appendices, and conclusion. Appendix G remains qualitative and no-score, while numeric RCCS-T/RCCS-M/ALCS profiles remain only in Evaluation Results. RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
+Phase 1D-13B globally integrates the Phase 1D-12 model into active source. RCCS-T / MRO / RCCS-M / ALCS is the explanatory spine across front matter, methodology, mappings, appendices, and conclusion. Appendix G remains qualitative and no-score, while numeric RCCS-T/RCCS-M/ALCS profiles remain only in Evaluation Results. RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 
 Phase 1D-13D completes the Chapter 7 methodology layer. Chapter 7 now treats RCCS-T and RCCS-M as the same ten dimensions and weights with different scoring lenses, and includes T-07-01A / T-07-02A methodology tables. Appendix E adds T-E-11 as the RCCS-M Adjustment Matrix while preserving T-E-01 through T-E-10 as RCCS-T baseline rubrics. These wide methodology matrices should use the existing semantic row-card / split-table rendering rules rather than narrow columns that could reintroduce vertical word breaks.
+
+Phase 1D-13E repairs the remaining PDF table blocker by forcing the MRO / ALCS Dimension + Mapping Strength + Boundary / Evidence Limit table shape into semantic row cards where needed. It also adds the Chapter 14 RCCS-M evidence-confidence bridge and the Chapter 15 RCCS-M pressure-test bridge. The generated v9 artifacts must have zero vertical single-letter table pages, zero positive forbidden-claim blockers, and preserve source closure.
 
 ## VI Principles
 
@@ -133,7 +135,6 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 - no procurement recommendation;
 - no vendor ranking;
 - no final vendor assessment;
-- no final vendor score;
 - no score sorting or leaderboard framing;
 - Appendix G remains qualitative, source-qualified, provisional, non-ranking, and no-score.
 
@@ -146,7 +147,7 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | Score chart | Display systems in fixed source order, not score order |
 | Score map | Use axis labels for RCCS and ALCS only; no leader/winner quadrant |
 | Scored profile card | Lead with score/range/confidence, then visible strength, lifecycle gap, evidence basis, and boundary |
-| Boundary note | Repeat that scores are analytical profiles, not final vendor scores, rankings, legal proof, certifications, regulatory approval, or procurement recommendations |
+| Boundary note | Repeat that scores are analytical profiles, not vendor rankings, legal proof, certifications, regulatory approval, or procurement recommendations |
 
 ## Phase 1D-12 RCCS-T / RCCS-M Components
 
@@ -157,7 +158,7 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | ALCS | Agentic Lifecycle Conformance Score; remains the lifecycle responsibility conformance layer |
 | MPLP interpretation | Do not inflate traditional RCCS-T; explain that MPLP is not an enterprise governance SaaS while its RCCS-M/ALCS profile is strong because protocol semantics map to MRO-style lifecycle objects |
 | Chart order | Use fixed system order only; do not sort by any score or create a winner, leader, best-system, or procurement quadrant |
-| Boundary note | RCCS-M is author analytical, not a regulator-approved benchmark, legal compliance score, certification, final vendor score, ranking, or procurement recommendation |
+| Boundary note | RCCS-M is author analytical, not a regulator-approved benchmark, legal compliance score, certification, vendor ranking, or procurement recommendation |
 
 ## Phase 1D-11 Citation Closure Components
 

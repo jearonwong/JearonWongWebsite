@@ -22,6 +22,12 @@ The evidence-based validation pattern separates evidence generation from evidenc
 
 **Pattern boundary:** The pattern validates that lifecycle responsibility objects exist, are structured correctly, and satisfy predefined governance rules. It does not validate business logic correctness, model accuracy, legal compliance, or regulatory approval.
 
+### RCCS-M Evidence Confidence Role
+
+RCCS-M does not only ask whether a policy, feature, dashboard, or validation workflow exists. It asks whether regulatory obligations are represented as MRO-backed lifecycle responsibility objects. Evidence packs, hash manifests, traces, evidence pointers, disclosure profiles, redaction profiles, and replay procedures can raise RCCS-M evidence confidence when they show object-level responsibility coverage: authority boundaries, role-to-responsibility mappings, accepted outcome states, partitioned evidence chains, privacy lifecycle boundaries, substitution conformance records, and remediation closure records.
+
+Evidence-Based Validation is therefore a validation pattern for RCCS-M evidence confidence, not a certification path. It can support the evidence-confidence side of RCCS-M scoring when validation records show that MRO-adjusted lifecycle objects exist and can be reviewed. It does not make RCCS-M current law, legally binding, regulator-approved, or independently sufficient for compliance. Validation Lab remains a non-certifying public-surface example; validation evidence may support RCCS-M scoring confidence but does not prove legal compliance, regulatory approval, certification, or operational effectiveness.
+
 **Figure F-08 — Evidence-Based Validation Pattern Flow**
 
 Organization → Evidence Pack → Hash Manifest → Validation Provider → Ruleset Identity → Evidence Pointers → Verdict Hash → Disclosure / Redaction Profile → Replay / Recheck Procedure
@@ -85,7 +91,7 @@ Validation Lab is referenced in this white paper because it provides a concrete 
 
 | Claim Area | Allowed Framing | Forbidden Framing |
 |------------|-----------------|-------------------|
-| Validation identity | Validation Lab is a non-certifying evidence adjudication example | Validation Lab is a certification authority; Validation Lab certifies compliance |
+| Validation identity | Validation Lab is a non-certifying evidence adjudication example | Validation Lab is a certification authority or issuer of compliance certificates |
 | Compliance relationship | Validation Lab adjudicates evidence against predefined rulesets | Validation Lab proves legal compliance; Validation Lab guarantees regulatory approval |
 | Certification | Validation Lab does not certify compliance | Validation Lab is a certification program; Validation Lab is a conformity assessment body |
 | Legal authority | Validation Lab does not provide legal opinions | Validation Lab is a legal authority; Validation Lab is regulator-approved |

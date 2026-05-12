@@ -16,6 +16,12 @@ The scenarios in this chapter are illustrative and hypothetical. They do not des
 
 The goal is not to claim that lifecycle governance eliminates all risk. The goal is to demonstrate that lifecycle governance gaps create predictable failure patterns that enterprises must address.
 
+### Failure Scenarios as RCCS-M Pressure Tests
+
+The eight scenarios in this chapter are RCCS-M pressure-test examples. They are not real enterprise incidents, RCCS-T traditional governance examples, legal violation claims, or vendor failure claims. They show where traditional governance controls may appear present while MRO-adjusted lifecycle responsibility coverage still fails.
+
+For example, a system may have a review screen, logs, documentation, access controls, or monitoring dashboard and therefore show some RCCS-T coverage. RCCS-M asks a different question: can the same regulatory obligation be expressed through inspectable lifecycle responsibility objects? The scenarios pressure-test that question across authority boundary, evidence partitioning, accepted outcome, cross-project reuse, privacy validation, processor chain, vendor/runtime substitution, and remediation closure. The point is not to recalculate scores in this chapter; the point is to show why RCCS-M needs MRO-backed evidence rather than generic control visibility.
+
 **Figure F-09 — Enterprise Failure Scenario Chain**
 
 Trigger or Workflow Change → Missing Lifecycle Object → Evidence Gap → Enterprise Consequence → Remediation Closure

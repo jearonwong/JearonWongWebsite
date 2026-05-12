@@ -82,7 +82,7 @@ The MRO adjustment changes what counts as strong support. For example:
 - Record-keeping becomes stronger when logs become partitioned evidence chains tied to role, agent/tool action, authority boundary, privacy boundary, and accepted outcome.
 - Monitoring becomes stronger when runtime observation includes authority drift, substitution conformance, privacy lifecycle events, and incident/dispute/remediation closure.
 
-RCCS-M is an author analytical, forward-looking model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, final vendor score, ranking, or procurement recommendation.
+RCCS-M is an author analytical, forward-looking model. It is not current law, legal compliance proof, certification, a regulator-approved benchmark, vendor ranking, or procurement recommendation.
 
 ---
 
