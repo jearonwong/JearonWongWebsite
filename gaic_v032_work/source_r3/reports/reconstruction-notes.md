@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R2 Concept Core)
+**Last Updated:** May 12, 2026 (GAIC-R3A Core Entity Mesh)
 
 ## Reconstruction Strategy
 
@@ -49,6 +49,7 @@ R3 uses phased reconstruction:
 28. **GAIC-R0 Cleanup and Release Hygiene:** Historical Phase 1D generated output directories, old rendered pages, old generated draft artifacts, and local conversion scratch outputs were removed from the current tree; sealed artifacts remain in `out/publication_candidate/`, their hashes remain unchanged, and historical intermediates remain recoverable through Git history and tag `gaic-v0.3.2-publication-candidate-sealed` (✓ CLEANUP AND RELEASE HYGIENE COMPLETE / READY FOR PUBLIC RELEASE PAGE)
 29. **GAIC-R1 Public Release Page:** Public Research index and GAIC white paper hub were created; sealed artifacts were copied into the public site asset path with matching SHA256 hashes; citation/download/checksum surface, boundary statement, metadata/JSON-LD, sitemap exposure, and `llms.txt` entry were completed without modifying sealed artifacts or white paper content (✓ PUBLIC RELEASE PAGE COMPLETE / READY FOR CONCEPT CORE)
 30. **GAIC-R2 Agentic Lifecycle Governance Concept Core:** Public Concept Core route created for the 2-3 minute concept entry layer; Concepts index, white paper hub, metadata/JSON-LD, sitemap, and `llms.txt` connected; the page is category-first, MRO/RCCS-M/ALCS-focused, and frames MPLP as one protocol path only (✓ CONCEPT CORE COMPLETE / READY FOR ENTITY MESH)
+31. **GAIC-R3A Core Entity Mesh:** Core definition entity pages created or updated for Missing Regulatory Objects, RCCS-M, ALCS, Lifecycle Responsibility Objects, Accepted Outcome, Authority Boundary, and Evidence Chain; Concept Core, white paper hub, Concepts index, metadata/JSON-LD, sitemap, and `llms.txt` connected without modifying sealed artifacts, white paper content, scores, or methodology (✓ CORE ENTITY MESH COMPLETE / READY FOR APPLIED PLAYBOOK MESH)
 
 ## Source Hierarchy
 
@@ -132,6 +133,10 @@ GAIC-R1 exposes the sealed publication candidate through the public site without
 ### Decision 17: Make the Concept Understandable Before Expanding the Entity Mesh
 
 GAIC-R2 creates a short Concept Core before the broader Entity Mesh. The page is not a white paper summary and not an MPLP sales page. It gives readers and crawlers the category spine: the compliance unit has changed; model governance is necessary but insufficient; agentic/MAS governance requires lifecycle responsibility objects; Missing Regulatory Objects define the object layer; RCCS-M and ALCS measure that layer; MPLP is one protocol path. This keeps the public release understandable before adding more entity-distribution pages.
+
+### Decision 18: Build Entity Pages Before Applied Playbooks
+
+GAIC-R3A adds definition-first entity surfaces before application playbook pages. Missing Regulatory Objects, RCCS-M, ALCS, Lifecycle Responsibility Objects, Accepted Outcome, Authority Boundary, and Evidence Chain are now independently indexable and interlinked with the Concept Core and white paper hub. This improves semantic clarity without creating vendor/application pages, platform score tables, rankings, procurement recommendations, certification claims, or WP2/WP3 content.
 
 ## Lessons from R2
 

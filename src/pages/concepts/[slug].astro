@@ -35,9 +35,24 @@ const relatedTerms = concept.relatedTerms
   .filter((term): term is NonNullable<typeof term> => Boolean(term));
 const canonicalPath = `/concepts/${concept.slug}/`;
 const conceptUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
+const conceptCoreUrl = new URL(conceptCorePath, siteConfig.siteUrl).toString();
+const whitePaperUrl = new URL(whitePaperHub, siteConfig.siteUrl).toString();
+const gaicJsonLdLink = concept.gaicEntity
+  ? {
+      citation: whitePaperUrl,
+      isBasedOn: {
+        "@type": "TechArticle",
+        name: "Global AI Compliance White Paper 2026",
+        url: whitePaperUrl
+      }
+    }
+  : {};
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": `${conceptUrl}#breadcrumb`,
   itemListElement: [
     {
       "@type": "ListItem",
@@ -67,11 +82,52 @@ const definedTermJsonLd = {
   description: concept.definition,
   url: conceptUrl,
   keywords: concept.keywords,
+  relatedLink: [
+    ...(concept.gaicEntity ? [conceptCoreUrl, whitePaperUrl] : []),
+    ...relatedTerms.map((term) => new URL(`/concepts/${term.slug}/`, siteConfig.siteUrl).toString())
+  ],
+  ...gaicJsonLdLink,
   inDefinedTermSet: {
     "@id": `${siteConfig.siteUrl}/concepts/#defined-term-set`,
     "@type": "DefinedTermSet",
     name: pageRegistry.concepts.title
   }
+};
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${conceptUrl}#webpage`,
+  url: conceptUrl,
+  name: concept.term,
+  description: concept.seoDescription,
+  mainEntity: {
+    "@id": `${conceptUrl}#defined-term`
+  },
+  breadcrumb: {
+    "@id": `${conceptUrl}#breadcrumb`
+  },
+  ...gaicJsonLdLink
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${conceptUrl}#article`,
+  headline: concept.term,
+  description: concept.seoDescription,
+  url: conceptUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  dateModified: "2026-05-12",
+  keywords: concept.keywords,
+  about: concept.keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  ...gaicJsonLdLink
 };
 ---
 
@@ -79,7 +135,9 @@ const definedTermJsonLd = {
   title={concept.seoTitle}
   description={concept.seoDescription}
   canonicalPath={canonicalPath}
-  jsonLd={[breadcrumbJsonLd, definedTermJsonLd]}
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, definedTermJsonLd]}
+  ogType="article"
+  keywords={concept.keywords}
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt={`${concept.term} - ${siteConfig.author.name}`}
 >
@@ -124,6 +182,15 @@ const definedTermJsonLd = {
             </div>
           </div>
         )}
+        {concept.gaicEntity && (
+          <div class="sidebar-group">
+            <p class="sidebar-label">GAIC authority</p>
+            <div class="sidebar-links">
+              <a href={conceptCorePath}>Agentic Lifecycle Governance</a>
+              <a href={whitePaperHub}>Global AI Compliance White Paper 2026</a>
+            </div>
+          </div>
+        )}
       </aside>
 
       <div class="concept-article">
@@ -135,7 +202,7 @@ const definedTermJsonLd = {
         </section>
 
         <section class="concept-section">
-          <h2>The problem it names</h2>
+          <h2>{concept.gaicEntity ? "Why it matters" : "The problem it names"}</h2>
           <p>{concept.problem}</p>
         </section>
 
@@ -144,15 +211,94 @@ const definedTermJsonLd = {
           <p>{concept.whyExistingApproachesAreNotEnough}</p>
         </section>
 
+        {concept.whatItIsNot && (
+          <section class="concept-section">
+            <h2>What it is not</h2>
+            <p>{concept.whatItIsNot}</p>
+          </section>
+        )}
+
         <section class="concept-section">
-          <h2>How it relates to AI Agent Lifecycle</h2>
+          <h2>{concept.gaicEntity ? "How it relates to Agentic Lifecycle Governance" : "How it relates to AI Agent Lifecycle"}</h2>
           <p>{concept.relationToLifecycle}</p>
         </section>
+
+        {concept.relationToGaic && (
+          <section class="concept-section">
+            <h2>How it relates to the GAIC white paper</h2>
+            <p>{concept.relationToGaic}</p>
+          </section>
+        )}
+
+        {concept.entityClusters && (
+          <section class="concept-section">
+            <h2>Core object overview</h2>
+            <div class="entity-cluster-grid">
+              {concept.entityClusters.map((cluster) => (
+                <article class="entity-cluster">
+                  <h3>{cluster.name}</h3>
+                  <ul>
+                    {cluster.items.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {concept.detailSections && concept.detailSections.map((section) => (
+          <section class="concept-section">
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
+
+        {concept.lifecycleChain && (
+          <section class="concept-section">
+            <h2>Lifecycle responsibility chain</h2>
+            <div class="lifecycle-chain" aria-label={`${concept.term} lifecycle responsibility chain`}>
+              {concept.lifecycleChain.map((item) => (
+                <span>{item}</span>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section class="concept-section">
           <h2>Evidence route</h2>
           <p>{concept.evidenceRoute}</p>
         </section>
+
+        {concept.gaicEntity && (
+          <section class="relation-grid" aria-label={`${concept.term} GAIC authority routes`}>
+            <article class="registry-chassis relation-panel">
+              <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+                <span class="registry-key">CONCEPT_CORE</span>
+              </div>
+              <h2>Agentic Lifecycle Governance</h2>
+              <div class="relation-links">
+                <a href={conceptCorePath}>
+                  <strong>Open the Concept Core</strong>
+                  <span>The short entry layer for the lifecycle responsibility object model.</span>
+                </a>
+              </div>
+            </article>
+            <article class="registry-chassis relation-panel">
+              <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+                <span class="registry-key">AUTHORITY_SOURCE</span>
+              </div>
+              <h2>Global AI Compliance White Paper 2026</h2>
+              <div class="relation-links">
+                <a href={whitePaperHub}>
+                  <strong>Open the white paper hub</strong>
+                  <span>The sealed v0.3.2 Public Edition source for RCCS-M, ALCS, and MRO methodology.</span>
+                </a>
+              </div>
+            </article>
+          </section>
+        )}
 
         <section class="relation-grid" aria-label={`${concept.term} related routes`}>
           {relatedEssays.length > 0 && (
@@ -336,6 +482,60 @@ const definedTermJsonLd = {
     gap: 1.5rem;
   }
 
+  .entity-cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.1rem;
+  }
+
+  .entity-cluster {
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--current-line);
+    background: color-mix(in srgb, var(--current-surface) 88%, transparent);
+  }
+
+  .entity-cluster h3 {
+    margin: 0 0 0.8rem;
+    color: var(--current-text);
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .entity-cluster ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .entity-cluster li {
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .lifecycle-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .lifecycle-chain span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.1rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--current-line);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
   .relation-panel {
     padding: var(--registry-card-padding);
   }
@@ -391,7 +591,8 @@ const definedTermJsonLd = {
 
   @media (max-width: 920px) {
     .concept-detail-shell,
-    .relation-grid {
+    .relation-grid,
+    .entity-cluster-grid {
       grid-template-columns: 1fr;
     }
 

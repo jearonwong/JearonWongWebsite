@@ -1,7 +1,32 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (GAIC-R2 Concept Core)
+**Last Updated:** May 12, 2026 (GAIC-R3A Core Entity Mesh)
+
+## GAIC-R3A Core Entity Mesh
+
+### Status: GAIC-R3A CORE ENTITY MESH COMPLETE / READY FOR APPLIED PLAYBOOK MESH
+
+R3A created the first public entity mesh around the sealed Global AI Compliance White Paper 2026 and the Agentic Lifecycle Governance Concept Core. This was an SEO/GEO definition-surface step only: no white paper content, sealed artifacts, scores, methodology, RCCS-T/RCCS-M/ALCS wording inside the white paper, protocol/product boundary language, or interoperability boundary language was changed.
+
+**Entity Mesh results:**
+
+1. New dynamic concept routes added for Missing Regulatory Objects, RCCS-M, ALCS, Lifecycle Responsibility Objects, Accepted Outcome, and Authority Boundary.
+2. Existing `/concepts/lifecycle-evidence/` updated as the canonical Evidence Chain entity page.
+3. No duplicate `/concepts/evidence-chain/` route was created.
+4. Concept pages remain definition-first and include what-it-is-not boundaries where needed.
+5. Concept Core links to the entity pages; the white paper hub links to MRO, RCCS-M, and ALCS.
+6. Each GAIC entity page links back to the Concept Core and the white paper hub.
+7. Dynamic concept pages now include WebPage, TechArticle, BreadcrumbList, and DefinedTerm JSON-LD.
+8. Concepts index includes a Global AI Compliance Entity Mesh section.
+9. `llms.txt` lists the core entity pages with concise definitions.
+
+**Remaining limitations, not blockers:**
+
+1. R3A intentionally does not create OpenAI, Anthropic, DeepSeek, Kimi, AI coding agent, rollback, or harness engineering applied playbook pages.
+2. WP2 and WP3 remain delayed/private institutional assets and are not public releases in this wave.
+
+**GAIC-R3A Decision:** GAIC-R3A CORE ENTITY MESH COMPLETE / READY FOR APPLIED PLAYBOOK MESH.
 
 ## GAIC-R2 Agentic Lifecycle Governance Concept Core
 

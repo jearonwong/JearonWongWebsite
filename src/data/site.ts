@@ -640,7 +640,265 @@ export const homepageContent = {
   ]
 };
 
-export const concepts = [
+export interface ConceptEntityCluster {
+  name: string;
+  items: string[];
+}
+
+export interface ConceptDetailSection {
+  title: string;
+  body: string;
+}
+
+export interface ConceptEntry {
+  slug: string;
+  term: string;
+  seoTitle: string;
+  seoDescription: string;
+  definition: string;
+  problem: string;
+  whyExistingApproachesAreNotEnough: string;
+  whatItIsNot?: string;
+  relationToLifecycle: string;
+  relationToGaic?: string;
+  evidenceRoute: string;
+  entityClusters?: ConceptEntityCluster[];
+  detailSections?: ConceptDetailSection[];
+  lifecycleChain?: string[];
+  relatedEssays: string[];
+  relatedProjects: string[];
+  relatedTerms: string[];
+  keywords: string[];
+  gaicEntity?: boolean;
+}
+
+export const concepts: ConceptEntry[] = [
+  {
+    slug: "missing-regulatory-objects",
+    term: "Missing Regulatory Objects",
+    seoTitle: "Missing Regulatory Objects Definition",
+    seoDescription:
+      "Missing Regulatory Objects are lifecycle responsibility objects that model-centric governance does not consistently define for AI agent and multi-agent systems.",
+    definition:
+      "Missing Regulatory Objects are the lifecycle responsibility objects that current model-centric governance does not consistently define for agentic and multi-agent systems. They name what must become inspectable when agent work moves beyond model output into authority, evidence, acceptance, substitution, dispute, and remediation.",
+    problem:
+      "The problem they name is the object gap between regulatory intent and agentic work. A policy can ask for accountability, oversight, explanation, privacy, or remediation, but an agent system still needs concrete lifecycle objects that show who authorized work, what evidence supports it, when an outcome was accepted, and how disputes or substitutions are handled.",
+    whyExistingApproachesAreNotEnough:
+      "Model cards, logs, access controls, evals, and human-in-the-loop checkpoints can support governance, but they do not by themselves define the lifecycle responsibility objects that make agentic work reviewable. Without those objects, governance remains attached to the model or platform surface while responsibility has moved into the work lifecycle.",
+    whatItIsNot:
+      "Missing Regulatory Objects are not current law, certification criteria, a procurement checklist, or a claim that one implementation is required. They are an author-analytical object layer proposed by the Global AI Compliance White Paper 2026.",
+    relationToLifecycle:
+      "Missing Regulatory Objects sit inside Agentic Lifecycle Governance as the object layer. They make lifecycle responsibility visible across intent, authority, evidence, accepted outcome, privacy, reuse, substitution, dispute, remediation, and closure.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 uses MROs to explain why model governance is necessary but insufficient for AI Agent / MAS compliance. RCCS-M measures whether governance can express these objects, while ALCS asks whether they remain coherent across the lifecycle.",
+    evidenceRoute:
+      "The evidence route starts with the Agentic Lifecycle Governance Concept Core, then continues into the white paper chapters on Missing Regulatory Objects, RCCS-M, ALCS, evidence-based validation, and failure scenarios.",
+    entityClusters: [
+      {
+        name: "Authority and Responsibility",
+        items: [
+          "Intent object: records the work purpose and active constraints.",
+          "Authority boundary: names who may authorize consequential action.",
+          "Role responsibility: binds agent work to accountable human or organizational roles.",
+          "Accepted outcome: records when work becomes accepted responsibility."
+        ]
+      },
+      {
+        name: "Evidence and Traceability",
+        items: [
+          "Evidence chain: preserves inspectable proof from intent to accepted outcome.",
+          "Decision trace: records why a plan or action was selected.",
+          "Execution boundary: separates permitted action from out-of-scope behavior.",
+          "Review state: records what was reviewed, by whom, and under which criteria."
+        ]
+      },
+      {
+        name: "Privacy and Cross-Project Reuse",
+        items: [
+          "Context boundary: distinguishes active context from stale or background material.",
+          "Reuse permission: governs when prior work may be reused across tasks or projects.",
+          "Data minimization object: limits what evidence or context may be retained.",
+          "Cross-system handoff: records responsibility when work moves across tools or agents."
+        ]
+      },
+      {
+        name: "Substitution, Dispute, and Remediation",
+        items: [
+          "Substitution record: preserves responsibility when a model, tool, or runtime changes.",
+          "Dispute object: makes challenge, review, and disagreement inspectable.",
+          "Remediation closure: records corrective action and closure state.",
+          "Lifecycle continuity: keeps responsibility attached across sessions, agents, and changes."
+        ]
+      }
+    ],
+    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "lifecycle-responsibility-objects",
+      "rccs-m",
+      "alcs",
+      "authority-boundary",
+      "accepted-outcome",
+      "lifecycle-evidence"
+    ],
+    keywords: [
+      "Missing Regulatory Objects",
+      "MRO",
+      "AI agent governance",
+      "multi-agent systems governance",
+      "lifecycle responsibility objects"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "rccs-m",
+    term: "RCCS-M",
+    seoTitle: "RCCS-M Definition",
+    seoDescription:
+      "RCCS-M is the MRO-adjusted Regulatory Compliance Coverage Score for assessing whether governance can express lifecycle responsibility objects.",
+    definition:
+      "RCCS-M is the MRO-adjusted Regulatory Compliance Coverage Score. It asks whether governance coverage can be expressed through Missing Regulatory Objects and lifecycle responsibility semantics rather than only through traditional model, platform, or policy surfaces.",
+    problem:
+      "The problem it names is that traditional compliance coverage can look mature while still missing the lifecycle objects needed for agentic work. A platform may have policies, documentation, monitoring, and controls, but still be weak at authority boundaries, accepted outcomes, substitution records, dispute objects, or remediation closure.",
+    whyExistingApproachesAreNotEnough:
+      "RCCS-T asks what traditional governance already tends to measure. RCCS-M applies the same broad regulatory coverage concern through the MRO adjustment layer: can the obligation be made lifecycle-native, evidence-bearing, and responsibility-aware for AI agents and multi-agent systems?",
+    whatItIsNot:
+      "RCCS-M is not current law, a regulator-approved benchmark, a certification, a legal compliance proof, a final vendor score, or a procurement ranking.",
+    relationToLifecycle:
+      "Within Agentic Lifecycle Governance, RCCS-M measures whether governance requirements can attach to lifecycle responsibility objects such as authority, evidence, accepted outcome, substitution, dispute, and remediation.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 presents RCCS-M as a proposed analytical adequacy model. High RCCS-M posture means design alignment with the proposed lifecycle object layer, not independent market validation or procurement superiority.",
+    evidenceRoute:
+      "The evidence route runs through the white paper methodology for RCCS-T/RCCS-M and the MRO Adjustment Layer. The Concept Core gives the short reader entry; the white paper contains the bounded scoring model.",
+    detailSections: [
+      {
+        title: "RCCS-T vs RCCS-M",
+        body:
+          "RCCS-T measures familiar governance coverage surfaces. RCCS-M asks whether those same obligations can be expressed through lifecycle responsibility objects introduced by the MRO layer."
+      },
+      {
+        title: "MRO Adjustment Layer",
+        body:
+          "The adjustment layer does not add a vendor leaderboard. It changes the scoring lens from traditional model/platform coverage to lifecycle-native responsibility coverage."
+      },
+      {
+        title: "Design Alignment",
+        body:
+          "A strong RCCS-M posture indicates that a system or protocol is designed around the lifecycle responsibility objects the paper argues are structurally necessary."
+      }
+    ],
+    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "missing-regulatory-objects",
+      "alcs",
+      "lifecycle-responsibility-objects",
+      "authority-boundary",
+      "accepted-outcome",
+      "lifecycle-evidence"
+    ],
+    keywords: [
+      "RCCS-M",
+      "MRO-adjusted Regulatory Compliance Coverage Score",
+      "Missing Regulatory Objects",
+      "AI agent compliance",
+      "agentic lifecycle governance"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "alcs",
+    term: "ALCS",
+    seoTitle: "ALCS Definition",
+    seoDescription:
+      "ALCS is the Agentic Lifecycle Conformance Score for assessing whether lifecycle responsibility stays coherent across agentic work.",
+    definition:
+      "ALCS is the Agentic Lifecycle Conformance Score. It asks whether lifecycle responsibility remains coherent across intent, authority, evidence, accepted outcome, dispute, remediation, and closure.",
+    problem:
+      "The problem it names is lifecycle fragmentation. A system may express some governance objects but still lose continuity when work crosses agents, tools, sessions, model substitutions, or review states.",
+    whyExistingApproachesAreNotEnough:
+      "RCCS-M asks whether the right object layer exists for governance coverage. ALCS asks whether those objects stay connected as a lifecycle. Logs, policies, and checkpoints can exist without preserving lifecycle conformance.",
+    whatItIsNot:
+      "ALCS is not legal compliance proof, certification, regulator approval, a vendor ranking, or a procurement recommendation.",
+    relationToLifecycle:
+      "ALCS is the lifecycle coherence lens for Agentic Lifecycle Governance. It focuses on whether responsibility travels from intent to closure without becoming detached from authority, evidence, dispute, or remediation.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 uses ALCS to distinguish object presence from lifecycle conformance. It is paired with RCCS-M but asks a different question: not only whether governance objects exist, but whether they stay coherent across work.",
+    evidenceRoute:
+      "The evidence route starts with the Concept Core and continues through the ALCS chapter and related source notes in the white paper.",
+    detailSections: [
+      {
+        title: "Difference from RCCS-M",
+        body:
+          "RCCS-M evaluates MRO-adjusted governance coverage. ALCS evaluates lifecycle conformance: whether responsibility remains coherent across the chain of work."
+      }
+    ],
+    lifecycleChain: ["Intent", "Authority", "Evidence", "Accepted outcome", "Dispute", "Remediation", "Closure"],
+    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "missing-regulatory-objects",
+      "rccs-m",
+      "lifecycle-responsibility-objects",
+      "accepted-outcome",
+      "authority-boundary",
+      "lifecycle-evidence"
+    ],
+    keywords: [
+      "ALCS",
+      "Agentic Lifecycle Conformance Score",
+      "lifecycle conformance",
+      "AI agent governance",
+      "multi-agent systems governance"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "lifecycle-responsibility-objects",
+    term: "Lifecycle Responsibility Objects",
+    seoTitle: "Lifecycle Responsibility Objects Definition",
+    seoDescription:
+      "Lifecycle Responsibility Objects are the object layer that keeps AI agent work tied to authority, evidence, accepted outcome, substitution, dispute, and remediation.",
+    definition:
+      "Lifecycle Responsibility Objects are the explicit objects that keep AI agent and multi-agent work tied to responsibility across the lifecycle. They make authority, evidence, accepted outcome, substitution, dispute, remediation, and closure inspectable rather than implied.",
+    problem:
+      "The problem they name is that logs and human review can show fragments of work without preserving responsibility. Agentic work needs objects that say what was authorized, what evidence supports it, who accepts it, and how changes or failures close.",
+    whyExistingApproachesAreNotEnough:
+      "Logs can show events. HITL can show that a human was present. Neither alone proves that the right person authorized the right scope, that evidence supports the accepted outcome, or that remediation reached closure.",
+    whatItIsNot:
+      "Lifecycle Responsibility Objects are not a claim that one platform or protocol is mandatory. They are an author-analytical object layer for making agentic compliance inspectable.",
+    relationToLifecycle:
+      "They are the object substrate behind Agentic Lifecycle Governance. Missing Regulatory Objects are the named missing set; lifecycle responsibility objects are the broader object-layer idea.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 argues that future AI Agent / MAS governance requires these objects because responsibility moves into the work lifecycle after model execution begins.",
+    evidenceRoute:
+      "The evidence route runs through the Concept Core, MRO page, RCCS-M page, ALCS page, and the full white paper.",
+    detailSections: [
+      {
+        title: "Why Logs and HITL Are Insufficient",
+        body:
+          "Logs and human checkpoints can support governance, but they do not define accepted responsibility. The object layer must preserve authority, evidence, acceptance, and closure as first-class governance records."
+      }
+    ],
+    relatedEssays: ["agentic-ai-inflection-point-project-delivery"],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "missing-regulatory-objects",
+      "authority-boundary",
+      "accepted-outcome",
+      "lifecycle-evidence",
+      "rccs-m",
+      "alcs"
+    ],
+    keywords: [
+      "Lifecycle Responsibility Objects",
+      "AI agent responsibility",
+      "Missing Regulatory Objects",
+      "agentic lifecycle governance",
+      "accepted outcome"
+    ],
+    gaicEntity: true
+  },
   {
     slug: "ai-agent-lifecycle",
     term: "AI Agent Lifecycle",
@@ -904,6 +1162,10 @@ export const concepts = [
       "Observability tools are valuable, but they often describe system behavior from the runtime outward. Evidence Chain starts from the delivery claim and asks what must be visible for that claim to be assessed. Evaluations can test outputs, but they may not preserve authority, context, confirmation, or acceptance state. Audit logs can record events, but they may not explain whether the events were legitimate within the lifecycle.",
     relationToLifecycle:
       "AI Agent Lifecycle depends on evidence because continuity must be inspectable. If a system cannot show how intent became plan, how plan became confirmed action, and how action became an accepted outcome, the lifecycle is only implied. Semantic Loss is the failure mode. Evidence Chain is the governance response. Validation Lab is the evidence adjudication surface most directly tied to this primitive, while Cognitive OS explores how runtime state can keep evidence attached to work.",
+    whatItIsNot:
+      "Evidence Chain is not raw logs, generic traces, or a transcript dump. It is structured support for review, replay, dispute, remediation, and accepted outcome.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 treats Evidence Chain as part of the lifecycle responsibility object layer. RCCS-M asks whether governance can express evidence partitioning; ALCS asks whether evidence remains coherent through dispute, remediation, and closure.",
     evidenceRoute:
       "The evidence route is direct: start with the Agentic Delivery essay to understand why accepted outcome matters, then read the governance essay for the protocol gap above MCP and A2A. Validation Lab is the main evidence adjudication surface because it treats evidence as something to inspect rather than something to assert. MPLP and Cognitive OS explain how evidence can be represented and kept attached to lifecycle state.",
     relatedEssays: [
@@ -913,14 +1175,117 @@ export const concepts = [
       "ai-agent-lifecycle-it-was-not-designed-it-grew"
     ],
     relatedProjects: ["validation-lab", "mplp", "cognitive-os"],
-    relatedTerms: ["ai-agent-lifecycle", "ai-agent-governance", "context-drift", "confirmation-boundary"],
+    relatedTerms: [
+      "missing-regulatory-objects",
+      "rccs-m",
+      "alcs",
+      "accepted-outcome",
+      "authority-boundary",
+      "ai-agent-lifecycle",
+      "ai-agent-governance",
+      "context-drift",
+      "confirmation-boundary"
+    ],
     keywords: [
       "Evidence Chain",
       "agent evidence chain",
       "AI agent auditability",
       "production-grade AI agents",
       "accepted outcome"
-    ]
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "accepted-outcome",
+    term: "Accepted Outcome",
+    seoTitle: "Accepted Outcome Definition",
+    seoDescription:
+      "Accepted Outcome is the lifecycle point where AI agent work becomes reviewable, attributable, and accepted responsibility.",
+    definition:
+      "Accepted Outcome is the point where agent work becomes reviewable, attributable, and accepted responsibility. It marks the transition from completed execution to an outcome that an authorized human or organizational role has reviewed and accepted against intent, constraints, and evidence.",
+    problem:
+      "The problem it names is the gap between finishing a task and accepting responsibility for the result. Agent systems often treat task completion, tool success, or model output as the end of work, but compliance needs a durable acceptance record.",
+    whyExistingApproachesAreNotEnough:
+      "A completed task may be wrong, unreviewed, out of scope, or unsupported by evidence. An eval score may say an output is plausible. A log may show a workflow finished. None of those alone establishes that the outcome was accepted by an accountable role.",
+    whatItIsNot:
+      "Accepted Outcome is not task completion, model output, a passing evaluation score, or silent user satisfaction. It is a lifecycle responsibility state.",
+    relationToLifecycle:
+      "Accepted Outcome is the endpoint that makes lifecycle governance accountable. Intent, authority, plan, evidence, review, dispute, and remediation all need a way to resolve into acceptance, rejection, or closure.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 uses accepted outcome as one of the lifecycle responsibility objects that model-centric governance often leaves unnamed. It appears in the MRO layer, RCCS-M lens, and ALCS lifecycle chain.",
+    evidenceRoute:
+      "The evidence route runs through the Concept Core, Evidence Chain page, Delivery Standard, and the full white paper.",
+    detailSections: [
+      {
+        title: "Completed Task vs Accepted Outcome",
+        body:
+          "Completed task describes execution state. Accepted outcome describes responsibility state: the result has been reviewed against intent, constraints, and evidence, then accepted by an accountable role."
+      }
+    ],
+    relatedEssays: ["agentic-ai-inflection-point-project-delivery"],
+    relatedProjects: ["validation-lab", "mplp"],
+    relatedTerms: [
+      "lifecycle-evidence",
+      "authority-boundary",
+      "lifecycle-responsibility-objects",
+      "missing-regulatory-objects",
+      "rccs-m",
+      "alcs"
+    ],
+    keywords: [
+      "Accepted Outcome",
+      "AI agent delivery",
+      "lifecycle responsibility",
+      "Evidence Chain",
+      "AI agent compliance"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "authority-boundary",
+    term: "Authority Boundary",
+    seoTitle: "Authority Boundary Definition",
+    seoDescription:
+      "Authority Boundary defines who may authorize agentic action, under what scope, and with what responsibility record.",
+    definition:
+      "Authority Boundary defines who may authorize agentic action, under what scope, and with what responsibility record. It turns delegated authority into an inspectable lifecycle object rather than an assumed permission state.",
+    problem:
+      "The problem it names is that agent action can cross from assistance into consequential execution without a clear record of who authorized the work, what scope was covered, and which actions remained outside authority.",
+    whyExistingApproachesAreNotEnough:
+      "Generic approval can say yes to an action without defining the lifecycle scope. Access control can say what a system may reach without saying who owns the outcome. Monitoring can show an action happened without proving that it was authorized within the right boundary.",
+    whatItIsNot:
+      "Authority Boundary is not a generic approval button, role label, RBAC entry, or broad permission grant. It is a lifecycle responsibility object.",
+    relationToLifecycle:
+      "Authority Boundary sits before and during consequential agent work. It connects human role, delegated authority, risk, tool action, confirmation, evidence, and accepted outcome.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 treats authority boundary as part of the MRO object layer. RCCS-M asks whether governance can express authority boundaries; ALCS asks whether they remain coherent through execution, dispute, and closure.",
+    evidenceRoute:
+      "The evidence route runs through Confirmation Boundary, Evidence Chain, RCCS-M, and the white paper.",
+    detailSections: [
+      {
+        title: "Authority Boundary vs Confirmation Boundary",
+        body:
+          "Authority Boundary names the scope and owner of delegated authority. Confirmation Boundary names the lifecycle point where explicit authorization is required before consequential execution continues."
+      }
+    ],
+    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "confirmation-boundary",
+      "missing-regulatory-objects",
+      "rccs-m",
+      "alcs",
+      "accepted-outcome",
+      "lifecycle-evidence"
+    ],
+    keywords: [
+      "Authority Boundary",
+      "AI agent authorization",
+      "delegated authority",
+      "AI agent governance",
+      "Missing Regulatory Objects"
+    ],
+    gaicEntity: true
   },
   {
     slug: "confirmation-boundary",
@@ -936,6 +1301,8 @@ export const concepts = [
       "Human-in-the-loop design is necessary but often underspecified. A human can be present and still lack the information needed to authorize responsibly. Access controls can block categories of action, but they do not define when a specific plan is acceptable. Logs can show that approval happened, but not necessarily what was approved. A Confirmation Boundary makes the approved scope and its lifecycle links explicit.",
     relationToLifecycle:
       "Within AI Agent Lifecycle, Confirmation Boundary sits between plan and execution. It is one of the points where human authority enters the lifecycle in a structured way. Protocol Engineering can model the boundary as a record rather than a chat message. AI Agent Governance uses it to preserve accountability. SoloCrew is the delivery proof path where confirmation boundaries matter as part of an operating loop.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 distinguishes Confirmation Boundary from the broader Authority Boundary. The confirmation point is one way authority enters the agentic lifecycle, while RCCS-M and ALCS ask whether the resulting responsibility remains inspectable.",
     evidenceRoute:
       "The evidence route for Confirmation Boundary starts with the lifecycle governance essay, where confirmation is treated as a protocol primitive rather than a decorative checkpoint. SoloCrew is the most concrete delivery route because confirmation boundaries have to feel usable inside a working loop. MPLP provides the protocol vocabulary, and Validation Lab asks whether the resulting approval record is enough for later review. The boundary should explain the approved plan, the excluded scope, the expected evidence, and the return condition before the agent continues. That makes approval durable enough to audit rather than merely visible in a UI at execution time.",
     relatedEssays: [
@@ -944,7 +1311,13 @@ export const concepts = [
       "agentic-ai-inflection-point-project-delivery"
     ],
     relatedProjects: ["solocrew", "mplp", "validation-lab"],
-    relatedTerms: ["ai-agent-governance", "protocol-engineering", "agentic-delivery", "lifecycle-evidence"],
+    relatedTerms: [
+      "authority-boundary",
+      "ai-agent-governance",
+      "protocol-engineering",
+      "agentic-delivery",
+      "lifecycle-evidence"
+    ],
     keywords: [
       "Confirmation Boundary",
       "human in the loop",

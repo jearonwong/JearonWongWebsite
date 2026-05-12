@@ -29,6 +29,15 @@ const conceptSetJsonLd = {
     }
   ]
 };
+const gaicEntitySlugs = new Set([
+  "missing-regulatory-objects",
+  "rccs-m",
+  "alcs",
+  "lifecycle-responsibility-objects",
+  "accepted-outcome",
+  "authority-boundary",
+  "lifecycle-evidence"
+]);
 const primaryConceptStack = [
   {
     term: "AI Agent Lifecycle",
@@ -93,9 +102,11 @@ const primaryConceptPageSlugs = new Set([
   "agentic-lifecycle-governance",
   "agentic-delivery",
   "confirmation-boundary",
-  "lifecycle-evidence"
+  "lifecycle-evidence",
+  ...gaicEntitySlugs
 ]);
 const supportingConcepts = concepts.filter((concept) => !primaryConceptPageSlugs.has(concept.slug));
+const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.slug));
 ---
 
 <BaseLayout
@@ -163,7 +174,7 @@ const supportingConcepts = concepts.filter((concept) => !primaryConceptPageSlugs
             <span class="registry-key">PRIMARY_CONCEPT_STACK</span>
           </div>
           <h2 id="primary-concept-stack-title">Primary Concept Stack</h2>
-          <p class="tier-note">These seven terms are the first-stage public concept stack. Everything else is supporting architecture.</p>
+          <p class="tier-note">These terms are the first-stage public concept stack. Everything else is supporting architecture.</p>
         </div>
         <div class="concept-grid concept-grid--primary">
           {primaryConceptStack.map((entry, index) => (
@@ -174,6 +185,25 @@ const supportingConcepts = concepts.filter((concept) => !primaryConceptPageSlugs
               <h3><a href={entry.href}>{entry.term}</a></h3>
               <p>{entry.description}</p>
               <a href={entry.href} class="concept-card__link">{entry.linkLabel}</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-tier" aria-labelledby="gaic-entity-mesh-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+            <span class="registry-key">GAIC_ENTITY_MESH</span>
+          </div>
+          <h2 id="gaic-entity-mesh-title">Global AI Compliance Entity Mesh</h2>
+          <p class="tier-note">Definition-first entity pages for the white paper's core governance object layer.</p>
+        </div>
+        <div class="supporting-term-list">
+          {gaicEntities.map((concept) => (
+            <article class="supporting-term-card">
+              <h3><a href={`/concepts/${concept.slug}/`}>{concept.term}</a></h3>
+              <p>{concept.seoDescription}</p>
+              <a href={`/concepts/${concept.slug}/`} class="concept-card__link">Open entity page</a>
             </article>
           ))}
         </div>
