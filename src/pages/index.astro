@@ -156,7 +156,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   </div>
 
   <!-- 2. GAIC Research Release -->
-  <section class="zone-a registry-grid gaic-release-band" aria-labelledby="gaic-release-title">
+  <section class="zone-b gaic-release-band" aria-labelledby="gaic-release-title">
     <div class="shell">
       <div class="gaic-release-panel registry-chassis">
         <div class="gaic-release-copy">
@@ -427,9 +427,14 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
 
   /* -- GAIC Research Release -- */
   .gaic-release-band {
-    padding: clamp(2rem, 4vw, 3.5rem) 0;
-    border-top: 1px solid var(--border-registry);
-    border-bottom: 1px solid var(--border-registry);
+    padding: clamp(2.5rem, 5vw, 4.75rem) 0;
+    background:
+      linear-gradient(rgba(17, 17, 17, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.025) 1px, transparent 1px),
+      #f8fafc;
+    background-size: 40px 40px;
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   }
 
   .gaic-release-panel {
@@ -438,8 +443,10 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     gap: clamp(1.5rem, 4vw, 3rem);
     align-items: center;
     padding: var(--registry-panel-padding);
-    background: rgba(26, 26, 26, 0.82);
-    border-left: 3px solid var(--accent-proof);
+    background: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-left: 4px solid var(--accent-proof);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
   }
 
   .gaic-release-label {
@@ -449,7 +456,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .gaic-release-panel h2 {
     max-width: 15ch;
     margin: 0;
-    color: var(--text-registry-primary);
+    color: #111111;
     font-size: clamp(2rem, 4vw, 3.35rem);
     line-height: 0.98;
     letter-spacing: 0;
@@ -458,7 +465,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .gaic-release-thesis {
     max-width: 48rem;
     margin: 1rem 0 0;
-    color: rgba(241, 245, 249, 0.9);
+    color: #111111;
     font-size: clamp(1.08rem, 1.55vw, 1.28rem);
     font-weight: 650;
     line-height: 1.5;
@@ -467,7 +474,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .gaic-release-support {
     max-width: 58rem;
     margin: 0.85rem 0 0;
-    color: rgba(148, 163, 184, 0.82);
+    color: #525252;
     font-size: 0.98rem;
     line-height: 1.68;
   }
@@ -483,6 +490,28 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     text-align: center;
     text-decoration: none;
     white-space: normal;
+  }
+
+  .gaic-release-actions .button-primary {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+  }
+
+  .gaic-release-actions .button-primary:hover {
+    background: #000000;
+    border-color: #000000;
+  }
+
+  .gaic-release-actions .button-outline {
+    background: transparent;
+    border-color: rgba(17, 17, 17, 0.18);
+    color: #111111;
+  }
+
+  .gaic-release-actions .button-outline:hover {
+    border-color: var(--accent-signal);
+    color: var(--accent-signal);
   }
 
   /* ── Sections ── */
