@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-12T10:52:25",
+  "generated_at": "2026-05-12T12:45:33",
   "phase": "1D-13E",
-  "artifact": "html_publication_targeted_rccs_m_cleanup_and_table_blocker_repair",
-  "phase_1d12_status": "PHASE 1D-13E TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
+  "artifact": "html_publication_professional_style_shell_targeted_rccs_m_cleanup_and_table_blocker_repair",
+  "phase_1d12_status": "PHASE 1D-13E STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
   "root": "/Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3",
   "branch": "main",
-  "source_commit": "7b6e1133ca3ae5db95128c7cb3b15a4ce58bae2f",
-  "origin_head": "7b6e1133ca3ae5db95128c7cb3b15a4ce58bae2f\tHEAD",
+  "source_commit": "e39a1cb3827a5f388527da4dd3a0d09b2c905bb3",
+  "origin_head": "e39a1cb3827a5f388527da4dd3a0d09b2c905bb3\tHEAD",
   "source_files": [
     "sections/00-front-matter.md",
     "sections/01-scope-methodology.md",
@@ -57,8 +57,8 @@
   "pdf_export_engine": "Chrome headless print-to-PDF",
   "docx_export_engine": "python-docx from same Phase 1D-13E structured source",
   "docx_export_stdout": "python-docx editable derivative from Phase 1D-12 structured source",
-  "pdf_page_count": 448,
-  "rendered_page_count": 448,
+  "pdf_page_count": 424,
+  "rendered_page_count": 424,
   "table_records": [
     {
       "table_id": "T-FM-01",
@@ -3437,6 +3437,7 @@
   "citation_blockers": 0,
   "final_unresolved_blockers": 0,
   "remaining_limitations": [
+    "The uploaded Professional-Final HTML was used only as style/layout reference; latest source_r3 Markdown remains the sole content source.",
     "RCCS-M is an author analytical, forward-looking MRO-adjusted model; it is not current law, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.",
     "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials, with conflict-of-interest disclosure preserved.",
     "OpenAI platform guide remains HTTP 403 by curl; accessible official Python/JS Agents SDK docs replace it for retained SDK-surface claims.",
@@ -3446,6 +3447,9 @@
   "qa_reports": [
     "reports/phase-1d13e-preflight.md",
     "reports/phase-1d13e-implementation-grounding.md",
+    "reports/phase-1d13e-professional-style-reference-audit.md",
+    "reports/phase-1d13e-style-shell-integration-qa.md",
+    "reports/phase-1d13e-content-regression-guard.md",
     "reports/phase-1d13e-vertical-table-blocker-audit.md",
     "reports/phase-1d13e-table-rendering-repair-report.md",
     "reports/phase-1d13e-table-visual-qa.md",
@@ -3459,6 +3463,8 @@
   ],
   "qa_summary": {
     "phase": "1D-13E",
+    "style_shell_integration": "PASS",
+    "content_regression_guard": "PASS",
     "table_visual_blocker": "PASS",
     "chapter14_rccs_m_evidence": "PASS",
     "chapter15_rccs_m_pressure_test": "PASS",
@@ -3469,8 +3475,28 @@
     "source_closure_preservation": "PASS",
     "vertical_single_letter_pages": [],
     "css_blockers": [],
+    "content_required_terms": {
+      "RCCS-T": true,
+      "RCCS-M": true,
+      "MRO Adjustment Layer": true,
+      "ALCS": true,
+      "Chapter 7 methodology": true,
+      "T-07-01A": true,
+      "T-07-02A": true,
+      "T-E-11": true,
+      "AUTHOR-INFERENCE-RCCS-M": true,
+      "Chapter 14 bridge": true,
+      "Chapter 15 bridge": true
+    },
+    "final_forbidden_terms": {
+      "QA Required in final": false,
+      "HTML Publication Draft / QA Required": false,
+      "dual scoring framework": false
+    },
     "positive_blockers": 0,
     "appendix_g_numeric_leaks": []
   },
-  "phase_1d13e_status": "PHASE 1D-13E TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
+  "phase_1d13e_status": "PHASE 1D-13E STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
+  "professional_style_reference": "/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html",
+  "content_source_policy": "Professional-Final HTML used as style/layout reference only; latest source_r3 Markdown is the sole content source."
 }

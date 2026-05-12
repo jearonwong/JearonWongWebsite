@@ -1779,4 +1779,15 @@ Content scope completed:
 - Chapter 15 now frames the eight illustrative/hypothetical scenarios as RCCS-M pressure tests.
 - Chapters 8/9/11/12 terminology cleanup completed without score recalculation.
 
-**Phase 1D-13E Status:** ✓ TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY
+Additional Phase 1D-13E style-shell integration:
+- The uploaded `Global-AI-Compliance-White-Paper-2026-Professional-Final.html` was used only as a style/layout reference.
+- The reference HTML was explicitly rejected as a content source because it contained old QA status wording, old RCCS/ALCS-only language, incomplete TOC coverage, and no current T-07-01A / T-07-02A / T-E-11 content.
+- The regenerated v9 output preserves the latest `source_r3` content and passes the content-regression guard.
+
+Style-shell validation after regeneration:
+- Style-shell integration QA: PASS
+- Content-regression guard: PASS
+- Final `QA Required` regression: 0
+- Final `dual scoring framework` regression: 0
+
+**Phase 1D-13E Status:** ✓ STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY

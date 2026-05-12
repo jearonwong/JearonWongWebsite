@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 11, 2026 (Phase 1D-13D Chapter 7 RCCS-T/M Methodology Correction)
+**Last Updated:** May 12, 2026 (Phase 1D-13E Style-Shell Integration and RCCS-M Cleanup)
 
 ## Reconstruction Strategy
 
@@ -43,6 +43,7 @@ R3 uses phased reconstruction:
 22. **Phase 1D-12:** Two-layer RCCS model and final table visual repair with RCCS-T/RCCS-M/ALCS result profiles, MPLP interpretation clarification, score chart update, table wrapping root-cause repair, and regenerated HTML/PDF/DOCX derivative (✓ TWO-LAYER RCCS AND VISUAL REPAIR COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 23. **Phase 1D-13B:** Targeted global RCCS-M integration with RCCS-T / MRO / RCCS-M / ALCS as the explanatory spine across active source, while preserving 1D-12 score ranges, 1D-11 source closure, Appendix G qualitative/no-score posture, and publication boundaries (✓ GLOBAL RCCS-M INTEGRATION COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 24. **Phase 1D-13D:** Targeted Chapter 7 RCCS-T/M methodology correction with same-dimension/two-lens scoring, T-07-01A MRO adjustment test, T-07-02A 0-5 scoring-lens table, and Appendix E T-E-11 RCCS-M Adjustment Matrix, while preserving scores and boundaries (✓ CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+25. **Phase 1D-13E:** Professional HTML style-shell integration using the uploaded Professional-Final HTML as visual reference only, plus table blocker repair, Chapter 14 RCCS-M evidence bridge, Chapter 15 RCCS-M pressure-test bridge, terminology cleanup, and regenerated v9 HTML/PDF/DOCX with content-regression guard (✓ STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 
 ## Source Hierarchy
 
@@ -106,6 +107,10 @@ Phase 1D-13B applies the Phase 1D-13A research finding that Phase 1D-12 fixed th
 ### Decision 12: Complete Chapter 7 as the Operational RCCS-T/M Methodology
 
 Phase 1D-13D applies the Phase 1D-13C research finding that global RCCS-M framing was present but Chapter 7 still lacked a fully operational scoring method. The implementation keeps the canonical ten RCCS dimensions and weights, then explains that RCCS-T and RCCS-M are separate scoring lenses over the same dimension family. Chapter 7 now includes T-07-01A for RCCS-T dimension to RCCS-M MRO adjustment tests, T-07-02A for 0-5 scoring differences, distinct traditional/MRO evidence requirements, and compact RCCS-M adjustment notes for each dimension rubric. Appendix E keeps T-E-01 through T-E-10 as RCCS-T baseline rubrics and adds T-E-11 as the RCCS-M Adjustment Matrix. No score recalculation, ranking, legal compliance proof, certification claim, or procurement recommendation was introduced.
+
+### Decision 13: Borrow the Professional Shell, Not the Content
+
+Phase 1D-13E uses `/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html` only as a visual/layout reference. Its body content is rejected because it lacks the latest RCCS-T/RCCS-M methodology and contains old QA/draft status and old RCCS/ALCS-only language. The active `source_r3` Markdown remains the sole content source. The regenerated v9 HTML/PDF/DOCX uses a professional cover, metadata rhythm, callout style, table/card grammar, and section spacing while preserving RCCS-T, MRO Adjustment Layer / MRO-adjusted framing, RCCS-M, ALCS, T-07-01A, T-07-02A, T-E-11, Chapter 14/15 bridges, source closure, and boundary discipline. The vertical table blocker remains fixed with semantic row-card rendering for unsafe MRO/ALCS mapping tables.
 
 ## Lessons from R2
 

@@ -6,8 +6,8 @@
 
 | Check | Result |
 |---|---|
-| PDF page count | 448 |
-| Rendered PNG page count | 448 |
+| PDF page count | 424 |
+| Rendered PNG page count | 424 |
 | Table records | 189 |
 | Split/reflowed table records | 118 |
 | Vertical single-letter table text | 0 |

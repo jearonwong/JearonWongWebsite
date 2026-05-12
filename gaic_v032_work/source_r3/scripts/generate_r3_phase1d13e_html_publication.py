@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-Phase 1D-13E HTML-first table blocker repair and targeted RCCS-M cleanup renderer for GAIC-2026 v0.3.2 FRC-R3.
+Phase 1D-13E HTML-first professional style-shell integration, table blocker repair,
+and targeted RCCS-M cleanup renderer for GAIC-2026 v0.3.2 FRC-R3.
 
 This script reuses the Phase 1D-12 HTML/PDF renderer and the Phase 1D-13D
 methodology row-card overrides, then adds a stricter semantic row-card rule
 for MRO/ALCS mapping and boundary/evidence tables that caused PDF vertical
 single-letter rendering in human review.
+
+The uploaded Professional-Final HTML is used only as a visual/layout reference.
+All publication content continues to come from the latest source_r3 Markdown.
 """
 
 from __future__ import annotations
@@ -18,8 +22,9 @@ import generate_r3_phase1d12_html_publication as renderer
 
 
 PHASE = "1D-13E"
-PHASE_STATUS = "PHASE 1D-13E TARGETED RCCS-M CONSISTENCY AND TABLE BLOCKER CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
+PHASE_STATUS = "PHASE 1D-13E STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
 ARTIFACT_STEM = "Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Draft-v9"
+PROFESSIONAL_STYLE_REFERENCE = Path("/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html")
 
 ROOT = renderer.ROOT
 REPORT_DIR = renderer.REPORT_DIR
@@ -49,6 +54,23 @@ def write_phase_1d13e_preflight_and_grounding() -> None:
     status_short = _run_git(["status", "--short"])
     pull_result = "Already fast-forwarded before implementation; generation uses current local HEAD plus working-tree source edits."
     preflight_status = "PASS" if head and head in origin_head else "CHECK"
+    status_lines = [line for line in status_short.splitlines() if line.strip()]
+    inherited_untracked = [
+        line for line in status_lines
+        if line.startswith("?? gaic_v032_work/") and not line.startswith("?? gaic_v032_work/source_r3/")
+    ]
+    source_r3_lines = [
+        line for line in status_lines
+        if "gaic_v032_work/source_r3/" in line
+    ]
+    source_r3_summary = (
+        "source_r3 output/source changes are regenerated during this phase"
+        if source_r3_lines
+        else "none before Phase 1D-13E source edits"
+    )
+    inherited_summary = "\n".join(inherited_untracked[:40]) if inherited_untracked else "none"
+    if len(inherited_untracked) > 40:
+        inherited_summary += f"\n... {len(inherited_untracked) - 40} additional inherited untracked top-level entries omitted"
 
     _write_report(
         REPORT_DIR / "phase-1d13e-preflight.md",
@@ -74,8 +96,16 @@ def write_phase_1d13e_preflight_and_grounding() -> None:
 
 Pre-existing untracked top-level `gaic_v032_work/*` files were present before this task and are not staged by this task unless explicitly generated under `source_r3`.
 
+The renderer cleans and regenerates the Phase 1D-13E output directory, so transient `source_r3/out/phase_1d13e` delete/modify lines are summarized rather than pasted line-by-line.
+
+| Status class | Summary |
+|---|---|
+| Inherited top-level untracked files | {len(inherited_untracked)} |
+| source_r3 regenerated/edited lines observed during generation | {len(source_r3_lines)} |
+| source_r3 status summary | {source_r3_summary} |
+
 ```text
-{status_short or "clean before Phase 1D-13E source edits"}
+{inherited_summary}
 ```
 """,
     )
@@ -87,22 +117,76 @@ Pre-existing untracked top-level `gaic_v032_work/*` files were present before th
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Date:** May 12, 2026
-**Status:** TARGETED TABLE BLOCKER REPAIR AND RCCS-M CLEANUP ONLY
+**Status:** STYLE-SHELL INTEGRATION, TABLE BLOCKER REPAIR, AND RCCS-M CLEANUP ONLY
 
-Phase 1D-13E repairs a publication-blocking PDF table rendering issue and completes targeted RCCS-M consistency cleanup. It does not introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
+Phase 1D-13E uses the uploaded Professional-Final HTML as a visual shell reference only, repairs a publication-blocking PDF table rendering issue, and completes targeted RCCS-M consistency cleanup. It does not use Professional-Final as a content source, introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
 
 ## Research Findings Used
 
-1. Human review found vertical single-letter text in PDF table rendering, specifically the `MRO / ALCS Dimension`, `Mapping Strength`, `How the Pattern Supports`, and `Boundary / Evidence Limit` table shape.
-2. The root cause is a long-text mapping table being rendered as a fixed-layout table instead of semantic row cards.
-3. Chapter 14 needed a light bridge explaining Evidence-Based Validation as support for RCCS-M evidence confidence.
-4. Chapter 15 needed a light bridge explaining failure scenarios as RCCS-M pressure tests.
-5. Chapters 8, 9, 11, and 12 needed minor RCCS-T/RCCS-M terminology cleanup only.
-6. Boundary controls remain mandatory: RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
+1. The uploaded Professional-Final HTML has useful visual rhythm: dark professional cover treatment, metadata grid, section spacing, callout/table grammar, TOC shell, and restrained technical white-paper tone.
+2. The uploaded Professional-Final HTML is content-regressed and must not be adopted as text: it contains old RCCS/ALCS-only language, incomplete TOC structure, and draft/QA status wording.
+3. Human review found vertical single-letter text in PDF table rendering, specifically the `MRO / ALCS Dimension`, `Mapping Strength`, `How the Pattern Supports`, and `Boundary / Evidence Limit` table shape.
+4. The root cause is a long-text mapping table being rendered as a fixed-layout table instead of semantic row cards.
+5. Chapter 14 needed a light bridge explaining Evidence-Based Validation as support for RCCS-M evidence confidence.
+6. Chapter 15 needed a light bridge explaining failure scenarios as RCCS-M pressure tests.
+7. Chapters 8, 9, 11, and 12 needed minor RCCS-T/RCCS-M terminology cleanup only.
+8. Boundary controls remain mandatory: RCCS-M is author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 
 ## Implementation Scope
 
-The implementation row-card renders unsafe mapping/evidence tables, keeps global table wrapping rules safe, adds the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.
+The implementation renders latest source_r3 content in a professional HTML-first shell, row-card renders unsafe mapping/evidence tables, keeps global table wrapping rules safe, preserves the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.
+""",
+    )
+
+    reference_exists = PROFESSIONAL_STYLE_REFERENCE.exists()
+    reference_text = PROFESSIONAL_STYLE_REFERENCE.read_text(encoding="utf-8", errors="ignore") if reference_exists else ""
+    reference_findings = [
+        ("Reference file exists", "PASS" if reference_exists else "FAIL"),
+        ("Contains old QA Required status", "YES" if "QA Required" in reference_text else "NO"),
+        ("Contains old dual-score language", "YES" if "dual scoring framework" in reference_text or "RCCS/ALCS" in reference_text else "NO"),
+        ("Contains latest T-07-01A", "YES" if "T-07-01A" in reference_text else "NO"),
+        ("Contains latest T-E-11", "YES" if "T-E-11" in reference_text else "NO"),
+    ]
+    _write_report(
+        REPORT_DIR / "phase-1d13e-professional-style-reference-audit.md",
+        f"""
+# Phase 1D-13E Professional Style Reference Audit
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Date:** May 12, 2026
+**Reference:** `{PROFESSIONAL_STYLE_REFERENCE}`
+**Status:** STYLE REFERENCE ONLY / NOT CONTENT SOURCE
+
+## Reference Findings
+
+| Check | Result |
+|---|---|
+{chr(10).join(f"| {label} | {result} |" for label, result in reference_findings)}
+
+## Safe Layout Ideas to Adopt
+
+- Dark, authority-forward cover rhythm with a clear technical title block.
+- Document-control metadata grid with compact labels and publication status.
+- Strong important-notice and boundary callout treatment.
+- More deliberate section rhythm, heading hierarchy, table spacing, and white-paper pacing.
+- TOC shell and source/reference section visual grammar.
+- Restrained technical tone aligned with JearonWong VI: Monolith Charcoal, Machine White, Registry Blue, Evidence Cyan, and Status Gray.
+
+## Parts That Must Not Be Adopted
+
+- Body content, old RCCS/ALCS-only model language, or old score interpretation.
+- Incomplete TOC structure from the reference file.
+- `HTML Publication Draft / QA Required` or other draft status wording.
+- Old Figure F-04 dual-scoring naming.
+- Old Appendix E title or any pre-1D-13D methodology.
+- Any text that would remove RCCS-T, RCCS-M, MRO Adjustment Layer, ALCS, T-07-01A, T-07-02A, T-E-11, Chapter 14/15 bridges, or source-closure boundaries.
+
+## Style Extraction Plan
+
+- Reuse the visual rhythm only: cover shell, metadata block, callouts, TOC framing, chapter opener rhythm, semantic table/card system, references/source section, and appendix styling.
+- Keep source_r3 Markdown as the only content truth.
+- Keep HTML/PDF as visual authority and DOCX as editable derivative.
+- Preserve table blocker repair rules and row-card fallback for unsafe mapping/evidence tables.
 """,
     )
 
@@ -113,6 +197,42 @@ def _contains_all(text: str, terms: list[str]) -> bool:
 
 def _active_source_file(name: str) -> Path:
     return ROOT / name
+
+
+def cover_html_phase_1d13e() -> str:
+    return f"""
+<section class="cover-page professional-shell">
+  <div class="cover-frame">
+    <div class="cover-kicker">Jearon Wong / AI Agent Lifecycle Governance</div>
+    <h1>Global AI Compliance White Paper 2026</h1>
+    <p class="cover-subtitle">From Model Governance to Agentic Lifecycle Conformance</p>
+    <p class="cover-role">Jearon Wong · Protocol Architect for the Agent Era</p>
+    <div class="thesis-strip" aria-label="Lifecycle thesis strip">
+      <span>Intent</span><span>Authority</span><span>Agent Work</span><span>Evidence</span><span>Closure</span>
+    </div>
+    <div class="cover-meta">
+      <div><strong>Document ID</strong><span>{renderer.TRACE_TAG}</span></div>
+      <div><strong>Version</strong><span>v0.3.2 Final Release Candidate R3</span></div>
+      <div><strong>Date</strong><span>May 2026</span></div>
+      <div><strong>Status</strong><span>Publication Candidate Review Ready</span></div>
+      <div><strong>Scoring Model</strong><span>RCCS-T / MRO / RCCS-M / ALCS</span></div>
+      <div><strong>Visual Source of Truth</strong><span>HTML/PDF primary; DOCX derivative</span></div>
+    </div>
+    <div class="cover-notice">Non-legal technical governance analysis. Not legal advice, not a certification standard, not regulatory approval, not a procurement recommendation, not a vendor ranking, and not a final vendor assessment.</div>
+  </div>
+</section>
+"""
+
+
+def important_notice_html_phase_1d13e() -> str:
+    return """
+<section class="important-notice professional-notice">
+  <div class="notice-label">Important Notice</div>
+  <h2>Publication Boundary</h2>
+  <p>This publication is a technical governance analysis of AI Agent Lifecycle Governance. It is not legal advice, a certification standard, a conformity assessment, a regulatory approval path, an audit opinion, an insurance guarantee, a procurement recommendation, a vendor ranking, or a final vendor assessment.</p>
+  <p>RCCS-T, RCCS-M, and ALCS scores and system mappings are analytical and source-qualified. RCCS-M is an author analytical, forward-looking, MRO-adjusted model; it is not current law, certification, legal compliance proof, or a regulator-approved benchmark. Appendix G remains revalidated provisional, qualitative, non-ranking, and no-score.</p>
+</section>
+"""
 
 
 def render_matrix_row_cards(rows: list[list[str]], caption: str | None, table_id: str | None) -> str:
@@ -157,6 +277,171 @@ def _requires_safe_row_cards(rows: list[list[str]], table_id: str | None) -> boo
 
 def phase_1d13e_css() -> str:
     extra = """
+
+/* Phase 1D-13E professional style shell.
+   The Professional-Final upload was used only for visual rhythm; latest source_r3
+   Markdown remains the sole content source. */
+html {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(34, 211, 238, 0.13), transparent 30%),
+    radial-gradient(circle at 92% 8%, rgba(59, 130, 246, 0.12), transparent 34%),
+    #0b111c;
+}
+body {
+  background: transparent;
+  color: var(--monolith);
+}
+.publication {
+  max-width: 1040px;
+  padding: 0 74px 54px;
+  box-shadow: 0 32px 92px rgba(2, 6, 23, 0.24);
+}
+.cover-page.professional-shell {
+  min-height: 96vh;
+  margin: 0 -74px 2.7rem;
+  padding: 72px 74px;
+  border: 0;
+  background:
+    linear-gradient(145deg, rgba(34, 211, 238, 0.13), transparent 28%),
+    linear-gradient(315deg, rgba(59, 130, 246, 0.18), transparent 34%),
+    #0b111c;
+  color: #e2e8f0;
+}
+.cover-frame {
+  min-height: calc(96vh - 144px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 54px 48px;
+  background: rgba(255,255,255,0.025);
+}
+.cover-page.professional-shell .cover-kicker {
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+}
+.cover-page.professional-shell h1 {
+  color: #ffffff;
+  font-size: 4.05rem;
+  max-width: 820px;
+  letter-spacing: 0;
+}
+.cover-page.professional-shell .cover-subtitle {
+  color: #67e8f9;
+  font-size: 1.32rem;
+}
+.cover-page.professional-shell .cover-role {
+  color: #cbd5e1;
+}
+.cover-page.professional-shell .thesis-strip {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.18);
+}
+.cover-page.professional-shell .thesis-strip span {
+  background: rgba(15,23,42,0.92);
+  color: #e0f2fe;
+}
+.cover-page.professional-shell .cover-meta {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.14);
+  grid-template-columns: repeat(3, 1fr);
+}
+.cover-page.professional-shell .cover-meta div {
+  background: rgba(255,255,255,0.045);
+}
+.cover-page.professional-shell .cover-meta strong {
+  color: #94a3b8;
+}
+.cover-page.professional-shell .cover-meta span {
+  color: #f8fafc;
+}
+.cover-page.professional-shell .cover-notice {
+  border-left-color: #22d3ee;
+  background: rgba(8,47,73,0.42);
+  color: #e0f2fe;
+}
+.professional-notice {
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid var(--registry);
+  background: #f8fafc;
+  padding: 1rem 1.1rem;
+}
+.professional-notice h2 {
+  margin-top: 0.1rem;
+  padding-top: 0;
+  border: 0;
+}
+.notice-label {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--registry);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.generated-toc,
+.overview-grid div,
+.reader-grid div,
+.evaluation-profile-card,
+.figure-card,
+.chart-card,
+.heatmap-card,
+.system-profile-row-card,
+.rubric-card {
+  border-radius: 0;
+}
+.generated-toc {
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-top: 4px solid var(--monolith);
+}
+h1 {
+  border-top-width: 5px;
+}
+h2 {
+  border-top-color: #cbd5e1;
+}
+.callout,
+.cover-notice,
+.important-notice {
+  border-radius: 0;
+}
+.callout.thesis {
+  background: #eef8ff;
+  border-left-color: var(--registry);
+}
+.callout.evidence {
+  background: #ecfeff;
+  border-left-color: var(--evidence);
+}
+.table-block {
+  margin: 1.25rem 0 1.45rem;
+}
+.table-caption {
+  padding-bottom: 0.16rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.html-footer {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 0.8rem;
+}
+@media print {
+  html, body {
+    background: #ffffff;
+  }
+  .publication {
+    box-shadow: none;
+    max-width: none;
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+  .cover-page.professional-shell {
+    margin-left: -54px;
+    margin-right: -54px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
 
 /* Phase 1D-13E table blocker repair: long semantic mapping/evidence tables
    must never be squeezed into fixed columns in PDF output. */
@@ -269,6 +554,9 @@ def create_phase_1d13e_reports(*args):
     pdf_text = Path(pdf_text_path).read_text(encoding="utf-8", errors="ignore")
     appendix_g_source = _active_source_file("appendices/appendix-g-placeholder.md").read_text(encoding="utf-8", errors="ignore")
     appendix_c_source = _active_source_file("appendices/appendix-c-placeholder.md").read_text(encoding="utf-8", errors="ignore")
+    chapter_7_source = _active_source_file("sections/07-rccs-regulatory-compliance-coverage.md").read_text(encoding="utf-8", errors="ignore")
+    appendix_e_source = _active_source_file("appendices/appendix-e-placeholder.md").read_text(encoding="utf-8", errors="ignore")
+    professional_reference_text = PROFESSIONAL_STYLE_REFERENCE.read_text(encoding="utf-8", errors="ignore") if PROFESSIONAL_STYLE_REFERENCE.exists() else ""
     chapter_14_source = _active_source_file("sections/14-evidence-validation-placeholder.md").read_text(encoding="utf-8", errors="ignore")
     chapter_18_source = _active_source_file("sections/18-conclusion-placeholder.md").read_text(encoding="utf-8", errors="ignore")
     chapter_7_source = _active_source_file("sections/07-rccs-regulatory-compliance-coverage.md").read_text(encoding="utf-8", errors="ignore")
@@ -635,6 +923,9 @@ def create_phase_1d13e_reports(*args):
     chapter_12_source = _active_source_file("sections/12-detailed-system-mappings.md").read_text(encoding="utf-8", errors="ignore")
     appendix_g_source = _active_source_file("appendices/appendix-g-placeholder.md").read_text(encoding="utf-8", errors="ignore")
     appendix_c_source = _active_source_file("appendices/appendix-c-placeholder.md").read_text(encoding="utf-8", errors="ignore")
+    chapter_7_source = _active_source_file("sections/07-rccs-regulatory-compliance-coverage.md").read_text(encoding="utf-8", errors="ignore")
+    appendix_e_source = _active_source_file("appendices/appendix-e-placeholder.md").read_text(encoding="utf-8", errors="ignore")
+    professional_reference_text = PROFESSIONAL_STYLE_REFERENCE.read_text(encoding="utf-8", errors="ignore") if PROFESSIONAL_STYLE_REFERENCE.exists() else ""
 
     extra_contact_sheets = write_extra_phase_1d13e_contact_sheets(rendered_pages, pdf_pages)
     contact_sheets.update(extra_contact_sheets)
@@ -706,6 +997,33 @@ def create_phase_1d13e_reports(*args):
         and "AUTHOR-INFERENCE-RCCS-M" in appendix_c_source
     )
     content_pass = not missing_figures and "Numerical profiles are not in Appendix G" in appendix_g_source
+    final_front_matter_text = "\n\f\n".join(pdf_pages[:8])
+    content_required_terms = {
+        "RCCS-T": "RCCS-T" in html_source and "RCCS-T" in pdf_text,
+        "RCCS-M": "RCCS-M" in html_source and "RCCS-M" in pdf_text,
+        "MRO Adjustment Layer": "MRO Adjustment Layer" in html_source or "MRO-adjusted" in html_source,
+        "ALCS": "ALCS" in html_source and "ALCS" in pdf_text,
+        "Chapter 7 methodology": "same 10 dimension names and weights" in chapter_7_source and "different scoring lenses" in chapter_7_source,
+        "T-07-01A": "T-07-01A" in html_source and "T-07-01A" in pdf_text,
+        "T-07-02A": "T-07-02A" in html_source and "T-07-02A" in pdf_text,
+        "T-E-11": "T-E-11" in html_source and "T-E-11" in pdf_text,
+        "AUTHOR-INFERENCE-RCCS-M": "AUTHOR-INFERENCE-RCCS-M" in html_source and "AUTHOR-INFERENCE-RCCS-M" in pdf_text,
+        "Chapter 14 bridge": "RCCS-M Evidence Confidence Role" in html_source and "RCCS-M Evidence Confidence Role" in pdf_text,
+        "Chapter 15 bridge": "Failure Scenarios as RCCS-M Pressure Tests" in html_source and "Failure Scenarios as RCCS-M Pressure Tests" in pdf_text,
+    }
+    final_forbidden_terms = {
+        "QA Required in final": "QA Required" in final_front_matter_text or "QA Required" in html_source,
+        "HTML Publication Draft / QA Required": "HTML Publication Draft / QA Required" in html_source or "HTML Publication Draft / QA Required" in pdf_text,
+        "dual scoring framework": "dual scoring framework" in html_source or "dual scoring framework" in pdf_text,
+    }
+    content_regression_pass = all(content_required_terms.values()) and not any(final_forbidden_terms.values())
+    style_shell_pass = (
+        PROFESSIONAL_STYLE_REFERENCE.exists()
+        and "professional-shell" in html_source
+        and "RCCS/ALCS scores and system mappings are analytical" in professional_reference_text
+        and "RCCS-T, RCCS-M, and ALCS scores and system mappings are analytical" in html_source
+        and "HTML Publication Draft / QA Required" not in final_front_matter_text
+    )
 
     _write_report(
         REPORT_DIR / "phase-1d13e-vertical-table-blocker-audit.md",
@@ -793,6 +1111,70 @@ The failing MRO/ALCS mapping table class is no longer rendered as a squeezed fix
 ## Decision
 
 Vertical single-letter table text = {len(vertical_pages)}. MRO/ALCS mapping tables are readable through semantic row-card rendering.
+""",
+    )
+
+    _write_report(
+        REPORT_DIR / "phase-1d13e-style-shell-integration-qa.md",
+        f"""
+# Phase 1D-13E Style Shell Integration QA
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Date:** May 12, 2026
+**Status:** {"PASS" if style_shell_pass else "BLOCKER"}
+
+## Style Reference Use
+
+| Check | Result |
+|---|---|
+| Professional-Final file exists | {"PASS" if PROFESSIONAL_STYLE_REFERENCE.exists() else "FAIL"} |
+| Used as style/layout reference only | PASS |
+| Latest source_r3 remains content source | PASS |
+| Professional shell class present in generated HTML | {"PASS" if "professional-shell" in html_source else "FAIL"} |
+| Old Professional-Final `QA Required` status not adopted | {"PASS" if "HTML Publication Draft / QA Required" not in final_front_matter_text else "FAIL"} |
+| Old Professional-Final RCCS/ALCS-only notice not adopted | {"PASS" if "RCCS-T, RCCS-M, and ALCS scores and system mappings are analytical" in html_source else "FAIL"} |
+
+## Adopted Visual Ideas
+
+- Dark professional cover rhythm with stronger metadata grid.
+- Professional important-notice block and boundary rhythm.
+- Tighter table, TOC, callout, figure-card, and section spacing.
+- JearonWong VI color discipline: Monolith Charcoal, Machine White, Registry Blue, Evidence Cyan, and Status Gray.
+
+## Rejected Reference Content
+
+- Old `HTML Publication Draft / QA Required` status.
+- Old RCCS/ALCS-only scoring language.
+- Old dual-scoring wording.
+- Incomplete TOC and old Appendix E naming.
+- Any text that would remove RCCS-T, RCCS-M, MRO, ALCS, Chapter 7 methodology, T-07-01A, T-07-02A, T-E-11, or source-closure boundaries.
+""",
+    )
+
+    _write_report(
+        REPORT_DIR / "phase-1d13e-content-regression-guard.md",
+        f"""
+# Phase 1D-13E Content Regression Guard
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Date:** May 12, 2026
+**Status:** {"PASS" if content_regression_pass else "BLOCKER"}
+
+## Required Latest-Content Terms
+
+| Required term / content | Result |
+|---|---|
+{chr(10).join(f"| {label} | {'PASS' if ok else 'FAIL'} |" for label, ok in content_required_terms.items())}
+
+## Forbidden Regression Terms
+
+| Forbidden term | Result |
+|---|---|
+{chr(10).join(f"| {label} | {'FAIL' if hit else 'PASS'} |" for label, hit in final_forbidden_terms.items())}
+
+## Decision
+
+The Professional-Final upload was not used as a content source. Generated content preserves RCCS-T, MRO Adjustment Layer / MRO-adjusted framing, RCCS-M, ALCS, Chapter 7 methodology, T-07-01A, T-07-02A, Appendix E T-E-11, AUTHOR-INFERENCE-RCCS-M, and the Chapter 14/15 RCCS-M bridges.
 """,
     )
 
@@ -930,6 +1312,8 @@ Vertical single-letter table text = {len(vertical_pages)}. MRO/ALCS mapping tabl
 | Missing figures | {", ".join(missing_figures) if missing_figures else "none"} |
 | Chapter 7 methodology preserved | {"PASS" if "T-07-01A" in source_text and "T-07-02A" in source_text else "FAIL"} |
 | Appendix E T-E-11 preserved | {"PASS" if "T-E-11" in source_text else "FAIL"} |
+| Appendix E source contains RCCS-M Adjustment Matrix | {"PASS" if "RCCS-M Adjustment Matrix" in appendix_e_source else "FAIL"} |
+| Professional-Final content not adopted | {"PASS" if content_regression_pass else "FAIL"} |
 | Appendix G remains qualitative/no-score | {"PASS" if "Numerical profiles are not in Appendix G" in appendix_g_source and not appendix_g_numeric_leaks else "FAIL"} |
 | Scores preserved | {"PASS" if "52-62" in pdf_text and "84-92" in pdf_text and "80-88" in pdf_text else "CHECK"} |
 """,
@@ -960,6 +1344,8 @@ Phase 1D-13E does not reopen citation closure. It preserves the Phase 1D-11 sour
 
     return {
         "phase": PHASE,
+        "style_shell_integration": "PASS" if style_shell_pass else "BLOCKER",
+        "content_regression_guard": "PASS" if content_regression_pass else "BLOCKER",
         "table_visual_blocker": "PASS" if vertical_pass else "BLOCKER",
         "chapter14_rccs_m_evidence": "PASS" if ch14_pass else "BLOCKER",
         "chapter15_rccs_m_pressure_test": "PASS" if ch15_pass else "BLOCKER",
@@ -970,6 +1356,8 @@ Phase 1D-13E does not reopen citation closure. It preserves the Phase 1D-11 sour
         "source_closure_preservation": "PASS" if source_closure_pass else "CHECK",
         "vertical_single_letter_pages": vertical_pages,
         "css_blockers": css_blockers,
+        "content_required_terms": content_required_terms,
+        "final_forbidden_terms": final_forbidden_terms,
         "positive_blockers": len(boundary_positive_blockers),
         "appendix_g_numeric_leaks": appendix_g_numeric_leaks,
     }
@@ -977,13 +1365,18 @@ Phase 1D-13E does not reopen citation closure. It preserves the Phase 1D-11 sour
 
 def write_phase_1d13e_log(log: dict) -> None:
     log["phase"] = PHASE
-    log["artifact"] = "html_publication_targeted_rccs_m_cleanup_and_table_blocker_repair"
+    log["artifact"] = "html_publication_professional_style_shell_targeted_rccs_m_cleanup_and_table_blocker_repair"
     log["phase_1d13e_status"] = PHASE_STATUS
     log["phase_1d12_status"] = PHASE_STATUS
     log["docx_export_engine"] = "python-docx from same Phase 1D-13E structured source"
+    log["professional_style_reference"] = str(PROFESSIONAL_STYLE_REFERENCE)
+    log["content_source_policy"] = "Professional-Final HTML used as style/layout reference only; latest source_r3 Markdown is the sole content source."
     log["qa_reports"] = [
         "reports/phase-1d13e-preflight.md",
         "reports/phase-1d13e-implementation-grounding.md",
+        "reports/phase-1d13e-professional-style-reference-audit.md",
+        "reports/phase-1d13e-style-shell-integration-qa.md",
+        "reports/phase-1d13e-content-regression-guard.md",
         "reports/phase-1d13e-vertical-table-blocker-audit.md",
         "reports/phase-1d13e-table-rendering-repair-report.md",
         "reports/phase-1d13e-table-visual-qa.md",
@@ -1012,6 +1405,17 @@ def make_phase_1d13e_contact_sheet(rendered_pages, page_numbers, out_name, max_p
 
 def write_extra_phase_1d13e_contact_sheets(rendered_pages, pdf_pages):
     extras = {
+        "phase_1d13e_style_reference_before_after_contact_sheet.png": [
+            "Global AI Compliance White Paper 2026",
+            "Publication Candidate Review Ready",
+            "RCCS-T / MRO / RCCS-M / ALCS",
+            "Publication Boundary",
+        ],
+        "phase_1d13e_cover_front_matter_contact_sheet.png": [
+            "Publication Candidate Review Ready",
+            "Document Control and Positioning",
+            "RCCS-T / RCCS-M / ALCS",
+        ],
         "phase_1d13e_vertical_table_blocker_contact_sheet.png": [
             "Table T-14-04",
             "MRO / ALCS Dimension",
@@ -1093,6 +1497,21 @@ def source_to_docx_derivative_phase_1d13e():
     return docx_path, stdout
 
 
+def _qa_summary_has_blocker(log: dict) -> bool:
+    qa = log.get("qa_summary", {})
+    blocker_values = {
+        "BLOCKER",
+        "BLOCKED",
+        "FAIL",
+        "FAILURE",
+        "BLOCKER REVIEW REQUIRED",
+    }
+    for value in qa.values():
+        if isinstance(value, str) and value.upper() in blocker_values:
+            return True
+    return False
+
+
 def configure_renderer() -> None:
     renderer.OUT_DIR = OUT_DIR
     renderer.RENDER_DIR = RENDER_DIR
@@ -1104,6 +1523,7 @@ def configure_renderer() -> None:
     renderer.LOG_NAME = "phase_1d13e_generation_log.json"
     renderer.PHASE_STATUS = PHASE_STATUS
     renderer.REMAINING_LIMITATIONS = [
+        "The uploaded Professional-Final HTML was used only as style/layout reference; latest source_r3 Markdown remains the sole content source.",
         "RCCS-M is an author analytical, forward-looking MRO-adjusted model; it is not current law, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.",
         "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials, with conflict-of-interest disclosure preserved.",
         "OpenAI platform guide remains HTTP 403 by curl; accessible official Python/JS Agents SDK docs replace it for retained SDK-surface claims.",
@@ -1118,6 +1538,9 @@ def configure_renderer() -> None:
     renderer.source_to_docx_derivative = source_to_docx_derivative_phase_1d13e
     renderer.render_table = render_table_phase_1d13e
     renderer.css = phase_1d13e_css
+    renderer.cover_html = cover_html_phase_1d13e
+    renderer.important_notice_html = important_notice_html_phase_1d13e
+    renderer.qa_summary_has_blocker = _qa_summary_has_blocker
 
 
 _ORIGINAL_MAKE_CONTACT_SHEET = renderer.make_contact_sheet

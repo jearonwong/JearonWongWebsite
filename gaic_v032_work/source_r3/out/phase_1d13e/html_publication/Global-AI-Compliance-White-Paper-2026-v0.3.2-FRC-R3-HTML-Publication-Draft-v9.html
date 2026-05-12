@@ -721,6 +721,171 @@ td { font-size: 0.86rem; }
 }
 
 
+/* Phase 1D-13E professional style shell.
+   The Professional-Final upload was used only for visual rhythm; latest source_r3
+   Markdown remains the sole content source. */
+html {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(34, 211, 238, 0.13), transparent 30%),
+    radial-gradient(circle at 92% 8%, rgba(59, 130, 246, 0.12), transparent 34%),
+    #0b111c;
+}
+body {
+  background: transparent;
+  color: var(--monolith);
+}
+.publication {
+  max-width: 1040px;
+  padding: 0 74px 54px;
+  box-shadow: 0 32px 92px rgba(2, 6, 23, 0.24);
+}
+.cover-page.professional-shell {
+  min-height: 96vh;
+  margin: 0 -74px 2.7rem;
+  padding: 72px 74px;
+  border: 0;
+  background:
+    linear-gradient(145deg, rgba(34, 211, 238, 0.13), transparent 28%),
+    linear-gradient(315deg, rgba(59, 130, 246, 0.18), transparent 34%),
+    #0b111c;
+  color: #e2e8f0;
+}
+.cover-frame {
+  min-height: calc(96vh - 144px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 54px 48px;
+  background: rgba(255,255,255,0.025);
+}
+.cover-page.professional-shell .cover-kicker {
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+}
+.cover-page.professional-shell h1 {
+  color: #ffffff;
+  font-size: 4.05rem;
+  max-width: 820px;
+  letter-spacing: 0;
+}
+.cover-page.professional-shell .cover-subtitle {
+  color: #67e8f9;
+  font-size: 1.32rem;
+}
+.cover-page.professional-shell .cover-role {
+  color: #cbd5e1;
+}
+.cover-page.professional-shell .thesis-strip {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.18);
+}
+.cover-page.professional-shell .thesis-strip span {
+  background: rgba(15,23,42,0.92);
+  color: #e0f2fe;
+}
+.cover-page.professional-shell .cover-meta {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.14);
+  grid-template-columns: repeat(3, 1fr);
+}
+.cover-page.professional-shell .cover-meta div {
+  background: rgba(255,255,255,0.045);
+}
+.cover-page.professional-shell .cover-meta strong {
+  color: #94a3b8;
+}
+.cover-page.professional-shell .cover-meta span {
+  color: #f8fafc;
+}
+.cover-page.professional-shell .cover-notice {
+  border-left-color: #22d3ee;
+  background: rgba(8,47,73,0.42);
+  color: #e0f2fe;
+}
+.professional-notice {
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid var(--registry);
+  background: #f8fafc;
+  padding: 1rem 1.1rem;
+}
+.professional-notice h2 {
+  margin-top: 0.1rem;
+  padding-top: 0;
+  border: 0;
+}
+.notice-label {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--registry);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.generated-toc,
+.overview-grid div,
+.reader-grid div,
+.evaluation-profile-card,
+.figure-card,
+.chart-card,
+.heatmap-card,
+.system-profile-row-card,
+.rubric-card {
+  border-radius: 0;
+}
+.generated-toc {
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-top: 4px solid var(--monolith);
+}
+h1 {
+  border-top-width: 5px;
+}
+h2 {
+  border-top-color: #cbd5e1;
+}
+.callout,
+.cover-notice,
+.important-notice {
+  border-radius: 0;
+}
+.callout.thesis {
+  background: #eef8ff;
+  border-left-color: var(--registry);
+}
+.callout.evidence {
+  background: #ecfeff;
+  border-left-color: var(--evidence);
+}
+.table-block {
+  margin: 1.25rem 0 1.45rem;
+}
+.table-caption {
+  padding-bottom: 0.16rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.html-footer {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 0.8rem;
+}
+@media print {
+  html, body {
+    background: #ffffff;
+  }
+  .publication {
+    box-shadow: none;
+    max-width: none;
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+  .cover-page.professional-shell {
+    margin-left: -54px;
+    margin-right: -54px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 /* Phase 1D-13E table blocker repair: long semantic mapping/evidence tables
    must never be squeezed into fixed columns in PDF output. */
 table {
@@ -777,29 +942,33 @@ th, td {
 <body>
 <main class="publication">
 
-<section class="cover-page">
-  <div class="cover-kicker">Jearon Wong / AI Agent Lifecycle Governance</div>
-  <h1>Global AI Compliance White Paper 2026</h1>
-  <p class="cover-subtitle">From Model Governance to Agentic Lifecycle Conformance</p>
-  <p class="cover-role">Jearon Wong · Protocol Architect for the Agent Era</p>
-  <div class="thesis-strip" aria-label="Lifecycle thesis strip">
-    <span>Intent</span><span>Authority</span><span>Agent Work</span><span>Evidence</span><span>Closure</span>
+<section class="cover-page professional-shell">
+  <div class="cover-frame">
+    <div class="cover-kicker">Jearon Wong / AI Agent Lifecycle Governance</div>
+    <h1>Global AI Compliance White Paper 2026</h1>
+    <p class="cover-subtitle">From Model Governance to Agentic Lifecycle Conformance</p>
+    <p class="cover-role">Jearon Wong · Protocol Architect for the Agent Era</p>
+    <div class="thesis-strip" aria-label="Lifecycle thesis strip">
+      <span>Intent</span><span>Authority</span><span>Agent Work</span><span>Evidence</span><span>Closure</span>
+    </div>
+    <div class="cover-meta">
+      <div><strong>Document ID</strong><span>GACWP-2026-v0.3.2-FRC-R3</span></div>
+      <div><strong>Version</strong><span>v0.3.2 Final Release Candidate R3</span></div>
+      <div><strong>Date</strong><span>May 2026</span></div>
+      <div><strong>Status</strong><span>Publication Candidate Review Ready</span></div>
+      <div><strong>Scoring Model</strong><span>RCCS-T / MRO / RCCS-M / ALCS</span></div>
+      <div><strong>Visual Source of Truth</strong><span>HTML/PDF primary; DOCX derivative</span></div>
+    </div>
+    <div class="cover-notice">Non-legal technical governance analysis. Not legal advice, not a certification standard, not regulatory approval, not a procurement recommendation, not a vendor ranking, and not a final vendor assessment.</div>
   </div>
-  <div class="cover-meta">
-    <div><strong>Document ID</strong><span>GACWP-2026-v0.3.2-FRC-R3</span></div>
-    <div><strong>Version</strong><span>v0.3.2 Final Release Candidate R3</span></div>
-    <div><strong>Date</strong><span>May 2026</span></div>
-    <div><strong>Status</strong><span>Citation Source Closure Complete / Publication Candidate Review Ready</span></div>
-    <div><strong>Visual source of truth</strong><span>HTML/PDF primary; DOCX derivative</span></div>
-  </div>
-  <div class="cover-notice">Non-legal technical governance analysis. Not legal advice, not a certification standard, not regulatory approval, not a procurement recommendation, not a vendor ranking, and not a final vendor assessment.</div>
 </section>
 
 
-<section class="important-notice">
-  <h2>Important Notice</h2>
+<section class="important-notice professional-notice">
+  <div class="notice-label">Important Notice</div>
+  <h2>Publication Boundary</h2>
   <p>This publication is a technical governance analysis of AI Agent Lifecycle Governance. It is not legal advice, a certification standard, a conformity assessment, a regulatory approval path, an audit opinion, an insurance guarantee, a procurement recommendation, a vendor ranking, or a final vendor assessment.</p>
-  <p>RCCS-T/RCCS-M/ALCS scores and system mappings are analytical and source-qualified. Appendix G remains revalidated provisional, qualitative, non-ranking, and no-score.</p>
+  <p>RCCS-T, RCCS-M, and ALCS scores and system mappings are analytical and source-qualified. RCCS-M is an author analytical, forward-looking, MRO-adjusted model; it is not current law, certification, legal compliance proof, or a regulator-approved benchmark. Appendix G remains revalidated provisional, qualitative, non-ranking, and no-score.</p>
 </section>
 
 <nav class="generated-toc" aria-label="Publication table of contents">

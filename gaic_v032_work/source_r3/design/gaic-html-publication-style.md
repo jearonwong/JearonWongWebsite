@@ -192,3 +192,15 @@ The design must reinforce, not weaken, the paper's non-claim boundaries:
 | Long text | Use `overflow-wrap: break-word` plus semantic colgroups, table splitting, or card rendering |
 | Hyphenation | Use `hyphens: auto` for table prose and `hyphens: none` for code/preformatted text |
 | Visual blocker | Single-letter vertical table text is a publication blocker, not an accepted limitation |
+
+## Phase 1D-13E Professional Style Shell Rules
+
+| Component | Rule |
+|---|---|
+| Style reference | `/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html` may be used only as a visual/layout reference, never as a content source |
+| Content truth | Latest `source_r3` Markdown remains the sole body-content source; HTML/PDF are visual authority and DOCX is derivative |
+| Cover rhythm | Dark professional cover treatment is allowed when it preserves current status, document control, and RCCS-T / MRO / RCCS-M / ALCS framing |
+| Forbidden adoption | Do not copy `QA Required`, old RCCS/ALCS-only language, incomplete TOC structure, old Figure F-04 naming, or old Appendix E naming from the reference HTML |
+| Content regression guard | Generated output must retain RCCS-T, RCCS-M, MRO Adjustment Layer / MRO-adjusted framing, ALCS, T-07-01A, T-07-02A, T-E-11, AUTHOR-INFERENCE-RCCS-M, and Chapter 14/15 bridges |
+| Table blocker | MRO/ALCS mapping tables with `MRO / ALCS Dimension`, `Mapping Strength`, and `Boundary / Evidence Limit` render as semantic row cards where needed |
+| Final status | Publication-candidate status is allowed only when style-shell QA, content-regression guard, table visual QA, boundary QA, and source-closure QA all pass |
