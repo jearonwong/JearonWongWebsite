@@ -1,7 +1,29 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (Phase 1D-13F Necessity Argument and Protocol Boundary)
+**Last Updated:** May 12, 2026 (Publication Candidate Seal)
+
+## Publication Candidate Seal
+
+### Status: PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY
+
+The approved Phase 1D-13F artifacts from commit `943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e` have been sealed into `out/publication_candidate/`. This was a packaging and governance step only: no white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary language, or interoperability boundary language was changed.
+
+**Seal results:**
+
+1. HTML, PDF, DOCX, and Phase 1D-13F generation log were copied into `out/publication_candidate/`.
+2. SHA256 checksums were generated and recorded in `out/publication_candidate/publication-candidate-manifest.json`.
+3. `reports/publication-candidate-seal-report.md` records repo truth, artifact paths, checksums, page count, QA counts, and accepted limitations.
+4. Page count remains 425; HTML/PDF remain visual authority; DOCX remains editable derivative.
+5. Citation blockers: 0. Unresolved high-risk blockers: 0. Positive forbidden-claim blockers: 0. Vertical single-letter table pages: 0.
+
+**Remaining limitations, not blockers:**
+
+1. Human release review remains required before final public release seal.
+2. RCCS-M remains author analytical and forward-looking, not current law, legal compliance proof, certification, regulator-approved benchmark, or procurement recommendation.
+3. MPLP high RCCS-M/ALCS profile remains design alignment with the proposed lifecycle object layer, not market validation or deployment proof.
+
+**Publication Candidate Seal Decision:** PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY.
 
 ## Phase 1D-13F Necessity Argument and Protocol Boundary
 

@@ -1,0 +1,67 @@
+{
+  "manifest_type": "GAIC publication candidate seal manifest",
+  "document_id": "GACWP-2026-v0.3.2-FRC-R3",
+  "version": "v0.3.2 Final Release Candidate R3",
+  "seal_status": "PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY",
+  "sealed_at_local_date": "2026-05-12",
+  "source_commit": "943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e",
+  "sealed_from_phase": "1D-13F",
+  "sealed_from_phase_status": "PHASE 1D-13F NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
+  "page_count": 425,
+  "visual_authority": "HTML/PDF are the visual authority.",
+  "docx_note": "DOCX is an editable derivative generated from the same approved Phase 1D-13F source; it is not the visual authority.",
+  "content_change_policy": "No white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary language, or interoperability boundary language was changed during sealing.",
+  "artifacts": [
+    {
+      "kind": "html",
+      "path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.html",
+      "sha256": "0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af"
+    },
+    {
+      "kind": "pdf",
+      "path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.pdf",
+      "sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643"
+    },
+    {
+      "kind": "docx",
+      "path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.docx",
+      "sha256": "b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa"
+    },
+    {
+      "kind": "generation_log",
+      "path": "gaic_v032_work/source_r3/out/publication_candidate/phase_1d13f_generation_log.json",
+      "sha256": "414b912cd4fd190ab50a0a5b9fb09476d6d56628edcad281e2ac05776fc8da3e"
+    }
+  ],
+  "qa": {
+    "citation_blocker_count": 0,
+    "unresolved_high_risk_blocker_count": 0,
+    "positive_forbidden_claim_blocker_count": 0,
+    "visual_table_blocker_count": 0,
+    "vertical_single_letter_table_pages": [],
+    "source_closure_status": "PASS",
+    "content_preservation_status": "PASS",
+    "publication_residue_status": "PASS"
+  },
+  "model_status": {
+    "rccs_t_rccs_m_alcs_model": "Preserved and publication-candidate ready.",
+    "chapter_7_methodology": "RCCS-T and RCCS-M use the same ten dimensions and weights with different scoring lenses; T-07-01A and T-07-02A preserved.",
+    "appendix_e_adjustment_matrix": "T-E-11 RCCS-M Adjustment Matrix preserved.",
+    "chapter_14_bridge": "RCCS-M evidence confidence bridge preserved.",
+    "chapter_15_bridge": "RCCS-M pressure-test bridge preserved."
+  },
+  "boundary_status": {
+    "protocol_product_boundary": "PASS - MPLP evaluated as protocol-level semantic proposal; enterprise platforms evaluated as product/platform/framework surfaces.",
+    "interoperability_boundary": "PASS - paper defines object gap, MRO model, evaluation logic, and adequacy argument, not complete wire format or conformance suite.",
+    "legal_nuance": "PASS - EU AI Act Article 86 explanation-right context distinguished from GDPR Article 22 automated-decision safeguards.",
+    "non_claim_boundary": "PASS - no legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation claim."
+  },
+  "accepted_limitations": [
+    "Human release review remains required before final public release seal.",
+    "RCCS-M is an author analytical, forward-looking MRO-adjusted model; it is not current law, certification, legal compliance proof, regulator-approved benchmark, vendor ranking, or procurement recommendation.",
+    "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials; high profile alignment is design alignment, not market validation.",
+    "OpenAI platform guide remains HTTP 403 by curl; accessible official Python and JavaScript Agents SDK docs replace it for retained SDK-surface claims.",
+    "Product/platform documentation supports visible capability surfaces only; lifecycle-object scoring remains evidence-qualified and provisional.",
+    "Appendix G remains qualitative and no-score; numeric RCCS-T/RCCS-M/ALCS profiles appear only in Evaluation Results."
+  ]
+}

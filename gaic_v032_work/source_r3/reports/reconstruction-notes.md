@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 12, 2026 (Phase 1D-13F Necessity Argument and Protocol Boundary)
+**Last Updated:** May 12, 2026 (Publication Candidate Seal)
 
 ## Reconstruction Strategy
 
@@ -45,6 +45,7 @@ R3 uses phased reconstruction:
 24. **Phase 1D-13D:** Targeted Chapter 7 RCCS-T/M methodology correction with same-dimension/two-lens scoring, T-07-01A MRO adjustment test, T-07-02A 0-5 scoring-lens table, and Appendix E T-E-11 RCCS-M Adjustment Matrix, while preserving scores and boundaries (✓ CHAPTER 7 RCCS-T/M METHODOLOGY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 25. **Phase 1D-13E:** Professional HTML style-shell integration using the uploaded Professional-Final HTML as visual reference only, plus table blocker repair, Chapter 14 RCCS-M evidence bridge, Chapter 15 RCCS-M pressure-test bridge, terminology cleanup, and regenerated v9 HTML/PDF/DOCX with content-regression guard (✓ STYLE-SHELL INTEGRATION AND RCCS-M CLEANUP COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
 26. **Phase 1D-13F:** Necessity-argument and protocol-boundary pass clarifying RCCS-M / ALCS as proposed necessary-dimension adequacy models, MPLP high scores as design alignment rather than independent validation, protocol proposal vs product/framework evaluation, interoperability/specification boundary, legal nuance, and publication-residue cleanup (✓ NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY)
+27. **Publication Candidate Seal:** Approved Phase 1D-13F artifacts sealed into `out/publication_candidate/` with SHA256 manifest and seal report, using source commit `943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e`; no white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed (✓ PUBLICATION CANDIDATE SEALED / HUMAN RELEASE REVIEW READY)
 
 ## Source Hierarchy
 
