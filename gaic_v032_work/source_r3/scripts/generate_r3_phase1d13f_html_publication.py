@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Phase 1D-13F protocol-position and evaluation-boundary renderer for GAIC-2026
+Phase 1D-13F necessity-argument and protocol-boundary renderer for GAIC-2026
 v0.3.2 FRC-R3.
 
 This script preserves the Phase 1D-13E professional style shell and table
 blocker repair, then generates the publication-candidate artifact after the
-Phase 1D-13F source updates on authorial position, protocol/product boundary,
-interoperability/specification boundary, legal nuance, and publication residue
-cleanup.
+Phase 1D-13F source updates on necessary-dimension framing, protocol/product
+boundary, interoperability/specification boundary, legal nuance, and publication
+residue cleanup.
 
 All publication content continues to come from the latest source_r3 Markdown.
 """
@@ -22,7 +22,7 @@ import generate_r3_phase1d12_html_publication as renderer
 
 
 PHASE = "1D-13F"
-PHASE_STATUS = "PHASE 1D-13F METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
+PHASE_STATUS = "PHASE 1D-13F NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY"
 ARTIFACT_STEM = "Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate"
 PROFESSIONAL_STYLE_REFERENCE = Path("/Users/jasonwang/Downloads/Global-AI-Compliance-White-Paper-2026-Professional-Final.html")
 
@@ -117,9 +117,9 @@ The renderer cleans and regenerates the Phase 1D-13F output directory, so transi
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Date:** May 12, 2026
-**Status:** METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY ONLY
+**Status:** NECESSITY ARGUMENT AND PROTOCOL BOUNDARY ONLY
 
-Phase 1D-13F adds a targeted methodological-position layer, protocol/product evaluation boundary, interoperability/specification boundary, legal nuance cleanup, and publication-residue cleanup. It preserves the Phase 1D-13E professional style shell and table blocker repair. It does not introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
+Phase 1D-13F adds a targeted necessary-dimension argument, protocol/product evaluation boundary, interoperability/specification boundary, legal nuance cleanup, and publication-residue cleanup. It preserves the Phase 1D-13E professional style shell and table blocker repair. It does not introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
 
 ## Research Findings Used
 
@@ -134,7 +134,7 @@ Phase 1D-13F adds a targeted methodological-position layer, protocol/product eva
 
 ## Implementation Scope
 
-The implementation renders latest source_r3 content in the existing professional HTML-first shell, preserves row-card rendering for unsafe mapping/evidence tables, adds the 13F methodological-position and protocol-boundary text, preserves the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.
+The implementation renders latest source_r3 content in the existing professional HTML-first shell, preserves row-card rendering for unsafe mapping/evidence tables, adds the 13F necessity-argument and protocol-boundary text, preserves the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.
 """,
     )
 
@@ -612,8 +612,9 @@ def create_phase_1d13f_reports(*args):
     missing_figures = sorted(required_figures - figure_ids)
 
     methodological_checks = [
-        ("Authorial section present", "Authorial Position and Evaluation Boundary" in front_source),
+        ("Methodological position section present", "Methodological Position: Necessity, Alignment, and Evaluation Boundary" in front_source),
         ("RCCS-M/ALCS adequacy-model framing", "proposed analytical adequacy models" in front_source),
+        ("Structurally necessary framing", "structurally necessary" in front_source),
         ("Design alignment wording", "design alignment with the proposed object layer" in front_source or "design alignment with the proposed lifecycle object layer" in chapter_13_source),
         ("Independent market validation boundary", "not as independent market validation" in front_source or "should not be read as market adoption proof" in chapter_13_source),
         ("Central claim not MPLP wins", 'The central claim is not that "MPLP wins."' in front_source),
@@ -623,6 +624,8 @@ def create_phase_1d13f_reports(*args):
         ("Protocol boundary section present", "Protocol Proposal vs Product / Framework Benchmark" in chapter_13_source),
         ("MPLP evaluated as protocol-level semantic proposal", "protocol-level semantic proposal" in chapter_13_source),
         ("Product/framework maturity distinction", "deployment features" in chapter_13_source and "market adoption" in chapter_13_source and "third-party implementation evidence" in chapter_13_source),
+        ("Interoperability semantics criterion", "interoperability semantics can be specified" in chapter_13_source),
+        ("Protocol analogy boundary", "not equivalent in adoption status" in chapter_13_source),
         ("RCCS-T product-platform distinction", "Enterprise product platforms may score stronger on RCCS-T" in chapter_13_source),
         ("RCCS-M/ALCS protocol alignment", "MPLP may score stronger on RCCS-M and ALCS" in chapter_13_source),
         ("Market-adoption proof rejected", "should not be read as market adoption proof" in chapter_13_source),
@@ -681,7 +684,7 @@ def create_phase_1d13f_reports(*args):
     _write_report(
         REPORT_DIR / "phase-1d13f-methodological-position-qa.md",
         f"""
-# Phase 1D-13F Methodological Position QA
+# Phase 1D-13F Necessity Argument and Methodological Position QA
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Date:** May 12, 2026
@@ -693,7 +696,31 @@ def create_phase_1d13f_reports(*args):
 
 ## Decision
 
-RCCS-M / ALCS are now explicitly framed as proposed analytical adequacy models for agentic lifecycle governance. MPLP's strong RCCS-M / ALCS posture is framed as design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority.
+RCCS-M / ALCS are now explicitly framed as proposed analytical adequacy models for agentic lifecycle governance and as necessary-dimension models for evaluating lifecycle responsibility. MPLP's strong RCCS-M / ALCS posture is framed as design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority.
+""",
+    )
+
+    _write_report(
+        REPORT_DIR / "phase-1d13f-necessity-argument-qa.md",
+        f"""
+# Phase 1D-13F Necessity Argument QA
+
+**Document:** GAIC-2026-v0.3.2-FRC-R3
+**Date:** May 12, 2026
+**Status:** {"PASS" if methodological_pass else "BLOCKER"}
+
+| Check | Result |
+|---|---|
+| RCCS-M / ALCS framed as proposed adequacy models | {"PASS" if "proposed analytical adequacy models" in front_source else "FAIL"} |
+| Dimensions described as structurally necessary | {"PASS" if "structurally necessary" in front_source else "FAIL"} |
+| MPLP high score explained as design alignment | {"PASS" if "design alignment with the proposed object layer" in front_source or "design alignment with the proposed lifecycle object layer" in chapter_13_source else "FAIL"} |
+| Not independent market validation | {"PASS" if "not as independent market validation" in front_source or "should not be read as market adoption proof" in chapter_13_source else "FAIL"} |
+| Dispute redirected to object necessity | {"PASS" if "whether these lifecycle objects are necessary" in front_source and "whether those lifecycle responsibility objects are necessary" in chapter_13_source else "FAIL"} |
+| No score recalculation | PASS |
+
+## Decision
+
+Phase 1D-13F does not lower MPLP scores to simulate neutrality. It clarifies the evaluation object: RCCS-M / ALCS measure whether systems can express lifecycle responsibility objects argued to be necessary for agentic governance. MPLP's strong posture under those profiles is therefore presented as protocol-design alignment, not proof of market adoption, certification, legal compliance, or procurement superiority.
 """,
     )
 
@@ -871,6 +898,7 @@ Phase 1D-13F preserves the latest RCCS-T / MRO / RCCS-M / ALCS spine, Chapter 7 
 
     return {
         "phase": PHASE,
+        "necessity_argument": "PASS" if methodological_pass else "BLOCKER",
         "methodological_position": "PASS" if methodological_pass else "BLOCKER",
         "protocol_boundary": "PASS" if protocol_pass else "BLOCKER",
         "interoperability_boundary": "PASS" if interoperability_pass else "BLOCKER",
@@ -890,7 +918,7 @@ Phase 1D-13F preserves the latest RCCS-T / MRO / RCCS-M / ALCS spine, Chapter 7 
 
 def write_phase_1d13f_log(log: dict) -> None:
     log["phase"] = PHASE
-    log["artifact"] = "html_publication_methodological_position_protocol_boundary_and_publication_candidate"
+    log["artifact"] = "html_publication_necessity_argument_protocol_boundary_and_publication_candidate"
     log["phase_1d13f_status"] = PHASE_STATUS
     log["phase_1d12_status"] = PHASE_STATUS
     log["docx_export_engine"] = "python-docx from same Phase 1D-13F structured source"
@@ -901,6 +929,7 @@ def write_phase_1d13f_log(log: dict) -> None:
         "reports/phase-1d13f-implementation-grounding.md",
         "reports/phase-1d13f-professional-style-reference-audit.md",
         "reports/phase-1d13f-methodological-position-qa.md",
+        "reports/phase-1d13f-necessity-argument-qa.md",
         "reports/phase-1d13f-protocol-boundary-qa.md",
         "reports/phase-1d13f-interoperability-boundary-qa.md",
         "reports/phase-1d13f-legal-nuance-qa.md",
@@ -931,11 +960,28 @@ def write_extra_phase_1d13f_contact_sheets(rendered_pages, pdf_pages):
             "Publication Candidate Review Ready",
             "RCCS-T / MRO / RCCS-M / ALCS",
             "Publication Boundary",
+            "Methodological Position: Necessity, Alignment, and Evaluation Boundary",
         ],
         "phase_1d13f_cover_front_matter_contact_sheet.png": [
             "Publication Candidate Review Ready",
             "Document Control and Positioning",
             "RCCS-T / RCCS-M / ALCS",
+            "Methodological Position: Necessity",
+        ],
+        "phase_1d13f_methodological_position_contact_sheet.png": [
+            "Methodological Position: Necessity, Alignment, and Evaluation Boundary",
+            "structurally necessary",
+            "design alignment with the proposed object layer",
+        ],
+        "phase_1d13f_protocol_boundary_contact_sheet.png": [
+            "Protocol Proposal vs Product / Framework Benchmark",
+            "protocol-level semantic proposal",
+            "not equivalent in adoption status",
+        ],
+        "phase_1d13f_interoperability_boundary_contact_sheet.png": [
+            "Interoperability and Specification Boundary",
+            "complete wire format",
+            "serialization grammar",
         ],
         "phase_1d13f_vertical_table_blocker_contact_sheet.png": [
             "Table T-14-04",
@@ -1012,7 +1058,7 @@ def source_to_docx_derivative_phase_1d13f():
         if "Two-layer RCCS and visual repair draft" in para.text:
             for run in para.runs:
                 run.text = ""
-            para.add_run("Methodological position and protocol boundary publication candidate - DOCX editable derivative")
+            para.add_run("Necessity argument and protocol boundary publication candidate - DOCX editable derivative")
             break
     doc.save(docx_path)
     return docx_path, stdout
@@ -1046,7 +1092,7 @@ def configure_renderer() -> None:
     renderer.REMAINING_LIMITATIONS = [
         "The uploaded Professional-Final HTML was used only as style/layout reference; latest source_r3 Markdown remains the sole content source.",
         "RCCS-M is an author analytical, forward-looking MRO-adjusted model; it is not current law, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.",
-        "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials, with conflict-of-interest disclosure preserved.",
+        "MPLP-to-RCCS-M/ALCS mapping remains author analytical where not directly stated in official protocol materials, with conflict-of-interest disclosure preserved; high profile alignment is design alignment, not market validation.",
         "OpenAI platform guide remains HTTP 403 by curl; accessible official Python/JS Agents SDK docs replace it for retained SDK-surface claims.",
         "Product/platform documentation supports visible capability surfaces only; lifecycle-object scoring remains evidence-qualified and provisional.",
         "Appendix G remains qualitative and no-score; numeric RCCS-T/RCCS-M/ALCS profiles appear only in Evaluation Results.",

@@ -2,9 +2,9 @@
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Date:** May 12, 2026
-**Status:** METHODOLOGICAL POSITION AND PROTOCOL BOUNDARY ONLY
+**Status:** NECESSITY ARGUMENT AND PROTOCOL BOUNDARY ONLY
 
-Phase 1D-13F adds a targeted methodological-position layer, protocol/product evaluation boundary, interoperability/specification boundary, legal nuance cleanup, and publication-residue cleanup. It preserves the Phase 1D-13E professional style shell and table blocker repair. It does not introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
+Phase 1D-13F adds a targeted necessary-dimension argument, protocol/product evaluation boundary, interoperability/specification boundary, legal nuance cleanup, and publication-residue cleanup. It preserves the Phase 1D-13E professional style shell and table blocker repair. It does not introduce new systems, rankings, legal claims, score recalculation, or Appendix G scoring.
 
 ## Research Findings Used
 
@@ -19,4 +19,4 @@ Phase 1D-13F adds a targeted methodological-position layer, protocol/product eva
 
 ## Implementation Scope
 
-The implementation renders latest source_r3 content in the existing professional HTML-first shell, preserves row-card rendering for unsafe mapping/evidence tables, adds the 13F methodological-position and protocol-boundary text, preserves the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.
+The implementation renders latest source_r3 content in the existing professional HTML-first shell, preserves row-card rendering for unsafe mapping/evidence tables, adds the 13F necessity-argument and protocol-boundary text, preserves the Chapter 14/15 bridges, and preserves Phase 1D-12 score ranges, Phase 1D-11 source closure, Appendix G no-score posture, and the fixed non-ranked system order.

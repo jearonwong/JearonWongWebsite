@@ -19,9 +19,9 @@
 | Sample | Path |
 |---|---|
 | Cover / front matter | `out/phase_1d13f/html_publication/phase_1d13f_cover_front_matter_contact_sheet.png` |
-| Protocol boundary / Chapter 13 | `` |
-| Methodological position | `` |
-| Interoperability boundary | `` |
+| Protocol boundary / Chapter 13 | `out/phase_1d13f/html_publication/phase_1d13f_protocol_boundary_contact_sheet.png` |
+| Methodological position | `out/phase_1d13f/html_publication/phase_1d13f_methodological_position_contact_sheet.png` |
+| Interoperability boundary | `out/phase_1d13f/html_publication/phase_1d13f_interoperability_boundary_contact_sheet.png` |
 | Vertical table blocker | `out/phase_1d13f/html_publication/phase_1d13f_vertical_table_blocker_contact_sheet.png` |
 | Chapter 7 | `out/phase_1d13f/html_publication/phase_1d13f_chapter7_contact_sheet.png` |
 | Appendix E | `out/phase_1d13f/html_publication/phase_1d13f_appendix_e_contact_sheet.png` |

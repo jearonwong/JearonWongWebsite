@@ -9,6 +9,8 @@
 | Protocol boundary section present | PASS |
 | MPLP evaluated as protocol-level semantic proposal | PASS |
 | Product/framework maturity distinction | PASS |
+| Interoperability semantics criterion | PASS |
+| Protocol analogy boundary | PASS |
 | RCCS-T product-platform distinction | PASS |
 | RCCS-M/ALCS protocol alignment | PASS |
 | Market-adoption proof rejected | PASS |

@@ -11,8 +11,8 @@
 | Remote | `origin	https://github.com/jearonwong/jearonwongwebsite.git (fetch)
 origin	https://github.com/jearonwong/jearonwongwebsite.git (push)` |
 | Branch | `main` |
-| Local HEAD | `e40a4190ba3a7f21b98f4aae13698f589db5a196` |
-| Origin HEAD | `e40a4190ba3a7f21b98f4aae13698f589db5a196	HEAD` |
+| Local HEAD | `a7a5cdb35ed745d3d8444fbb8d6f7ed7a5b28da7` |
+| Origin HEAD | `a7a5cdb35ed745d3d8444fbb8d6f7ed7a5b28da7	HEAD` |
 | Local HEAD equals origin/main before edits | PASS |
 | Pull result | Already fast-forwarded before implementation; generation uses current local HEAD plus working-tree source edits. |
 
@@ -25,7 +25,7 @@ The renderer cleans and regenerates the Phase 1D-13F output directory, so transi
 | Status class | Summary |
 |---|---|
 | Inherited top-level untracked files | 23 |
-| source_r3 regenerated/edited lines observed during generation | 14 |
+| source_r3 regenerated/edited lines observed during generation | 458 |
 | source_r3 status summary | source_r3 output/source changes are regenerated during this phase |
 
 ```text

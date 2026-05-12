@@ -105,11 +105,11 @@ This boundary discipline strengthens the paper. The argument does not need to cl
 
 ---
 
-## Authorial Position and Evaluation Boundary
+## Methodological Position: Necessity, Alignment, and Evaluation Boundary
 
 RCCS-M and ALCS are proposed analytical adequacy models for agentic lifecycle governance. They are not existing law, certification, regulator-approved standards, procurement benchmarks, final vendor scores, independent third-party ratings, or legal compliance proof.
 
-These models intentionally measure lifecycle-native governance capacity: responsibility objects, authority boundaries, evidence partitioning, accepted outcome, substitution conformance, privacy-aware validation, and remediation closure. They are not neutral legacy benchmarks for conventional model governance dashboards. They ask whether future Agent/MAS governance can represent the objects needed to make delegated work inspectable, replayable, reviewable, and accountable.
+These models intentionally measure lifecycle-native governance capacity: responsibility objects, authority boundaries, evidence partitioning, accepted outcome, substitution conformance, privacy-aware validation, and remediation closure. They are not neutral legacy benchmarks for conventional model governance dashboards. They ask whether future Agent/MAS governance can represent the objects needed to make delegated work inspectable, replayable, reviewable, and accountable. The paper argues that these dimensions are structurally necessary for governing agentic and multi-agent work, because the risk-bearing unit is no longer only a model output; it is delegated lifecycle work moving through authority, action, evidence, review, acceptance, dispute, remediation, and reuse.
 
 MPLP is expected to score strongly under RCCS-M and ALCS because it was designed around lifecycle responsibility semantics. That result should be read as **design alignment with the proposed object layer**, not as independent market validation, certification, deployment proof, or procurement superiority.
 

@@ -1,7 +1,7 @@
 # GAIC HTML Publication Style
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Phase:** 1D-13F Methodological Position and Protocol Boundary
+**Phase:** 1D-13F Necessity Argument and Protocol Boundary
 **Status:** DESIGN SYSTEM ACTIVE FOR HTML/PDF PUBLICATION CANDIDATE
 **Last Updated:** May 12, 2026
 
@@ -27,7 +27,7 @@ Phase 1D-13D completes the Chapter 7 methodology layer. Chapter 7 now treats RCC
 
 Phase 1D-13E repairs the remaining PDF table blocker by forcing the MRO / ALCS Dimension + Mapping Strength + Boundary / Evidence Limit table shape into semantic row cards where needed. It also adds the Chapter 14 RCCS-M evidence-confidence bridge and the Chapter 15 RCCS-M pressure-test bridge. The generated v9 artifacts must have zero vertical single-letter table pages, zero positive forbidden-claim blockers, and preserve source closure.
 
-Phase 1D-13F preserves the Phase 1D-13E professional shell and table blocker repair, then adds a publication-facing methodological-position layer. RCCS-M and ALCS are framed as proposed analytical adequacy models for agentic lifecycle governance. MPLP's strong RCCS-M / ALCS posture is design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority. Chapter 13 distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation and adds an interoperability/specification boundary.
+Phase 1D-13F preserves the Phase 1D-13E professional shell and table blocker repair, then adds a publication-facing necessity-argument layer. RCCS-M and ALCS are framed as proposed analytical adequacy models and necessary-dimension models for agentic lifecycle governance. MPLP's strong RCCS-M / ALCS posture is design alignment with the proposed lifecycle object layer, not independent market validation, certification, deployment proof, or procurement superiority. Chapter 13 distinguishes protocol-level semantic proposal evaluation from product/platform/framework maturity evaluation and adds an interoperability/specification boundary.
 
 ## VI Principles
 
