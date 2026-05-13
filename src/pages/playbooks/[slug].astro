@@ -25,6 +25,7 @@ const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
+const governancePath = "/governance/";
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -129,6 +130,9 @@ const breadcrumbJsonLd = {
       <a href="/concepts/deterministic-delivery/" class="registry-annotation playbook-hero-link">
         <span class="registry-key">R3G_LAYER</span>: <span class="registry-value">DETERMINISTIC DELIVERY</span>
       </a>
+      <a href={governancePath} class="registry-annotation playbook-hero-link">
+        <span class="registry-key">R3H_LAYER</span>: <span class="registry-value">REGULATORY GOVERNANCE</span>
+      </a>
     </div>
   </RegistryPageHero>
 
@@ -145,6 +149,7 @@ const breadcrumbJsonLd = {
             <a href={conceptCorePath}>Agentic Lifecycle Governance</a>
             <a href={whitePaperHub}>Global AI Compliance White Paper 2026</a>
             <a href={extendedEcosystemPath}>Extended Ecosystem Mapping</a>
+            <a href={governancePath}>Regulatory and Enterprise Governance</a>
             <a href="/concepts/missing-regulatory-objects/">Missing Regulatory Objects</a>
             <a href="/concepts/rccs-m/">RCCS-M</a>
             <a href="/concepts/alcs/">ALCS</a>

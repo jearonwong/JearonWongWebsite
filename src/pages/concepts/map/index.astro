@@ -8,7 +8,7 @@ const canonicalPath = "/concepts/map/";
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = absoluteUrl(canonicalPath);
 const metaDescription =
-  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, applied playbooks, and extended ecosystem mappings.";
+  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings.";
 const keywords = [
   "Concepts Map",
   "Entity Mesh",
@@ -28,6 +28,16 @@ const keywords = [
   "Verifiable AI Agents",
   "Configurable Agent Governance",
   "Agent Architecture Governance",
+  "Regulatory and Enterprise Governance Mapping",
+  "AI Agent Compliance",
+  "Enterprise Agent Governance",
+  "EU AI Act and Agentic Systems",
+  "GDPR and Agentic AI Evidence",
+  "NIST AI RMF and Agentic Lifecycle Governance",
+  "ISO/IEC 42001 and Agentic AI Management Systems",
+  "AI Agent Evidence Retention",
+  "Vendor and Runtime Substitution Conformance",
+  "Incident Dispute Remediation Closure",
   "Prompt Engineering vs Harness Engineering",
   "Agentic Delivery Architecture Checklist",
   "Applied Agentic Governance Playbooks",
@@ -96,6 +106,76 @@ const mapNodes = [
     layer: "Extended Ecosystem Layer",
     href: extendedEcosystemPath,
     description: "Source-qualified lifecycle governance mappings for ecosystems outside the first-layer GAIC-cited system set."
+  },
+  {
+    id: "regulatory-enterprise-governance",
+    label: "Regulatory and Enterprise Governance Mapping",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/",
+    description: "Source-qualified lifecycle governance mappings for regulatory, enterprise, privacy, risk, management-system, evidence, substitution, and incident search intents."
+  },
+  {
+    id: "ai-agent-compliance",
+    label: "AI Agent Compliance",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/ai-agent-compliance/",
+    description: "Lifecycle responsibility compliance mapping through MRO, RCCS-M, ALCS, evidence, acceptance, and legal-review boundaries."
+  },
+  {
+    id: "enterprise-agent-governance",
+    label: "Enterprise Agent Governance",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/enterprise-agent-governance/",
+    description: "Enterprise accountability, evidence retention, substitution, accepted outcome, auditability, and incident closure mapping."
+  },
+  {
+    id: "eu-ai-act-agentic-systems",
+    label: "EU AI Act and Agentic Systems",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/eu-ai-act-agentic-systems/",
+    description: "Cautious mapping between EU AI Act themes and agentic lifecycle objects. It is not legal advice or compliance proof."
+  },
+  {
+    id: "gdpr-agentic-ai-evidence",
+    label: "GDPR and Agentic AI Evidence",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/gdpr-agentic-ai-evidence/",
+    description: "Privacy and evidence-chain mapping for minimization, data subject rights, processor chains, retention boundaries, and validation."
+  },
+  {
+    id: "nist-ai-rmf-agentic-lifecycle",
+    label: "NIST AI RMF and Agentic Lifecycle Governance",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/nist-ai-rmf-agentic-lifecycle/",
+    description: "Non-official mapping from NIST AI RMF Govern, Map, Measure, and Manage to lifecycle governance concepts."
+  },
+  {
+    id: "iso-42001-agentic-ai",
+    label: "ISO/IEC 42001 and Agentic AI Management Systems",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/iso-42001-agentic-ai/",
+    description: "Cautious mapping between AI management system language and agentic lifecycle responsibility objects."
+  },
+  {
+    id: "ai-agent-evidence-retention",
+    label: "AI Agent Evidence Retention",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/ai-agent-evidence-retention/",
+    description: "Evidence chains, logs, minimization, retention boundaries, privacy tension, replay, dispute, remediation, and evidence partitioning."
+  },
+  {
+    id: "vendor-runtime-substitution-conformance",
+    label: "Vendor / Runtime Substitution Conformance",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/vendor-runtime-substitution-conformance/",
+    description: "Model, runtime, tool, vendor, prompt, and harness substitution mapped to authority, evidence, and accepted outcome continuity."
+  },
+  {
+    id: "incident-dispute-remediation-closure",
+    label: "Incident / Dispute / Remediation Closure",
+    layer: "Regulatory and Enterprise Governance Layer",
+    href: "/governance/incident-dispute-remediation-closure/",
+    description: "Incident, dispute, rollback, accepted outcome reversal, remediation, owner responsibility, and lifecycle closure records."
   },
   {
     id: "mro",
@@ -256,6 +336,12 @@ const relationGroups = [
     body: "The extended layer reuses existing applied playbooks and adds source-qualified mappings for Claude Code, Qwen, Cursor, AutoGen, MCP, A2A, and Semantic Kernel without treating them as GAIC-scored systems."
   },
   {
+    name: "Regulatory and Enterprise Governance Layer",
+    relation: "GAIC / MRO / RCCS-M / ALCS -> Regulatory and Enterprise Governance Mapping",
+    nodes: ["Global AI Compliance White Paper 2026", "Agentic Lifecycle Governance", "AI Agent Compliance", "Enterprise Agent Governance", "Evidence Chain", "Accepted Outcome"],
+    body: "The regulatory and enterprise layer maps official-source governance language and enterprise control questions into lifecycle responsibility objects. It is not legal advice, certification, regulator-approved guidance, or procurement recommendation."
+  },
+  {
     name: "Engineering Practice Layer",
     relation: "Agentic Delivery -> Deterministic Delivery -> Rollbackable / Verifiable / Configurable Agent Work",
     nodes: ["Agentic Delivery", "Deterministic Delivery", "Rollbackable Agent Workflows", "Verifiable AI Agents", "Configurable Agent Governance", "Agent Architecture Governance", "Harness Engineering"],
@@ -284,6 +370,7 @@ const primaryLinks = [
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
+  { href: "/governance/", label: "Regulatory governance" },
   { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
   { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Concept Core" },
@@ -301,6 +388,7 @@ const semanticChain = [
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
   { href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" },
+  { href: "/governance/", label: "Regulatory and Enterprise Governance Mapping" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
@@ -380,7 +468,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Concepts Map / Entity Mesh"
     objectType="GEO_NAVIGATION"
     objectValue="VISIBLE_ENTITY_MESH"
-    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, applied playbooks, and extended ecosystem mappings."
+    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings."
   >
     <div class="map-hero-links">
       {primaryLinks.map((link) => (
@@ -454,6 +542,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/research/global-ai-compliance-white-paper-2026/systems/" class="mesh-node mesh-node--authority">Systems Discussed in GAIC</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href={extendedEcosystemPath} class="mesh-node mesh-node--authority">Extended Ecosystem Mapping</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/governance/" class="mesh-node mesh-node--authority">Regulatory Governance</a>
           </div>
           <div class="mesh-row mesh-row--governance">
             <a href="/concepts/missing-regulatory-objects/" class="mesh-node mesh-node--strong">Missing Regulatory Objects</a>
@@ -486,6 +576,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/playbooks/agentic-delivery-architecture-checklist/" class="mesh-node">Architecture Checklist</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href="/playbooks/" class="mesh-node mesh-node--strong">Applied Playbooks</a>
+          </div>
+          <div class="mesh-row mesh-row--governance">
+            <a href="/governance/ai-agent-compliance/" class="mesh-node">AI Agent Compliance</a>
+            <a href="/governance/enterprise-agent-governance/" class="mesh-node">Enterprise Agent Governance</a>
+            <a href="/governance/eu-ai-act-agentic-systems/" class="mesh-node">EU AI Act Mapping</a>
+            <a href="/governance/gdpr-agentic-ai-evidence/" class="mesh-node">GDPR Evidence</a>
+            <a href="/governance/ai-agent-evidence-retention/" class="mesh-node">Evidence Retention</a>
+            <a href="/governance/incident-dispute-remediation-closure/" class="mesh-node">Incident Closure</a>
           </div>
         </div>
 

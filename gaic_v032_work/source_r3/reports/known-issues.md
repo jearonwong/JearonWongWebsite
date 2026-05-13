@@ -2181,3 +2181,43 @@ Remaining work:
 - Regulatory and Enterprise Governance Semantic Layer remains future work.
 
 **GAIC-R3G Status:** ✓ DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER COMPLETE / READY FOR REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER
+
+---
+
+## GAIC-R3H Known Issues
+
+### Regulatory and Enterprise Governance Semantic Layer Complete
+
+R3H creates the regulatory and enterprise governance semantic layer after R3G. It does not provide legal advice, certification, regulator-approved guidance, procurement recommendation, or legal compliance proof.
+
+Validation scope:
+
+- `/governance/` now serves as the AI Agent Governance and Lifecycle Responsibility index.
+- New governance detail routes:
+  - `/governance/ai-agent-governance/`
+  - `/governance/multi-agent-system-governance/`
+  - `/governance/enterprise-agent-governance/`
+  - `/governance/ai-agent-compliance/`
+  - `/governance/eu-ai-act-agentic-systems/`
+  - `/governance/gdpr-agentic-ai-evidence/`
+  - `/governance/nist-ai-rmf-agentic-lifecycle/`
+  - `/governance/iso-42001-agentic-ai/`
+  - `/governance/human-role-responsibility-mapping/`
+  - `/governance/ai-agent-evidence-retention/`
+  - `/governance/vendor-runtime-substitution-conformance/`
+  - `/governance/incident-dispute-remediation-closure/`
+- Official/legal/standards source references are limited to boundary-scoped context for EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, EDPB, and Singapore IMDA where used.
+- Concepts Map now includes a Regulatory and Enterprise Governance Layer.
+- Concept Core, GAIC hub, Playbooks, Extended Ecosystem, sitewide schema terms, and `public/llms.txt` now connect the R3H layer.
+
+Boundary discipline:
+
+- No legal advice, legal compliance proof, certification, regulator approval, officially compliant claim, vendor ranking, procurement recommendation, or regulator endorsement was introduced.
+- No claim that MPLP is required, exclusive, certified, regulator-approved, or already an industry standard was introduced.
+- Sealed white paper artifacts, public responsive HTML checksum, public PDF/DOCX/log hashes, white paper content, RCCS-T/RCCS-M/ALCS scores, and methodology remain unchanged.
+
+Remaining work:
+
+- Primary Semantic Source Monitoring Ops remains future work.
+
+**GAIC-R3H Status:** ✓ REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS

@@ -9,6 +9,8 @@ export const siteSemanticBaseline = {
     "The Agentic Delivery Stack is a secondary reference architecture for turning agent execution into scoped, authorized, traceable, reviewable, and accepted outcomes.",
   deterministicDeliveryDefinition:
     "Deterministic Delivery is the discipline of making agentic work scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable across a lifecycle. It does not require deterministic model outputs.",
+  regulatoryEnterpriseGovernanceDefinition:
+    "Regulatory and Enterprise Governance for AI agents is the translation layer between external AI governance baselines, internal control language, and lifecycle responsibility evidence. It is a governance crosswalk, not legal advice, certification, audit opinion, or procurement recommendation.",
   mplpDefinition:
     "MPLP is the lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable.",
   cognitiveOSDefinition:
@@ -51,8 +53,14 @@ export const siteSemanticBaseline = {
     "Verifiable AI Agents",
     "Configurable Agent Governance",
     "Agent Architecture Governance",
+    "Regulatory Control Crosswalk",
+    "Enterprise AI Control Evidence",
+    "Agentic AI Risk Management",
+    "Board Reporting for Agentic AI",
+    "Audit Readiness for AI Agents",
     "Prompt Engineering vs Harness Engineering",
     "Agentic Delivery Architecture Checklist",
+    "Regulatory and Enterprise Governance Mapping",
     "MPLP",
     "Multi-Agent Lifecycle Governance",
     "Confirmation Boundary",

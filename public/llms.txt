@@ -19,6 +19,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
 - Engineering practice layer: Deterministic Delivery and Agent Architecture Governance.
+- Regulatory and enterprise governance layer: AI Agent Governance, AI Agent Compliance, enterprise agent governance, regulatory-source mappings, evidence retention, substitution conformance, and incident/dispute/remediation closure.
 - Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
 - GAIC-Cited Systems: source-qualified, non-ranking lifecycle governance mappings for systems discussed in the Global AI Compliance White Paper 2026.
 - Extended Ecosystem Mapping: source-qualified, non-scored lifecycle governance mappings for Claude Code, Qwen, Cursor / AI coding agents, AutoGen, MCP, A2A, and Semantic Kernel.
@@ -159,6 +160,24 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - A2A: https://www.jearonwong.com/mapping/extended-ecosystem/a2a/
 - Semantic Kernel: https://www.jearonwong.com/mapping/extended-ecosystem/semantic-kernel/
   Boundary: source-qualified, non-GAIC-scored, non-ranking, non-procurement, and not official vendor documentation or vendor affiliation.
+
+## Regulatory and Enterprise Governance Mapping
+
+- Governance index: https://www.jearonwong.com/governance/
+  Regulatory and enterprise governance mappings for agentic and multi-agent systems. These pages map regulatory, privacy, risk-management, management-system, evidence, substitution, incident, and enterprise-control search intents to Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Evidence Chain, Authority Boundary, Accepted Outcome, Deterministic Delivery, and MPLP.
+- AI Agent Governance: https://www.jearonwong.com/governance/ai-agent-governance/
+- Multi-Agent System Governance: https://www.jearonwong.com/governance/multi-agent-system-governance/
+- Enterprise Agent Governance: https://www.jearonwong.com/governance/enterprise-agent-governance/
+- AI Agent Compliance: https://www.jearonwong.com/governance/ai-agent-compliance/
+- EU AI Act and Agentic Systems: https://www.jearonwong.com/governance/eu-ai-act-agentic-systems/
+- GDPR and Agentic AI Evidence: https://www.jearonwong.com/governance/gdpr-agentic-ai-evidence/
+- NIST AI RMF and Agentic Lifecycle Governance: https://www.jearonwong.com/governance/nist-ai-rmf-agentic-lifecycle/
+- ISO/IEC 42001 and Agentic AI Management Systems: https://www.jearonwong.com/governance/iso-42001-agentic-ai/
+- Human Role Responsibility Mapping: https://www.jearonwong.com/governance/human-role-responsibility-mapping/
+- AI Agent Evidence Retention: https://www.jearonwong.com/governance/ai-agent-evidence-retention/
+- Vendor and Runtime Substitution Conformance: https://www.jearonwong.com/governance/vendor-runtime-substitution-conformance/
+- Incident, Dispute, and Remediation Closure for AI Agents: https://www.jearonwong.com/governance/incident-dispute-remediation-closure/
+  Boundary: author-analytical, source-qualified lifecycle governance mappings. They are not legal advice, legal compliance proof, certification, regulator-approved guidance, procurement recommendation, vendor ranking, official standards-body guidance, or MPLP exclusivity claims.
 
 ## Supporting Concepts
 

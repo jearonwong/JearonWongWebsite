@@ -2965,3 +2965,28 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
 
 **GAIC-R3G Status:** ✓ DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER COMPLETE / READY FOR REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER.
+
+## GAIC-R3H Notes (May 13, 2026)
+
+**Scope:** Regulatory and Enterprise Governance Semantic Layer.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `04a045dae361544af11caa5a707426818070497f` before R3H edits.
+2. Audited existing `/governance/`, Concepts, Playbooks, GAIC hub, Concepts Map, schema, and `llms.txt` surfaces.
+3. Created `src/data/governanceMappings.ts` as the source-qualified registry for R3H governance mappings.
+4. Converted `/governance/` into the AI Agent Governance and Lifecycle Responsibility index.
+5. Added twelve governance detail routes for AI agent governance, MAS governance, enterprise agent governance, AI agent compliance, EU AI Act mapping, GDPR evidence, NIST AI RMF mapping, ISO/IEC 42001 mapping, human role responsibility mapping, evidence retention, vendor/runtime substitution conformance, and incident/dispute/remediation closure.
+6. Used official/legal/standards sources only for regulatory or standards context, including EU AI Act, GDPR, EDPB, NIST AI RMF, ISO/IEC 42001, and Singapore IMDA references where used.
+7. Updated Concepts Map with a Regulatory and Enterprise Governance Layer group and nodes.
+8. Updated Concept Core, GAIC hub, Playbooks index/detail routes, Extended Ecosystem index, sitewide schema terms, and `public/llms.txt` to connect the R3H layer.
+9. Added metadata and JSON-LD for the index and detail pages using WebPage, CollectionPage, TechArticle, ItemList, and BreadcrumbList patterns.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No legal advice, legal compliance proof, certification, regulator approval, officially compliant claim, vendor ranking, procurement recommendation, regulator endorsement, fake external citation, search ranking claim, MPLP overclaim, or WP2/WP3 content introduced.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
+
+**GAIC-R3H Status:** ✓ REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS.

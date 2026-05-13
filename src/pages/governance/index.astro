@@ -1,0 +1,360 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import {
+  governanceIndexPath,
+  governanceMappings,
+  regulatoryGovernanceBoundary
+} from "../../data/governanceMappings";
+import { contentRouteRoles, pageRegistry, siteConfig } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
+
+const canonicalPath = governanceIndexPath;
+const pageUrl = absoluteUrl(canonicalPath);
+const metaDescription =
+  "Regulatory and enterprise governance mappings for agentic and multi-agent systems, connecting GAIC, MRO, RCCS-M, ALCS, evidence chains, authority boundaries, accepted outcomes, and deterministic delivery.";
+const keywords = [
+  "AI Agent Governance",
+  "Multi-Agent System Governance",
+  "Enterprise Agent Governance",
+  "AI Agent Compliance",
+  "EU AI Act and agentic systems",
+  "GDPR and agentic AI evidence",
+  "NIST AI RMF and agentic lifecycle governance",
+  "ISO/IEC 42001 and agentic AI",
+  "Human Role Responsibility Mapping",
+  "AI Agent Evidence Retention",
+  "Vendor Runtime Substitution Conformance",
+  "Incident Dispute Remediation Closure",
+  "Agentic Lifecycle Governance",
+  "MRO",
+  "RCCS-M",
+  "ALCS"
+];
+const primaryLinks = [
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC White Paper" },
+  { href: "/concepts/map/", label: "Concepts Map" },
+  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+  { href: "/playbooks/", label: "Applied Playbooks" }
+];
+const categoryOrder = [
+  "Lifecycle governance",
+  "MAS governance",
+  "Enterprise governance",
+  "Compliance mapping",
+  "Regulatory mapping",
+  "Privacy mapping",
+  "Risk framework mapping",
+  "Management system mapping",
+  "Responsibility mapping",
+  "Evidence governance",
+  "Substitution governance",
+  "Incident governance"
+];
+const groupedMappings = categoryOrder.map((category) => ({
+  category,
+  items: governanceMappings.filter((mapping) => mapping.category === category)
+})).filter((group) => group.items.length > 0);
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#governance-mapping-list`,
+  name: "Regulatory and Enterprise Governance Semantic Layer",
+  itemListElement: governanceMappings.map((mapping, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: mapping.title,
+    url: absoluteUrl(`${canonicalPath}${mapping.slug}/`)
+  }))
+};
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "AI Agent Governance and Lifecycle Responsibility",
+  description: metaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#governance-mapping-list`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  about: keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  }))
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Governance", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title="AI Agent Governance and Lifecycle Responsibility"
+  description={metaDescription}
+  shareTitle="AI Agent Governance and Lifecycle Responsibility"
+  shareDescription={metaDescription}
+  twitterTitle="AI Agent Governance"
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, itemListJsonLd, breadcrumbJsonLd]}
+  keywords={keywords}
+  ogImagePath="/social/og-ai-agent-governance.png"
+  ogImageAlt="AI Agent Governance and Lifecycle Responsibility by Jearon Wong"
+>
+  <RegistryPageHero
+    title="AI Agent Governance and Lifecycle Responsibility"
+    objectType={pageRegistry.governance.objectType}
+    objectValue="REGULATORY_ENTERPRISE_LAYER"
+    lead="Regulatory and enterprise governance mappings for agentic and multi-agent systems."
+  >
+    <div class="governance-hero-links">
+      {primaryLinks.map((link) => (
+        <a href={link.href} class="registry-annotation governance-hero-link">
+          <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <main class="shell governance-shell">
+      <section class="registry-chassis governance-intro" aria-labelledby="governance-intro-title">
+        <div>
+          <div class="registry-annotation">
+            <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.governance.question}</span>
+          </div>
+          <h2 id="governance-intro-title">Map governance language to lifecycle responsibility.</h2>
+          <p>
+            This layer connects regulatory, privacy, risk-management, management-system, audit,
+            evidence, substitution, incident, and enterprise-control search intents to Agentic
+            Lifecycle Governance. It translates governance language into lifecycle objects:
+            authority boundary, evidence chain, accepted outcome, substitution record, dispute,
+            remediation, and closure.
+          </p>
+        </div>
+        <div class="governance-intro__links" aria-label="Primary governance links">
+          {primaryLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      </section>
+
+      <section class="registry-chassis governance-boundary" aria-labelledby="governance-boundary-title">
+        <div class="registry-annotation">
+          <span class="registry-key">BOUNDARY</span>: <span class="registry-value">NON_LEGAL_NON_CERTIFICATION</span>
+        </div>
+        <h2 id="governance-boundary-title">Boundary.</h2>
+        <p>{regulatoryGovernanceBoundary}</p>
+      </section>
+
+      <section class="governance-groups" aria-labelledby="governance-groups-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">R3H_LAYER</span>: <span class="registry-value">REGULATORY_ENTERPRISE_GOVERNANCE</span>
+          </div>
+          <h2 id="governance-groups-title">Governance mapping routes.</h2>
+          <p>Each route is a source-qualified lifecycle governance mapping, not a legal conclusion.</p>
+        </div>
+        {groupedMappings.map((group) => (
+          <section class="governance-group" aria-label={group.category}>
+            <h3>{group.category}</h3>
+            <div class="governance-card-grid">
+              {group.items.map((mapping) => (
+                <article class="registry-chassis governance-card">
+                  <div class="governance-card__topline">
+                    <span>{mapping.category}</span>
+                    <span>Source-qualified</span>
+                  </div>
+                  <h4><a href={`${canonicalPath}${mapping.slug}/`}>{mapping.title}</a></h4>
+                  <p>{mapping.seoDescription}</p>
+                  <div class="governance-card__objects">
+                    {mapping.relatedObjects.slice(0, 4).map((object) => <span>{object}</span>)}
+                  </div>
+                  <a href={`${canonicalPath}${mapping.slug}/`} class="governance-card__link">Open governance mapping</a>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .governance-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .governance-hero-link {
+    text-decoration: none;
+  }
+
+  .governance-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .governance-shell {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .governance-intro,
+  .governance-boundary {
+    padding: var(--registry-panel-padding);
+  }
+
+  .governance-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
+    gap: 2rem;
+    align-items: start;
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .governance-intro h2,
+  .governance-boundary h2,
+  .registry-section-heading h2 {
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  .governance-intro p,
+  .governance-boundary p,
+  .registry-section-heading p,
+  .governance-card p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .governance-intro__links {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .governance-intro__links a,
+  .governance-card__link {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .governance-intro__links a:hover,
+  .governance-card__link:hover,
+  .governance-card h4 a:hover {
+    color: var(--current-text);
+  }
+
+  .governance-boundary {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  .governance-groups {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .governance-group {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .governance-group h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .governance-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .governance-card {
+    display: grid;
+    gap: 0.9rem;
+    align-content: start;
+    padding: var(--registry-card-padding);
+  }
+
+  .governance-card__topline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .governance-card h4 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.25rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .governance-card h4 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .governance-card__objects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .governance-card__objects span {
+    display: inline-flex;
+    padding: 0.3rem 0.45rem;
+    border: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  @media (max-width: 860px) {
+    .governance-intro,
+    .governance-card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .governance-intro,
+    .governance-boundary,
+    .governance-card {
+      padding: var(--registry-card-padding);
+    }
+  }
+</style>

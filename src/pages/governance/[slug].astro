@@ -1,0 +1,437 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import {
+  getGovernanceMappingBySlug,
+  governanceIndexPath,
+  governanceMappings
+} from "../../data/governanceMappings";
+import { siteConfig } from "../../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
+
+export function getStaticPaths() {
+  return governanceMappings.map((mapping) => ({
+    params: { slug: mapping.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const mapping = slug ? getGovernanceMappingBySlug(slug) : undefined;
+
+if (!mapping) {
+  throw new Error(`Unknown governance mapping: ${slug}`);
+}
+
+const canonicalPath = `${governanceIndexPath}${mapping.slug}/`;
+const pageUrl = absoluteUrl(canonicalPath);
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
+const relatedLinks = [
+  { href: governanceIndexPath, label: "Governance index" },
+  ...mapping.relatedLinks
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: mapping.title,
+  description: mapping.seoDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#article`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  citation: absoluteUrl(whitePaperHub)
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#article`,
+  headline: mapping.title,
+  description: mapping.seoDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-13",
+  dateModified: "2026-05-13",
+  keywords: mapping.keywords,
+  about: mapping.keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  mentions: mapping.relatedObjects.map((object) => ({
+    "@type": "Thing",
+    name: object
+  })),
+  isPartOf: {
+    "@type": "CollectionPage",
+    name: "AI Agent Governance and Lifecycle Responsibility",
+    url: absoluteUrl(governanceIndexPath)
+  },
+  isBasedOn: [
+    {
+      "@type": "TechArticle",
+      name: "Global AI Compliance White Paper 2026",
+      url: absoluteUrl(whitePaperHub)
+    },
+    {
+      "@type": "WebPage",
+      name: "Agentic Lifecycle Governance",
+      url: absoluteUrl(conceptCorePath)
+    },
+    ...mapping.sources.map((source) => ({
+      "@type": "CreativeWork",
+      name: source.label,
+      url: source.url
+    }))
+  ]
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Governance", path: governanceIndexPath },
+  { name: mapping.title, path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title={mapping.seoTitle}
+  description={mapping.seoDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
+  ogType="article"
+  keywords={mapping.keywords}
+  ogImagePath="/social/og-ai-agent-governance.png"
+  ogImageAlt={`${mapping.title} by Jearon Wong`}
+>
+  <RegistryPageHero
+    title={mapping.title}
+    objectType="GOVERNANCE_MAPPING"
+    objectValue={mapping.category.toUpperCase().replaceAll(" ", "_")}
+    lead={mapping.seoDescription}
+  >
+    <div class="governance-hero-links">
+      <a href={governanceIndexPath} class="registry-annotation governance-hero-link">
+        <span class="registry-key">BACK_TO</span>: <span class="registry-value">GOVERNANCE</span>
+      </a>
+      <a href={conceptCorePath} class="registry-annotation governance-hero-link">
+        <span class="registry-key">CONCEPT_CORE</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
+      </a>
+      <a href={whitePaperHub} class="registry-annotation governance-hero-link">
+        <span class="registry-key">AUTHORITY_SOURCE</span>: <span class="registry-value">GAIC WHITE PAPER</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <article class="shell governance-detail-shell">
+      <aside class="registry-chassis governance-sidebar" aria-label={`${mapping.title} reference`}>
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">MAPPING_RECORD</span>
+        </div>
+        <p class="sidebar-title">{mapping.title}</p>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Category</p>
+          <p class="sidebar-copy">{mapping.category}</p>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Related objects</p>
+          <div class="keyword-list">
+            {mapping.relatedObjects.map((object) => <span>{object}</span>)}
+          </div>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Source boundary</p>
+          <p class="sidebar-copy">{mapping.sources.length > 0 ? "Official sources consulted where current regulatory or standards context is referenced." : "GAIC author-analytical source only; no external legal or standards claims added."}</p>
+        </div>
+      </aside>
+
+      <div class="governance-article">
+        <section class="registry-chassis definition-panel">
+          <div class="registry-annotation" style="margin-bottom: 1rem;">
+            <span class="registry-key">SUMMARY</span>
+          </div>
+          <p>{mapping.summary}</p>
+        </section>
+
+        <section class="governance-section">
+          <h2>Boundary statement</h2>
+          <p>{mapping.boundary}</p>
+        </section>
+
+        <section class="governance-section">
+          <h2>Lifecycle governance lens</h2>
+          <p>{mapping.lifecycleLens}</p>
+        </section>
+
+        <section class="governance-section">
+          <h2>Key governance questions</h2>
+          <ol class="question-list">
+            {mapping.keyQuestions.map((question) => <li>{question}</li>)}
+          </ol>
+        </section>
+
+        <section class="governance-section">
+          <h2>Related lifecycle objects</h2>
+          <div class="mro-list">
+            {mapping.relatedObjects.map((object) => <span>{object}</span>)}
+          </div>
+        </section>
+
+        <section class="governance-section">
+          <h2>RCCS-M / ALCS relevance</h2>
+          <p>{mapping.rccsAlcs}</p>
+        </section>
+
+        <section class="governance-section">
+          <h2>Enterprise use</h2>
+          <p>{mapping.enterpriseUse}</p>
+        </section>
+
+        <section class="governance-section">
+          <h2>Source boundary</h2>
+          <p>{mapping.sourceBoundary}</p>
+          {mapping.sources.length > 0 && (
+            <div class="source-list">
+              {mapping.sources.map((source) => (
+                <a href={source.url}>
+                  <strong>{source.label}</strong>
+                  <span>{source.scope}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section class="relation-grid" aria-label={`${mapping.title} related links`}>
+          <article class="registry-chassis relation-panel">
+            <div class="registry-annotation" style="margin-bottom: 0.9rem;">
+              <span class="registry-key">RELATED_LINKS</span>
+            </div>
+            <h2>Related concepts and source routes</h2>
+            <div class="term-link-grid">
+              {relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          </article>
+        </section>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .governance-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .governance-hero-link {
+    text-decoration: none;
+  }
+
+  .governance-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .governance-detail-shell {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1080px;
+  }
+
+  .governance-sidebar {
+    position: sticky;
+    top: 7rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .sidebar-title {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.25rem;
+    font-weight: 760;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .sidebar-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .sidebar-label {
+    margin: 0 0 0.75rem;
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-copy {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .keyword-list,
+  .mro-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .keyword-list span,
+  .mro-list span {
+    display: inline-flex;
+    padding: 0.3rem 0.45rem;
+    border: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .governance-article {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .definition-panel {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .definition-panel p,
+  .governance-section p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1.05rem;
+    line-height: 1.72;
+  }
+
+  .definition-panel p {
+    color: var(--current-text);
+  }
+
+  .governance-section {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .governance-section h2,
+  .relation-panel h2 {
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: 1.45rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .question-list {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding-left: 1.35rem;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .source-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .source-list a {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.85rem;
+    border: 1px solid var(--current-line);
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+
+  .source-list strong {
+    color: var(--current-text);
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .source-list span {
+    color: var(--current-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .relation-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .relation-panel {
+    padding: var(--registry-card-padding);
+  }
+
+  .term-link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .term-link-grid a {
+    display: inline-flex;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--current-line);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .term-link-grid a:hover,
+  .source-list a:hover strong {
+    color: var(--accent-signal);
+  }
+
+  @media (max-width: 900px) {
+    .governance-detail-shell {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .governance-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .definition-panel,
+    .governance-sidebar,
+    .relation-panel {
+      padding: var(--registry-card-padding);
+    }
+  }
+</style>
