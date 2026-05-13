@@ -3150,3 +3150,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No SEO +30%, answer-engine citation, top-3-page visibility, primary semantic source achievement, external backlink, citation, mention, indexing result, legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor affiliation, deterministic LLM output, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3K-0 Status:** ✓ WHITEPAPER SOURCE-TRACE AUDIT COMPLETE / IMPLEMENTATION PLAN REQUIRED.
+
+## GAIC-R3K-0B Notes (May 14, 2026)
+
+**Scope:** White Paper Passive Discoverability and Technical Report Metadata Hardening.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `57c3f75deaef7c7bfb2a22d17ae85e3ad612673c` before R3K-0B patching.
+2. Audited the public white paper hub, responsive HTML full text, PDF, DOCX, manifest, generation log, seal report, checksums, robots, sitemap configuration, and `llms.txt`.
+3. Added Scholar-compatible citation metadata to the white paper hub and responsive public HTML full text.
+4. Hardened TechArticle JSON-LD with technical report identifier, language, genre, media encodings, mentions, and updated citation.
+5. Added a visible Citation and Artifact Identity block to the hub and responsive HTML full text.
+6. Added a restrained linked Key Concepts Covered layer on the hub.
+7. Added short MRO/RCCS/ALCS anchor entry points to the responsive public HTML web-reading edition.
+8. Updated `llms.txt` to expose the Technical Report ID / Trace Tag and recommended citation.
+9. Updated public responsive HTML checksum to `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+10. Audited PDF metadata and deferred mutation because PDF-native metadata changes require a controlled re-seal decision.
+
+**Artifact discipline:**
+
+- R3K-0B mutates only the public web metadata/shell layer and reports/governance notes.
+- Public PDF and DOCX remain unchanged.
+- Sealed candidate HTML/PDF/DOCX/log artifacts remain unchanged.
+- White paper source, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, and interoperability boundary remain unchanged.
+- R3K-1A P0 canonical/drift repairs and P1/P2 page repairs remain deferred.
+
+**Boundary discipline:**
+
+- No Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, search ranking, legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-0B Status:** ◐ PARTIAL COMPLETE / PDF METADATA RE-SEAL DECISION PENDING.

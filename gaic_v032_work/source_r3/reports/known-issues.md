@@ -2391,3 +2391,42 @@ Remaining work:
 - R3K-1 should target only R3K-0 P0/P1 repair candidates unless the user explicitly broadens scope.
 
 **GAIC-R3K-0 Status:** ✓ WHITEPAPER SOURCE-TRACE AUDIT COMPLETE / IMPLEMENTATION PLAN REQUIRED
+
+---
+
+## GAIC-R3K-0B Known Issues
+
+### White Paper Passive Discoverability Hardening Partial Complete
+
+R3K-0B is a white-paper-specific metadata and discoverability wave. It hardens the white paper hub and responsive HTML full text as technical-report artifacts without repairing P0/P1/P2 public pages.
+
+Completed:
+
+- Added Scholar-compatible citation metadata to the hub and responsive HTML full text.
+- Added technical report identifier fields to JSON-LD.
+- Updated the recommended citation to: `Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.`
+- Added visible Citation and Artifact Identity blocks.
+- Added linked Key Concepts Covered exposure on the hub.
+- Added short MRO/RCCS/ALCS anchor entry points to the responsive public HTML web-reading edition.
+- Updated `llms.txt` with the Technical Report ID / Trace Tag and recommended citation.
+- Updated the public responsive HTML checksum to `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+
+Deferred issue:
+
+- PDF metadata has title and trace tag but lacks Author, Subject, and Keywords. R3K-0B does not mutate PDF metadata because the PDF hash matches the sealed candidate PDF hash. A controlled re-seal decision is required if PDF-native metadata should be changed.
+
+Boundary discipline:
+
+- No PDF/DOCX mutation.
+- No sealed candidate artifact mutation.
+- No white paper source, score, or methodology change.
+- No R3K-1A P0 canonical/drift repair.
+- No P1/P2 route repair.
+- No claim of Google Scholar indexing, AI crawler pickup, answer-engine citation, search ranking, legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, or MPLP industry-standard status.
+
+Remaining work:
+
+- User decision required on whether to run a controlled PDF metadata re-seal wave.
+- R3K-1A P0 canonical/drift repair remains the next implementation wave after R3K-0B review.
+
+**GAIC-R3K-0B Status:** ◐ PARTIAL COMPLETE / PDF METADATA RE-SEAL DECISION PENDING

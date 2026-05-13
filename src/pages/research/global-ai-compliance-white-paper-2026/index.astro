@@ -12,8 +12,23 @@ const docxUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-pa
 const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
-const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Responsibility. v0.3.2 Public Edition. JearonWong.com, 2026.";
+const documentId = "GACWP-2026-v0.3.2-FRC-R3";
+const reportTitle = "Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance";
+const reportVersion = "v0.3.2 Public Edition";
+const publicationMonth = "May 2026";
+const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.";
 const metaDescription = "A 2026 white paper by Jearon Wong defining Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.";
+const citationKeywords = "AI Agent Lifecycle Governance; Agentic Lifecycle Conformance; Missing Regulatory Objects; RCCS-T; RCCS-M; ALCS; Multi-Agent Lifecycle Protocol; MPLP; AI Agent Compliance; Multi-Agent Systems; Deterministic Delivery";
+const citationMetaTags = [
+  { name: "citation_title", content: reportTitle },
+  { name: "citation_author", content: "Wong, Jearon" },
+  { name: "citation_publication_date", content: "2026/05" },
+  { name: "citation_technical_report_number", content: documentId },
+  { name: "citation_pdf_url", content: pdfUrl },
+  { name: "citation_fulltext_html_url", content: htmlUrl },
+  { name: "citation_language", content: "en" },
+  { name: "citation_keywords", content: citationKeywords }
+];
 const shaRows = [
   {
     label: "PDF",
@@ -29,18 +44,23 @@ const shaRows = [
   }
 ];
 const keyConcepts = [
-  "Missing Regulatory Objects",
-  "RCCS-T",
-  "RCCS-M",
-  "ALCS",
-  "Agentic Lifecycle Governance",
-  "Deterministic Delivery",
-  "Agent Architecture Governance",
-  "Rollbackable Agent Workflows",
-  "Regulatory and Enterprise Governance Mapping",
-  "AI Agent Compliance",
-  "Enterprise Agent Governance",
-  "MPLP as protocol path"
+  { label: "AI Agent Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" },
+  { label: "Agentic Lifecycle Conformance", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#chapter-8-agentic-lifecycle-conformance-score-alcs` },
+  { label: "Missing Regulatory Objects", href: "/concepts/missing-regulatory-objects/" },
+  { label: "MRO-01 through MRO-16", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#mro-overview` },
+  { label: "RCCS-T", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#rccs-t` },
+  { label: "RCCS-M", href: "/concepts/rccs-m/" },
+  { label: "ALCS", href: "/concepts/alcs/" },
+  { label: "Intent Drift", href: "/concepts/intent-drift/" },
+  { label: "Authority Boundary", href: "/concepts/authority-boundary/" },
+  { label: "Evidence Chain", href: "/concepts/lifecycle-evidence/" },
+  { label: "Accepted Outcome", href: "/concepts/accepted-outcome/" },
+  { label: "Deterministic Delivery", href: "/concepts/deterministic-delivery/" },
+  { label: "MPLP as one protocol path", href: "/projects/mplp/" },
+  { label: "AI Agent Compliance", href: "/governance/ai-agent-compliance/" },
+  { label: "Multi-Agent System Governance", href: "/governance/multi-agent-system-governance/" },
+  { label: "Vendor / Runtime Substitution Conformance", href: "/governance/vendor-runtime-substitution-conformance/" },
+  { label: "Incident / Dispute / Remediation Closure", href: "/governance/incident-dispute-remediation-closure/" }
 ];
 const internalLinks = [
   { href: "/about/", label: "About Jearon Wong" },
@@ -71,6 +91,7 @@ const aboutTerms = [
   "Multi-Agent Systems Governance",
   "Missing Regulatory Objects",
   "RCCS-M",
+  "RCCS-T",
   "ALCS",
   "MPLP",
   "Multi-Agent Lifecycle Protocol",
@@ -90,9 +111,11 @@ const articleJsonLd = {
   "@type": "TechArticle",
   "@id": `${pageUrl}#whitepaper`,
   headline: "Global AI Compliance White Paper 2026",
-  alternativeHeadline: "From Model Governance to Agentic Lifecycle Responsibility",
+  alternativeHeadline: "From Model Governance to Agentic Lifecycle Conformance",
   description: metaDescription,
   url: pageUrl,
+  identifier: documentId,
+  inLanguage: "en",
   author: {
     "@id": `${siteConfig.siteUrl}#person`
   },
@@ -101,11 +124,27 @@ const articleJsonLd = {
   },
   datePublished: "2026-05-12",
   dateModified: "2026-05-12",
-  version: "v0.3.2 Public Edition",
+  version: reportVersion,
+  genre: "Technical report",
   creativeWorkStatus: "PublicationCandidate",
   citation: citationText,
   keywords: aboutTerms,
   about: aboutTerms.map((term) => ({
+    "@type": "Thing",
+    name: term
+  })),
+  mentions: [
+    "AI Agent Lifecycle Governance",
+    "Agentic Lifecycle Conformance",
+    "Missing Regulatory Objects",
+    "RCCS-T",
+    "RCCS-M",
+    "ALCS",
+    "MPLP",
+    "Deterministic Delivery",
+    "Enterprise AI Governance",
+    "Multi-Agent Systems"
+  ].map((term) => ({
     "@type": "Thing",
     name: term
   })),
@@ -208,6 +247,7 @@ const definedTermSetJsonLd = {
   ogType="article"
   jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, definedTermSetJsonLd]}
   keywords={aboutTerms}
+  metaTags={citationMetaTags}
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt="Global AI Compliance White Paper 2026 by Jearon Wong"
 >
@@ -221,7 +261,7 @@ const definedTermSetJsonLd = {
           <a href="/research/">Research</a>
         </nav>
         <h1>Global AI Compliance White Paper 2026</h1>
-        <p class="release-subtitle">From Model Governance to Agentic Lifecycle Responsibility</p>
+        <p class="release-subtitle">From Model Governance to Agentic Lifecycle Conformance</p>
         <p class="release-thesis">
           Model governance is necessary but insufficient for AI agent and multi-agent systems.
           Agentic compliance requires lifecycle responsibility objects: authority boundaries,
@@ -239,7 +279,7 @@ const definedTermSetJsonLd = {
         </div>
         <div class="meta-line">
           <span>Internal trace</span>
-          <strong>GACWP-2026-v0.3.2-FRC-R3</strong>
+          <strong>{documentId}</strong>
         </div>
         <div class="meta-line">
           <span>Status</span>
@@ -258,17 +298,18 @@ const definedTermSetJsonLd = {
       <section class="release-section release-grid">
         <div>
           <div class="registry-annotation section-tag">
-            <span class="registry-key">CORE_THESIS</span>
+            <span class="registry-key">KEY_CONCEPTS</span>
           </div>
-          <h2>AI Agent / MAS compliance is lifecycle responsibility compliance.</h2>
+          <h2>Key concepts covered.</h2>
           <p class="section-lead">
-            The paper defines a governance object layer for agentic work: what must remain attached
-            to authority, evidence, validation, substitution, and remediation after model execution ends.
+            The paper treats AI agent / MAS compliance as lifecycle responsibility compliance: what
+            remains attached to authority, evidence, validation, substitution, and remediation after
+            model execution ends.
           </p>
         </div>
         <div class="concept-ledger">
           {keyConcepts.map((concept, index) => (
-            <span><strong>{String(index + 1).padStart(2, "0")}</strong>{concept}</span>
+            <a href={concept.href}><strong>{String(index + 1).padStart(2, "0")}</strong>{concept.label}</a>
           ))}
         </div>
       </section>
@@ -310,10 +351,23 @@ const definedTermSetJsonLd = {
       <section id="cite" class="release-section release-grid" aria-labelledby="citation-title">
         <div>
           <div class="registry-annotation section-tag">
-            <span class="registry-key">CITATION</span>
+            <span class="registry-key">CITATION_IDENTITY</span>
           </div>
-          <h2 id="citation-title">Cite this paper.</h2>
+          <h2 id="citation-title">Citation and artifact identity.</h2>
           <p class="citation-block">{citationText}</p>
+          <dl class="identity-ledger" aria-label="Technical report identity">
+            <div><dt>Title</dt><dd>{reportTitle}</dd></div>
+            <div><dt>Author</dt><dd>Jearon Wong</dd></div>
+            <div><dt>Document ID / Trace Tag</dt><dd>{documentId}</dd></div>
+            <div><dt>Version</dt><dd>{reportVersion}</dd></div>
+            <div><dt>Publication month</dt><dd>{publicationMonth}</dd></div>
+            <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
+            <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
+            <div><dt>PDF</dt><dd><a href={pdfUrl}>{pdfUrl}</a></dd></div>
+            <div><dt>DOCX</dt><dd><a href={docxUrl}>{docxUrl}</a></dd></div>
+            <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
+            <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
+          </dl>
         </div>
         <div class="boundary-panel">
           <strong>Boundary statement</strong>
@@ -544,13 +598,18 @@ const definedTermSetJsonLd = {
     border-top: 1px solid var(--current-line);
   }
 
-  .concept-ledger span {
+  .concept-ledger a {
     display: grid;
     grid-template-columns: 3rem 1fr;
     gap: 1rem;
     padding: 0.9rem 0;
     border-bottom: 1px solid var(--current-line);
     color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .concept-ledger a:hover {
+    color: var(--accent-signal);
   }
 
   .concept-ledger strong {
@@ -634,6 +693,47 @@ const definedTermSetJsonLd = {
     color: var(--current-text);
     font-size: 1rem;
     line-height: 1.72;
+  }
+
+  .identity-ledger {
+    display: grid;
+    margin: 1rem 0 0;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .identity-ledger div {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.78rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .identity-ledger dt {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent-signal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .identity-ledger dd {
+    min-width: 0;
+    margin: 0;
+    color: var(--current-text);
+    overflow-wrap: anywhere;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .identity-ledger a {
+    color: inherit;
+    text-decoration-color: var(--current-line);
+    text-underline-offset: 0.16em;
+  }
+
+  .identity-ledger a:hover {
+    color: var(--accent-signal);
   }
 
   .boundary-panel {
@@ -751,6 +851,11 @@ const definedTermSetJsonLd = {
     .release-grid,
     .integrity-grid {
       grid-template-columns: 1fr;
+    }
+
+    .identity-ledger div {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
     }
 
     .artifact-grid {

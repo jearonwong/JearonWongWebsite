@@ -20,6 +20,11 @@ interface Props {
   ogImageAlt?: string;
   twitterImagePath?: string;
   keywords?: string[] | string;
+  metaTags?: Array<{
+    name?: string;
+    property?: string;
+    content: string;
+  }>;
 }
 
 const {
@@ -36,7 +41,8 @@ const {
   ogImagePath = siteConfig.socialImagePath,
   ogImageAlt = `${siteConfig.author.name} — ${siteConfig.author.role}`,
   twitterImagePath,
-  keywords
+  keywords,
+  metaTags = []
 } = Astro.props;
 
 const pageTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.title}`;
@@ -60,6 +66,13 @@ const personJsonLd = JSON.stringify(createPersonJsonLd());
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+    {metaTags.map((tag) => (
+      tag.name ? (
+        <meta name={tag.name} content={tag.content} />
+      ) : tag.property ? (
+        <meta property={tag.property} content={tag.content} />
+      ) : null
+    ))}
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#111418" />
     <meta name="author" content={siteConfig.author.name} />

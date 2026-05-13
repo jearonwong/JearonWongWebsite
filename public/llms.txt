@@ -76,7 +76,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## White Papers
 
 - Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
-  v0.3.2 Public Edition. Internal trace: GACWP-2026-v0.3.2-FRC-R3. Defines Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.
+  v0.3.2 Public Edition. Technical Report ID / Trace Tag: GACWP-2026-v0.3.2-FRC-R3. Recommended citation: Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026. Defines Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.
   PDF: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf
   HTML: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
   DOCX derivative: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.docx
