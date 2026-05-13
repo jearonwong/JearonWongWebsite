@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 13, 2026 (GAIC-R3J Launch Distribution Execution Pack)
+**Last Updated:** May 13, 2026 (GAIC-R3I-1 SEO/GEO Outcome-Oriented Metadata and Entity Hardening)
 
 ## GAIC-R3A Core Entity Mesh
 
@@ -2321,3 +2321,38 @@ Remaining work:
 - Results should only be recorded after evidence URLs, screenshots/exports, dates, and notes exist.
 
 **GAIC-R3J Status:** ✓ LAUNCH DISTRIBUTION EXECUTION PACK COMPLETE / READY FOR OWNER EXECUTION AND EVIDENCE CAPTURE
+
+---
+
+## GAIC-R3I-1 Known Issues
+
+### SEO/GEO Outcome-Oriented Metadata and Entity Hardening Complete
+
+R3I-1 performs the final outcome-oriented source/build hardening before owner launch execution. It treats the three-stage KPI framework as monitoring targets, not achieved claims.
+
+Validation scope:
+
+- Priority metadata audit completed for 12 routes.
+- Concepts index metadata improved for core entity extraction.
+- Homepage JSON-LD `hasPart` graph expanded to include priority site surfaces.
+- Concepts Map extractability strengthened with a server-rendered layer index and layer-group JSON-LD.
+- External proposal findings reconciled.
+- Live extraction proof recorded for 12 production URLs.
+- KPI alignment report created for Phase 1, Phase 2, and Phase 3 measurement hooks.
+
+Boundary discipline:
+
+- No claim that SEO visibility +30% has occurred.
+- No claim that AI answer engines now cite JearonWong.com.
+- No claim that top-3-page visibility has been achieved.
+- No claim that JearonWong.com is already a primary semantic source.
+- No legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output claim, or MPLP industry-standard claim introduced.
+- Sealed white paper artifacts, responsive public HTML checksum, white paper content, RCCS-T/RCCS-M/ALCS scores, and methodology remain unchanged.
+
+Remaining work:
+
+- Deploy R3I-1 and verify production live extraction after deployment.
+- Owner executes R3J launch distribution, Search Console/Bing submission, answer-engine testing, and evidence capture.
+- R3K should review 7/14/30-day KPI baselines after owner execution begins.
+
+**GAIC-R3I-1 Status:** ✓ SEO/GEO OUTCOME-ORIENTED METADATA AND ENTITY HARDENING COMPLETE / READY FOR OWNER LAUNCH EXECUTION AND KPI MONITORING

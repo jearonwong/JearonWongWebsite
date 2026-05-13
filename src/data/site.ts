@@ -1782,7 +1782,7 @@ export const pageRegistry = {
     title: "Concepts for AI Agent Lifecycle",
     objectType: "PAGE_ROLE",
     objectValue: "CONCEPT MAP",
-    lead: "Concepts is the reference layer behind the AI Agent Lifecycle mainline. It is not the main human journey."
+    lead: "Reference layer for AI Agent Lifecycle, Agentic Lifecycle Governance, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, Deterministic Delivery, and AI agent governance terms."
   },
   research: {
     title: "Research",

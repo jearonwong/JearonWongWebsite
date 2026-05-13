@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 13, 2026 (GAIC-R3J Launch Distribution Execution Pack)
+**Last Updated:** May 13, 2026 (GAIC-R3I-1 SEO/GEO Outcome-Oriented Metadata and Entity Hardening)
 
 ## Reconstruction Strategy
 
@@ -3089,3 +3089,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No search ranking improvement, answer-engine pickup, backlink, citation, mention, indexing submission, certification, regulator approval, legal compliance proof, procurement recommendation, vendor ranking, vendor affiliation, or MPLP overclaim was fabricated or introduced.
 
 **GAIC-R3J Status:** ✓ LAUNCH DISTRIBUTION EXECUTION PACK COMPLETE / READY FOR OWNER EXECUTION AND EVIDENCE CAPTURE.
+
+## GAIC-R3I-1 Notes (May 13, 2026)
+
+**Scope:** SEO/GEO Outcome-Oriented Metadata and Entity Hardening.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `dfa376ac75bb7af77a93f69104c0e0279be305c4` before R3I-1 edits.
+2. Audited priority source/build/live metadata for homepage, Concepts, Concepts Map, GAIC hub, Concept Core, MRO, RCCS-M, ALCS, Deterministic Delivery, systems index, extended ecosystem index, and governance index.
+3. Improved the Concepts index description to name the primary entity targets directly.
+4. Expanded homepage WebPage JSON-LD `hasPart` to include priority semantic surfaces.
+5. Added a server-rendered extractable layer index to Concepts Map.
+6. Added layer-group JSON-LD to Concepts Map.
+7. Reconciled external SEO/GEO proposal findings and separated source/build work from external owner execution.
+8. Recorded live extraction proof for 12 priority production URLs.
+9. Created KPI alignment and measurement hooks for Phase 1, Phase 2, and Phase 3 targets.
+10. Verified Concepts Map in local browser preview with no console errors/warnings.
+
+**Artifact discipline:**
+
+- No sealed white paper artifact was modified.
+- Responsive public HTML checksum remains `2693eb11826e9930e7c2d0587a67d5e2aada3c5999fadce4c70e1e0d9f9cfb06`.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No new public semantic routes were created.
+
+**Boundary discipline:**
+
+- SEO +30%, AI answer citation, top-3-page visibility, and primary semantic source status remain KPI targets and monitoring goals only.
+- No search ranking improvement, answer-engine pickup, backlink, citation, mention, indexing submission, certification, regulator approval, legal compliance proof, procurement recommendation, vendor ranking, vendor affiliation, deterministic LLM output claim, or MPLP overclaim was fabricated or introduced.
+
+**GAIC-R3I-1 Status:** ✓ SEO/GEO OUTCOME-ORIENTED METADATA AND ENTITY HARDENING COMPLETE / READY FOR OWNER LAUNCH EXECUTION AND KPI MONITORING.

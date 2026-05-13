@@ -96,14 +96,14 @@ const mapNodes = [
   {
     id: "gaic-cited-systems",
     label: "Systems Discussed in GAIC",
-    layer: "Authority Source",
+    layer: "Systems Discussed in GAIC",
     href: "/research/global-ai-compliance-white-paper-2026/systems/",
     description: "Source-qualified, non-ranking lifecycle governance mappings for systems discussed in the white paper."
   },
   {
     id: "extended-ecosystem",
     label: "Extended Ecosystem Mapping",
-    layer: "Extended Ecosystem Layer",
+    layer: "Extended Ecosystem Mapping",
     href: extendedEcosystemPath,
     description: "Source-qualified lifecycle governance mappings for ecosystems outside the first-layer GAIC-cited system set."
   },
@@ -194,14 +194,14 @@ const mapNodes = [
   {
     id: "rccs-m",
     label: "RCCS-M",
-    layer: "Measurement Layer",
+    layer: "Evaluation Layer",
     href: "/concepts/rccs-m/",
     description: "MRO-adjusted Regulatory Compliance Coverage Score."
   },
   {
     id: "alcs",
     label: "ALCS",
-    layer: "Measurement Layer",
+    layer: "Evaluation Layer",
     href: "/concepts/alcs/",
     description: "Agentic Lifecycle Conformance Score."
   },
@@ -299,9 +299,92 @@ const mapNodes = [
   {
     id: "applied-playbooks",
     label: "Applied Playbooks",
-    layer: "Applied Layer",
+    layer: "Applied Playbooks",
     href: "/playbooks/",
     description: "Practical guides for rollback, verification, auditability, vendor workflows, and human-role mapping."
+  }
+];
+const extractableLayerGroups = [
+  {
+    name: "Identity Layer",
+    description: "Author identity and public role anchor.",
+    links: [
+      { href: "/about/", label: "Jearon Wong" },
+      { href: "/about/", label: "Protocol Architect for the Agent Era" }
+    ]
+  },
+  {
+    name: "Category Layer",
+    description: "The category path from AI Agent Lifecycle to Agentic Lifecycle Governance.",
+    links: [
+      { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle" },
+      { href: "/concepts/agentic-delivery/", label: "Agentic Delivery" },
+      { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" }
+    ]
+  },
+  {
+    name: "Governance Object Layer",
+    description: "Lifecycle responsibility objects used to make AI agent governance inspectable.",
+    links: [
+      { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" }
+    ]
+  },
+  {
+    name: "Evaluation Layer",
+    description: "MRO-adjusted and lifecycle conformance evaluation language.",
+    links: [
+      { href: "/concepts/rccs-m/", label: "RCCS-M" },
+      { href: "/concepts/alcs/", label: "ALCS" }
+    ]
+  },
+  {
+    name: "Protocol Path",
+    description: "MPLP as one protocol path for lifecycle responsibility semantics.",
+    links: [{ href: "/projects/mplp/", label: "MPLP" }]
+  },
+  {
+    name: "Systems Discussed in GAIC",
+    description: "Source-qualified non-ranking mappings for systems discussed in the white paper.",
+    links: [{ href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" }]
+  },
+  {
+    name: "Extended Ecosystem Mapping",
+    description: "Source-qualified mappings for ecosystem search contexts beyond GAIC first-layer systems.",
+    links: [{ href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" }]
+  },
+  {
+    name: "Engineering Practice Layer",
+    description: "Deterministic Delivery, rollbackability, verification, configuration, architecture governance, and harness practice.",
+    links: [
+      { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+      { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
+      { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
+      { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
+      { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
+      { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering" }
+    ]
+  },
+  {
+    name: "Regulatory and Enterprise Governance Layer",
+    description: "Regulatory, enterprise, privacy, risk, evidence, substitution, and incident governance mappings.",
+    links: [
+      { href: "/governance/", label: "AI Agent Governance and Lifecycle Responsibility" },
+      { href: "/governance/ai-agent-compliance/", label: "AI Agent Compliance" },
+      { href: "/governance/enterprise-agent-governance/", label: "Enterprise Agent Governance" }
+    ]
+  },
+  {
+    name: "Applied Playbooks",
+    description: "Practical playbooks for rollback, verification, auditability, human-role mapping, and workflow governance.",
+    links: [
+      { href: "/playbooks/", label: "Applied Playbooks" },
+      { href: "/playbooks/prompt-engineering-vs-harness-engineering/", label: "Prompt Engineering vs Harness Engineering" },
+      { href: "/playbooks/agentic-delivery-architecture-checklist/", label: "Agentic Delivery Architecture Checklist" }
+    ]
   }
 ];
 const relationGroups = [
@@ -324,13 +407,13 @@ const relationGroups = [
     body: "The governance object layer names the missing lifecycle objects and the analytical models used to assess them."
   },
   {
-    name: "GAIC-Cited Systems",
+    name: "Systems Discussed in GAIC",
     relation: "Global AI Compliance White Paper 2026 -> Systems Discussed in GAIC",
     nodes: ["Global AI Compliance White Paper 2026", "Systems Discussed in GAIC"],
     body: "The systems layer exposes source-qualified semantic anchors for systems already discussed in the white paper. It is not vendor ranking or procurement guidance."
   },
   {
-    name: "Extended Ecosystem Layer",
+    name: "Extended Ecosystem Mapping",
     relation: "Applied Playbooks -> Extended Ecosystem Mapping",
     nodes: ["Applied Playbooks", "Extended Ecosystem Mapping"],
     body: "The extended layer reuses existing applied playbooks and adds source-qualified mappings for Claude Code, Qwen, Cursor, AutoGen, MCP, A2A, and Semantic Kernel without treating them as GAIC-scored systems."
@@ -340,6 +423,12 @@ const relationGroups = [
     relation: "GAIC / MRO / RCCS-M / ALCS -> Regulatory and Enterprise Governance Mapping",
     nodes: ["Global AI Compliance White Paper 2026", "Agentic Lifecycle Governance", "AI Agent Compliance", "Enterprise Agent Governance", "Evidence Chain", "Accepted Outcome"],
     body: "The regulatory and enterprise layer maps official-source governance language and enterprise control questions into lifecycle responsibility objects. It is not legal advice, certification, regulator-approved guidance, or procurement recommendation."
+  },
+  {
+    name: "Evaluation Layer",
+    relation: "Missing Regulatory Objects -> RCCS-M / ALCS",
+    nodes: ["Missing Regulatory Objects", "RCCS-M", "ALCS"],
+    body: "The evaluation layer exposes the MRO-adjusted coverage and lifecycle-conformance language used by GAIC. It is author-analytical, non-ranking, and not legal compliance proof."
   },
   {
     name: "Engineering Practice Layer",
@@ -354,7 +443,7 @@ const relationGroups = [
     body: "MPLP is presented as one protocol path for lifecycle responsibility semantics, not as a required or certified implementation."
   },
   {
-    name: "Applied Layer",
+    name: "Applied Playbooks",
     relation: "RCCS-M / ALCS / MPLP -> Applied Playbooks",
     nodes: ["RCCS-M", "ALCS", "MPLP", "Applied Playbooks"],
     body: "The applied layer maps the concept system to rollback, auditability, human-role responsibility, and workflow-governance questions."
@@ -413,7 +502,13 @@ const pageJsonLd = {
   },
   breadcrumb: {
     "@id": `${pageUrl}#breadcrumb`
-  }
+  },
+  hasPart: extractableLayerGroups.map((group) => ({
+    "@type": "WebPageElement",
+    name: group.name,
+    description: group.description,
+    url: `${pageUrl}#${group.name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")}`
+  }))
 };
 const itemListJsonLd = {
   "@context": "https://schema.org",
@@ -444,6 +539,20 @@ const definedTermSetJsonLd = {
     url: absoluteUrl(node.href)
   }))
 };
+const layerGroupJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#layer-groups`,
+  name: "Concepts Map Extractable Layer Groups",
+  description: "Server-rendered layer groups for the JearonWong.com AI agent lifecycle entity mesh.",
+  itemListElement: extractableLayerGroups.map((group, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: group.name,
+    description: group.description,
+    item: `${pageUrl}#${group.name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")}`
+  }))
+};
 const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   { name: "Home", path: "/" },
   { name: "Concepts", path: "/concepts/" },
@@ -459,7 +568,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   twitterTitle="Concepts Map / Entity Mesh"
   twitterDescription={metaDescription}
   canonicalPath={canonicalPath}
-  jsonLd={[pageJsonLd, itemListJsonLd, definedTermSetJsonLd, breadcrumbJsonLd]}
+  jsonLd={[pageJsonLd, itemListJsonLd, definedTermSetJsonLd, layerGroupJsonLd, breadcrumbJsonLd]}
   keywords={keywords}
   ogImagePath="/social/og-concepts.png"
   ogImageAlt="Concepts Map / Entity Mesh by Jearon Wong"
@@ -512,6 +621,27 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             </li>
           ))}
         </ol>
+      </section>
+
+      <section class="extractable-layers registry-chassis" aria-labelledby="extractable-layers-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">EXTRACTABLE_LAYERS</span>: <span class="registry-value">SERVER_RENDERED</span>
+          </div>
+          <h2 id="extractable-layers-title">Extractable layer index.</h2>
+          <p>These server-rendered groups mirror the entity mesh for crawlers and answer-engine extraction.</p>
+        </div>
+        <div class="layer-card-grid">
+          {extractableLayerGroups.map((group) => (
+            <article id={group.name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")} class="layer-card">
+              <h3>{group.name}</h3>
+              <p>{group.description}</p>
+              <div class="layer-card__links">
+                {group.links.map((link) => <a href={link.href}>{link.label}</a>)}
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section class="entity-map registry-chassis" aria-labelledby="entity-map-title">
@@ -661,6 +791,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .map-opening,
   .semantic-chain,
+  .extractable-layers,
   .entity-map,
   .boundary-panel {
     padding: var(--registry-panel-padding);
@@ -675,6 +806,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .map-opening h2,
   .semantic-chain h2,
+  .extractable-layers h2,
   .entity-map h2,
   .boundary-panel h2,
   .registry-section-heading h2 {
@@ -687,6 +819,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .map-opening p,
   .semantic-chain p,
+  .extractable-layers .registry-section-heading p,
   .entity-map .registry-section-heading p,
   .boundary-panel p,
   .registry-section-heading p {
@@ -745,6 +878,56 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .semantic-chain a:hover {
     border-color: var(--accent-signal);
     color: var(--accent-signal);
+  }
+
+  .extractable-layers {
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .layer-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.4rem;
+  }
+
+  .layer-card {
+    padding: 1rem;
+    border: 1px solid var(--current-border);
+    background: color-mix(in srgb, var(--current-panel) 86%, transparent);
+  }
+
+  .layer-card h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .layer-card p {
+    margin: 0.55rem 0 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .layer-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+
+  .layer-card__links a {
+    padding: 0.36rem 0.48rem;
+    border: 1px solid var(--current-border);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 
   .map-opening__links {
