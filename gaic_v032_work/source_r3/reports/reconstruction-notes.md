@@ -2792,12 +2792,13 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - Live R3D content/schema is deployed.
 - Live `/concepts/map/` exists.
 - Live homepage and `/concepts/` include meta descriptions and JSON-LD.
-- Live homepage still serves the pre-R3D-2 dark GAIC panel until this patch is deployed.
-- Current status is SOURCE/BUILD COMPLETE / LIVE DEPLOYMENT VERIFICATION REQUIRED.
+- Live homepage now serves the R3D-2 light GAIC research-release panel below the dark hero, with preserved white paper hub, PDF, and Concept Core CTAs.
+- Current status is LIVE DEPLOYMENT VERIFIED / READY FOR GAIC-CITED SYSTEMS SEMANTIC MAPPING.
 
-**R3E future registration:**
+**R3E future registration and naming correction:**
 
-- R3E should map Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering to OpenAI / ChatGPT / Agents SDK, Anthropic / Claude, DeepSeek, Kimi / Moonshot AI, Microsoft Azure AI Foundry, AWS Bedrock / AgentCore, Google Vertex AI / ADK, IBM watsonx.governance, LangGraph / LangSmith, CrewAI, optional AutoGen, MCP, A2A, and agent orchestration ecosystems.
+- R3E should be treated as GAIC-Cited Systems Semantic Mapping Layer, not generic vendor SEO.
+- R3E should first map Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering to systems already discussed, evaluated, or cited in the GAIC white paper: MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI.
 - R3E requires official-source research first and must distinguish governance mapping from product evaluation.
 - R3E must not fabricate feature claims, rank vendors, imply endorsement, claim unsourced product defects, or create procurement recommendations.
 
@@ -2809,4 +2810,21 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
 - WP2/WP3 content was not created.
 
-**GAIC-R3D-2 Status:** ✓ SOURCE/BUILD COMPLETE / LIVE DEPLOYMENT VERIFICATION REQUIRED.
+**GAIC-R3D-2 Status:** ✓ LIVE DEPLOYMENT VERIFIED / READY FOR GAIC-CITED SYSTEMS SEMANTIC MAPPING.
+
+## GAIC-R3D-2 Live Deployment Verification Notes (May 13, 2026)
+
+**Scope:** Verify that commit `31c504add815ff7e448226011cdae45154f8538b` deployed to production and that the homepage GAIC panel is now a light research-release section.
+
+**Actions completed:**
+
+1. Confirmed local and origin `main` both point to `31c504add815ff7e448226011cdae45154f8538b`.
+2. Verified production HTTP 200 for homepage, `/concepts/`, `/concepts/map/`, GAIC hub, `sitemap-index.xml`, `sitemap-0.xml`, and `robots.txt`.
+3. Verified production homepage HTML contains `zone-b gaic-release-band`.
+4. Verified production homepage CSS contains the R3D-2 light section treatment: `#f8fafc` release band, white panel, dark text, Evidence Cyan left rule, and dark primary CTA.
+5. Verified production homepage GAIC release copy and CTAs are preserved.
+6. Verified production homepage, `/concepts/`, `/concepts/map/`, and GAIC hub include meta description, canonical, robots, and JSON-LD.
+7. Verified production sitemap index points to `sitemap-0.xml`, robots points to `sitemap-index.xml`, and `sitemap-0.xml` includes homepage, Concepts, Concepts Map, and GAIC hub.
+8. Captured production homepage screenshot at `reports/gaic-r3d2-live-homepage-panel.png`.
+
+**GAIC-R3D-2 Live Verification Status:** ✓ LIVE DEPLOYMENT VERIFIED / READY FOR GAIC-CITED SYSTEMS SEMANTIC MAPPING.

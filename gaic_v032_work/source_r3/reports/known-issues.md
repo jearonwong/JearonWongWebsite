@@ -2008,7 +2008,7 @@ Remaining work:
 
 ## GAIC-R3D-2 Known Issues
 
-### Source/Build Complete; Live Visual Verification Required
+### Live Deployment Verified
 
 R3D-2 corrected the homepage GAIC release panel visual treatment and reconciled the latest external SEO/GEO audit findings without changing sealed white paper artifacts, white paper content, RCCS-T/RCCS-M/ALCS scoring, methodology, or the publication candidate manifest.
 
@@ -2019,23 +2019,33 @@ Validation scope:
 - Homepage build HTML includes meta description, canonical, robots, and WebSite/Person/WebPage/ProfilePage/Breadcrumb JSON-LD.
 - `/concepts/` build HTML includes meta description, canonical, robots, and CollectionPage/DefinedTermSet/Breadcrumb JSON-LD plus global WebSite/Person schema.
 - `/concepts/map/` build HTML includes metadata, canonical, robots, and WebPage/ItemList/DefinedTermSet/Breadcrumb JSON-LD.
-- Live HTTP verification showed the R3D site is deployed: homepage GAIC panel exists, Research nav exists, `/concepts/map/` exists, homepage and `/concepts/` include meta descriptions and JSON-LD, and sitemap/robots are accessible through `sitemap-index.xml`, `sitemap-0.xml`, and `robots.txt`.
+- Live HTTP verification showed the R3D-2 visual patch is deployed: homepage GAIC panel now uses the light research-release section below the dark hero, Research nav exists, `/concepts/map/` exists, homepage and `/concepts/` include meta descriptions and JSON-LD, and sitemap/robots are accessible through `sitemap-index.xml`, `sitemap-0.xml`, and `robots.txt`.
 - `https://www.jearonwong.com/sitemap.xml` returns 404, which is acceptable for the current Astro sitemap setup because `robots.txt` points to `https://www.jearonwong.com/sitemap-index.xml`.
 - External audit claims that homepage/concepts lacked meta descriptions or JSON-LD were not reproduced in source/build or live HTML.
 - Sealed artifact hashes and public copy hashes remain unchanged.
 
 Remaining work:
 
-- The new light homepage GAIC panel must be verified live after this R3D-2 commit is deployed.
-- Vendor/model/framework semantic mapping is registered as future GAIC-R3E work and was not implemented in this wave.
+- GAIC-R3E has not started and must be handled as a separate wave.
 
 ### GAIC-R3E Future Task
 
-**Name:** Vendor / Model / Framework Semantic Mapping Layer
+**Name:** GAIC-Cited Systems Semantic Mapping Layer
 
 Purpose:
 
-- Map Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering to real search contexts around OpenAI / ChatGPT / Agents SDK, Anthropic / Claude, DeepSeek, Kimi / Moonshot AI, Microsoft Azure AI Foundry, AWS Bedrock / AgentCore, Google Vertex AI / ADK, IBM watsonx.governance, LangGraph / LangSmith, CrewAI, AutoGen if later included, MCP, A2A, and agent orchestration ecosystems.
+- Map Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering to systems already discussed, evaluated, or cited in the GAIC white paper before expanding to broader vendor/model/framework search contexts.
+
+First batch:
+
+- MPLP
+- IBM watsonx.governance
+- Microsoft Azure AI Foundry
+- AWS Bedrock + Guardrails + AgentCore
+- Google Vertex AI + ADK + Model Armor
+- LangGraph + LangSmith
+- OpenAI Agents SDK
+- CrewAI
 
 Rules:
 
@@ -2047,4 +2057,4 @@ Rules:
 - No product defect claim without public source support.
 - No MPLP requirement, exclusivity, certification, regulator approval, or current industry-standard claim.
 
-**GAIC-R3D-2 Status:** ✓ SOURCE/BUILD COMPLETE / LIVE DEPLOYMENT VERIFICATION REQUIRED
+**GAIC-R3D-2 Status:** ✓ LIVE DEPLOYMENT VERIFIED / READY FOR GAIC-CITED SYSTEMS SEMANTIC MAPPING
