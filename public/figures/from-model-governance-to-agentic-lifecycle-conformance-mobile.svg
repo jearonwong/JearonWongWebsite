@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1520" viewBox="0 0 720 1520" role="img" aria-labelledby="title desc">
+  <title id="title">From Model Governance to Agentic Lifecycle Conformance</title>
+  <desc id="desc">A mobile-readable architecture diagram showing the white paper path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111111; }
+      .grid-line { stroke: rgba(241,245,249,0.06); stroke-width: 1; }
+      .frame { fill: none; stroke: rgba(241,245,249,0.16); stroke-width: 1.2; }
+      .panel { fill: rgba(255,255,255,0.03); stroke: rgba(241,245,249,0.16); stroke-width: 1.4; }
+      .panel-hot { fill: rgba(34,211,238,0.06); stroke: rgba(34,211,238,0.46); stroke-width: 1.5; }
+      .panel-blue { fill: rgba(59,130,246,0.07); stroke: rgba(59,130,246,0.42); stroke-width: 1.5; }
+      .kicker { fill: #22d3ee; font-family: "JetBrains Mono", Menlo, monospace; font-size: 20px; font-weight: 800; letter-spacing: 1.3px; }
+      .title { fill: #f8fafc; font-family: "Outfit", Inter, sans-serif; font-size: 42px; font-weight: 850; letter-spacing: -0.35px; }
+      .subtitle { fill: #94a3b8; font-family: Inter, sans-serif; font-size: 21px; font-weight: 560; }
+      .step { fill: #22d3ee; font-family: "JetBrains Mono", Menlo, monospace; font-size: 18px; font-weight: 800; letter-spacing: 1.1px; }
+      .heading { fill: #f8fafc; font-family: "Outfit", Inter, sans-serif; font-size: 32px; font-weight: 830; letter-spacing: -0.15px; }
+      .body { fill: #cbd5e1; font-family: Inter, sans-serif; font-size: 22px; font-weight: 560; }
+      .small { fill: #94a3b8; font-family: Inter, sans-serif; font-size: 19px; font-weight: 560; }
+      .mono { fill: #e2e8f0; font-family: "JetBrains Mono", Menlo, monospace; font-size: 18px; font-weight: 800; letter-spacing: 0.4px; }
+      .footer { fill: #64748b; font-family: "JetBrains Mono", Menlo, monospace; font-size: 16px; font-weight: 800; letter-spacing: 0.65px; }
+      .arrow { stroke: rgba(34,211,238,0.82); stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .chip { fill: rgba(255,255,255,0.045); stroke: rgba(241,245,249,0.16); stroke-width: 1; }
+      .chip-hot { fill: rgba(34,211,238,0.1); stroke: rgba(34,211,238,0.38); stroke-width: 1; }
+    </style>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" class="grid-line"/>
+    </pattern>
+    <marker id="arrow" markerWidth="14" markerHeight="11" refX="13" refY="5.5" orient="auto">
+      <path d="M0,0 L14,5.5 L0,11 Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="1520" class="bg"/>
+  <rect width="720" height="1520" fill="url(#grid)"/>
+  <rect x="28" y="28" width="664" height="1464" class="frame"/>
+  <rect x="44" y="44" width="632" height="1432" fill="none" stroke="rgba(34,211,238,0.26)" stroke-width="1"/>
+
+  <g transform="translate(64 82)">
+    <text x="0" y="0" class="kicker">GAIC 2026</text>
+    <text x="0" y="58" class="title">From Model</text>
+    <text x="0" y="106" class="title">Governance</text>
+    <text x="0" y="154" class="title">to Agentic Lifecycle</text>
+    <text x="0" y="202" class="title">Conformance</text>
+    <text x="0" y="250" class="subtitle">The governance unit shifts when AI systems perform work.</text>
+  </g>
+
+  <g transform="translate(64 390)">
+    <rect width="592" height="166" rx="2" class="panel"/>
+    <text x="24" y="40" class="step">01 / REGULATORY BASELINE</text>
+    <text x="24" y="82" class="heading">Existing governance language</text>
+    <text x="24" y="120" class="small">EU AI Act · GDPR · NIST AI RMF</text>
+    <text x="24" y="150" class="small">ISO 42001 · Singapore MGF · W3C · Colorado</text>
+  </g>
+
+  <path d="M360 576 L360 638" class="arrow"/>
+  <text x="388" y="615" class="mono">IMPLIES</text>
+
+  <g transform="translate(64 660)">
+    <rect width="592" height="168" rx="2" class="panel-blue"/>
+    <text x="24" y="42" class="step">02 / RCCS-T</text>
+    <text x="24" y="84" class="heading">Traditional Compliance Coverage</text>
+    <text x="24" y="122" class="small">Risk · documentation · oversight</text>
+    <text x="24" y="152" class="small">security · accountability · monitoring</text>
+  </g>
+
+  <path d="M360 850 L360 912" class="arrow"/>
+  <text x="388" y="889" class="mono">INSUFFICIENT FOR AGENTS</text>
+
+  <g transform="translate(64 934)">
+    <rect width="592" height="296" rx="2" class="panel-hot"/>
+    <text x="24" y="42" class="step">03 / MRO</text>
+    <text x="24" y="84" class="heading">16 Missing Regulatory Objects</text>
+    <text x="24" y="122" class="small">Lifecycle objects that make responsibility inspectable.</text>
+
+    <rect x="24" y="150" width="258" height="50" rx="2" class="chip-hot"/>
+    <text x="42" y="183" class="mono">Responsibility 01 · 03 · 04 · 06</text>
+    <rect x="310" y="150" width="258" height="50" rx="2" class="chip"/>
+    <text x="328" y="183" class="mono">Authority 02 · 05 · 07</text>
+    <rect x="24" y="216" width="258" height="50" rx="2" class="chip"/>
+    <text x="42" y="249" class="mono">Evidence 08 · 11 · 12</text>
+    <rect x="310" y="216" width="258" height="50" rx="2" class="chip-hot"/>
+    <text x="328" y="249" class="mono">Privacy 10 · 13 · 14</text>
+  </g>
+
+  <path d="M360 1252 L360 1310" class="arrow"/>
+  <text x="388" y="1288" class="mono">MRO-ADJUSTED</text>
+
+  <g transform="translate(64 1334)">
+    <rect width="278" height="98" rx="2" class="panel-blue"/>
+    <text x="22" y="38" class="step">04 / RCCS-M</text>
+    <text x="22" y="74" class="body">MRO-adjusted coverage</text>
+  </g>
+  <g transform="translate(378 1334)">
+    <rect width="278" height="98" rx="2" class="panel-blue"/>
+    <text x="22" y="38" class="step">05 / ALCS</text>
+    <text x="22" y="74" class="body">Lifecycle conformance</text>
+  </g>
+
+  <text x="64" y="1460" class="footer">SYSTEMS: MPLP · IBM · AZURE · AWS · GOOGLE · LANGGRAPH · OPENAI · CREWAI</text>
+  <text x="64" y="1488" class="footer">AUTHOR-ANALYTICAL · NON-RANKING · NOT LEGAL ADVICE</text>
+</svg>

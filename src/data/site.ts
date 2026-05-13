@@ -151,7 +151,7 @@ export const aiAgentLifecycleColumn = {
     "Prompt Engineering improves a response. Context Engineering improves what the model sees. Harness Engineering improves execution. AI Agent Lifecycle asks what must stay dynamic, governable, and accountable after execution.",
   href: "/lifecycle/",
   publicationRule:
-    "Articles in this column are published one at a time after careful refinement. The first essay is the origin story; the second essay defines MAS through lifecycle responsibility separation. The next essay defines the field conflict between execution and delivery.",
+    "Articles in this column are published one at a time after careful refinement. The sequence moves from engineering failure, to MAS responsibility separation, to orchestration, and then to lifecycle responsibility compliance.",
   coverImage: "/figures/ai-agent-lifecycle-01-cover.svg",
   coverImageAlt: "AI Agent Lifecycle: It Was Not Designed. It Grew. cover image",
   firstPublishedEssay: {
@@ -161,7 +161,7 @@ export const aiAgentLifecycleColumn = {
     status: "published"
   },
   nextEssayDirection:
-    "After the second essay on MAS responsibility separation, the next essay will define the field conflict between execution and delivery.",
+    "The current sequence now connects the AI Agent Lifecycle origin argument to model governance, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility compliance.",
   preludeEssays: [
     {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
@@ -647,6 +647,14 @@ export const homepageContent = {
       note: "Series continuation: why real MAS is lifecycle responsibility separation, not agent count."
     },
     {
+      slug: "agent-orchestration-is-not-delivery",
+      note: "Orchestration layer: why coordinating agents does not define accepted delivery or responsibility consensus."
+    },
+    {
+      slug: "from-model-governance-to-agentic-lifecycle-conformance",
+      note: "Governance bridge: why model governance remains necessary but agentic work needs lifecycle responsibility compliance."
+    },
+    {
       slug: "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
       note: "Protocol-stack gap: tool access and agent coordination still need lifecycle delivery."
     },
@@ -748,7 +756,10 @@ export const concepts: ConceptEntry[] = [
         ]
       }
     ],
-    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedEssays: [
+      "from-model-governance-to-agentic-lifecycle-conformance",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
     relatedProjects: ["mplp", "validation-lab"],
     relatedTerms: [
       "lifecycle-responsibility-objects",
@@ -804,7 +815,10 @@ export const concepts: ConceptEntry[] = [
           "A strong RCCS-M posture indicates that a system or protocol is designed around the lifecycle responsibility objects the paper argues are structurally necessary."
       }
     ],
-    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedEssays: [
+      "from-model-governance-to-agentic-lifecycle-conformance",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
     relatedProjects: ["mplp", "validation-lab"],
     relatedTerms: [
       "missing-regulatory-objects",
@@ -851,7 +865,10 @@ export const concepts: ConceptEntry[] = [
       }
     ],
     lifecycleChain: ["Intent", "Authority", "Evidence", "Accepted outcome", "Dispute", "Remediation", "Closure"],
-    relatedEssays: ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"],
+    relatedEssays: [
+      "from-model-governance-to-agentic-lifecycle-conformance",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
     relatedProjects: ["mplp", "validation-lab"],
     relatedTerms: [
       "missing-regulatory-objects",
@@ -897,7 +914,10 @@ export const concepts: ConceptEntry[] = [
           "Logs and human checkpoints can support governance, but they do not define accepted responsibility. The object layer must preserve authority, evidence, acceptance, and closure as first-class governance records."
       }
     ],
-    relatedEssays: ["agentic-ai-inflection-point-project-delivery"],
+    relatedEssays: [
+      "from-model-governance-to-agentic-lifecycle-conformance",
+      "agentic-ai-inflection-point-project-delivery"
+    ],
     relatedProjects: ["mplp", "validation-lab"],
     relatedTerms: [
       "missing-regulatory-objects",
