@@ -16,14 +16,14 @@ images:
     alt: "Diagram showing the path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped in the Global AI Compliance White Paper 2026"
     caption: "The white paper moves from existing regulatory language to traditional coverage, then to missing lifecycle responsibility objects, MRO-adjusted coverage, and agentic lifecycle conformance."
     thumbnailUrl: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
-    width: 1600
-    height: 1200
+    width: 1000
+    height: 1720
   - url: /figures/from-model-governance-to-agentic-lifecycle-conformance-mobile.svg
     alt: "Mobile-readable version of the diagram showing regulatory baseline, RCCS-T, Missing Regulatory Objects, RCCS-M, and ALCS"
     caption: "Mobile-readable version of the white paper argument path from regulatory language to agentic lifecycle conformance."
     thumbnailUrl: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
-    width: 720
-    height: 1520
+    width: 390
+    height: 1840
 publishDate: 2026-05-13
 cluster: ai-agent-lifecycle
 projectProof: MPLP
@@ -88,7 +88,7 @@ From model governance to agentic lifecycle conformance.
 <figure class="article-figure article-figure--diagram">
   <picture>
     <source media="(max-width: 700px)" srcset="/figures/from-model-governance-to-agentic-lifecycle-conformance-mobile.svg" />
-    <img src="/figures/from-model-governance-to-agentic-lifecycle-conformance.svg" alt="Diagram showing the path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped in the Global AI Compliance White Paper 2026" width="1600" height="1200" loading="eager" decoding="async" />
+    <img src="/figures/from-model-governance-to-agentic-lifecycle-conformance.svg" alt="Diagram showing the path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped in the Global AI Compliance White Paper 2026" width="1000" height="1720" loading="eager" decoding="async" />
   </picture>
   <figcaption>The white paper moves from existing regulatory language to traditional coverage, then to missing lifecycle responsibility objects, MRO-adjusted coverage, and agentic lifecycle conformance.</figcaption>
 </figure>
