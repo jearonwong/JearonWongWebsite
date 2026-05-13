@@ -2070,7 +2070,7 @@ Remaining work:
 
 ## GAIC-R3D-3 Known Issues
 
-### Responsive HTML Web Edition Complete
+### Live Mobile Verified
 
 R3D-3 corrected a publication usability blocker discovered after R3E: the public white paper HTML route was too desktop/print-first for reliable mobile reading. This wave does not roll back R3E; it makes the GAIC white paper HTML route suitable as a public web-reading edition before further external semantic expansion.
 
@@ -2089,7 +2089,14 @@ Validation scope:
 
 Remaining work:
 
-- Production deployment should be verified after push so the live HTML route can be checked on real mobile devices and CDN/cache behavior.
 - Extended ecosystem mapping remains future work and should proceed only after official-source review.
 
-**GAIC-R3D-3 Status:** ✓ RESPONSIVE HTML WEB EDITION COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING
+Production verification completed:
+
+- GAIC hub, responsive HTML, PDF, DOCX, and checksums returned HTTP 200.
+- Production HTML includes the responsive web-edition nav and checksum file includes the responsive HTML hash.
+- Production mobile QA passed at 375px and 390px; tablet and desktop sanity checks passed.
+- No body-level horizontal overflow, console errors, warnings, or runtime exceptions found in live checks.
+- Production HTML/PDF/DOCX/log hashes match expected public/sealed hashes.
+
+**GAIC-R3D-3 Status:** ✓ LIVE MOBILE VERIFIED / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING

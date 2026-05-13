@@ -2889,3 +2889,28 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - R3E remains present on `main`; R3D-3 closes the later-discovered publication usability blocker before future extended ecosystem mapping.
 
 **GAIC-R3D-3 Status:** ✓ RESPONSIVE HTML WEB EDITION COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.
+
+## GAIC-R3D-3 Live Mobile Verification Notes (May 13, 2026)
+
+**Scope:** Verify that the responsive public HTML web edition deployed to production and is readable on mobile.
+
+**Actions completed:**
+
+1. Confirmed local and origin `main` both point to `0f01fbe146e6aa2a33df9f22bed1d323614cec86`.
+2. Verified production HTTP 200 for the GAIC hub, responsive HTML web edition, PDF, DOCX, and `checksums.sha256`.
+3. Verified the production GAIC hub links to HTML/PDF/DOCX artifacts and labels HTML as the responsive web-reading edition.
+4. Verified production HTML includes `.web-edition-nav`, `Back to white paper hub`, and responsive web-reading edition language.
+5. Verified production `checksums.sha256` includes the responsive public HTML checksum `e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c`.
+6. Downloaded production HTML/PDF/DOCX/generation-log artifacts and verified hashes against expected public/sealed hashes.
+7. Ran Chrome headless production mobile QA at 375px and 390px, tablet QA at 768px, and desktop sanity QA at 1440px.
+8. Captured production screenshots for mobile cover, mobile TOC, mobile dense table, mobile figure/chart, mobile code/template block, tablet cover, and desktop sanity under `reports/r3d3-live-screens/`.
+9. Confirmed no body-level horizontal overflow and no console errors/warnings/runtime exceptions in the live browser checks.
+
+**Boundary discipline:**
+
+- Verification-only wave.
+- No sealed white paper artifact changed.
+- No white paper prose, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No new route, vendor mapping, ranking, procurement recommendation, certification, legal compliance proof, regulator approval, MPLP overclaim, or WP2/WP3 content introduced.
+
+**GAIC-R3D-3 Live Mobile Verification Status:** ✓ LIVE MOBILE VERIFIED / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.
