@@ -19,6 +19,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
 - Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
+- GAIC-Cited Systems: source-qualified, non-ranking lifecycle governance mappings for systems discussed in the Global AI Compliance White Paper 2026.
 
 Execution is not Delivery.
 
@@ -73,6 +74,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   DOCX derivative: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.docx
   Manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
   Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
+- Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
+  GAIC-cited systems layer for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI. Source-qualified, provisional, non-ranking, non-procurement, and not official vendor documentation.
 
 ## Core Concepts
 

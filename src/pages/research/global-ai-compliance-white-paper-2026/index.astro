@@ -11,6 +11,7 @@ const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-pa
 const docxUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.docx`;
 const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
+const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
 const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Responsibility. v0.3.2 Public Edition. JearonWong.com, 2026.";
 const metaDescription = "A 2026 white paper by Jearon Wong defining Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.";
 const shaRows = [
@@ -37,6 +38,7 @@ const keyConcepts = [
 ];
 const internalLinks = [
   { href: "/about/", label: "About Jearon Wong" },
+  { href: systemsPath, label: "Systems discussed in the white paper" },
   { href: "/concepts/map/", label: "Concepts Map / Entity Mesh" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance Concept Core" },
   { href: "/playbooks/", label: "Applied governance playbooks" },
@@ -302,6 +304,28 @@ const definedTermSetJsonLd = {
             It is not legal advice, legal compliance proof, certification, regulator-approved benchmark,
             vendor ranking, or procurement recommendation.
           </p>
+        </div>
+      </section>
+
+      <section class="release-section release-grid" aria-labelledby="systems-title">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">SYSTEMS</span>: <span class="registry-value">SOURCE_QUALIFIED</span>
+          </div>
+          <h2 id="systems-title">Systems and frameworks discussed.</h2>
+          <p class="section-lead">
+            The white paper discusses selected platforms, frameworks, and protocol paths as part of a
+            lifecycle responsibility analysis. The systems layer is source-qualified, provisional,
+            non-ranking, and not procurement guidance.
+          </p>
+        </div>
+        <div class="systems-link-panel">
+          <p>
+            Open the GAIC-cited systems layer for mappings to MPLP, IBM watsonx.governance,
+            Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK
+            + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI.
+          </p>
+          <a href={systemsPath} class="section-side-link">Open systems index</a>
         </div>
       </section>
 
@@ -595,6 +619,22 @@ const definedTermSetJsonLd = {
     border: 1px solid var(--current-border);
     background: #111111;
     color: var(--text-registry-primary);
+  }
+
+  .systems-link-panel {
+    display: grid;
+    gap: 1rem;
+    padding: var(--registry-card-padding);
+    border: 1px solid var(--current-border);
+    border-left: 3px solid var(--accent-proof);
+    background: var(--current-surface);
+  }
+
+  .systems-link-panel p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .boundary-panel strong {

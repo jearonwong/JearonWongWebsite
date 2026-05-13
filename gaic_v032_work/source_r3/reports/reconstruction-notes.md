@@ -2828,3 +2828,30 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 8. Captured production homepage screenshot at `reports/gaic-r3d2-live-homepage-panel.png`.
 
 **GAIC-R3D-2 Live Verification Status:** ✓ LIVE DEPLOYMENT VERIFIED / READY FOR GAIC-CITED SYSTEMS SEMANTIC MAPPING.
+
+## GAIC-R3E Notes (May 13, 2026)
+
+**Scope:** Create the GAIC-Cited Systems Semantic Mapping Layer from systems already discussed, evaluated, or cited in the sealed Global AI Compliance White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `359fc051077ef6f0905e60268f702dbbd061c7a5` before R3E edits.
+2. Extracted the first-layer system set from GAIC source master, publication manifest notes, Chapter 12 / Chapter 13 / Appendix G table records, Phase 1D-12 score evidence integrity, and evaluation QA reports.
+3. Created `src/data/gaicSystems.ts` as the source-qualified public mapping registry for the eight systems.
+4. Created `/research/global-ai-compliance-white-paper-2026/systems/` as the Systems Discussed in the Global AI Compliance White Paper 2026 index.
+5. Created eight detail routes under `/research/global-ai-compliance-white-paper-2026/systems/{slug}/` for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI.
+6. Added source-qualified, provisional, non-ranking, non-procurement boundary language to the systems index and detail pages.
+7. Added metadata and JSON-LD for systems index and detail pages using CollectionPage/ItemList/DefinedTermSet/WebPage/TechArticle/BreadcrumbList patterns.
+8. Updated the GAIC white paper hub, Concepts Map, Concept Core, Playbooks index, sitewide schema terms, and `public/llms.txt` to connect the systems layer.
+9. Ran typecheck, lint, build, `git diff --check`, sitemap checks, built HTML metadata/JSON-LD checks, sealed artifact hash verification, boundary grep, and local browser smoke tests.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No vendor ranking, procurement recommendation, certification, legal compliance proof, regulator approval, vendor endorsement, vendor affiliation, product defect claim, fake external citation, search ranking claim, answer-engine pickup claim, or unsupported current vendor feature claim introduced.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
+- WP2/WP3 content was not created.
+- Extended ecosystem mapping for systems outside the GAIC-cited first layer was not started.
+
+**GAIC-R3E Status:** ✓ GAIC-CITED SYSTEMS SEMANTIC MAPPING LAYER COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.

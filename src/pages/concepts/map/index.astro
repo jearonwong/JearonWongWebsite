@@ -68,6 +68,13 @@ const mapNodes = [
     description: "The public research authority source for MRO, RCCS-M, ALCS, and lifecycle responsibility governance."
   },
   {
+    id: "gaic-cited-systems",
+    label: "Systems Discussed in GAIC",
+    layer: "Authority Source",
+    href: "/research/global-ai-compliance-white-paper-2026/systems/",
+    description: "Source-qualified, non-ranking lifecycle governance mappings for systems discussed in the white paper."
+  },
+  {
     id: "mro",
     label: "Missing Regulatory Objects",
     layer: "Governance Object Layer",
@@ -165,6 +172,12 @@ const relationGroups = [
     body: "The governance object layer names the missing lifecycle objects and the analytical models used to assess them."
   },
   {
+    name: "GAIC-Cited Systems",
+    relation: "Global AI Compliance White Paper 2026 -> Systems Discussed in GAIC",
+    nodes: ["Global AI Compliance White Paper 2026", "Systems Discussed in GAIC"],
+    body: "The systems layer exposes source-qualified semantic anchors for systems already discussed in the white paper. It is not vendor ranking or procurement guidance."
+  },
+  {
     name: "Protocol Path",
     relation: "Missing Regulatory Objects / Lifecycle Responsibility Objects -> MPLP",
     nodes: ["Missing Regulatory Objects", "Lifecycle Responsibility Objects", "MPLP"],
@@ -185,6 +198,7 @@ const relationGroups = [
 ];
 const primaryLinks = [
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
+  { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Concept Core" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
@@ -197,6 +211,7 @@ const semanticChain = [
   { href: "/about/", label: "Protocol Architect for the Agent Era" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
@@ -346,6 +361,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           </div>
           <div class="mesh-row mesh-row--authority">
             <a href="/research/global-ai-compliance-white-paper-2026/" class="mesh-node mesh-node--authority">Global AI Compliance White Paper 2026</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/research/global-ai-compliance-white-paper-2026/systems/" class="mesh-node mesh-node--authority">Systems Discussed in GAIC</a>
           </div>
           <div class="mesh-row mesh-row--governance">
             <a href="/concepts/missing-regulatory-objects/" class="mesh-node mesh-node--strong">Missing Regulatory Objects</a>

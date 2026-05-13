@@ -1,0 +1,427 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../../../components/RegistryPageHero.astro";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../../../data/schema";
+import { gaicSystems, getGAICSystemBySlug } from "../../../../data/gaicSystems";
+import { siteConfig } from "../../../../data/site";
+
+export function getStaticPaths() {
+  return gaicSystems.map((system) => ({
+    params: { slug: system.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const system = slug ? getGAICSystemBySlug(slug) : undefined;
+
+if (!system) {
+  throw new Error(`Unknown GAIC-cited system: ${slug}`);
+}
+
+const systemsIndexPath = "/research/global-ai-compliance-white-paper-2026/systems/";
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const canonicalPath = `${systemsIndexPath}${system.slug}/`;
+const pageUrl = absoluteUrl(canonicalPath);
+const metaDescription = `${system.name} mapped through the Global AI Compliance White Paper 2026 lifecycle governance lens: source-qualified, provisional, non-ranking, and non-procurement.`;
+const relatedLinks = [
+  { href: whitePaperHub, label: "GAIC white paper hub" },
+  { href: systemsIndexPath, label: "Systems index" },
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+  { href: "/concepts/rccs-m/", label: "RCCS-M" },
+  { href: "/concepts/alcs/", label: "ALCS" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+  { href: "/concepts/map/", label: "Concepts Map" },
+  { href: "/playbooks/", label: "Applied Playbooks" },
+  { href: "/projects/mplp/", label: "MPLP protocol path" }
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: `${system.name} in the Global AI Compliance White Paper 2026`,
+  description: metaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  citation: absoluteUrl(whitePaperHub),
+  mainEntity: {
+    "@id": `${pageUrl}#mapping`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  }
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#mapping`,
+  headline: `${system.name}: lifecycle governance mapping`,
+  description: metaDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-13",
+  dateModified: "2026-05-13",
+  keywords: system.keywords,
+  about: system.keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  mentions: [
+    {
+      "@type": "Thing",
+      name: system.name
+    },
+    {
+      "@type": "Thing",
+      name: "Global AI Compliance White Paper 2026"
+    },
+    {
+      "@type": "Thing",
+      name: "Agentic Lifecycle Governance"
+    },
+    {
+      "@type": "Thing",
+      name: "Missing Regulatory Objects"
+    },
+    {
+      "@type": "Thing",
+      name: "RCCS-M"
+    },
+    {
+      "@type": "Thing",
+      name: "ALCS"
+    }
+  ],
+  isBasedOn: {
+    "@type": "TechArticle",
+    name: "Global AI Compliance White Paper 2026",
+    url: absoluteUrl(whitePaperHub)
+  },
+  isPartOf: {
+    "@type": "CollectionPage",
+    name: "Systems Discussed in the Global AI Compliance White Paper 2026",
+    url: absoluteUrl(systemsIndexPath)
+  }
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Research", path: "/research/" },
+  { name: "Global AI Compliance White Paper 2026", path: whitePaperHub },
+  { name: "Systems Discussed", path: systemsIndexPath },
+  { name: system.name, path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title={`${system.name} | GAIC-Cited System Mapping`}
+  description={metaDescription}
+  shareTitle={`${system.name} in GAIC 2026`}
+  shareDescription={metaDescription}
+  twitterTitle={`${system.name} in GAIC 2026`}
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  ogType="article"
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
+  keywords={system.keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt={`${system.name} lifecycle governance mapping in GAIC 2026`}
+>
+  <RegistryPageHero
+    title={system.name}
+    objectType="GAIC_CITED_SYSTEM"
+    objectValue={system.category.toUpperCase()}
+    lead={system.summary}
+  >
+    <div class="system-hero-links">
+      <a href={systemsIndexPath} class="registry-annotation system-hero-link">
+        <span class="registry-key">BACK_TO</span>: <span class="registry-value">SYSTEMS INDEX</span>
+      </a>
+      <a href={whitePaperHub} class="registry-annotation system-hero-link">
+        <span class="registry-key">SOURCE</span>: <span class="registry-value">GAIC WHITE PAPER</span>
+      </a>
+      <a href="/concepts/agentic-lifecycle-governance/" class="registry-annotation system-hero-link">
+        <span class="registry-key">LENS</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <article class="shell system-detail-shell">
+      <aside class="registry-chassis system-sidebar" aria-label={`${system.name} source record`}>
+        <div class="registry-annotation">
+          <span class="registry-key">SOURCE_QUALIFIED</span>
+        </div>
+        <p class="sidebar-title">{system.name}</p>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Category</p>
+          <p>{system.category}</p>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">GAIC source tables</p>
+          <div class="tag-list">
+            {system.tableReferences.map((reference) => <span>{reference}</span>)}
+          </div>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Source basis</p>
+          <p>{system.sourceBasis}</p>
+        </div>
+      </aside>
+
+      <div class="system-article">
+        <section class="registry-chassis boundary-note" aria-labelledby="boundary-title">
+          <div class="registry-annotation">
+            <span class="registry-key">BOUNDARY_NOTE</span>
+          </div>
+          <h2 id="boundary-title">Source-qualified lifecycle governance lens.</h2>
+          <p>
+            This page summarizes how the Global AI Compliance White Paper 2026 discusses this system
+            through a lifecycle governance lens. It is not official vendor documentation, endorsement,
+            certification, legal advice, procurement recommendation, or a vendor ranking.
+          </p>
+        </section>
+
+        <section class="system-section">
+          <h2>System context in the white paper</h2>
+          <p>{system.detailContext}</p>
+          <p>{system.whitePaperContext}</p>
+          <p class="source-caveat">{system.caveat}</p>
+        </section>
+
+        <section class="system-section">
+          <h2>Lifecycle governance questions</h2>
+          <ol class="question-list">
+            {system.lifecycleQuestions.map((question) => (
+              <li>{question}</li>
+            ))}
+          </ol>
+        </section>
+
+        <section class="system-section">
+          <h2>Related Missing Regulatory Objects</h2>
+          <p>
+            These concepts are used as governance lenses. This page does not claim that the system
+            has or lacks a feature unless that claim is source-supported by the GAIC source layer.
+          </p>
+          <div class="mro-list">
+            {system.relatedMros.map((item) => <span>{item}</span>)}
+          </div>
+        </section>
+
+        <section class="system-section">
+          <h2>RCCS-M / ALCS relevance</h2>
+          <p>{system.rccsAlcsRelevance}</p>
+          <p>
+            This is author-analytical and source-qualified. It should not be read as a final product
+            maturity judgment, legal compliance proof, certification, or procurement recommendation.
+          </p>
+        </section>
+
+        <section class="system-section">
+          <h2>Protocol path</h2>
+          <p>{system.protocolPath}</p>
+        </section>
+
+        <section class="relation-grid" aria-label={`${system.name} related links`}>
+          <article class="registry-chassis relation-panel">
+            <div class="registry-annotation">
+              <span class="registry-key">RELATED_LINKS</span>
+            </div>
+            <h2>Related source and concept routes</h2>
+            <div class="term-link-grid">
+              {relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          </article>
+        </section>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .system-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .system-hero-link {
+    text-decoration: none;
+  }
+
+  .system-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .system-detail-shell {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1120px;
+  }
+
+  .system-sidebar {
+    position: sticky;
+    top: 7rem;
+    display: grid;
+    gap: 1.3rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .sidebar-title {
+    margin: 0;
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 760;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  .sidebar-group {
+    display: grid;
+    gap: 0.45rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .sidebar-label {
+    margin: 0;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-group p:not(.sidebar-label) {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .tag-list,
+  .mro-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .tag-list span,
+  .mro-list span {
+    padding: 0.38rem 0.5rem;
+    border: 1px solid var(--current-border);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .system-article {
+    display: grid;
+    gap: var(--space-5);
+    min-width: 0;
+  }
+
+  .boundary-note,
+  .relation-panel {
+    padding: var(--registry-panel-padding);
+  }
+
+  .boundary-note {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  .boundary-note h2,
+  .system-section h2,
+  .relation-panel h2 {
+    margin: 0.85rem 0 0;
+    color: var(--current-text);
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+
+  .boundary-note p,
+  .system-section p {
+    max-width: var(--content-measure);
+    margin: 0.9rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .system-section {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .source-caveat {
+    padding: 1rem 1.1rem;
+    border-left: 3px solid var(--accent-proof);
+    background: var(--current-surface);
+    color: var(--current-text) !important;
+  }
+
+  .question-list {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding-left: 1.4rem;
+    color: var(--current-muted);
+  }
+
+  .question-list li {
+    padding-left: 0.35rem;
+    line-height: 1.62;
+  }
+
+  .term-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 1.2rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .term-link-grid a {
+    padding: 0.8rem 0.85rem 0.8rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .term-link-grid a:hover {
+    color: var(--accent-signal);
+  }
+
+  @media (max-width: 900px) {
+    .system-detail-shell,
+    .term-link-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .system-sidebar {
+      position: static;
+    }
+  }
+</style>
