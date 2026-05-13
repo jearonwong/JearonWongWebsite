@@ -2,9 +2,39 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { pageRegistry, socialLinks, siteConfig } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+
+const canonicalPath = "/contact/";
+const contactUrl = absoluteUrl(canonicalPath);
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "ContactPage"],
+  "@id": `${contactUrl}#webpage`,
+  url: contactUrl,
+  name: pageRegistry.contact.title,
+  description: pageRegistry.contact.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  breadcrumb: {
+    "@id": `${contactUrl}#breadcrumb`
+  }
+};
+const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
+  { name: "Home", path: "/" },
+  { name: "Contact", path: canonicalPath }
+]);
 ---
 
-<BaseLayout title="Contact" description={pageRegistry.contact.lead}>
+<BaseLayout
+  title="Contact"
+  description={pageRegistry.contact.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[contactPageJsonLd, contactBreadcrumbJsonLd]}
+>
   <RegistryPageHero
     title={pageRegistry.contact.title}
     objectType={pageRegistry.contact.objectType}

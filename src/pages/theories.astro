@@ -2,10 +2,56 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
-import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, theoryClusters } from "../data/site";
+import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, siteConfig, theoryClusters } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+
+const canonicalPath = "/theories/";
+const theoriesUrl = absoluteUrl(canonicalPath);
+const ideasCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${theoriesUrl}#webpage`,
+  url: theoriesUrl,
+  name: pageRegistry.ideas.title,
+  description: pageRegistry.ideas.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${theoriesUrl}#item-list`
+  },
+  breadcrumb: {
+    "@id": `${theoriesUrl}#breadcrumb`
+  }
+};
+const ideasItemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${theoriesUrl}#item-list`,
+  name: "Ideas and Theory Clusters",
+  description: pageRegistry.ideas.lead,
+  itemListElement: theoryClusters.map((cluster, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: cluster.name,
+    item: `${theoriesUrl}#${cluster.slug}`
+  }))
+};
+const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
+  { name: "Home", path: "/" },
+  { name: "Ideas", path: canonicalPath }
+]);
 ---
 
-<BaseLayout title="Ideas" description={pageRegistry.ideas.lead} canonicalPath="/theories/">
+<BaseLayout
+  title="Ideas"
+  description={pageRegistry.ideas.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[ideasCollectionJsonLd, ideasItemListJsonLd, ideasBreadcrumbJsonLd]}
+>
   <RegistryPageHero
     title={pageRegistry.ideas.title}
     objectType={pageRegistry.ideas.objectType}

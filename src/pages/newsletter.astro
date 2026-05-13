@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
 const essays = await getCollection("essays");
 const lifecycleEssays = essays
@@ -11,9 +12,45 @@ const lifecycleEssays = essays
 const latestEssay = lifecycleEssays[0] ?? essays.find((essay) => essay.slug === aiAgentLifecycleColumn.firstPublishedEssay.slug);
 const latestEssayCover = latestEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
 const latestEssayCoverAlt = latestEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
+const canonicalPath = "/newsletter/";
+const newsletterUrl = absoluteUrl(canonicalPath);
+const newsletterPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${newsletterUrl}#webpage`,
+  url: newsletterUrl,
+  name: pageRegistry.newsletter.title,
+  description: pageRegistry.newsletter.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  about: newsletterPromise.topics.map((topic) => ({
+    "@type": "Thing",
+    name: topic
+  })),
+  breadcrumb: {
+    "@id": `${newsletterUrl}#breadcrumb`
+  },
+  potentialAction: {
+    "@type": "SubscribeAction",
+    target: siteConfig.newsletterEndpoint
+  }
+};
+const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
+  { name: "Home", path: "/" },
+  { name: "Newsletter", path: canonicalPath }
+]);
 ---
 
-<BaseLayout title="Newsletter" description={pageRegistry.newsletter.lead}>
+<BaseLayout
+  title="Newsletter"
+  description={pageRegistry.newsletter.lead}
+  canonicalPath={canonicalPath}
+  jsonLd={[newsletterPageJsonLd, newsletterBreadcrumbJsonLd]}
+>
   <RegistryPageHero
     title={pageRegistry.newsletter.title}
     objectType={pageRegistry.newsletter.objectType}

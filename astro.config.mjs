@@ -7,6 +7,9 @@ export default defineConfig({
   trailingSlash: "always",
   integrations: [
     sitemap({
+      customPages: [
+        "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html"
+      ],
       filter: (page) =>
         !page.endsWith("/theory-clusters/") &&
         !page.endsWith("/theory-clusters")

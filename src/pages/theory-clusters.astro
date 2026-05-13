@@ -1,14 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { pageRegistry } from "../data/site";
+import { pageRegistry, siteConfig } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+
+const canonicalPath = "/theories/";
+const canonicalUrl = absoluteUrl(canonicalPath);
+const legacyPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#legacy-compatibility`,
+  url: canonicalUrl,
+  name: pageRegistry.ideasLegacy.title,
+  description: pageRegistry.ideasLegacy.lead,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntityOfPage: {
+    "@id": `${canonicalUrl}#webpage`
+  }
+};
+const legacyBreadcrumbJsonLd = createBreadcrumbJsonLd(canonicalUrl, [
+  { name: "Home", path: "/" },
+  { name: "Ideas", path: canonicalPath }
+]);
 ---
 
 <BaseLayout
   title="Ideas"
   description="Compatibility route retained for older links. The canonical ideas route is /theories."
-  canonicalPath="/theories/"
+  canonicalPath={canonicalPath}
   noindex={true}
+  jsonLd={[legacyPageJsonLd, legacyBreadcrumbJsonLd]}
 >
   <RegistryPageHero
     title={pageRegistry.ideasLegacy.title}

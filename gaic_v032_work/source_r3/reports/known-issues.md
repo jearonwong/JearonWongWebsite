@@ -2221,3 +2221,39 @@ Remaining work:
 - Primary Semantic Source Monitoring Ops remains future work.
 
 **GAIC-R3H Status:** ✓ REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS
+
+---
+
+## GAIC-R3H-0 Known Issues
+
+### Sitewide Schema / JSON-LD Coverage Complete
+
+R3H-0 reconciles sitewide Schema.org and JSON-LD coverage before starting Primary Semantic Source Monitoring Ops.
+
+Validation scope:
+
+- 89 public HTML pages were inventoried from `dist/`.
+- Every public HTML page has title, meta description, canonical, robots, and parseable JSON-LD.
+- 466 JSON-LD blocks parsed without errors.
+- Homepage, `/concepts/`, and `/concepts/map/` source/build/live checks did not reproduce the external audit's missing metadata or missing JSON-LD findings.
+- Concepts Map visual rendering can remain a crawler-extraction limitation, but the text fallback, links, and JSON-LD entity mesh are server-rendered.
+- Standalone responsive white paper HTML now includes safe metadata, canonical, robots, WebSite, Person, WebPage, TechArticle, and BreadcrumbList JSON-LD.
+- The standalone white paper HTML URL is included in the generated sitemap as a custom page.
+- Supporting pages with thin page-level schema were repaired: Contact, Newsletter, Ideas, legacy Ideas compatibility, and Definitions.
+
+Artifact discipline:
+
+- Public responsive HTML checksum changed to `2693eb11826e9930e7c2d0587a67d5e2aada3c5999fadce4c70e1e0d9f9cfb06` because the public web-reading edition received metadata/schema head additions.
+- Sealed publication candidate HTML remains `0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af`.
+- Public PDF, DOCX, generation log, manifest, and seal report hashes remain unchanged.
+- White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, and MPLP boundaries remain unchanged.
+
+Boundary discipline:
+
+- No legal advice, legal compliance proof, certification, regulator approval, officially compliant claim, vendor ranking, procurement recommendation, guaranteed delivery, deterministic LLM output claim, vendor endorsement, or MPLP required/industry-standard claim was introduced in metadata or schema.
+
+Remaining work:
+
+- Primary Semantic Source Monitoring Ops remains future work.
+
+**GAIC-R3H-0 Status:** ✓ SITEWIDE SCHEMA AND JSON-LD COVERAGE COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS

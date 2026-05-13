@@ -20,8 +20,8 @@ The public HTML file at:
 
 `public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html`
 
-was updated as a responsive web-reading edition derived from the sealed content. The update adds screen-only responsive CSS, a minimal return-to-hub navigation strip, mobile table/figure handling, and mobile readability improvements. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or PDF/DOCX artifacts.
+was updated as a responsive web-reading edition derived from the sealed content. The update adds screen-only responsive CSS, a minimal return-to-hub navigation strip, mobile table/figure handling, mobile readability improvements, and safe page-level metadata/JSON-LD for crawler-visible Schema.org coverage. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or PDF/DOCX artifacts.
 
 Responsive public HTML web edition hash:
 
-`e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c`
+`2693eb11826e9930e7c2d0587a67d5e2aada3c5999fadce4c70e1e0d9f9cfb06`

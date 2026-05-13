@@ -2990,3 +2990,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
 
 **GAIC-R3H Status:** ✓ REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS.
+
+## GAIC-R3H-0 Notes (May 13, 2026)
+
+**Scope:** Sitewide Schema / JSON-LD Coverage + External Audit Reconciliation.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `de97ecc861476b20e11ce3c20223770c6e78fe53` before R3H-0 edits.
+2. Built the site and inventoried 89 generated public HTML pages, including the standalone responsive white paper HTML asset.
+3. Defined route-family schema expectations for homepage, About, Concepts, Concepts Map, Research, GAIC hub, GAIC systems, Essays, Projects, Playbooks, Extended Ecosystem, Governance, and standalone white paper HTML.
+4. Parsed 466 JSON-LD blocks across the public HTML inventory with no JSON parse errors and no canonical/JSON-LD URL conflicts.
+5. Reconciled the 2026-05-13 external SEO/GEO audit findings for homepage, `/concepts/`, and `/concepts/map/`; missing metadata and JSON-LD findings were not reproduced in source, build, or production HTML.
+6. Documented the Concepts Map visual layer as a possible crawler-extraction limitation while verifying server-rendered text fallback, links, and JSON-LD entity mesh.
+7. Added page-level JSON-LD to Contact, Newsletter, Ideas, legacy Ideas compatibility, and Definitions pages.
+8. Added metadata, canonical, robots, baseline WebSite/Person JSON-LD, WebPage JSON-LD, TechArticle JSON-LD, and BreadcrumbList JSON-LD to the standalone responsive white paper HTML web edition.
+9. Added the standalone responsive white paper HTML URL to the generated sitemap as a custom page.
+10. Updated the public checksum file, GAIC hub checksum display, and responsive HTML web edition note for the new public HTML checksum `2693eb11826e9930e7c2d0587a67d5e2aada3c5999fadce4c70e1e0d9f9cfb06`.
+
+**Artifact discipline:**
+
+- The public responsive HTML web-reading edition changed only in metadata/schema head material and sitemap exposure.
+- Sealed publication candidate HTML remains `0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af`.
+- Public PDF, DOCX, generation log, manifest, and seal report hashes remain unchanged.
+- No white paper prose, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+
+**Boundary discipline:**
+
+- No legal advice, legal compliance proof, certification, regulator approval, officially compliant claim, vendor ranking, procurement recommendation, guaranteed delivery, deterministic LLM output claim, vendor endorsement, fake external citation, search ranking claim, MPLP overclaim, or WP2/WP3 content introduced.
+- Schema reflects visible page content and does not add hidden claims.
+
+**GAIC-R3H-0 Status:** ✓ SITEWIDE SCHEMA AND JSON-LD COVERAGE COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS.
