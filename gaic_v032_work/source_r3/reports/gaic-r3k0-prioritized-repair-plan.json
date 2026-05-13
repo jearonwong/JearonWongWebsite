@@ -1,0 +1,1476 @@
+{
+  "generated": "2026-05-14",
+  "counts": {
+    "totalRepairCandidates": 75,
+    "priorityCounts": {
+      "P0": 10,
+      "P1": 46,
+      "P2": 19
+    },
+    "r3k1Candidates": 56
+  },
+  "repairs": [
+    {
+      "route": "/ai-agent-governance/",
+      "sourceFile": "src/pages/ai-agent-governance.astro",
+      "issue": "Multiple public routes can appear canonical for the same or adjacent concept; R3K-1 should clarify canonical hierarchy and cross-links.",
+      "requiredSourceAnchors": [
+        "ALG-CH2",
+        "MODEL-CH3",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add canonical hierarchy note",
+        "Add links to preferred canonical concept/governance route",
+        "Avoid duplicate metadata claims"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Canonical dilution and answer-engine confusion around preferred source route.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "duplicate-risk"
+    },
+    {
+      "route": "/concepts/accepted-outcome/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-04",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/agent-architecture-governance/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "FAILURE-CH15"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/agentic-delivery/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/ai-agent-governance/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Multiple public routes can appear canonical for the same or adjacent concept; R3K-1 should clarify canonical hierarchy and cross-links.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add canonical hierarchy note",
+        "Add links to preferred canonical concept/governance route",
+        "Avoid duplicate metadata claims"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Canonical dilution and answer-engine confusion around preferred source route.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "duplicate-risk"
+    },
+    {
+      "route": "/concepts/ai-agent-lifecycle/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/alcs/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "ALCS-CH8",
+        "RCCSM-CH7",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/authority-boundary/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-02",
+        "MRO-07",
+        "MRO-CH6"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/configurable-agent-governance/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-02",
+        "SUBSTITUTION-MRO15",
+        "ALCS-CH8"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/confirmation-boundary/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/context-drift/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/deterministic-delivery/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "CLOSURE-MRO16",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/intent-drift/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/lifecycle-evidence/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-08",
+        "VALIDATION-CH14",
+        "PRIVACY-MRO"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/lifecycle-governed-agent-workflow/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/lifecycle-responsibility-objects/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/lifecycle-role-decomposition/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/missing-regulatory-objects/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "OBJECTS-CH5",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/protocol-engineering/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Strong site thesis/proof-path page but GAIC relation can drift if treated as white-paper source rather than adjacent supporting route.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add GAIC relation boundary",
+        "Add source anchors without changing page thesis",
+        "Clarify MPLP/Validation Lab are proof paths, not certification"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Proof-path or thesis pages may be read as stronger GAIC claims than intended.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "drift-risk"
+    },
+    {
+      "route": "/concepts/rccs-m/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "RCCSM-CH7",
+        "RCCST-CH7",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/rollbackable-agent-workflows/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-16",
+        "FAILURE-CH15",
+        "ALCS-CH8",
+        "CLOSURE-MRO16"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/concepts/verifiable-ai-agents/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "VALIDATION-CH14",
+        "MRO-08",
+        "ALCS-CH8"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/definitions/",
+      "sourceFile": "src/pages/definitions.astro + src/data/definitions.ts",
+      "issue": "Multiple public routes can appear canonical for the same or adjacent concept; R3K-1 should clarify canonical hierarchy and cross-links.",
+      "requiredSourceAnchors": [
+        "ALG-CH2",
+        "MODEL-CH3",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add canonical hierarchy note",
+        "Add links to preferred canonical concept/governance route",
+        "Avoid duplicate metadata claims"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Canonical dilution and answer-engine confusion around preferred source route.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "duplicate-risk"
+    },
+    {
+      "route": "/delivery-standard/",
+      "sourceFile": "src/pages/delivery-standard.astro + src/data/site.ts",
+      "issue": "Strong site thesis/proof-path page but GAIC relation can drift if treated as white-paper source rather than adjacent supporting route.",
+      "requiredSourceAnchors": [
+        "ALG-CH2",
+        "MODEL-CH3",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add GAIC relation boundary",
+        "Add source anchors without changing page thesis",
+        "Clarify MPLP/Validation Lab are proof paths, not certification"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Proof-path or thesis pages may be read as stronger GAIC claims than intended.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "drift-risk"
+    },
+    {
+      "route": "/essays/agent-orchestration-is-not-delivery/",
+      "sourceFile": "src/pages/essays/[slug].astro + src/content/essays/agent-orchestration-is-not-delivery.md",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/essays/agentic-ai-inflection-point-project-delivery/",
+      "sourceFile": "src/pages/essays/[slug].astro + src/content/essays/agentic-ai-inflection-point-project-delivery.md",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+      "sourceFile": "src/pages/essays/[slug].astro + src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
+      "sourceFile": "src/pages/essays/[slug].astro + src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/essays/the-industry-misdefined-multi-agent-ai/",
+      "sourceFile": "src/pages/essays/[slug].astro + src/content/essays/the-industry-misdefined-multi-agent-ai.md",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/governance/ai-agent-compliance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/ai-agent-evidence-retention/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/ai-agent-governance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Multiple public routes can appear canonical for the same or adjacent concept; R3K-1 should clarify canonical hierarchy and cross-links.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add canonical hierarchy note",
+        "Add links to preferred canonical concept/governance route",
+        "Avoid duplicate metadata claims"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Canonical dilution and answer-engine confusion around preferred source route.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "duplicate-risk"
+    },
+    {
+      "route": "/governance/enterprise-agent-governance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/eu-ai-act-agentic-systems/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/gdpr-agentic-ai-evidence/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "PRIVACY-MRO"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/human-role-responsibility-mapping/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "ROLE-MRO01"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/incident-dispute-remediation-closure/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "CLOSURE-MRO16",
+        "FAILURE-CH15"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/iso-42001-agentic-ai/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/multi-agent-system-governance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/nist-ai-rmf-agentic-lifecycle/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/governance/vendor-runtime-substitution-conformance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "SUBSTITUTION-MRO15"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/lifecycle/",
+      "sourceFile": "src/pages/lifecycle.astro + src/data/site.ts",
+      "issue": "Strong site thesis/proof-path page but GAIC relation can drift if treated as white-paper source rather than adjacent supporting route.",
+      "requiredSourceAnchors": [
+        "ALG-CH2",
+        "MODEL-CH3",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add GAIC relation boundary",
+        "Add source anchors without changing page thesis",
+        "Clarify MPLP/Validation Lab are proof paths, not certification"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Proof-path or thesis pages may be read as stronger GAIC claims than intended.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "drift-risk"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/a2a/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/autogen/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/claude-code/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/cursor-ai-coding-agents/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "VALIDATION-CH14",
+        "CLOSURE-MRO16"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/index.astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/mcp/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/qwen/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/semantic-kernel/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "issue": "Extended ecosystem mapping is source-qualified but not GAIC-scored; needs explicit anchor to white paper concepts and exploratory/non-scored boundary.",
+      "requiredSourceAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "External ecosystem pages may look like GAIC-scored assessments rather than source-qualified adjacent mappings.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "unsupported-extension"
+    },
+    {
+      "route": "/playbooks/agentic-delivery-architecture-checklist/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/ai-agent-rollback-verification/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "CLOSURE-MRO16",
+        "FAILURE-CH15",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/ai-coding-agent-auditability/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM",
+        "VALIDATION-CH14",
+        "CLOSURE-MRO16"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/anthropic-agent-governance/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/deepseek-agent-governance/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/harness-engineering-for-ai-agents/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM",
+        "OBJECTS-CH5"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/human-role-to-mas-responsibility/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "ROLE-MRO01",
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/",
+      "sourceFile": "src/pages/playbooks/index.astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/kimi-agent-governance/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/openai-agent-governance/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/playbooks/prompt-engineering-vs-harness-engineering/",
+      "sourceFile": "src/pages/playbooks/[slug].astro + src/data/site.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "MRO-CH6",
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "BOUNDARY-FM",
+        "OBJECTS-CH5"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/projects/",
+      "sourceFile": "src/pages/projects.astro + src/data/site.ts",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/projects/mplp/",
+      "sourceFile": "src/pages/projects/[slug].astro + src/data/site.ts",
+      "issue": "Strong site thesis/proof-path page but GAIC relation can drift if treated as white-paper source rather than adjacent supporting route.",
+      "requiredSourceAnchors": [
+        "MPLP-CH13",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add GAIC relation boundary",
+        "Add source anchors without changing page thesis",
+        "Clarify MPLP/Validation Lab are proof paths, not certification"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Proof-path or thesis pages may be read as stronger GAIC claims than intended.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "drift-risk"
+    },
+    {
+      "route": "/projects/validation-lab/",
+      "sourceFile": "src/pages/projects/[slug].astro + src/data/site.ts",
+      "issue": "Strong site thesis/proof-path page but GAIC relation can drift if treated as white-paper source rather than adjacent supporting route.",
+      "requiredSourceAnchors": [
+        "VALIDATION-CH14",
+        "MRO-08",
+        "MRO-11",
+        "MRO-12",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add GAIC relation boundary",
+        "Add source anchors without changing page thesis",
+        "Clarify MPLP/Validation Lab are proof paths, not certification"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Proof-path or thesis pages may be read as stronger GAIC claims than intended.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "drift-risk"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/aws-bedrock-agentcore/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/crewai/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/google-vertex-ai-adk/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/ibm-watsonx-governance/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/langgraph-langsmith/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/microsoft-azure-ai-foundry/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/mplp/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM",
+        "MPLP-CH13"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/openai-agents-sdk/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "issue": "Content is adequate, but chapter/table/MRO source trace should be made more explicit before major external launch.",
+      "requiredSourceAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Semantic authority remains broad but weaker because source trace is implicit.",
+      "wave": "R3K-1",
+      "priority": "P1",
+      "classification": "sufficient but needs source anchors"
+    },
+    {
+      "route": "/research/",
+      "sourceFile": "src/pages/research/index.astro",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/theories/",
+      "sourceFile": "src/pages/theories.astro + src/data/site.ts",
+      "issue": "Registry or essay route is useful but not designed to carry white paper source trace; avoid making it canonical for GAIC terms.",
+      "requiredSourceAnchors": [
+        "ALG-CH2",
+        "MODEL-CH3",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "recommendedContentAdditions": [
+        "Add lightweight link/source anchor only",
+        "Avoid long expansion unless R3K-1 proves canonical need"
+      ],
+      "estimatedEffort": "small",
+      "riskIfNotRepaired": "Route may under-serve crawler or reader expecting a deeper GAIC argument.",
+      "wave": "later or R3K-1 if user approves",
+      "priority": "P2",
+      "classification": "thin-summary"
+    },
+    {
+      "route": "/theory-clusters/",
+      "sourceFile": "src/pages/theory-clusters.astro",
+      "issue": "Multiple public routes can appear canonical for the same or adjacent concept; R3K-1 should clarify canonical hierarchy and cross-links.",
+      "requiredSourceAnchors": [],
+      "recommendedContentAdditions": [
+        "Add canonical hierarchy note",
+        "Add links to preferred canonical concept/governance route",
+        "Avoid duplicate metadata claims"
+      ],
+      "estimatedEffort": "medium",
+      "riskIfNotRepaired": "Canonical dilution and answer-engine confusion around preferred source route.",
+      "wave": "R3K-1",
+      "priority": "P0",
+      "classification": "duplicate-risk"
+    }
+  ]
+}

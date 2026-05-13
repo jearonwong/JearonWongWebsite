@@ -1,0 +1,714 @@
+{
+  "generated": "2026-05-14",
+  "anchors": [
+    {
+      "id": "ALG-CH2",
+      "topic": "Agentic Lifecycle Governance",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 2",
+      "sectionHeading": "The Missing Layer: AI Agent Lifecycle Governance",
+      "htmlAnchor": "#chapter-2-the-missing-layer-ai-agent-lifecycle-governance",
+      "tableId": "T-02-01",
+      "figureId": "F-02",
+      "mroIds": [],
+      "summary": "Defines the missing lifecycle governance layer between execution orchestration and enterprise trust.",
+      "supportsPublicPages": [
+        "Concept Core",
+        "Concepts Map",
+        "Governance index",
+        "Playbooks"
+      ]
+    },
+    {
+      "id": "MODEL-CH3",
+      "topic": "model governance insufficiency",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 3",
+      "sectionHeading": "Why Agentic AI Breaks Model-Centric Compliance",
+      "htmlAnchor": "#chapter-3-why-agentic-ai-breaks-model-centric-compliance",
+      "tableId": "T-03-01",
+      "figureId": null,
+      "mroIds": [],
+      "summary": "Explains why model governance remains necessary but insufficient once the unit of risk becomes agentic work.",
+      "supportsPublicPages": [
+        "Essay",
+        "AI Agent Compliance",
+        "Agentic Lifecycle Governance"
+      ]
+    },
+    {
+      "id": "REG-CH4",
+      "topic": "regulatory baseline",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 4",
+      "sectionHeading": "Regulatory and Standards Baseline",
+      "htmlAnchor": "#chapter-4-regulatory-and-standards-baseline",
+      "tableId": "T-04-01",
+      "figureId": null,
+      "mroIds": [],
+      "summary": "Baseline for EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, Singapore IMDA, W3C PROV / Verifiable Credentials, and Colorado AI Act.",
+      "supportsPublicPages": [
+        "Governance mappings",
+        "GAIC hub"
+      ]
+    },
+    {
+      "id": "OBJECTS-CH5",
+      "topic": "regulatory language to engineering objects",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 5",
+      "sectionHeading": "From Regulatory Language to Engineering Objects",
+      "htmlAnchor": "#chapter-5-from-regulatory-language-to-engineering-objects",
+      "tableId": "T-05-01",
+      "figureId": null,
+      "mroIds": [],
+      "summary": "Maps governance language to object requirements needed for inspectable agentic systems.",
+      "supportsPublicPages": [
+        "MRO",
+        "Lifecycle Responsibility Objects",
+        "Governance pages"
+      ]
+    },
+    {
+      "id": "MRO-CH6",
+      "topic": "MRO overview",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "Missing Regulatory Objects for Agentic and MAS Compliance",
+      "htmlAnchor": "#6-missing-regulatory-objects-for-agentic-and-mas-compliance",
+      "tableId": "T-06-01",
+      "figureId": "F-03",
+      "mroIds": [
+        "MRO-01",
+        "MRO-02",
+        "MRO-03",
+        "MRO-04",
+        "MRO-05",
+        "MRO-06",
+        "MRO-07",
+        "MRO-08",
+        "MRO-09",
+        "MRO-10",
+        "MRO-11",
+        "MRO-12",
+        "MRO-13",
+        "MRO-14",
+        "MRO-15",
+        "MRO-16"
+      ],
+      "summary": "Defines the sixteen lifecycle responsibility objects used by the paper.",
+      "supportsPublicPages": [
+        "MRO",
+        "RCCS-M",
+        "ALCS",
+        "Playbooks",
+        "Governance"
+      ]
+    },
+    {
+      "id": "RCCST-CH7",
+      "topic": "RCCS-T",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 7",
+      "sectionHeading": "Regulatory Compliance Coverage Score (RCCS)",
+      "htmlAnchor": "#chapter-7-regulatory-compliance-coverage-score-rccs",
+      "tableId": "T-07-01",
+      "figureId": "F-04",
+      "mroIds": [],
+      "summary": "Separates traditional compliance coverage from MRO-adjusted coverage.",
+      "supportsPublicPages": [
+        "RCCS-M",
+        "GAIC systems",
+        "Essay score snapshot"
+      ]
+    },
+    {
+      "id": "RCCSM-CH7",
+      "topic": "RCCS-M",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 7",
+      "sectionHeading": "RCCS-M: MRO-Adjusted Interpretation of RCCS",
+      "htmlAnchor": "#7-3-rccs-m-mro-adjusted-interpretation-of-rccs",
+      "tableId": "T-07-01A",
+      "figureId": "F-04",
+      "mroIds": [
+        "MRO-01",
+        "MRO-02",
+        "MRO-03",
+        "MRO-04",
+        "MRO-05",
+        "MRO-06",
+        "MRO-07",
+        "MRO-08",
+        "MRO-09",
+        "MRO-10",
+        "MRO-11",
+        "MRO-12",
+        "MRO-13",
+        "MRO-14",
+        "MRO-15",
+        "MRO-16"
+      ],
+      "summary": "Explains how traditional regulatory dimensions are retested through lifecycle responsibility objects.",
+      "supportsPublicPages": [
+        "RCCS-M",
+        "GAIC systems",
+        "Governance",
+        "Playbooks"
+      ]
+    },
+    {
+      "id": "ALCS-CH8",
+      "topic": "ALCS",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 8",
+      "sectionHeading": "Agentic Lifecycle Conformance Score (ALCS)",
+      "htmlAnchor": "#chapter-8-agentic-lifecycle-conformance-score-alcs",
+      "tableId": "T-08-01",
+      "figureId": "F-04",
+      "mroIds": [
+        "MRO-01",
+        "MRO-02",
+        "MRO-03",
+        "MRO-04",
+        "MRO-05",
+        "MRO-06",
+        "MRO-07",
+        "MRO-08",
+        "MRO-09",
+        "MRO-10",
+        "MRO-11",
+        "MRO-12",
+        "MRO-13",
+        "MRO-14",
+        "MRO-15",
+        "MRO-16"
+      ],
+      "summary": "Defines lifecycle conformance maturity across intent, context, plan, authority, execution, evidence, review, acceptance, dispute, remediation, rollback, and closure.",
+      "supportsPublicPages": [
+        "ALCS",
+        "Deterministic Delivery",
+        "Playbooks"
+      ]
+    },
+    {
+      "id": "SCORE-CH9",
+      "topic": "score methodology",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 9",
+      "sectionHeading": "Composite Scoring Method and Evidence Confidence",
+      "htmlAnchor": "#chapter-9-composite-scoring-method-and-evidence-confidence",
+      "tableId": null,
+      "figureId": "F-04",
+      "mroIds": [],
+      "summary": "Explains confidence labels, evidence boundaries, and why a single composite score can hide the core analytical separation.",
+      "supportsPublicPages": [
+        "Essay score snapshot",
+        "GAIC systems"
+      ]
+    },
+    {
+      "id": "RESULTS-CH12",
+      "topic": "scoring results",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html; gaic_v032_work/source_r3/reports/phase-1d12-provisional-score-model.md",
+      "chapter": "Chapter 12 / Evaluation Results",
+      "sectionHeading": "Evaluation Results: RCCS-T / RCCS-M / ALCS Provisional Analytical Profiles",
+      "htmlAnchor": "#evaluation-results-rccs-alcs-provisional-analytical-profiles",
+      "tableId": "Score overview table",
+      "figureId": "F-05",
+      "mroIds": [],
+      "summary": "Fixed-order, non-ranked scoring profiles for MPLP, IBM, Microsoft, AWS, Google, LangGraph, OpenAI Agents SDK, and CrewAI.",
+      "supportsPublicPages": [
+        "Essay score snapshot",
+        "GAIC systems index/detail pages"
+      ]
+    },
+    {
+      "id": "SYSTEMS-CH12",
+      "topic": "system mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html; src/data/gaicSystems.ts",
+      "chapter": "Chapter 12",
+      "sectionHeading": "Detailed System Mappings",
+      "htmlAnchor": "#chapter-12-detailed-system-mappings",
+      "tableId": "T-12-02 through T-12-17",
+      "figureId": "F-05",
+      "mroIds": [],
+      "summary": "Source-qualified system mappings that feed GAIC systems pages.",
+      "supportsPublicPages": [
+        "GAIC systems index/detail pages"
+      ]
+    },
+    {
+      "id": "MPLP-CH13",
+      "topic": "MPLP mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 13 / Appendix G",
+      "sectionHeading": "MPLP Deep Mapping, Boundary, and Non-Claim Discipline",
+      "htmlAnchor": "#13-mplp-deep-mapping-boundary-and-non-claim-discipline",
+      "tableId": "T-13-02 / T-13-03 / T-13-04 / T-G-01",
+      "figureId": null,
+      "mroIds": [
+        "MRO-01",
+        "MRO-02",
+        "MRO-04",
+        "MRO-08",
+        "MRO-15",
+        "MRO-16"
+      ],
+      "summary": "Positions MPLP as one protocol path, not a required, certified, exclusive, or industry-standard route.",
+      "supportsPublicPages": [
+        "MPLP project",
+        "MPLP GAIC system page",
+        "Concept Core"
+      ]
+    },
+    {
+      "id": "VALIDATION-CH14",
+      "topic": "Validation Lab / evidence validation",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 14",
+      "sectionHeading": "Evidence-Based Validation",
+      "htmlAnchor": "#chapter-14-evidence-based-validation-pattern",
+      "tableId": null,
+      "figureId": "F-08",
+      "mroIds": [
+        "MRO-08",
+        "MRO-11",
+        "MRO-12",
+        "MRO-16"
+      ],
+      "summary": "Frames evidence validation and adjudication without certification claims.",
+      "supportsPublicPages": [
+        "Validation Lab",
+        "Evidence Chain",
+        "Playbooks"
+      ]
+    },
+    {
+      "id": "FAILURE-CH15",
+      "topic": "failure scenarios",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 15",
+      "sectionHeading": "Enterprise Failure Scenarios",
+      "htmlAnchor": "#15-enterprise-failure-scenarios",
+      "tableId": null,
+      "figureId": "F-09",
+      "mroIds": [
+        "MRO-02",
+        "MRO-04",
+        "MRO-06",
+        "MRO-07",
+        "MRO-08",
+        "MRO-15",
+        "MRO-16"
+      ],
+      "summary": "Illustrates how authority, evidence, substitution, and remediation failures appear in enterprise agentic workflows.",
+      "supportsPublicPages": [
+        "Deterministic Delivery",
+        "Rollbackable Workflows",
+        "Governance",
+        "Playbooks"
+      ]
+    },
+    {
+      "id": "PRIVACY-MRO",
+      "topic": "privacy / GDPR lifecycle mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 4 and Chapter 6",
+      "sectionHeading": "GDPR; Privacy / GDPR Lifecycle Mapping",
+      "htmlAnchor": "#4-4-gdpr; #6-11-mro-10-privacy-gdpr-lifecycle-mapping",
+      "tableId": "T-04-01 / T-06-11 through T-06-15",
+      "figureId": "F-03",
+      "mroIds": [
+        "MRO-10",
+        "MRO-11",
+        "MRO-12",
+        "MRO-13",
+        "MRO-14"
+      ],
+      "summary": "Connects privacy, processor chains, retention, and selective disclosure to lifecycle evidence.",
+      "supportsPublicPages": [
+        "GDPR and Agentic AI Evidence",
+        "Evidence Retention"
+      ]
+    },
+    {
+      "id": "ROLE-MRO01",
+      "topic": "human role responsibility mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-01 — Human Role to MAS Responsibility Mapping",
+      "htmlAnchor": "#6-2-mro-01-human-role-to-mas-responsibility-mapping",
+      "tableId": "T-06-02",
+      "figureId": null,
+      "mroIds": [
+        "MRO-01",
+        "MRO-03",
+        "MRO-06"
+      ],
+      "summary": "Distinguishes human accountability from agent role labels and workflow routing.",
+      "supportsPublicPages": [
+        "Human Role Responsibility Mapping",
+        "MAS Governance",
+        "Human Role playbook"
+      ]
+    },
+    {
+      "id": "SUBSTITUTION-MRO15",
+      "topic": "vendor/runtime substitution",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-15 — Vendor / Model / Runtime Substitution Conformance",
+      "htmlAnchor": "#6-16-mro-15-vendor-model-runtime-substitution-conformance",
+      "tableId": "T-06-16",
+      "figureId": null,
+      "mroIds": [
+        "MRO-09",
+        "MRO-15"
+      ],
+      "summary": "Defines substitution as a governance event rather than a procurement preference.",
+      "supportsPublicPages": [
+        "Vendor Runtime Substitution",
+        "Extended Ecosystem",
+        "GAIC systems"
+      ]
+    },
+    {
+      "id": "CLOSURE-MRO16",
+      "topic": "incident/dispute/remediation closure",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6 / Chapter 15",
+      "sectionHeading": "MRO-16 — Incident, Dispute, and Remediation Closure",
+      "htmlAnchor": "#6-17-mro-16-incident-dispute-and-remediation-closure",
+      "tableId": "T-06-17",
+      "figureId": "F-09",
+      "mroIds": [
+        "MRO-16"
+      ],
+      "summary": "Treats closure as a lifecycle state with evidence and owner responsibility, not only a ticket status.",
+      "supportsPublicPages": [
+        "Incident/Dispute/Remediation Closure",
+        "Rollback Verification"
+      ]
+    },
+    {
+      "id": "ROADMAP-F11",
+      "topic": "adoption roadmap",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Roadmap / Appendix",
+      "sectionHeading": "Stage 0-to-7 Adoption Roadmap",
+      "htmlAnchor": "#stage-0-to-7-adoption-roadmap",
+      "tableId": null,
+      "figureId": "F-11",
+      "mroIds": [],
+      "summary": "Staged adoption model for moving from awareness to lifecycle-governed practice without overclaiming compliance.",
+      "supportsPublicPages": [
+        "GAIC hub",
+        "Launch/KPI monitoring reports"
+      ]
+    },
+    {
+      "id": "BOUNDARY-FM",
+      "topic": "boundary / non-claim discipline",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html; GAIC-2026-v0.3.2-FRC-R3-SOURCE-MASTER.md",
+      "chapter": "Front Matter / Chapter 1",
+      "sectionHeading": "Publication Scope and Boundary Statement; Non-Legal Boundary",
+      "htmlAnchor": "#publication-scope-and-boundary-statement; #1-6-non-legal-boundary-and-conflict-of-interest-disclosure",
+      "tableId": "T-FM-02 / T-FM-03 / T-01-01",
+      "figureId": null,
+      "mroIds": [],
+      "summary": "Non-legal, non-certification, non-ranking, non-procurement, source-qualified boundary discipline.",
+      "supportsPublicPages": [
+        "All GAIC-derived pages"
+      ]
+    },
+    {
+      "id": "MRO-01",
+      "topic": "MRO-01 Human Role to MAS Responsibility Mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-01 — Human Role to MAS Responsibility Mapping",
+      "htmlAnchor": "#6-2-mro-01-human-role-to-mas-responsibility-mapping",
+      "tableId": "T-06-02",
+      "figureId": null,
+      "mroIds": [
+        "MRO-01"
+      ],
+      "summary": "Reusable source anchor for Human Role to MAS Responsibility Mapping; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-02",
+      "topic": "MRO-02 Delegated Authority Boundary",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-02 — Delegated Authority Boundary",
+      "htmlAnchor": "#6-3-mro-02-delegated-authority-boundary",
+      "tableId": "T-06-03",
+      "figureId": null,
+      "mroIds": [
+        "MRO-02"
+      ],
+      "summary": "Reusable source anchor for Delegated Authority Boundary; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-03",
+      "topic": "MRO-03 Agent Role is not Human Role",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-03 — Agent Role is not Human Role",
+      "htmlAnchor": "#6-4-mro-03-agent-role-is-not-human-role",
+      "tableId": "T-06-04",
+      "figureId": null,
+      "mroIds": [
+        "MRO-03"
+      ],
+      "summary": "Reusable source anchor for Agent Role is not Human Role; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-04",
+      "topic": "MRO-04 Accepted Outcome Compliance",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-04 — Accepted Outcome Compliance",
+      "htmlAnchor": "#6-5-mro-04-accepted-outcome-compliance",
+      "tableId": "T-06-05",
+      "figureId": null,
+      "mroIds": [
+        "MRO-04"
+      ],
+      "summary": "Reusable source anchor for Accepted Outcome Compliance; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-05",
+      "topic": "MRO-05 Tool-Action Liability Boundary",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-05 — Tool-Action Liability Boundary",
+      "htmlAnchor": "#6-6-mro-05-tool-action-liability-boundary",
+      "tableId": "T-06-06",
+      "figureId": null,
+      "mroIds": [
+        "MRO-05"
+      ],
+      "summary": "Reusable source anchor for Tool-Action Liability Boundary; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-06",
+      "topic": "MRO-06 Responsibility Transfer Across Agents",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-06 — Responsibility Transfer Across Agents",
+      "htmlAnchor": "#6-7-mro-06-responsibility-transfer-across-agents",
+      "tableId": "T-06-07",
+      "figureId": null,
+      "mroIds": [
+        "MRO-06"
+      ],
+      "summary": "Reusable source anchor for Responsibility Transfer Across Agents; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-07",
+      "topic": "MRO-07 Authority Drift",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-07 — Authority Drift",
+      "htmlAnchor": "#6-8-mro-07-authority-drift",
+      "tableId": "T-06-08",
+      "figureId": null,
+      "mroIds": [
+        "MRO-07"
+      ],
+      "summary": "Reusable source anchor for Authority Drift; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-08",
+      "topic": "MRO-08 MAS Evidence Partitioning",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-08 — MAS Evidence Partitioning",
+      "htmlAnchor": "#6-9-mro-08-mas-evidence-partitioning",
+      "tableId": "T-06-09",
+      "figureId": null,
+      "mroIds": [
+        "MRO-08"
+      ],
+      "summary": "Reusable source anchor for MAS Evidence Partitioning; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-09",
+      "topic": "MRO-09 Cross-Project Reuse Compliance",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-09 — Cross-Project Reuse Compliance",
+      "htmlAnchor": "#6-10-mro-09-cross-project-reuse-compliance",
+      "tableId": "T-06-10",
+      "figureId": null,
+      "mroIds": [
+        "MRO-09"
+      ],
+      "summary": "Reusable source anchor for Cross-Project Reuse Compliance; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-10",
+      "topic": "MRO-10 Privacy / GDPR Lifecycle Mapping",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-10 — Privacy / GDPR Lifecycle Mapping",
+      "htmlAnchor": "#6-11-mro-10-privacy-gdpr-lifecycle-mapping",
+      "tableId": "T-06-11",
+      "figureId": null,
+      "mroIds": [
+        "MRO-10"
+      ],
+      "summary": "Reusable source anchor for Privacy / GDPR Lifecycle Mapping; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-11",
+      "topic": "MRO-11 Privacy-Preserving Third-Party Validation",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-11 — Privacy-Preserving Third-Party Validation",
+      "htmlAnchor": "#6-12-mro-11-privacy-preserving-third-party-validation",
+      "tableId": "T-06-12",
+      "figureId": null,
+      "mroIds": [
+        "MRO-11"
+      ],
+      "summary": "Reusable source anchor for Privacy-Preserving Third-Party Validation; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-12",
+      "topic": "MRO-12 Evidence Minimization and Selective Disclosure",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-12 — Evidence Minimization and Selective Disclosure",
+      "htmlAnchor": "#6-13-mro-12-evidence-minimization-and-selective-disclosure",
+      "tableId": "T-06-13",
+      "figureId": null,
+      "mroIds": [
+        "MRO-12"
+      ],
+      "summary": "Reusable source anchor for Evidence Minimization and Selective Disclosure; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-13",
+      "topic": "MRO-13 Data Subject Rights vs Evidence Retention",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-13 — Data Subject Rights vs Evidence Retention",
+      "htmlAnchor": "#6-14-mro-13-data-subject-rights-vs-evidence-retention",
+      "tableId": "T-06-14",
+      "figureId": null,
+      "mroIds": [
+        "MRO-13"
+      ],
+      "summary": "Reusable source anchor for Data Subject Rights vs Evidence Retention; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-14",
+      "topic": "MRO-14 Third-Party Processor / Subprocessor Chain",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-14 — Third-Party Processor / Subprocessor Chain",
+      "htmlAnchor": "#6-15-mro-14-third-party-processor-subprocessor-chain",
+      "tableId": "T-06-15",
+      "figureId": null,
+      "mroIds": [
+        "MRO-14"
+      ],
+      "summary": "Reusable source anchor for Third-Party Processor / Subprocessor Chain; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-15",
+      "topic": "MRO-15 Vendor / Model / Runtime Substitution Conformance",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-15 — Vendor / Model / Runtime Substitution Conformance",
+      "htmlAnchor": "#6-16-mro-15-vendor-model-runtime-substitution-conformance",
+      "tableId": "T-06-16",
+      "figureId": null,
+      "mroIds": [
+        "MRO-15"
+      ],
+      "summary": "Reusable source anchor for Vendor / Model / Runtime Substitution Conformance; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    },
+    {
+      "id": "MRO-16",
+      "topic": "MRO-16 Incident, Dispute, and Remediation Closure",
+      "sourceFile": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "chapter": "Chapter 6",
+      "sectionHeading": "MRO-16 — Incident, Dispute, and Remediation Closure",
+      "htmlAnchor": "#6-17-mro-16-incident-dispute-and-remediation-closure",
+      "tableId": "T-06-17",
+      "figureId": null,
+      "mroIds": [
+        "MRO-16"
+      ],
+      "summary": "Reusable source anchor for Incident, Dispute, and Remediation Closure; use as source trace, not as a long quotation.",
+      "supportsPublicPages": [
+        "MRO page",
+        "Related concept/governance/playbook pages"
+      ]
+    }
+  ]
+}

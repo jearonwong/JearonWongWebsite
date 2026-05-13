@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 13, 2026 (GAIC-R3I-1 SEO/GEO Outcome-Oriented Metadata and Entity Hardening)
+**Last Updated:** May 14, 2026 (GAIC-R3K-0 Whitepaper Source-Trace Audit)
 
 ## GAIC-R3A Core Entity Mesh
 
@@ -2356,3 +2356,38 @@ Remaining work:
 - R3K should review 7/14/30-day KPI baselines after owner execution begins.
 
 **GAIC-R3I-1 Status:** ✓ SEO/GEO OUTCOME-ORIENTED METADATA AND ENTITY HARDENING COMPLETE / READY FOR OWNER LAUNCH EXECUTION AND KPI MONITORING
+
+---
+
+## GAIC-R3K-0 Known Issues
+
+### Whitepaper Source-Trace Audit Complete
+
+R3K-0 is an audit-only wave. It does not repair public pages. It identifies which GAIC-derived or adjacent public routes need source anchors, boundary tightening, canonical hierarchy clarification, selective expansion, or no action before the next implementation wave.
+
+Validation scope:
+
+- Candidate public pages inventoried: 89.
+- GAIC-derived or adjacent pages classified: 82.
+- Pages needing some follow-up action: 75.
+- Primary finding: the dominant issue is implicit source trace, not broad public-page failure.
+- The essay score snapshot is already present and exact score values are locatable from Phase 1D-12 source reports and the public white paper HTML.
+
+Risk groups:
+
+- P0: duplicate-risk and drift-risk pages requiring canonical hierarchy or boundary clarification before major external launch.
+- P1: source-anchor hardening for concept, governance, GAIC systems, playbook, and extended ecosystem pages.
+- P2: lightweight registry/essay/project surfaces that should not become canonical GAIC source pages unless explicitly scoped.
+
+Boundary discipline:
+
+- No public content page was repaired, rewritten, expanded, deleted, noindexed, or otherwise mutated in this audit wave.
+- No sealed artifact, white paper content, score value, RCCS-T/RCCS-M/ALCS methodology, metadata, JSON-LD utility, or route construction was changed by the audit.
+- No legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, external authority signal, search ranking, answer-engine pickup, backlink, or primary semantic source achievement was claimed.
+
+Remaining work:
+
+- User review is required before R3K-1.
+- R3K-1 should target only R3K-0 P0/P1 repair candidates unless the user explicitly broadens scope.
+
+**GAIC-R3K-0 Status:** ✓ WHITEPAPER SOURCE-TRACE AUDIT COMPLETE / IMPLEMENTATION PLAN REQUIRED
