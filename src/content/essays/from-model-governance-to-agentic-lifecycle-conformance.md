@@ -1,8 +1,10 @@
 ---
 title: "From Model Governance to Agentic Lifecycle Conformance"
 titleLines:
-  - "From Model Governance"
-  - "to Agentic Lifecycle Conformance"
+  - "From Model"
+  - "Governance to"
+  - "Agentic Lifecycle"
+  - "Conformance"
 subtitle: "Why AI Agent / MAS compliance cannot stop at model governance, and why RCCS-T, MRO, RCCS-M, and ALCS became necessary."
 description: "Jearon Wong explains how studying EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, Singapore governance work, W3C provenance standards, and Colorado AI Act led from traditional compliance coverage to Missing Regulatory Objects, RCCS-M, and ALCS."
 shareTitle: "From Model Governance to Agentic Lifecycle Conformance"
@@ -42,9 +44,11 @@ tags:
   - AI Compliance
   - Multi-Agent Systems
   - MRO
+  - RCCS-T
   - RCCS-M
   - ALCS
   - MPLP
+  - Global AI Compliance White Paper
 relatedIdeas:
   - ai-agent-lifecycle
   - lifecycle-governance
@@ -263,6 +267,149 @@ One measures MRO-adjusted regulatory coverage.
 The other measures agentic lifecycle conformance.
 
 Both are needed.
+
+## What the scoring results show
+
+The result was not that every platform failed.
+
+That would be the wrong reading.
+
+The result was that different systems are strong at different layers.
+
+Traditional enterprise and model governance platforms tend to score better when the question is regulatory coverage in the conventional sense: documentation, monitoring, control surfaces, safety workflows, and governance posture.
+
+Lifecycle-native protocol semantics score differently when the question becomes whether regulatory meaning can survive agentic execution: delegated authority, responsibility transfer, accepted outcome, evidence partitioning, substitution conformance, and remediation closure.
+
+That is the point of separating RCCS-T, RCCS-M, and ALCS.
+
+A single composite score would hide the core insight. It would flatten conventional governance coverage and lifecycle responsibility coverage into one number, as if they were the same question.
+
+They are not the same question.
+
+The snapshot below is not the full methodology. It is the reader's hook into the white paper's main result: model governance can be necessary and still not be enough for agentic lifecycle conformance.
+
+<figure class="score-snapshot-figure" aria-labelledby="score-snapshot-title">
+  <figcaption id="score-snapshot-title" class="score-snapshot-title">Table: Scoring Snapshot — RCCS-T, RCCS-M, and ALCS</figcaption>
+  <table class="score-snapshot-table">
+    <colgroup>
+      <col style="width: 22%;" />
+      <col style="width: 11%;" />
+      <col style="width: 11%;" />
+      <col style="width: 11%;" />
+      <col style="width: 45%;" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">System / Framework</th>
+        <th scope="col">RCCS-T</th>
+        <th scope="col">RCCS-M</th>
+        <th scope="col">ALCS</th>
+        <th scope="col">Main Reading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">MPLP <span class="score-snapshot__confidence">Partially source-bound / L5 analytical inference</span></th>
+        <td>57 (52-62)</td>
+        <td>88 (84-92)</td>
+        <td>84 (80-88)</td>
+        <td>Lifecycle-native protocol semantics; lower traditional product-governance coverage, stronger MRO-adjusted and lifecycle conformance posture.</td>
+      </tr>
+      <tr>
+        <th scope="row">IBM watsonx.governance <span class="score-snapshot__confidence">Partially source-bound</span></th>
+        <td>82 (78-86)</td>
+        <td>60 (55-65)</td>
+        <td>58 (53-63)</td>
+        <td>Strong traditional governance, documentation, and monitoring posture; lifecycle responsibility semantics remain less explicit in source evidence.</td>
+      </tr>
+      <tr>
+        <th scope="row">Microsoft Azure AI Foundry <span class="score-snapshot__confidence">Partially source-bound</span></th>
+        <td>80 (76-84)</td>
+        <td>64 (59-69)</td>
+        <td>62 (57-67)</td>
+        <td>Strong responsible AI and platform governance posture; lifecycle responsibility semantics require analytical mapping to agent execution.</td>
+      </tr>
+      <tr>
+        <th scope="row">AWS Bedrock + Guardrails + AgentCore <span class="score-snapshot__confidence">Partially source-bound</span></th>
+        <td>78 (74-83)</td>
+        <td>62 (57-67)</td>
+        <td>60 (55-65)</td>
+        <td>Strong guardrails and runtime governance surface; responsibility transfer and closure remain implementation-dependent.</td>
+      </tr>
+      <tr>
+        <th scope="row">Google Vertex AI + ADK + Model Armor <span class="score-snapshot__confidence">Partially source-bound</span></th>
+        <td>79 (75-84)</td>
+        <td>63 (58-68)</td>
+        <td>61 (56-66)</td>
+        <td>Strong model, platform, and safety surface; lifecycle object conformance remains source-qualified and analytical.</td>
+      </tr>
+      <tr>
+        <th scope="row">LangGraph + LangSmith <span class="score-snapshot__confidence">Partially source-bound</span></th>
+        <td>60 (55-65)</td>
+        <td>78 (73-83)</td>
+        <td>80 (76-84)</td>
+        <td>Orchestration, tracing, and observability surface with visible lifecycle posture; regulatory coverage depends on surrounding governance.</td>
+      </tr>
+      <tr>
+        <th scope="row">OpenAI Agents SDK <span class="score-snapshot__confidence">Partially source-bound / platform-guide access note</span></th>
+        <td>58 (52-63)</td>
+        <td>66 (60-71)</td>
+        <td>64 (58-69)</td>
+        <td>Agent SDK execution surface; lifecycle responsibility coverage depends on external governance layer and accessible source scope.</td>
+      </tr>
+      <tr>
+        <th scope="row">CrewAI <span class="score-snapshot__confidence">Partially source-bound / L5 analytical inference</span></th>
+        <td>48 (42-54)</td>
+        <td>61 (55-66)</td>
+        <td>63 (58-68)</td>
+        <td>Role and task orchestration surface; regulatory evidence and lifecycle closure require external governance layer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="score-snapshot-cards" aria-label="Mobile scoring snapshot">
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">MPLP <span>Partially source-bound / L5 analytical inference</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>57 (52-62)</dd></div><div><dt>RCCS-M</dt><dd>88 (84-92)</dd></div><div><dt>ALCS</dt><dd>84 (80-88)</dd></div></dl>
+      <p>Lifecycle-native protocol semantics; lower traditional product-governance coverage, stronger MRO-adjusted and lifecycle conformance posture.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">IBM watsonx.governance <span>Partially source-bound</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>82 (78-86)</dd></div><div><dt>RCCS-M</dt><dd>60 (55-65)</dd></div><div><dt>ALCS</dt><dd>58 (53-63)</dd></div></dl>
+      <p>Strong traditional governance, documentation, and monitoring posture; lifecycle responsibility semantics remain less explicit in source evidence.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">Microsoft Azure AI Foundry <span>Partially source-bound</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>80 (76-84)</dd></div><div><dt>RCCS-M</dt><dd>64 (59-69)</dd></div><div><dt>ALCS</dt><dd>62 (57-67)</dd></div></dl>
+      <p>Strong responsible AI and platform governance posture; lifecycle responsibility semantics require analytical mapping to agent execution.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">AWS Bedrock + Guardrails + AgentCore <span>Partially source-bound</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>78 (74-83)</dd></div><div><dt>RCCS-M</dt><dd>62 (57-67)</dd></div><div><dt>ALCS</dt><dd>60 (55-65)</dd></div></dl>
+      <p>Strong guardrails and runtime governance surface; responsibility transfer and closure remain implementation-dependent.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">Google Vertex AI + ADK + Model Armor <span>Partially source-bound</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>79 (75-84)</dd></div><div><dt>RCCS-M</dt><dd>63 (58-68)</dd></div><div><dt>ALCS</dt><dd>61 (56-66)</dd></div></dl>
+      <p>Strong model, platform, and safety surface; lifecycle object conformance remains source-qualified and analytical.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">LangGraph + LangSmith <span>Partially source-bound</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>60 (55-65)</dd></div><div><dt>RCCS-M</dt><dd>78 (73-83)</dd></div><div><dt>ALCS</dt><dd>80 (76-84)</dd></div></dl>
+      <p>Orchestration, tracing, and observability surface with visible lifecycle posture; regulatory coverage depends on surrounding governance.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">OpenAI Agents SDK <span>Partially source-bound / platform-guide access note</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>58 (52-63)</dd></div><div><dt>RCCS-M</dt><dd>66 (60-71)</dd></div><div><dt>ALCS</dt><dd>64 (58-69)</dd></div></dl>
+      <p>Agent SDK execution surface; lifecycle responsibility coverage depends on external governance layer and accessible source scope.</p>
+    </article>
+    <article class="score-snapshot-card">
+      <div class="score-snapshot-card__system">CrewAI <span>Partially source-bound / L5 analytical inference</span></div>
+      <dl class="score-snapshot-card__metrics"><div><dt>RCCS-T</dt><dd>48 (42-54)</dd></div><div><dt>RCCS-M</dt><dd>61 (55-66)</dd></div><div><dt>ALCS</dt><dd>63 (58-68)</dd></div></dl>
+      <p>Role and task orchestration surface; regulatory evidence and lifecycle closure require external governance layer.</p>
+    </article>
+  </div>
+  <p class="score-snapshot-boundary">These scores are author-analytical, source-qualified, non-ranking, and not procurement guidance, certification, legal compliance proof, or regulator approval. The table is a summary hook; the full white paper contains the methodology, evidence confidence model, source boundaries, and detailed system mapping. Read the <a href="/research/global-ai-compliance-white-paper-2026/">full white paper</a>, <a href="/concepts/rccs-m/">RCCS-M</a>, <a href="/concepts/alcs/">ALCS</a>, and <a href="/concepts/missing-regulatory-objects/">Missing Regulatory Objects</a>.</p>
+</figure>
 
 ## The bias question is real, but incomplete
 
