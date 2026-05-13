@@ -10,6 +10,7 @@ import {
 import { siteConfig } from "../../../../data/site";
 
 const canonicalPath = "/research/global-ai-compliance-white-paper-2026/systems/";
+const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = absoluteUrl(canonicalPath);
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const metaDescription =
@@ -34,7 +35,8 @@ const primaryLinks = [
   { href: whitePaperHub, label: "Read the White Paper" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Explore Agentic Lifecycle Governance" },
   { href: "/concepts/map/", label: "View Concepts Map" },
-  { href: "/playbooks/", label: "View Applied Playbooks" }
+  { href: "/playbooks/", label: "View Applied Playbooks" },
+  { href: extendedEcosystemPath, label: "View Extended Ecosystem Mapping" }
 ];
 const conceptLinks = [
   { href: "/concepts/missing-regulatory-objects/", label: "MRO" },
@@ -199,6 +201,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           This layer does not rank vendors, recommend procurement, claim legal compliance proof,
           certify systems, imply regulator approval, or imply vendor endorsement. MPLP remains one
           protocol path for lifecycle responsibility semantics, not a required or exclusive route.
+        </p>
+        <p>
+          For ecosystem search contexts outside the first-layer systems discussed in GAIC, use the
+          <a href={extendedEcosystemPath}>Extended Ecosystem Lifecycle Governance Mapping</a>. That
+          R3F layer is source-qualified and not GAIC-scored.
         </p>
       </section>
     </main>

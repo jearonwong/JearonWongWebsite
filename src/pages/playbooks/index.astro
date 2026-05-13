@@ -4,6 +4,7 @@ import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import { appliedPlaybooks, contentRouteRoles, pageRegistry, siteConfig } from "../../data/site";
 
 const canonicalPath = "/playbooks/";
+const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const keywords = [
   "Applied Agentic Governance Playbooks",
@@ -15,6 +16,7 @@ const keywords = [
   "DeepSeek agent governance",
   "Kimi agent governance",
   "Harness Engineering",
+  "Extended Ecosystem Lifecycle Governance Mapping",
   "Agentic Lifecycle Governance",
   "Missing Regulatory Objects",
   "RCCS-M",
@@ -112,6 +114,7 @@ const breadcrumbJsonLd = {
           <a href="/concepts/map/">Open Concepts Map / Entity Mesh</a>
           <a href="/concepts/agentic-lifecycle-governance/">Open Concept Core</a>
           <a href="/research/global-ai-compliance-white-paper-2026/systems/">Open GAIC-cited systems</a>
+          <a href={extendedEcosystemPath}>Open extended ecosystem mapping</a>
         </div>
       </section>
 
@@ -135,7 +138,9 @@ const breadcrumbJsonLd = {
         <p>
           These pages are independent lifecycle governance playbooks. They are not official vendor
           documentation, legal advice, legal compliance proof, certification, regulator-approved guidance,
-          vendor rankings, or procurement recommendations.
+          vendor rankings, or procurement recommendations. R3F reuses these playbooks for Anthropic /
+          Claude, DeepSeek, Kimi, AI coding agents, and Harness Engineering instead of creating duplicate
+          pages.
         </p>
       </section>
     </section>

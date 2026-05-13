@@ -1386,6 +1386,7 @@ export const secondaryNav = [
   { href: "/theories/", label: "Ideas" },
   { href: "/governance/", label: "Governance" },
   { href: "/playbooks/", label: "Playbooks" },
+  { href: "/mapping/extended-ecosystem/", label: "Ecosystem Mapping" },
   { href: "/newsletter/", label: "Newsletter" },
   { href: "/contact/", label: "Contact" },
   { href: "/rss.xml", label: "RSS" }

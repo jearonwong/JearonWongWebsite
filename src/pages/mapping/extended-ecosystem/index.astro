@@ -1,0 +1,425 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
+import { gaicSystems } from "../../../data/gaicSystems";
+import {
+  existingExtendedEcosystemRoutes,
+  extendedEcosystemBoundary,
+  extendedEcosystemIndexPath,
+  extendedEcosystems
+} from "../../../data/extendedEcosystems";
+import { siteConfig } from "../../../data/site";
+
+const canonicalPath = extendedEcosystemIndexPath;
+const pageUrl = absoluteUrl(canonicalPath);
+const metaDescription =
+  "Independent lifecycle governance mappings for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems.";
+const keywords = [
+  "Extended Ecosystem Lifecycle Governance Mapping",
+  "Claude Code governance",
+  "Qwen governance",
+  "Cursor AI coding agents",
+  "AutoGen governance",
+  "MCP governance",
+  "A2A governance",
+  "Semantic Kernel governance",
+  "Agentic Lifecycle Governance",
+  "Missing Regulatory Objects",
+  "RCCS-M",
+  "ALCS",
+  "Harness Engineering"
+];
+const primaryLinks = [
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
+  { href: "/playbooks/", label: "Applied Playbooks" },
+  { href: "/concepts/map/", label: "Concepts Map" }
+];
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#extended-ecosystem-list`,
+  name: "Extended Ecosystem Lifecycle Governance Mapping",
+  itemListElement: extendedEcosystems.map((ecosystem, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: ecosystem.name,
+    url: absoluteUrl(`${canonicalPath}${ecosystem.slug}/`)
+  }))
+};
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "Extended Ecosystem Lifecycle Governance Mapping",
+  description: metaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#extended-ecosystem-list`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  },
+  about: keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  }))
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Mapping", path: canonicalPath },
+  { name: "Extended Ecosystem", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title="Extended Ecosystem Lifecycle Governance Mapping"
+  description={metaDescription}
+  shareTitle="Extended Ecosystem Lifecycle Governance Mapping"
+  shareDescription={metaDescription}
+  twitterTitle="Extended Ecosystem Mapping"
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[pageJsonLd, itemListJsonLd, breadcrumbJsonLd]}
+  keywords={keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Extended Ecosystem Lifecycle Governance Mapping by Jearon Wong"
+>
+  <RegistryPageHero
+    title="Extended Ecosystem Lifecycle Governance Mapping"
+    objectType="EXTENDED_ECOSYSTEM"
+    objectValue="SOURCE_QUALIFIED"
+    lead="Independent lifecycle governance checklists for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems."
+  >
+    <div class="ecosystem-hero-links">
+      {primaryLinks.map((link) => (
+        <a href={link.href} class="registry-annotation ecosystem-hero-link">
+          <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <main class="shell ecosystem-shell">
+      <section class="registry-chassis ecosystem-intro" aria-labelledby="ecosystem-intro-title">
+        <div>
+          <div class="registry-annotation">
+            <span class="registry-key">BOUNDARY</span>: <span class="registry-value">NOT_GAIC_SCORED</span>
+          </div>
+          <h2 id="ecosystem-intro-title">Source-qualified mappings, not vendor SEO pages.</h2>
+          <p>
+            {extendedEcosystemBoundary} R3F reuses existing applied playbooks where they already
+            answer the search context, then adds narrower mappings only for gaps such as Claude Code,
+            Qwen, Cursor, AutoGen, MCP, A2A, and Semantic Kernel.
+          </p>
+        </div>
+        <div class="ecosystem-intro__links" aria-label="Primary extended ecosystem links">
+          {primaryLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      </section>
+
+      <section class="ecosystem-group" aria-labelledby="existing-playbooks-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">GROUP_01</span>: <span class="registry-value">REUSED_ROUTES</span>
+          </div>
+          <h2 id="existing-playbooks-title">Existing Applied Playbooks</h2>
+          <p>
+            These R3B routes already cover the general lifecycle governance surfaces. R3F links to
+            them instead of creating duplicate vendor or method pages.
+          </p>
+        </div>
+        <div class="ecosystem-card-grid">
+          {existingExtendedEcosystemRoutes.map((route) => (
+            <article class="registry-chassis ecosystem-card">
+              <div class="ecosystem-card__topline">
+                <span>Existing route</span>
+                <span>Reuse first</span>
+              </div>
+              <h3><a href={route.href}>{route.name}</a></h3>
+              <p>{route.context}</p>
+              <p class="ecosystem-card__boundary">{route.updatePolicy}</p>
+              <a href={route.href} class="ecosystem-card__link">Open existing playbook</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="ecosystem-group" aria-labelledby="new-mappings-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">GROUP_02</span>: <span class="registry-value">NEW_MAPPINGS</span>
+          </div>
+          <h2 id="new-mappings-title">New Extended Ecosystem Mappings</h2>
+          <p>
+            These routes connect high-frequency ecosystem search contexts to Agentic Lifecycle
+            Governance without treating them as GAIC first-layer scored systems.
+          </p>
+        </div>
+        <div class="ecosystem-card-grid">
+          {extendedEcosystems.map((ecosystem) => (
+            <article class="registry-chassis ecosystem-card">
+              <div class="ecosystem-card__topline">
+                <span>{ecosystem.category}</span>
+                <span>{ecosystem.sourceStatus}</span>
+              </div>
+              <h3><a href={`${canonicalPath}${ecosystem.slug}/`}>{ecosystem.name}</a></h3>
+              <p>{ecosystem.summary}</p>
+              <div class="ecosystem-card__question">
+                <strong>Lifecycle governance question</strong>
+                <span>{ecosystem.lifecycleQuestion}</span>
+              </div>
+              <a href={`${canonicalPath}${ecosystem.slug}/`} class="ecosystem-card__link">Open mapping</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="ecosystem-group" aria-labelledby="gaic-systems-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">GROUP_03</span>: <span class="registry-value">RELATED_GAIC_CITED</span>
+          </div>
+          <h2 id="gaic-systems-title">Related GAIC-Cited Systems</h2>
+          <p>
+            These are first-layer systems discussed in the Global AI Compliance White Paper 2026.
+            They remain separate from the R3F extended ecosystem layer.
+          </p>
+        </div>
+        <div class="related-system-strip" aria-label="Related GAIC-cited systems">
+          {gaicSystems.map((system) => (
+            <a href={`/research/global-ai-compliance-white-paper-2026/systems/${system.slug}/`}>
+              {system.name}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis ecosystem-boundary" aria-labelledby="ecosystem-boundary-title">
+        <div class="registry-annotation">
+          <span class="registry-key">NON_CLAIM_DISCIPLINE</span>
+        </div>
+        <h2 id="ecosystem-boundary-title">What this layer does not claim.</h2>
+        <p>
+          This layer does not create GAIC scores, compare products, rank vendors, recommend
+          procurement, claim legal compliance proof, certify systems, imply regulator approval,
+          imply vendor affiliation, or claim vendor approval. MPLP remains one protocol path,
+          not a required or exclusive route.
+        </p>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .ecosystem-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .ecosystem-hero-link {
+    text-decoration: none;
+  }
+
+  .ecosystem-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .ecosystem-shell {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .ecosystem-intro,
+  .ecosystem-boundary {
+    padding: var(--registry-panel-padding);
+  }
+
+  .ecosystem-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .ecosystem-intro h2,
+  .ecosystem-boundary h2,
+  .registry-section-heading h2 {
+    margin: 0.85rem 0 0;
+    color: var(--current-text);
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .ecosystem-intro p,
+  .ecosystem-boundary p,
+  .registry-section-heading p {
+    max-width: var(--lead-measure);
+    margin: 0.9rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .ecosystem-intro__links {
+    display: grid;
+    align-content: start;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .ecosystem-intro__links a {
+    padding: 0.82rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .ecosystem-intro__links a:hover {
+    color: var(--accent-signal);
+  }
+
+  .ecosystem-group {
+    display: grid;
+    gap: 1.35rem;
+  }
+
+  .ecosystem-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .ecosystem-card {
+    display: grid;
+    gap: 0.95rem;
+    align-content: start;
+    padding: var(--registry-card-padding);
+  }
+
+  .ecosystem-card__topline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: space-between;
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .ecosystem-card h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1.5rem;
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+
+  .ecosystem-card h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ecosystem-card p,
+  .ecosystem-card__question span {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .ecosystem-card__question {
+    display: grid;
+    gap: 0.35rem;
+    padding-top: 0.95rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .ecosystem-card__question strong {
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .ecosystem-card__link {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .ecosystem-card__boundary {
+    color: var(--current-muted) !important;
+    font-family: var(--font-mono);
+    font-size: 0.68rem !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .ecosystem-card h3 a:hover,
+  .ecosystem-card__link:hover {
+    color: var(--accent-signal);
+  }
+
+  .related-system-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .related-system-strip a {
+    padding: 0.45rem 0.6rem;
+    border: 1px solid var(--current-border);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .related-system-strip a:hover {
+    color: var(--accent-signal);
+  }
+
+  .ecosystem-boundary {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  @media (max-width: 860px) {
+    .ecosystem-intro,
+    .ecosystem-card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ecosystem-intro h2,
+    .ecosystem-boundary h2,
+    .registry-section-heading h2 {
+      font-size: 1.55rem;
+    }
+
+    .ecosystem-card h3 {
+      font-size: 1.25rem;
+    }
+  }
+</style>

@@ -2100,3 +2100,46 @@ Production verification completed:
 - Production HTML/PDF/DOCX/log hashes match expected public/sealed hashes.
 
 **GAIC-R3D-3 Status:** ✓ LIVE MOBILE VERIFIED / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING
+
+---
+
+## GAIC-R3F Known Issues
+
+### Extended Ecosystem Mapping Complete
+
+R3F creates the extended ecosystem semantic mapping layer after R3D-3 live mobile verification. It does not replace the R3E GAIC-cited systems layer and does not treat extended ecosystems as GAIC-scored systems.
+
+Validation scope:
+
+- Existing R3B routes reused instead of duplicated:
+  - `/playbooks/anthropic-agent-governance/`
+  - `/playbooks/deepseek-agent-governance/`
+  - `/playbooks/kimi-agent-governance/`
+  - `/playbooks/ai-coding-agent-auditability/`
+  - `/playbooks/harness-engineering-for-ai-agents/`
+- Existing R3E OpenAI Agents SDK detail route remains the canonical OpenAI Agents SDK system page and was not recreated.
+- New R3F index route: `/mapping/extended-ecosystem/`.
+- New R3F detail routes:
+  - `/mapping/extended-ecosystem/claude-code/`
+  - `/mapping/extended-ecosystem/qwen/`
+  - `/mapping/extended-ecosystem/cursor-ai-coding-agents/`
+  - `/mapping/extended-ecosystem/autogen/`
+  - `/mapping/extended-ecosystem/mcp/`
+  - `/mapping/extended-ecosystem/a2a/`
+  - `/mapping/extended-ecosystem/semantic-kernel/`
+- Semantic Kernel was included because official Microsoft Learn and Microsoft GitHub sources supported the ecosystem context.
+- Concepts Map, Concept Core, Playbooks, GAIC-cited systems index, homepage JSON-LD, secondary navigation, sitewide schema terms, and `public/llms.txt` now connect the extended ecosystem layer.
+
+Boundary discipline:
+
+- R3F pages are independent lifecycle governance mappings, not GAIC-scored assessments.
+- No vendor ranking, procurement recommendation, certification, legal compliance proof, regulator approval, vendor affiliation, positive product defect claim, or unsupported current feature claim was introduced.
+- MPLP remains one protocol path only; it is not required, exclusive, certified, regulator-approved, or an industry standard.
+- Sealed white paper artifacts, public responsive HTML checksum, public PDF/DOCX/log hashes, white paper content, RCCS-T/RCCS-M/ALCS scores, and methodology remain unchanged.
+
+Remaining work:
+
+- Deterministic Delivery and Agent Architecture Semantic Layer remains future work.
+- Extended ecosystem pages should be revisited only when official source changes materially affect governance context.
+
+**GAIC-R3F Status:** ✓ EXTENDED ECOSYSTEM SEMANTIC MAPPING COMPLETE / READY FOR DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER

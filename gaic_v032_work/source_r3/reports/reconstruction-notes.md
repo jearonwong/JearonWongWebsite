@@ -2914,3 +2914,29 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No new route, vendor mapping, ranking, procurement recommendation, certification, legal compliance proof, regulator approval, MPLP overclaim, or WP2/WP3 content introduced.
 
 **GAIC-R3D-3 Live Mobile Verification Status:** ✓ LIVE MOBILE VERIFIED / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.
+
+## GAIC-R3F Notes (May 13, 2026)
+
+**Scope:** Extended Ecosystem Semantic Mapping Layer.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `aa6425857f957b3e07cd369958b80199d05706c0` before R3F edits.
+2. Audited existing R3B/R3E routes and confirmed R3F should reuse existing pages for Anthropic / Claude, DeepSeek, Kimi, AI Coding Agent Auditability, Harness Engineering, and OpenAI Agents SDK rather than creating duplicates.
+3. Created `src/data/extendedEcosystems.ts` as the source-qualified registry for Claude Code, Qwen, Cursor / AI Coding Agents, AutoGen, MCP, A2A, and Semantic Kernel.
+4. Created `/mapping/extended-ecosystem/` as the extended ecosystem index.
+5. Created seven detail routes under `/mapping/extended-ecosystem/{slug}/`.
+6. Used official docs, official project pages, or official GitHub sources only for the ecosystem context.
+7. Included Semantic Kernel after official Microsoft Learn and Microsoft GitHub sources supported inclusion.
+8. Updated Concepts Map, Concept Core, Playbooks index/detail routes, GAIC-cited systems index, homepage JSON-LD, sitewide schema terms, secondary navigation, and `public/llms.txt` to connect the R3F layer.
+9. Added metadata and JSON-LD for the index and detail pages using WebPage, CollectionPage, TechArticle, ItemList, and BreadcrumbList patterns.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No vendor ranking, procurement recommendation, certification, legal compliance proof, regulator approval, vendor affiliation, product defect claim, fake external citation, search ranking claim, answer-engine pickup claim, unsupported current vendor feature claim, MPLP overclaim, or WP2/WP3 content introduced.
+- Extended ecosystem mappings are not GAIC-scored assessments.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
+
+**GAIC-R3F Status:** ✓ EXTENDED ECOSYSTEM SEMANTIC MAPPING COMPLETE / READY FOR DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER.

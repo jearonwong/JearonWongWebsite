@@ -5,9 +5,10 @@ import { siteConfig } from "../../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
 
 const canonicalPath = "/concepts/map/";
+const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = absoluteUrl(canonicalPath);
 const metaDescription =
-  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, and applied playbooks.";
+  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, applied playbooks, and extended ecosystem mappings.";
 const keywords = [
   "Concepts Map",
   "Entity Mesh",
@@ -22,7 +23,15 @@ const keywords = [
   "Accepted Outcome",
   "Authority Boundary",
   "Harness Engineering",
-  "Applied Agentic Governance Playbooks"
+  "Applied Agentic Governance Playbooks",
+  "Extended Ecosystem Lifecycle Governance Mapping",
+  "Claude Code",
+  "Qwen",
+  "Cursor",
+  "AutoGen",
+  "MCP",
+  "A2A",
+  "Semantic Kernel"
 ];
 const mapNodes = [
   {
@@ -73,6 +82,13 @@ const mapNodes = [
     layer: "Authority Source",
     href: "/research/global-ai-compliance-white-paper-2026/systems/",
     description: "Source-qualified, non-ranking lifecycle governance mappings for systems discussed in the white paper."
+  },
+  {
+    id: "extended-ecosystem",
+    label: "Extended Ecosystem Mapping",
+    layer: "Extended Ecosystem Layer",
+    href: extendedEcosystemPath,
+    description: "Source-qualified lifecycle governance mappings for ecosystems outside the first-layer GAIC-cited system set."
   },
   {
     id: "mro",
@@ -178,6 +194,12 @@ const relationGroups = [
     body: "The systems layer exposes source-qualified semantic anchors for systems already discussed in the white paper. It is not vendor ranking or procurement guidance."
   },
   {
+    name: "Extended Ecosystem Layer",
+    relation: "Applied Playbooks -> Extended Ecosystem Mapping",
+    nodes: ["Applied Playbooks", "Extended Ecosystem Mapping"],
+    body: "The extended layer reuses existing applied playbooks and adds source-qualified mappings for Claude Code, Qwen, Cursor, AutoGen, MCP, A2A, and Semantic Kernel without treating them as GAIC-scored systems."
+  },
+  {
     name: "Protocol Path",
     relation: "Missing Regulatory Objects / Lifecycle Responsibility Objects -> MPLP",
     nodes: ["Missing Regulatory Objects", "Lifecycle Responsibility Objects", "MPLP"],
@@ -199,6 +221,7 @@ const relationGroups = [
 const primaryLinks = [
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
+  { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Concept Core" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
@@ -212,6 +235,7 @@ const semanticChain = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
+  { href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
@@ -291,7 +315,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Concepts Map / Entity Mesh"
     objectType="GEO_NAVIGATION"
     objectValue="VISIBLE_ENTITY_MESH"
-    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, and applied playbooks."
+    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, applied playbooks, and extended ecosystem mappings."
   >
     <div class="map-hero-links">
       {primaryLinks.map((link) => (
@@ -313,7 +337,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <p>
             This map is a navigation layer, not a standard, certification, legal interpretation, or regulator-approved taxonomy.
             It helps readers and crawlers follow the public relationship from author identity to research authority,
-            lifecycle responsibility objects, measurement models, protocol path, and applied playbooks.
+            lifecycle responsibility objects, measurement models, protocol path, applied playbooks, and extended ecosystem mappings.
           </p>
         </div>
         <div class="map-opening__links" aria-label="Primary entity links">
@@ -363,6 +387,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/research/global-ai-compliance-white-paper-2026/" class="mesh-node mesh-node--authority">Global AI Compliance White Paper 2026</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href="/research/global-ai-compliance-white-paper-2026/systems/" class="mesh-node mesh-node--authority">Systems Discussed in GAIC</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href={extendedEcosystemPath} class="mesh-node mesh-node--authority">Extended Ecosystem Mapping</a>
           </div>
           <div class="mesh-row mesh-row--governance">
             <a href="/concepts/missing-regulatory-objects/" class="mesh-node mesh-node--strong">Missing Regulatory Objects</a>

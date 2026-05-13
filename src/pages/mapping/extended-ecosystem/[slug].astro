@@ -1,0 +1,501 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
+import {
+  extendedEcosystemBoundary,
+  extendedEcosystemIndexPath,
+  extendedEcosystems,
+  getExtendedEcosystemBySlug
+} from "../../../data/extendedEcosystems";
+import { siteConfig } from "../../../data/site";
+
+export function getStaticPaths() {
+  return extendedEcosystems.map((ecosystem) => ({
+    params: { slug: ecosystem.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const ecosystem = slug ? getExtendedEcosystemBySlug(slug) : undefined;
+
+if (!ecosystem) {
+  throw new Error(`Unknown extended ecosystem mapping: ${slug}`);
+}
+
+const canonicalPath = `${extendedEcosystemIndexPath}${ecosystem.slug}/`;
+const pageUrl = absoluteUrl(canonicalPath);
+const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
+const systemsIndexPath = "/research/global-ai-compliance-white-paper-2026/systems/";
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const metaDescription = `${ecosystem.name} lifecycle governance mapping for Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering.`;
+const relatedLinks = [
+  { href: whitePaperHub, label: "GAIC white paper hub" },
+  { href: systemsIndexPath, label: "GAIC-cited systems index" },
+  { href: extendedEcosystemIndexPath, label: "Extended ecosystem index" },
+  { href: conceptCorePath, label: "Agentic Lifecycle Governance" },
+  { href: "/concepts/missing-regulatory-objects/", label: "MRO" },
+  { href: "/concepts/rccs-m/", label: "RCCS-M" },
+  { href: "/concepts/alcs/", label: "ALCS" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+  { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+  { href: "/concepts/map/", label: "Concepts Map" },
+  { href: "/playbooks/", label: "Applied Playbooks" },
+  { href: "/playbooks/ai-coding-agent-auditability/", label: "AI Coding Agent Auditability" },
+  { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering" }
+];
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: `${ecosystem.name} Lifecycle Governance Mapping`,
+  description: metaDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#mapping`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  }
+};
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#mapping`,
+  headline: `${ecosystem.name}: lifecycle governance mapping`,
+  description: metaDescription,
+  url: pageUrl,
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  datePublished: "2026-05-13",
+  dateModified: "2026-05-13",
+  keywords: ecosystem.keywords,
+  about: ecosystem.keywords.map((keyword) => ({
+    "@type": "Thing",
+    name: keyword
+  })),
+  mentions: [
+    {
+      "@type": "Thing",
+      name: ecosystem.name
+    },
+    {
+      "@type": "Thing",
+      name: "Agentic Lifecycle Governance"
+    },
+    {
+      "@type": "Thing",
+      name: "Missing Regulatory Objects"
+    },
+    {
+      "@type": "Thing",
+      name: "RCCS-M"
+    },
+    {
+      "@type": "Thing",
+      name: "ALCS"
+    },
+    {
+      "@type": "Thing",
+      name: "Harness Engineering"
+    }
+  ],
+  isPartOf: {
+    "@type": "CollectionPage",
+    name: "Extended Ecosystem Lifecycle Governance Mapping",
+    url: absoluteUrl(extendedEcosystemIndexPath)
+  },
+  isBasedOn: [
+    {
+      "@type": "WebPage",
+      name: "Agentic Lifecycle Governance",
+      url: absoluteUrl(conceptCorePath)
+    },
+    ...ecosystem.officialSources.map((source) => ({
+      "@type": "WebPage",
+      name: source.label,
+      url: source.url
+    }))
+  ]
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Extended Ecosystem", path: extendedEcosystemIndexPath },
+  { name: ecosystem.name, path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title={`${ecosystem.name} Lifecycle Governance Mapping`}
+  description={metaDescription}
+  shareTitle={`${ecosystem.name} Lifecycle Governance Mapping`}
+  shareDescription={metaDescription}
+  twitterTitle={`${ecosystem.name} Governance Mapping`}
+  twitterDescription={metaDescription}
+  canonicalPath={canonicalPath}
+  ogType="article"
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
+  keywords={ecosystem.keywords}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt={`${ecosystem.name} lifecycle governance mapping by Jearon Wong`}
+>
+  <RegistryPageHero
+    title={ecosystem.name}
+    objectType="EXTENDED_ECOSYSTEM_MAPPING"
+    objectValue={ecosystem.category.toUpperCase()}
+    lead={ecosystem.summary}
+  >
+    <div class="ecosystem-hero-links">
+      <a href={extendedEcosystemIndexPath} class="registry-annotation ecosystem-hero-link">
+        <span class="registry-key">BACK_TO</span>: <span class="registry-value">EXTENDED ECOSYSTEM</span>
+      </a>
+      <a href={conceptCorePath} class="registry-annotation ecosystem-hero-link">
+        <span class="registry-key">LENS</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
+      </a>
+      <a href="/playbooks/harness-engineering-for-ai-agents/" class="registry-annotation ecosystem-hero-link">
+        <span class="registry-key">METHOD</span>: <span class="registry-value">HARNESS ENGINEERING</span>
+      </a>
+    </div>
+  </RegistryPageHero>
+
+  <div class="zone-b page-body page-body--standard">
+    <article class="shell ecosystem-detail-shell">
+      <aside class="registry-chassis ecosystem-sidebar" aria-label={`${ecosystem.name} source record`}>
+        <div class="registry-annotation">
+          <span class="registry-key">SOURCE_QUALIFIED</span>
+        </div>
+        <p class="sidebar-title">{ecosystem.name}</p>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Category</p>
+          <p>{ecosystem.category}</p>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Source status</p>
+          <p>{ecosystem.sourceStatus}</p>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Official sources</p>
+          <div class="sidebar-links">
+            {ecosystem.officialSources.map((source) => <a href={source.url}>{source.label}</a>)}
+          </div>
+        </div>
+      </aside>
+
+      <div class="ecosystem-article">
+        <section class="registry-chassis boundary-note" aria-labelledby="boundary-title">
+          <div class="registry-annotation">
+            <span class="registry-key">BOUNDARY_NOTE</span>
+          </div>
+          <h2 id="boundary-title">Independent lifecycle governance lens.</h2>
+          <p>{ecosystem.boundary}</p>
+          <p>{extendedEcosystemBoundary}</p>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Ecosystem context</h2>
+          <p>{ecosystem.ecosystemContext}</p>
+          <p class="source-caveat">{ecosystem.sourceBasis}</p>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Lifecycle governance questions</h2>
+          <ol class="question-list">
+            {ecosystem.lifecycleQuestions.map((question) => (
+              <li>{question}</li>
+            ))}
+          </ol>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Related Missing Regulatory Objects</h2>
+          <p>
+            These concepts are governance lenses for the mapping. This page does not claim the
+            ecosystem has or lacks a feature unless the statement is supported by an official source.
+          </p>
+          <div class="mro-list">
+            {ecosystem.relatedMros.map((item) => <span>{item}</span>)}
+          </div>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>RCCS-M / ALCS relevance</h2>
+          <p>{ecosystem.rccsAlcsRelevance}</p>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Harness Engineering relevance</h2>
+          <p>{ecosystem.harnessRelevance}</p>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Protocol path</h2>
+          <p>{ecosystem.protocolPath}</p>
+        </section>
+
+        <section class="ecosystem-section">
+          <h2>Official sources consulted</h2>
+          <ul class="source-list">
+            {ecosystem.officialSources.map((source) => (
+              <li>
+                <a href={source.url}>{source.label}</a>
+                <span>{source.note}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="relation-grid" aria-label={`${ecosystem.name} related links`}>
+          <article class="registry-chassis relation-panel">
+            <div class="registry-annotation">
+              <span class="registry-key">RELATED_LINKS</span>
+            </div>
+            <h2>Related source and concept routes</h2>
+            <div class="term-link-grid">
+              {relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          </article>
+        </section>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .ecosystem-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .ecosystem-hero-link {
+    text-decoration: none;
+  }
+
+  .ecosystem-hero-link:hover .registry-value {
+    color: var(--accent-signal);
+  }
+
+  .ecosystem-detail-shell {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1080px;
+  }
+
+  .ecosystem-sidebar {
+    position: sticky;
+    top: 7rem;
+    padding: var(--registry-card-padding);
+  }
+
+  .sidebar-title {
+    margin: 0;
+    font-family: var(--font-display);
+    color: var(--current-text);
+    font-size: 1.25rem;
+    font-weight: 760;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  .sidebar-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .sidebar-label {
+    margin: 0 0 0.75rem;
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-group p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .sidebar-links,
+  .mro-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .sidebar-links a {
+    color: var(--accent-signal);
+    font-size: 0.86rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .ecosystem-article {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .boundary-note,
+  .relation-panel {
+    padding: var(--registry-panel-padding);
+  }
+
+  .boundary-note {
+    border-left: 3px solid var(--accent-proof);
+  }
+
+  .boundary-note h2,
+  .ecosystem-section h2,
+  .relation-panel h2 {
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: 1.45rem;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  .boundary-note p,
+  .ecosystem-section p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+
+  .boundary-note p + p,
+  .ecosystem-section p + p {
+    margin-top: 0.85rem;
+  }
+
+  .ecosystem-section {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .source-caveat {
+    color: var(--current-text) !important;
+  }
+
+  .question-list {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding-left: 1.35rem;
+  }
+
+  .question-list li {
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 0.2rem;
+  }
+
+  .mro-list span {
+    display: inline-flex;
+    padding: 0.3rem 0.45rem;
+    border: 1px solid var(--current-line);
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .source-list {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .source-list li {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .source-list a {
+    color: var(--accent-signal);
+    font-weight: 760;
+    text-decoration: none;
+  }
+
+  .source-list span {
+    color: var(--current-muted);
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .relation-grid {
+    display: grid;
+  }
+
+  .term-link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+  }
+
+  .term-link-grid a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .sidebar-links a:hover,
+  .source-list a:hover,
+  .term-link-grid a:hover {
+    color: var(--current-text);
+  }
+
+  @media (max-width: 920px) {
+    .ecosystem-detail-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .ecosystem-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ecosystem-detail-shell {
+      gap: 2rem;
+    }
+
+    .ecosystem-sidebar,
+    .boundary-note,
+    .relation-panel {
+      padding: var(--registry-card-padding);
+    }
+
+    .boundary-note p,
+    .ecosystem-section p {
+      font-size: 0.98rem;
+      line-height: 1.68;
+    }
+  }
+</style>

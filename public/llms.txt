@@ -20,6 +20,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Applied layer: Applied Agentic Governance Playbooks.
 - Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
 - GAIC-Cited Systems: source-qualified, non-ranking lifecycle governance mappings for systems discussed in the Global AI Compliance White Paper 2026.
+- Extended Ecosystem Mapping: source-qualified, non-scored lifecycle governance mappings for Claude Code, Qwen, Cursor / AI coding agents, AutoGen, MCP, A2A, and Semantic Kernel.
 
 Execution is not Delivery.
 
@@ -60,6 +61,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Agentic Lifecycle Governance Concept Core: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
 - Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
 - Applied Agentic Governance Playbooks: https://www.jearonwong.com/playbooks/
+- Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
 - Concepts index: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
@@ -76,11 +78,13 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 - Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
   GAIC-cited systems layer for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI. Source-qualified, provisional, non-ranking, non-procurement, and not official vendor documentation.
+- Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
+  Source-qualified, non-GAIC-scored mappings for ecosystems outside the first-layer GAIC-cited system set: Claude Code, Qwen, Cursor / AI coding agents, AutoGen, MCP, A2A, and Semantic Kernel. These mappings reuse existing applied playbooks where possible and are not vendor rankings, procurement recommendations, certifications, legal compliance proof, official vendor documentation, or vendor affiliations.
 
 ## Core Concepts
 
 - Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
-  Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, and applied playbooks. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
+  Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, applied playbooks, and extended ecosystem mappings. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
 - AI Agent Lifecycle: https://www.jearonwong.com/concepts/ai-agent-lifecycle/
 - Agentic Delivery: https://www.jearonwong.com/concepts/agentic-delivery/
 - Agentic Lifecycle Governance: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
@@ -123,6 +127,19 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Independent lifecycle governance checklist for Kimi-based workflows. It avoids current feature claims and does not imply affiliation with Moonshot AI / Kimi, endorsement, certification, or procurement advice.
 - Harness Engineering for AI Agents: https://www.jearonwong.com/playbooks/harness-engineering-for-ai-agents/
   Defines Harness Engineering as wrapping agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, and accepted outcome.
+
+## Extended Ecosystem Lifecycle Governance Mapping
+
+- Extended Ecosystem index: https://www.jearonwong.com/mapping/extended-ecosystem/
+  Independent lifecycle governance mappings for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems.
+- Claude Code: https://www.jearonwong.com/mapping/extended-ecosystem/claude-code/
+- Qwen: https://www.jearonwong.com/mapping/extended-ecosystem/qwen/
+- Cursor / AI Coding Agents: https://www.jearonwong.com/mapping/extended-ecosystem/cursor-ai-coding-agents/
+- AutoGen: https://www.jearonwong.com/mapping/extended-ecosystem/autogen/
+- MCP: https://www.jearonwong.com/mapping/extended-ecosystem/mcp/
+- A2A: https://www.jearonwong.com/mapping/extended-ecosystem/a2a/
+- Semantic Kernel: https://www.jearonwong.com/mapping/extended-ecosystem/semantic-kernel/
+  Boundary: source-qualified, non-GAIC-scored, non-ranking, non-procurement, and not official vendor documentation or vendor affiliation.
 
 ## Supporting Concepts
 
