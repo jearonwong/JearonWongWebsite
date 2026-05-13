@@ -3021,3 +3021,35 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - Schema reflects visible page content and does not add hidden claims.
 
 **GAIC-R3H-0 Status:** ✓ SITEWIDE SCHEMA AND JSON-LD COVERAGE COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS.
+
+## GAIC-R3I Notes (May 13, 2026)
+
+**Scope:** Primary Semantic Source Monitoring Ops.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `b5eabc485616c65f19898ed32163b37e5903cb29` before R3I edits.
+2. Created a Search / AI answer-engine query matrix with 60 unique queries across 9 engines: Google Search, Google AI Overview, Bing, Copilot, Perplexity, ChatGPT, Claude, Gemini, and Grok.
+3. Exported the query matrix to Markdown and CSV with 540 total test rows.
+4. Kept all answer-engine results as `to be tested` unless evidence is actually recorded.
+5. Created Google Search Console and Bing Webmaster indexing/submission checklist with priority URL groups.
+6. Created a live index presence baseline. Broad homepage discovery was observed for a domain/branded query; `site:` operator coverage and fine-grained URL/concept visibility remain manual/Search Console verification required.
+7. Created an authority signal / backlink execution board with guardrails against fake backlinks, fake citations, bought spam links, regulator endorsement implication, and vendor affiliation implication.
+8. Created a content distribution pack index for launch/distribution assets without drafting or claiming publication of posts.
+9. Created a primary semantic source metrics spec for technical, search, answer-engine, authority, and conversion metrics.
+10. Deferred a public monitoring page until measured data exists.
+
+**Artifact discipline:**
+
+- R3I adds reports/specs only.
+- No public semantic content pages were created.
+- Sealed white paper artifacts remain unchanged.
+- Responsive public HTML checksum remains `2693eb11826e9930e7c2d0587a67d5e2aada3c5999fadce4c70e1e0d9f9cfb06`.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+
+**Boundary discipline:**
+
+- No claim that JearonWong.com is already a primary semantic source was introduced.
+- No search ranking improvement, answer-engine pickup, backlink, citation, mention, indexing status, certification, regulator approval, legal compliance proof, procurement recommendation, vendor ranking, vendor affiliation, or MPLP overclaim was fabricated or introduced.
+
+**GAIC-R3I Status:** ✓ PRIMARY SEMANTIC SOURCE MONITORING OPS COMPLETE / READY FOR LAUNCH DISTRIBUTION EXECUTION.

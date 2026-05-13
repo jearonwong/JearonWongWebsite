@@ -2257,3 +2257,34 @@ Remaining work:
 - Primary Semantic Source Monitoring Ops remains future work.
 
 **GAIC-R3H-0 Status:** ✓ SITEWIDE SCHEMA AND JSON-LD COVERAGE COMPLETE / READY FOR PRIMARY SEMANTIC SOURCE MONITORING OPS
+
+---
+
+## GAIC-R3I Known Issues
+
+### Primary Semantic Source Monitoring Ops Complete
+
+R3I switches from site construction to monitoring and authority activation operations. It does not mark JearonWong.com as an achieved primary semantic source; it creates the measurement and execution system needed to test that goal.
+
+Validation scope:
+
+- Answer-engine query matrix created with 60 unique queries across 9 engines, producing 540 test rows.
+- All answer-engine matrix rows default to `to be tested` unless actual evidence is recorded.
+- Indexing/submission checklist created for Google Search Console and Bing Webmaster Tools.
+- Live index presence baseline created with only observed evidence recorded; broad homepage discovery was observed for a domain/branded query, while site-operator coverage, fine-grained URL, and concept presence remain manual/Search Console verification required.
+- Authority signal execution board created as an execution board, not backlink evidence.
+- Distribution pack index created as a drafting plan, not published-post evidence.
+- Metrics spec created for technical, search, answer-engine, authority, and conversion measurement.
+- Public monitoring page decision recorded: defer until measured data exists.
+
+Boundary discipline:
+
+- No fake answer-engine results, backlinks, citations, mentions, indexing status, ranking improvement claims, primary semantic source achievement claims, legal advice, certification, regulator approval, vendor ranking, procurement recommendation, or vendor affiliation claims were introduced.
+- Sealed white paper artifacts, responsive public HTML checksum, white paper content, RCCS-T/RCCS-M/ALCS scores, and methodology remain unchanged.
+
+Remaining work:
+
+- Launch Distribution Execution remains future work.
+- Search Console/Bing Webmaster submission and answer-engine testing require owner execution and evidence capture.
+
+**GAIC-R3I Status:** ✓ PRIMARY SEMANTIC SOURCE MONITORING OPS COMPLETE / READY FOR LAUNCH DISTRIBUTION EXECUTION
