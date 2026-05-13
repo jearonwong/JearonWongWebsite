@@ -2065,3 +2065,31 @@ Remaining work:
 
 - Extended ecosystem mapping for systems outside the first GAIC-cited layer remains future work.
 - Future work must use official-source research before adding current product/platform facts.
+
+---
+
+## GAIC-R3D-3 Known Issues
+
+### Responsive HTML Web Edition Complete
+
+R3D-3 corrected a publication usability blocker discovered after R3E: the public white paper HTML route was too desktop/print-first for reliable mobile reading. This wave does not roll back R3E; it makes the GAIC white paper HTML route suitable as a public web-reading edition before further external semantic expansion.
+
+Validation scope:
+
+- Public white paper HTML now has screen-only responsive CSS, mobile-readable typography, fluid publication width, mobile cover scaling, stacked TOC/grids, responsive media, and scroll-contained dense tables/charts/code blocks.
+- A minimal web-edition nav links back to the white paper hub and clarifies that PDF/DOCX are sealed separately.
+- Global site CSS now includes body overflow guards, long-text wrapping, media height normalization, and tighter mobile shell widths.
+- The mobile drawer uses transform-based offcanvas behavior instead of negative `right` positioning.
+- Google Fonts load through preload-onload swap with a `noscript` fallback.
+- Local Chrome headless QA at 375px, 768px, and 1440px found no body-level horizontal overflow for the white paper route.
+- Sitewide 375px QA covered homepage, GAIC hub, Concepts index, Concepts Map, Systems index, OpenAI Agents SDK system page, Playbooks, About, and Projects with no body-level horizontal overflow.
+- Sealed publication candidate HTML/PDF/DOCX/log hashes remain unchanged.
+- Public PDF/DOCX/log hashes remain unchanged.
+- Public responsive HTML web edition checksum is updated to `e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c`.
+
+Remaining work:
+
+- Production deployment should be verified after push so the live HTML route can be checked on real mobile devices and CDN/cache behavior.
+- Extended ecosystem mapping remains future work and should proceed only after official-source review.
+
+**GAIC-R3D-3 Status:** ✓ RESPONSIVE HTML WEB EDITION COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING

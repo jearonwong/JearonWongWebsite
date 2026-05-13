@@ -937,9 +937,370 @@ th, td {
   border-left-color: var(--evidence);
 }
 
+/* GAIC-R3D-3 responsive web-reading edition patch.
+   This is screen-only CSS for the public HTML reading artifact. The sealed
+   publication candidate and print/PDF layout remain governed by the existing
+   print styles above. */
+@media screen {
+  html {
+    background: #f1f5f9;
+    overflow-x: hidden;
+    scroll-padding-top: 4.5rem;
+  }
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .web-edition-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 1040px);
+    margin: 0 auto;
+    padding: 0.72rem clamp(1rem, 3vw, 1.35rem);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    color: var(--slate);
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .web-edition-nav a {
+    display: inline-flex;
+    min-height: 2.35rem;
+    align-items: center;
+    color: var(--registry);
+  }
+
+  .web-edition-nav span {
+    color: var(--status);
+  }
+
+  .publication {
+    width: min(100%, 1040px);
+    max-width: 1040px;
+    overflow-x: clip;
+    padding-left: clamp(1.25rem, 5vw, 74px);
+    padding-right: clamp(1.25rem, 5vw, 74px);
+  }
+
+  .source-section.chapter,
+  .source-section.appendix {
+    content-visibility: auto;
+    contain-intrinsic-size: 1200px;
+  }
+
+  .source-section,
+  .front-extra,
+  .generated-toc,
+  .figure-card,
+  .chart-card,
+  .heatmap-card,
+  .table-block,
+  .template-code,
+  .code-block,
+  .object-card,
+  .reference-item,
+  .rubric-card,
+  .system-profile-row-card {
+    max-width: 100%;
+  }
+
+  .table-block,
+  .heatmap-card,
+  .score-overview-table,
+  .chart-card {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .table-block::after,
+  .heatmap-card::after,
+  .score-overview-table::after {
+    content: "Scroll table horizontally if needed";
+    display: none;
+    margin-top: 0.25rem;
+    color: var(--status);
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  img,
+  svg,
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .code-block pre,
+  .template-code pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .publication {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(1.25rem, 4vw, 2rem) 3rem;
+    box-shadow: none;
+  }
+
+  .cover-page.professional-shell {
+    margin: 0 calc(-1 * clamp(1.25rem, 4vw, 2rem)) 2rem;
+    padding: clamp(3rem, 8vw, 4rem) clamp(1.25rem, 5vw, 2.5rem);
+    min-height: auto;
+  }
+
+  .cover-frame {
+    min-height: auto;
+    padding: clamp(1.4rem, 5vw, 2.5rem);
+  }
+
+  .cover-page.professional-shell h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 10vw, 3.4rem);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  .cover-page.professional-shell .cover-subtitle {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.35;
+  }
+
+  .cover-page.professional-shell .thesis-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cover-page.professional-shell .cover-meta,
+  .toc-grid,
+  .overview-grid,
+  .reader-grid,
+  .chapter-finding-panel,
+  .evaluation-finding,
+  .evaluation-profile-grid,
+  .source-summary-grid,
+  .object-card dl,
+  .system-profile-row-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .generated-toc,
+  .professional-notice,
+  .figure-card,
+  .chart-card,
+  .heatmap-card,
+  .callout,
+  .important-notice,
+  .object-card,
+  .reference-item {
+    padding: clamp(0.9rem, 4vw, 1.15rem);
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 8vw, 2.45rem);
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 5.5vw, 1.8rem);
+    line-height: 1.18;
+  }
+
+  h3 {
+    font-size: clamp(1.08rem, 4vw, 1.25rem);
+  }
+
+  .profile-postures,
+  .score-legend {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rubric-card {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  .web-edition-nav {
+    align-items: flex-start;
+    padding: 0.65rem 1rem;
+    font-size: 0.66rem;
+  }
+
+  .web-edition-nav span {
+    width: 100%;
+  }
+
+  .publication {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .cover-page.professional-shell {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 2rem 1rem;
+  }
+
+  .cover-frame {
+    padding: 1.15rem;
+  }
+
+  .cover-page.professional-shell .thesis-strip,
+  .profile-postures,
+  .score-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-page.professional-shell .thesis-strip span {
+    min-height: 2.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toc-grid ul,
+  .generated-toc ol,
+  .generated-toc ul,
+  ul,
+  ol {
+    margin-left: 1.05rem;
+  }
+
+  .table-caption {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .table-block table,
+  .heatmap-card table,
+  .score-overview-table table {
+    min-width: 680px;
+    width: max-content;
+    max-width: none;
+  }
+
+  .table-block::after,
+  .heatmap-card::after,
+  .score-overview-table::after {
+    display: block;
+  }
+
+  th,
+  td {
+    min-width: 96px;
+    padding: 0.58rem 0.62rem;
+    font-size: 0.86rem;
+    hyphens: none;
+  }
+
+  th {
+    font-size: 0.82rem;
+  }
+
+  .table-compact th,
+  .table-compact td,
+  .appendix-mode .table-compact th,
+  .appendix-mode .table-compact td {
+    font-size: 0.82rem;
+    padding: 0.52rem 0.56rem;
+  }
+
+  .chart-card .chart-svg {
+    min-width: 620px;
+    max-width: none;
+  }
+
+  .chart-card {
+    padding-bottom: 1.15rem;
+  }
+
+  .figure-flow {
+    align-items: stretch;
+  }
+
+  .flow-node {
+    width: 100%;
+    min-height: 2.45rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .flow-arrow {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rubric-card {
+    grid-template-columns: 1fr;
+  }
+
+  .rubric-score {
+    min-height: 2.5rem;
+    justify-content: flex-start;
+    padding-left: 0.8rem;
+  }
+
+  .system-profile-row-card dt,
+  .system-profile-row-card dd,
+  .object-card dt,
+  .object-card dd {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cover-page.professional-shell h1 {
+    font-size: clamp(2rem, 13vw, 2.75rem);
+  }
+
+  .cover-meta span,
+  .cover-meta strong,
+  .toc-grid li,
+  .reference-item p,
+  .source-status-notes li {
+    overflow-wrap: anywhere;
+  }
+}
+
 </style>
 </head>
 <body>
+<nav class="web-edition-nav" aria-label="White paper web edition navigation">
+  <a href="/research/global-ai-compliance-white-paper-2026/">Back to white paper hub</a>
+  <span>Responsive public web-reading edition · PDF/DOCX sealed separately</span>
+</nav>
 <main class="publication">
 
 <section class="cover-page professional-shell">

@@ -215,14 +215,16 @@ const drawerSecondaryNav = secondaryNav.filter(
   .drawer-panel {
     position: fixed;
     top: 0;
-    right: -320px;
-    width: 300px;
+    right: 0;
+    width: min(300px, calc(100vw - 2rem));
+    max-width: 100vw;
     height: 100dvh;
     background: var(--bg-monolith);
     border-left: 1px solid var(--border-registry);
     z-index: 1003;
     padding: var(--registry-card-padding);
-    transition: right 0.3s ease;
+    transform: translateX(110%);
+    transition: transform 0.3s ease;
     overflow-y: auto;
     visibility: hidden;
   }
@@ -289,7 +291,7 @@ const drawerSecondaryNav = secondaryNav.filter(
     display: block;
   }
   .drawer-checkbox:checked ~ .drawer-panel {
-    right: 0;
+    transform: translateX(0);
     visibility: visible;
   }
   .drawer-checkbox:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {

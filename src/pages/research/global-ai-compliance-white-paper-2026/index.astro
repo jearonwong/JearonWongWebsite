@@ -20,8 +20,8 @@ const shaRows = [
     value: "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643"
   },
   {
-    label: "HTML",
-    value: "0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af"
+    label: "HTML web edition",
+    value: "e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c"
   },
   {
     label: "DOCX",
@@ -274,7 +274,7 @@ const definedTermSetJsonLd = {
           <a href={`${assetBase}/global-ai-compliance-white-paper-2026.html`} class="artifact-card">
             <span class="artifact-kind">HTML</span>
             <strong>Read full HTML</strong>
-            <span>HTML/PDF visual authority</span>
+            <span>Responsive web-reading edition</span>
           </a>
           <a href={`${assetBase}/global-ai-compliance-white-paper-2026.docx`} class="artifact-card">
             <span class="artifact-kind">DOCX</span>
@@ -355,6 +355,10 @@ const definedTermSetJsonLd = {
             ))}
           </div>
         </div>
+        <p class="integrity-note">
+          The PDF and DOCX retain their sealed publication-candidate hashes. The public HTML file is
+          the responsive web-reading edition derived from the sealed content and carries its own checksum.
+        </p>
       </section>
 
       <section class="release-section release-grid" aria-labelledby="context-title">
@@ -660,6 +664,14 @@ const definedTermSetJsonLd = {
     gap: 1.25rem;
   }
 
+  .integrity-note {
+    max-width: var(--lead-measure);
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
   .commit-ledger,
   .checksum-table {
     border: 1px solid var(--current-border);
@@ -729,6 +741,17 @@ const definedTermSetJsonLd = {
 
     .release-hero h1 {
       max-width: 11ch;
+    }
+
+    .release-hero,
+    .release-grid,
+    .integrity-grid,
+    .release-meta-panel,
+    .concept-ledger,
+    .systems-link-panel,
+    .checksum-table,
+    .commit-ledger {
+      min-width: 0;
     }
   }
 

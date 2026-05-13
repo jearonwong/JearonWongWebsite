@@ -2855,3 +2855,37 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - Extended ecosystem mapping for systems outside the GAIC-cited first layer was not started.
 
 **GAIC-R3E Status:** ✓ GAIC-CITED SYSTEMS SEMANTIC MAPPING LAYER COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.
+
+## GAIC-R3D-3 Notes (May 13, 2026)
+
+**Scope:** Responsive white paper HTML web-reading edition plus sitewide mobile and performance hardening.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `45cd79181237deb28026a92472258c13588687cd` before R3D-3 edits.
+2. Audited the public white paper HTML and found a print/desktop-first publication shell, large cover spacing, fixed-feeling grids, dense tables/charts/code blocks, and limited mobile screen overrides.
+3. Preserved sealed publication candidate artifacts under `gaic_v032_work/source_r3/out/publication_candidate/`.
+4. Patched only the public HTML web-reading edition with screen-only responsive CSS, fluid publication width, readable mobile typography, mobile cover scaling, stacked TOC/grids, scroll-contained tables/charts/code blocks, responsive figures, and chapter/appendix `content-visibility`.
+5. Added a minimal web-edition navigation strip linking back to the GAIC white paper hub.
+6. Updated the public HTML checksum to `e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c` while preserving the sealed HTML candidate hash `0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af`.
+7. Updated the GAIC hub artifact card and integrity note to distinguish the responsive public HTML web edition from sealed PDF/DOCX formal artifacts.
+8. Added `responsive-html-web-edition-note.md` to document sealed/public artifact roles and hashes.
+9. Applied sitewide mobile/performance hardening: overflow guards, long-text wrapping, media height normalization, mobile shell tightening, transform-based mobile drawer, and font preload-onload swap.
+10. Ran local Chrome headless responsive QA for the white paper at 375px, 768px, and 1440px and for representative sitewide routes at 375px; no body-level horizontal overflow was found.
+
+**Artifact integrity:**
+
+- Sealed HTML candidate: `0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af` unchanged.
+- Sealed/public PDF: `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643` unchanged.
+- Sealed/public DOCX: `b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa` unchanged.
+- Sealed/public generation log: `414b912cd4fd190ab50a0a5b9fb09476d6d56628edcad281e2ac05776fc8da3e` unchanged.
+- Public responsive HTML web edition: `e36a7a209e499c47c422620dce32035f4945c9cffb9b6a549180310c9bcfd42c`.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper prose, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No vendor ranking, procurement recommendation, certification, legal compliance proof, regulator approval, vendor endorsement, vendor affiliation, product defect claim, fake external citation, search ranking claim, answer-engine pickup claim, unsupported current vendor feature claim, MPLP overclaim, or WP2/WP3 content introduced.
+- R3E remains present on `main`; R3D-3 closes the later-discovered publication usability blocker before future extended ecosystem mapping.
+
+**GAIC-R3D-3 Status:** ✓ RESPONSIVE HTML WEB EDITION COMPLETE / READY FOR EXTENDED ECOSYSTEM SEMANTIC MAPPING.

@@ -65,6 +65,7 @@ html {
   min-width: 320px;
   background: var(--bg-monolith);
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -73,6 +74,7 @@ body {
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 img,
@@ -81,6 +83,7 @@ video,
 canvas {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -88,6 +91,17 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+p,
+li,
+dd,
+dt,
+blockquote,
+figcaption,
+code,
+pre {
   overflow-wrap: anywhere;
 }
 
@@ -162,6 +176,7 @@ button:focus-visible {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .shell--narrow {
@@ -199,6 +214,10 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .shell {
+    width: min(calc(100vw - 2rem), var(--inner-shell));
+  }
+
   .page-body {
     padding-top: var(--space-page-y-mobile) !important;
     padding-bottom: var(--space-page-y-mobile) !important;
@@ -206,6 +225,12 @@ button:focus-visible {
 
   .section-rhythm {
     padding: var(--space-section-y-mobile) 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .shell {
+    width: min(calc(100vw - 1.5rem), var(--inner-shell));
   }
 }
 
