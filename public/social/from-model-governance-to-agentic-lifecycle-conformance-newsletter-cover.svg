@@ -23,7 +23,7 @@
   </g>
 
   <g transform="translate(84 164)">
-    <text fill="#f1f5f9" font-family="Outfit, Inter, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="0">
+    <text fill="#f1f5f9" font-family="Inter Display, Inter, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="0">
       <tspan x="0" y="0">From Model Governance</tspan>
       <tspan x="0" y="76">to Agentic Lifecycle</tspan>
       <tspan x="0" y="152">Conformance</tspan>
