@@ -7,6 +7,8 @@ export const siteSemanticBaseline = {
     "Agentic Delivery names the missing layer between agent execution and accountable outcomes.",
   agenticDeliveryStackDefinition:
     "The Agentic Delivery Stack is a secondary reference architecture for turning agent execution into scoped, authorized, traceable, reviewable, and accepted outcomes.",
+  deterministicDeliveryDefinition:
+    "Deterministic Delivery is the discipline of making agentic work scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable across a lifecycle. It does not require deterministic model outputs.",
   mplpDefinition:
     "MPLP is the lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable.",
   cognitiveOSDefinition:
@@ -44,6 +46,13 @@ export const siteSemanticBaseline = {
     "Execution is not Delivery",
     "AI Agent Lifecycle",
     "Agentic Delivery",
+    "Deterministic Delivery",
+    "Rollbackable Agent Workflows",
+    "Verifiable AI Agents",
+    "Configurable Agent Governance",
+    "Agent Architecture Governance",
+    "Prompt Engineering vs Harness Engineering",
+    "Agentic Delivery Architecture Checklist",
     "MPLP",
     "Multi-Agent Lifecycle Governance",
     "Confirmation Boundary",
@@ -1112,6 +1121,312 @@ export const concepts: ConceptEntry[] = [
     ]
   },
   {
+    slug: "deterministic-delivery",
+    term: "Deterministic Delivery",
+    seoTitle: "Deterministic Delivery for AI Agents",
+    seoDescription:
+      "Deterministic Delivery defines how agentic work can be scoped, authorized, evidenced, reviewed, accepted, remediated, and rolled back without requiring deterministic model outputs.",
+    definition:
+      siteSemanticBaseline.deterministicDeliveryDefinition,
+    problem:
+      "The problem it names is the false target of making probabilistic model behavior look deterministic. Agent systems do not become reliable because every model token is predictable. They become delivery-grade when the lifecycle around the work is bounded enough to reconstruct scope, authority, evidence, review, acceptance, remediation, and rollback.",
+    whyExistingApproachesAreNotEnough:
+      "Prompt rules, eval scores, traces, and orchestration retries can improve local behavior, but they do not by themselves make work accountable. Deterministic Delivery requires explicit lifecycle boundaries: what work is in scope, who authorized it, what evidence supports it, who accepts it, and what state must be restored or remediated when it fails.",
+    whatItIsNot:
+      "Deterministic Delivery is not a claim that LLM outputs are deterministic, guaranteed, legally compliant, certified, regulator-approved, or failure-proof. It is a lifecycle engineering discipline for making agentic work bounded and reviewable.",
+    relationToLifecycle:
+      "Deterministic Delivery sits inside Agentic Delivery as the engineering practice layer. Agentic Delivery asks whether agent execution becomes accountable outcome; Deterministic Delivery asks whether the work can be scoped, configured, authorized, evidenced, reviewed, accepted, replayed, remediated, and rolled back within lifecycle boundaries.",
+    relationToGaic:
+      "The Global AI Compliance White Paper 2026 supplies the governance vocabulary behind this layer. MROs name the responsibility objects; RCCS-M asks whether those objects can be expressed; ALCS asks whether the lifecycle stays coherent. Deterministic Delivery is a practical engineering reading of those concepts, not a new score.",
+    evidenceRoute:
+      "The evidence route begins at Agentic Delivery, then follows Authority Boundary, Evidence Chain, Accepted Outcome, Rollbackable Agent Workflows, Verifiable AI Agents, Configurable Agent Governance, and Harness Engineering. MPLP is one protocol path for expressing those lifecycle states, not a required implementation.",
+    detailSections: [
+      {
+        title: "Why deterministic output is the wrong target",
+        body:
+          "Model outputs can vary even when the work should remain governable. The engineering target is not to pretend the model is deterministic; it is to make the lifecycle state deterministic enough to inspect: scope, configuration, authority, evidence, review, acceptance, remediation, rollback, and closure."
+      },
+      {
+        title: "What deterministic lifecycle boundaries provide",
+        body:
+          "Lifecycle boundaries give teams stable places to attach responsibility. A reviewer should be able to see what was requested, what context and tools were allowed, which authority boundary applied, what evidence was produced, what outcome was accepted, and how remediation or rollback would proceed."
+      },
+      {
+        title: "MPLP as one protocol path",
+        body:
+          "MPLP can express deterministic delivery states as protocol records around context, plan, confirmation, trace, evidence, acceptance, remediation, and rollback. It is not required, exclusive, certified, regulator-approved, or already an industry standard."
+      }
+    ],
+    lifecycleChain: ["Intent", "Configuration", "Authority", "Evidence", "Review", "Accepted outcome", "Remediation", "Rollback"],
+    relatedEssays: [
+      "agentic-ai-inflection-point-project-delivery",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "agent-orchestration-is-not-delivery"
+    ],
+    relatedProjects: ["mplp", "cognitive-os", "validation-lab"],
+    relatedTerms: [
+      "agentic-delivery",
+      "rollbackable-agent-workflows",
+      "verifiable-ai-agents",
+      "configurable-agent-governance",
+      "agent-architecture-governance",
+      "lifecycle-evidence",
+      "accepted-outcome",
+      "authority-boundary"
+    ],
+    keywords: [
+      "Deterministic Delivery",
+      "deterministic delivery AI agents",
+      "rollbackable AI agent workflows",
+      "verifiable AI agents",
+      "agentic delivery architecture",
+      "Harness Engineering"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "rollbackable-agent-workflows",
+    term: "Rollbackable Agent Workflows",
+    seoTitle: "Rollbackable Agent Workflows",
+    seoDescription:
+      "Rollbackable Agent Workflows define how agent work can return to a known lifecycle state with authority, evidence, accepted outcome, and remediation records intact.",
+    definition:
+      "Rollbackable Agent Workflows are agent workflows designed so failed, disputed, or unacceptable work can return to a known lifecycle state with scope, authority, evidence, accepted outcome, and remediation records intact. Rollback is a lifecycle state transition, not only retry or undo.",
+    problem:
+      "The problem it names is that many agent workflows can repeat or reverse operations without restoring responsibility. A retry may produce another output. Undo may revert a file. Neither proves which accepted outcome was affected, who authorized reversal, what evidence supports the decision, or when remediation is closed.",
+    whyExistingApproachesAreNotEnough:
+      "Version history, logs, retry loops, and manual review can support rollback, but they do not define rollback as a governance path. A rollbackable workflow needs authority boundary state, evidence state, accepted outcome state, substitution records, dispute handling, and remediation closure.",
+    whatItIsNot:
+      "Rollbackable Agent Workflows are not a guarantee that every consequence can be physically undone. They are a discipline for making the responsible lifecycle state recoverable, reviewable, and remediable.",
+    relationToLifecycle:
+      "Rollbackability sits inside Deterministic Delivery. A lifecycle-governed workflow must know what state existed before action, what changed, what evidence supports the change, whether the outcome was accepted, and what remediation closes the loop if the outcome is disputed or rejected.",
+    relationToGaic:
+      "Rollbackability maps directly to MROs such as evidence chain, accepted outcome, substitution record, dispute object, and remediation closure. RCCS-M asks whether these objects are expressible; ALCS asks whether they remain coherent through rollback and closure.",
+    evidenceRoute:
+      "The evidence route runs through the AI Agent Rollback and Verification playbook, Evidence Chain, Accepted Outcome, Authority Boundary, Deterministic Delivery, and the GAIC white paper.",
+    detailSections: [
+      {
+        title: "Rollback vs retry",
+        body:
+          "Retry repeats execution. Rollback restores lifecycle responsibility to a known reviewable state, including evidence of the original action, rollback trigger, authorization, verification, and remediation result."
+      },
+      {
+        title: "Rollback vs undo",
+        body:
+          "Undo may revert an artifact. Rollback must also account for responsibility: what was accepted, what is no longer accepted, who authorized the rollback, and what closure record proves the remediation state."
+      },
+      {
+        title: "Required evidence state",
+        body:
+          "A rollbackable workflow needs evidence for the original intent, active constraints, authorized plan, executed action, changed artifacts, review result, rollback trigger, verification result, and remediation closure."
+      }
+    ],
+    lifecycleChain: ["Known state", "Action", "Evidence", "Review", "Dispute or rejection", "Rollback", "Verification", "Remediation closure"],
+    relatedEssays: [
+      "agentic-ai-inflection-point-project-delivery",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
+    relatedProjects: ["mplp", "validation-lab"],
+    relatedTerms: [
+      "deterministic-delivery",
+      "verifiable-ai-agents",
+      "lifecycle-evidence",
+      "accepted-outcome",
+      "authority-boundary",
+      "alcs",
+      "rccs-m"
+    ],
+    keywords: [
+      "Rollbackable Agent Workflows",
+      "AI agent rollback",
+      "agent workflow rollback",
+      "remediation closure",
+      "Accepted Outcome",
+      "ALCS"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "verifiable-ai-agents",
+    term: "Verifiable AI Agents",
+    seoTitle: "Verifiable AI Agents",
+    seoDescription:
+      "Verifiable AI Agents are agent systems whose lifecycle state can be inspected across intent, authority, evidence, review, accepted outcome, dispute, replay, and remediation.",
+    definition:
+      "Verifiable AI Agents are agents or agent systems whose lifecycle state can be inspected, replayed, challenged, reviewed, and accepted. Verification is about the work lifecycle, not only output quality.",
+    problem:
+      "The problem it names is that a correct-looking answer can still be unverifiable as work. Without evidence chain, authority boundary, role responsibility, trace or replay path, dispute state, and accepted outcome, a team may have an output but not a verifiable delivery claim.",
+    whyExistingApproachesAreNotEnough:
+      "Output evaluation, monitoring, and traces can show fragments of behavior, but they do not necessarily prove who authorized the work, whether the context was valid, how the result was reviewed, or why the outcome was accepted. Verification needs lifecycle state.",
+    whatItIsNot:
+      "Verifiable AI Agents are not agents certified as safe or legally compliant by this site. The term means lifecycle-verifiable work state, not a guarantee of model correctness or regulatory approval.",
+    relationToLifecycle:
+      "Verifiable AI Agents are a Deterministic Delivery target. The agent's work should be inspectable from intent and configuration through authority, tool action, evidence, review, accepted outcome, dispute, remediation, and closure.",
+    relationToGaic:
+      "GAIC frames verification through lifecycle responsibility objects. Evidence Chain, Accepted Outcome, Authority Boundary, and remediation closure are MRO lenses; RCCS-M and ALCS explain why verification must preserve both object coverage and lifecycle coherence.",
+    evidenceRoute:
+      "The evidence route runs through Evidence Chain, Accepted Outcome, Validation Lab, AI Coding Agent Auditability, AI Agent Rollback and Verification, and Deterministic Delivery.",
+    detailSections: [
+      {
+        title: "Verification of lifecycle state",
+        body:
+          "A verifiable agent is not merely an agent with an evaluated output. The lifecycle state must show intent, active constraints, allowed authority, tool or action evidence, review criteria, accepted outcome, and closure."
+      },
+      {
+        title: "Trace, replay, and dispute",
+        body:
+          "Trace and replay matter because disputes arrive after execution. A reviewer should be able to reconstruct enough of the path to decide whether the work was legitimate, whether remediation is needed, and whether the accepted outcome still stands."
+      },
+      {
+        title: "Validation Lab boundary",
+        body:
+          "Validation Lab is treated here as an evidence adjudication surface, not certification. It asks whether evidence can be inspected under rules; it does not certify legal compliance or vendor maturity."
+      }
+    ],
+    lifecycleChain: ["Intent", "Authority", "Trace", "Evidence", "Replay", "Dispute", "Accepted outcome", "Closure"],
+    relatedEssays: [
+      "agent-orchestration-is-not-delivery",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
+    relatedProjects: ["validation-lab", "mplp", "cognitive-os"],
+    relatedTerms: [
+      "deterministic-delivery",
+      "rollbackable-agent-workflows",
+      "lifecycle-evidence",
+      "accepted-outcome",
+      "authority-boundary",
+      "lifecycle-responsibility-objects"
+    ],
+    keywords: [
+      "Verifiable AI Agents",
+      "AI agent verification",
+      "agent evidence chain",
+      "AI agent auditability",
+      "Validation Lab",
+      "Accepted Outcome"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "configurable-agent-governance",
+    term: "Configurable Agent Governance",
+    seoTitle: "Configurable Agent Governance",
+    seoDescription:
+      "Configurable Agent Governance defines how governance profiles, authority limits, tool constraints, context boundaries, and substitution rules remain evidence-linked.",
+    definition:
+      "Configurable Agent Governance is the practice of making agent governance profiles explicit, evidence-linked, and change-aware. It defines how authority limits, tool constraints, context boundaries, model/runtime substitution rules, review gates, and accepted outcome criteria are configured before and during agent work.",
+    problem:
+      "The problem it names is that governance often lives in scattered prompts, policies, runtime settings, and human habits. When configuration changes, the evidence chain may not show what changed, who approved it, or which work was affected.",
+    whyExistingApproachesAreNotEnough:
+      "Configuration files, policies, and dashboards can express controls, but they do not automatically preserve lifecycle meaning. Governance configuration must be linked to intent, authority, evidence, substitution, review, accepted outcome, rollback, and remediation records.",
+    whatItIsNot:
+      "Configurable Agent Governance is not a claim that one configuration makes agents legally compliant or safe. It is a lifecycle discipline for making governance settings explicit and inspectable.",
+    relationToLifecycle:
+      "Configurable Agent Governance supports Deterministic Delivery by making lifecycle boundaries explicit before work begins. Governance profiles should state project context, allowed tools and actions, authority limits, model/runtime substitution constraints, review gates, evidence requirements, and acceptance criteria.",
+    relationToGaic:
+      "The configuration layer maps to MROs such as context boundary, authority boundary, substitution record, evidence chain, and accepted outcome. RCCS-M asks whether those objects can be expressed; ALCS asks whether changes to configuration preserve lifecycle coherence.",
+    evidenceRoute:
+      "The evidence route runs through Authority Boundary, Evidence Chain, Deterministic Delivery, Agent Architecture Governance, Harness Engineering, Cognitive OS, and the GAIC white paper.",
+    detailSections: [
+      {
+        title: "Governance profiles",
+        body:
+          "A governance profile should state the active project context, role owner, allowed tools, permitted actions, confirmation points, evidence expectations, acceptance criteria, rollback path, and substitution constraints."
+      },
+      {
+        title: "Configuration must be evidence-linked",
+        body:
+          "If configuration changes without an evidence link, later reviewers cannot know which policy, model, tool, prompt, runtime, or harness state governed the work. Configuration should be part of the evidence chain, not background setup."
+      }
+    ],
+    lifecycleChain: ["Profile", "Context boundary", "Authority limits", "Tool constraints", "Substitution rules", "Evidence link", "Review gate", "Acceptance criteria"],
+    relatedEssays: [
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "agent-orchestration-is-not-delivery"
+    ],
+    relatedProjects: ["cognitive-os", "mplp", "validation-lab"],
+    relatedTerms: [
+      "deterministic-delivery",
+      "agent-architecture-governance",
+      "authority-boundary",
+      "lifecycle-evidence",
+      "context-drift",
+      "lifecycle-responsibility-objects"
+    ],
+    keywords: [
+      "Configurable Agent Governance",
+      "agent governance profiles",
+      "AI agent configuration",
+      "authority limits",
+      "model substitution governance",
+      "Evidence Chain"
+    ],
+    gaicEntity: true
+  },
+  {
+    slug: "agent-architecture-governance",
+    term: "Agent Architecture Governance",
+    seoTitle: "Agent Architecture Governance",
+    seoDescription:
+      "Agent Architecture Governance maps human roles, agent roles, tools, evidence, accepted outcomes, and lifecycle responsibility boundaries beyond orchestration topology.",
+    definition:
+      "Agent Architecture Governance is the practice of governing an agent system's responsibility architecture, not only its orchestration topology. It maps human roles, agent roles, tools, authority boundaries, evidence paths, accepted outcomes, rollback paths, and remediation ownership.",
+    problem:
+      "The problem it names is that agent architecture is often drawn as boxes, tools, routers, and messages while responsibility remains implicit. A topology can show which agent talks to which tool without showing who owns intent, which authority boundary applies, what evidence is required, or who accepts the outcome.",
+    whyExistingApproachesAreNotEnough:
+      "Orchestration topology, agent graphs, tool registries, and observability dashboards can describe execution architecture. They do not automatically define lifecycle responsibility architecture. Governance must map the human role, agent role, tool/action boundary, evidence chain, accepted outcome, dispute, remediation, and closure.",
+    whatItIsNot:
+      "Agent Architecture Governance is not a vendor architecture ranking, procurement guide, certification, or claim that one framework is mandatory. It is an engineering-practice lens for lifecycle responsibility.",
+    relationToLifecycle:
+      "Agent Architecture Governance is the architecture side of Deterministic Delivery. It asks whether an agent system's structure preserves intent, configuration, authority, evidence, review, accepted outcome, rollback, remediation, and closure across agents, tools, and humans.",
+    relationToGaic:
+      "GAIC supplies the lifecycle governance vocabulary behind this architecture lens. MROs define what the architecture must expose; RCCS-M and ALCS explain why object coverage and lifecycle coherence both matter.",
+    evidenceRoute:
+      "The evidence route runs through Harness Engineering, Agentic Delivery Architecture Checklist, Lifecycle Role Decomposition, Lifecycle-Governed Agent Workflow, MPLP, Cognitive OS, Validation Lab, and the GAIC white paper.",
+    detailSections: [
+      {
+        title: "Architecture governance is not only topology",
+        body:
+          "Topology says which components interact. Architecture governance says which lifecycle responsibilities those interactions carry: authority, evidence, review, accepted outcome, rollback, remediation, and closure."
+      },
+      {
+        title: "Human role / agent role / tool / evidence / outcome mapping",
+        body:
+          "A governed architecture should map the human responsibility owner, agent role boundary, allowed tool actions, evidence records, review criteria, accepted outcome owner, dispute owner, and remediation closure path."
+      },
+      {
+        title: "Relationship to Harness Engineering",
+        body:
+          "Harness Engineering is the implementation practice that wraps architecture with lifecycle boundaries. Agent Architecture Governance names what must be governed; the harness is one place those boundaries become operational."
+      }
+    ],
+    lifecycleChain: ["Human role", "Agent role", "Tool boundary", "Authority", "Evidence", "Accepted outcome", "Rollback", "Remediation"],
+    relatedEssays: [
+      "agent-orchestration-is-not-delivery",
+      "the-industry-misdefined-multi-agent-ai",
+      "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+    ],
+    relatedProjects: ["mplp", "cognitive-os", "validation-lab"],
+    relatedTerms: [
+      "deterministic-delivery",
+      "configurable-agent-governance",
+      "lifecycle-role-decomposition",
+      "lifecycle-governed-agent-workflow",
+      "authority-boundary",
+      "lifecycle-evidence",
+      "accepted-outcome"
+    ],
+    keywords: [
+      "Agent Architecture Governance",
+      "agent architecture governance",
+      "AI agent architecture",
+      "Harness Engineering",
+      "agentic delivery architecture",
+      "lifecycle responsibility architecture"
+    ],
+    gaicEntity: true
+  },
+  {
     slug: "ai-agent-governance",
     term: "AI Agent Governance",
     seoTitle: "AI Agent Governance for Lifecycle Systems",
@@ -1894,6 +2209,17 @@ const commonGaicPlaybookLinks: PlaybookLink[] = [
   { href: "/concepts/alcs/", label: "ALCS" }
 ];
 
+const commonEngineeringPracticeLinks: PlaybookLink[] = [
+  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+  { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
+  { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
+  { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
+  { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+  { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
+];
+
 export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "ai-agent-rollback-verification",
@@ -1907,6 +2233,7 @@ export const appliedPlaybooks: PlaybookEntry[] = [
       "Ordinary model or tool governance can show that a model responded, a workflow ran, or a log exists. It usually does not prove which accepted outcome state must be unwound, who authorized the reversal, what evidence supports the rollback, or when remediation is closed.",
     checklist: [
       "Separate rollback from retry: retry repeats execution, while rollback restores lifecycle responsibility to a known accepted or reviewable state.",
+      "Separate rollback from undo: undo may revert an artifact, while rollback must restore responsibility, evidence, and acceptance state.",
       "Record the authority boundary for the rollback decision before consequential reversal begins.",
       "Preserve the evidence chain that explains the original action, the rollback trigger, and the verification result.",
       "Identify the accepted outcome state affected by the rollback.",
@@ -1929,9 +2256,7 @@ export const appliedPlaybooks: PlaybookEntry[] = [
       "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
       ...commonGaicPlaybookLinks,
-      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      ...commonEngineeringPracticeLinks,
       { href: "/projects/mplp/", label: "MPLP protocol path" }
     ],
     keywords: [
@@ -1978,6 +2303,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
       "This playbook is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
       ...commonGaicPlaybookLinks,
+      { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+      { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
+      { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
       { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
       { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
@@ -2249,18 +2577,20 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     title: "Harness Engineering for AI Agents",
     seoTitle: "Harness Engineering for AI Agents",
     seoDescription:
-      "A definition-first playbook for Harness Engineering: wrapping AI agent execution with context boundaries, authority boundaries, evidence capture, rollback, remediation, and accepted outcome.",
+      "A definition-first playbook for Harness Engineering: wrapping AI agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, deterministic delivery, and accepted outcome.",
     definition:
-      "Harness Engineering is the discipline of wrapping agent execution with lifecycle boundaries, evidence capture, configuration, rollback, remediation, and acceptance so prompts do not have to carry governance alone.",
+      "Harness Engineering is the discipline of wrapping agent execution with lifecycle boundaries: context boundary, authority boundary, evidence capture, plan/confirm/trace records, rollback, remediation, configuration, and accepted outcome. It is the execution boundary layer behind Deterministic Delivery, not a replacement for prompt quality.",
     insufficiency:
-      "Prompt engineering can improve instructions, but prompts cannot reliably carry lifecycle governance by themselves. A prompt cannot substitute for context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback paths, remediation closure, or accepted outcome state.",
+      "Prompt engineering controls how intent is expressed to the model. Harness Engineering controls the execution boundary around the work. A prompt cannot substitute for context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback paths, remediation closure, configuration state, or accepted outcome state.",
     checklist: [
+      "Separate prompt controls from harness controls: the prompt expresses intent, while the harness governs execution boundaries.",
       "Define the context boundary so active, stale, background, and cross-project context are separated.",
       "Define the authority boundary before consequential action or tool use.",
       "Capture evidence that supports review, replay, dispute, and remediation.",
       "Represent plan, confirmation, and trace as durable lifecycle records.",
       "Define rollback and remediation behavior before failure occurs.",
-      "Record accepted outcome state and the human role that can accept or reject work."
+      "Record accepted outcome state and the human role that can accept or reject work.",
+      "Link harness configuration to Deterministic Delivery so lifecycle state can be inspected after execution."
     ],
     relatedMros: [
       "Context boundary",
@@ -2278,9 +2608,10 @@ export const appliedPlaybooks: PlaybookEntry[] = [
       "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
       ...commonGaicPlaybookLinks,
+      ...commonEngineeringPracticeLinks,
+      { href: "/playbooks/prompt-engineering-vs-harness-engineering/", label: "Prompt Engineering vs Harness Engineering" },
+      { href: "/playbooks/agentic-delivery-architecture-checklist/", label: "Agentic Delivery Architecture Checklist" },
       { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
-      { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
       { href: "/projects/mplp/", label: "MPLP protocol path" },
       { href: "/projects/cognitive-os/", label: "Cognitive OS runtime path" }
     ],
@@ -2292,6 +2623,114 @@ export const appliedPlaybooks: PlaybookEntry[] = [
       "authority boundary",
       "agent rollback",
       "accepted outcome"
+    ]
+  },
+  {
+    slug: "prompt-engineering-vs-harness-engineering",
+    title: "Prompt Engineering vs Harness Engineering",
+    seoTitle: "Prompt Engineering vs Harness Engineering",
+    seoDescription:
+      "A lifecycle governance playbook explaining why prompt engineering controls intent expression while Harness Engineering controls execution boundaries, evidence, rollback, and accepted outcome.",
+    definition:
+      "Prompt Engineering improves how intent is expressed to a model. Harness Engineering governs the execution boundary around agent work: context, authority, tools, evidence, plan/confirm/trace, rollback, remediation, configuration, and accepted outcome.",
+    insufficiency:
+      "Prompts can guide behavior, but they are not evidence chains, accepted outcomes, rollback protocols, authority records, or remediation closure. Treating prompt quality as governance leaves lifecycle responsibility outside the system.",
+    checklist: [
+      "Use prompts to express intent, constraints, and desired reasoning posture.",
+      "Use harness boundaries to control context, tools, action scope, and confirmation requirements.",
+      "Treat prompts as inputs to the lifecycle, not as the lifecycle record.",
+      "Capture evidence outside the prompt so review, replay, dispute, and remediation remain possible.",
+      "Define accepted outcome outside the prompt as a human or organizational responsibility state.",
+      "Define rollback and remediation as lifecycle transitions, not as another prompt attempt.",
+      "Record model, prompt, tool, runtime, or harness substitution as a governance event."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Context boundary",
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M is relevant because prompts alone do not express the full lifecycle object layer. ALCS is relevant because intent, authority, evidence, acceptance, dispute, remediation, and closure must remain coherent after execution begins.",
+    protocolPath:
+      "MPLP is one protocol path for expressing lifecycle responsibility semantics around harnessed agent work. It is not required, exclusive, certified, regulator-approved, or already an industry standard.",
+    boundary:
+      "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, procurement recommendation, or a claim that prompt engineering is obsolete.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      ...commonEngineeringPracticeLinks,
+      { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" },
+      { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle" },
+      { href: "/projects/mplp/", label: "MPLP protocol path" }
+    ],
+    keywords: [
+      "Prompt Engineering vs Harness Engineering",
+      "Harness Engineering",
+      "prompt engineering AI agents",
+      "AI agent governance",
+      "Evidence Chain",
+      "Accepted Outcome",
+      "rollback protocol"
+    ]
+  },
+  {
+    slug: "agentic-delivery-architecture-checklist",
+    title: "Agentic Delivery Architecture Checklist",
+    seoTitle: "Agentic Delivery Architecture Checklist",
+    seoDescription:
+      "A practical architecture checklist for accountable AI agent workflows: intent, context, authority, tools, evidence, accepted outcome, rollback, substitution, and human responsibility.",
+    definition:
+      "The Agentic Delivery Architecture Checklist is a practical checklist for designing agent workflows toward accountable delivery. It turns Deterministic Delivery into architecture questions across intent, context, authority, tools, evidence, accepted outcome, rollback, substitution, and human responsibility.",
+    insufficiency:
+      "A workflow graph can show execution order without proving accountability. Architecture needs lifecycle responsibility boundaries, not only agents, tools, prompts, and routing logic.",
+    checklist: [
+      "Intent boundary: state the work objective, active constraints, and out-of-scope conditions.",
+      "Context boundary: separate active context from stale, background, or cross-project context.",
+      "Authority boundary: define who can authorize consequential work and under what scope.",
+      "Tool/action boundary: state which tools and actions are allowed, blocked, or confirmation-gated.",
+      "Evidence chain: define what evidence must survive for review, replay, dispute, and remediation.",
+      "Accepted outcome: define who can accept, reject, or escalate the result.",
+      "Rollback/remediation: define known state, rollback trigger, verification, and closure record.",
+      "Substitution conformance: record model, tool, prompt, runtime, or harness changes as lifecycle events.",
+      "Human responsibility owner: map intent, authority, review, acceptance, dispute, and remediation to accountable roles.",
+      "ALCS / RCCS-M check: ask whether object coverage exists and remains coherent through the lifecycle."
+    ],
+    relatedMros: [
+      "Intent object",
+      "Context boundary",
+      "Authority boundary",
+      "Evidence chain",
+      "Accepted outcome",
+      "Substitution record",
+      "Dispute object",
+      "Remediation closure"
+    ],
+    rccsAlcs:
+      "RCCS-M asks whether the architecture can express lifecycle responsibility objects. ALCS asks whether those objects remain coherent across intent, authority, evidence, acceptance, dispute, remediation, rollback, substitution, and closure.",
+    protocolPath:
+      "MPLP can be one protocol path for expressing the checklist as lifecycle records. It is not required, exclusive, certified, regulator-approved, or a procurement recommendation.",
+    boundary:
+      "This checklist is an author-analytical architecture guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
+    relatedLinks: [
+      ...commonGaicPlaybookLinks,
+      ...commonEngineeringPracticeLinks,
+      { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" },
+      { href: "/playbooks/prompt-engineering-vs-harness-engineering/", label: "Prompt Engineering vs Harness Engineering" },
+      { href: "/concepts/lifecycle-role-decomposition/", label: "Lifecycle Role Decomposition" },
+      { href: "/concepts/lifecycle-governed-agent-workflow/", label: "Lifecycle-Governed Agent Workflow" }
+    ],
+    keywords: [
+      "Agentic Delivery Architecture Checklist",
+      "agentic delivery architecture",
+      "AI agent architecture governance",
+      "Deterministic Delivery",
+      "rollbackable agent workflows",
+      "Configurable Agent Governance",
+      "ALCS",
+      "RCCS-M"
     ]
   }
 ];

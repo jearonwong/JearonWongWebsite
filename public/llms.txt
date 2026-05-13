@@ -18,6 +18,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
+- Engineering practice layer: Deterministic Delivery and Agent Architecture Governance.
 - Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
 - GAIC-Cited Systems: source-qualified, non-ranking lifecycle governance mappings for systems discussed in the Global AI Compliance White Paper 2026.
 - Extended Ecosystem Mapping: source-qualified, non-scored lifecycle governance mappings for Claude Code, Qwen, Cursor / AI coding agents, AutoGen, MCP, A2A, and Semantic Kernel.
@@ -33,6 +34,8 @@ AI Agent Lifecycle defines the accountable lifecycle of agent work from intent t
 Agentic Delivery names the missing layer between agent execution and accountable outcomes.
 
 Agentic Delivery is the category. MPLP is the lifecycle protocol path within that category.
+
+Deterministic Delivery means agentic work can be scoped, configured, authorized, evidenced, reviewed, accepted, remediated, and rolled back within lifecycle boundaries. It does not mean deterministic LLM output.
 
 MPLP is the lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable.
 
@@ -62,6 +65,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
 - Applied Agentic Governance Playbooks: https://www.jearonwong.com/playbooks/
 - Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
+- Deterministic Delivery: https://www.jearonwong.com/concepts/deterministic-delivery/
+- Agent Architecture Governance: https://www.jearonwong.com/concepts/agent-architecture-governance/
 - Concepts index: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
@@ -84,7 +89,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Core Concepts
 
 - Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
-  Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, applied playbooks, and extended ecosystem mappings. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
+  Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, Deterministic Delivery, Agent Architecture Governance, applied playbooks, and extended ecosystem mappings. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
 - AI Agent Lifecycle: https://www.jearonwong.com/concepts/ai-agent-lifecycle/
 - Agentic Delivery: https://www.jearonwong.com/concepts/agentic-delivery/
 - Agentic Lifecycle Governance: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
@@ -101,6 +106,16 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Accepted Outcome is the lifecycle point where agent work becomes reviewable, attributable, and accepted responsibility.
 - Authority Boundary: https://www.jearonwong.com/concepts/authority-boundary/
   Authority Boundary defines who may authorize agentic action, under what scope, and with what responsibility record.
+- Deterministic Delivery: https://www.jearonwong.com/concepts/deterministic-delivery/
+  Deterministic Delivery is the discipline of making agentic work scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable across a lifecycle. It does not require deterministic model outputs and does not guarantee delivery.
+- Rollbackable Agent Workflows: https://www.jearonwong.com/concepts/rollbackable-agent-workflows/
+  Rollbackable Agent Workflows treat rollback as a lifecycle state transition with authority, evidence, accepted outcome, and remediation records, not merely retry or undo.
+- Verifiable AI Agents: https://www.jearonwong.com/concepts/verifiable-ai-agents/
+  Verifiable AI Agents are agent systems whose lifecycle state can be inspected across intent, authority, evidence, review, accepted outcome, dispute, replay, and remediation. This is not certification or legal compliance proof.
+- Configurable Agent Governance: https://www.jearonwong.com/concepts/configurable-agent-governance/
+  Configurable Agent Governance makes governance profiles, authority limits, tool constraints, context boundaries, model/runtime substitution rules, and acceptance criteria evidence-linked.
+- Agent Architecture Governance: https://www.jearonwong.com/concepts/agent-architecture-governance/
+  Agent Architecture Governance maps human roles, agent roles, tools, authority boundaries, evidence paths, accepted outcomes, rollback paths, and remediation ownership beyond orchestration topology.
 - Confirmation Boundary: https://www.jearonwong.com/concepts/confirmation-boundary/
 - Evidence Chain: https://www.jearonwong.com/concepts/lifecycle-evidence/
 - Multi-Agent Lifecycle Governance: https://www.jearonwong.com/lifecycle/
@@ -126,7 +141,11 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Lifecycle Governance Checklist for Kimi-Based Agent Workflows: https://www.jearonwong.com/playbooks/kimi-agent-governance/
   Independent lifecycle governance checklist for Kimi-based workflows. It avoids current feature claims and does not imply affiliation with Moonshot AI / Kimi, endorsement, certification, or procurement advice.
 - Harness Engineering for AI Agents: https://www.jearonwong.com/playbooks/harness-engineering-for-ai-agents/
-  Defines Harness Engineering as wrapping agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, and accepted outcome.
+  Defines Harness Engineering as wrapping agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, configuration, Deterministic Delivery, and accepted outcome.
+- Prompt Engineering vs Harness Engineering: https://www.jearonwong.com/playbooks/prompt-engineering-vs-harness-engineering/
+  Explains why prompt engineering controls intent expression while Harness Engineering controls execution boundaries, evidence, rollback, remediation, configuration, and accepted outcome.
+- Agentic Delivery Architecture Checklist: https://www.jearonwong.com/playbooks/agentic-delivery-architecture-checklist/
+  Practical checklist for architecting agent workflows around intent boundary, context boundary, authority boundary, tool/action boundary, evidence chain, accepted outcome, rollback/remediation, substitution conformance, and human responsibility owner.
 
 ## Extended Ecosystem Lifecycle Governance Mapping
 

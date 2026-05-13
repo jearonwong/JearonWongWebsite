@@ -17,6 +17,11 @@ const conceptsKeywords = [
   "Evidence Chain",
   "Accepted Outcome",
   "Authority Boundary",
+  "Deterministic Delivery",
+  "Rollbackable Agent Workflows",
+  "Verifiable AI Agents",
+  "Configurable Agent Governance",
+  "Agent Architecture Governance",
   "Concepts Map",
   "Entity Mesh"
 ];
@@ -76,6 +81,13 @@ const gaicEntitySlugs = new Set([
   "authority-boundary",
   "lifecycle-evidence"
 ]);
+const engineeringPracticeSlugs = new Set([
+  "deterministic-delivery",
+  "rollbackable-agent-workflows",
+  "verifiable-ai-agents",
+  "configurable-agent-governance",
+  "agent-architecture-governance"
+]);
 const primaryConceptStack = [
   {
     term: "AI Agent Lifecycle",
@@ -89,6 +101,13 @@ const primaryConceptStack = [
     role: "Category",
     description: siteSemanticBaseline.agenticDeliveryDefinition,
     href: "/concepts/agentic-delivery/",
+    linkLabel: "Open definition"
+  },
+  {
+    term: "Deterministic Delivery",
+    role: "Engineering practice layer",
+    description: siteSemanticBaseline.deterministicDeliveryDefinition,
+    href: "/concepts/deterministic-delivery/",
     linkLabel: "Open definition"
   },
   {
@@ -145,6 +164,7 @@ const primaryConceptPageSlugs = new Set([
 ]);
 const supportingConcepts = concepts.filter((concept) => !primaryConceptPageSlugs.has(concept.slug));
 const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.slug));
+const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPracticeSlugs.has(concept.slug));
 ---
 
 <BaseLayout
@@ -190,6 +210,7 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
         <p class="concept-opening__copy">
           For quote-ready citation anchors, see <a href="/definitions/" class="concept-card__link">Definitions</a>.
           For the visible semantic navigation surface, see <a href="/concepts/map/" class="concept-card__link">Concepts Map / Entity Mesh</a>.
+          For engineering practice anchors, start with <a href="/concepts/deterministic-delivery/" class="concept-card__link">Deterministic Delivery</a>.
         </p>
       </section>
 
@@ -248,6 +269,25 @@ const gaicEntities = concepts.filter((concept) => gaicEntitySlugs.has(concept.sl
               <h3><a href={`/concepts/${concept.slug}/`}>{concept.term}</a></h3>
               <p>{concept.seoDescription}</p>
               <a href={`/concepts/${concept.slug}/`} class="concept-card__link">Open entity page</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="concept-tier" aria-labelledby="engineering-practice-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+            <span class="registry-key">ENGINEERING_PRACTICE_LAYER</span>
+          </div>
+          <h2 id="engineering-practice-title">Deterministic Delivery and Agent Architecture</h2>
+          <p class="tier-note">Engineering-practice pages for scoped, configured, verifiable, rollbackable, and lifecycle-governed agent work.</p>
+        </div>
+        <div class="supporting-term-list">
+          {engineeringPracticeConcepts.map((concept) => (
+            <article class="supporting-term-card">
+              <h3><a href={`/concepts/${concept.slug}/`}>{concept.term}</a></h3>
+              <p>{concept.seoDescription}</p>
+              <a href={`/concepts/${concept.slug}/`} class="concept-card__link">Open engineering term</a>
             </article>
           ))}
         </div>

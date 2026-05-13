@@ -2143,3 +2143,41 @@ Remaining work:
 - Extended ecosystem pages should be revisited only when official source changes materially affect governance context.
 
 **GAIC-R3F Status:** ✓ EXTENDED ECOSYSTEM SEMANTIC MAPPING COMPLETE / READY FOR DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER
+
+---
+
+## GAIC-R3G Known Issues
+
+### Deterministic Delivery and Agent Architecture Semantic Layer Complete
+
+R3G creates the engineering-practice semantic layer after R3F. It does not add vendor pages and does not change GAIC scores, methodology, or sealed white paper artifacts.
+
+Validation scope:
+
+- New concept routes:
+  - `/concepts/deterministic-delivery/`
+  - `/concepts/rollbackable-agent-workflows/`
+  - `/concepts/verifiable-ai-agents/`
+  - `/concepts/configurable-agent-governance/`
+  - `/concepts/agent-architecture-governance/`
+- Updated existing playbooks:
+  - `/playbooks/harness-engineering-for-ai-agents/`
+  - `/playbooks/ai-agent-rollback-verification/`
+- New playbooks:
+  - `/playbooks/prompt-engineering-vs-harness-engineering/`
+  - `/playbooks/agentic-delivery-architecture-checklist/`
+- Concepts Map now includes a visible Engineering Practice Layer.
+- Concepts index, Concept Core, Playbooks index/detail pages, Extended Ecosystem index, GAIC white paper hub, sitewide schema terms, and `public/llms.txt` now connect the R3G layer.
+
+Boundary discipline:
+
+- Deterministic Delivery is not deterministic LLM output.
+- R3G does not claim guaranteed delivery, guaranteed compliance, legal compliance proof, certification, regulator approval, vendor endorsement, or procurement recommendation.
+- MPLP remains one protocol path only; it is not required, exclusive, certified, regulator-approved, or an industry standard.
+- Sealed white paper artifacts, public responsive HTML checksum, public PDF/DOCX/log hashes, white paper content, RCCS-T/RCCS-M/ALCS scores, and methodology remain unchanged.
+
+Remaining work:
+
+- Regulatory and Enterprise Governance Semantic Layer remains future work.
+
+**GAIC-R3G Status:** ✓ DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER COMPLETE / READY FOR REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER

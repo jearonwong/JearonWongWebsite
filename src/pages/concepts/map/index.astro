@@ -8,7 +8,7 @@ const canonicalPath = "/concepts/map/";
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = absoluteUrl(canonicalPath);
 const metaDescription =
-  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, applied playbooks, and extended ecosystem mappings.";
+  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, applied playbooks, and extended ecosystem mappings.";
 const keywords = [
   "Concepts Map",
   "Entity Mesh",
@@ -23,6 +23,13 @@ const keywords = [
   "Accepted Outcome",
   "Authority Boundary",
   "Harness Engineering",
+  "Deterministic Delivery",
+  "Rollbackable Agent Workflows",
+  "Verifiable AI Agents",
+  "Configurable Agent Governance",
+  "Agent Architecture Governance",
+  "Prompt Engineering vs Harness Engineering",
+  "Agentic Delivery Architecture Checklist",
   "Applied Agentic Governance Playbooks",
   "Extended Ecosystem Lifecycle Governance Mapping",
   "Claude Code",
@@ -154,11 +161,60 @@ const mapNodes = [
     description: "The point where autonomous execution becomes authorized responsibility."
   },
   {
+    id: "deterministic-delivery",
+    label: "Deterministic Delivery",
+    layer: "Engineering Practice Layer",
+    href: "/concepts/deterministic-delivery/",
+    description: "Making agentic work scoped, configured, authorized, evidenced, reviewed, accepted, remediable, and rollbackable without claiming deterministic model output."
+  },
+  {
+    id: "rollbackable-agent-workflows",
+    label: "Rollbackable Agent Workflows",
+    layer: "Engineering Practice Layer",
+    href: "/concepts/rollbackable-agent-workflows/",
+    description: "Agent workflows that can return to known lifecycle state with authority, evidence, accepted outcome, and remediation records intact."
+  },
+  {
+    id: "verifiable-ai-agents",
+    label: "Verifiable AI Agents",
+    layer: "Engineering Practice Layer",
+    href: "/concepts/verifiable-ai-agents/",
+    description: "Agent systems whose lifecycle state can be inspected, replayed, disputed, reviewed, accepted, and closed."
+  },
+  {
+    id: "configurable-agent-governance",
+    label: "Configurable Agent Governance",
+    layer: "Engineering Practice Layer",
+    href: "/concepts/configurable-agent-governance/",
+    description: "Governance profiles, authority limits, tool constraints, context boundaries, and substitution rules that remain evidence-linked."
+  },
+  {
+    id: "agent-architecture-governance",
+    label: "Agent Architecture Governance",
+    layer: "Engineering Practice Layer",
+    href: "/concepts/agent-architecture-governance/",
+    description: "Responsibility architecture for human roles, agent roles, tools, evidence, accepted outcome, rollback, and remediation."
+  },
+  {
     id: "harness-engineering",
     label: "Harness Engineering",
     layer: "Applied Layer",
     href: "/playbooks/harness-engineering-for-ai-agents/",
     description: "Wrapping agent execution with lifecycle boundaries, evidence capture, rollback, remediation, and acceptance."
+  },
+  {
+    id: "prompt-vs-harness",
+    label: "Prompt Engineering vs Harness Engineering",
+    layer: "Engineering Practice Layer",
+    href: "/playbooks/prompt-engineering-vs-harness-engineering/",
+    description: "A playbook explaining why prompts express intent while harnesses govern execution boundaries, evidence, rollback, and accepted outcome."
+  },
+  {
+    id: "agentic-delivery-architecture-checklist",
+    label: "Agentic Delivery Architecture Checklist",
+    layer: "Engineering Practice Layer",
+    href: "/playbooks/agentic-delivery-architecture-checklist/",
+    description: "A practical checklist for architecting agent workflows around intent, context, authority, tools, evidence, accepted outcome, rollback, substitution, and human responsibility."
   },
   {
     id: "applied-playbooks",
@@ -200,6 +256,12 @@ const relationGroups = [
     body: "The extended layer reuses existing applied playbooks and adds source-qualified mappings for Claude Code, Qwen, Cursor, AutoGen, MCP, A2A, and Semantic Kernel without treating them as GAIC-scored systems."
   },
   {
+    name: "Engineering Practice Layer",
+    relation: "Agentic Delivery -> Deterministic Delivery -> Rollbackable / Verifiable / Configurable Agent Work",
+    nodes: ["Agentic Delivery", "Deterministic Delivery", "Rollbackable Agent Workflows", "Verifiable AI Agents", "Configurable Agent Governance", "Agent Architecture Governance", "Harness Engineering"],
+    body: "The engineering practice layer turns lifecycle governance into scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable agent work. It does not claim deterministic model output."
+  },
+  {
     name: "Protocol Path",
     relation: "Missing Regulatory Objects / Lifecycle Responsibility Objects -> MPLP",
     nodes: ["Missing Regulatory Objects", "Lifecycle Responsibility Objects", "MPLP"],
@@ -213,8 +275,8 @@ const relationGroups = [
   },
   {
     name: "Primitive Concepts",
-    relation: "Authority Boundary + Accepted Outcome + Evidence Chain + Confirmation Boundary + Harness Engineering",
-    nodes: ["Authority Boundary", "Accepted Outcome", "Evidence Chain", "Confirmation Boundary", "Harness Engineering"],
+    relation: "Authority Boundary + Accepted Outcome + Evidence Chain + Confirmation Boundary -> Deterministic Delivery",
+    nodes: ["Authority Boundary", "Accepted Outcome", "Evidence Chain", "Confirmation Boundary", "Deterministic Delivery"],
     body: "These primitives make agentic lifecycle responsibility inspectable instead of leaving governance at log or approval language."
   }
 ];
@@ -222,6 +284,8 @@ const primaryLinks = [
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
+  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+  { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Concept Core" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
@@ -233,6 +297,7 @@ const semanticChain = [
   { href: "/about/", label: "Jearon Wong" },
   { href: "/about/", label: "Protocol Architect for the Agent Era" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
   { href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" },
@@ -315,7 +380,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Concepts Map / Entity Mesh"
     objectType="GEO_NAVIGATION"
     objectValue="VISIBLE_ENTITY_MESH"
-    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, applied playbooks, and extended ecosystem mappings."
+    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, applied playbooks, and extended ecosystem mappings."
   >
     <div class="map-hero-links">
       {primaryLinks.map((link) => (
@@ -337,7 +402,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <p>
             This map is a navigation layer, not a standard, certification, legal interpretation, or regulator-approved taxonomy.
             It helps readers and crawlers follow the public relationship from author identity to research authority,
-            lifecycle responsibility objects, measurement models, protocol path, applied playbooks, and extended ecosystem mappings.
+            lifecycle responsibility objects, measurement models, protocol path, deterministic delivery, agent architecture governance, applied playbooks, and extended ecosystem mappings.
           </p>
         </div>
         <div class="map-opening__links" aria-label="Primary entity links">
@@ -404,10 +469,21 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/concepts/lifecycle-evidence/" class="mesh-node">Evidence Chain</a>
             <a href="/concepts/confirmation-boundary/" class="mesh-node">Confirmation Boundary</a>
           </div>
+          <div class="mesh-row mesh-row--engineering">
+            <a href="/concepts/deterministic-delivery/" class="mesh-node mesh-node--strong">Deterministic Delivery</a>
+            <a href="/concepts/rollbackable-agent-workflows/" class="mesh-node">Rollbackable Agent Workflows</a>
+            <a href="/concepts/verifiable-ai-agents/" class="mesh-node">Verifiable AI Agents</a>
+            <a href="/concepts/configurable-agent-governance/" class="mesh-node">Configurable Agent Governance</a>
+            <a href="/concepts/agent-architecture-governance/" class="mesh-node mesh-node--protocol">Agent Architecture Governance</a>
+          </div>
           <div class="mesh-row mesh-row--applied">
             <a href="/projects/mplp/" class="mesh-node mesh-node--protocol">MPLP</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href="/playbooks/harness-engineering-for-ai-agents/" class="mesh-node">Harness Engineering</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/playbooks/prompt-engineering-vs-harness-engineering/" class="mesh-node">Prompt vs Harness</a>
+            <span class="mesh-arrow">-&gt;</span>
+            <a href="/playbooks/agentic-delivery-architecture-checklist/" class="mesh-node">Architecture Checklist</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href="/playbooks/" class="mesh-node mesh-node--strong">Applied Playbooks</a>
           </div>
@@ -615,7 +691,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .mesh-row--governance,
-  .mesh-row--primitive {
+  .mesh-row--primitive,
+  .mesh-row--engineering {
     padding-top: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
   }

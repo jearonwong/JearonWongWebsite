@@ -2940,3 +2940,28 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
 
 **GAIC-R3F Status:** ✓ EXTENDED ECOSYSTEM SEMANTIC MAPPING COMPLETE / READY FOR DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER.
+
+## GAIC-R3G Notes (May 13, 2026)
+
+**Scope:** Deterministic Delivery and Agent Architecture Semantic Layer.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `ec4cb99ced198d43bedfb4bf25089d28ebe445a1` before R3G edits.
+2. Audited existing Concepts, Concept Core, Concepts Map, Playbooks, Extended Ecosystem, GAIC hub, schema, and `llms.txt` surfaces.
+3. Added concept registry entries for Deterministic Delivery, Rollbackable Agent Workflows, Verifiable AI Agents, Configurable Agent Governance, and Agent Architecture Governance.
+4. Defined Deterministic Delivery as scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable lifecycle work; explicitly rejected deterministic model-output claims.
+5. Updated the existing Harness Engineering playbook instead of duplicating it.
+6. Updated the existing AI Agent Rollback and Verification playbook to distinguish rollback from retry and undo.
+7. Added playbook registry entries for Prompt Engineering vs Harness Engineering and Agentic Delivery Architecture Checklist.
+8. Updated Concepts Map with an Engineering Practice Layer group and visible nodes.
+9. Updated Concepts index, Concept Core, Playbooks index/detail pages, Extended Ecosystem index, GAIC white paper hub, sitewide schema terms, and `public/llms.txt`.
+
+**Boundary discipline:**
+
+- No sealed white paper artifact changed.
+- No white paper content, score, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary, or interoperability boundary changed.
+- No deterministic model-output guarantee, guaranteed delivery, guaranteed compliance, vendor ranking, procurement recommendation, certification, legal compliance proof, regulator approval, vendor endorsement, fake external citation, search ranking claim, MPLP overclaim, or WP2/WP3 content introduced.
+- MPLP remains framed as one protocol path, not required, exclusive, certified, regulator-approved, or already an industry standard.
+
+**GAIC-R3G Status:** ✓ DETERMINISTIC DELIVERY AND AGENT ARCHITECTURE SEMANTIC LAYER COMPLETE / READY FOR REGULATORY AND ENTERPRISE GOVERNANCE SEMANTIC LAYER.
