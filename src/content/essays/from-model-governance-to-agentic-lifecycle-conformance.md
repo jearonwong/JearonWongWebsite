@@ -8,9 +8,9 @@ description: "Jearon Wong explains how studying EU AI Act, GDPR, NIST AI RMF, IS
 shareTitle: "From Model Governance to Agentic Lifecycle Conformance"
 shareSubtitle: "AI Agent / MAS compliance cannot stop at model governance."
 shareDescription: "Jearon Wong explains why agentic work needs lifecycle responsibility compliance, Missing Regulatory Objects, RCCS-M, and ALCS."
-shareImage: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
-shareImageAlt: "From Model Governance to Agentic Lifecycle Conformance architecture diagram"
-ogImage: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
+shareImage: /social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png
+shareImageAlt: "LinkedIn Newsletter cover for From Model Governance to Agentic Lifecycle Conformance"
+ogImage: /social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png
 images:
   - url: /figures/from-model-governance-to-agentic-lifecycle-conformance.svg
     alt: "Diagram showing the path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped in the Global AI Compliance White Paper 2026"
