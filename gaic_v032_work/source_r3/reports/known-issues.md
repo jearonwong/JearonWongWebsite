@@ -2440,3 +2440,41 @@ Remaining work:
 **GAIC-R3K-0B Status:** ✓ PASSIVE DISCOVERABILITY HARDENING COMPLETE / PDF METADATA RE-SEAL DECISION CLOSED BY R3K-0C
 
 **GAIC-R3K-0C Status:** ✓ PDF METADATA CONTROLLED RE-SEAL COMPLETE / READY FOR P0 CANONICAL DRIFT REPAIR
+
+---
+
+## GAIC-R3K-1A Known Issues
+
+### P0 Canonical / Drift Repair Complete
+
+R3K-1A repaired only the 10 R3K-0 P0 pages. It did not repair all 75 follow-up pages and did not begin P1/P2 source-anchor enrichment.
+
+Resolved in this wave:
+
+- AI Agent Governance route hierarchy clarified:
+  - `/governance/ai-agent-governance/` is the preferred governance mapping route.
+  - `/ai-agent-governance/` is retained as a field-level bridge.
+  - `/concepts/ai-agent-governance/` is retained as a concept bridge.
+- `/definitions/` now states it is a reference index; canonical concept explanations live under `/concepts/` and `/concepts/map/`.
+- `/theory-clusters/` remains the existing noindexed legacy compatibility route and now visibly points to `/theories/`, `/concepts/`, and `/concepts/map/`.
+- `/projects/mplp/` now states MPLP is one protocol path and is not certification, legal compliance proof, regulator-approved guidance, required implementation, procurement guidance, vendor endorsement, or an industry-standard claim.
+- `/projects/validation-lab/` now states Validation Lab is non-certifying evidence adjudication, not a certification body, regulator approval, legal compliance proof, vendor endorsement, procurement recommendation, or compliance guarantee.
+- `/lifecycle/` now clarifies category definition vs compliance framework and links to Agentic Lifecycle Governance and the GAIC white paper.
+- `/delivery-standard/` now clarifies conceptual delivery discipline vs formal standards-body publication and links to Deterministic Delivery, Accepted Outcome, Evidence Chain, and GAIC.
+- `/concepts/protocol-engineering/` now states Protocol Engineering is broader than GAIC and treats MPLP as one protocol path, not a score, certification, compliance proof, or required implementation.
+
+Remaining known issues:
+
+- P1 source-anchor enrichment remains deferred.
+- P2 lightweight essay/playbook enrichment remains deferred.
+- One non-P0 essay footer still links to `/ai-agent-governance/`; this was intentionally left for a later link-cleanup or R3K-1B wave to avoid expanding the R3K-1A surface.
+
+Boundary discipline:
+
+- No sealed artifacts changed.
+- No public PDF metadata re-seal changed.
+- No responsive public HTML checksum changed.
+- No white paper source, scores, methodology, RCCS-T/RCCS-M/ALCS framing, route construction, or broad GAIC page family changed.
+- No legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, answer-engine pickup, Google Scholar indexing, search ranking, or MPLP industry-standard claim introduced.
+
+**GAIC-R3K-1A Status:** ✓ P0 CANONICAL AND DRIFT REPAIR COMPLETE / READY FOR P1 SOURCE ANCHOR ENRICHMENT

@@ -36,6 +36,7 @@ const adjacentProofs = (project.adjacentProofs ?? []).reduce<
 const relatedConcepts = (project.relatedConcepts ?? [])
   .map((conceptSlug) => getConceptBySlug(conceptSlug))
   .filter((concept): concept is NonNullable<typeof concept> => Boolean(concept));
+const sourceLinks = project.sourceLinks ?? [];
 const graphPosition = getProjectGraphPosition(project.slug);
 const previousProof = graphPosition.previous;
 const nextProof = graphPosition.next;
@@ -85,6 +86,11 @@ const projectJsonLd = {
   mainEntityOfPage: {
     "@id": `${projectUrl}#webpage`
   },
+  ...(project.boundary
+    ? {
+        conditionsOfAccess: project.boundary
+      }
+    : {}),
   isPartOf: {
     "@type": "CreativeWork",
     name: "Agentic Delivery protocol path and proof path",
@@ -106,6 +112,7 @@ const projectJsonLd = {
     absoluteUrl("/lifecycle/"),
     absoluteUrl("/concepts/agentic-lifecycle-governance/"),
     absoluteUrl("/research/global-ai-compliance-white-paper-2026/"),
+    ...sourceLinks.map((link) => absoluteUrl(link.href)),
     ...relatedConcepts.map((concept) => absoluteUrl(`/concepts/${concept.slug}/`))
   ],
   sameAs: project.evidence?.website ? [project.evidence.website] : undefined,
@@ -166,6 +173,25 @@ const projectJsonLd = {
         </div>
         <p class="proof-claim-text">{project.proves}</p>
       </section>
+
+      {(project.boundary || sourceLinks.length > 0) && (
+        <section class="registry-chassis project-boundary-panel">
+          <div class="registry-annotation" style="margin-bottom: 1rem;">
+            <span class="registry-key">SOURCE_BOUNDARY</span>
+          </div>
+          {project.boundary && <p>{project.boundary}</p>}
+          {sourceLinks.length > 0 && (
+            <div class="project-source-links">
+              {sourceLinks.map((link) => (
+                <a href={link.href}>
+                  <strong>{link.label}</strong>
+                  <span>{link.description}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       <section class="proof-grid">
         <article class="registry-chassis proof-panel">
@@ -316,12 +342,53 @@ const projectJsonLd = {
     border-left: 3px solid var(--accent-proof);
   }
 
+  .project-boundary-panel {
+    display: grid;
+    gap: 1rem;
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-signal);
+  }
+
   .proof-claim-text {
     margin: 0;
     font-size: 1.15rem;
     line-height: 1.7;
     color: var(--current-text);
     max-width: 64ch;
+  }
+
+  .project-boundary-panel p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+    max-width: 68rem;
+  }
+
+  .project-source-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .project-source-links a {
+    display: grid;
+    gap: 0.35rem;
+    padding: var(--registry-compact-padding);
+    border: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .project-source-links strong {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .project-source-links span {
+    color: var(--current-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
   }
 
   .next-step-panel {
@@ -352,12 +419,14 @@ const projectJsonLd = {
   }
 
   @media (max-width: 900px) {
-    .proof-grid {
+    .proof-grid,
+    .project-source-links {
       grid-template-columns: 1fr;
     }
 
     .proof-panel,
     .proof-claim,
+    .project-boundary-panel,
     .next-step-panel {
       padding: var(--registry-card-padding);
     }

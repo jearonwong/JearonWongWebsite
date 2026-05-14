@@ -374,6 +374,33 @@ export const deliveryStandardPageContent = {
   protocolPath: {
     title: "Protocol path",
     body: "MPLP makes these six conditions protocol-native. Scope, authority, evidence, review, acceptance, and responsibility traceability are not post-hoc requirements in MPLP. They are lifecycle stages."
+  },
+  sourceBoundary: {
+    title: "Source and boundary",
+    body:
+      "This page defines a conceptual delivery discipline for agentic work. It is not a formal standards-body publication, certification, legal compliance proof, or regulator-approved standard. The GAIC white paper supplies the lifecycle governance vocabulary behind Evidence Chain, Accepted Outcome, and lifecycle responsibility objects.",
+    links: [
+      {
+        href: "/concepts/deterministic-delivery/",
+        label: "Deterministic Delivery concept",
+        description: "Engineering interpretation of scoped, evidenced, reviewable, and rollbackable agentic work."
+      },
+      {
+        href: "/concepts/accepted-outcome/",
+        label: "Accepted Outcome",
+        description: "Lifecycle point where reviewed work becomes accepted responsibility."
+      },
+      {
+        href: "/concepts/lifecycle-evidence/",
+        label: "Evidence Chain",
+        description: "Structured proof for review, replay, dispute, and acceptance."
+      },
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/",
+        label: "GAIC white paper",
+        description: "Source technical report for MRO, RCCS-M, ALCS, and lifecycle responsibility governance."
+      }
+    ]
   }
 };
 
@@ -457,7 +484,31 @@ export const aiAgentGovernancePageContent = {
   protocolPath: {
     title: "Protocol path.",
     body: "MPLP makes AI Agent Governance explicit, governable, and auditable. Governance conditions are not post-hoc requirements in MPLP. They are lifecycle stages."
-  }
+  },
+  canonicalHierarchy: {
+    title: "Canonical governance route",
+    body:
+      "This page is retained as a field-level bridge. For governance mapping, source-traced RCCS-M / ALCS framing, and enterprise control language, the preferred canonical route is /governance/ai-agent-governance/. For concept context, use Agentic Lifecycle Governance and the GAIC white paper hub.",
+    links: [
+      {
+        href: "/governance/ai-agent-governance/",
+        label: "AI Agent Governance mapping",
+        description: "Preferred canonical governance route for AI Agent Governance."
+      },
+      {
+        href: "/concepts/agentic-lifecycle-governance/",
+        label: "Agentic Lifecycle Governance",
+        description: "Concept Core for lifecycle responsibility objects, MRO, RCCS-M, and ALCS."
+      },
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/",
+        label: "GAIC white paper",
+        description: "Technical report source for the governance argument."
+      }
+    ]
+  },
+  boundary:
+    "Boundary: this bridge is author-analytical field framing. It is not legal advice, certification, regulator approval, legal compliance proof, procurement guidance, vendor endorsement, or a claim that MPLP is required."
 };
 
 export const contentRouteRoles = {
@@ -675,6 +726,12 @@ export interface ConceptDetailSection {
   body: string;
 }
 
+export interface SourceAnchorLink {
+  href: string;
+  label: string;
+  description: string;
+}
+
 export interface ConceptEntry {
   slug: string;
   term: string;
@@ -695,6 +752,38 @@ export interface ConceptEntry {
   relatedTerms: string[];
   keywords: string[];
   gaicEntity?: boolean;
+  canonicalRole?: {
+    title: string;
+    body: string;
+    links: SourceAnchorLink[];
+  };
+  boundaryNote?: string;
+  sourceLinks?: SourceAnchorLink[];
+}
+
+export interface ProjectEntry {
+  name: string;
+  slug: string;
+  status: string;
+  summary: string;
+  proof: string;
+  proofRole: string;
+  whatItIs: string;
+  problem: string;
+  proves: string;
+  shareDescription?: string;
+  relatedIdeas?: string[];
+  relatedConcepts?: string[];
+  relatedEssays?: Array<{ href: string; label: string }>;
+  adjacentProofs?: string[];
+  boundary?: string;
+  sourceLinks?: SourceAnchorLink[];
+  evidence?: {
+    repo?: string;
+    repoLabel?: string;
+    website?: string;
+    docs?: string;
+  };
 }
 
 export const concepts: ConceptEntry[] = [
@@ -1466,8 +1555,12 @@ export const concepts: ConceptEntry[] = [
       "The problem it names is that agent autonomy can outrun accountability. A multi-agent system may coordinate tools, pass tasks between agents, and produce outputs while leaving unclear who approved an action, which scope was permitted, and what evidence proves the result stayed legitimate. Once consequential work crosses tools, agents, and time, informal human oversight is too fragile to serve as the only governance layer.",
     whyExistingApproachesAreNotEnough:
       "Access control, monitoring, and human-in-the-loop checkpoints each solve part of the governance problem. Access control says what a system can reach. Monitoring says what happened. Human review can approve or reject a proposed action. But agent governance also needs continuity across those pieces: authority must attach to intent, plans must carry constraints, confirmations must be recorded, and evidence must survive after execution.",
+    whatItIsNot:
+      "This concept page is a bridge into lifecycle terminology. It is not the preferred governance mapping route, legal advice, certification, regulator approval, procurement guidance, vendor endorsement, or a separate competing canonical source for AI Agent Governance.",
     relationToLifecycle:
-      "AI Agent Lifecycle gives governance a place to live. Instead of treating governance as a separate compliance layer, the lifecycle binds governance to the path from intent to accepted outcome. Confirmation Boundary is one governance primitive. Evidence Chain is another. Protocol Engineering makes those primitives explicit enough to be implemented across agent systems without claiming that one implementation has become universal.",
+      "AI Agent Lifecycle gives governance a place to live. Instead of treating governance as a separate compliance layer, the lifecycle binds governance to the path from intent to accepted outcome. The concept-level context connects most directly to Agentic Lifecycle Governance, while the canonical governance mapping for AI Agent Governance lives at /governance/ai-agent-governance/. Confirmation Boundary is one governance primitive. Evidence Chain is another. Protocol Engineering makes those primitives explicit enough to be implemented across agent systems without claiming that one implementation has become universal.",
+    relationToGaic:
+      "The GAIC white paper supplies the source technical-report context for lifecycle responsibility objects, MRO, RCCS-M, and ALCS. This page should be read as a concept bridge, not as a scoring page or independent compliance assessment.",
     evidenceRoute:
       "The evidence route for AI Agent Governance starts with the MCP/A2A lifecycle governance essay, because that essay separates tool access and agent coordination from lifecycle authority. From there, MPLP gives the protocol path for context, plan, confirm, trace, and evidence. Validation Lab keeps the governance claim accountable by asking what records would let a reviewer inspect authorization, action, and outcome. This keeps governance practical: the question is not whether a page claims safety, but whether the system can show the authority path behind the work. That path is what makes governance inspectable after the agent has already acted and after memory has faded.",
     relatedEssays: [
@@ -1489,7 +1582,25 @@ export const concepts: ConceptEntry[] = [
       "trustworthy multi-agent systems",
       "confirmation boundary",
       "lifecycle governance"
-    ]
+    ],
+    gaicEntity: true,
+    canonicalRole: {
+      title: "Concept bridge, not the governance canonical",
+      body:
+        "For the AI Agent Governance search intent, the governance mapping route is preferred. This concept page explains terminology and connects the reader to Agentic Lifecycle Governance, then points to the governance page for lifecycle responsibility mapping.",
+      links: [
+        {
+          href: "/governance/ai-agent-governance/",
+          label: "Canonical governance mapping",
+          description: "Preferred route for AI Agent Governance as a governance and enterprise-control mapping."
+        },
+        {
+          href: "/concepts/agentic-lifecycle-governance/",
+          label: "Agentic Lifecycle Governance",
+          description: "Concept Core for the broader GAIC lifecycle responsibility model."
+        }
+      ]
+    }
   },
   {
     slug: "lifecycle-evidence",
@@ -1682,9 +1793,11 @@ export const concepts: ConceptEntry[] = [
     whyExistingApproachesAreNotEnough:
       "Application logic can encode local rules, but those rules often stay trapped inside one application. Prompt rules can guide behavior, but they are hard to validate across systems. Observability can expose events, but it may not define their meaning. Protocol Engineering gives teams a way to name the objects and transitions that must survive beyond one interface or runtime, without claiming that every team must adopt the same implementation.",
     relationToLifecycle:
-      "AI Agent Lifecycle supplies the conceptual boundary for Protocol Engineering in this site architecture. It identifies what has to remain continuous; Protocol Engineering turns that continuity into explicit records, modules, and interfaces. MPLP is the protocol path for this work. AI Agent Governance, Confirmation Boundary, and Evidence Chain are examples of lifecycle concepts that become more useful when expressed as protocol primitives.",
+      "AI Agent Lifecycle supplies the conceptual boundary for Protocol Engineering in this site architecture. It identifies what has to remain continuous; Protocol Engineering turns that continuity into explicit records, modules, and interfaces. Protocol Engineering is broader than GAIC: it can apply to agent systems, workflow infrastructure, and cross-system semantics outside any single white paper. MPLP is one protocol path for this work. AI Agent Governance, Confirmation Boundary, and Evidence Chain are examples of lifecycle concepts that become more useful when expressed as protocol primitives.",
+    relationToGaic:
+      "The GAIC white paper relates to Protocol Engineering by naming lifecycle responsibility objects that agent systems may need to express as protocol-level semantics. That relationship is contextual. Protocol Engineering is not a GAIC score page, certification method, legal compliance proof, or claim that MPLP is required.",
     evidenceRoute:
-      "The evidence route for Protocol Engineering starts with MPLP because it is the protocol path, but the essays explain why the protocol question exists. The governance essay names the missing layer above tool access and coordination. The lifecycle origin essay explains how real project failure boundaries pushed the category into view. Validation Lab then tests whether protocol language produces evidence that can be inspected.",
+      "The evidence route for Protocol Engineering starts with MPLP as one protocol path, then uses the essays to explain why the protocol question exists. The governance essay names the missing layer above tool access and coordination. The lifecycle origin essay explains how real project failure boundaries pushed the category into view. Validation Lab then tests whether protocol language produces evidence that can be inspected without becoming a certification claim.",
     relatedEssays: [
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
       "the-industry-misdefined-multi-agent-ai",
@@ -1706,6 +1819,25 @@ export const concepts: ConceptEntry[] = [
       "MPLP",
       "AI Agent Lifecycle",
       "multi-agent systems"
+    ],
+    boundaryNote:
+      "Boundary: Protocol Engineering is broader than GAIC. GAIC and MPLP provide source context and one protocol path, not a mandatory implementation, score, certification, legal compliance proof, or regulator-approved standard.",
+    sourceLinks: [
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/",
+        label: "GAIC white paper",
+        description: "Technical-report source for MRO, RCCS-M, ALCS, and lifecycle responsibility objects."
+      },
+      {
+        href: "/projects/mplp/",
+        label: "MPLP protocol path",
+        description: "One protocol path for expressing lifecycle responsibility semantics."
+      },
+      {
+        href: "/concepts/agentic-lifecycle-governance/",
+        label: "Agentic Lifecycle Governance",
+        description: "Concept Core for the GAIC lifecycle responsibility model."
+      }
     ]
   }
 ];
@@ -1913,7 +2045,7 @@ export function getTheoryClusterName(slug: string) {
   return theoryClusters.find((cluster) => cluster.slug === slug)?.name ?? theoryClusterAliases[slug] ?? slug;
 }
 
-export const projects = [
+export const projects: ProjectEntry[] = [
   {
     name: "MPLP",
     slug: "mplp",
@@ -1921,12 +2053,14 @@ export const projects = [
     summary: "Lifecycle protocol path for Agentic Delivery.",
     proof: siteSemanticBaseline.mplpDefinition,
     proofRole: "LIFECYCLE PROTOCOL PATH",
-    whatItIs: siteSemanticBaseline.mplpDefinition,
+    whatItIs:
+      "MPLP is one protocol path for representing lifecycle responsibility objects around agentic work: intent, context, plan, confirmation, trace, evidence, accepted outcome, dispute, remediation, and closure.",
     problem:
       "Most agent systems still move from prompt to output without a disciplined way to describe lifecycle state, handoff boundaries, or completion artifacts.",
     proves:
-      "MPLP anchors the protocol path for context, planning, confirmation, trace, governance, and evidence so Agentic Delivery can be explicit, governable, and auditable.",
-    shareDescription: siteSemanticBaseline.mplpDefinition,
+      "MPLP shows how context, planning, confirmation, trace, governance, and evidence can be expressed as lifecycle protocol records so Agentic Delivery can become explicit, governable, and auditable. This is design-path evidence, not certification, legal compliance proof, regulator approval, required implementation, or procurement guidance.",
+    shareDescription:
+      "MPLP is one lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable. It is not certification, legal compliance proof, regulator approval, or a required implementation.",
     relatedIdeas: ["protocol-engineering", "lifecycle-governance", "accountable-work"],
     relatedConcepts: [
       "ai-agent-lifecycle",
@@ -1950,6 +2084,25 @@ export const projects = [
       }
     ],
     adjacentProofs: ["cognitive-os", "validation-lab"],
+    boundary:
+      "Boundary: MPLP is one protocol path for lifecycle responsibility semantics. It is not certification, legal compliance proof, regulator-approved guidance, a required implementation, procurement guidance, vendor endorsement, or an already established industry standard.",
+    sourceLinks: [
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/",
+        label: "GAIC white paper",
+        description: "Technical report source for the MRO, RCCS-M, ALCS, and lifecycle conformance argument."
+      },
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/systems/mplp/",
+        label: "GAIC MPLP system mapping",
+        description: "Source-qualified MPLP mapping in the GAIC system layer."
+      },
+      {
+        href: "/concepts/agentic-lifecycle-governance/",
+        label: "Agentic Lifecycle Governance",
+        description: "Concept Core for lifecycle responsibility objects and GAIC source trace."
+      }
+    ],
     evidence: {
       repo: "https://github.com/Coregentis/MPLP-Protocol",
       repoLabel: "MPLP-Protocol",
@@ -2026,12 +2179,14 @@ export const projects = [
     summary: "MPLP evidence adjudication surface.",
     proof: siteSemanticBaseline.validationLabDefinition,
     proofRole: "EVIDENCE ADJUDICATION",
-    whatItIs: siteSemanticBaseline.validationLabDefinition,
+    whatItIs:
+      "Validation Lab is an MPLP evidence adjudication surface for evaluating evidence packs under versioned rulesets. It is a project surface for inspectable evidence review, not a certification body, regulator approval mechanism, vendor certification program, or legal compliance proof.",
     problem:
       "Agent systems often make large claims about governance, reliability, or safety without offering a visible surface for checking what evidence supports those claims.",
     proves:
-      "Validation Lab shows that reliable work delivery needs evidence adjudication, not just architectural language. Proof must be inspectable.",
-    shareDescription: siteSemanticBaseline.validationLabDefinition,
+      "Validation Lab shows that reliable work delivery needs evidence adjudication, not just architectural language. Proof must be inspectable. The project does not certify vendors, establish regulatory approval, or prove legal compliance.",
+    shareDescription:
+      "Validation Lab is a non-certifying MPLP evidence adjudication surface for evaluating evidence packs under versioned rulesets.",
     relatedIdeas: ["lifecycle-governance", "evidence-accepted-outcome", "accountable-work"],
     relatedConcepts: ["lifecycle-evidence", "lifecycle-governed-agent-workflow", "ai-agent-governance"],
     relatedEssays: [
@@ -2049,6 +2204,25 @@ export const projects = [
       }
     ],
     adjacentProofs: ["mplp", "solocrew"],
+    boundary:
+      "Boundary: Validation Lab is non-certifying evidence adjudication. It is not a certification body, regulator approval, legal compliance proof, vendor endorsement, procurement recommendation, or guarantee that an agent system is compliant.",
+    sourceLinks: [
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/",
+        label: "GAIC white paper",
+        description: "Technical report source for evidence validation and lifecycle responsibility governance."
+      },
+      {
+        href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html#evidence-validation",
+        label: "Evidence validation anchor",
+        description: "Responsive HTML anchor for the GAIC evidence-based validation pattern."
+      },
+      {
+        href: "/concepts/lifecycle-evidence/",
+        label: "Evidence Chain",
+        description: "Concept route for structured proof across review, replay, dispute, and acceptance."
+      }
+    ],
     evidence: {
       repo: "https://github.com/Coregentis/MPLP-Validation-Lab",
       repoLabel: "MPLP-Validation-Lab",

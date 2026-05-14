@@ -14,6 +14,8 @@ import { createBreadcrumbJsonLd } from "../data/schema";
 
 const canonicalPath = "/lifecycle/";
 const lifecycleUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const agenticLifecycleGovernancePath = "/concepts/agentic-lifecycle-governance/";
 const proofPathProjects = ["cognitive-os", "solocrew", "validation-lab"]
   .map((projectSlug) => getProjectBySlug(projectSlug))
   .filter((project): project is NonNullable<ReturnType<typeof getProjectBySlug>> => Boolean(project));
@@ -70,6 +72,7 @@ const lifecycleJsonLd = {
     "AI Agent Lifecycle",
     "Agentic Delivery",
     "Multi-Agent Lifecycle Governance",
+    "Agentic Lifecycle Governance",
     "MPLP",
     "Confirmation Boundary",
     "Evidence Chain",
@@ -154,6 +157,30 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
           </div>
           <p>{lifecyclePageContent.fieldDefinition.body[2]}</p>
           <p class="sharp-line">A manifest can describe an agent. It cannot govern agent work.</p>
+        </div>
+      </section>
+
+      <section class="registry-chassis lifecycle-source-boundary">
+        <div class="registry-annotation lifecycle-section-tag">
+          <span class="registry-key">02A_SOURCE_BOUNDARY</span>
+        </div>
+        <h2>Category definition, not a compliance framework.</h2>
+        <p>
+          This page defines the AI Agent Lifecycle category and the accountable-delivery thesis. The GAIC white paper and Agentic Lifecycle Governance concept route provide the source-traced governance layer for Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility compliance. This page is not legal advice, certification, regulator approval, procurement guidance, or a claim that one implementation is required.
+        </p>
+        <div class="source-link-grid">
+          <a href={agenticLifecycleGovernancePath}>
+            <strong>Agentic Lifecycle Governance</strong>
+            <span>Concept Core for lifecycle responsibility objects.</span>
+          </a>
+          <a href={whitePaperHub}>
+            <strong>GAIC white paper</strong>
+            <span>Technical report source for MRO, RCCS-M, ALCS, and lifecycle conformance.</span>
+          </a>
+          <a href="/concepts/ai-agent-lifecycle/">
+            <strong>AI Agent Lifecycle concept</strong>
+            <span>Canonical concept explanation for the lifecycle term.</span>
+          </a>
         </div>
       </section>
 
@@ -335,6 +362,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
 
   .lifecycle-thesis-band,
   .definition-band,
+  .lifecycle-source-boundary,
   .dynamic-reality-band,
   .ledger-panel,
   .pairing-band,
@@ -355,6 +383,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
 
   .lifecycle-thesis-band h2,
   .definition-band h2,
+  .lifecycle-source-boundary h2,
   .dynamic-reality-band h2,
   .ledger-panel h2,
   .section-header h2 {
@@ -388,6 +417,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   }
 
   .definition-band__copy p,
+  .lifecycle-source-boundary p,
   .dynamic-reality-band p,
   .ledger-panel p,
   .section-header p,
@@ -447,6 +477,38 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     text-transform: uppercase;
     color: var(--current-text);
     overflow-wrap: anywhere;
+  }
+
+  .lifecycle-source-boundary {
+    border-left: 3px solid var(--accent-signal);
+    min-width: 0;
+  }
+
+  .source-link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .source-link-grid a {
+    display: grid;
+    gap: 0.35rem;
+    padding: var(--registry-compact-padding);
+    border: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .source-link-grid strong {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .source-link-grid span {
+    color: var(--current-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
   }
 
   .dynamic-reality-band {
@@ -617,6 +679,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     .definition-band,
     .dynamic-reality-grid,
     .lifecycle-split-section,
+    .source-link-grid,
     .proof-path-grid {
       grid-template-columns: 1fr;
     }
@@ -641,6 +704,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
 
     .lifecycle-thesis-band,
     .definition-band,
+    .lifecycle-source-boundary,
     .dynamic-reality-band,
     .ledger-panel,
     .pairing-band,

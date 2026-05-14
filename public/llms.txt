@@ -183,7 +183,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - Intent Drift: https://www.jearonwong.com/concepts/intent-drift/
 - Context Drift: https://www.jearonwong.com/concepts/context-drift/
-- AI Agent Governance: https://www.jearonwong.com/concepts/ai-agent-governance/
+- AI Agent Governance concept bridge: https://www.jearonwong.com/concepts/ai-agent-governance/
+  Use this as concept-level context. For AI Agent Governance governance intent, prefer the governance mapping route above.
 - Protocol Engineering: https://www.jearonwong.com/concepts/protocol-engineering/
 
 ## Flagship Essays
@@ -210,7 +211,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Definitions
 
 - Definitions (citation anchors): https://www.jearonwong.com/definitions/
-Quote-ready definitions for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug.
+Quote-ready reference anchors for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug. Canonical concept explanations live under /concepts/ and the full entity mesh lives at /concepts/map/.
 
 ## Key Definitions
 
@@ -225,4 +226,4 @@ The Delivery Standard defines when AI agent work counts as accountable delivery:
 ## AI Agent Governance
 
 - AI Agent Governance: https://www.jearonwong.com/ai-agent-governance/
-AI Agent Governance is lifecycle accountability for delegated agent work: intent, authority, confirmation, evidence, review, and accepted outcome. Not RBAC. Not monitoring. Not HITL.
+Bridge route retained for field-level framing. For governance mapping intent, prefer https://www.jearonwong.com/governance/ai-agent-governance/. For concept context, prefer https://www.jearonwong.com/concepts/agentic-lifecycle-governance/ and the GAIC white paper hub. This bridge is not legal advice, certification, regulator approval, legal compliance proof, procurement guidance, vendor endorsement, or a claim that MPLP is required.

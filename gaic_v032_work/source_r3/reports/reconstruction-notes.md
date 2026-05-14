@@ -3210,3 +3210,39 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, search ranking, legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3K-0C Status:** ✓ PDF METADATA CONTROLLED RE-SEAL COMPLETE / READY FOR P0 CANONICAL DRIFT REPAIR.
+
+## GAIC-R3K-1A Notes (May 14, 2026)
+
+**Scope:** P0 Canonical and Drift Repair.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `21da2607d08a8b7d6189ee171a8378571afd0537` before R3K-1A patching.
+2. Inspected R3K-0 source-trace audit reports and R3K-0B/R3K-0C artifact identity reports.
+3. Created R3K-1A preflight, P0 canonical decision matrix, GEO canonicality repair report, metadata/JSON-LD check, boundary QA, build/validation report, and final QA.
+4. Clarified AI Agent Governance canonical hierarchy:
+   - `/governance/ai-agent-governance/` is the preferred governance mapping route.
+   - `/ai-agent-governance/` is a field-level bridge.
+   - `/concepts/ai-agent-governance/` is a concept bridge.
+5. Removed `DefinedTerm` JSON-LD from `/ai-agent-governance/` so the bridge does not imply canonical term ownership.
+6. Clarified `/definitions/` as citation/reference anchors and pointed canonical concept/entity explanation to `/concepts/` and `/concepts/map/`.
+7. Preserved `/theory-clusters/` as an existing noindexed compatibility route and added visible legacy-boundary text.
+8. Added boundary/source anchor panels for `/projects/mplp/` and `/projects/validation-lab/`.
+9. Added source/boundary panels for `/lifecycle/`, `/delivery-standard/`, and `/concepts/protocol-engineering/`.
+10. Updated `llms.txt` to stop elevating duplicate/legacy AI Agent Governance routes as canonical GAIC sources.
+
+**Artifact discipline:**
+
+- Only the 10 P0 public routes and narrow shared data/template surfaces needed for those routes were changed.
+- No P1/P2 source-anchor enrichment was performed.
+- No all-75-page repair, bulk expansion, new public semantic route, redirect, or delete operation was performed.
+- No sealed candidate artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML checksum remains unchanged.
+- White paper source, scores, methodology, RCCS-T/RCCS-M/ALCS framing, and GAIC scoring values remain unchanged.
+
+**Boundary discipline:**
+
+- No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-1A Status:** ✓ P0 CANONICAL AND DRIFT REPAIR COMPLETE / READY FOR P1 SOURCE ANCHOR ENRICHMENT.

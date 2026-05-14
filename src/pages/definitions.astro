@@ -11,6 +11,9 @@ import { pageRegistry, siteConfig } from "../data/site";
 
 const canonicalPath = "/definitions/";
 const definitionsUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const conceptsMapPath = "/concepts/map/";
+const conceptIndexPath = "/concepts/";
+const governanceAiAgentPath = "/governance/ai-agent-governance/";
 
 const definitionsPageJsonLd = {
   "@context": "https://schema.org",
@@ -25,6 +28,10 @@ const definitionsPageJsonLd = {
   mainEntity: {
     "@id": `${siteConfig.siteUrl}/definitions/#defined-term-set`
   },
+  significantLink: [
+    `${siteConfig.siteUrl}${conceptIndexPath}`,
+    `${siteConfig.siteUrl}${conceptsMapPath}`
+  ],
   breadcrumb: {
     "@id": `${definitionsUrl}#breadcrumb`
   }
@@ -93,11 +100,13 @@ const breadcrumbJsonLd = {
           <span class="registry-key">CITATION_FORMAT</span>: <span class="registry-value">URL/DEFINITIONS/#SLUG</span>
         </div>
         <p class="usage-note">
-          Each entry has a stable anchor. Use <code>/definitions/#term-slug</code> as a permanent citation URL. The anchors do not change after publication.
+          Definitions is a reference index for stable citation anchors. Canonical concept explanations live under <a href={conceptIndexPath}>/concepts/</a>, and the full entity mesh lives under <a href={conceptsMapPath}>/concepts/map/</a>. GAIC-derived terms should route from these anchors to white-paper-backed concept or governance pages instead of treating this index as the canonical explanation surface.
         </p>
         <div class="usage-links">
           <a href="/lifecycle/">Lifecycle field analysis</a>
-          <a href="/concepts/">Concepts reference layer</a>
+          <a href={conceptIndexPath}>Concepts reference layer</a>
+          <a href={conceptsMapPath}>Concepts Map / Entity Mesh</a>
+          <a href={governanceAiAgentPath}>AI Agent Governance mapping</a>
         </div>
       </section>
 

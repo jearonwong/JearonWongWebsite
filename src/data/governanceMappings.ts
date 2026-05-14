@@ -98,7 +98,8 @@ export const governanceMappings: GovernanceMapping[] = [
     category: "Lifecycle governance",
     summary:
       "AI Agent Governance treats agent work as a lifecycle responsibility problem. Model governance remains necessary, but agentic work also needs authority, evidence, acceptance, rollback, remediation, and closure.",
-    boundary: regulatoryGovernanceBoundary,
+    boundary:
+      `${regulatoryGovernanceBoundary} This is the preferred canonical governance mapping route for AI Agent Governance; /ai-agent-governance/ and /concepts/ai-agent-governance/ are retained as bridge and concept-context routes.`,
     lifecycleLens:
       "The lifecycle lens asks who authorized agent action, what evidence supports it, who accepts the outcome, and how the work can be disputed, remediated, or rolled back.",
     keyQuestions: [
@@ -121,9 +122,13 @@ export const governanceMappings: GovernanceMapping[] = [
     enterpriseUse:
       "Enterprise teams can use this page as a vocabulary bridge between AI governance programs and the work-specific evidence expected from agentic systems.",
     sourceBoundary:
-      "This page relies on GAIC as the author-analytical source and does not make a specific legal or standards compliance claim.",
+      "This page relies on GAIC as the author-analytical source for lifecycle responsibility objects, MRO, RCCS-M, and ALCS. It does not make a specific legal or standards compliance claim, certify any system, or state that MPLP is required.",
     sources: [],
-    relatedLinks: commonGovernanceLinks,
+    relatedLinks: [
+      { href: "/concepts/ai-agent-governance/", label: "AI Agent Governance concept bridge" },
+      { href: "/ai-agent-governance/", label: "AI Agent Governance field bridge" },
+      ...commonGovernanceLinks
+    ],
     keywords: [
       "AI Agent Governance",
       "AI agent compliance",

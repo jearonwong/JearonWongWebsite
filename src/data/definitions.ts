@@ -341,13 +341,15 @@ export const definitions: DefinitionEntry[] = [
     distinction:
       "Not permission management, access control, or monitoring. Those are necessary conditions. Governance also requires lifecycle continuity: authority must attach to intent, plans must carry constraints, confirmations must be recorded, and evidence must survive after execution.",
     evidence: [
-      { label: "Concepts: AI Agent Governance", href: "/concepts/ai-agent-governance/" }
+      { label: "Governance: AI Agent Governance", href: "/governance/ai-agent-governance/" },
+      { label: "Concept bridge: AI Agent Governance", href: "/concepts/ai-agent-governance/" }
     ],
     related: [
       { label: "Confirmation Boundary", href: "#confirmation-boundary" },
       { label: "Evidence Chain", href: "#evidence-chain" },
       { label: "HITL", href: "#hitl" },
-      { label: "Multi-Agent Lifecycle Governance", href: "#multi-agent-lifecycle-governance" }
+      { label: "Multi-Agent Lifecycle Governance", href: "#multi-agent-lifecycle-governance" },
+      { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" }
     ]
   },
   {
@@ -384,7 +386,7 @@ export const definitions: DefinitionEntry[] = [
       { label: "Evidence Chain", href: "#evidence-chain" },
       { label: "Semantic Loss", href: "#semantic-loss" },
       { label: "Multi-Agent Lifecycle Governance", href: "#multi-agent-lifecycle-governance" },
-      { label: "AI Agent Governance", href: "/ai-agent-governance/" }
+      { label: "AI Agent Governance mapping", href: "/governance/ai-agent-governance/" }
     ]
   }
 ];

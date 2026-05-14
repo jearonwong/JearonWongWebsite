@@ -42,8 +42,42 @@ const legacyBreadcrumbJsonLd = createBreadcrumbJsonLd(canonicalUrl, [
     <div class="registry-annotation">
       <span class="registry-key">NEXT_ROUTE</span>: <span class="registry-value">/theories/</span>
     </div>
+    <div class="legacy-boundary registry-chassis">
+      <div class="registry-annotation">
+        <span class="registry-key">ROUTE_BOUNDARY</span>: <span class="registry-value">LEGACY_COMPATIBILITY_ONLY</span>
+      </div>
+      <p>
+        This legacy route is retained for older links and is noindexed. It is not a canonical GAIC concept or entity route. Canonical concept and entity navigation lives under <a href="/concepts/">/concepts/</a> and <a href="/concepts/map/">/concepts/map/</a>; the active ideas route is <a href="/theories/">/theories/</a>.
+      </p>
+    </div>
     <div style="margin-top: 1.5rem;">
       <a href="/theories/" class="button button-outline">Open Ideas</a>
     </div>
   </RegistryPageHero>
 </BaseLayout>
+
+<style>
+  .legacy-boundary {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+    padding: var(--registry-card-padding);
+    max-width: 62rem;
+  }
+
+  .legacy-boundary p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
+  .legacy-boundary a {
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+
+  .legacy-boundary a:hover {
+    color: var(--current-text);
+  }
+</style>

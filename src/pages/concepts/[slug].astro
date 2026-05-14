@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import SocialShare from "../../components/SocialShare.astro";
 import { concepts, getConceptBySlug, getProjectBySlug, pageRegistry, siteConfig } from "../../data/site";
+import { absoluteUrl } from "../../data/schema";
 
 export function getStaticPaths() {
   return concepts.map((concept) => ({
@@ -36,9 +37,11 @@ const relatedTerms = concept.relatedTerms
 const canonicalPath = `/concepts/${concept.slug}/`;
 const conceptUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const governanceAiAgentPath = "/governance/ai-agent-governance/";
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
 const conceptCoreUrl = new URL(conceptCorePath, siteConfig.siteUrl).toString();
 const whitePaperUrl = new URL(whitePaperHub, siteConfig.siteUrl).toString();
+const isAiAgentGovernanceBridge = concept.slug === "ai-agent-governance";
 const gaicJsonLdLink = concept.gaicEntity
   ? {
       citation: whitePaperUrl,
@@ -103,6 +106,16 @@ const pageJsonLd = {
   mainEntity: {
     "@id": `${conceptUrl}#defined-term`
   },
+  ...(isAiAgentGovernanceBridge
+    ? {
+        significantLink: absoluteUrl(governanceAiAgentPath)
+      }
+    : {}),
+  ...(concept.boundaryNote
+    ? {
+        conditionsOfAccess: concept.boundaryNote
+      }
+    : {}),
   breadcrumb: {
     "@id": `${conceptUrl}#breadcrumb`
   },
@@ -201,6 +214,24 @@ const articleJsonLd = {
           <p>{concept.definition}</p>
         </section>
 
+        {concept.canonicalRole && (
+          <section class="registry-chassis canonical-role-panel">
+            <div class="registry-annotation" style="margin-bottom: 1rem;">
+              <span class="registry-key">ROUTE_ROLE</span>
+            </div>
+            <h2>{concept.canonicalRole.title}</h2>
+            <p>{concept.canonicalRole.body}</p>
+            <div class="relation-links compact-source-links">
+              {concept.canonicalRole.links.map((link) => (
+                <a href={link.href}>
+                  <strong>{link.label}</strong>
+                  <span>{link.description}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section class="concept-section">
           <h2>{concept.gaicEntity ? "Why it matters" : "The problem it names"}</h2>
           <p>{concept.problem}</p>
@@ -226,7 +257,26 @@ const articleJsonLd = {
         {concept.relationToGaic && (
           <section class="concept-section">
             <h2>How it relates to the GAIC white paper</h2>
-            <p>{concept.relationToGaic}</p>
+          <p>{concept.relationToGaic}</p>
+        </section>
+      )}
+
+        {(concept.boundaryNote || concept.sourceLinks) && (
+          <section class="registry-chassis canonical-role-panel">
+            <div class="registry-annotation" style="margin-bottom: 1rem;">
+              <span class="registry-key">SOURCE_BOUNDARY</span>
+            </div>
+            {concept.boundaryNote && <p>{concept.boundaryNote}</p>}
+            {concept.sourceLinks && (
+              <div class="relation-links compact-source-links">
+                {concept.sourceLinks.map((link) => (
+                  <a href={link.href}>
+                    <strong>{link.label}</strong>
+                    <span>{link.description}</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
@@ -463,6 +513,7 @@ const articleJsonLd = {
   }
 
   .definition-panel p,
+  .canonical-role-panel p,
   .concept-section p {
     margin: 0;
     font-size: 1.08rem;
@@ -472,6 +523,23 @@ const articleJsonLd = {
 
   .definition-panel p {
     color: var(--current-text);
+  }
+
+  .canonical-role-panel {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-signal);
+  }
+
+  .canonical-role-panel h2 {
+    margin: 0 0 0.9rem;
+    color: var(--current-text);
+    font-size: 1.35rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .compact-source-links {
+    margin-top: 1rem;
   }
 
   .concept-section {

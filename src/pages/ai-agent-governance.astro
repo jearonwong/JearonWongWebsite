@@ -10,6 +10,11 @@ import {
 
 const canonicalPath = "/ai-agent-governance/";
 const pageUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const governanceCanonicalPath = "/governance/ai-agent-governance/";
+const governanceCanonicalUrl = new URL(governanceCanonicalPath, siteConfig.siteUrl).toString();
+const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
+const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
+const whitePaperUrl = new URL(whitePaperHub, siteConfig.siteUrl).toString();
 
 const webPageJsonLd = {
   "@context": "https://schema.org",
@@ -23,6 +28,19 @@ const webPageJsonLd = {
   author: {
     "@id": `${siteConfig.siteUrl}#person`
   },
+  isBasedOn: [
+    {
+      "@type": "WebPage",
+      name: "AI Agent Governance",
+      url: governanceCanonicalUrl
+    },
+    {
+      "@type": "TechArticle",
+      name: "Global AI Compliance White Paper 2026",
+      url: whitePaperUrl
+    }
+  ],
+  significantLink: governanceCanonicalUrl,
   about: [
     "AI Agent Governance",
     "AI Agent Lifecycle",
@@ -36,21 +54,6 @@ const webPageJsonLd = {
     "AI agent accountability",
     "AI agent systems"
   ]
-};
-
-const definedTermJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "@id": `${siteConfig.siteUrl}/definitions/#ai-agent-governance`,
-  name: "AI Agent Governance",
-  description:
-    "AI Agent Governance is the set of authority, boundary, confirmation, evidence, and review conditions that make delegated agent work accountable.",
-  inDefinedTermSet: {
-    "@type": "DefinedTermSet",
-    "@id": `${siteConfig.siteUrl}/definitions/#defined-term-set`,
-    name: "Definitions for the Agent Era"
-  },
-  url: `${siteConfig.siteUrl}/definitions/#ai-agent-governance`
 };
 
 const breadcrumbJsonLd = {
@@ -81,7 +84,7 @@ const breadcrumbJsonLd = {
   shareDescription={pageRegistry.aiAgentGovernance.lead}
   ogImagePath="/social/og-ai-agent-governance.png"
   ogImageAlt="AI Agent Governance — Governance Architecture by Jearon Wong"
-  jsonLd={[webPageJsonLd, definedTermJsonLd, breadcrumbJsonLd]}
+  jsonLd={[webPageJsonLd, breadcrumbJsonLd]}
 >
   <RegistryPageHero
     title={aiAgentGovernancePageContent.hero.title}
@@ -99,6 +102,9 @@ const breadcrumbJsonLd = {
       <a href="/definitions/#ai-agent-governance" class="registry-annotation aag-hero-link">
         <span class="registry-key">DEFINITION</span>: <span class="registry-value">DEFINITIONS/#AI-AGENT-GOVERNANCE</span>
       </a>
+      <a href={governanceCanonicalPath} class="registry-annotation aag-hero-link">
+        <span class="registry-key">CANONICAL_GOVERNANCE</span>: <span class="registry-value">/GOVERNANCE/AI-AGENT-GOVERNANCE/</span>
+      </a>
     </div>
   </RegistryPageHero>
 
@@ -113,6 +119,23 @@ const breadcrumbJsonLd = {
         {aiAgentGovernancePageContent.claim.body.map((line, i) => (
           <p class={i === 0 ? "claim-lead" : ""}>{line}</p>
         ))}
+      </section>
+
+      <section class="registry-chassis aag-canonical-band">
+        <div class="registry-annotation aag-section-tag">
+          <span class="registry-key">00_ROUTE_ROLE</span>
+        </div>
+        <h2>{aiAgentGovernancePageContent.canonicalHierarchy.title}</h2>
+        <p>{aiAgentGovernancePageContent.canonicalHierarchy.body}</p>
+        <p>{aiAgentGovernancePageContent.boundary}</p>
+        <div class="canonical-link-grid">
+          {aiAgentGovernancePageContent.canonicalHierarchy.links.map((link) => (
+            <a href={link.href}>
+              <strong>{link.label}</strong>
+              <span>{link.description}</span>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section class="aag-governs-section">
@@ -162,6 +185,8 @@ const breadcrumbJsonLd = {
           <div class="panel-links">
             <a href="/lifecycle/">AI Agent Lifecycle field analysis</a>
             <a href="/delivery-standard/">The Delivery Standard</a>
+            <a href={conceptCorePath}>Agentic Lifecycle Governance</a>
+            <a href={governanceCanonicalPath}>AI Agent Governance mapping</a>
           </div>
         </article>
 
@@ -214,7 +239,8 @@ const breadcrumbJsonLd = {
         <p>{aiAgentGovernancePageContent.protocolPath.body}</p>
         <div class="panel-links">
           <a href="/projects/mplp/">MPLP protocol path</a>
-          <a href="/definitions/#ai-agent-governance">AI Agent Governance definition</a>
+          <a href={governanceCanonicalPath}>AI Agent Governance mapping</a>
+          <a href={whitePaperHub}>GAIC white paper</a>
           <a href="/delivery-standard/">The Delivery Standard</a>
           <a href="/lifecycle/">AI Agent Lifecycle field analysis</a>
         </div>
@@ -284,6 +310,56 @@ const breadcrumbJsonLd = {
     --current-text: #f1f5f9;
     display: grid;
     gap: 1rem;
+  }
+
+  .aag-canonical-band {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-signal);
+    min-width: 0;
+  }
+
+  .aag-canonical-band h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .aag-canonical-band p {
+    max-width: 62rem;
+    margin: 1rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .canonical-link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .canonical-link-grid a {
+    display: grid;
+    gap: 0.35rem;
+    padding: var(--registry-compact-padding);
+    border: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .canonical-link-grid strong {
+    color: var(--current-text);
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .canonical-link-grid span {
+    color: var(--current-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
   }
 
   .aag-claim-band h2 {
@@ -577,7 +653,8 @@ const breadcrumbJsonLd = {
 
   @media (max-width: 980px) {
     .aag-split-section,
-    .approaches-grid {
+    .approaches-grid,
+    .canonical-link-grid {
       grid-template-columns: 1fr;
     }
 
@@ -600,6 +677,7 @@ const breadcrumbJsonLd = {
     }
 
     .aag-claim-band,
+    .aag-canonical-band,
     .aag-approaches-section,
     .ledger-panel {
       padding: var(--registry-card-padding);
