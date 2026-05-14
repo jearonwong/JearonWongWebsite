@@ -2394,7 +2394,7 @@ Remaining work:
 
 ---
 
-## GAIC-R3K-0B Known Issues
+## GAIC-R3K-0B / R3K-0C Known Issues
 
 ### White Paper Passive Discoverability Hardening Partial Complete
 
@@ -2411,13 +2411,22 @@ Completed:
 - Updated `llms.txt` with the Technical Report ID / Trace Tag and recommended citation.
 - Updated the public responsive HTML checksum to `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
 
-Deferred issue:
+Deferred issue closed by R3K-0C:
 
-- PDF metadata has title and trace tag but lacks Author, Subject, and Keywords. R3K-0B does not mutate PDF metadata because the PDF hash matches the sealed candidate PDF hash. A controlled re-seal decision is required if PDF-native metadata should be changed.
+- PDF metadata had title and trace tag but lacked Author, Subject, and Keywords. R3K-0C performed a controlled public distribution PDF metadata re-seal and updated the public PDF hash while preserving the sealed candidate PDF.
+
+R3K-0C closure:
+
+- Public PDF metadata now includes Title, Author, Subject, and Keywords.
+- Public PDF checksum changed from `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643` to `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+- Sealed candidate PDF remains `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Page count remains 425.
+- Sampled visual render parity passed on pages 1, 2, 3, 50, 120, 200, 300, and 425.
+- `public-pdf-metadata-reseal-manifest.json` records the public distribution PDF metadata re-seal.
 
 Boundary discipline:
 
-- No PDF/DOCX mutation.
+- No DOCX mutation.
 - No sealed candidate artifact mutation.
 - No white paper source, score, or methodology change.
 - No R3K-1A P0 canonical/drift repair.
@@ -2426,7 +2435,8 @@ Boundary discipline:
 
 Remaining work:
 
-- User decision required on whether to run a controlled PDF metadata re-seal wave.
-- R3K-1A P0 canonical/drift repair remains the next implementation wave after R3K-0B review.
+- R3K-1A P0 canonical/drift repair remains the next implementation wave.
 
-**GAIC-R3K-0B Status:** ◐ PARTIAL COMPLETE / PDF METADATA RE-SEAL DECISION PENDING
+**GAIC-R3K-0B Status:** ✓ PASSIVE DISCOVERABILITY HARDENING COMPLETE / PDF METADATA RE-SEAL DECISION CLOSED BY R3K-0C
+
+**GAIC-R3K-0C Status:** ✓ PDF METADATA CONTROLLED RE-SEAL COMPLETE / READY FOR P0 CANONICAL DRIFT REPAIR

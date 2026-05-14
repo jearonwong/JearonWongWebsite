@@ -3180,4 +3180,33 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 
 - No Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, search ranking, legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output, or MPLP industry-standard claim was introduced.
 
-**GAIC-R3K-0B Status:** ◐ PARTIAL COMPLETE / PDF METADATA RE-SEAL DECISION PENDING.
+**GAIC-R3K-0B Status:** ✓ PASSIVE DISCOVERABILITY HARDENING COMPLETE / PDF METADATA RE-SEAL DECISION CLOSED BY R3K-0C.
+
+## GAIC-R3K-0C Notes (May 14, 2026)
+
+**Scope:** Public PDF Metadata Controlled Re-seal.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `33e442638da402c402fffb472b1963b002982bb0` before R3K-0C patching.
+2. Captured baseline public PDF metadata, page count, hash, and sampled page renders.
+3. Applied PDF-native Title, Author, Subject, and Keywords metadata to the public distribution PDF using incremental metadata save.
+4. Verified post-metadata page count remains 425.
+5. Rendered sampled pages 1, 2, 3, 50, 120, 200, 300, and 425 before and after metadata update; all sampled PNG outputs matched byte-identically.
+6. Updated `checksums.sha256` with public PDF hash `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+7. Created `public-pdf-metadata-reseal-manifest.json`.
+8. Updated the white paper hub checksum display, JSON-LD PDF hash, artifact grid, and integrity note to distinguish the metadata-hardened public PDF from the preserved sealed candidate PDF.
+
+**Artifact discipline:**
+
+- Public PDF metadata changed; visible content, text content, layout, page count, scores, methodology, and white paper prose did not change.
+- Public DOCX remains unchanged.
+- Responsive public HTML remains unchanged.
+- Sealed candidate HTML/PDF/DOCX/log artifacts remain unchanged.
+- R3K-1A P0 canonical/drift repairs and P1/P2 page repairs remain deferred.
+
+**Boundary discipline:**
+
+- No Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, search ranking, legal advice, certification, regulator approval, legal compliance proof, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-0C Status:** ✓ PDF METADATA CONTROLLED RE-SEAL COMPLETE / READY FOR P0 CANONICAL DRIFT REPAIR.

@@ -32,7 +32,7 @@ const citationMetaTags = [
 const shaRows = [
   {
     label: "PDF",
-    value: "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643"
+    value: "facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329"
   },
   {
     label: "HTML web edition",
@@ -322,7 +322,7 @@ const definedTermSetJsonLd = {
             </div>
             <h2 id="download-title">Download and read.</h2>
           </div>
-          <a href={manifestUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">View manifest</a>
+          <a href={checksumUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">View checksums</a>
         </div>
         <div class="artifact-grid">
           <a href={`${assetBase}/global-ai-compliance-white-paper-2026.pdf`} class="artifact-card">
@@ -342,8 +342,13 @@ const definedTermSetJsonLd = {
           </a>
           <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
-            <strong>Manifest / checksums</strong>
-            <span>Seal metadata</span>
+            <strong>Seal manifest</strong>
+            <span>Historical publication-candidate metadata</span>
+          </a>
+          <a href={`${assetBase}/public-pdf-metadata-reseal-manifest.json`} class="artifact-card">
+            <span class="artifact-kind">JSON</span>
+            <strong>PDF metadata re-seal</strong>
+            <span>Public distribution metadata record</span>
           </a>
         </div>
       </section>
@@ -367,6 +372,7 @@ const definedTermSetJsonLd = {
             <div><dt>DOCX</dt><dd><a href={docxUrl}>{docxUrl}</a></dd></div>
             <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
             <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
+            <div><dt>Public PDF metadata re-seal</dt><dd><a href={`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}>{`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}</a></dd></div>
           </dl>
         </div>
         <div class="boundary-panel">
@@ -428,8 +434,10 @@ const definedTermSetJsonLd = {
           </div>
         </div>
         <p class="integrity-note">
-          The PDF and DOCX retain their sealed publication-candidate hashes. The public HTML file is
-          the responsive web-reading edition derived from the sealed content and carries its own checksum.
+          The DOCX retains its sealed publication-candidate hash. The public PDF is a metadata-hardened
+          distribution re-seal of the sealed candidate PDF; its visible content and page count are unchanged,
+          and the sealed candidate PDF remains preserved. The public HTML file is the responsive web-reading
+          edition derived from the sealed content and carries its own checksum.
         </p>
       </section>
 
