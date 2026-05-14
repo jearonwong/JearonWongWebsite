@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 14, 2026 (GAIC-R3K-0 Whitepaper Source-Trace Audit)
+**Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
 
 ## Reconstruction Strategy
 
@@ -3246,3 +3246,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3K-1A Status:** ✓ P0 CANONICAL AND DRIFT REPAIR COMPLETE / READY FOR P1 SOURCE ANCHOR ENRICHMENT.
+
+## GAIC-R3K-1B Notes (May 14, 2026)
+
+**Scope:** P1 Source Anchor Enrichment.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `4f2d3af6e2269c9eb231c656c3cfdadc6711fe1d` before R3K-1B patching.
+2. Inspected R3K-0 source-trace audit reports and R3K-1A final QA/canonicality reports.
+3. Extracted the 46 P1 pages from the R3K-0 JSON reports and created `gaic-r3k1b-p1-working-inventory.md` / `.json`.
+4. Added a route-keyed GAIC P1 source-trace data layer with page-specific support level, source anchors, MRO/RCCS-M/ALCS relation text, lifecycle example, canonical source links, and boundary language.
+5. Added a reusable `GAICSourceTrace` component that renders visible `WHITE_PAPER_SOURCE_TRACE` sections only for P1 routes.
+6. Wired the component into concept, governance, GAIC-cited system mapping, extended ecosystem detail, and extended ecosystem index templates.
+7. Added JSON-LD `citation` / `mentions` consistency only where the visible source-trace section is present.
+8. Audited `llms.txt` and Concepts Map; no changes were needed because the existing surfaces already preserve canonical hierarchy without promoting every P1 page as equally canonical.
+9. Verified built output contains exactly 46 `WHITE_PAPER_SOURCE_TRACE` sections, matching the R3K-0 P1 count.
+
+**Artifact discipline:**
+
+- No P0 broad rework was performed.
+- No P2 long-tail repair was performed.
+- No new public route, route deletion, redirect, public PDF mutation, responsive public HTML mutation, white paper source edit, scoring edit, or methodology edit was performed.
+- Public PDF hash remains `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+- Public responsive HTML hash remains `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+- Sealed candidate PDF hash remains `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+
+**Boundary discipline:**
+
+- No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-1B Status:** ✓ P1 SOURCE ANCHOR ENRICHMENT COMPLETE / READY FOR P2 LONG-TAIL DECISION OR OWNER LAUNCH EXECUTION.

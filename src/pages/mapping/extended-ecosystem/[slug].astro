@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import GAICSourceTrace from "../../../components/GAICSourceTrace.astro";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
+import { getGaicP1SourceTraceByRoute } from "../../../data/gaicP1SourceTrace";
 import {
   extendedEcosystemBoundary,
   extendedEcosystemIndexPath,
@@ -29,6 +31,7 @@ const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
 const systemsIndexPath = "/research/global-ai-compliance-white-paper-2026/systems/";
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const metaDescription = `${ecosystem.name} lifecycle governance mapping for Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Authority Boundary, Evidence Chain, Accepted Outcome, rollback, auditability, and Harness Engineering.`;
+const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const relatedLinks = [
   { href: whitePaperHub, label: "GAIC white paper hub" },
   { href: systemsIndexPath, label: "GAIC-cited systems index" },
@@ -109,7 +112,13 @@ const articleJsonLd = {
     {
       "@type": "Thing",
       name: "Harness Engineering"
-    }
+    },
+    ...(gaicSourceTrace
+      ? gaicSourceTrace.sourceAnchors.map((anchor) => ({
+          "@type": "Thing",
+          name: anchor.label
+        }))
+      : [])
   ],
   isPartOf: {
     "@type": "CollectionPage",
@@ -242,6 +251,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <h2>Protocol path</h2>
           <p>{ecosystem.protocolPath}</p>
         </section>
+
+        {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
 
         <section class="ecosystem-section">
           <h2>Official sources consulted</h2>

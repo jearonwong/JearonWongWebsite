@@ -1,0 +1,1365 @@
+{
+  "generated": "2026-05-14",
+  "source": "R3K-0 prioritized repair plan and page-source trace matrix",
+  "count": 46,
+  "pages": [
+    {
+      "route": "/concepts/accepted-outcome/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Accepted Outcome",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-04",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/agent-architecture-governance/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Agent Architecture Governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "FAILURE-CH15"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "derived",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/agentic-delivery/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Agentic Delivery",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/ai-agent-lifecycle/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "AI Agent Lifecycle",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/alcs/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "ALCS",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "ALCS-CH8",
+        "RCCSM-CH7",
+        "BOUNDARY-FM"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/authority-boundary/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Authority Boundary",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-02",
+        "MRO-07",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "derived",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/configurable-agent-governance/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Configurable Agent Governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-02",
+        "SUBSTITUTION-MRO15",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/confirmation-boundary/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Confirmation Boundary",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/context-drift/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Context Drift",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/deterministic-delivery/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Deterministic Delivery",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "ALCS-CH8",
+        "FAILURE-CH15",
+        "CLOSURE-MRO16"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "direct",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/intent-drift/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Intent Drift",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/lifecycle-evidence/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Evidence Chain",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-08",
+        "VALIDATION-CH14",
+        "PRIVACY-MRO"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/lifecycle-governed-agent-workflow/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Lifecycle-Governed Agent Workflow",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/lifecycle-responsibility-objects/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Lifecycle Responsibility Objects",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "OBJECTS-CH5",
+        "MRO-CH6",
+        "BOUNDARY-FM"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "derived",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/lifecycle-role-decomposition/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Lifecycle Role Decomposition",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/missing-regulatory-objects/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Missing Regulatory Objects",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-CH6",
+        "OBJECTS-CH5",
+        "BOUNDARY-FM"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "derived",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/rccs-m/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "RCCS-M",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "RCCST-CH7",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/concepts/rollbackable-agent-workflows/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Rollbackable Agent Workflows",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "MRO-16",
+        "FAILURE-CH15",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "CLOSURE-MRO16"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/concepts/verifiable-ai-agents/",
+      "sourceFile": "src/pages/concepts/[slug].astro + src/data/site.ts",
+      "pageFamily": "Concepts",
+      "currentTitle": "Verifiable AI Agents",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "derived",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "VALIDATION-CH14",
+        "MRO-08",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "none",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/ai-agent-compliance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "AI Agent Compliance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/ai-agent-evidence-retention/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "AI Agent Evidence Retention",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/enterprise-agent-governance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "Enterprise Agent Governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/eu-ai-act-agentic-systems/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "EU AI Act and Agentic Systems",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/gdpr-agentic-ai-evidence/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "GDPR and Agentic AI Evidence",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "PRIVACY-MRO"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/human-role-responsibility-mapping/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "Human Role Responsibility Mapping",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "ROLE-MRO01"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/incident-dispute-remediation-closure/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "Incident, Dispute, and Remediation Closure for AI Agents",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "CLOSURE-MRO16",
+        "FAILURE-CH15"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/iso-42001-agentic-ai/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "ISO/IEC 42001 and Agentic AI Management Systems",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/multi-agent-system-governance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "Multi-Agent System Governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/nist-ai-rmf-agentic-lifecycle/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "NIST AI RMF and Agentic Lifecycle Governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/governance/vendor-runtime-substitution-conformance/",
+      "sourceFile": "src/pages/governance/[slug].astro + src/data/governanceMappings.ts",
+      "pageFamily": "Governance",
+      "currentTitle": "Vendor and Runtime Substitution Conformance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "REG-CH4",
+        "OBJECTS-CH5",
+        "MRO-CH6"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "RCCSM-CH7",
+        "ALCS-CH8",
+        "BOUNDARY-FM",
+        "SUBSTITUTION-MRO15"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/a2a/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "A2A",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/autogen/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "AutoGen",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/claude-code/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "Claude Code",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/cursor-ai-coding-agents/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "Cursor / AI Coding Agents",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM",
+        "VALIDATION-CH14",
+        "CLOSURE-MRO16"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/index.astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "Extended Ecosystem Lifecycle Governance Mapping",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/mcp/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "MCP",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/qwen/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "Qwen",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/mapping/extended-ecosystem/semantic-kernel/",
+      "sourceFile": "src/pages/mapping/extended-ecosystem/[slug].astro + src/data/extendedEcosystems.ts",
+      "pageFamily": "Extended ecosystem mapping",
+      "currentTitle": "Semantic Kernel",
+      "r3k0Classification": "unsupported-extension",
+      "sourceStrength": "adjacent",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SUBSTITUTION-MRO15",
+        "MRO-CH6",
+        "ALCS-CH8"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add explicit non-GAIC-scored boundary",
+        "Add concept-source anchors to MRO/RCCS-M/ALCS",
+        "Keep official-source basis visible"
+      ],
+      "requiredEnrichmentType": "add source anchors and explicit exploratory/non-GAIC-scored boundary",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "derived",
+      "alcsRelation": "direct",
+      "mroRelation": "direct"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/aws-bedrock-agentcore/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "AWS Bedrock + Guardrails + AgentCore",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/crewai/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "CrewAI",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/google-vertex-ai-adk/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "Google Vertex AI + ADK + Model Armor",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/ibm-watsonx-governance/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "IBM watsonx.governance",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/langgraph-langsmith/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "LangGraph + LangSmith",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/microsoft-azure-ai-foundry/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "Microsoft Azure AI Foundry",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/mplp/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "MPLP",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM",
+        "MPLP-CH13"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    },
+    {
+      "route": "/research/global-ai-compliance-white-paper-2026/systems/openai-agents-sdk/",
+      "sourceFile": "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro + src/data/gaicSystems.ts",
+      "pageFamily": "Systems mapping",
+      "currentTitle": "OpenAI Agents SDK",
+      "r3k0Classification": "sufficient but needs source anchors",
+      "sourceStrength": "direct",
+      "sourceTraceCompleteness": "partial",
+      "primaryWhitePaperAnchors": [
+        "SYSTEMS-CH12",
+        "RESULTS-CH12",
+        "SCORE-CH9"
+      ],
+      "secondaryWhitePaperAnchors": [
+        "BOUNDARY-FM"
+      ],
+      "missingSourceTraceElement": [
+        "Add chapter/table/MRO source anchors",
+        "Add compact source boundary where missing"
+      ],
+      "requiredEnrichmentType": "add source anchors",
+      "bodyNeedsContentAddition": true,
+      "metadataNeedsUpdate": false,
+      "jsonLdNeedsUpdate": true,
+      "llmsTxtNeedsUpdate": false,
+      "internalLinksNeedUpdate": false,
+      "rccsMRelation": "direct",
+      "alcsRelation": "none",
+      "mroRelation": "adjacent"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../../../components/RegistryPageHero.astro";
+import GAICSourceTrace from "../../../../components/GAICSourceTrace.astro";
+import { getGaicP1SourceTraceByRoute } from "../../../../data/gaicP1SourceTrace";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../../data/schema";
 import { gaicSystems, getGAICSystemBySlug } from "../../../../data/gaicSystems";
 import { siteConfig } from "../../../../data/site";
@@ -22,6 +24,7 @@ const systemsIndexPath = "/research/global-ai-compliance-white-paper-2026/system
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const canonicalPath = `${systemsIndexPath}${system.slug}/`;
 const pageUrl = absoluteUrl(canonicalPath);
+const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const metaDescription = `${system.name} mapped through the Global AI Compliance White Paper 2026 lifecycle governance lens: source-qualified, provisional, non-ranking, and non-procurement.`;
 const relatedLinks = [
   { href: whitePaperHub, label: "GAIC white paper hub" },
@@ -102,7 +105,13 @@ const articleJsonLd = {
     {
       "@type": "Thing",
       name: "ALCS"
-    }
+    },
+    ...(gaicSourceTrace
+      ? gaicSourceTrace.sourceAnchors.map((anchor) => ({
+          "@type": "Thing",
+          name: anchor.label
+        }))
+      : [])
   ],
   isBasedOn: {
     "@type": "TechArticle",
@@ -233,6 +242,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <h2>Protocol path</h2>
           <p>{system.protocolPath}</p>
         </section>
+
+        {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
 
         <section class="relation-grid" aria-label={`${system.name} related links`}>
           <article class="registry-chassis relation-panel">

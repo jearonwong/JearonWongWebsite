@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import GAICSourceTrace from "../../components/GAICSourceTrace.astro";
+import { getGaicP1SourceTraceByRoute } from "../../data/gaicP1SourceTrace";
 import {
   getGovernanceMappingBySlug,
   governanceIndexPath,
@@ -24,6 +26,7 @@ if (!mapping) {
 
 const canonicalPath = `${governanceIndexPath}${mapping.slug}/`;
 const pageUrl = absoluteUrl(canonicalPath);
+const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
 const relatedLinks = [
@@ -71,10 +74,18 @@ const articleJsonLd = {
     "@type": "Thing",
     name: keyword
   })),
-  mentions: mapping.relatedObjects.map((object) => ({
-    "@type": "Thing",
-    name: object
-  })),
+  mentions: [
+    ...mapping.relatedObjects.map((object) => ({
+      "@type": "Thing",
+      name: object
+    })),
+    ...(gaicSourceTrace
+      ? gaicSourceTrace.sourceAnchors.map((anchor) => ({
+          "@type": "Thing",
+          name: anchor.label
+        }))
+      : [])
+  ],
   isPartOf: {
     "@type": "CollectionPage",
     name: "AI Agent Governance and Lifecycle Responsibility",
@@ -213,6 +224,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             </div>
           )}
         </section>
+
+        {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
 
         <section class="relation-grid" aria-label={`${mapping.title} related links`}>
           <article class="registry-chassis relation-panel">

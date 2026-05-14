@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 14, 2026 (GAIC-R3K-0 Whitepaper Source-Trace Audit)
+**Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
 
 ## GAIC-R3A Core Entity Mesh
 
@@ -2478,3 +2478,41 @@ Boundary discipline:
 - No legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, answer-engine pickup, Google Scholar indexing, search ranking, or MPLP industry-standard claim introduced.
 
 **GAIC-R3K-1A Status:** ✓ P0 CANONICAL AND DRIFT REPAIR COMPLETE / READY FOR P1 SOURCE ANCHOR ENRICHMENT
+
+---
+
+## GAIC-R3K-1B Known Issues
+
+### P1 Source Anchor Enrichment Complete
+
+R3K-1B repaired the 46 P1 pages identified by R3K-0. This was a source-anchor enrichment wave, not a full rewrite wave.
+
+Resolved in this wave:
+
+- 19 concept routes now render concise `WHITE_PAPER_SOURCE_TRACE` panels with route-specific source support:
+  - direct source support for MRO, RCCS-M, and ALCS concept pages where R3K-0 identified direct anchors.
+  - derived source support for lifecycle responsibility, authority, evidence, accepted outcome, deterministic delivery, rollback, verification, configurable governance, and architecture governance.
+  - adjacent source support where R3K-0 did not identify a direct chapter/table/MRO anchor.
+- 11 governance routes now render source traces to the GAIC regulatory baseline, engineering-object translation, MRO, RCCS-M, ALCS, and boundary discipline.
+- 8 GAIC-cited system mapping routes now render source traces to Chapter 12 system mappings, provisional results, scoring method, and boundary discipline, with MPLP additionally linked to the dedicated MPLP deep-mapping boundary.
+- 8 extended ecosystem routes now render source-qualified, non-GAIC-scored source traces to MRO, substitution, ALCS, and boundary anchors.
+- P1 JSON-LD was adjusted only where visible source-trace content was added, by adding visible source anchors to `citation` / `mentions` fields.
+- `llms.txt` and Concepts Map were audited and left unchanged because they already prioritize GAIC hub, Concept Core, Concepts Map, Governance, Systems Mapping, and Extended Ecosystem without listing every P1 route as equally canonical.
+
+Remaining known issues:
+
+- P2 long-tail essay/playbook enrichment remains deferred.
+- R3K-0 unsupported or adjacent pages that are not P1 remain for later owner decision.
+- No Search Console, Bing, LinkedIn, newsletter, group distribution, answer-engine test, ranking, or citation outcome is claimed by this wave.
+
+Boundary discipline:
+
+- No P0 rework was performed beyond preserving inherited canonical relationships.
+- No P2 broad repair was performed.
+- No sealed artifacts changed.
+- No public PDF metadata re-seal changed.
+- No responsive public HTML artifact or checksum changed.
+- No white paper source, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring values changed.
+- No legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output claim, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-1B Status:** ✓ P1 SOURCE ANCHOR ENRICHMENT COMPLETE / READY FOR P2 LONG-TAIL DECISION OR OWNER LAUNCH EXECUTION

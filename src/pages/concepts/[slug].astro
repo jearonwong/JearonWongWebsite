@@ -2,7 +2,9 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import GAICSourceTrace from "../../components/GAICSourceTrace.astro";
 import SocialShare from "../../components/SocialShare.astro";
+import { getGaicP1SourceTraceByRoute } from "../../data/gaicP1SourceTrace";
 import { concepts, getConceptBySlug, getProjectBySlug, pageRegistry, siteConfig } from "../../data/site";
 import { absoluteUrl } from "../../data/schema";
 
@@ -36,6 +38,7 @@ const relatedTerms = concept.relatedTerms
   .filter((term): term is NonNullable<typeof term> => Boolean(term));
 const canonicalPath = `/concepts/${concept.slug}/`;
 const conceptUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
+const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const governanceAiAgentPath = "/governance/ai-agent-governance/";
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
@@ -140,6 +143,18 @@ const articleJsonLd = {
     "@type": "Thing",
     name: keyword
   })),
+  ...(gaicSourceTrace
+    ? {
+        citation: [
+          whitePaperUrl,
+          ...gaicSourceTrace.sourceAnchors.map((anchor) => absoluteUrl(anchor.href))
+        ],
+        mentions: gaicSourceTrace.sourceAnchors.map((anchor) => ({
+          "@type": "Thing",
+          name: anchor.label
+        }))
+      }
+    : {}),
   ...gaicJsonLdLink
 };
 ---
@@ -279,6 +294,8 @@ const articleJsonLd = {
             )}
           </section>
         )}
+
+        {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
 
         {concept.entityClusters && (
           <section class="concept-section">

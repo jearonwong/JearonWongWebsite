@@ -1,8 +1,10 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import GAICSourceTrace from "../../../components/GAICSourceTrace.astro";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
 import { gaicSystems } from "../../../data/gaicSystems";
+import { getGaicP1SourceTraceByRoute } from "../../../data/gaicP1SourceTrace";
 import {
   existingExtendedEcosystemRoutes,
   extendedEcosystemBoundary,
@@ -13,6 +15,7 @@ import { siteConfig } from "../../../data/site";
 
 const canonicalPath = extendedEcosystemIndexPath;
 const pageUrl = absoluteUrl(canonicalPath);
+const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const metaDescription =
   "Independent lifecycle governance mappings for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems.";
 const keywords = [
@@ -222,6 +225,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           not a required or exclusive route.
         </p>
       </section>
+
+      {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
     </main>
   </div>
 </BaseLayout>
