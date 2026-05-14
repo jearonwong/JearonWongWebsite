@@ -1858,6 +1858,7 @@ export const primaryNav = [
 export const secondaryNav = [
   { href: "/concepts/", label: "Concepts" },
   { href: "/definitions/", label: "Definitions" },
+  { href: "/evidence/", label: "Evidence" },
   { href: "/theories/", label: "Ideas" },
   { href: "/governance/", label: "Governance" },
   { href: "/playbooks/", label: "Playbooks" },

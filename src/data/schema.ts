@@ -40,6 +40,9 @@ export const siteEntityTerms = [
   "AI Agent Governance",
   "Harness Engineering",
   "GAIC-Cited Systems",
+  "Evidence Registry",
+  "Citation Kit",
+  "Entity graph JSON artifact",
   "IBM watsonx.governance",
   "Microsoft Azure AI Foundry",
   "AWS Bedrock",
@@ -105,6 +108,17 @@ export function createPersonJsonLd() {
         "@type": "TechArticle",
         name: "Global AI Compliance White Paper 2026",
         url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
+      },
+      {
+        "@type": "CreativeWork",
+        name: "MPLP",
+        alternateName: "Multi-Agent Lifecycle Protocol",
+        url: absoluteUrl("/projects/mplp/")
+      },
+      {
+        "@type": "CollectionPage",
+        name: "Evidence Registry and Citation Kit",
+        url: absoluteUrl("/evidence/")
       },
       {
         "@type": "WebPage",

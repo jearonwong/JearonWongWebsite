@@ -1,0 +1,554 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import { siteConfig } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+
+const canonicalPath = "/evidence/";
+const pageUrl = absoluteUrl(canonicalPath);
+const entityGraphPath = "/entity/jearonwong-mplp-gaic-entity-graph.json";
+const gaicAssetBase = "/research/global-ai-compliance-white-paper-2026";
+const pageDescription =
+  "Evidence Registry and Citation Kit for Jearon Wong, MPLP, Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces.";
+const citationText =
+  "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.";
+const evidenceItems = [
+  {
+    group: "Identity",
+    label: "Jearon Wong canonical profile page",
+    href: "/about/",
+    status: "owned-canonical"
+  },
+  {
+    group: "Research",
+    label: "Global AI Compliance White Paper 2026 hub",
+    href: "/research/global-ai-compliance-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Research",
+    label: "GAIC responsive HTML full text",
+    href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.html`,
+    status: "authored-analysis"
+  },
+  {
+    group: "Research",
+    label: "GAIC PDF",
+    href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.pdf`,
+    status: "authored-analysis"
+  },
+  {
+    group: "Research",
+    label: "GAIC DOCX derivative",
+    href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.docx`,
+    status: "authored-analysis"
+  },
+  {
+    group: "Integrity",
+    label: "Checksums",
+    href: `${gaicAssetBase}/checksums.sha256`,
+    status: "owned-canonical"
+  },
+  {
+    group: "Integrity",
+    label: "Publication candidate manifest",
+    href: `${gaicAssetBase}/publication-candidate-manifest.json`,
+    status: "owned-canonical"
+  },
+  {
+    group: "Integrity",
+    label: "Public PDF metadata re-seal manifest",
+    href: `${gaicAssetBase}/public-pdf-metadata-reseal-manifest.json`,
+    status: "owned-canonical"
+  },
+  {
+    group: "Concept",
+    label: "Agentic Lifecycle Governance",
+    href: "/concepts/agentic-lifecycle-governance/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Concept",
+    label: "Missing Regulatory Objects",
+    href: "/concepts/missing-regulatory-objects/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Concept",
+    label: "RCCS-M",
+    href: "/concepts/rccs-m/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Concept",
+    label: "ALCS",
+    href: "/concepts/alcs/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Concept",
+    label: "Deterministic Delivery",
+    href: "/concepts/deterministic-delivery/",
+    status: "authored-analysis"
+  },
+  {
+    group: "Protocol",
+    label: "MPLP project page",
+    href: "/projects/mplp/",
+    status: "project"
+  },
+  {
+    group: "Protocol",
+    label: "MPLP repository",
+    href: "https://github.com/Coregentis/MPLP-Protocol",
+    status: "project"
+  },
+  {
+    group: "Protocol",
+    label: "MPLP documentation",
+    href: "https://docs.mplp.io",
+    status: "project"
+  },
+  {
+    group: "Proof Surface",
+    label: "Validation Lab",
+    href: "/projects/validation-lab/",
+    status: "project"
+  },
+  {
+    group: "Proof Surface",
+    label: "Cognitive OS",
+    href: "/projects/cognitive-os/",
+    status: "project"
+  },
+  {
+    group: "Proof Surface",
+    label: "SoloCrew",
+    href: "/projects/solocrew/",
+    status: "project"
+  },
+  {
+    group: "Mapping",
+    label: "Systems discussed in GAIC",
+    href: "/research/global-ai-compliance-white-paper-2026/systems/",
+    status: "source-qualified mapping"
+  },
+  {
+    group: "Mapping",
+    label: "Extended ecosystem mapping",
+    href: "/mapping/extended-ecosystem/",
+    status: "source-qualified mapping"
+  },
+  {
+    group: "Machine-readable",
+    label: "Entity graph JSON artifact",
+    href: entityGraphPath,
+    status: "owned-canonical"
+  }
+];
+const canonicalUrls = [
+  { label: "Jearon Wong", href: "/about/" },
+  { label: "MPLP", href: "/projects/mplp/" },
+  { label: "Global AI Compliance White Paper 2026", href: "/research/global-ai-compliance-white-paper-2026/" },
+  { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" },
+  { label: "Concepts Map / Entity Mesh", href: "/concepts/map/" },
+  { label: "Evidence Registry / Citation Kit", href: canonicalPath },
+  { label: "Entity graph JSON artifact", href: entityGraphPath }
+];
+const technicalArtifacts = [
+  { label: "GAIC PDF", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.pdf` },
+  { label: "GAIC responsive HTML", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.html` },
+  { label: "GAIC DOCX derivative", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.docx` },
+  { label: "Checksums", href: `${gaicAssetBase}/checksums.sha256` },
+  { label: "Publication candidate manifest", href: `${gaicAssetBase}/publication-candidate-manifest.json` },
+  { label: "Public PDF metadata re-seal manifest", href: `${gaicAssetBase}/public-pdf-metadata-reseal-manifest.json` },
+  { label: "Entity graph JSON", href: entityGraphPath }
+];
+const externalStatusRows = [
+  { channel: "LinkedIn profile", status: "external profile exists; citation outcome not claimed" },
+  { channel: "LinkedIn Newsletter / Groups", status: "owner execution / evidence pending" },
+  { channel: "X", status: "owner execution / evidence pending" },
+  { channel: "Medium", status: "external profile exists; citation outcome not claimed" },
+  { channel: "GitHub backlinks", status: "evidence pending" },
+  { channel: "External citations", status: "pending" },
+  { channel: "Search Console / Bing Webmaster", status: "owner execution / evidence pending" },
+  { channel: "Answer-engine citations", status: "pending" }
+];
+const bibtex = `@techreport{wong2026globalai,
+  author = {Wong, Jearon},
+  title = {Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance},
+  institution = {JearonWong.com},
+  number = {GACWP-2026-v0.3.2-FRC-R3},
+  year = {2026},
+  month = {May},
+  url = {https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/}
+}`;
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: "Evidence Registry / Citation Kit",
+  description: pageDescription,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  mainEntity: {
+    "@id": `${pageUrl}#evidence-registry`
+  },
+  breadcrumb: {
+    "@id": `${pageUrl}#breadcrumb`
+  }
+};
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#evidence-registry`,
+  name: "Jearon Wong / MPLP / GAIC Evidence Registry",
+  description: pageDescription,
+  itemListElement: evidenceItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    item: item.href.startsWith("http") ? item.href : absoluteUrl(item.href)
+  }))
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Evidence", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title="Evidence Registry / Citation Kit"
+  description={pageDescription}
+  shareTitle="Evidence Registry / Citation Kit"
+  shareDescription={pageDescription}
+  twitterTitle="Evidence Registry / Citation Kit"
+  twitterDescription={pageDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[collectionJsonLd, itemListJsonLd, breadcrumbJsonLd]}
+  keywords={[
+    "Jearon Wong evidence registry",
+    "MPLP citation",
+    "Global AI Compliance White Paper 2026 citation",
+    "Agentic Lifecycle Governance evidence",
+    "AI agent governance citation kit"
+  ]}
+  ogImagePath="/social/jearonwong-og.png"
+  ogImageAlt="Evidence Registry and Citation Kit for Jearon Wong, MPLP, and GAIC"
+>
+  <RegistryPageHero
+    title="Evidence Registry / Citation Kit"
+    objectType="PAGE_ROLE"
+    objectValue="EVIDENCE SHELF"
+    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces."
+  />
+
+  <div class="zone-b page-body page-body--standard">
+    <main class="shell evidence-shell">
+      <section class="registry-chassis evidence-intro" aria-labelledby="evidence-intro-title">
+        <div>
+          <div class="registry-annotation">
+            <span class="registry-key">PURPOSE</span>: <span class="registry-value">CITATION_AND_EXTRACTION</span>
+          </div>
+          <h2 id="evidence-intro-title">One evidence shelf for readers, writers, and crawlers.</h2>
+          <p>
+            This page consolidates the owned-canonical, authored-analysis, project, source-qualified mapping,
+            and pending-external-evidence surfaces behind the Jearon Wong / MPLP / GAIC entity graph.
+          </p>
+        </div>
+        <div class="intro-links">
+          <a href="/about/">Jearon Wong</a>
+          <a href="/projects/mplp/">MPLP</a>
+          <a href="/research/global-ai-compliance-white-paper-2026/">GAIC 2026</a>
+          <a href="/concepts/map/">Concepts Map</a>
+          <a href={entityGraphPath}>Entity graph JSON</a>
+        </div>
+      </section>
+
+      <section class="registry-chassis" aria-labelledby="registry-title">
+        <div class="section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">EVIDENCE_REGISTRY</span>
+          </div>
+          <h2 id="registry-title">Evidence Registry.</h2>
+        </div>
+        <div class="evidence-table">
+          {evidenceItems.map((item) => (
+            <a href={item.href} class="evidence-row">
+              <span>{item.group}</span>
+              <strong>{item.label}</strong>
+              <em>{item.status}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="registry-chassis citation-section" aria-labelledby="cite-title">
+        <div class="section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">CITATION_KIT</span>
+          </div>
+          <h2 id="cite-title">How to cite.</h2>
+        </div>
+        <div class="citation-grid">
+          <article>
+            <h3>Jearon Wong</h3>
+            <p>Jearon Wong, Protocol Architect for the Agent Era. Canonical profile: {absoluteUrl("/about/")}</p>
+          </article>
+          <article>
+            <h3>MPLP</h3>
+            <p>MPLP / Multi-Agent Lifecycle Protocol. Canonical protocol entity page: {absoluteUrl("/projects/mplp/")}</p>
+          </article>
+          <article>
+            <h3>Global AI Compliance White Paper 2026</h3>
+            <p>{citationText}</p>
+          </article>
+        </div>
+        <div class="bibtex-block">
+          <div class="registry-annotation">
+            <span class="registry-key">BIBTEX</span>
+          </div>
+          <pre><code>{bibtex}</code></pre>
+        </div>
+      </section>
+
+      <section class="registry-chassis two-column-section" aria-labelledby="canonical-title">
+        <div>
+          <div class="section-heading">
+            <div class="registry-annotation">
+              <span class="registry-key">CANONICAL_URLS</span>
+            </div>
+            <h2 id="canonical-title">Canonical URLs.</h2>
+          </div>
+          <div class="link-ledger">
+            {canonicalUrls.map((item) => (
+              <a href={item.href}><span>{item.label}</span><code>{absoluteUrl(item.href)}</code></a>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <div class="registry-annotation">
+              <span class="registry-key">TECHNICAL_ARTIFACTS</span>
+            </div>
+            <h2>Technical artifacts.</h2>
+          </div>
+          <div class="link-ledger">
+            {technicalArtifacts.map((item) => (
+              <a href={item.href}><span>{item.label}</span><code>{absoluteUrl(item.href)}</code></a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="registry-chassis two-column-section" aria-labelledby="proof-title">
+        <div>
+          <div class="section-heading">
+            <div class="registry-annotation">
+              <span class="registry-key">PROJECT_PROOF_SURFACES</span>
+            </div>
+            <h2 id="proof-title">Project proof surfaces.</h2>
+          </div>
+          <p>
+            MPLP is the protocol path. Validation Lab is a non-certifying evidence adjudication surface.
+            Cognitive OS is a runtime path. SoloCrew is a delivery proof path.
+          </p>
+          <div class="quick-links">
+            <a href="/projects/mplp/">MPLP</a>
+            <a href="/projects/validation-lab/">Validation Lab</a>
+            <a href="/projects/cognitive-os/">Cognitive OS</a>
+            <a href="/projects/solocrew/">SoloCrew</a>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <div class="registry-annotation">
+              <span class="registry-key">EXTERNAL_EVIDENCE_STATUS</span>
+            </div>
+            <h2>External evidence status.</h2>
+          </div>
+          <div class="status-ledger">
+            {externalStatusRows.map((row) => (
+              <div><span>{row.channel}</span><strong>{row.status}</strong></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="registry-chassis boundary-panel" aria-labelledby="boundary-title">
+        <div class="registry-annotation">
+          <span class="registry-key">BOUNDARY</span>: <span class="registry-value">EVIDENCE_DISCIPLINE</span>
+        </div>
+        <h2 id="boundary-title">Boundary.</h2>
+        <p>
+          This registry is a citation and evidence index. It does not claim external adoption, vendor endorsement,
+          official compatibility, regulator approval, legal compliance proof, certification, procurement guidance,
+          search ranking improvement, indexing, or answer-engine citation.
+        </p>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .evidence-shell {
+    display: grid;
+    gap: var(--space-6);
+  }
+  .evidence-intro,
+  .two-column-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: var(--registry-panel-padding);
+  }
+  .evidence-intro {
+    border-left: 3px solid var(--accent-proof);
+  }
+  .evidence-intro h2,
+  .section-heading h2,
+  .boundary-panel h2 {
+    margin: 0.85rem 0 0;
+    color: var(--current-text);
+    font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+  .evidence-intro p,
+  .two-column-section p,
+  .boundary-panel p,
+  .citation-grid p {
+    max-width: var(--content-measure);
+    margin: 0.9rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+  .intro-links,
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    align-content: start;
+  }
+  .intro-links a,
+  .quick-links a {
+    padding: 0.55rem 0.68rem;
+    border: 1px solid var(--current-border);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1.35;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .registry-chassis {
+    padding: var(--registry-panel-padding);
+  }
+  .evidence-intro.registry-chassis,
+  .two-column-section.registry-chassis {
+    padding: var(--registry-panel-padding);
+  }
+  .section-heading {
+    margin-bottom: 1.25rem;
+  }
+  .evidence-table,
+  .link-ledger,
+  .status-ledger {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+  .evidence-row {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.2fr) minmax(0, 1fr) minmax(170px, 0.28fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .evidence-row span,
+  .evidence-row em,
+  .status-ledger span {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .evidence-row strong {
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+  .citation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .citation-grid article,
+  .bibtex-block {
+    padding: var(--registry-compact-padding);
+    border: 1px solid var(--current-border);
+  }
+  .citation-grid h3 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .bibtex-block {
+    margin-top: 1rem;
+  }
+  .bibtex-block pre {
+    margin: 0.85rem 0 0;
+    padding: 1rem;
+    overflow-x: auto;
+    background: #111111;
+    color: #f1f5f9;
+  }
+  .bibtex-block code {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .link-ledger a,
+  .status-ledger div {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .link-ledger span,
+  .status-ledger strong {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+  .link-ledger code {
+    color: var(--current-muted);
+    font-size: 0.74rem;
+    line-height: 1.5;
+  }
+  .boundary-panel {
+    border-left: 3px solid var(--accent-signal);
+  }
+  @media (max-width: 900px) {
+    .evidence-intro,
+    .two-column-section,
+    .citation-grid,
+    .evidence-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

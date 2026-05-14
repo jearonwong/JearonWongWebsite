@@ -3372,3 +3372,43 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3M-0 Status:** ✓ EDITORIAL AND ENTITY OPS BASELINE COMPLETE / OWNER LAUNCH EXECUTION REQUIRED.
+
+## JW-R3M-1 Notes (May 14, 2026)
+
+**Scope:** Entity Authority Hub and Evidence Registry.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `60093da0875ebb1d2c8b6b1db02d5edf15eacb1e` before JW-R3M-1.
+2. Strengthened `/about/` as the Jearon Wong canonical entity page with visible Known For, Authored/Defined, protocol/proof surfaces, evidence links, and boundary sections.
+3. Strengthened `/projects/mplp/` as the MPLP canonical protocol entity page with protocol identity, definition, evidence, GAIC relation, adjacent ecosystem boundary, and Evidence Registry links.
+4. Created `/evidence/` as a combined Evidence Registry and Citation Kit.
+5. Upgraded `/concepts/map/` with explicit visible entity relationships.
+6. Created `public/entity/jearonwong-mplp-gaic-entity-graph.json` as a public machine-readable graph artifact.
+7. Updated `llms.txt`, site schema terms, footer secondary navigation, and GAIC hub internal links.
+8. Created the protocol comparison backlog without implementing comparison pages.
+9. Created JW-R3M-1 preflight, baseline, navigation, backlog, boundary, SEO/schema, build, and final QA reports.
+
+**Validation:**
+
+- `npm run typecheck`: PASS, 0 errors; existing BaseLayout preload hints remain.
+- `npm run lint`: PASS.
+- `npm run build`: PASS, 90 pages built.
+- `git diff --check`: PASS.
+- Entity graph JSON parse: PASS.
+- JSON-LD parse for `/about/`, `/projects/mplp/`, `/concepts/map/`, and `/evidence/`: PASS.
+- `/evidence/` appears in the built sitemap.
+
+**Artifact discipline:**
+
+- Public PDF hash remains `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+- Public responsive HTML hash remains `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+- Sealed candidate PDF hash remains `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, public PDF metadata re-seal, or responsive HTML artifact changed.
+
+**Boundary discipline:**
+
+- JW-R3M-1 creates an evidence hub and entity graph substrate only.
+- It does not claim external launch execution, indexing, SEO/GEO uplift, answer-engine citation, backlink authority, ranking improvement, primary semantic source achievement, vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, or MPLP industry-standard status.
+
+**JW-R3M-1 Status:** ✓ ENTITY AUTHORITY HUB AND EVIDENCE REGISTRY COMPLETE / OWNER LAUNCH EXECUTION REQUIRED.

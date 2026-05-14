@@ -48,7 +48,9 @@ const keywords = [
   "AutoGen",
   "MCP",
   "A2A",
-  "Semantic Kernel"
+  "Semantic Kernel",
+  "Evidence Registry",
+  "Entity graph JSON artifact"
 ];
 const mapNodes = [
   {
@@ -57,6 +59,20 @@ const mapNodes = [
     layer: "Identity Layer",
     href: "/about/",
     description: "Author identity and site entity anchor."
+  },
+  {
+    id: "evidence-registry",
+    label: "Evidence Registry / Citation Kit",
+    layer: "Evidence Layer",
+    href: "/evidence/",
+    description: "The citation and evidence shelf for owned-canonical, authored-analysis, project, mapping, and pending-external-evidence surfaces."
+  },
+  {
+    id: "entity-graph-json",
+    label: "Entity Graph JSON Artifact",
+    layer: "Evidence Layer",
+    href: "/entity/jearonwong-mplp-gaic-entity-graph.json",
+    description: "Machine-readable graph artifact for the Jearon Wong / MPLP / GAIC entity system."
   },
   {
     id: "protocol-architect",
@@ -314,6 +330,14 @@ const extractableLayerGroups = [
     ]
   },
   {
+    name: "Evidence Layer",
+    description: "Citation, evidence, and machine-readable graph surfaces.",
+    links: [
+      { href: "/evidence/", label: "Evidence Registry / Citation Kit" },
+      { href: "/entity/jearonwong-mplp-gaic-entity-graph.json", label: "Entity graph JSON artifact" }
+    ]
+  },
+  {
     name: "Category Layer",
     description: "The category path from AI Agent Lifecycle to Agentic Lifecycle Governance.",
     links: [
@@ -455,7 +479,88 @@ const relationGroups = [
     body: "These primitives make agentic lifecycle responsibility inspectable instead of leaving governance at log or approval language."
   }
 ];
+const explicitEntityRelationships = [
+  {
+    source: "Jearon Wong",
+    relation: "created",
+    target: "MPLP",
+    href: "/projects/mplp/",
+    status: "owned-canonical"
+  },
+  {
+    source: "Jearon Wong",
+    relation: "authored",
+    target: "Global AI Compliance White Paper 2026",
+    href: "/research/global-ai-compliance-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
+    source: "Jearon Wong",
+    relation: "defines / develops",
+    target: "Agentic Lifecycle Governance, MRO, RCCS-M, and ALCS",
+    href: "/concepts/agentic-lifecycle-governance/",
+    status: "authored-analysis"
+  },
+  {
+    source: "MPLP",
+    relation: "is one protocol path for",
+    target: "Agentic Lifecycle Governance",
+    href: "/concepts/agentic-lifecycle-governance/",
+    status: "project / authored-analysis"
+  },
+  {
+    source: "Global AI Compliance White Paper 2026",
+    relation: "introduces / formalizes",
+    target: "MRO, RCCS-T, RCCS-M, and ALCS",
+    href: "/research/global-ai-compliance-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
+    source: "Missing Regulatory Objects",
+    relation: "maps regulatory language to",
+    target: "lifecycle responsibility objects",
+    href: "/concepts/missing-regulatory-objects/",
+    status: "authored-analysis"
+  },
+  {
+    source: "RCCS-M",
+    relation: "evaluates",
+    target: "MRO-adjusted regulatory coverage",
+    href: "/concepts/rccs-m/",
+    status: "authored-analysis"
+  },
+  {
+    source: "ALCS",
+    relation: "evaluates",
+    target: "agentic lifecycle conformance",
+    href: "/concepts/alcs/",
+    status: "authored-analysis"
+  },
+  {
+    source: "Validation Lab",
+    relation: "acts as",
+    target: "non-certifying evidence adjudication surface",
+    href: "/projects/validation-lab/",
+    status: "project"
+  },
+  {
+    source: "Vendor/system pages",
+    relation: "are interpreted under",
+    target: "lifecycle governance lens",
+    href: "/research/global-ai-compliance-white-paper-2026/systems/",
+    status: "source-qualified mapping"
+  },
+  {
+    source: "External vendor docs",
+    relation: "remain",
+    target: "official source for vendor product facts",
+    href: "/evidence/",
+    status: "boundary"
+  }
+];
 const primaryLinks = [
+  { href: "/evidence/", label: "Evidence Registry" },
+  { href: "/entity/jearonwong-mplp-gaic-entity-graph.json", label: "Entity graph JSON" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
@@ -482,6 +587,7 @@ const semanticChain = [
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
   { href: "/projects/mplp/", label: "MPLP" },
+  { href: "/evidence/", label: "Evidence Registry" },
   { href: "/playbooks/", label: "Applied Playbooks" }
 ];
 const pageJsonLd = {
@@ -644,6 +750,29 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
         </div>
       </section>
 
+      <section class="explicit-relations registry-chassis" aria-labelledby="explicit-relations-title">
+        <div class="registry-section-heading">
+          <div class="registry-annotation">
+            <span class="registry-key">ENTITY_RELATIONSHIPS</span>: <span class="registry-value">VISIBLE_EDGES</span>
+          </div>
+          <h2 id="explicit-relations-title">Explicit entity relationships.</h2>
+          <p>
+            These visible edges are the safe relationship vocabulary for the site. They avoid endorsement,
+            adoption, certification, ranking, procurement, and legal-compliance claims.
+          </p>
+        </div>
+        <div class="relationship-table">
+          {explicitEntityRelationships.map((edge) => (
+            <a href={edge.href} class="relationship-row">
+              <span>{edge.source}</span>
+              <strong>{edge.relation}</strong>
+              <span>{edge.target}</span>
+              <em>{edge.status}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section class="entity-map registry-chassis" aria-labelledby="entity-map-title">
         <div class="registry-section-heading">
           <div class="registry-annotation">
@@ -792,6 +921,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .map-opening,
   .semantic-chain,
   .extractable-layers,
+  .explicit-relations,
   .entity-map,
   .boundary-panel {
     padding: var(--registry-panel-padding);
@@ -807,6 +937,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .map-opening h2,
   .semantic-chain h2,
   .extractable-layers h2,
+  .explicit-relations h2,
   .entity-map h2,
   .boundary-panel h2,
   .registry-section-heading h2 {
@@ -820,6 +951,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .map-opening p,
   .semantic-chain p,
   .extractable-layers .registry-section-heading p,
+  .explicit-relations .registry-section-heading p,
   .entity-map .registry-section-heading p,
   .boundary-panel p,
   .registry-section-heading p {
@@ -882,6 +1014,45 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .extractable-layers {
     border-left: 3px solid var(--accent-proof);
+  }
+
+  .explicit-relations {
+    border-left: 3px solid var(--accent-signal);
+  }
+
+  .relationship-table {
+    display: grid;
+    gap: 0;
+    margin-top: 1.35rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .relationship-row {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.22fr) minmax(150px, 0.22fr) minmax(0, 1fr) minmax(150px, 0.2fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .relationship-row span,
+  .relationship-row em {
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 1.5;
+  }
+
+  .relationship-row strong {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-transform: uppercase;
   }
 
   .layer-card-grid {
@@ -1140,6 +1311,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   @media (max-width: 860px) {
     .map-opening,
     .relation-card-grid,
+    .relationship-row,
     .map-text-equivalent {
       grid-template-columns: 1fr;
     }

@@ -17,6 +17,44 @@ const aboutKeywords = [
   "MPLP",
   "AI agent governance"
 ];
+const knownFor = [
+  {
+    label: "Protocol Architect for the Agent Era",
+    href: "/about/",
+    body: "The public identity anchor for the AI Agent Lifecycle, Agentic Delivery, and lifecycle responsibility body of work."
+  },
+  {
+    label: "MPLP",
+    href: "/projects/mplp/",
+    body: "One protocol path for expressing lifecycle responsibility semantics in agentic and multi-agent work."
+  },
+  {
+    label: "Global AI Compliance White Paper 2026",
+    href: "/research/global-ai-compliance-white-paper-2026/",
+    body: "The technical report that formalizes Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and Agentic Lifecycle Governance."
+  }
+];
+const authoredAndDefined = [
+  { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/", relation: "defines / develops" },
+  { label: "Missing Regulatory Objects", href: "/concepts/missing-regulatory-objects/", relation: "introduces / formalizes" },
+  { label: "RCCS-M", href: "/concepts/rccs-m/", relation: "defines as MRO-adjusted coverage model" },
+  { label: "ALCS", href: "/concepts/alcs/", relation: "defines as lifecycle conformance model" },
+  { label: "Deterministic Delivery", href: "/concepts/deterministic-delivery/", relation: "develops as engineering discipline" },
+  { label: "Agentic Delivery", href: "/concepts/agentic-delivery/", relation: "names as delivery category" }
+];
+const projectProofPaths = [
+  { label: "MPLP", href: "/projects/mplp/", role: "protocol path" },
+  { label: "Validation Lab", href: "/projects/validation-lab/", role: "non-certifying evidence adjudication surface" },
+  { label: "Cognitive OS", href: "/projects/cognitive-os/", role: "runtime path" },
+  { label: "SoloCrew", href: "/projects/solocrew/", role: "delivery proof path" }
+];
+const evidenceLinks = [
+  { label: "Evidence Registry / Citation Kit", href: "/evidence/" },
+  { label: "Concepts Map / Entity Mesh", href: "/concepts/map/" },
+  { label: "GAIC responsive HTML full text", href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html" },
+  { label: "GAIC systems mapping", href: "/research/global-ai-compliance-white-paper-2026/systems/" },
+  { label: "Entity graph JSON artifact", href: "/entity/jearonwong-mplp-gaic-entity-graph.json" }
+];
 const profilePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
@@ -111,9 +149,75 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
             <a href="/research/global-ai-compliance-white-paper-2026/">Global AI Compliance White Paper 2026</a>
             <a href="/concepts/agentic-lifecycle-governance/">Agentic Lifecycle Governance</a>
             <a href="/projects/mplp/">MPLP protocol path</a>
+            <a href="/evidence/">Evidence Registry</a>
+            <a href="/concepts/map/">Concepts Map</a>
             <a href="/projects/">Projects proof path</a>
           </div>
         </div>
+
+        <section class="entity-authority-section" aria-labelledby="known-for-title">
+          <div class="registry-annotation">
+            <span class="registry-key">ENTITY_ROLE</span>: <span class="registry-value">CANONICAL_PERSON_SURFACE</span>
+          </div>
+          <h2 id="known-for-title">Known for.</h2>
+          <div class="entity-card-grid">
+            {knownFor.map((item) => (
+              <a href={item.href} class="entity-card">
+                <strong>{item.label}</strong>
+                <span>{item.body}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="entity-authority-section" aria-labelledby="defined-title">
+          <div class="registry-annotation">
+            <span class="registry-key">AUTHORED_AND_DEFINED</span>
+          </div>
+          <h2 id="defined-title">Authored, created, and defined surfaces.</h2>
+          <div class="relation-ledger">
+            {authoredAndDefined.map((item) => (
+              <a href={item.href} class="relation-row">
+                <span>{item.relation}</span>
+                <strong>{item.label}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="entity-authority-section" aria-labelledby="projects-title">
+          <div class="registry-annotation">
+            <span class="registry-key">RELATED_FRAMEWORKS_AND_PROJECTS</span>
+          </div>
+          <h2 id="projects-title">Protocol path and proof surfaces.</h2>
+          <div class="relation-ledger">
+            {projectProofPaths.map((item) => (
+              <a href={item.href} class="relation-row">
+                <span>{item.role}</span>
+                <strong>{item.label}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="entity-authority-section entity-authority-section--boundary" aria-labelledby="boundary-title">
+          <div>
+            <div class="registry-annotation">
+              <span class="registry-key">BOUNDARY</span>: <span class="registry-value">RESTRAINED_AUTHORITY</span>
+            </div>
+            <h2 id="boundary-title">Boundary.</h2>
+            <p>
+              This page is the owned-canonical identity surface for Jearon Wong. It does not claim official
+              standard status, regulator approval, vendor endorsement, legal compliance proof, external adoption,
+              answer-engine citation, indexing outcome, or procurement guidance.
+            </p>
+          </div>
+          <div class="boundary-link-list" aria-label="Evidence and canonical links">
+            {evidenceLinks.map((link) => (
+              <a href={link.href}>{link.label}</a>
+            ))}
+          </div>
+        </section>
 
         <div class="external-verification">
           <div class="registry-annotation" style="margin-bottom: 1.25rem;">
@@ -208,6 +312,104 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
   .identity-routes a:hover {
     color: var(--current-text);
   }
+  .entity-authority-section {
+    margin-top: var(--space-8);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--current-line);
+  }
+  .entity-authority-section h2 {
+    margin: 0.85rem 0 1.15rem;
+    color: var(--current-text);
+    font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+  .entity-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .entity-card {
+    display: grid;
+    gap: 0.65rem;
+    padding: var(--registry-compact-padding);
+    border: 1px solid var(--current-border);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .entity-card strong {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .entity-card span {
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+  .entity-card:hover,
+  .relation-row:hover,
+  .boundary-link-list a:hover {
+    border-color: var(--accent-signal);
+  }
+  .relation-ledger {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+  .relation-row {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.34fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+  .relation-row span {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .relation-row strong {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+  .entity-authority-section--boundary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: var(--registry-panel-padding);
+    border: 1px solid var(--current-border);
+    border-left: 3px solid var(--accent-signal);
+  }
+  .entity-authority-section--boundary p {
+    max-width: var(--content-measure);
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+  .boundary-link-list {
+    display: grid;
+    align-content: start;
+    gap: 0.65rem;
+  }
+  .boundary-link-list a {
+    padding: 0.72rem 0.85rem;
+    border: 1px solid var(--current-border);
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
   @media (max-width: 768px) {
     .spec-sheet {
       padding: var(--registry-card-padding);
@@ -227,6 +429,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     .spec-narrative .prose {
       font-size: 1rem;
       line-height: 1.65;
+    }
+    .entity-card-grid,
+    .entity-authority-section--boundary {
+      grid-template-columns: 1fr;
+    }
+    .relation-row {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
     }
   }
 

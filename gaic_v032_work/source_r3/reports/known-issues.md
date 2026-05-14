@@ -2634,3 +2634,37 @@ Boundary discipline:
 - No SEO/GEO uplift, indexing, answer-engine citation, primary semantic source achievement, vendor endorsement, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3M-0 Status:** ✓ EDITORIAL AND ENTITY OPS BASELINE COMPLETE / OWNER LAUNCH EXECUTION REQUIRED
+
+---
+
+## JW-R3M-1 Known Issues
+
+### Entity Authority Hub and Evidence Registry Complete
+
+JW-R3M-1 completed a focused high-ROI entity authority wave without creating protocol comparison pages.
+
+Resolved in this wave:
+
+- `/about/` was strengthened as the Jearon Wong canonical entity page with visible Known For, Authored/Defined, protocol/proof surfaces, evidence links, and boundary sections.
+- `/projects/mplp/` was strengthened as the MPLP canonical protocol entity page with visible protocol identity, definition, evidence, GAIC relation, adjacent ecosystem boundary, and Evidence Registry links.
+- `/evidence/` was created as a combined Evidence Registry and Citation Kit.
+- `/concepts/map/` was upgraded with explicit visible entity relationship edges.
+- `public/entity/jearonwong-mplp-gaic-entity-graph.json` was created as a public machine-readable entity graph artifact.
+- `llms.txt`, site schema terms, footer secondary navigation, and GAIC hub internal links were updated.
+- Protocol comparison pages were explicitly deferred to backlog.
+
+Remaining known issues:
+
+- Owner launch execution remains required.
+- External authority evidence remains pending: Search Console, Bing, LinkedIn Newsletter, LinkedIn Groups, X, Medium, answer-engine tests, backlinks, citations, and social distribution.
+- Protocol comparison pages require official source review before publication.
+
+Boundary discipline:
+
+- No sealed artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No external adoption, indexing, answer-engine citation, SEO/GEO uplift, ranking improvement, primary semantic source achievement, vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**JW-R3M-1 Status:** ✓ ENTITY AUTHORITY HUB AND EVIDENCE REGISTRY COMPLETE / OWNER LAUNCH EXECUTION REQUIRED

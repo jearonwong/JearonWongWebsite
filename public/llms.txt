@@ -59,11 +59,15 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Start Here
 
 - Homepage: https://www.jearonwong.com/
+- Jearon Wong canonical profile: https://www.jearonwong.com/about/
 - AI Agent Lifecycle field definition: https://www.jearonwong.com/lifecycle/
 - Research: https://www.jearonwong.com/research/
 - Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
 - Agentic Lifecycle Governance Concept Core: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
 - Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
+- Evidence Registry / Citation Kit: https://www.jearonwong.com/evidence/
+- Machine-readable entity graph JSON: https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json
+- MPLP canonical protocol entity page: https://www.jearonwong.com/projects/mplp/
 - Applied Agentic Governance Playbooks: https://www.jearonwong.com/playbooks/
 - Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
 - Deterministic Delivery: https://www.jearonwong.com/concepts/deterministic-delivery/
@@ -71,7 +75,19 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Concepts index: https://www.jearonwong.com/concepts/
 - Essays registry: https://www.jearonwong.com/essays/
 - Projects proof path: https://www.jearonwong.com/projects/
-- About: https://www.jearonwong.com/about/
+
+## Entity Authority Surfaces
+
+- Jearon Wong canonical profile: https://www.jearonwong.com/about/
+  Role: owned-canonical Person entity surface. It links Jearon Wong to MPLP, the Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Deterministic Delivery, Agentic Delivery, Validation Lab, Cognitive OS, SoloCrew, Concepts Map, and Evidence Registry. It does not claim regulator approval, vendor endorsement, external adoption, indexing, or answer-engine citation.
+- MPLP canonical protocol entity page: https://www.jearonwong.com/projects/mplp/
+  Role: owned/project protocol entity surface. MPLP is one protocol path for lifecycle responsibility semantics. It is not certification, legal compliance proof, required implementation, regulator-approved standard, vendor endorsement, official compatibility claim, or procurement guidance.
+- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
+  Role: visible human-and-machine entity graph surface. It exposes safe relationship edges such as authored, created, defines, introduces, maps_to, supports, is_one_protocol_path_for, is_evidence_surface_for, and interprets_under_lifecycle_governance. It does not publish arbitrary relationship weights.
+- Evidence Registry / Citation Kit: https://www.jearonwong.com/evidence/
+  Role: citation and evidence shelf for owned-canonical, authored-analysis, project, source-qualified mapping, and pending-external-evidence surfaces. External citations, backlinks, Search Console/Bing submission, and answer-engine citations remain pending unless separately recorded.
+- Machine-readable entity graph JSON: https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json
+  Role: public JSON artifact for the Jearon Wong / MPLP / GAIC entity graph. It contains no numeric weights, endorsement/adoption claims, legal compliance proof, official compatibility claims, or vendor authority claims.
 
 ## White Papers
 
@@ -200,13 +216,11 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 ## Project Proof Path
 
+- MPLP: https://www.jearonwong.com/projects/mplp/
+  Canonical protocol entity page for MPLP / Multi-Agent Lifecycle Protocol. Use official MPLP external docs/repo for project artifacts where linked; do not infer third-party adoption or official compatibility.
 - Cognitive OS: https://www.jearonwong.com/projects/cognitive-os/
 - SoloCrew: https://www.jearonwong.com/projects/solocrew/
 - Validation Lab: https://www.jearonwong.com/projects/validation-lab/
-
-## Protocol Path
-
-- MPLP: https://www.jearonwong.com/projects/mplp/
 
 ## Definitions
 

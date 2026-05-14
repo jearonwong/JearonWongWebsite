@@ -1,0 +1,474 @@
+{
+  "version": "2026-05-r3m1",
+  "generated_at": "2026-05-14",
+  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, external adoption, indexing, ranking, backlinks, or answer-engine citation.",
+  "nodes": [
+    {
+      "id": "jearon-wong",
+      "name": "Jearon Wong",
+      "type": "Person",
+      "canonical_url": "https://www.jearonwong.com/about/",
+      "source_authority": "owned-canonical",
+      "description": "Protocol Architect for the Agent Era; creator of MPLP and author of the Global AI Compliance White Paper 2026.",
+      "boundary": "Owned-canonical identity surface; no claim of regulator approval, vendor endorsement, external adoption, indexing, or answer-engine citation."
+    },
+    {
+      "id": "mplp",
+      "name": "MPLP",
+      "type": "ProtocolProject",
+      "canonical_url": "https://www.jearonwong.com/projects/mplp/",
+      "source_authority": "project",
+      "description": "One protocol path for lifecycle responsibility semantics in agentic and multi-agent work.",
+      "boundary": "Not certification, legal compliance proof, required implementation, regulator-approved standard, vendor endorsement, or procurement guidance."
+    },
+    {
+      "id": "gaic-white-paper-2026",
+      "name": "Global AI Compliance White Paper 2026",
+      "type": "TechnicalReport",
+      "canonical_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+      "source_authority": "authored-analysis",
+      "description": "Technical report GACWP-2026-v0.3.2-FRC-R3 defining Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility governance.",
+      "boundary": "Not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation."
+    },
+    {
+      "id": "agentic-lifecycle-governance",
+      "name": "Agentic Lifecycle Governance",
+      "type": "GovernanceConcept",
+      "canonical_url": "https://www.jearonwong.com/concepts/agentic-lifecycle-governance/",
+      "source_authority": "authored-analysis",
+      "description": "Governance model for lifecycle responsibility in AI agent and multi-agent work.",
+      "boundary": "Author-analytical concept; not regulator-approved guidance."
+    },
+    {
+      "id": "missing-regulatory-objects",
+      "name": "Missing Regulatory Objects",
+      "type": "GovernanceObjectSet",
+      "canonical_url": "https://www.jearonwong.com/concepts/missing-regulatory-objects/",
+      "source_authority": "authored-analysis",
+      "description": "Lifecycle responsibility objects that model-centric governance does not consistently define for agentic and multi-agent systems.",
+      "boundary": "Analytical object layer; not current law or certification criteria."
+    },
+    {
+      "id": "rccs-t",
+      "name": "RCCS-T",
+      "type": "EvaluationModel",
+      "canonical_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html#rccs-t",
+      "source_authority": "authored-analysis",
+      "description": "Traditional Regulatory Compliance Coverage Score used in the GAIC white paper.",
+      "boundary": "Analytical score language; not certification or procurement guidance."
+    },
+    {
+      "id": "rccs-m",
+      "name": "RCCS-M",
+      "type": "EvaluationModel",
+      "canonical_url": "https://www.jearonwong.com/concepts/rccs-m/",
+      "source_authority": "authored-analysis",
+      "description": "MRO-adjusted Regulatory Compliance Coverage Score.",
+      "boundary": "Author-analytical adequacy model; not current law, certification, regulator approval, or procurement ranking."
+    },
+    {
+      "id": "alcs",
+      "name": "ALCS",
+      "type": "EvaluationModel",
+      "canonical_url": "https://www.jearonwong.com/concepts/alcs/",
+      "source_authority": "authored-analysis",
+      "description": "Agentic Lifecycle Conformance Score for lifecycle responsibility coherence.",
+      "boundary": "Analytical conformance model; not certification or legal compliance proof."
+    },
+    {
+      "id": "deterministic-delivery",
+      "name": "Deterministic Delivery",
+      "type": "EngineeringDiscipline",
+      "canonical_url": "https://www.jearonwong.com/concepts/deterministic-delivery/",
+      "source_authority": "authored-analysis",
+      "description": "Discipline for making agentic work scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable.",
+      "boundary": "Does not claim deterministic model outputs or guaranteed delivery."
+    },
+    {
+      "id": "agentic-delivery",
+      "name": "Agentic Delivery",
+      "type": "CategoryConcept",
+      "canonical_url": "https://www.jearonwong.com/concepts/agentic-delivery/",
+      "source_authority": "authored-analysis",
+      "description": "The missing layer between agent execution and accountable outcomes.",
+      "boundary": "Category definition; not a closed standard or certification program."
+    },
+    {
+      "id": "validation-lab",
+      "name": "Validation Lab",
+      "type": "Project",
+      "canonical_url": "https://www.jearonwong.com/projects/validation-lab/",
+      "source_authority": "project",
+      "description": "MPLP evidence adjudication surface for evaluating evidence packs under versioned rulesets.",
+      "boundary": "Non-certifying; not regulator approval, legal compliance proof, vendor endorsement, or procurement recommendation."
+    },
+    {
+      "id": "cognitive-os",
+      "name": "Cognitive OS",
+      "type": "Project",
+      "canonical_url": "https://www.jearonwong.com/projects/cognitive-os/",
+      "source_authority": "project",
+      "description": "Runtime path for protocol-native agent work.",
+      "boundary": "Runtime path, not a completed universal runtime."
+    },
+    {
+      "id": "solocrew",
+      "name": "SoloCrew",
+      "type": "Project",
+      "canonical_url": "https://www.jearonwong.com/projects/solocrew/",
+      "source_authority": "project",
+      "description": "Delivery proof path for one-person-company AI operations.",
+      "boundary": "Delivery proof path, not finished commercial proof or adoption evidence."
+    },
+    {
+      "id": "systems-mapping",
+      "name": "Systems Discussed in GAIC",
+      "type": "SourceQualifiedMappingLayer",
+      "canonical_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "source_authority": "source-qualified mapping",
+      "description": "Source-qualified, provisional, non-ranking lifecycle governance mappings for systems discussed in GAIC.",
+      "boundary": "Not official vendor documentation, vendor ranking, procurement guidance, certification, or legal compliance proof."
+    },
+    {
+      "id": "extended-ecosystem-mapping",
+      "name": "Extended Ecosystem Mapping",
+      "type": "SourceQualifiedMappingLayer",
+      "canonical_url": "https://www.jearonwong.com/mapping/extended-ecosystem/",
+      "source_authority": "source-qualified mapping",
+      "description": "Source-qualified non-GAIC-scored mappings for adjacent ecosystem search contexts.",
+      "boundary": "Not vendor ranking, official vendor documentation, vendor affiliation, certification, or procurement guidance."
+    },
+    {
+      "id": "evidence-registry",
+      "name": "Evidence Registry / Citation Kit",
+      "type": "EvidenceRegistry",
+      "canonical_url": "https://www.jearonwong.com/evidence/",
+      "source_authority": "owned-canonical",
+      "description": "Single citation and evidence shelf for Jearon Wong, MPLP, GAIC, and related source artifacts.",
+      "boundary": "Evidence index; external evidence defaults to pending unless separately recorded."
+    },
+    {
+      "id": "openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "type": "ExternalSystem",
+      "canonical_url": "https://openai.github.io/openai-agents-python/",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an interpretation subject in GAIC-related lifecycle governance mappings.",
+      "boundary": "Official product facts remain with OpenAI official documentation."
+    },
+    {
+      "id": "anthropic-claude-code",
+      "name": "Claude Code",
+      "type": "ExternalSystem",
+      "canonical_url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an extended ecosystem interpretation subject.",
+      "boundary": "Official product facts remain with Anthropic official documentation."
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "type": "ExternalSystem",
+      "canonical_url": "https://langchain-ai.github.io/langgraph/",
+      "source_authority": "external-official-source",
+      "description": "External framework treated as an interpretation subject in lifecycle governance mappings.",
+      "boundary": "Official product facts remain with LangGraph / LangChain official documentation."
+    },
+    {
+      "id": "a2a",
+      "name": "Agent2Agent Protocol",
+      "type": "ExternalProtocol",
+      "canonical_url": "https://a2a-protocol.org/",
+      "source_authority": "external-official-source",
+      "description": "External protocol treated as an extended ecosystem interpretation subject.",
+      "boundary": "Official protocol facts remain with official A2A documentation."
+    },
+    {
+      "id": "mcp",
+      "name": "Model Context Protocol",
+      "type": "ExternalProtocol",
+      "canonical_url": "https://modelcontextprotocol.io/",
+      "source_authority": "external-official-source",
+      "description": "External protocol treated as an extended ecosystem interpretation subject.",
+      "boundary": "Official protocol facts remain with official MCP documentation."
+    },
+    {
+      "id": "aws-bedrock-agentcore",
+      "name": "AWS Bedrock / AgentCore",
+      "type": "ExternalSystem",
+      "canonical_url": "https://aws.amazon.com/bedrock/",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an interpretation subject in GAIC lifecycle governance mapping.",
+      "boundary": "Official product facts remain with AWS official documentation."
+    },
+    {
+      "id": "ibm-watsonx-governance",
+      "name": "IBM watsonx.governance",
+      "type": "ExternalSystem",
+      "canonical_url": "https://www.ibm.com/products/watsonx-governance",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an interpretation subject in GAIC lifecycle governance mapping.",
+      "boundary": "Official product facts remain with IBM official documentation."
+    },
+    {
+      "id": "microsoft-ai-foundry",
+      "name": "Microsoft Azure AI Foundry",
+      "type": "ExternalSystem",
+      "canonical_url": "https://learn.microsoft.com/en-us/azure/ai-foundry/",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an interpretation subject in GAIC lifecycle governance mapping.",
+      "boundary": "Official product facts remain with Microsoft official documentation."
+    },
+    {
+      "id": "google-vertex-adk",
+      "name": "Google Vertex AI / ADK",
+      "type": "ExternalSystem",
+      "canonical_url": "https://cloud.google.com/vertex-ai",
+      "source_authority": "external-official-source",
+      "description": "External system treated as an interpretation subject in GAIC lifecycle governance mapping.",
+      "boundary": "Official product facts remain with Google official documentation."
+    }
+  ],
+  "edges": [
+    {
+      "source": "jearon-wong",
+      "relation": "created",
+      "target": "mplp",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/projects/mplp/",
+      "boundary": "Creator relation is self-owned/project-owned; no external adoption claim."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "authored",
+      "target": "gaic-white-paper-2026",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+      "boundary": "Authorship relation; no claim that external systems cite or adopt it."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "defines",
+      "target": "agentic-lifecycle-governance",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/agentic-lifecycle-governance/",
+      "boundary": "Concept definition, not official regulator guidance."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "defines",
+      "target": "missing-regulatory-objects",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/missing-regulatory-objects/",
+      "boundary": "Analytical object layer, not current law."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "defines",
+      "target": "rccs-m",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/rccs-m/",
+      "boundary": "Analytical score model, not certification."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "defines",
+      "target": "alcs",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/alcs/",
+      "boundary": "Analytical conformance model, not legal compliance proof."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "defines",
+      "target": "deterministic-delivery",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/deterministic-delivery/",
+      "boundary": "Engineering discipline, not deterministic LLM output claim."
+    },
+    {
+      "source": "mplp",
+      "relation": "is_one_protocol_path_for",
+      "target": "agentic-lifecycle-governance",
+      "evidence_status": "project",
+      "evidence_url": "https://www.jearonwong.com/projects/mplp/",
+      "boundary": "One protocol path only; not required, exclusive, certified, or regulator-approved."
+    },
+    {
+      "source": "gaic-white-paper-2026",
+      "relation": "introduces",
+      "target": "missing-regulatory-objects",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+      "boundary": "Author-analytical introduction; not law or certification."
+    },
+    {
+      "source": "gaic-white-paper-2026",
+      "relation": "introduces",
+      "target": "rccs-t",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html#rccs-t",
+      "boundary": "Analytical score language; not vendor ranking."
+    },
+    {
+      "source": "gaic-white-paper-2026",
+      "relation": "introduces",
+      "target": "rccs-m",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/rccs-m/",
+      "boundary": "Analytical score language; not certification."
+    },
+    {
+      "source": "gaic-white-paper-2026",
+      "relation": "introduces",
+      "target": "alcs",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/alcs/",
+      "boundary": "Analytical conformance language; not legal compliance proof."
+    },
+    {
+      "source": "missing-regulatory-objects",
+      "relation": "maps_to",
+      "target": "agentic-lifecycle-governance",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/concepts/agentic-lifecycle-governance/",
+      "boundary": "Maps regulatory language into lifecycle responsibility objects as author analysis."
+    },
+    {
+      "source": "rccs-m",
+      "relation": "supports",
+      "target": "gaic-white-paper-2026",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+      "boundary": "Supports GAIC analytical framework only."
+    },
+    {
+      "source": "alcs",
+      "relation": "supports",
+      "target": "gaic-white-paper-2026",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+      "boundary": "Supports GAIC analytical framework only."
+    },
+    {
+      "source": "validation-lab",
+      "relation": "is_evidence_surface_for",
+      "target": "mplp",
+      "evidence_status": "project",
+      "evidence_url": "https://www.jearonwong.com/projects/validation-lab/",
+      "boundary": "Evidence surface, not certification body."
+    },
+    {
+      "source": "cognitive-os",
+      "relation": "is_runtime_path_for",
+      "target": "agentic-delivery",
+      "evidence_status": "project",
+      "evidence_url": "https://www.jearonwong.com/projects/cognitive-os/",
+      "boundary": "Runtime path, not universal runtime claim."
+    },
+    {
+      "source": "solocrew",
+      "relation": "is_product_proof_path_for",
+      "target": "agentic-delivery",
+      "evidence_status": "project",
+      "evidence_url": "https://www.jearonwong.com/projects/solocrew/",
+      "boundary": "Delivery proof path, not external adoption evidence."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "openai-agents-sdk",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with OpenAI."
+    },
+    {
+      "source": "extended-ecosystem-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "anthropic-claude-code",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/mapping/extended-ecosystem/claude-code/",
+      "boundary": "Interpretation subject only; official product facts remain with Anthropic."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "langgraph",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with LangGraph / LangChain."
+    },
+    {
+      "source": "extended-ecosystem-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "a2a",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/mapping/extended-ecosystem/a2a/",
+      "boundary": "Interpretation subject only; official protocol facts remain with official A2A documentation."
+    },
+    {
+      "source": "extended-ecosystem-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "mcp",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/mapping/extended-ecosystem/mcp/",
+      "boundary": "Interpretation subject only; official protocol facts remain with official MCP documentation."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "aws-bedrock-agentcore",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with AWS."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "ibm-watsonx-governance",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with IBM."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "microsoft-ai-foundry",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with Microsoft."
+    },
+    {
+      "source": "systems-mapping",
+      "relation": "interprets_under_lifecycle_governance",
+      "target": "google-vertex-adk",
+      "evidence_status": "source-qualified mapping",
+      "evidence_url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/",
+      "boundary": "Interpretation subject only; official product facts remain with Google."
+    },
+    {
+      "source": "evidence-registry",
+      "relation": "is_evidence_surface_for",
+      "target": "jearon-wong",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/evidence/",
+      "boundary": "Citation and evidence index only; external evidence remains pending unless separately recorded."
+    },
+    {
+      "source": "evidence-registry",
+      "relation": "is_evidence_surface_for",
+      "target": "mplp",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/evidence/",
+      "boundary": "Citation and evidence index only; no adoption or official compatibility claim."
+    },
+    {
+      "source": "evidence-registry",
+      "relation": "is_evidence_surface_for",
+      "target": "gaic-white-paper-2026",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/evidence/",
+      "boundary": "Citation and evidence index only; no answer-engine or indexing outcome claim."
+    }
+  ]
+}
