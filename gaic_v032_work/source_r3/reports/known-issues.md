@@ -2516,3 +2516,48 @@ Boundary discipline:
 - No legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output claim, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3K-1B Status:** ✓ P1 SOURCE ANCHOR ENRICHMENT COMPLETE / READY FOR P2 LONG-TAIL DECISION OR OWNER LAUNCH EXECUTION
+
+---
+
+## GAIC-R3K-1C Known Issues
+
+### P2 Long-tail Decision and Residual Cleanup Complete
+
+R3K-1C resolved the remaining 19 P2 pages by decision, not broad rewrite.
+
+Resolved in this wave:
+
+- 10 playbook detail routes now render a compact `White paper source context` section through the shared playbook detail template.
+- `/essays/agent-orchestration-is-not-delivery/` now links AI Agent Governance intent to `/governance/ai-agent-governance/` instead of the demoted bridge route.
+- `/theories/` now points its "Open the Concepts map" CTA to `/concepts/map/`.
+- The GAIC hub checksum display and JSON-LD HTML encoding hash now match the current public responsive HTML checksum `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+- `responsive-html-web-edition-note.md` now distinguishes the sealed candidate PDF hash from the public metadata-hardened PDF hash.
+- The essay score snapshot for `/essays/from-model-governance-to-agentic-lifecycle-conformance/` was verified as present, non-ranked, boundary-scoped, mobile-readable, and source-aligned with Phase 1D-12 values.
+
+P2 no-action decisions:
+
+- `/essays/agentic-ai-inflection-point-project-delivery/`
+- `/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/`
+- `/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/`
+- `/essays/the-industry-misdefined-multi-agent-ai/`
+- `/playbooks/`
+- `/projects/`
+- `/research/`
+
+Remaining known issues:
+
+- None blocking Owner Launch Execution.
+- External launch, Search Console/Bing submission, LinkedIn/newsletter/group distribution, and answer-engine tests remain owner-execution tasks; this wave does not claim those outcomes.
+
+Boundary discipline:
+
+- No broad P0/P1 rework was performed.
+- No P2 bulk rewrite was performed.
+- No new route, route deletion, or redirect was introduced.
+- No sealed artifacts changed.
+- No public PDF metadata re-seal changed.
+- No responsive public HTML artifact changed.
+- No white paper source, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring values changed.
+- No legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output claim, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-1C Status:** ✓ P2 LONG-TAIL DECISION AND RESIDUAL CLEANUP COMPLETE / READY FOR OWNER LAUNCH EXECUTION

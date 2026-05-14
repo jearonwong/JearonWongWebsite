@@ -1,7 +1,7 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
+**Last Updated:** May 14, 2026 (GAIC-R3K-1C P2 Long-tail Decision and Residual Cleanup)
 
 ## Reconstruction Strategy
 
@@ -3277,3 +3277,33 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3K-1B Status:** ✓ P1 SOURCE ANCHOR ENRICHMENT COMPLETE / READY FOR P2 LONG-TAIL DECISION OR OWNER LAUNCH EXECUTION.
+
+## GAIC-R3K-1C Notes (May 14, 2026)
+
+**Scope:** P2 Long-tail Decision and Residual Cleanup.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `9cf5c4122117c631a0312969c025ef213fe51e46` before R3K-1C patching.
+2. Inspected R3K-0 source-trace reports and R3K-1A/R3K-1B final QA/link reports.
+3. Extracted the 19 P2 pages from R3K-0 JSON reports and created `gaic-r3k1c-p2-decision-inventory.md` / `.json`.
+4. Added a compact `White paper source context` section to the shared playbook detail template, covering the 10 playbook detail routes without converting them into full P1-style source-trace pages.
+5. Corrected the deferred essay footer link in `/essays/agent-orchestration-is-not-delivery/` from `/ai-agent-governance/` to `/governance/ai-agent-governance/`.
+6. Corrected `/theories/` so the Concepts Map CTA points to `/concepts/map/`.
+7. Updated the GAIC white paper hub HTML checksum display and JSON-LD encoding hash to the current public responsive HTML checksum.
+8. Updated `responsive-html-web-edition-note.md` to distinguish sealed candidate PDF, public metadata-hardened PDF, and current responsive public HTML hashes.
+9. Verified the essay score snapshot already exists with all eight systems and exact Phase 1D-12 RCCS-T/RCCS-M/ALCS values.
+
+**Artifact discipline:**
+
+- No sealed candidate artifact changed.
+- Public PDF hash remains `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+- Public responsive HTML hash remains `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+- Sealed candidate PDF hash remains `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or public PDF metadata re-seal changed.
+
+**Boundary discipline:**
+
+- No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, Google Scholar indexing, AI crawler pickup, answer-engine citation, primary semantic source achievement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3K-1C Status:** ✓ P2 LONG-TAIL DECISION AND RESIDUAL CLEANUP COMPLETE / READY FOR OWNER LAUNCH EXECUTION.

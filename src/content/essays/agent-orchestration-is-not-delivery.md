@@ -545,4 +545,4 @@ Lifecycle makes agent work trustworthy.
 
 *[Essay 1: AI Agent Lifecycle: It Was Not Designed. It Grew.](/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/)*  
 *[Essay 2: The Industry Misdefined Multi-Agent AI](/essays/the-industry-misdefined-multi-agent-ai/)*  
-*[AI Agent Lifecycle definition](/lifecycle/) — [Delivery Standard](/delivery-standard/) — [AI Agent Governance](/ai-agent-governance/) — [MPLP Protocol Path](/projects/mplp/)*
+*[AI Agent Lifecycle definition](/lifecycle/) — [Delivery Standard](/delivery-standard/) — [AI Agent Governance](/governance/ai-agent-governance/) — [MPLP Protocol Path](/projects/mplp/)*

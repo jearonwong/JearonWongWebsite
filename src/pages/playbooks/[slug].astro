@@ -55,7 +55,7 @@ const articleJsonLd = {
     "@id": `${siteConfig.siteUrl}#person`
   },
   datePublished: "2026-05-12",
-  dateModified: "2026-05-12",
+  dateModified: "2026-05-14",
   keywords: playbook.keywords,
   about: playbook.keywords.map((keyword) => ({
     "@type": "Thing",
@@ -178,6 +178,23 @@ const breadcrumbJsonLd = {
         <section class="playbook-section">
           <h2>Why ordinary model/tool governance is insufficient</h2>
           <p>{playbook.insufficiency}</p>
+        </section>
+
+        <section class="playbook-section source-context-section">
+          <h2>White paper source context</h2>
+          <p>
+            This playbook is a practical reading of the GAIC white paper's lifecycle-responsibility
+            argument. For this route, the relevant responsibility objects are {playbook.relatedMros.join(", ")}.
+            RCCS-M and ALCS are used as source vocabulary for governance coverage and lifecycle coherence;
+            this page does not add scores or become legal advice, certification, procurement guidance, or a
+            vendor assessment.
+          </p>
+          <div class="source-context-links" aria-label="White paper source context links">
+            <a href={whitePaperHub}>GAIC white paper</a>
+            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#mro-overview`}>MRO overview</a>
+            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#rccs-m`}>RCCS-M source anchor</a>
+            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#alcs`}>ALCS source anchor</a>
+          </div>
         </section>
 
         <section class="playbook-section">
@@ -376,6 +393,28 @@ const breadcrumbJsonLd = {
     gap: 0.6rem;
   }
 
+  .source-context-section {
+    border-left: 3px solid var(--accent-proof);
+    padding-left: var(--registry-card-padding);
+  }
+
+  .source-context-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .source-context-links a {
+    color: var(--accent-signal);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
   .vendor-boundary {
     border-left: 3px solid var(--accent-signal);
     padding-left: var(--registry-card-padding);
@@ -415,6 +454,7 @@ const breadcrumbJsonLd = {
   }
 
   .sidebar-links a:hover,
+  .source-context-links a:hover,
   .term-link-grid a:hover {
     color: var(--current-text);
   }
