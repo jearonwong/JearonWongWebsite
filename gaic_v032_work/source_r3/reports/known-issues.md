@@ -2600,3 +2600,37 @@ Boundary discipline:
 - No Search Console/Bing submission, indexing, answer-engine citation, SEO uplift, ranking improvement, primary semantic source achievement, legal advice, legal compliance proof, certification, regulator approval, vendor ranking, procurement recommendation, vendor endorsement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3L Status:** ✓ OWNER LAUNCH READINESS AND EVIDENCE HANDOFF COMPLETE / OWNER EXECUTION REQUIRED
+
+---
+
+## GAIC-R3M-0 Known Issues
+
+### Editorial and Entity Ops Baseline Complete
+
+R3M-0 created the compact operating baseline for future editorial and entity operations after R3L.
+
+Resolved in this wave:
+
+- Recorded that JearonWong.com is a ready-to-be-cited semantic source, not yet an externally recognized primary semantic source.
+- Defined source authority boundaries:
+  - Primary source for Jearon Wong identity, GAIC, Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Deterministic Delivery, Agentic Delivery, and MPLP as one protocol path.
+  - Not primary source for OpenAI, Anthropic, AWS, IBM, Microsoft, Google, LangGraph, A2A, MCP, or other official vendor/product facts.
+- Defined future essay structure, figure/OG image rules, schema rules, update/link rules, external entity closure rules, and monthly source freshness checks.
+- Preserved R3L's owner-launch execution requirement.
+
+Remaining known issues:
+
+- Owner launch execution remains required.
+- External authority evidence remains pending: Search Console, Bing, LinkedIn Newsletter, LinkedIn Groups, X, Medium, answer-engine tests, backlinks, citations, and social distribution.
+- Monthly source freshness checks must be run manually or by a later explicitly scoped operations wave.
+
+Boundary discipline:
+
+- No public semantic page was created or rewritten.
+- No sealed artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No SEO/GEO uplift, indexing, answer-engine citation, primary semantic source achievement, vendor endorsement, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3M-0 Status:** ✓ EDITORIAL AND ENTITY OPS BASELINE COMPLETE / OWNER LAUNCH EXECUTION REQUIRED

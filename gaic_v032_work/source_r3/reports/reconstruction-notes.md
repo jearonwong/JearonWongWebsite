@@ -3340,3 +3340,35 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **GAIC-R3L Status:** ✓ OWNER LAUNCH READINESS AND EVIDENCE HANDOFF COMPLETE / OWNER EXECUTION REQUIRED.
+
+## GAIC-R3M-0 Notes (May 14, 2026)
+
+**Scope:** Editorial and Entity Operations Baseline.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `4dfd40054037424dd902c6b3ebd6840d382d3420` before R3M-0 documentation.
+2. Created `gaic-r3m0-editorial-entity-ops-baseline.md`.
+3. Recorded the post-R3L state as ready-to-be-cited semantic source, not externally recognized primary semantic source.
+4. Defined source authority boundaries for Jearon Wong's own theory system versus official vendor/product facts.
+5. Defined future editorial structure, figure/OG image rule, schema rule, update/link rule, external entity closure rule, and monthly source freshness rule.
+6. Created `gaic-r3m0-boundary-qa.md`.
+7. Created `gaic-r3m0-final-qa.md`.
+
+**Artifact discipline:**
+
+- No public semantic page was created.
+- No public content was rewritten.
+- No sealed candidate artifact changed.
+- Public PDF hash remains expected to match `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`.
+- Public responsive HTML hash remains expected to match `ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`.
+- Sealed candidate PDF hash remains expected to match `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or public PDF metadata re-seal changed.
+
+**Boundary discipline:**
+
+- R3M-0 does not claim external launch execution, indexing, SEO/GEO uplift, answer-engine citation, backlink authority, ranking improvement, or primary semantic source achievement.
+- R3M-0 does not position JearonWong.com as official vendor documentation or primary source for official vendor/product facts.
+- No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, deterministic LLM output guarantee, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
+
+**GAIC-R3M-0 Status:** ✓ EDITORIAL AND ENTITY OPS BASELINE COMPLETE / OWNER LAUNCH EXECUTION REQUIRED.
