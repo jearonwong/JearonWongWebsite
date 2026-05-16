@@ -2695,3 +2695,42 @@ Boundary discipline:
 - No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, external adoption, answer-engine citation, indexing, SEO/GEO uplift, MPLP requirement, MPLP exclusivity, MPLP industry-standard, Validation Lab certification, or insurance guarantee claim was introduced.
 
 **GAIC-R4A-0 Status:** ✓ AUTHOR COGNITIVE OWNERSHIP BASELINE COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING
+
+---
+
+## GAIC-R4B Known Issues
+
+### WP2 Auditability Architecture Baseline Complete
+
+GAIC-R4B created an internal architecture baseline for **Agentic AI Auditability & Assurance White Paper 2026** without drafting WP2 body text, performing full source research, or creating public assets.
+
+Resolved in this wave:
+
+- Created `gaic-r4b-wp2-preflight.md`.
+- Created `gaic-r4b-wp2-positioning-audience-baseline.md`.
+- Created `gaic-r4b-wp2-argument-architecture.md`.
+- Created `gaic-r4b-wp2-chapter-architecture.md`.
+- Created `gaic-r4b-wp2-table-appendix-inventory.md`.
+- Created `gaic-r4b-aarm-baseline.md` for the Agentic Auditability Readiness Model.
+- Created `gaic-r4b-wp2-to-guide1-guide2-boundary.md`.
+- Created `gaic-r4b-wp2-seo-geo-planning-notes.md`.
+- Created `gaic-r4b-wp2-boundary-qa.md`.
+
+Remaining known issues:
+
+- WP2 body text has not been drafted.
+- WP2 source research remains a future scoped task.
+- Guide 1 and Guide 2 remain future planning/writing tasks.
+- WP2 public hub, HTML, PDF, metadata, JSON-LD, entity graph, Evidence Registry, and `llms.txt` updates remain future tasks after WP2 exists.
+
+Boundary discipline:
+
+- No public page or public route was created.
+- No public content was rewritten.
+- No sealed candidate artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No WP2 publication, audit standard, certification, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard, external adoption, indexing, answer-engine recognition, or SEO/GEO uplift claim was introduced.
+
+**GAIC-R4B Status:** ✓ WP2 AUDITABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR GUIDE 1 AND GUIDE 2 PLANNING

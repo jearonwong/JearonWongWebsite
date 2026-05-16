@@ -3440,3 +3440,40 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim external launch execution, indexing, SEO/GEO uplift, answer-engine citation, backlink authority, ranking improvement, primary semantic source achievement, vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, MPLP industry-standard status, Validation Lab certification, or insurance guarantee.
 
 **GAIC-R4A-0 Status:** ✓ AUTHOR COGNITIVE OWNERSHIP BASELINE COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING.
+
+## GAIC-R4B Notes (May 16, 2026)
+
+**Scope:** WP2 Auditability Architecture Baseline.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `4d166c203cd9cbadbf9b7dbf070a842222c4169a` before GAIC-R4B documentation.
+2. Used repository files as source of truth; no old uploaded attachments were used.
+3. Inspected GAIC source master, R4A author ownership materials, R3K/R3L/JW-R3M-1 reports, and GAIC source sections/appendices covering MRO, RCCS-T/RCCS-M, ALCS, Evidence-Based Validation, Enterprise Failure Scenarios, Companion Paper Boundary, Adoption Roadmap, Conclusion, Appendix A, Appendix B, Appendix F, and Appendix H.
+4. Created `gaic-r4b-wp2-preflight.md`.
+5. Created `gaic-r4b-wp2-positioning-audience-baseline.md`.
+6. Created `gaic-r4b-wp2-argument-architecture.md`.
+7. Created `gaic-r4b-wp2-chapter-architecture.md`.
+8. Created `gaic-r4b-wp2-table-appendix-inventory.md`.
+9. Created `gaic-r4b-aarm-baseline.md` defining Agentic Auditability Readiness Model dimensions and L0-L5 readiness levels.
+10. Created `gaic-r4b-wp2-to-guide1-guide2-boundary.md`.
+11. Created `gaic-r4b-wp2-seo-geo-planning-notes.md`.
+12. Created `gaic-r4b-wp2-boundary-qa.md`.
+
+**Artifact discipline:**
+
+- No public page or public route was created.
+- No public content was rewritten.
+- No WP2 HTML/PDF/DOCX artifact was created.
+- No sealed candidate artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- GAIC-R4B is architecture baseline work only.
+- It does not claim WP2 is written, published, externally adopted, indexed, answer-engine-recognized, or SEO/GEO-improved.
+- It does not claim audit standard status, certification, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, or MPLP industry-standard status.
+
+**GAIC-R4B Status:** ✓ WP2 AUDITABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR GUIDE 1 AND GUIDE 2 PLANNING.
