@@ -2668,3 +2668,30 @@ Boundary discipline:
 - No external adoption, indexing, answer-engine citation, SEO/GEO uplift, ranking improvement, primary semantic source achievement, vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, or MPLP industry-standard claim was introduced.
 
 **JW-R3M-1 Status:** ✓ ENTITY AUTHORITY HUB AND EVIDENCE REGISTRY COMPLETE / OWNER LAUNCH EXECUTION REQUIRED
+
+---
+
+## GAIC-R4A-0 Known Issues
+
+### Author Cognitive Ownership Baseline Complete
+
+GAIC-R4A-0 created an internal author-facing synthesis layer so the author can explain, defend, and safely publish the Global AI Compliance White Paper 2026 argument without rewriting the white paper or expanding public pages.
+
+Resolved in this wave:
+
+- Created `gaic-r4a0-author-cognitive-ownership-baseline.md` with author-level thesis versions, ten owned claims, unexpected-content map, RCCS-T/RCCS-M/ALCS explanation set, sixteen MRO mastery sheet, challenge/response matrix, speaking ladder, boundary discipline, and WP2/WP3 bridge.
+- Created `gaic-r4a0-whitepaper-author-qa-cheatsheet.md` for posting, calls, interviews, and replies.
+- Created `gaic-r4a0-boundary-qa.md` and confirmed the reports avoid legal advice, certification, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard, insurance guarantee, external adoption, answer-engine adoption, and SEO/GEO outcome claims.
+
+Remaining known issues:
+
+- Author internalization still requires human review and practice by the author.
+- WP2 / WP3 remain planned companion papers, not published releases.
+- Owner launch execution remains required and external evidence remains pending.
+
+Boundary discipline:
+
+- No public page, route, SEO/GEO page, white paper artifact, public PDF metadata, responsive HTML artifact, score, methodology, or scoring value changed.
+- No legal advice, legal compliance proof, certification, regulator approval, procurement recommendation, vendor ranking, vendor endorsement, external adoption, answer-engine citation, indexing, SEO/GEO uplift, MPLP requirement, MPLP exclusivity, MPLP industry-standard, Validation Lab certification, or insurance guarantee claim was introduced.
+
+**GAIC-R4A-0 Status:** ✓ AUTHOR COGNITIVE OWNERSHIP BASELINE COMPLETE / READY FOR WHITEPAPER TRILOGY PLANNING
