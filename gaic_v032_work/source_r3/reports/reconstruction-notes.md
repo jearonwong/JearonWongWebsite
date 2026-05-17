@@ -3,6 +3,28 @@
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Last Updated:** May 14, 2026 (GAIC-R3K-1C P2 Long-tail Decision and Residual Cleanup)
 
+## WP2-R0 Source Research Notes (May 17, 2026)
+
+**Scope:** Big Four / audit / assurance source research for the planned Agentic AI Auditability & Assurance White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at R4C accepted commit `66c0fac388c4809f93b215b9aa3bfd89b1a22010` before edits.
+2. Inspected R4B WP2 architecture baseline, R4C Guide 1 / Guide 2 planning baseline, GAIC source master, Chapter 6 MRO source truth, Appendix A MRO templates, Chapter 14 Validation Lab boundary, and Chapter 16 companion-paper boundary.
+3. Created WP2-R0 preflight, source scope/search plan, source inventory, Big Four audit industry context report, audit/assurance language map, logs vs evidence source map, MRO-to-WP2 source dependency map, chapter source map, source quality/citation risk matrix, source gap report, boundary QA, build/validation report, and final QA.
+4. Source inventory covers Big Four/major advisory market context, audit/professional sources, AI governance/public guidance, evidence/provenance/logging/observability sources, privacy/evidence retention sources, and validation/assurance boundary sources.
+5. Source gaps were classified. No P0 source blocker prevents WP2-R1 source-grounded outline. P1/P2 gaps remain where WP2 proposes new object-model synthesis.
+
+**Boundary discipline:**
+
+- No WP2 body text was drafted.
+- No public page, route, HTML/PDF/DOCX artifact, SEO page, or public metadata was created.
+- No sealed GAIC artifact, public PDF metadata, responsive public HTML, white paper source section, score, methodology, or RCCS-T/RCCS-M/ALCS framing was modified.
+- Big Four, audit/professional, regulator, standards, and public guidance sources are candidate/context sources only and are not endorsement, certification, legal compliance proof, assurance opinion, regulator approval, or adoption evidence.
+- Validation Lab remains a non-certifying evidence adjudication example only.
+
+**WP2-R0 Status:** WP2-R0 BIG FOUR / AUDIT / ASSURANCE SOURCE RESEARCH COMPLETE / READY FOR WP2-R1 SOURCE-GROUNDED OUTLINE.
+
 ## Reconstruction Strategy
 
 v0.3.2-FRC-R3 uses a **source-first reconstruction** strategy to avoid the structural failures of R2.

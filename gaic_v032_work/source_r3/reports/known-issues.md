@@ -3,6 +3,33 @@
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
 
+## WP2-R0 Big Four / Audit / Assurance Source Research
+
+### Status: WP2-R0 BIG FOUR / AUDIT / ASSURANCE SOURCE RESEARCH COMPLETE / READY FOR WP2-R1 SOURCE-GROUNDED OUTLINE
+
+WP2-R0 created the source research baseline for the planned **Agentic AI Auditability & Assurance White Paper 2026**. This was a source-research-only wave: no WP2 body text, public pages, public routes, HTML/PDF/DOCX artifacts, white paper content, sealed artifacts, public PDF metadata, responsive public HTML, scores, or methodology were changed.
+
+**Source research results:**
+
+1. Created a WP2 source scope and search plan covering Big Four market context, audit/assurance professional language, AI governance guidance, evidence/provenance/logging, privacy/evidence retention, and third-party validation boundaries.
+2. Created a source inventory with candidate sources from Deloitte, PwC, EY, KPMG, PCAOB, IAASB, AICPA, ISACA, IIA, NIST, OECD, ISO, EU, Singapore AI Verify/IMDA, ICO, W3C, OpenTelemetry, EDPB, and related official/public sources.
+3. Confirmed source targets were met: Big Four/major advisory, audit/professional, AI governance/public guidance, evidence/provenance/logging, privacy/evidence retention, and third-party validation/assurance boundary.
+4. Created Big Four / audit industry context report using Big Four sources as market context only, not endorsement.
+5. Created audit/assurance language map translating WP2 concepts into professional vocabulary while preserving non-standard, non-certifying, non-legal-advice boundaries.
+6. Created logs vs audit evidence chain source map supporting the bounded claim that logs and traces are evidence ingredients, not complete responsibility-linked evidence chains by themselves.
+7. Created MRO-to-WP2 source dependency map using current GAIC MRO numbering from Chapter 6 / Appendix A and noting prompt numbering drift where relevant.
+8. Created WP2 chapter source map, source quality/citation risk matrix, source gap report, boundary QA, build/validation report, and final QA.
+
+**Remaining limitations, not blockers:**
+
+1. No P0 source blocker was identified for WP2-R1.
+2. Several WP2 constructs remain author synthesis: Agentic Audit Object, Agentic Audit Object Model, AARM, agent-role responsibility surfaces, responsibility transfer across agents, and cross-project agent/workflow reuse.
+3. Future WP2-R1 and WP2-R2 must explicitly distinguish externally sourced audit/governance/provenance/privacy terminology from proposed WP2 object-model synthesis.
+4. Big Four sources must remain market context only and must not be framed as endorsement, adoption, or validation of WP2, GAIC, MPLP, AARM, Validation Lab, or Jearon Wong.
+5. Legal, audit, assurance, certification, procurement, and regulator-approval boundaries remain active.
+
+**WP2-R0 Decision:** WP2-R0 BIG FOUR / AUDIT / ASSURANCE SOURCE RESEARCH COMPLETE / READY FOR WP2-R1 SOURCE-GROUNDED OUTLINE.
+
 ## GAIC-R3A Core Entity Mesh
 
 ### Status: GAIC-R3A CORE ENTITY MESH COMPLETE / READY FOR APPLIED PLAYBOOK MESH
