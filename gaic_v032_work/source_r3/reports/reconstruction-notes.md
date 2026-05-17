@@ -3477,3 +3477,39 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim audit standard status, certification, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, or MPLP industry-standard status.
 
 **GAIC-R4B Status:** ✓ WP2 AUDITABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR GUIDE 1 AND GUIDE 2 PLANNING.
+
+## GAIC-R4C Notes (May 17, 2026)
+
+**Scope:** Guide 1 and Guide 2 Planning Baseline.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `ff1d98e382a9b9fe1b4c38dbac6f45b9627da9f8` before GAIC-R4C documentation.
+2. Used repository files as source of truth; no old uploaded attachments were used.
+3. Inspected GAIC source master, R4B WP2 positioning, argument, chapter, table/appendix, AARM, WP2-to-Guide1/Guide2 boundary, SEO/GEO planning, final QA reports, R4A author ownership baseline, and R3K/R3L/JW-R3M-1 report summaries.
+4. Created `gaic-r4c-guide1-guide2-preflight.md`.
+5. Created Guide 1 positioning, argument architecture, chapter architecture, and table/checklist inventory reports.
+6. Created Guide 2 positioning, argument architecture, chapter architecture, and table/checklist inventory reports.
+7. Created shared object/boundary map for Guide 1 and Guide 2.
+8. Created product-stack relationship notes for MPLP, Cognitive OS, SoloCrew, Validation Lab, and future MPLP-specific guides.
+9. Created Guide 1 / Guide 2 SEO/GEO planning notes.
+10. Created Guide 1 / Guide 2 release dependency plan.
+11. Created Guide 1 / Guide 2 boundary QA.
+
+**Artifact discipline:**
+
+- No public page or public route was created.
+- No public content was rewritten.
+- No Guide 1 or Guide 2 HTML/PDF/DOCX artifact was created.
+- No sealed candidate artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- GAIC-R4C is planning baseline work only.
+- It does not claim Guide 1 or Guide 2 is written, published, externally adopted, indexed, answer-engine-recognized, or SEO/GEO-improved.
+- It does not claim legal advice, legal compliance proof, audit standard status, certification, assurance opinion, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, MPLP industry-standard status, Cognitive OS requirement, SoloCrew enterprise readiness, or Validation Lab certification.
+
+**GAIC-R4C Status:** ✓ GUIDE 1 AND GUIDE 2 PLANNING BASELINE COMPLETE / READY FOR WP2 SOURCE RESEARCH.

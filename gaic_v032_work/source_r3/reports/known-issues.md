@@ -2734,3 +2734,47 @@ Boundary discipline:
 - No WP2 publication, audit standard, certification, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard, external adoption, indexing, answer-engine recognition, or SEO/GEO uplift claim was introduced.
 
 **GAIC-R4B Status:** ✓ WP2 AUDITABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR GUIDE 1 AND GUIDE 2 PLANNING
+
+---
+
+## GAIC-R4C Known Issues
+
+### Guide 1 and Guide 2 Planning Baseline Complete
+
+GAIC-R4C created internal planning baselines for Guide 1 and Guide 2 without drafting guide body text, performing full source research, or creating public assets.
+
+Resolved in this wave:
+
+- Created `gaic-r4c-guide1-guide2-preflight.md`.
+- Created `gaic-r4c-guide1-positioning-audience-baseline.md`.
+- Created `gaic-r4c-guide1-argument-architecture.md`.
+- Created `gaic-r4c-guide1-chapter-architecture.md`.
+- Created `gaic-r4c-guide1-table-checklist-inventory.md`.
+- Created `gaic-r4c-guide2-positioning-audience-baseline.md`.
+- Created `gaic-r4c-guide2-argument-architecture.md`.
+- Created `gaic-r4c-guide2-chapter-architecture.md`.
+- Created `gaic-r4c-guide2-table-checklist-inventory.md`.
+- Created `gaic-r4c-guide1-guide2-shared-object-boundary-map.md`.
+- Created `gaic-r4c-guide1-guide2-product-stack-relationship.md`.
+- Created `gaic-r4c-guide1-guide2-seo-geo-planning-notes.md`.
+- Created `gaic-r4c-guide1-guide2-release-dependency-plan.md`.
+- Created `gaic-r4c-guide1-guide2-boundary-qa.md`.
+
+Remaining known issues:
+
+- WP2 source research remains the next required step.
+- Guide 1 and Guide 2 body text has not been drafted.
+- Guide 1 and Guide 2 source research remains future scoped work after WP2 framework is source-grounded and stable.
+- Guide 1 / Guide 2 public hubs, HTML, PDF, metadata, JSON-LD, entity graph, Evidence Registry, and `llms.txt` updates remain future tasks after guide artifacts exist.
+
+Boundary discipline:
+
+- No public page or public route was created.
+- No public content was rewritten.
+- No sealed candidate artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No Guide 1 or Guide 2 publication, body drafting, audit standard, certification, assurance opinion, legal compliance proof, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard, Cognitive OS requirement, SoloCrew enterprise-readiness, external adoption, indexing, answer-engine recognition, or SEO/GEO uplift claim was introduced.
+
+**GAIC-R4C Status:** ✓ GUIDE 1 AND GUIDE 2 PLANNING BASELINE COMPLETE / READY FOR WP2 SOURCE RESEARCH
