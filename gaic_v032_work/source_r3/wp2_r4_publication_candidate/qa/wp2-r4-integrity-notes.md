@@ -1,6 +1,6 @@
-# WP2-R4 Integrity Notes
+# AIAAWP R4 Integrity Notes
 
-**Status:** Internal R4 candidate source package integrity notes.  
+**Status:** Internal R4 candidate source package integrity notes.
 **Date:** May 17, 2026
 
 ## Package Integrity
@@ -10,12 +10,12 @@
 - R2/R3 internal chapter status lines and R3 QA note sections were removed from the assembled candidate source.
 - Source register and citation map were normalized into R4 package files.
 - Metadata and JSON-LD plans were created but not wired into the public site.
-- Candidate HTML/PDF/DOCX artifacts were intentionally deferred.
+- Candidate HTML/PDF/DOCX artifacts were generated in R4B and naming-synchronized in R4C.
 - `checksums.sha256` records generated package files except itself to avoid recursive checksum instability.
 
 ## Source Integrity
 
-- Source baseline remains WP2-R0/R1/R2/R3 plus GAIC source truth.
+- Source baseline remains R0/R1/R2/R3 internal reports plus GAIC source truth.
 - No broad new source research was added.
 - Big Four sources remain market context only.
 - Professional audit sources remain terminology, context, and boundary support.
@@ -24,10 +24,11 @@
 
 ## Artifact Integrity
 
-- WP2-R4B generated internal candidate HTML, PDF, and DOCX artifacts under `out/`.
+- R4B generated internal candidate HTML, PDF, and DOCX artifacts under `out/`.
+- R4C corrected public-facing document identity to `AIAAWP-2026-v0.1-R4-CANDIDATE`, regenerated the internal HTML/PDF/DOCX artifacts, and updated manifest/checksums.
 - The generated artifacts are internal candidate artifacts only.
-- No public WP2 route or page was created.
-- No public WP2 HTML/PDF/DOCX artifact was created or copied to `public/`.
+- No public page or route was created.
+- No public HTML/PDF/DOCX artifact was created or copied to `public/`.
 - No existing GAIC public content or sealed artifact was modified by the package.
 - Candidate HTML/PDF/DOCX hashes are recorded in `manifest.json` and `checksums.sha256`.
 
@@ -41,4 +42,4 @@
 
 ## Readiness Decision
 
-R4B generated the internal candidate artifact package and is ready for WP2 final candidate QA, subject to final source/citation/boundary review and author review. This is not a publication, final seal, public release, or live deployment.
+R4C verified content completeness and public naming across the internal candidate package. The package is ready for a format and publication design pass before final candidate QA. This is not a publication, final seal, public release, or live deployment.

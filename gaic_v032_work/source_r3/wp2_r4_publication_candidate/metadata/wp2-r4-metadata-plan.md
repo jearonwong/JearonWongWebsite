@@ -1,6 +1,6 @@
-# WP2-R4 Metadata Plan
+# AIAAWP R4 Metadata Plan
 
-**Status:** Draft metadata plan for future public publication.  
+**Status:** Draft metadata plan for future public publication.
 **Boundary:** This plan is not wired into the public site and does not claim public release, indexing, SEO/GEO uplift, answer-engine recognition, or Scholar indexing.
 
 ## Publication Metadata Draft
@@ -18,7 +18,7 @@
 | Twitter title | Agentic AI Auditability & Assurance White Paper 2026 | Future social preview |
 | Twitter description | A lifecycle evidence guide for audit, assurance, and enterprise AI governance. | No certification claim |
 | Publication date | Placeholder for actual public release date | Not set in R4 |
-| Trace tag | `WP2-2026-R4-PUBLICATION-CANDIDATE` | Internal trace |
+| Document ID | `AIAAWP-2026-v0.1-R4-CANDIDATE` | Public-facing candidate document identity |
 | Version | `v0.1-publication-candidate` | Candidate-prep version |
 | PDF metadata title | Agentic AI Auditability & Assurance White Paper 2026 | Future artifact generation |
 | PDF metadata subject | Lifecycle evidence guide for agentic AI auditability and assurance readiness | No assurance opinion |

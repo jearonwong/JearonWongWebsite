@@ -1,7 +1,38 @@
 # Reconstruction Notes
 
+## WP2-R4C Content and Public Naming QA Notes (May 18, 2026)
+
+**Scope:** Content completeness, cross-format parity, public-facing naming correction, and format issue registration.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `f578400552a81b5ff12b2611194c973a6a326187` before R4C work.
+2. Used repository files as source of truth; no expired uploaded attachments were used.
+3. Inspected the R4 candidate package, R4B reports, R4/R3 reports, source register, citation map, metadata/JSON-LD plans, generator, and internal HTML/PDF/DOCX artifacts.
+4. Created `wp2-r4c-public-naming-policy.md` defining WP2 as internal shorthand only and `AIAAWP-2026-v0.1-R4-CANDIDATE` as the public-facing candidate document ID.
+5. Renamed the candidate source to `AIAAWP-2026-v0.1-R4-CANDIDATE.md`.
+6. Patched candidate source, source register, citation map, metadata plan, JSON-LD plan, generator, README, generation plan, integrity notes, manifest, and checksums to align public-facing naming.
+7. Regenerated internal candidate HTML/PDF/DOCX artifacts under `wp2_r4_publication_candidate/out/` with WP2-free public filenames.
+8. Verified PDF metadata and DOCX core metadata use the public title/subtitle/author and do not expose the old public-facing WP2 trace.
+9. Extracted text from Markdown, HTML, PDF, and DOCX and verified content completeness and cross-format parity for chapters 0-16, appendices A-F, MRO-01 through MRO-16, AARM L0-L5, source register/citation sections, and boundary language.
+10. Registered PDF/DOCX formatting as not accepted for publication and deferred layout repair to the next format/publication design wave.
+11. Created R4C QA reports and updated SOURCE MASTER / known issues / reconstruction notes.
+
+**Artifact discipline:**
+
+- Candidate artifacts remain internal under `gaic_v032_work/source_r3/wp2_r4_publication_candidate/out/`.
+- No public page, public route, sitemap entry, or public artifact copy was created.
+- No GAIC public/sealed artifact, public GAIC PDF metadata, responsive public HTML, score, or methodology changed.
+- Pre-existing untracked `public/social/*` files remained outside R4C scope.
+
+**Boundary discipline:**
+
+- R4C does not claim publication, final/sealed status, audit standard status, certification, legal compliance proof, regulator approval, assurance opinion, Big Four/audit body endorsement, procurement guidance, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise readiness, SEO/GEO uplift, answer-engine recognition, external adoption, or launch.
+
+**WP2-R4C Status:** WP2-R4C CONTENT AND PUBLIC NAMING QA COMPLETE / READY FOR FORMAT AND PUBLICATION DESIGN PASS.
+
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R4B Candidate Artifact Generation)
+**Last Updated:** May 18, 2026 (WP2-R4C Content and Public Naming QA)
 
 ## WP2-R4B Candidate Artifact Generation Notes (May 17, 2026)
 

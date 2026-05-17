@@ -2,17 +2,26 @@
 
 **R4 Decision:** Candidate artifact generation deferred to a later wave.
 **R4B Execution:** Candidate artifact generation completed with a WP2-specific internal generator.
+**R4C Execution:** Public-facing candidate naming corrected to AIAAWP document identity; artifacts regenerated for content/naming parity only.
 **Reason:** Existing generation scripts under `gaic_v032_work/source_r3/scripts/` are tailored to GAIC WP1 source structure, renderer assumptions, and sealed/public artifact workflows. R4B therefore created a separate WP2-specific generator instead of modifying GAIC WP1 scripts or sealed/public artifact workflows.
 
 ## R4B Generation Path
 
 - Generator: `generation/generate-wp2-r4-candidate-html.mjs`
-- Input: `WP2-2026-R4-PUBLICATION-CANDIDATE.md`, `sources/wp2-r4-source-register.md`, and `sources/wp2-r4-citation-map.md`
+- Input: `AIAAWP-2026-v0.1-R4-CANDIDATE.md`, `sources/wp2-r4-source-register.md`, and `sources/wp2-r4-citation-map.md`
 - Output directory: `out/`
 - HTML: standalone internal candidate HTML with noindex/no-follow metadata and internal-only status banner
-- PDF: generated from candidate HTML through LibreOffice, then metadata-normalized with `pdf-lib`
-- DOCX: generated through LibreOffice HTML -> ODT -> DOCX bridge with a DOCX-specific landscape conversion stylesheet for wide review tables
+- PDF: generated from candidate HTML through LibreOffice, then metadata-normalized with a PyPDF2 fallback when `pdf-lib` is unavailable
+- DOCX: generated through LibreOffice HTML -> ODT -> DOCX bridge with a DOCX-specific landscape conversion stylesheet for wide review tables; DOCX core metadata is patched to the public title/subtitle/author
 - Manifest/checksum update: handled by the generator
+
+## R4C Public Naming Update
+
+- Public-facing document ID: `AIAAWP-2026-v0.1-R4-CANDIDATE`
+- Public-facing title: Agentic AI Auditability & Assurance White Paper 2026
+- Future public-facing artifact filenames omit the internal `WP2` shorthand.
+- `WP2` remains internal task shorthand in repository paths, report names, and governance notes only.
+- R4C does not fix PDF/DOCX layout; it only synchronizes content and naming.
 
 ## Required Next Steps for R4B or R5
 

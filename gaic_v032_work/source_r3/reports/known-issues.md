@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R4B Candidate Artifact Generation)
+**Last Updated:** May 18, 2026 (WP2-R4C Content and Public Naming QA)
 
 ## WP2-R4B Candidate Artifact Generation
 

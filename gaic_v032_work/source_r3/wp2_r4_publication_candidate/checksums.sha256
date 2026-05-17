@@ -1,15 +1,15 @@
-# SHA256 checksums for WP2 R4 candidate package files
+# SHA256 checksums for AIAAWP R4 candidate package files
 # checksums.sha256 excludes itself and transient LibreOffice profile files.
-476ba0352af9bffa81f30da91eaca2e414c0861ef58fedc5c7fdec5cab3125fc  README.md
-07eb430fba67e355fcfafe340259cd9bf7f2f9a17e540c9afc6fa04d373c6004  WP2-2026-R4-PUBLICATION-CANDIDATE.md
-dc49505f95e6e676fefd633c32c0491438044e92ca1bcf1ddbe7fa6159b36c3f  generation/generate-wp2-r4-candidate-html.mjs
-9e50a681cd6119c9297e530f794c35ee44eb82e84742b2977984b7b47ef8433d  generation/wp2-r4-generation-plan.md
-232fd9a3a69a8220a4d9bb4e823c278efa38a0bac170437c96b6d48616cf4f4c  manifest.json
-ca0f072923673cddc60dc385edaf99528eb1c8608d073378ff90cb8e14e21860  metadata/wp2-r4-jsonld-plan.json
-eea96ab1e45ff6e040591518e5d5bc74cc44e422ec92960e7f5bc042ece4789a  metadata/wp2-r4-metadata-plan.md
-673688e63769a3d2988da14efc6111236edcbe9f2a1238fd3fa483971ce86e9e  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx
-2ab730e41798739ab8d4256de40306ff46c60c49e2f8476f68726c7d8e139b1a  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html
-dd27c00c4b32476654ce26d37a41f96be62e96909228ad725e73931caa99da84  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf
-920a8d95e0042aed60e5efd019dae7411674e30a8328306fb5f64d423dd3433b  qa/wp2-r4-integrity-notes.md
-9ce7cfa4c47f2d00424f148a5b6262f166ececfd2b3f7d4fb7ee0b9b460403d7  sources/wp2-r4-citation-map.md
-8f095bbb0e4c50eb03b609d601aef3c1ddc8a0b6ce8f775b31c80921aef593e8  sources/wp2-r4-source-register.md
+7a6c83eba7af27d728eceb2402e0754bf4d9e7dd266ae65b2609285a2a6ecf3a  AIAAWP-2026-v0.1-R4-CANDIDATE.md
+ebbf4a36cbe32ea5bd04d4241676096859edd133b9fcdcad6801dbbdac5090ee  README.md
+a325ae907025ada056a5cfc896b64cf5975a54f8f17eed6ad2cfd99977e7aebb  generation/generate-wp2-r4-candidate-html.mjs
+41279e1e34cc17d316c1b8fc2744c74f302fc1258b290f58ac2d7f2cf4ee565b  generation/wp2-r4-generation-plan.md
+fd1dcafeb27916fc3395919129b10508e9bac129d1ef10d824303f95d0ff239c  manifest.json
+1bb7d05e91228014a4b7f9b9d61ead8f8da18c5def20182932e53f5587cc5cb8  metadata/wp2-r4-jsonld-plan.json
+11dfbd5772f2d005fc0fc840388fed3fcf8253a009b0c4e8c6f8b1768fa718ec  metadata/wp2-r4-metadata-plan.md
+86a8802594aae479478358f0c4624ee3bfc0e61301e7e68d0f20e3c27639ddf3  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx
+73de805c623c8edbc43f46374a4ef614e485b46d374b77b2c1cb6805a5db7a5a  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html
+74c047ef5c23e8218568958ea64bc7fab0626f4246c5a4c83a8ac9a813f99bb7  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf
+9c126ee4f176b3ff9628ffb9948e33b0c29ec5185db6e6155107755733d8fa6a  qa/wp2-r4-integrity-notes.md
+ddec707b430e8cc64368bd94946b53638165091ec0b2858bf545ab62577a4726  sources/wp2-r4-citation-map.md
+d6cec3c9eed834333c4aaf90e494e7256e69611746bf009f206df9c300c07ffd  sources/wp2-r4-source-register.md

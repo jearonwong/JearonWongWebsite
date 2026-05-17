@@ -1,5 +1,5 @@
 {
-  "document_id": "WP2-2026-R4-PUBLICATION-CANDIDATE",
+  "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
   "title": "Agentic AI Auditability & Assurance White Paper 2026",
   "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
   "status": "publication-candidate-preparation",
@@ -13,13 +13,13 @@
   "source_baseline_commit": "2b5ef42c09165cce500a48546d434592148e97e7",
   "current_commit": "pending until git commit and push",
   "source_baseline": [
-    "WP2-R3 QA-reviewed internal draft",
-    "WP2-R0/R1/R2/R3 reports",
+    "R3 QA-reviewed internal draft",
+    "R0/R1/R2/R3 internal reports",
     "GAIC v0.3.2-FRC-R3 source truth"
   ],
   "files_included": [
     "README.md",
-    "WP2-2026-R4-PUBLICATION-CANDIDATE.md",
+    "AIAAWP-2026-v0.1-R4-CANDIDATE.md",
     "manifest.json",
     "checksums.sha256",
     "metadata/wp2-r4-metadata-plan.md",
@@ -33,25 +33,25 @@
   "citation_map_path": "sources/wp2-r4-citation-map.md",
   "artifact_generation_status": "html-pdf-docx-generated-internal-candidate-only",
   "artifact_paths": [
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
   ],
   "boundary_status": "candidate package only; not public/final/sealed/live",
   "checksum_file_path": "checksums.sha256",
   "checksum_note": "checksums.sha256 excludes itself to avoid recursive checksum instability.",
   "generated_artifact_paths": [
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
   ],
   "generated_artifact_hashes": {
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html": "2ab730e41798739ab8d4256de40306ff46c60c49e2f8476f68726c7d8e139b1a",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf": "dd27c00c4b32476654ce26d37a41f96be62e96909228ad725e73931caa99da84",
-    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx": "673688e63769a3d2988da14efc6111236edcbe9f2a1238fd3fa483971ce86e9e"
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html": "73de805c623c8edbc43f46374a4ef614e485b46d374b77b2c1cb6805a5db7a5a",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf": "74c047ef5c23e8218568958ea64bc7fab0626f4246c5a4c83a8ac9a813f99bb7",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx": "86a8802594aae479478358f0c4624ee3bfc0e61301e7e68d0f20e3c27639ddf3"
   },
   "generation_script_path": "generation/generate-wp2-r4-candidate-html.mjs",
-  "generation_timestamp": "2026-05-17T15:45:27.756Z",
+  "generation_timestamp": "2026-05-17T16:39:42.873Z",
   "artifact_status": "internal_candidate_only",
   "not_live": true,
   "no_public_route": true,
@@ -60,13 +60,20 @@
       "generated": true,
       "error": null,
       "metadata": {
-        "applied": true
+        "applied": true,
+        "fallback": "PyPDF2"
       }
     },
     "docx": {
       "generated": true,
       "error": null,
-      "fallback": "libreoffice-odt-bridge"
+      "fallback": "libreoffice-odt-bridge",
+      "metadata": {
+        "applied": true
+      }
     }
-  }
+  },
+  "public_facing_document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+  "public_facing_title": "Agentic AI Auditability & Assurance White Paper 2026",
+  "public_facing_subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance"
 }

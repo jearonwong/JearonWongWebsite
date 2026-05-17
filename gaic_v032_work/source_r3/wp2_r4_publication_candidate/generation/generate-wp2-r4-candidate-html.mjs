@@ -9,20 +9,21 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 
 const packageDir = path.resolve(new URL("..", import.meta.url).pathname);
-const sourcePath = path.join(packageDir, "WP2-2026-R4-PUBLICATION-CANDIDATE.md");
+const sourcePath = path.join(packageDir, "AIAAWP-2026-v0.1-R4-CANDIDATE.md");
 const sourceRegisterPath = path.join(packageDir, "sources", "wp2-r4-source-register.md");
 const citationMapPath = path.join(packageDir, "sources", "wp2-r4-citation-map.md");
 const outDir = path.join(packageDir, "out");
-const htmlPath = path.join(outDir, "WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html");
-const docxHtmlPath = path.join(outDir, "WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate-docx-source.html");
-const pdfPath = path.join(outDir, "WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf");
-const docxPath = path.join(outDir, "WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx");
+const artifactBaseName = "Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate";
+const htmlPath = path.join(outDir, `${artifactBaseName}.html`);
+const docxHtmlPath = path.join(outDir, `${artifactBaseName}-docx-source.html`);
+const pdfPath = path.join(outDir, `${artifactBaseName}.pdf`);
+const docxPath = path.join(outDir, `${artifactBaseName}.docx`);
 const manifestPath = path.join(packageDir, "manifest.json");
 const checksumPath = path.join(packageDir, "checksums.sha256");
 
 const title = "Agentic AI Auditability & Assurance White Paper 2026";
 const subtitle = "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance";
-const traceTag = "WP2-2026-R4-PUBLICATION-CANDIDATE";
+const documentId = "AIAAWP-2026-v0.1-R4-CANDIDATE";
 const version = "v0.1-publication-candidate";
 const generatedAt = new Date().toISOString();
 
@@ -123,7 +124,7 @@ async function applyPdfMetadata(filePath) {
   try {
     ({ PDFDocument } = require("pdf-lib"));
   } catch {
-    return { applied: false, reason: "pdf-lib not available in module resolution path" };
+    return applyPdfMetadataWithPython(filePath);
   }
   const pdfDoc = await PDFDocument.load(fs.readFileSync(filePath));
   pdfDoc.setTitle(title);
@@ -142,6 +143,95 @@ async function applyPdfMetadata(filePath) {
   return { applied: true };
 }
 
+function applyPdfMetadataWithPython(filePath) {
+  const scriptPath = path.join(outDir, "patch-pdf-metadata.py");
+  const script = `
+from PyPDF2 import PdfReader, PdfWriter
+from pathlib import Path
+src = Path(${JSON.stringify(filePath)})
+tmp = src.with_suffix(src.suffix + ".tmp")
+reader = PdfReader(str(src))
+writer = PdfWriter()
+for page in reader.pages:
+    writer.add_page(page)
+writer.add_metadata({
+    "/Title": ${JSON.stringify(title)},
+    "/Author": "Jearon Wong",
+    "/Subject": ${JSON.stringify(subtitle)},
+    "/Keywords": "Agentic AI Auditability, AI Agent Auditability, Audit Evidence Chain, AARM, MRO, Agentic Lifecycle Governance",
+    "/Producer": "LibreOffice; PyPDF2 metadata pass"
+})
+with tmp.open("wb") as fh:
+    writer.write(fh)
+tmp.replace(src)
+`;
+  try {
+    fs.writeFileSync(scriptPath, script);
+    execFileSync("/usr/bin/python3", [scriptPath], { stdio: "pipe" });
+    return { applied: true, fallback: "PyPDF2" };
+  } catch (error) {
+    return { applied: false, reason: String(error.stderr || error.message || error) };
+  } finally {
+    fs.rmSync(scriptPath, { force: true });
+  }
+}
+
+function escapeXml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+function patchDocxCoreMetadata(filePath) {
+  if (!fs.existsSync(filePath)) return { applied: false, reason: "DOCX not found" };
+  const tempDir = path.join(outDir, "docx-core-metadata-work");
+  fs.rmSync(tempDir, { recursive: true, force: true });
+  fs.mkdirSync(tempDir, { recursive: true });
+  try {
+    execFileSync("/usr/bin/unzip", ["-q", filePath, "-d", tempDir], { stdio: "pipe" });
+    const corePath = path.join(tempDir, "docProps", "core.xml");
+    if (!fs.existsSync(corePath)) {
+      return { applied: false, reason: "docProps/core.xml not found" };
+    }
+    const metadata = {
+      title,
+      subject: subtitle,
+      creator: "Jearon Wong",
+      description: `${subtitle}. Internal candidate artifact; not public, not final, not sealed.`,
+      keywords: "Agentic AI Auditability, AI Agent Auditability, Audit Evidence Chain, AARM, MRO, Agentic Lifecycle Governance",
+    };
+    let xml = fs.readFileSync(corePath, "utf8");
+    const setTag = (tagName, value) => {
+      const escaped = escapeXml(value);
+      const pattern = new RegExp(`<${tagName}[^>]*>[\\s\\S]*?<\\/${tagName}>`);
+      if (pattern.test(xml)) {
+        xml = xml.replace(pattern, `<${tagName}>${escaped}</${tagName}>`);
+        return;
+      }
+      xml = xml.replace("</cp:coreProperties>", `<${tagName}>${escaped}</${tagName}></cp:coreProperties>`);
+    };
+    setTag("dc:title", metadata.title);
+    setTag("dc:subject", metadata.subject);
+    setTag("dc:creator", metadata.creator);
+    setTag("dc:description", metadata.description);
+    setTag("cp:keywords", metadata.keywords);
+    fs.writeFileSync(corePath, xml);
+    const originalCwd = process.cwd();
+    process.chdir(tempDir);
+    fs.rmSync(filePath, { force: true });
+    execFileSync("/usr/bin/zip", ["-qr", filePath, "."], { stdio: "pipe" });
+    process.chdir(originalCwd);
+    return { applied: true };
+  } catch (error) {
+    return { applied: false, reason: String(error.stderr || error.message || error) };
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
 function buildHtml(markdown) {
   const body = wrapTables(convertMarkdown(markdown));
   return `<!doctype html>
@@ -150,8 +240,10 @@ function buildHtml(markdown) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="wp2-artifact-status" content="internal-candidate-only">
-  <title>${title} - ${traceTag}</title>
+  <meta name="aiaawp-artifact-status" content="internal-candidate-only">
+  <meta name="author" content="Jearon Wong">
+  <meta name="description" content="${escapeHtml(subtitle)}">
+  <title>${title} | ${documentId}</title>
   <style>
     :root {
       color-scheme: light;
@@ -341,13 +433,13 @@ function buildHtml(markdown) {
       <h1>${title}</h1>
       <p class="subtitle">${subtitle}</p>
       <div class="status-grid">
-        <div><span>Trace Tag:</span> ${traceTag}</div>
+        <div><span>Document ID:</span> ${documentId}</div>
         <div><span>Version:</span> ${version}</div>
         <div><span>Author:</span> Jearon Wong</div>
         <div><span>Generated:</span> ${generatedAt}</div>
       </div>
       <div class="boundary-box">
-        This internal artifact is generated under the WP2 R4 package for candidate review only. It is not a public release, final seal, live deployment, audit standard, certification, legal compliance proof, assurance opinion, regulator approval, procurement recommendation, vendor ranking, Big Four endorsement, audit body endorsement, MPLP requirement, or external outcome claim.
+        This internal artifact is generated under the internal R4 candidate package for content and naming review only. It is not a public release, final seal, live deployment, audit standard, certification, legal compliance proof, assurance opinion, regulator approval, procurement recommendation, vendor ranking, Big Four endorsement, audit body endorsement, MPLP requirement, or external outcome claim.
       </div>
     </section>
     ${body}
@@ -507,8 +599,29 @@ function updateManifest(conversionResult) {
   manifest.generated_artifact_paths = artifactPaths.map((filePath) => toPosix(path.relative(packageDir, filePath)));
   manifest.artifact_paths = manifest.generated_artifact_paths;
   manifest.generated_artifact_hashes = artifactHashes;
+  manifest.files_included = [
+    "README.md",
+    "AIAAWP-2026-v0.1-R4-CANDIDATE.md",
+    "manifest.json",
+    "checksums.sha256",
+    "metadata/wp2-r4-metadata-plan.md",
+    "metadata/wp2-r4-jsonld-plan.json",
+    "sources/wp2-r4-source-register.md",
+    "sources/wp2-r4-citation-map.md",
+    "qa/wp2-r4-integrity-notes.md",
+    "generation/wp2-r4-generation-plan.md",
+  ];
+  manifest.source_baseline = [
+    "R3 QA-reviewed internal draft",
+    "R0/R1/R2/R3 internal reports",
+    "GAIC v0.3.2-FRC-R3 source truth",
+  ];
   manifest.generation_script_path = "generation/generate-wp2-r4-candidate-html.mjs";
   manifest.generation_timestamp = generatedAt;
+  manifest.document_id = documentId;
+  manifest.public_facing_document_id = documentId;
+  manifest.public_facing_title = title;
+  manifest.public_facing_subtitle = subtitle;
   manifest.artifact_status = "internal_candidate_only";
   manifest.not_public = true;
   manifest.not_final = true;
@@ -521,7 +634,7 @@ function updateManifest(conversionResult) {
 
 function updateChecksums() {
   const lines = [
-    "# SHA256 checksums for WP2 R4 candidate package files",
+    "# SHA256 checksums for AIAAWP R4 candidate package files",
     "# checksums.sha256 excludes itself and transient LibreOffice profile files.",
   ];
   for (const filePath of listPackageFiles(packageDir)) {
@@ -531,6 +644,11 @@ function updateChecksums() {
 }
 
 fs.mkdirSync(outDir, { recursive: true });
+for (const entry of fs.readdirSync(outDir, { withFileTypes: true })) {
+  if (entry.isFile() && /^WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0\.1-R4-Candidate/.test(entry.name)) {
+    fs.rmSync(path.join(outDir, entry.name), { force: true });
+  }
+}
 const markdown = [
   normalizeCandidateBody(fs.readFileSync(sourcePath, "utf8")),
   "\n\n---\n\n# Package Source Register\n\n",
@@ -545,6 +663,9 @@ const conversionResult = runSofficeConversions();
 fs.rmSync(docxHtmlPath, { force: true });
 if (fs.existsSync(pdfPath)) {
   conversionResult.pdf.metadata = await applyPdfMetadata(pdfPath);
+}
+if (fs.existsSync(docxPath)) {
+  conversionResult.docx.metadata = patchDocxCoreMetadata(docxPath);
 }
 updateManifest(conversionResult);
 updateChecksums();

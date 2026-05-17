@@ -1,4 +1,4 @@
-# WP2-R4 Citation Map
+# AIAAWP R4 Citation Map
 
 **Status:** R4 publication-candidate preparation citation map
 **Boundary:** This map supports R4 candidate source review. It does not create final citation formatting, quote source text, or claim endorsement by any source organization.
@@ -10,7 +10,7 @@
 | 0 Executive Summary | BF-01, BF-02, BF-05, AUD-01, AI-01, EVID-02, GAIC-SOURCE | Market context; audit evidence; governance; observability; GAIC source truth | Main argument and source note | Big Four endorsement overclaim | Keep Big Four as context only. |
 | 1 Scope, Audience, Boundary | AUD-03, BOUND-01, BOUND-02, BOUND-03, AUD-07, BF-02, BF-03, GAIC-SOURCE | Boundary, audience, assurance/attestation context | Boundary section and table notes | Treating boundary sources as endorsement | Repeat non-standard and non-certifying boundary. |
 | 2 Difference from Model Governance | BF-01, BF-04, BF-05, AI-01, AI-02, AI-04, AI-05, AI-08, AUD-06 | Market and AI governance context | Main text and Table 1 | Dismissing model governance | Maintain "necessary but insufficient" framing. |
-| 3 Audit Object Shift | AUD-01, AUD-02, AI-01, AI-08, EVID-01, GAIC-SOURCE | Audit evidence, governance, provenance, GAIC MROs | Main text | Treating Agentic Audit Object as externally sourced | Label as WP2 author synthesis. |
+| 3 Audit Object Shift | AUD-01, AUD-02, AI-01, AI-08, EVID-01, GAIC-SOURCE | Audit evidence, governance, provenance, GAIC MROs | Main text | Treating Agentic Audit Object as externally sourced | Label as author synthesis in this paper. |
 | 4 Logs vs Evidence Chains | AUD-01, AUD-02, EVID-01, EVID-02, EVID-03, EVID-04, AI-06 | Audit evidence, observability, logging, incident/governance context | Main text and Table 2 | Saying logs are useless | State logs are useful evidence ingredients. |
 | 5 Agentic Audit Object Model | AUD-01, AUD-04, AI-01, EVID-01, GAIC-SOURCE | Evidence, controls, governance, provenance, GAIC objects | Main text and object table | Mandatory schema overclaim | Keep model as proposed architecture. |
 | 6 MRO Mapping | GAIC-SOURCE, AUD-01, AUD-05, AI-01 | GAIC MRO source truth; evidence/control language | Main text and Table 3 | MRO legal mandate overclaim | Keep MROs as GAIC-derived governance objects. |
