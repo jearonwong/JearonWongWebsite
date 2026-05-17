@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
+**Last Updated:** May 17, 2026 (WP2-R2 Formal Internal Draft)
+
+## WP2-R2 Formal Internal Draft
+
+### Status: WP2-R2 FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA
+
+WP2-R2 created the first formal internal draft of **Agentic AI Auditability & Assurance White Paper 2026**. This was an internal-draft-only wave: no public pages, public routes, public WP2 HTML/PDF/DOCX artifacts, existing GAIC public content, sealed artifacts, public PDF metadata, responsive public HTML, scores, or methodology were changed.
+
+**Draft results:**
+
+1. Created `gaic_v032_work/source_r3/wp2_r2_draft/`.
+2. Created README and master draft with trace tag `WP2-2026-R2-INTERNAL-DRAFT`.
+3. Drafted Chapters 0-16 with chapter status, purpose, reader question, key claims, source grounding, author-synthesis notes, draft prose, tables/cross-links, boundary notes, and R3 QA notes.
+4. Drafted Appendices A-F covering evidence requests, walkthrough template, MRO-to-audit-evidence mapping, AARM matrix, closure checklist, and boundary language.
+5. Created source register, citation-use map, and draft integrity notes.
+6. Created R2 draft summary, source-use QA, structure consistency QA, boundary QA, build/validation report, and final QA.
+7. Confirmed all ten required tables are present and substantive.
+
+**Remaining limitations, not blockers:**
+
+1. R3 should perform editorial tightening, source placement review, and boundary-sensitive paragraph review.
+2. R3 should decide whether chapter-level source notes should become paragraph-level footnotes or endnotes for publication-candidate work.
+3. R3 should review privacy, third-party validation, AARM L5, and audit/assurance firm-use language before any public artifact generation.
+
+**WP2-R2 Decision:** WP2-R2 FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA.
 
 ## WP2-R1 Source-Grounded Outline and Table Skeleton
 

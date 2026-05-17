@@ -1,7 +1,29 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 14, 2026 (GAIC-R3K-1C P2 Long-tail Decision and Residual Cleanup)
+**Last Updated:** May 17, 2026 (WP2-R2 Formal Internal Draft)
+
+## WP2-R2 Internal Draft Notes (May 17, 2026)
+
+**Scope:** Formal internal draft for the planned Agentic AI Auditability & Assurance White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at WP2-R1 accepted commit `5f80c96fa8d803990d83721febc7887fd0751fec` before edits.
+2. Used repository files as source truth; no expired uploaded attachments were used.
+3. Inspected WP2-R0 source inventory and source maps, WP2-R1 outline/table/appendix/AARM/citation/drafting packet reports, R4B WP2 architecture, R4C Guide 1/Guide 2 planning boundaries, and GAIC MRO / Validation Lab / companion-paper source truth.
+4. Created `gaic_v032_work/source_r3/wp2_r2_draft/` with README, master draft, Chapters 0-16, Appendices A-F, source register, citation-use map, and draft integrity notes.
+5. Drafted all ten required tables: Traditional AI Audit vs Agentic AI Auditability; Logs vs Audit Evidence Chains; MRO-to-Audit-Evidence Mapping; Lifecycle Stage -> Audit Evidence Request; Human Role / Agent / Tool Responsibility Matrix; Evidence Partitioning Matrix; Privacy-Preserving Audit Evidence Controls; Third-Party Validation Boundary Table; Auditability Readiness Levels; Exception / Dispute / Remediation Evidence Checklist.
+6. Created WP2-R2 draft summary, source-use QA, structure consistency QA, boundary QA, build/validation report, and final QA.
+
+**Boundary discipline:**
+
+- WP2-R2 is an internal draft only.
+- No public page, public route, public WP2 HTML/PDF/DOCX artifact, SEO page, public metadata, or publication-candidate artifact was created.
+- No sealed GAIC artifact, existing public GAIC content, public PDF metadata, responsive public HTML, white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value was modified.
+- No Big Four endorsement, audit body endorsement, audit standard status, certification, legal compliance proof, assurance opinion, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard claim, Cognitive OS requirement, SoloCrew enterprise-readiness claim, SEO/GEO uplift claim, answer-engine recognition claim, final/sealed claim, or publication-candidate claim was introduced.
+
+**WP2-R2 Status:** WP2-R2 FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA.
 
 ## WP2-R1 Outline Notes (May 17, 2026)
 
