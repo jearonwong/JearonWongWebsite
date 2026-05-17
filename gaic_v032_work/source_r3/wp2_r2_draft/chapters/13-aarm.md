@@ -24,7 +24,7 @@ Once evidence objects are defined, organizations need a way to discuss readiness
 
 AARM deliberately avoids scoring. Scores invite overprecision and can be mistaken for certification, compliance grades, vendor rankings, or procurement guidance. AARM instead uses dimensions and levels. The dimensions ask what must be reviewable. The levels describe the degree to which the lifecycle work is observable, trace-linked, evidence-structured, auditability-ready, or assurance-ready for planning.
 
-The word "Assurance-Ready" is sensitive. In AARM, it does not mean assurance has been issued. It means the evidence architecture may be mature enough to support qualified assurance planning or review, subject to professional scope, criteria, independence, engagement acceptance, and judgment. It does not guarantee that assurance will be available or positive.
+The word "Assurance-Ready" is sensitive. In AARM, it does not mean assurance has been issued. It means the evidence architecture may be mature enough to support qualified assurance planning or review within a defined scope. It still depends on professional scope, criteria, independence, engagement acceptance, and judgment, and it does not guarantee a positive result.
 
 The ten AARM dimensions are:
 
@@ -39,7 +39,7 @@ The ten AARM dimensions are:
 9. Privacy and selective disclosure.
 10. Third-party review boundary.
 
-The levels describe readiness states. L0 Unobservable means lifecycle work cannot be reconstructed beyond informal narrative or final output. L1 Log-Visible means logs exist but responsibility linkage is weak. L2 Trace-Linked means traces connect some actions to agents, tools, or workflows. L3 Evidence-Structured means lifecycle evidence objects exist. L4 Auditability-Ready means defined-scope evidence chains can reconstruct authority, responsibility, tools, outcomes, exceptions, privacy, and closure. L5 Assurance-Ready means evidence architecture may support professional assurance planning, subject to external conditions.
+The levels describe readiness states. L0 Unobservable means lifecycle work cannot be reconstructed beyond informal narrative or final output. L1 Log-Visible means logs exist but responsibility linkage is weak. L2 Trace-Linked means traces connect some actions to agents, tools, or workflows. L3 Evidence-Structured means lifecycle evidence objects exist. L4 Auditability-Ready means defined-scope evidence chains can reconstruct authority, responsibility, tools, outcomes, exceptions, privacy, and closure. L5 Assurance-Ready means evidence architecture may support professional assurance planning or review within a defined scope.
 
 The main use of AARM is conversation discipline. It helps technology leaders avoid saying "we have logs, so we are audit-ready." It helps governance teams ask whether accepted outcomes and remediation closure are evidence states. It helps audit teams separate raw observability from reconstructable evidence. It helps privacy teams see whether selective disclosure is built in. It helps third-party reviewers clarify what their review does and does not mean.
 
@@ -52,7 +52,7 @@ The main use of AARM is conversation discipline. It helps technology leaders avo
 | L2 Trace-Linked | Logs/traces link some actions to agents, tools, users, or workflows | Workflow IDs, agent/tool traces, partial actor linkage | Trace-linked run records and partial evidence map | Complete lifecycle responsibility or sufficient evidence | EVID-01/EVID-02 + WP2 synthesis |
 | L3 Evidence-Structured | Lifecycle evidence is organized into objects that support reconstruction | Role maps, authority objects, accepted outcome records, partitioning, exception records | MRO-aligned evidence objects and sampled walkthroughs | Assurance readiness, legal compliance, operating effectiveness | GAIC-derived + AUD-01/AUD-04/AUD-05 |
 | L4 Auditability-Ready | Evidence chains can reconstruct defined-scope agentic lifecycle work | Walkthroughs, evidence request response, privacy controls, closure evidence | Complete evidence chain for defined scope plus boundary statement | Audit opinion, certification, regulator approval, legal compliance | WP2 synthesis grounded in audit/provenance/privacy sources |
-| L5 Assurance-Ready | Evidence architecture may support qualified assurance planning or review | Repeatable evidence packs, ruleset identity, reviewer scope, remediation/recheck procedure | Reviewable evidence packs, integrity records, boundary statement | Actual assurance opinion, certification, guaranteed compliance, regulator acceptance | WP2 synthesis bounded by AUD-03/BOUND-03 |
+| L5 Assurance-Ready | Evidence architecture may support professional assurance planning or review within a defined scope | Repeatable evidence packs, ruleset identity, reviewer scope, remediation/recheck procedure | Reviewable evidence packs, integrity records, boundary statement | Actual assurance opinion, certification, guaranteed compliance, regulator acceptance | WP2 synthesis bounded by AUD-03/BOUND-03 |
 
 **Table note:** AARM is author synthesis grounded in source language. It is not a score, standard, certification, assurance conclusion, procurement benchmark, or vendor ranking.
 

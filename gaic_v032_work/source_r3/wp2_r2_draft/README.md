@@ -3,11 +3,11 @@
 **Document:** Agentic AI Auditability & Assurance White Paper 2026
 **Subtitle:** A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance
 **Trace tag:** `WP2-2026-R2-INTERNAL-DRAFT`
-**Draft status:** INTERNAL R2 DRAFT
+**Draft status:** INTERNAL R2 DRAFT / R3 QA-REVIEWED
 
 ## Status Boundary
 
-This folder contains the first formal internal draft of WP2. It is not a publication candidate, public release, legal advice, audit standard, assurance opinion, certification, regulator approval, procurement guidance, vendor ranking, or Big Four/audit body endorsement.
+This folder contains the first formal internal draft of WP2, now reviewed through WP2-R3 editorial/source/boundary QA. It is not a publication candidate, public release, legal advice, audit standard, assurance opinion, certification, regulator approval, procurement guidance, vendor ranking, or Big Four/audit body endorsement.
 
 The files in this folder are source-grounded drafting materials for editorial, source, and boundary QA. They do not create public pages, public routes, public HTML/PDF/DOCX artifacts, public metadata, or launch assets.
 
@@ -37,10 +37,14 @@ Every chapter distinguishes:
 - `sources/` — source register and citation-use map for the R2 draft.
 - `qa/` — draft integrity notes for R3 review.
 
+## R3 QA Status
+
+WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP2 PUBLICATION-CANDIDATE PREPARATION.
+
+R3 reviewed the internal draft for editorial compression, source placement, MRO consistency, table consistency, and boundary-sensitive wording. The draft remains internal, not public, not final, not sealed, and not a publication candidate.
+
 ## Next Expected Phase
 
 The next expected phase is:
 
-**WP2-R3 editorial / boundary / source QA**
-
-R3 should review source placement, chapter consistency, table consistency, boundary-sensitive wording, length, narrative flow, and whether any author-synthesis construct needs clearer labeling before publication-candidate work begins.
+**WP2 publication-candidate preparation**

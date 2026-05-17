@@ -1,7 +1,23 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R2 Formal Internal Draft)
+**Last Updated:** May 17, 2026 (WP2-R3 Editorial / Source / Boundary QA)
+
+## WP2-R3 Editorial / Source / Boundary QA
+
+### Status: WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP2 PUBLICATION-CANDIDATE PREPARATION
+
+WP2-R3 reviewed the internal WP2 draft for editorial compression, source-use consistency, MRO naming and numbering, table and appendix consistency, and boundary-sensitive wording. Minor compression was applied in the executive summary, AARM explanation, and conclusion to improve readability while preserving the internal-draft boundary.
+
+**R3 results:**
+
+1. Confirmed the draft remains internal, not public, not final, not sealed, and not a publication candidate.
+2. Confirmed source-role labeling remains stable from WP2-R0/WP2-R1 baseline sources and GAIC source truth.
+3. Confirmed MRO-01 through MRO-16 naming and numbering remain aligned with current GAIC source truth.
+4. Confirmed privacy, third-party validation, AARM L5, and audit/assurance firm-use language remain boundary-safe.
+5. Confirmed no public pages, public routes, public artifacts, score changes, or methodology changes were introduced.
+
+**WP2-R3 Decision:** WP2-R3 EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP2 PUBLICATION-CANDIDATE PREPARATION.
 
 ## WP2-R2 Formal Internal Draft
 

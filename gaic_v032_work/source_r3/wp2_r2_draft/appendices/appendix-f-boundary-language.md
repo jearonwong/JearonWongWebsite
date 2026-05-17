@@ -64,7 +64,7 @@ MPLP may be discussed only as one optional protocol path. WP2 does not require M
 
 ## AARM Boundary
 
-AARM is a proposed readiness model. It does not score vendors, certify systems, issue assurance, prove legal compliance, bind regulators, or provide procurement guidance. L5 "Assurance-Ready" means evidence architecture may support qualified assurance planning or review, subject to professional scope and judgment.
+AARM is a proposed readiness model. It does not score vendors, certify systems, issue assurance, prove legal compliance, bind regulators, or provide procurement guidance. L5 "Assurance-Ready" means evidence architecture may support qualified assurance planning or review within a defined scope, subject to professional scope and judgment. It does not mean assurance has been issued.
 
 ## R3 QA Notes
 

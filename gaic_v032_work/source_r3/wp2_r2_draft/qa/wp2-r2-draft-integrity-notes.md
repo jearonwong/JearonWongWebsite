@@ -81,3 +81,11 @@ The R2 draft is approximately 21k words including chapters, appendices, tables, 
 The draft is structurally ready for WP2-R3 editorial/source/boundary QA. No blocker is identified, but R3 should perform careful boundary review before any public artifact generation.
 
 **Integrity status:** PASS / READY FOR R3 QA
+
+## R3 Editorial / Source / Boundary Notes
+
+- R3 reviewed the executive summary, AARM framing, and conclusion for readability and trimmed overlong passages without changing meaning.
+- The source register and citation-use map remained stable; no new source research was introduced.
+- Boundary-sensitive sections reviewed: privacy, third-party validation, AARM L5, audit/assurance firm use, and the conclusion bridge.
+- No MRO numbering or naming drift was identified against current GAIC source truth.
+- No blocker was identified. The draft remains internal and not a publication candidate.

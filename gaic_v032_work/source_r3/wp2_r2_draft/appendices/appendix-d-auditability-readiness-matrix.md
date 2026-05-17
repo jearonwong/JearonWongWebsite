@@ -40,7 +40,7 @@ AARM is not an audit standard, certification, assurance opinion, legal complianc
 | L2 Trace-Linked | Logs/traces connect some actions to workflows or actors | Workflow IDs, agent/tool traces, partial actor link | Trace-linked run records | Complete lifecycle responsibility or sufficient evidence | EVID-01/EVID-02 + WP2 synthesis |
 | L3 Evidence-Structured | Lifecycle objects exist for reconstruction | Role maps, authority objects, outcome records, exception records | MRO-aligned evidence objects | Assurance readiness, legal compliance, operating effectiveness | GAIC-derived + audit/control grounding |
 | L4 Auditability-Ready | Defined-scope evidence chains reconstruct lifecycle work | Walkthroughs, evidence requests, privacy controls, closure records | Complete evidence chain for review scope | Audit opinion, certification, regulator approval | WP2 synthesis |
-| L5 Assurance-Ready | Evidence architecture may support professional assurance planning | Repeatable evidence packs, reviewer scope, rulesets, recheck procedures | Reviewable evidence packs and boundary statement | Actual assurance, certification, legal compliance, regulator acceptance | WP2 synthesis bounded by AUD-03/BOUND-03 |
+| L5 Assurance-Ready | Evidence architecture may support professional assurance planning or review within a defined scope | Repeatable evidence packs, reviewer scope, rulesets, recheck procedures | Reviewable evidence packs and boundary statement | Actual assurance, certification, legal compliance, regulator acceptance | WP2 synthesis bounded by AUD-03/BOUND-03 |
 
 ## Minimum Evidence Crosswalk
 

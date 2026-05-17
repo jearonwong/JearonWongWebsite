@@ -26,7 +26,9 @@ The core thesis therefore remains simple: AI agent auditability cannot be built 
 
 WP2's contribution is the Audit Evidence Object layer. WP1 defined the compliance object layer through Agentic Lifecycle Governance and MROs. WP2 translates that layer into evidence requests, walkthroughs, partitioning rules, privacy-aware disclosure, validation boundaries, and readiness levels. It defines Agentic AI Auditability as the ability to reconstruct, test, and evidence agentic lifecycle work across authority, responsibility, tools, outcomes, exceptions, and remediation.
 
-The paper also sets limits. It does not issue assurance. It does not certify systems. It does not prove legal compliance. It does not bind regulators. It does not replace professional audit or assurance methodology. It does not rank vendors. It does not require MPLP. It does not make Validation Lab a certification authority. These limits are not disclaimers at the edge of the work; they are part of the architecture. Auditability is strongest when the evidence object and the claim boundary are both explicit.
+The paper also sets limits. It does not issue assurance. It does not certify systems. It does not prove legal compliance. It does not bind regulators. It does not replace professional audit or assurance methodology. It does not rank vendors. It does not require MPLP. It does not make Validation Lab a certification authority.
+
+These limits are not disclaimers at the edge of the work; they are part of the architecture. Auditability is strongest when the evidence object and the claim boundary are both explicit.
 
 For enterprises, the next step is design. CIOs and CTOs need evidence architecture that captures lifecycle responsibility by design, not after-the-fact logs by accident. CCOs and governance leaders need policy-to-evidence operating models that turn authority, oversight, privacy, exception, and remediation policies into reviewable objects. Internal audit and risk teams need walkthrough structures that test reconstructability before assurance claims appear.
 
