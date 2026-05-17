@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R4 Publication-Candidate Preparation)
+**Last Updated:** May 17, 2026 (WP2-R4B Candidate Artifact Generation)
+
+## WP2-R4B Candidate Artifact Generation
+
+### Status: WP2-R4B CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP2 FINAL CANDIDATE QA
+
+WP2-R4B generated internal candidate HTML, PDF, and DOCX artifacts for **Agentic AI Auditability & Assurance White Paper 2026** under the internal R4 package only. The artifacts are candidate review artifacts, not public, not final, not sealed, not live, and not linked from public site routes.
+
+Resolved in this wave:
+
+1. Created WP2-specific internal generator `wp2_r4_publication_candidate/generation/generate-wp2-r4-candidate-html.mjs`.
+2. Generated internal candidate HTML, PDF, and DOCX under `wp2_r4_publication_candidate/out/`.
+3. Updated `manifest.json` with artifact paths, hashes, generation timestamp, internal-only status, and conversion results.
+4. Updated `checksums.sha256` with candidate artifacts and generator/package files.
+5. Rendered DOCX for visual QA sampling through the Documents workflow; temporary render intermediates were not committed.
+6. Created R4B preflight, generation strategy, artifact QA, HTML readability QA, PDF/DOCX QA, boundary sweep, source/structure consistency, build/validation, and final QA reports.
+
+Remaining known issues:
+
+- Final candidate QA remains required before any final candidate seal.
+- Final author review remains required before any public release decision.
+- Public citation style still needs a final decision: source IDs, endnotes, footnotes, or appendix source register.
+- Appendix placement remains a future decision: keep Appendices A-F in main artifact or move long appendices partly to a companion surface.
+- Browser screenshot QA should be repeated in R5 if a local Playwright/Chromium binary is available.
+- No public site publication should occur until explicit authorization.
+
+Boundary discipline:
+
+- No live public WP2 page or public route was created.
+- No generated artifact was copied to `public/`.
+- No existing GAIC public content, sealed artifact, public PDF metadata, responsive public HTML, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No WP2 published/final/sealed/live claim, audit standard claim, certification claim, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard claim, Cognitive OS requirement, SoloCrew enterprise-readiness claim, SEO/GEO uplift, answer-engine recognition, or external adoption claim was introduced.
+
+**WP2-R4B Decision:** WP2-R4B CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP2 FINAL CANDIDATE QA.
+
+---
 
 ## WP2-R4 Publication-Candidate Preparation
 
@@ -21,7 +56,7 @@ Resolved in this wave:
 
 Remaining known issues:
 
-- Candidate HTML/PDF/DOCX artifacts are not generated in R4. A WP2-specific generation wave is required.
+- Candidate HTML/PDF/DOCX artifacts were generated in WP2-R4B; final candidate QA remains required.
 - Final author review remains required before final candidate QA/seal.
 - Public citation style still needs a final decision: source IDs, endnotes, footnotes, or appendix source register.
 - Appendix placement remains a future decision: keep Appendices A-F in main artifact or move long appendices partly to a companion surface.

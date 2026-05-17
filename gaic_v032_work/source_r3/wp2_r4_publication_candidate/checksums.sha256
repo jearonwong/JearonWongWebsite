@@ -1,11 +1,15 @@
 # SHA256 checksums for WP2 R4 candidate package files
-# checksums.sha256 excludes itself to avoid recursive checksum instability.
-5f7da373e086055f93ef6c7d60c4a6ee36a16fee7e9b71a72b0a74b2f617c46c  README.md
+# checksums.sha256 excludes itself and transient LibreOffice profile files.
+476ba0352af9bffa81f30da91eaca2e414c0861ef58fedc5c7fdec5cab3125fc  README.md
 07eb430fba67e355fcfafe340259cd9bf7f2f9a17e540c9afc6fa04d373c6004  WP2-2026-R4-PUBLICATION-CANDIDATE.md
-c0bd8ccd3721d27c5de149a6315093209889fdc91bc1c65e15e23391437981c8  generation/wp2-r4-generation-plan.md
-3b153333fc9b36633a7b3817d803f0614364ca007a4c9364ed60dc7065ca9732  manifest.json
+dc49505f95e6e676fefd633c32c0491438044e92ca1bcf1ddbe7fa6159b36c3f  generation/generate-wp2-r4-candidate-html.mjs
+9e50a681cd6119c9297e530f794c35ee44eb82e84742b2977984b7b47ef8433d  generation/wp2-r4-generation-plan.md
+232fd9a3a69a8220a4d9bb4e823c278efa38a0bac170437c96b6d48616cf4f4c  manifest.json
 ca0f072923673cddc60dc385edaf99528eb1c8608d073378ff90cb8e14e21860  metadata/wp2-r4-jsonld-plan.json
 eea96ab1e45ff6e040591518e5d5bc74cc44e422ec92960e7f5bc042ece4789a  metadata/wp2-r4-metadata-plan.md
-738baffeba43e537304cd3d20a74dbf6f0066e2c8ca713e9a406fb5a076cb719  qa/wp2-r4-integrity-notes.md
+673688e63769a3d2988da14efc6111236edcbe9f2a1238fd3fa483971ce86e9e  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx
+2ab730e41798739ab8d4256de40306ff46c60c49e2f8476f68726c7d8e139b1a  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html
+dd27c00c4b32476654ce26d37a41f96be62e96909228ad725e73931caa99da84  out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf
+920a8d95e0042aed60e5efd019dae7411674e30a8328306fb5f64d423dd3433b  qa/wp2-r4-integrity-notes.md
 9ce7cfa4c47f2d00424f148a5b6262f166ececfd2b3f7d4fb7ee0b9b460403d7  sources/wp2-r4-citation-map.md
 8f095bbb0e4c50eb03b609d601aef3c1ddc8a0b6ce8f775b31c80921aef593e8  sources/wp2-r4-source-register.md

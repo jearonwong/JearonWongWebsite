@@ -31,9 +31,42 @@
   ],
   "source_register_path": "sources/wp2-r4-source-register.md",
   "citation_map_path": "sources/wp2-r4-citation-map.md",
-  "artifact_generation_status": "deferred-to-later-wave",
-  "artifact_paths": [],
+  "artifact_generation_status": "html-pdf-docx-generated-internal-candidate-only",
+  "artifact_paths": [
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
+  ],
   "boundary_status": "candidate package only; not public/final/sealed/live",
   "checksum_file_path": "checksums.sha256",
-  "checksum_note": "checksums.sha256 excludes itself to avoid recursive checksum instability."
+  "checksum_note": "checksums.sha256 excludes itself to avoid recursive checksum instability.",
+  "generated_artifact_paths": [
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
+  ],
+  "generated_artifact_hashes": {
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html": "2ab730e41798739ab8d4256de40306ff46c60c49e2f8476f68726c7d8e139b1a",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf": "dd27c00c4b32476654ce26d37a41f96be62e96909228ad725e73931caa99da84",
+    "out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx": "673688e63769a3d2988da14efc6111236edcbe9f2a1238fd3fa483971ce86e9e"
+  },
+  "generation_script_path": "generation/generate-wp2-r4-candidate-html.mjs",
+  "generation_timestamp": "2026-05-17T15:45:27.756Z",
+  "artifact_status": "internal_candidate_only",
+  "not_live": true,
+  "no_public_route": true,
+  "conversion_results": {
+    "pdf": {
+      "generated": true,
+      "error": null,
+      "metadata": {
+        "applied": true
+      }
+    },
+    "docx": {
+      "generated": true,
+      "error": null,
+      "fallback": "libreoffice-odt-bridge"
+    }
+  }
 }

@@ -1,7 +1,36 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R4 Publication-Candidate Preparation)
+**Last Updated:** May 17, 2026 (WP2-R4B Candidate Artifact Generation)
+
+## WP2-R4B Candidate Artifact Generation Notes (May 17, 2026)
+
+**Scope:** Generate internal WP2 candidate artifacts only; do not publish, create public routes, or copy artifacts to `public/`.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at WP2-R4 accepted commit `32134160d70c6cc7e3ca399a537e206b3e97a2ec` before R4B artifact work.
+2. Used repository source truth only: R4 candidate source package, R4 reports, R0/R1/R2/R3 reports where needed, and GAIC source truth.
+3. Created WP2-specific internal generator `wp2_r4_publication_candidate/generation/generate-wp2-r4-candidate-html.mjs`.
+4. Generated candidate HTML, PDF, and DOCX under `wp2_r4_publication_candidate/out/`.
+5. Updated manifest and checksums with artifact paths, hashes, generation timestamp, and internal-only status.
+6. Performed artifact QA, HTML static readability QA, PDF metadata/text QA, DOCX unzip/text/render QA, boundary sweep, and source/structure consistency check.
+7. Created R4B reports and updated SOURCE MASTER / known issues / reconstruction notes.
+
+**Artifact discipline:**
+
+- Generated artifacts remain internal under `gaic_v032_work/source_r3/wp2_r4_publication_candidate/out/`.
+- No live public WP2 page or public route was created.
+- No generated artifact was copied to `public/`.
+- No GAIC sealed artifact, public PDF metadata, responsive public HTML, public GAIC artifact, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value was changed.
+- Pre-existing untracked `public/social/*` assets remain unstaged.
+
+**Boundary discipline:**
+
+- WP2-R4B is internal candidate artifact generation only.
+- It does not claim WP2 is published, final, sealed, live, regulator-approved, Big-Four-endorsed, audit-body-endorsed, legally sufficient, certifying, assurance-producing, procurement-guiding, vendor-ranking, MPLP-required, Cognitive-OS-required, SoloCrew enterprise-readiness proof, externally adopted, indexed, answer-engine-recognized, or SEO/GEO-improved.
+
+**WP2-R4B Status:** WP2-R4B CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP2 FINAL CANDIDATE QA.
 
 ## WP2-R4 Publication-Candidate Preparation Notes (May 17, 2026)
 

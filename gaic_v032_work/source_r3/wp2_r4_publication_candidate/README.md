@@ -36,10 +36,15 @@ No live public WP2 page or public route is created by this package. No public GA
 
 ## Artifact Generation Status
 
-Candidate HTML/PDF/DOCX artifacts are not generated in this R4 package. Existing generation scripts are tailored to GAIC WP1 and sealed/public artifact workflows; R4 therefore prepares the source package and a generation plan only.
+WP2-R4B generated internal candidate HTML/PDF/DOCX artifacts under `out/` using WP2-specific internal generation tooling. These artifacts remain internal candidate artifacts only. They are not public, not final, not sealed, not live, and are not linked from any public route.
+
+Generated artifact paths:
+
+- `out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html`
+- `out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf`
+- `out/WP2-Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx`
 
 ## Next Phase Options
 
-- R4B candidate artifact generation if a safe WP2-specific renderer is authorized.
 - R5 final publication-candidate QA and seal after source/citation/boundary and artifact QA.
 - R6 site publication only after explicit authorization.

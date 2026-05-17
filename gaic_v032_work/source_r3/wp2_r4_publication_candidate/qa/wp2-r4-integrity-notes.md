@@ -24,10 +24,21 @@
 
 ## Artifact Integrity
 
+- WP2-R4B generated internal candidate HTML, PDF, and DOCX artifacts under `out/`.
+- The generated artifacts are internal candidate artifacts only.
 - No public WP2 route or page was created.
-- No public WP2 HTML/PDF/DOCX artifact was created.
+- No public WP2 HTML/PDF/DOCX artifact was created or copied to `public/`.
 - No existing GAIC public content or sealed artifact was modified by the package.
+- Candidate HTML/PDF/DOCX hashes are recorded in `manifest.json` and `checksums.sha256`.
+
+## R4B Integrity Notes
+
+- HTML was generated as standalone internal candidate HTML with noindex/no-follow metadata.
+- PDF was generated from HTML and PDF metadata was normalized for title, author, subject, and keywords.
+- DOCX was generated through a LibreOffice ODT bridge with a DOCX-specific landscape conversion stylesheet so wide tables remain readable in the review derivative.
+- DOCX render QA was performed with the Documents workflow; representative title, body, table, appendix, source-register, and citation-map pages were sampled before the temporary render images were removed from the package.
+- Playwright browser QA was attempted, but the local Chromium binary was unavailable; static HTML structure and extracted artifact text were used for HTML readability QA.
 
 ## Readiness Decision
 
-R4 source package is ready for candidate artifact generation in a later authorized wave, subject to final build/hash validation and governance registration.
+R4B generated the internal candidate artifact package and is ready for WP2 final candidate QA, subject to final source/citation/boundary review and author review. This is not a publication, final seal, public release, or live deployment.
