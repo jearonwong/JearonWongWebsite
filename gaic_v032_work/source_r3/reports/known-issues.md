@@ -2943,3 +2943,39 @@ Boundary discipline:
 - No Guide 1 or Guide 2 publication, body drafting, audit standard, certification, assurance opinion, legal compliance proof, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard, Cognitive OS requirement, SoloCrew enterprise-readiness, external adoption, indexing, answer-engine recognition, or SEO/GEO uplift claim was introduced.
 
 **GAIC-R4C Status:** ✓ GUIDE 1 AND GUIDE 2 PLANNING BASELINE COMPLETE / READY FOR WP2 SOURCE RESEARCH
+
+---
+
+## AIAAWP-R4D Known Issues
+
+### Format and Publication Design Pass Complete
+
+AIAAWP-R4D replaced the R4C "content/naming QA" artifacts with internal publication-design candidate artifacts aligned to the GAIC main white paper standard.
+
+Resolved in this wave:
+
+- Audited GAIC's publication standard across identity, UI, typography, layout, table treatment, metadata, SEO/GEO planning, manifest/checksum, and artifact integrity.
+- Created a separate AIAAWP generator: `wp2_r4_publication_candidate/generation/generate-aiaawp-r4d-publication-candidate.py`.
+- Regenerated internal AIAAWP HTML/PDF/DOCX artifacts under `wp2_r4_publication_candidate/out/`.
+- Updated AIAAWP metadata plan, JSON-LD plan, manifest, checksums, and generation log.
+- Reflowed dense/wide tables as semantic row cards for readability.
+- Removed repeated internal section-status residue from the artifact body.
+
+Remaining known issues:
+
+- Final candidate QA still needs full page-by-page human proofing.
+- PDF page-number pinning remains a final candidate QA task.
+- DOCX may still receive human template polish, consistent with GAIC's rule that DOCX is editable derivative rather than visual authority.
+- Public release wiring remains future work: no public route, sitemap, `llms.txt`, Evidence Registry, entity graph, or GAIC hub crosslink was created in R4D.
+
+Boundary discipline:
+
+- No public page or public route was created.
+- No AIAAWP artifact was copied to `public/`.
+- No GAIC sealed/public artifact changed.
+- Public PDF metadata re-seal remains unchanged.
+- Responsive public HTML artifact remains unchanged.
+- No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, or external adoption claim was introduced.
+
+**AIAAWP-R4D Status:** ✓ FORMAT AND PUBLICATION DESIGN PASS COMPLETE / READY FOR FINAL CANDIDATE QA

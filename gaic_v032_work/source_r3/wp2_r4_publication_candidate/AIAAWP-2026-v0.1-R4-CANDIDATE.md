@@ -4,18 +4,18 @@
 
 **Document ID:** `AIAAWP-2026-v0.1-R4-CANDIDATE`
 **Version:** `v0.1-publication-candidate`
-**Date:** May 17, 2026
+**Date:** May 18, 2026
 **Author:** Jearon Wong
-**Publication status:** Publication-candidate preparation source package; not public, not final, not sealed, not launched.
+**Publication status:** Internal format candidate; not public, not final, not sealed, not live.
 **Source baseline:** R3 QA-reviewed internal draft, R0/R1/R2/R3 internal reports, and GAIC v0.3.2-FRC-R3 source truth.
 
 ## Document Status Block
 
-This file is the clean R4 publication-candidate preparation Markdown source for internal review. It does not create a live public page, public route, public HTML/PDF/DOCX artifact, final publication, sealed release, audit standard, certification scheme, assurance opinion, legal compliance proof, regulator approval, procurement recommendation, vendor ranking, Big Four endorsement, audit body endorsement, MPLP requirement, or external adoption claim.
+This file is the clean internal publication-design candidate source for review. It does not create a live public page, public route, public HTML/PDF/DOCX artifact, final publication, sealed release, audit standard, certification scheme, assurance opinion, legal compliance proof, regulator approval, procurement recommendation, vendor ranking, Big Four endorsement, audit body endorsement, MPLP requirement, or external adoption claim.
 
 ## Relationship to the Agentic Lifecycle Governance Industry Series
 
-The Agentic Lifecycle Governance Industry Series is fixed as a 3+3 structure: three core industry white papers and three practitioner guides. The Global AI Compliance White Paper 2026 defines the compliance object layer for agentic lifecycle governance. This paper defines the audit evidence object layer. Guide 1 will later translate this paper into audit-ready technical implementation planning. Guide 2 will later translate the Global AI Compliance White Paper 2026 and this paper into compliance operating-model planning. The later insurability white paper will address insurability. This R4 package prepares candidate source for review; it does not publish or replace those later assets.
+The Agentic Lifecycle Governance Industry Series is fixed as a 3+3 structure: three core industry white papers and three practitioner guides. The Global AI Compliance White Paper 2026 defines the compliance object layer for agentic lifecycle governance. This paper defines the audit evidence object layer. Guide 1 will later translate this paper into audit-ready technical implementation planning. Guide 2 will later translate the Global AI Compliance White Paper 2026 and this paper into compliance operating-model planning. The later insurability white paper will address insurability. This internal format candidate prepares publication-design review material; it does not publish or replace those later assets.
 
 ## Executive Thesis
 
@@ -61,7 +61,6 @@ Appendix F. Boundary Language
 
 ## 0. Executive Summary
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** State the auditability problem, the object shift, the evidence-chain answer, the AARM bridge, and the non-standard boundary.
 **Reader question:** Why does agentic AI need a new auditability frame?
 
@@ -81,7 +80,7 @@ Market context is grounded in BF-01, BF-02, and BF-05. Audit evidence language i
 
 Agentic AI Auditability, Agentic Audit Object, Audit Evidence Chain, lifecycle-responsibility-linked agent work, and AARM are author synthesis in this paper. They are not presented as externally issued audit standards or certification schemes.
 
-### Candidate Prose
+### Main Text
 
 AI agent auditability cannot be built on logs alone. Logs matter. Traces matter. Workflow histories, tool-call records, telemetry, and incident records all help reconstruct technical activity. But agentic auditability asks a different question: not merely what happened inside a system, but whether the work can be reviewed as lifecycle responsibility.
 
@@ -141,7 +140,6 @@ This chapter does not claim this paper is published, final, sealed, regulator-ap
 
 ## 1. Scope, Audience, and Non-Audit-Standard Boundary
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define who this paper is for, what it does, what it does not do, how sources are used, and how GAIC/MPLP/Validation Lab relate to the draft.
 **Reader question:** Who should use this paper, and what authority must it not claim?
 
@@ -161,7 +159,7 @@ Assurance and attestation boundaries use AUD-03 and BOUND-03. Certification and 
 
 This paper's scope, Audit Evidence Object layer, Agentic Audit Object, Audit Evidence Chain, and AARM are author synthesis. They are draft framework constructs, not externally adopted professional requirements.
 
-### Candidate Prose
+### Main Text
 
 This paper is written for readers who need to understand whether agentic AI work can be reconstructed. Its primary audience includes audit and assurance professionals, internal audit teams, technology risk teams, AI governance committees, enterprise control owners, CIOs, CTOs, CCOs, CROs, legal/privacy stakeholders, and platform leaders responsible for agentic systems. Its secondary audience includes advisory teams, AI assurance practitioners, risk engineering teams, agent runtime builders, procurement and vendor-risk teams, and standards or policy readers exploring agentic AI governance.
 
@@ -206,7 +204,6 @@ This chapter intentionally repeats non-claim language because this paper's usefu
 
 ## 2. Why AI Agent Auditability Is Different from Model Governance
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Explain why model governance is necessary but insufficient for agentic auditability.
 **Reader question:** What changes when AI systems act through agents, tools, memory, delegation, and multi-agent workflows?
 
@@ -224,7 +221,7 @@ Big Four market context appears in BF-01, BF-04, and BF-05. AI governance contex
 
 The claim that "model governance is necessary but insufficient" for agentic auditability is author synthesis in this paper grounded in the shift from model/output governance to lifecycle responsibility objects.
 
-### Candidate Prose
+### Main Text
 
 Model governance is not obsolete. It remains part of responsible AI practice. Organizations still need to understand model purpose, data, evaluation, limitations, monitoring, robustness, bias, security, human oversight, and change management. Public AI governance frameworks and professional guidance continue to provide important language for risk management, accountability, documentation, monitoring, controls, and internal audit review.
 
@@ -266,7 +263,6 @@ This chapter does not attack model governance or claim model governance is usele
 
 ## 3. The Audit Object Shift: From Model Output to Lifecycle Work
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define the proposed review object for agentic auditability.
 **Reader question:** What exactly should audit stakeholders reconstruct?
 
@@ -284,7 +280,7 @@ Audit evidence language is grounded in AUD-01 and AUD-02. Governance context is 
 
 Agentic Audit Object and lifecycle-responsibility-linked agent work are author-synthesis constructs. They are not claimed as existing professional standards, legal categories, or regulator-defined objects.
 
-### Candidate Prose
+### Main Text
 
 An audit object is the thing being reviewed. In many AI governance conversations, the object is a model, dataset, output, use case, control, system, or policy. Those objects remain important. But agentic systems create another review object: lifecycle work.
 
@@ -330,7 +326,6 @@ The Agentic Audit Object is a proposed object model in this paper for reviewabil
 
 ## 4. Why Logs Are Not Audit Evidence Chains
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Ground the core this paper claim that logs and traces are useful but insufficient for agentic auditability.
 **Reader question:** What can logs show, and what do they fail to prove?
 
@@ -348,7 +343,7 @@ Audit evidence language is grounded in AUD-01 and AUD-02. Observability and logg
 
 "Logs are not audit evidence chains" is author synthesis in this paper. It is grounded in the distinction between observability/logging and professional audit evidence concepts.
 
-### Candidate Prose
+### Main Text
 
 Logs are necessary but not sufficient. That sentence is the safest starting point for agentic auditability. The point is not to diminish logs, traces, metrics, monitoring systems, workflow histories, or observability platforms. They are often the first evidence ingredients available. Without them, reconstruction may collapse into narrative memory.
 
@@ -393,7 +388,6 @@ This chapter does not claim observability vendors fail, logs are useless, or tel
 
 ## 5. The Agentic Audit Object Model
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define the proposed object model for audit-ready agentic lifecycle work.
 **Reader question:** What makes lifecycle work audit-ready?
 
@@ -411,7 +405,7 @@ The model uses audit evidence language from AUD-01, control vocabulary from AUD-
 
 The Agentic Audit Object Model is author synthesis in this paper. It is a conceptual object model for auditability, not a required implementation format.
 
-### Candidate Prose
+### Main Text
 
 The Agentic Audit Object Model translates lifecycle work into a reviewable structure. It does not require that every enterprise use the same database table, evidence pack format, or protocol. It asks whether the relationships needed for review can be reconstructed.
 
@@ -464,7 +458,6 @@ The Agentic Audit Object Model should be read as a review architecture. It does 
 
 ## 6. MRO-to-Audit-Evidence Mapping
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Translate GAIC MROs into audit evidence objects and evidence requests.
 **Reader question:** How does each MRO become evidence?
 
@@ -482,7 +475,7 @@ MRO names and meanings use GAIC source truth. Audit evidence language uses AUD-0
 
 The MRO-to-audit-evidence mapping is author synthesis in this paper derived from GAIC objects and externally sourced audit/control terminology.
 
-### Candidate Prose
+### Main Text
 
 The Global AI Compliance White Paper 2026 introduced the sixteen Missing Regulatory Objects for agentic and multi-agent system governance. This paper reads those objects through an auditability lens. Each MRO asks a governance question. This paper adds the evidence question: what object would a reviewer need to inspect to reconstruct the lifecycle work?
 
@@ -539,7 +532,6 @@ This chapter does not invent new MRO numbering. It uses current GAIC source trut
 
 ## 7. Evidence Request List for Agentic Systems
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define the logic of evidence requests for agentic systems without turning them into formal audit procedures.
 **Reader question:** What should reviewers ask to reconstruct agentic lifecycle work?
 
@@ -557,7 +549,7 @@ Audit evidence and evidence sufficiency language is grounded in AUD-01 and AUD-0
 
 The evidence request taxonomy is author synthesis in this paper derived from GAIC MROs and professional audit/control language.
 
-### Candidate Prose
+### Main Text
 
 Agentic auditability becomes practical when it is expressed as evidence requests. A high-level statement that "the system is logged" is not enough. A reviewer needs to know what evidence should exist, where it lives, which lifecycle stage it supports, what role owns it, how sensitive fields are treated, and what boundary applies.
 
@@ -606,7 +598,6 @@ Evidence requests do not prove legal compliance or audit sufficiency. A qualifie
 
 ## 8. Lifecycle Walkthrough for AI Agent / MAS Work
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Provide a reconstruction pattern for one agentic lifecycle run or work unit.
 **Reader question:** How is one agentic workflow walked from intent to accepted outcome?
 
@@ -624,7 +615,7 @@ Control and walkthrough-adjacent language uses AUD-04, AUD-05, and AUD-06. Prove
 
 The agentic lifecycle walkthrough is author synthesis in this paper. It translates GAIC MROs and evidence request categories into a reconstruction pattern.
 
-### Candidate Prose
+### Main Text
 
 A lifecycle walkthrough tests whether a single unit of agentic work can be reconstructed. It begins with a concrete work unit: a task, run, agent workflow, multi-agent handoff, tool action, or remediation event. The goal is not to prove compliance. The goal is to determine whether the evidence chain can explain the work from intent to closure.
 
@@ -682,7 +673,6 @@ The walkthrough is a reconstruction pattern for readiness and evidence design. I
 
 ## 9. Evidence Partitioning Across Agents, Tools, Roles, Vendors, and Projects
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define how evidence is separated and linked across lifecycle boundaries.
 **Reader question:** How do reviewers avoid flattened responsibility in multi-agent and tool-mediated work?
 
@@ -700,7 +690,7 @@ Provenance and observability/logging context uses EVID-01, EVID-02, and EVID-03.
 
 The evidence partitioning model is author synthesis in this paper grounded in provenance, observability, privacy, and GAIC MROs.
 
-### Candidate Prose
+### Main Text
 
 Agentic evidence becomes difficult to review when everything is flattened into one trace, one log export, one transcript, or one vendor report. Multi-agent systems distribute work across agents, tools, human roles, vendors, processors, projects, and data boundaries. Auditability requires those boundaries to be visible.
 
@@ -749,7 +739,6 @@ Partitioning is a review architecture. It does not decide legal retention, data 
 
 ## 10. Privacy, Selective Disclosure, and Audit Evidence Minimization
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Balance auditability with privacy, confidentiality, minimization, and retention discipline.
 **Reader question:** How can evidence be reviewable without overexposure?
 
@@ -767,7 +756,7 @@ Privacy and minimization context uses PRIV-01, PRIV-02, PRIV-03, PRIV-04, PRIV-0
 
 The privacy-preserving audit evidence controls are author synthesis in this paper grounded in public privacy guidance and GAIC MROs.
 
-### Candidate Prose
+### Main Text
 
 Auditability can create a privacy problem if it is misunderstood. The answer to weak evidence is not to collect everything forever. Agentic systems may process personal data, confidential business data, privileged material, regulated data, customer records, employee records, prompts, outputs, tool responses, logs, memory, and third-party processor data. If auditability becomes indiscriminate evidence capture, it may increase exposure and reduce trust.
 
@@ -811,7 +800,6 @@ This chapter does not provide legal advice, interpret specific legal obligations
 
 ## 11. Exception, Dispute, and Remediation Closure
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define closure evidence for failed, disputed, drifted, or remediated agentic work.
 **Reader question:** How does auditability handle exceptions and closure?
 
@@ -829,7 +817,7 @@ Incident/governance context uses EVID-04 and AI-02. Control and AI audit practic
 
 Remediation closure as an audit evidence state is GAIC-derived author synthesis. It is not a legal settlement, regulator closure, or assurance conclusion.
 
-### Candidate Prose
+### Main Text
 
 Agentic auditability is incomplete if it only reconstructs successful work. Many of the most important review questions arise when an agent acts outside expected authority, a tool action creates unintended consequence, an outcome is disputed, a privacy issue appears, a handoff fails, or remediation is required.
 
@@ -876,7 +864,6 @@ Closure in this chapter means evidence-backed governance closure. It does not me
 
 ## 12. Third-Party Validation Without Certification Claims
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define how evidence review can involve third parties without becoming certification, assurance opinion, conformity assessment, legal proof, or regulator approval.
 **Reader question:** What can third-party validation support without becoming certification?
 
@@ -894,7 +881,7 @@ Assurance and attestation boundaries are grounded in AUD-03 and BOUND-03. Confor
 
 this paper's third-party validation boundary is author synthesis that uses professional boundary sources to avoid overclaim. It does not define a conformity assessment program.
 
-### Candidate Prose
+### Main Text
 
 Agentic auditability often benefits from independent review. A third party, internal audit team, governance function, or specialized review group may inspect evidence packs, replay work units, test whether evidence objects exist, adjudicate ruleset conformance, or evaluate whether evidence chains are reconstructable. These activities can be valuable.
 
@@ -935,7 +922,6 @@ This chapter must not be read as claiming that any third party, including Valida
 
 ## 13. Agentic Auditability Readiness Model
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Present AARM dimensions and readiness levels as a proposed readiness model.
 **Reader question:** How can auditability readiness be described without claiming assurance?
 
@@ -953,7 +939,7 @@ Audit evidence language uses AUD-01. AI audit practice context uses AUD-05 and A
 
 AARM is author synthesis in this paper. It is a readiness vocabulary, not an external maturity model or professional assurance framework.
 
-### Candidate Prose
+### Main Text
 
 Once evidence objects are defined, organizations need a way to discuss readiness. AARM provides that vocabulary. It asks whether agentic lifecycle work can be reconstructed, tested, evidenced, and reviewed across the object areas this paper has defined.
 
@@ -1020,7 +1006,6 @@ AARM is a readiness model only. It does not prove legal compliance, issue assura
 
 ## 14. Enterprise Implementation: CIO / CTO / CCO Readiness
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Connect this paper to enterprise readiness without replacing Guide 1 or Guide 2.
 **Reader question:** What must leaders prepare before auditability or assurance conversations become credible?
 
@@ -1039,7 +1024,7 @@ Enterprise control context uses AUD-04 and AUD-07. AI governance context uses AI
 
 The CIO/CTO/CCO readiness split is author synthesis in this paper derived from R4C Guide planning and audit evidence architecture in this paper.
 
-### Candidate Prose
+### Main Text
 
 Enterprises do not become audit-ready by exporting logs at the end of an agentic workflow. Auditability must be designed into architecture, governance, review routines, and evidence ownership. This paper is not an implementation guide, but it defines the readiness questions leaders should ask before Guide 1 and Guide 2 translate the framework into practice.
 
@@ -1085,7 +1070,6 @@ This chapter does not claim that following this paper makes an enterprise compli
 
 ## 15. How Audit and Assurance Firms Can Use This Framework
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Define cautious professional use without claiming endorsement, replacement methodology, assurance opinion, or standard-setting status.
 **Reader question:** How might audit and assurance firms use this paper responsibly?
 
@@ -1103,7 +1087,7 @@ Big Four context uses BF-02 and BF-03 as market context only. Assurance boundary
 
 The professional-use framing is author synthesis in this paper. It is intentionally cautious and non-endorsement based.
 
-### Candidate Prose
+### Main Text
 
 This framework is relevant to audit and assurance firms because agentic AI changes the evidence question. Firms already discuss AI assurance, trusted AI, audit transformation, technology-enabled assurance, governance, controls, and responsible AI. Agentic systems add another layer: lifecycle work that must be reconstructed across authority, responsibility, agents, tools, outcomes, exceptions, privacy, and remediation.
 
@@ -1144,7 +1128,6 @@ This chapter does not claim that audit or assurance firms need this paper, endor
 
 ## 16. Conclusion
 
-**Candidate source status:** R4 internal candidate source
 **Chapter purpose:** Close this paper's argument and bridge to Guide 1, Guide 2, and the later insurability white paper without publication or insurability overclaim.
 **Reader question:** What must exist before agentic assurance and insurability conversations can mature?
 
@@ -1162,7 +1145,7 @@ Audit evidence and assurance boundary language uses AUD-01 and AUD-03. AI govern
 
 The Compliance Object -> Audit Evidence Object -> Insurable Risk Object chain is GAIC/author synthesis in this paper. The later insurability white paper source research is deferred.
 
-### Candidate Prose
+### Main Text
 
 Agentic AI changes the auditability problem because agentic systems do not merely produce outputs. They perform lifecycle work. They act through roles, tools, delegated authority, handoffs, privacy boundaries, exceptions, and remediation workflows. If that work cannot be reconstructed, the system may be impressive, observable, and even well-governed in parts, but it is not audit-ready in the sense this paper defines.
 
@@ -1208,7 +1191,6 @@ This chapter does not claim this paper is published, final, sealed, regulator-ap
 
 ## Appendix A — Agentic Audit Evidence Request List
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Provide a structured evidence request catalog for agentic systems.
 **Intended reader:** Audit/assurance teams, internal audit, AI governance, CIO/CTO/CCO teams, technology risk teams, and evidence architecture owners.
 
@@ -1255,7 +1237,6 @@ Retain a condensed version in the main artifact. A fuller operational checklist 
 
 ## Appendix B — Agentic System Walkthrough Template
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Provide a repeatable walkthrough structure for a single agentic lifecycle run.
 **Intended reader:** Internal audit, technology risk, AI governance committees, architecture review teams, platform owners, and compliance engineering teams.
 
@@ -1310,7 +1291,6 @@ Include in the main artifact if space allows. Expand implementation details in G
 
 ## Appendix C — MRO-to-Audit-Evidence Mapping
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Preserve the full mapping from GAIC MROs to audit evidence objects in this paper.
 **Intended reader:** Audit/assurance method teams, compliance engineering, internal audit, AI governance, Guide 1/2 authors.
 
@@ -1355,7 +1335,6 @@ Include full mapping in the this paper appendix. Consider a shorter summary tabl
 
 ## Appendix D — Auditability Readiness Matrix
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Provide AARM dimension and readiness-level crosswalk.
 **Intended reader:** Audit readiness teams, CIO/CTO/CCO leaders, internal audit, governance committees, platform teams.
 
@@ -1416,7 +1395,6 @@ AARM is not an audit standard, certification, assurance opinion, legal complianc
 
 ## Appendix E — Exception / Remediation Closure Checklist
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Define closure evidence requirements for exceptions, disputes, and remediation.
 **Intended reader:** Internal audit, incident governance, compliance, risk, security, AI platform owners, remediation owners.
 
@@ -1468,7 +1446,6 @@ Guide 1 should translate closure fields into workflow, ticketing, runtime, and e
 
 ## Appendix F — Boundary Language
 
-**Candidate source status:** R4 publication-candidate preparation appendix
 **Purpose:** Provide safe language for auditability, assurance, validation, MRO, AARM, MPLP, privacy, and professional-use boundaries.
 **Intended reader:** Author, editors, reviewers, publication QA, Guide 1/2 teams, source QA.
 

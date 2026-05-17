@@ -1,0 +1,66 @@
+{
+  "task": "AIAAWP-R4D-FORMAT-PUBLICATION-DESIGN-AND-GAIC-STANDARD-ALIGNMENT",
+  "generated_at": "2026-05-17T17:24:59Z",
+  "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+  "status": "Internal format candidate; not public, not final, not sealed, not live",
+  "artifacts": {
+    "html": {
+      "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
+      "sha256": "dd89b05361b037016df8e838902a9fdac7c7a0aeb4f678cc792161191e82cafc",
+      "bytes": 267292
+    },
+    "pdf": {
+      "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
+      "sha256": "a09845a4d99928447b432df21ea9a35c86310bf7a72bc63c4e0b023ce5d75ade",
+      "bytes": 1257353,
+      "pages": 141
+    },
+    "docx": {
+      "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx",
+      "sha256": "2a109909915fb89fdcc2262c6f543402b971081c5aefa806fa483f7f9f043751",
+      "bytes": 105650
+    }
+  },
+  "table_stats": {
+    "count": 29,
+    "row_card_tables": 23,
+    "grid_tables": 6
+  },
+  "content_presence": {
+    "pdf": {
+      "Agentic AI": true,
+      "Auditability": true,
+      "Assurance": true,
+      "White Paper": true,
+      "2026": true,
+      "AIAAWP-2026-v0.1-R4-CANDIDATE": true,
+      "0. Executive Summary": true,
+      "16. Conclusion": true,
+      "Appendix A": true,
+      "Appendix F": true,
+      "MRO-01": true,
+      "MRO-16": true,
+      "AARM": true,
+      "Audit Evidence Chain": true
+    },
+    "docx": {
+      "Agentic AI": true,
+      "Auditability": true,
+      "Assurance": true,
+      "White Paper": true,
+      "2026": true,
+      "AIAAWP-2026-v0.1-R4-CANDIDATE": true,
+      "0. Executive Summary": true,
+      "16. Conclusion": true,
+      "Appendix A": true,
+      "Appendix F": true,
+      "MRO-01": true,
+      "MRO-16": true,
+      "AARM": true,
+      "Audit Evidence Chain": true
+    }
+  },
+  "manifest_status": "internal_format_candidate",
+  "visual_authority": "HTML/PDF are the visual authority; DOCX is an editable derivative.",
+  "boundary": "Internal candidate only. Not public, not final, not sealed, not live, not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not a vendor ranking, and not an endorsement by any firm or professional body."
+}

@@ -1,15 +1,30 @@
-# SHA256 checksums for AIAAWP R4 candidate package files
-# checksums.sha256 excludes itself and transient LibreOffice profile files.
-7a6c83eba7af27d728eceb2402e0754bf4d9e7dd266ae65b2609285a2a6ecf3a  AIAAWP-2026-v0.1-R4-CANDIDATE.md
+# SHA256 checksums for AIAAWP R4D internal format candidate package files
+# checksums.sha256 excludes itself and transient conversion profile files.
+55c0a7b3f32bbe7740ede05c0f41e40d5aaf1919fd28e1eafef7c25d2257bd08  AIAAWP-2026-v0.1-R4-CANDIDATE.md
 ebbf4a36cbe32ea5bd04d4241676096859edd133b9fcdcad6801dbbdac5090ee  README.md
+5cc682aa53530227d91b37f2788236a9768f788897f84130cde45ea1dce1a83a  generation/generate-aiaawp-r4d-publication-candidate.py
 a325ae907025ada056a5cfc896b64cf5975a54f8f17eed6ad2cfd99977e7aebb  generation/generate-wp2-r4-candidate-html.mjs
 41279e1e34cc17d316c1b8fc2744c74f302fc1258b290f58ac2d7f2cf4ee565b  generation/wp2-r4-generation-plan.md
-fd1dcafeb27916fc3395919129b10508e9bac129d1ef10d824303f95d0ff239c  manifest.json
-1bb7d05e91228014a4b7f9b9d61ead8f8da18c5def20182932e53f5587cc5cb8  metadata/wp2-r4-jsonld-plan.json
-11dfbd5772f2d005fc0fc840388fed3fcf8253a009b0c4e8c6f8b1768fa718ec  metadata/wp2-r4-metadata-plan.md
-86a8802594aae479478358f0c4624ee3bfc0e61301e7e68d0f20e3c27639ddf3  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx
-73de805c623c8edbc43f46374a4ef614e485b46d374b77b2c1cb6805a5db7a5a  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html
-74c047ef5c23e8218568958ea64bc7fab0626f4246c5a4c83a8ac9a813f99bb7  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf
+6d50e88d9ba4a73dba2996b68e4200f31062e5734333ed264c33f02fbb3738be  manifest.json
+fd3c7f0b4b35193ee6ad09607cb2d705778a7af12482ac339e9da16deb3bff63  metadata/wp2-r4-jsonld-plan.json
+acbe7e189791d8386f885bf15236624d788e49ae16dced58bd9cf097daa686d8  metadata/wp2-r4-metadata-plan.md
+2a109909915fb89fdcc2262c6f543402b971081c5aefa806fa483f7f9f043751  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx
+dd89b05361b037016df8e838902a9fdac7c7a0aeb4f678cc792161191e82cafc  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html
+a09845a4d99928447b432df21ea9a35c86310bf7a72bc63c4e0b023ce5d75ade  out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf
+13222baccd61f4f6041741ccff1fd1f5701e47777254b9cb99c6f3536bbfdd9d  out/aiaawp-r4d-generation-log.json
 9c126ee4f176b3ff9628ffb9948e33b0c29ec5185db6e6155107755733d8fa6a  qa/wp2-r4-integrity-notes.md
 ddec707b430e8cc64368bd94946b53638165091ec0b2858bf545ab62577a4726  sources/wp2-r4-citation-map.md
 d6cec3c9eed834333c4aaf90e494e7256e69611746bf009f206df9c300c07ffd  sources/wp2-r4-source-register.md
+82b3ace58b6a2ed9c28f9da49c818ac9deb02b5fab9bd43258936702b9fac2cd  ../reports/aiaawp-r4d-preflight.md
+9b584cd6ceed6fce83145c9be0e2690992c8c11e26932743530c92cfcf477348  ../reports/aiaawp-r4d-gaic-publication-standard-audit.md
+d22fb3c83444d19162ca332cd20baba548b31730b5943a6e37ff12083e7d75cb  ../reports/aiaawp-r4d-publication-standard-alignment-plan.md
+bcbcb0e7e4afdfccf7006e6d7825e9b0637c31aa58790a86c8ad49746cbf2091  ../reports/aiaawp-r4d-text-style-alignment-qa.md
+912fa317a78b3b518f02b7f5eecf2408b83ff6315581d5f30f37232e3b55ea81  ../reports/aiaawp-r4d-text-style-patch-log.md
+7e90fa1c7af0c017f61565bceb9023c29d72020270af7240185c2fb16c740d2c  ../reports/aiaawp-r4d-html-publication-design-qa.md
+6cfb621773abba87d5eeef9766110e9b94a0b5f5b6a08494e134a9dc8b92ade5  ../reports/aiaawp-r4d-docx-publication-design-qa.md
+2bbb9293047e9c16ffb0dfd54b59ec43c94ac18ea253ce488d77d886e8d9750f  ../reports/aiaawp-r4d-pdf-publication-design-qa.md
+5248347bcdebcd7edb858e4c5b28e6086beacae0f39f935778616b795c141480  ../reports/aiaawp-r4d-metadata-seo-geo-alignment.md
+54269f53ea36e35309961974cd3ba49996f5867ef719f1bde20e092b85d6bc9c  ../reports/aiaawp-r4d-cross-artifact-qa.md
+520403e56e31781a1f39d4bf60d06249a5d31107b04949ab56446b8906a6bff5  ../reports/aiaawp-r4d-boundary-qa.md
+63510ea2ac8d7a47585389379dee6f1cedc8df3e55f8b19fab03b297f8731e48  ../reports/aiaawp-r4d-build-and-validation.md
+6a08d060df018a5efd843ab1278fa351d379f270a95a230a798cdc8cef9998f6  ../reports/aiaawp-r4d-final-qa.md

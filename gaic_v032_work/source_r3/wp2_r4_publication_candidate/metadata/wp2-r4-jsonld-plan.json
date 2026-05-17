@@ -2,6 +2,19 @@
   "status": "draft-plan-only-not-wired-to-public-site",
   "boundary": "No publication, indexing, SEO/GEO uplift, Scholar indexing, certification, audit standard, legal compliance, regulator approval, or assurance opinion is claimed.",
   "documentId": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+  "gaicPublicationStandardAlignment": {
+    "status": "aligned-plan",
+    "internalRobots": "noindex,nofollow for internal artifacts",
+    "futurePublicWiring": "deferred to explicit publication wave",
+    "metadataParity": [
+      "visible document ID",
+      "HTML citation metadata",
+      "PDF metadata",
+      "DOCX core metadata",
+      "manifest identifier",
+      "checksum manifest"
+    ]
+  },
   "plannedGraph": [
     {
       "@type": "WebPage",
@@ -23,7 +36,15 @@
       "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#article",
       "headline": "Agentic AI Auditability & Assurance White Paper 2026",
       "alternativeHeadline": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
+      "identifier": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+      "version": "v0.1-publication-candidate",
+      "inLanguage": "en",
+      "genre": "Technical report",
+      "creativeWorkStatus": "Internal publication candidate until a later authorized public release",
       "author": {
+        "@id": "https://www.jearonwong.com/about/#person"
+      },
+      "publisher": {
         "@id": "https://www.jearonwong.com/about/#person"
       },
       "about": [
@@ -31,7 +52,17 @@
         "Audit Evidence Chain",
         "Agentic Audit Object",
         "AARM",
-        "Agentic Lifecycle Governance"
+        "Missing Regulatory Objects",
+        "Agentic Lifecycle Governance",
+        "Enterprise AI Governance"
+      ],
+      "mentions": [
+        "Lifecycle Evidence",
+        "Responsibility-Linked Evidence Chain",
+        "Audit Evidence Chain",
+        "AARM L0-L5",
+        "MRO-01 through MRO-16",
+        "Validation Lab non-certifying boundary"
       ],
       "isBasedOn": [
         {
@@ -43,8 +74,12 @@
         "AI assurance",
         "audit evidence chain",
         "lifecycle evidence",
-        "AI governance"
-      ]
+        "AI governance",
+        "MRO",
+        "AARM",
+        "enterprise AI governance"
+      ],
+      "citation": "Wong, Jearon. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Internal publication candidate, AIAAWP-2026-v0.1-R4-CANDIDATE."
     },
     {
       "@type": "Person",
@@ -79,7 +114,12 @@
       "@type": "CreativeWork",
       "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#work",
       "name": "Agentic AI Auditability & Assurance White Paper 2026",
-      "creativeWorkStatus": "Draft plan for future publication metadata; not public in R4"
+      "identifier": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Agentic Lifecycle Governance Industry Series"
+      },
+      "creativeWorkStatus": "Draft plan for future publication metadata; not public in R4D"
     }
   ],
   "notes": [

@@ -3686,3 +3686,35 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim legal advice, legal compliance proof, audit standard status, certification, assurance opinion, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, MPLP exclusivity, MPLP industry-standard status, Cognitive OS requirement, SoloCrew enterprise readiness, or Validation Lab certification.
 
 **GAIC-R4C Status:** ✓ GUIDE 1 AND GUIDE 2 PLANNING BASELINE COMPLETE / READY FOR WP2 SOURCE RESEARCH.
+
+## AIAAWP-R4D Notes (May 18, 2026)
+
+**Scope:** Format, Publication Design, and GAIC Standard Alignment Pass.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `431cf6597d13f0bd8a159c2c8c4fe2874e9b2311` before AIAAWP-R4D edits.
+2. Inspected the R4C AIAAWP candidate package, R4B/R4C reports, GAIC publication style guide, GAIC publication candidate manifest/artifacts, GAIC generation scripts, public GAIC release artifacts, and GAIC R3D/R3K metadata and responsive HTML reports.
+3. Created `aiaawp-r4d-gaic-publication-standard-audit.md` and extracted the reusable GAIC publication standard.
+4. Created `aiaawp-r4d-publication-standard-alignment-plan.md`.
+5. Patched AIAAWP source to reduce internal artifact-body residue and align the R4D date/status.
+6. Created `generate-aiaawp-r4d-publication-candidate.py`, a separate AIAAWP HTML-first generator that does not modify GAIC scripts.
+7. Regenerated internal HTML/PDF/DOCX artifacts under `wp2_r4_publication_candidate/out/`.
+8. Updated AIAAWP manifest, checksums, metadata plan, JSON-LD plan, and generation log.
+9. Created R4D text style, HTML, DOCX, PDF, metadata/SEO/GEO, cross-artifact, boundary, build, and final QA reports.
+
+**Artifact discipline:**
+
+- No public page or public route was created.
+- No AIAAWP artifact was copied to `public/`.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- AIAAWP-R4D is an internal format-candidate and publication-design review wave.
+- It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+
+**AIAAWP-R4D Status:** ✓ FORMAT AND PUBLICATION DESIGN PASS COMPLETE / READY FOR FINAL CANDIDATE QA.
