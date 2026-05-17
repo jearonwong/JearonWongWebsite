@@ -1,0 +1,91 @@
+{
+  "status": "draft-plan-only-not-wired-to-public-site",
+  "boundary": "No publication, indexing, SEO/GEO uplift, Scholar indexing, certification, audit standard, legal compliance, regulator approval, or assurance opinion is claimed.",
+  "traceTag": "WP2-2026-R4-PUBLICATION-CANDIDATE",
+  "plannedGraph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#webpage",
+      "name": "Agentic AI Auditability & Assurance White Paper 2026",
+      "description": "A lifecycle evidence guide for audit, assurance, and enterprise AI governance.",
+      "isPartOf": {
+        "@id": "https://www.jearonwong.com/#website"
+      },
+      "author": {
+        "@id": "https://www.jearonwong.com/about/#person"
+      },
+      "inLanguage": "en",
+      "datePublished": "PUBLICATION_DATE_PLACEHOLDER",
+      "dateModified": "PUBLICATION_DATE_PLACEHOLDER"
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#article",
+      "headline": "Agentic AI Auditability & Assurance White Paper 2026",
+      "alternativeHeadline": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
+      "author": {
+        "@id": "https://www.jearonwong.com/about/#person"
+      },
+      "about": [
+        "Agentic AI Auditability",
+        "Audit Evidence Chain",
+        "Agentic Audit Object",
+        "AARM",
+        "Agentic Lifecycle Governance"
+      ],
+      "isBasedOn": [
+        {
+          "@id": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/#article"
+        }
+      ],
+      "keywords": [
+        "agentic AI auditability",
+        "AI assurance",
+        "audit evidence chain",
+        "lifecycle evidence",
+        "AI governance"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.jearonwong.com/about/#person",
+      "name": "Jearon Wong"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.jearonwong.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Research",
+          "item": "https://www.jearonwong.com/research/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Agentic AI Auditability & Assurance White Paper 2026",
+          "item": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#work",
+      "name": "Agentic AI Auditability & Assurance White Paper 2026",
+      "creativeWorkStatus": "Draft plan for future publication metadata; not public in R4"
+    }
+  ],
+  "notes": [
+    "Use WebPage plus TechArticle for public page and article metadata if a future route is authorized.",
+    "Avoid ScholarlyArticle unless a later publication QA decides that label is appropriate.",
+    "DefinedTerm entries may be added for Agentic AI Auditability, Agentic Audit Object, Audit Evidence Chain, and AARM after public concept pages exist.",
+    "Do not wire this JSON-LD into the public site during R4."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "document_id": "WP2-2026-R4-PUBLICATION-CANDIDATE",
+  "title": "Agentic AI Auditability & Assurance White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
+  "status": "publication-candidate-preparation",
+  "not_public": true,
+  "not_final": true,
+  "not_sealed": true,
+  "not_launched": true,
+  "author": "Jearon Wong",
+  "version": "v0.1-publication-candidate",
+  "date": "2026-05-17",
+  "source_baseline_commit": "2b5ef42c09165cce500a48546d434592148e97e7",
+  "current_commit": "pending until git commit and push",
+  "source_baseline": [
+    "WP2-R3 QA-reviewed internal draft",
+    "WP2-R0/R1/R2/R3 reports",
+    "GAIC v0.3.2-FRC-R3 source truth"
+  ],
+  "files_included": [
+    "README.md",
+    "WP2-2026-R4-PUBLICATION-CANDIDATE.md",
+    "manifest.json",
+    "checksums.sha256",
+    "metadata/wp2-r4-metadata-plan.md",
+    "metadata/wp2-r4-jsonld-plan.json",
+    "sources/wp2-r4-source-register.md",
+    "sources/wp2-r4-citation-map.md",
+    "qa/wp2-r4-integrity-notes.md",
+    "generation/wp2-r4-generation-plan.md"
+  ],
+  "source_register_path": "sources/wp2-r4-source-register.md",
+  "citation_map_path": "sources/wp2-r4-citation-map.md",
+  "artifact_generation_status": "deferred-to-later-wave",
+  "artifact_paths": [],
+  "boundary_status": "candidate package only; not public/final/sealed/live",
+  "checksum_file_path": "checksums.sha256",
+  "checksum_note": "checksums.sha256 excludes itself to avoid recursive checksum instability."
+}

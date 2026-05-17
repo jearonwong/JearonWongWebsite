@@ -1,7 +1,34 @@
 # Reconstruction Notes
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R3 Editorial / Source / Boundary QA)
+**Last Updated:** May 17, 2026 (WP2-R4 Publication-Candidate Preparation)
+
+## WP2-R4 Publication-Candidate Preparation Notes (May 17, 2026)
+
+**Scope:** Prepare internal WP2 publication-candidate source package; do not publish, create public routes, or generate public artifacts.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at WP2-R3 accepted commit `2b5ef42c09165cce500a48546d434592148e97e7` before edits.
+2. Used repository source truth only: WP2-R0/R1/R2/R3 reports, `wp2_r2_draft/`, GAIC MRO source truth, Validation Lab boundary, and companion-paper boundary.
+3. Created `wp2_r4_publication_candidate/` with candidate source, source register, citation map, metadata plan, JSON-LD plan, manifest, checksums, integrity notes, and generation plan.
+4. Selected artifact-generation Option B because existing generation scripts are GAIC WP1 specific and require separate WP2-safe adaptation.
+5. Created R4 preflight, artifact-generation decision, boundary sweep, MRO/source consistency check, candidate integrity QA, build/validation, and final QA reports.
+6. Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+**Artifact discipline:**
+
+- No live public WP2 page or public route was created.
+- No public WP2 HTML/PDF/DOCX artifact was generated.
+- No GAIC sealed artifact, public PDF metadata, responsive public HTML, public GAIC artifact, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value was changed.
+- Pre-existing untracked `public/social/*` assets remain unstaged.
+
+**Boundary discipline:**
+
+- WP2-R4 is an internal publication-candidate preparation package only.
+- It does not claim WP2 is published, final, sealed, live, regulator-approved, Big-Four-endorsed, audit-body-endorsed, legally sufficient, certifying, assurance-producing, procurement-guiding, vendor-ranking, MPLP-required, Cognitive-OS-required, SoloCrew enterprise-readiness proof, externally adopted, indexed, answer-engine-recognized, or SEO/GEO-improved.
+
+**WP2-R4 Status:** WP2-R4 PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP2 CANDIDATE ARTIFACT GENERATION.
 
 ## WP2-R3 Editorial / Source / Boundary QA Notes (May 17, 2026)
 

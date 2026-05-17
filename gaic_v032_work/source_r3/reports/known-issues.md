@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 17, 2026 (WP2-R3 Editorial / Source / Boundary QA)
+**Last Updated:** May 17, 2026 (WP2-R4 Publication-Candidate Preparation)
+
+## WP2-R4 Publication-Candidate Preparation
+
+### Status: WP2-R4 PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP2 CANDIDATE ARTIFACT GENERATION
+
+WP2-R4 created an internal publication-candidate preparation package for **Agentic AI Auditability & Assurance White Paper 2026** without publishing WP2, creating a public route, or generating public artifacts. The package normalizes the R3 QA-reviewed internal draft into a single candidate Markdown source and adds source, citation, metadata, JSON-LD, manifest, checksum, integrity, and generation-planning files.
+
+Resolved in this wave:
+
+1. Created `wp2_r4_publication_candidate/README.md`.
+2. Created `WP2-2026-R4-PUBLICATION-CANDIDATE.md` from the R3-reviewed internal draft.
+3. Created R4 source register and citation map.
+4. Created future metadata and JSON-LD plans without wiring them into the public site.
+5. Created manifest and checksums for the internal package.
+6. Documented artifact generation decision and deferred HTML/PDF/DOCX generation to a separate WP2-specific wave.
+7. Completed boundary sweep, MRO/source consistency check, candidate integrity QA, and build/hash validation.
+
+Remaining known issues:
+
+- Candidate HTML/PDF/DOCX artifacts are not generated in R4. A WP2-specific generation wave is required.
+- Final author review remains required before final candidate QA/seal.
+- Public citation style still needs a final decision: source IDs, endnotes, footnotes, or appendix source register.
+- Appendix placement remains a future decision: keep Appendices A-F in main artifact or move long appendices partly to a companion surface.
+- No public site publication should occur until explicit authorization.
+
+Boundary discipline:
+
+- No live public WP2 page or public route was created.
+- No public WP2 HTML/PDF/DOCX artifact was created.
+- No existing GAIC public content, sealed artifact, public PDF metadata, responsive public HTML, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No WP2 published/final/sealed/live claim, audit standard claim, certification claim, assurance opinion, legal compliance proof, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, MPLP industry-standard claim, Cognitive OS requirement, SoloCrew enterprise-readiness claim, SEO/GEO uplift, answer-engine recognition, or external adoption claim was introduced.
+
+**WP2-R4 Decision:** WP2-R4 PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP2 CANDIDATE ARTIFACT GENERATION.
+
+---
 
 ## WP2-R3 Editorial / Source / Boundary QA
 

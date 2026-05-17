@@ -1,0 +1,11 @@
+# SHA256 checksums for WP2 R4 candidate package files
+# checksums.sha256 excludes itself to avoid recursive checksum instability.
+5f7da373e086055f93ef6c7d60c4a6ee36a16fee7e9b71a72b0a74b2f617c46c  README.md
+07eb430fba67e355fcfafe340259cd9bf7f2f9a17e540c9afc6fa04d373c6004  WP2-2026-R4-PUBLICATION-CANDIDATE.md
+c0bd8ccd3721d27c5de149a6315093209889fdc91bc1c65e15e23391437981c8  generation/wp2-r4-generation-plan.md
+3b153333fc9b36633a7b3817d803f0614364ca007a4c9364ed60dc7065ca9732  manifest.json
+ca0f072923673cddc60dc385edaf99528eb1c8608d073378ff90cb8e14e21860  metadata/wp2-r4-jsonld-plan.json
+eea96ab1e45ff6e040591518e5d5bc74cc44e422ec92960e7f5bc042ece4789a  metadata/wp2-r4-metadata-plan.md
+738baffeba43e537304cd3d20a74dbf6f0066e2c8ca713e9a406fb5a076cb719  qa/wp2-r4-integrity-notes.md
+9ce7cfa4c47f2d00424f148a5b6262f166ececfd2b3f7d4fb7ee0b9b460403d7  sources/wp2-r4-citation-map.md
+8f095bbb0e4c50eb03b609d601aef3c1ddc8a0b6ce8f775b31c80921aef593e8  sources/wp2-r4-source-register.md
