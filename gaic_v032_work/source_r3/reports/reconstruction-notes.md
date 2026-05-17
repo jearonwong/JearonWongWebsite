@@ -3,6 +3,27 @@
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Last Updated:** May 14, 2026 (GAIC-R3K-1C P2 Long-tail Decision and Residual Cleanup)
 
+## WP2-R1 Outline Notes (May 17, 2026)
+
+**Scope:** Source-grounded outline, table skeleton, appendix skeleton, AARM skeleton, citation placement plan, and R2 drafting packet for the planned Agentic AI Auditability & Assurance White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at WP2-R0 accepted commit `936b928e7925ca0f8a972c116a05f752b25f322e` before edits.
+2. Inspected WP2-R0 source inventory, source maps, source gap report, final QA, R4B WP2 architecture reports, R4C Guide 1 / Guide 2 boundaries, and GAIC MRO source truth.
+3. Created WP2-R1 preflight, source-grounded thesis/argument map, chapter-by-chapter outline, table skeletons, appendix skeletons, AARM source-grounded skeleton, citation placement plan, R2 drafting packet, source gap closure report, boundary QA, build/validation report, and final QA.
+4. Confirmed no R1 source gap blocker prevents WP2-R2 formal drafting.
+5. Registered WP2-R2 drafting cautions around author synthesis, Big Four context-only use, privacy/legal boundaries, Validation Lab non-certifying boundary, and table-skeleton non-procedure status.
+
+**Boundary discipline:**
+
+- No full WP2 body text was drafted.
+- No public page, route, HTML/PDF/DOCX artifact, SEO page, or public metadata was created.
+- No sealed GAIC artifact, public PDF metadata, responsive public HTML, white paper source section, score, methodology, or RCCS-T/RCCS-M/ALCS framing was modified.
+- No Big Four endorsement, audit body endorsement, certification, legal compliance proof, assurance opinion, regulator approval, procurement recommendation, vendor ranking, MPLP requirement, SEO/GEO uplift claim, or answer-engine recognition claim was introduced.
+
+**WP2-R1 Status:** WP2-R1 SOURCE-GROUNDED OUTLINE AND TABLE SKELETON COMPLETE / READY FOR WP2-R2 FORMAL DRAFT.
+
 ## WP2-R0 Source Research Notes (May 17, 2026)
 
 **Scope:** Big Four / audit / assurance source research for the planned Agentic AI Auditability & Assurance White Paper 2026.

@@ -3,6 +3,34 @@
 **Document:** GAIC-2026-v0.3.2-FRC-R3
 **Last Updated:** May 14, 2026 (GAIC-R3K-1B P1 Source Anchor Enrichment)
 
+## WP2-R1 Source-Grounded Outline and Table Skeleton
+
+### Status: WP2-R1 SOURCE-GROUNDED OUTLINE AND TABLE SKELETON COMPLETE / READY FOR WP2-R2 FORMAL DRAFT
+
+WP2-R1 transformed the R4B WP2 architecture baseline and WP2-R0 source research baseline into a draft-ready outline package for the planned **Agentic AI Auditability & Assurance White Paper 2026**. This was an outline/table-skeleton-only wave: no full WP2 body text, public pages, public routes, HTML/PDF/DOCX artifacts, white paper content, sealed artifacts, public PDF metadata, responsive public HTML, scores, or methodology were changed.
+
+**Outline results:**
+
+1. Created a source-grounded thesis and argument map that distinguishes externally sourced terminology, GAIC-derived objects, and WP2 author synthesis.
+2. Created chapter-by-chapter outline for Chapters 0-16 using the fixed R4B WP2 architecture.
+3. Created skeletons for all 10 required WP2 tables.
+4. Created skeletons for Appendices A-F.
+5. Created source-grounded AARM skeleton with ten dimensions and L0-L5 readiness levels.
+6. Created citation placement plan for every chapter and appendix.
+7. Created WP2-R2 drafting packet with title/subtitle, source hierarchy, author-synthesis constructs, drafting order, mandatory boundary language, forbidden claims, and tone guidance.
+8. Created source gap closure report confirming no blocker prevents WP2-R2 formal drafting.
+9. Created boundary QA, build/validation report, and final QA.
+
+**Remaining limitations, not blockers:**
+
+1. WP2-R2 must clearly mark Agentic Audit Object, Audit Evidence Chain, AARM, and lifecycle-responsibility-linked agent work as proposed WP2 synthesis.
+2. Big Four sources remain market context only.
+3. Professional/audit sources remain terminology and boundary sources; they are not endorsements.
+4. Privacy/legal sources remain context only and must not become legal advice or compliance proof.
+5. Validation Lab remains a non-certifying evidence adjudication example only.
+
+**WP2-R1 Decision:** WP2-R1 SOURCE-GROUNDED OUTLINE AND TABLE SKELETON COMPLETE / READY FOR WP2-R2 FORMAL DRAFT.
+
 ## WP2-R0 Big Four / Audit / Assurance Source Research
 
 ### Status: WP2-R0 BIG FOUR / AUDIT / ASSURANCE SOURCE RESEARCH COMPLETE / READY FOR WP2-R1 SOURCE-GROUNDED OUTLINE
