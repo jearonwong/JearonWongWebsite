@@ -3718,3 +3718,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
 
 **AIAAWP-R4D Status:** ✓ FORMAT AND PUBLICATION DESIGN PASS COMPLETE / READY FOR FINAL CANDIDATE QA.
+
+## AIAAWP-R5 Notes (May 18, 2026)
+
+**Scope:** Final Candidate QA.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `a153929a1fcdd0eb7da3175b63a5ae7ad5694bc0` before AIAAWP-R5 edits.
+2. Used repository files and R4D internal artifacts as source of truth; no old uploaded attachments were used.
+3. Verified AIAAWP package inventory, manifest, checksums, metadata plan, JSON-LD plan, source register, citation map, generation log, and internal HTML/PDF/DOCX artifacts.
+4. Page-pinned the 141-page internal PDF and rendered proof samples under `reports/aiaawp-r5-pdf-proof-samples/`.
+5. Patched the AIAAWP generator to inherit GAIC R3D-3 WAP/mobile responsive web-reading rules for screen HTML while preserving the GAIC publication PDF/print shell.
+6. Verified DOCX as editable derivative through `python-docx` and temporary LibreOffice rendering.
+7. Verified content/structure, source/citation integrity, metadata/SEO/GEO plan consistency, boundary discipline, and final blocker classification.
+8. Updated manifest/checksums after artifact regeneration and R5 QA report creation.
+
+**Artifact discipline:**
+
+- No public page or public route was created.
+- No AIAAWP artifact was copied to `public/`.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- AIAAWP-R5 is internal final candidate QA only.
+- It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+
+**AIAAWP-R5 Status:** ✓ FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING.

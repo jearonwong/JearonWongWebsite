@@ -2,7 +2,7 @@
   "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
   "title": "Agentic AI Auditability & Assurance White Paper 2026",
   "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
-  "status": "internal_format_candidate",
+  "status": "internal_final_candidate_qa_complete",
   "not_public": true,
   "not_final": true,
   "not_sealed": true,
@@ -50,12 +50,12 @@
     "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx"
   ],
   "generated_artifact_hashes": {
-    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html": "dd89b05361b037016df8e838902a9fdac7c7a0aeb4f678cc792161191e82cafc",
-    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf": "a09845a4d99928447b432df21ea9a35c86310bf7a72bc63c4e0b023ce5d75ade",
-    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx": "2a109909915fb89fdcc2262c6f543402b971081c5aefa806fa483f7f9f043751"
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html": "74d0256280dcf9f6805594520a52536f3a1821af39afa267c743c013bee2a5a4",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf": "df9ea5759e2e499ee1e2e9e682484956dbf9c567d81052b5afe4ef96727c2e17",
+    "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx": "d7495424872f5013d754bc4974ddddaf6dbe907fc3303970f65c78701d6b0590"
   },
   "generation_script_path": "generation/generate-aiaawp-r4d-publication-candidate.py",
-  "generation_timestamp": "2026-05-17T17:24:59Z",
+  "generation_timestamp": "2026-05-18T02:16:35Z",
   "artifact_status": "internal_format_candidate_only",
   "not_live": true,
   "no_public_route": true,
@@ -83,7 +83,7 @@
   "ui_style_alignment_status": "aligned_to_gaic_main_white_paper_publication_standard",
   "text_style_alignment_status": "internal draft residue reduced; candidate status centralized",
   "metadata_seo_geo_alignment_status": "aligned_plan_noindex_internal_future_public_updates_deferred",
-  "artifact_integrity_status": "manifest_and_checksums_updated_for_r4d_internal_artifacts",
+  "artifact_integrity_status": "manifest_and_checksums_updated_for_r5_internal_artifacts_and_qa",
   "visual_authority": "HTML/PDF are the visual authority; DOCX is an editable derivative.",
   "known_formatting_limitations": [
     "DOCX is an editable derivative and may receive human template polish before final publication.",
@@ -103,7 +103,7 @@
     "reports/aiaawp-r4d-build-and-validation.md",
     "reports/aiaawp-r4d-final-qa.md"
   ],
-  "next_phase": "AIAAWP final candidate QA after human review of R4D publication-design artifacts",
+  "next_phase": "author release decision and publication staging; no public release in this package",
   "r4d_baseline_commit": "431cf6597d13f0bd8a159c2c8c4fe2874e9b2311",
   "r4d_generation_results": {
     "html": {
@@ -119,5 +119,46 @@
       "generated": true,
       "engine": "python-docx structured editable derivative from same candidate source"
     }
+  },
+  "r5_final_candidate_qa": {
+    "status": "complete_ready_for_author_release_decision_and_publication_staging",
+    "not_public": true,
+    "not_final": true,
+    "not_sealed": true,
+    "not_live": true,
+    "visual_authority": "HTML/PDF are the visual authority; DOCX is an editable derivative.",
+    "pdf_page_count": 141,
+    "pdf_page_map_report": "reports/aiaawp-r5-pdf-page-proof-qa.md",
+    "html_responsive_alignment": "inherits GAIC R3D-3 responsive web-reading screen/WAP/mobile rules plus AIAAWP title-length constraint",
+    "browser_tooling_limitation": "Browser plugin rejected direct file:// navigation; HTML QA used static HTML/CSS checks and internal artifact inspection without creating a public route workaround.",
+    "p0_internal_candidate_blockers": 0,
+    "remaining_publication_staging_tasks": [
+      "author release decision",
+      "public route and hub copy",
+      "public artifact placement",
+      "Evidence Registry update",
+      "entity graph JSON update",
+      "llms.txt update",
+      "sitemap update",
+      "GAIC hub crosslink",
+      "OG/Twitter image",
+      "public checksum exposure",
+      "final artifact seal",
+      "publication launch pack"
+    ],
+    "qa_report_paths": [
+      "reports/aiaawp-r5-preflight.md",
+      "reports/aiaawp-r5-artifact-inventory-hash-qa.md",
+      "reports/aiaawp-r5-pdf-page-proof-qa.md",
+      "reports/aiaawp-r5-html-final-candidate-qa.md",
+      "reports/aiaawp-r5-docx-final-candidate-qa.md",
+      "reports/aiaawp-r5-content-structure-final-qa.md",
+      "reports/aiaawp-r5-source-citation-final-qa.md",
+      "reports/aiaawp-r5-metadata-seo-geo-final-qa.md",
+      "reports/aiaawp-r5-boundary-final-sweep.md",
+      "reports/aiaawp-r5-final-candidate-blocker-register.md",
+      "reports/aiaawp-r5-build-and-validation.md",
+      "reports/aiaawp-r5-final-qa.md"
+    ]
   }
 }

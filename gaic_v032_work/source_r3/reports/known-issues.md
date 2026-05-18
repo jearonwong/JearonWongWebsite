@@ -2979,3 +2979,39 @@ Boundary discipline:
 - No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, or external adoption claim was introduced.
 
 **AIAAWP-R4D Status:** ✓ FORMAT AND PUBLICATION DESIGN PASS COMPLETE / READY FOR FINAL CANDIDATE QA
+
+---
+
+## AIAAWP-R5 Known Issues
+
+### Final Candidate QA Complete
+
+AIAAWP-R5 completed final candidate QA for the internal AIAAWP publication candidate.
+
+Resolved in this wave:
+
+- Verified candidate Markdown, HTML, PDF, DOCX, manifest, checksums, metadata plan, JSON-LD plan, source register, citation map, generation log, and QA reports.
+- Verified package checksums.
+- Page-pinned the PDF candidate: 141 pages, chapters 0-16, appendices A-F, and source/citation section.
+- Rendered PDF proof samples under `reports/aiaawp-r5-pdf-proof-samples/`.
+- Patched the AIAAWP generator so HTML screen/mobile behavior inherits GAIC R3D-3 WAP/mobile responsive web-reading rules while preserving the print/PDF publication shell.
+- Verified DOCX as an editable derivative with `python-docx` and temporary LibreOffice PDF rendering.
+- Verified content structure, MRO coverage, AARM levels/dimensions, source IDs, metadata, JSON-LD, and boundary discipline.
+
+Remaining known issues:
+
+- No P0 internal final-candidate blocker remains.
+- Public staging remains future work: author release decision, public route/hub copy, public artifact placement, Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, OG/Twitter image, public checksum exposure, final seal, and launch pack.
+- Optional human page-by-page proofing and final citation/endnote styling remain publication-stage polish.
+
+Boundary discipline:
+
+- No public page or public route was created.
+- No AIAAWP artifact was copied to `public/`.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, indexing, public release, or external adoption claim was introduced.
+
+**AIAAWP-R5 Status:** ✓ FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING

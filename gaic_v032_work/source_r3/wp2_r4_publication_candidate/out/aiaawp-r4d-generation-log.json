@@ -1,23 +1,23 @@
 {
   "task": "AIAAWP-R4D-FORMAT-PUBLICATION-DESIGN-AND-GAIC-STANDARD-ALIGNMENT",
-  "generated_at": "2026-05-17T17:24:59Z",
+  "generated_at": "2026-05-18T02:16:35Z",
   "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
   "status": "Internal format candidate; not public, not final, not sealed, not live",
   "artifacts": {
     "html": {
       "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.html",
-      "sha256": "dd89b05361b037016df8e838902a9fdac7c7a0aeb4f678cc792161191e82cafc",
-      "bytes": 267292
+      "sha256": "74d0256280dcf9f6805594520a52536f3a1821af39afa267c743c013bee2a5a4",
+      "bytes": 271218
     },
     "pdf": {
       "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.pdf",
-      "sha256": "a09845a4d99928447b432df21ea9a35c86310bf7a72bc63c4e0b023ce5d75ade",
-      "bytes": 1257353,
+      "sha256": "df9ea5759e2e499ee1e2e9e682484956dbf9c567d81052b5afe4ef96727c2e17",
+      "bytes": 1258350,
       "pages": 141
     },
     "docx": {
       "path": "out/Agentic-AI-Auditability-Assurance-White-Paper-2026-v0.1-R4-Candidate.docx",
-      "sha256": "2a109909915fb89fdcc2262c6f543402b971081c5aefa806fa483f7f9f043751",
+      "sha256": "d7495424872f5013d754bc4974ddddaf6dbe907fc3303970f65c78701d6b0590",
       "bytes": 105650
     }
   },
