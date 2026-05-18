@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 18, 2026 (AIAAWP-R6B2 Post-R6A Production Live Verification)
+**Last Updated:** May 18, 2026 (AIAAWP-R7 Author Release Decision and Post-Release Evidence Capture Pack)
 
 ## WP2-R4B Candidate Artifact Generation
 
@@ -3173,3 +3173,40 @@ Boundary discipline:
 - No certification, audit standard, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, external adoption, indexing pickup, answer-engine recognition, or SEO/GEO uplift claim was introduced.
 
 **AIAAWP-R6B2 Status:** ✓ POST-R6A PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE
+
+---
+
+## AIAAWP-R7 Known Issues
+
+### Author Release Decision and Post-Release Evidence Capture Pack Complete
+
+AIAAWP-R7 prepares the owner-execution launch and evidence capture pack for the production-live verified public research candidate.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/launch/aiaawp-r7/`.
+- Created the author release decision record with default `author_release_decision: pending owner execution`.
+- Created post-release evidence log initialized with R6B2 production verification entries and pending external distribution rows.
+- Created LinkedIn Newsletter and standalone post drafts.
+- Created LinkedIn group distribution tracker with non-fabricated group placeholders.
+- Created answer-engine/search monitoring tracker with all rows defaulted to `to be tested`.
+- Created authority signal evidence tracker with empty/pending evidence rows.
+- Created distribution boundary guardrails and owner execution checklist.
+
+Remaining known issues:
+
+- Owner must explicitly approve or hold author release.
+- LinkedIn Newsletter, standalone post, and group distribution remain owner-execution tasks.
+- Answer-engine/search monitoring remains to be tested.
+- External backlinks, citations, comments, and authority signals remain pending observed evidence.
+- Final Seal remains blocked until a separate explicitly authorized wave.
+
+Boundary discipline:
+
+- No public artifacts or public routes were modified.
+- No GAIC public/sealed artifact changed.
+- No AIAAWP artifact content changed.
+- No score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No final seal, certification, audit standard, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, external adoption, indexing pickup, answer-engine recognition, or SEO/GEO uplift claim was introduced.
+
+**AIAAWP-R7 Status:** ✓ AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED
