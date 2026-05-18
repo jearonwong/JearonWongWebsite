@@ -3854,3 +3854,34 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - R6A does not claim production live verification, final/sealed status, external adoption, indexing, answer-engine recognition, SEO/GEO uplift, certification, regulator approval, legal compliance proof, assurance opinion, endorsement, procurement guidance, vendor ranking, MPLP requirement, Cognitive OS requirement, or SoloCrew enterprise readiness.
 
 **AIAAWP-R6A Status:** ✓ SEMANTIC MAPPING SOP AND PRE-SEAL GATE COMPLETE / READY FOR PRODUCTION LIVE VERIFICATION.
+
+## AIAAWP-R6B2 Notes (May 18, 2026)
+
+**Scope:** Post-R6A production live reverification.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `61db88b975152d9483bccbbdc139f7ca45927e17` before R6B2 report/governance work.
+2. Treated prior R6B commit `4d85d862280fe2917f226ec805602cc94a875e21` as sequence-premature and superseded by the R6A semantic mapping gate.
+3. Verified production availability for the AIAAWP route, HTML/PDF/DOCX artifacts, manifest, checksums, Evidence Registry, Concepts Map, Definitions, Governance, Playbooks, Ecosystem Mapping, About, MPLP project page, Research index, GAIC hub, `llms.txt`, entity graph JSON, sitemap, and robots.
+4. Downloaded production AIAAWP artifacts to `/tmp/aiaawp-r6b2-live/` and verified hashes match the R6 staged hashes exactly.
+5. Verified production checksums validate HTML, PDF, DOCX, and manifest.
+6. Verified post-R6A semantic mappings are live across Definitions, Governance, Playbooks, Ecosystem Mapping, About/Entity Authority, MPLP project context, Concept Core, Concepts Map, entity graph JSON, `llms.txt`, sitemap, and robots.
+7. Verified production metadata, citation metadata, and JSON-LD parse for the AIAAWP route and checked semantic entry pages.
+8. Verified responsive rendering through browser/headless checks and representative screenshots under `reports/aiaawp-r6b2-live-screens/`.
+9. Verified production PDF/DOCX metadata, openability, and extracted content coverage for document ID, chapters 0-16, appendices A-F, AARM L0-L5, and MRO-01 through MRO-16.
+
+**Artifact discipline:**
+
+- No AIAAWP public artifact was modified.
+- No AIAAWP internal artifact was regenerated.
+- No GAIC sealed/public artifact changed.
+- No public GAIC PDF metadata or responsive GAIC HTML was modified.
+- No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- R6B2 verifies production live status after R6A for the public research candidate only.
+- It does not claim final/sealed status, external adoption, indexing pickup, answer-engine recognition, SEO/GEO uplift, certification, regulator approval, legal compliance proof, assurance opinion, endorsement, procurement guidance, vendor ranking, MPLP requirement, Cognitive OS requirement, or SoloCrew enterprise readiness.
+
+**AIAAWP-R6B2 Status:** ✓ POST-R6A PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE.
