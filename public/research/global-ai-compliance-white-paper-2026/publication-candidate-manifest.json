@@ -8,8 +8,8 @@
   "sealed_from_phase": "1D-13F",
   "sealed_from_phase_status": "PHASE 1D-13F NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
   "page_count": 425,
-  "visual_authority": "HTML/PDF are the visual authority.",
-  "docx_note": "DOCX is an editable derivative generated from the same approved Phase 1D-13F source; it is not the visual authority.",
+  "visual_authority": "HTML/PDF are the public visual authority.",
+  "public_distribution_note": "The public website exposes HTML and PDF only after the R8B owner decision.",
   "content_change_policy": "No white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary language, or interoperability boundary language was changed during sealing.",
   "artifacts": [
     {
@@ -21,11 +21,6 @@
       "kind": "pdf",
       "path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.pdf",
       "sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643"
-    },
-    {
-      "kind": "docx",
-      "path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.docx",
-      "sha256": "b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa"
     },
     {
       "kind": "generation_log",

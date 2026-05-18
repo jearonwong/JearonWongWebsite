@@ -85,7 +85,7 @@ Gap categories used in this appendix:
 | Item | Publication Risk | Required QA | Expected Output | Owner Phase |
 |------|------------------|-------------|-----------------|-------------|
 | DOCX generation | Formatting may drift from Markdown source | Generate DOCX from reviewed source | Publication candidate DOCX | Phase 1D |
-| PDF generation | Tables or figures may clip or wrap poorly | Generate PDF from finalized DOCX/source | Publication candidate PDF | Phase 1D |
+| PDF generation | Tables or figures may clip or wrap poorly | Generate PDF from finalized source | Publication candidate PDF | Phase 1D |
 | Wide table rendering | Landscape tables may be unreadable or clipped | Inspect T-D-01, T-13/T-14/T-15/T-17/T-18, Appendix G, H-K tables | Wide-table remediation record | Phase 1D |
 | Figure readability | Figure panels or generated figures may not be publication grade | Verify figure resolution, labels, captions, and references | Figure QA record | Phase 1D |
 | Table captions and page breaks | Captions and headers may split incorrectly | Inspect page breaks, captions, repeated headers | Layout QA record | Phase 1D |

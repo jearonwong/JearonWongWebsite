@@ -8,7 +8,6 @@ const canonicalPath = "/research/agentic-ai-auditability-assurance-white-paper-2
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const pdfUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`;
 const htmlUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`;
-const docxUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`;
 const manifestUrl = `${siteConfig.siteUrl}${assetBase}/manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const gaicHubPath = "/research/global-ai-compliance-white-paper-2026/";
@@ -36,19 +35,15 @@ const citationMetaTags = [
 const shaRows = [
   {
     label: "HTML web-reading candidate",
-    value: "e1b248765f50aa1c4e5ffbef9276d8dcea155cafdb1262719a9d1badbe1c790e"
+    value: "4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4"
   },
   {
     label: "PDF visual candidate",
-    value: "e72b6def99790965d14c6f9292360f6ec768abc1aefbdb51ad43c355af468e0d"
-  },
-  {
-    label: "DOCX editable derivative",
-    value: "4868c30c19bb102fe399947fa9760307b34cf4148300ceef4cad908cffdaec37"
+    value: "547bb2c428cf7490fd8211b38c37c243eb1ca442e1047438d5f60bb1453e59b7"
   },
   {
     label: "Manifest",
-    value: "efd53a2a1975631e4b2540ca3b386ba93ca565f3f43bd439679bca09034812df"
+    value: "7ec4888fb2615baf66dd1d9af25c95cb691556660b680c5ec3da558e4831e7cd"
   }
 ];
 const keyConcepts = [
@@ -192,12 +187,6 @@ const articleJsonLd = {
       encodingFormat: "application/pdf",
       contentUrl: pdfUrl,
       sha256: shaRows[1].value
-    },
-    {
-      "@type": "MediaObject",
-      encodingFormat: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      contentUrl: docxUrl,
-      sha256: shaRows[2].value
     }
   ],
   mainEntityOfPage: {
@@ -252,7 +241,6 @@ const artifactListJsonLd = {
   itemListElement: [
     { name: "Read HTML", url: htmlUrl },
     { name: "Download PDF", url: pdfUrl },
-    { name: "Download DOCX derivative", url: docxUrl },
     { name: "Manifest", url: manifestUrl },
     { name: "Checksums", url: checksumUrl }
   ].map((item, index) => ({
@@ -310,7 +298,6 @@ const definedTermSetJsonLd = {
         <div class="hero-actions" aria-label="White paper actions">
           <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`} class="button button-primary">Read HTML</a>
           <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`} class="button button-outline">Download PDF</a>
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`} class="button button-outline">Download DOCX</a>
           <a href="#cite" class="button button-outline">Cite this paper</a>
         </div>
       </div>
@@ -328,7 +315,7 @@ const definedTermSetJsonLd = {
         </div>
         <div class="meta-line">
           <span>Artifact role model</span>
-          <strong>HTML/PDF are visual authority. DOCX is an editable derivative.</strong>
+          <strong>Public distribution exposes HTML and PDF only.</strong>
         </div>
       </aside>
     </section>
@@ -343,7 +330,7 @@ const definedTermSetJsonLd = {
           </div>
           <h2>Part of the same white paper standard.</h2>
           <p class="section-lead">
-            AIAAWP inherits the GAIC publication shell, responsive reading model, artifact role model,
+            AIAAWP inherits the GAIC publication shell, responsive reading model,
             metadata discipline, checksum pattern, and boundary language. It builds on GAIC by turning
             lifecycle responsibility objects into audit evidence objects.
           </p>
@@ -399,11 +386,6 @@ const definedTermSetJsonLd = {
             <strong>Download PDF</strong>
             <span>Fixed-layout visual authority</span>
           </a>
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`} class="artifact-card">
-            <span class="artifact-kind">DOCX</span>
-            <strong>Download DOCX derivative</strong>
-            <span>Editable derivative, not visual authority</span>
-          </a>
           <a href={`${assetBase}/manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
             <strong>Public staging manifest</strong>
@@ -434,7 +416,6 @@ const definedTermSetJsonLd = {
             <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
             <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
             <div><dt>PDF</dt><dd><a href={pdfUrl}>{pdfUrl}</a></dd></div>
-            <div><dt>DOCX</dt><dd><a href={docxUrl}>{docxUrl}</a></dd></div>
             <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
             <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
           </dl>

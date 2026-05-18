@@ -4,10 +4,11 @@
 **Last updated:** 2026-05-18
 **Scope:** Public HTML web-reading edition for the Global AI Compliance White Paper 2026.
 
-The sealed publication-candidate PDF and DOCX artifacts retain their sealed hashes:
+The sealed publication-candidate PDF artifact retains its sealed hash:
 
 - Sealed candidate PDF: `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`
-- DOCX: `b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa`
+
+Public website distribution now exposes only HTML and PDF. Earlier editable derivative files are no longer linked, listed in public checksums, or served from the public research artifact directory.
 
 The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18.
 
@@ -29,8 +30,8 @@ The public HTML file at:
 
 `public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html`
 
-was updated as a responsive web-reading edition derived from the sealed content. The update adds screen-only responsive CSS, a minimal return-to-hub navigation strip, mobile table/figure handling, mobile readability improvements, and safe page-level metadata/JSON-LD for crawler-visible Schema.org coverage. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or PDF/DOCX artifacts.
+was updated as a responsive web-reading edition derived from the sealed content. The update adds screen-only responsive CSS, a minimal return-to-hub navigation strip, mobile table/figure handling, mobile readability improvements, and safe page-level metadata/JSON-LD for crawler-visible Schema.org coverage. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, or PDF artifact content.
 
-Current responsive public HTML web edition hash:
+Current responsive public HTML web edition hash after public derivative offboarding:
 
-`ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce`
+`3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`

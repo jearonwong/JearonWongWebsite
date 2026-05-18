@@ -1,5 +1,32 @@
 # Reconstruction Notes
 
+## WHITEPAPER-R8B DOCX Public Offboarding Notes (May 18, 2026)
+
+**Scope:** Remove both white papers' public DOCX distribution surface after owner decision. Public website distribution is now HTML plus PDF only; DOCX remains an internal/editable derivative profile unless separately approved for public distribution.
+
+**Actions completed:**
+
+1. Removed the GAIC and AIAAWP public `.docx` files from `public/research/`.
+2. Removed DOCX public artifact references from hub pages, Evidence Registry, `llms.txt`, public manifests, public checksum files, and public JSON-LD artifact encodings.
+3. Updated the GAIC static HTML artifact to remove the public DOCX MediaObject encoding and replaced a visible public workflow label that referenced DOCX/source with source-only language.
+4. Updated AIAAWP static HTML layout notes that named DOCX as a public review surface.
+5. Updated the Whitepaper Series Publication SOP so DOCX is internal/private by default unless public distribution is explicitly approved.
+
+**Artifact discipline:**
+
+- GAIC public HTML hash is now `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- AIAAWP public HTML hash is now `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+- GAIC public PDF remains `8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9`.
+- AIAAWP public PDF remains `547bb2c428cf7490fd8211b38c37c243eb1ca442e1047438d5f60bb1453e59b7`.
+- GAIC sealed candidate PDF remains unchanged at `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Pre-existing untracked `public/social/*` assets remain outside scope.
+
+**Boundary discipline:**
+
+- R8B does not claim Final Seal, production reverification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+
+**WHITEPAPER-R8B Status:** WHITEPAPER-R8B DOCX PUBLIC OFFBOARDING COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
 ## WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair Notes (May 18, 2026)
 
 **Scope:** Correct the whitepaper publication system so HTML, PDF, and DOCX share canonical identity and metadata discipline while using profile-specific rendering rules. Repair GAIC and AIAAWP public PDFs under the PDF A4 Print Profile without forcing the public HTML artifacts into A4 pagination.

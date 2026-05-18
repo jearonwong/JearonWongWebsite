@@ -1,7 +1,30 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 18, 2026 (WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair)
+**Last Updated:** May 18, 2026 (WHITEPAPER-R8B DOCX Public Offboarding)
+
+## WHITEPAPER-R8B DOCX Public Offboarding
+
+### Status: WHITEPAPER-R8B DOCX PUBLIC OFFBOARDING COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+R8B records the owner decision that public white paper distribution should expose only HTML and PDF. DOCX remains an internal/editable derivative profile in the SOP unless a future owner approval explicitly allows public editable-derivative distribution.
+
+Resolved in this wave:
+
+1. Removed GAIC and AIAAWP `.docx` files from `public/research/`.
+2. Removed public DOCX links and JSON-LD artifact encodings from GAIC/AIAAWP hub surfaces and static public artifacts.
+3. Updated GAIC and AIAAWP public manifests/checksums to list only HTML/PDF plus required integrity metadata.
+4. Updated `llms.txt` and Evidence Registry surfaces to present HTML/PDF-only distribution.
+5. Updated the Whitepaper Series Publication SOP to state that DOCX is internal/private by default.
+
+Remaining known issue:
+
+- Production live reverification is required after deploy because public artifact availability and checksum surfaces changed.
+
+Boundary discipline:
+
+- R8B does not claim Final Seal, certification, audit standard status, assurance opinion, legal compliance proof, regulator approval, endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+- R8B does not change GAIC scores, GAIC methodology, AIAAWP argument semantics, or GAIC sealed candidate artifacts.
 
 ## WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair
 

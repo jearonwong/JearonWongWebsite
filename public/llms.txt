@@ -98,14 +98,14 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   v0.3.2 Public Edition. Technical Report ID / Trace Tag: GACWP-2026-v0.3.2-FRC-R3. Recommended citation: Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026. Defines Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.
   PDF: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf
   HTML: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
-  DOCX derivative: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.docx
+  Public distribution: HTML and PDF only.
   Manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
   Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 - Agentic AI Auditability & Assurance White Paper 2026: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/
   v0.1 Public Research Candidate. Document ID: AIAAWP-2026-v0.1-R4-CANDIDATE. Recommended citation: Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026. Defines agentic AI auditability, Agentic Audit Object, Audit Evidence Chain, AARM, and MRO-to-audit-evidence mapping for lifecycle evidence and enterprise AI governance.
   PDF: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf
   HTML: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html
-  DOCX derivative: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.docx
+  Public distribution: HTML and PDF only.
   Manifest: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json
   Checksums: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256
   Boundary: public research candidate staged for deployment verification; not final, not sealed, not production-live verified, not legal advice, not audit standard, not certification, not assurance opinion, not legal compliance proof, not regulator approval, not procurement recommendation, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.

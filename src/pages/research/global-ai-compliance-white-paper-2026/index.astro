@@ -8,7 +8,6 @@ const canonicalPath = "/research/global-ai-compliance-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const pdfUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.pdf`;
 const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.html`;
-const docxUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.docx`;
 const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
@@ -32,15 +31,11 @@ const citationMetaTags = [
 const shaRows = [
   {
     label: "PDF",
-    value: "facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329"
+    value: "8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9"
   },
   {
     label: "HTML web edition",
-    value: "ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce"
-  },
-  {
-    label: "DOCX",
-    value: "b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa"
+    value: "3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e"
   }
 ];
 const keyConcepts = [
@@ -168,12 +163,6 @@ const articleJsonLd = {
       encodingFormat: "text/html",
       contentUrl: htmlUrl,
       sha256: shaRows[1].value
-    },
-    {
-      "@type": "MediaObject",
-      encodingFormat: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      contentUrl: docxUrl,
-      sha256: shaRows[2].value
     }
   ],
   isPartOf: {
@@ -343,11 +332,6 @@ const definedTermSetJsonLd = {
             <strong>Read full HTML</strong>
             <span>Responsive web-reading edition</span>
           </a>
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.docx`} class="artifact-card">
-            <span class="artifact-kind">DOCX</span>
-            <strong>Download DOCX derivative</strong>
-            <span>Editable derivative</span>
-          </a>
           <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
             <strong>Seal manifest</strong>
@@ -399,7 +383,6 @@ const definedTermSetJsonLd = {
             <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
             <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
             <div><dt>PDF</dt><dd><a href={pdfUrl}>{pdfUrl}</a></dd></div>
-            <div><dt>DOCX</dt><dd><a href={docxUrl}>{docxUrl}</a></dd></div>
             <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
             <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
             <div><dt>Public PDF metadata re-seal</dt><dd><a href={`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}>{`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}</a></dd></div>
@@ -464,10 +447,9 @@ const definedTermSetJsonLd = {
           </div>
         </div>
         <p class="integrity-note">
-          The DOCX retains its sealed publication-candidate hash. The public PDF is a metadata-hardened
-          distribution re-seal of the sealed candidate PDF; its visible content and page count are unchanged,
-          and the sealed candidate PDF remains preserved. The public HTML file is the responsive web-reading
-          edition derived from the sealed content and carries its own checksum.
+          The public distribution surface now exposes only the PDF and HTML editions. The public PDF
+          is the R8 A4 Print Profile repair artifact, and the public HTML file remains the responsive
+          web-reading edition derived from the sealed content.
         </p>
       </section>
 

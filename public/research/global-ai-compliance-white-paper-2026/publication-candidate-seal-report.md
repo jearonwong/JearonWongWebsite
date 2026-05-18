@@ -26,7 +26,6 @@ This seal packages the approved Phase 1D-13F artifacts without editing white pap
 |---|---|---|
 | HTML | `gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.html` | `0bb6d33d7fa5c2930fc4f0da449b9bce37ba5f968300bd0fd3a251bcc5c925af` |
 | PDF | `gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.pdf` | `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643` |
-| DOCX | `gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.docx` | `b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa` |
 | Generation log | `gaic_v032_work/source_r3/out/publication_candidate/phase_1d13f_generation_log.json` | `414b912cd4fd190ab50a0a5b9fb09476d6d56628edcad281e2ac05776fc8da3e` |
 
 ## QA Basis
@@ -36,7 +35,7 @@ This seal packages the approved Phase 1D-13F artifacts without editing white pap
 | Page count | 425 |
 | Rendered page count from Phase 1D-13F log | 425 |
 | HTML/PDF visual authority | PASS |
-| DOCX derivative note | PASS |
+| Public distribution artifact surface | PASS: HTML and PDF only |
 | Citation blocker count | 0 |
 | Unresolved high-risk blocker count | 0 |
 | Positive forbidden claim blocker count | 0 |

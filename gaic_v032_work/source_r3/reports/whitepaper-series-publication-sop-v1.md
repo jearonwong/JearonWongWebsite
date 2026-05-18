@@ -105,6 +105,8 @@ The PDF profile must provide:
 
 Purpose: editable review/distribution derivative, not visual authority.
 
+Public distribution rule: DOCX is internal/editable by default and must not be exposed on the public website unless the owner explicitly approves public editable-derivative distribution for a specific release. The default public white paper surface is HTML plus PDF.
+
 The DOCX profile must provide:
 
 - editable text and tables
@@ -172,6 +174,7 @@ Every future whitepaper/guide artifact generation must reuse or explicitly adapt
 ### DOCX
 
 - editable derivative
+- internal/private by default unless public distribution is explicitly approved
 - metadata must be set
 - heading/table styles must be usable
 - not visual authority
