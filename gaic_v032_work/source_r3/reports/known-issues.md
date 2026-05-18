@@ -3084,34 +3084,56 @@ Boundary discipline:
 
 ---
 
-## AIAAWP-R6B Known Issues
+## AIAAWP-R6B Sequence Correction
 
-### Production Live Verification Complete
+### Verification Record Superseded By R6A Gate
 
-AIAAWP-R6B verified the production deployment of the Agentic AI Auditability & Assurance White Paper 2026 public research candidate.
+A prior R6B verification record exists in commit `4d85d862280fe2917f226ec805602cc94a875e21`. The user correction in AIAAWP-R6A requires a semantic mapping completion gate before R6B can be accepted as the current release-complete verification gate.
 
-Resolved in this wave:
+Current treatment:
 
-- Verified the production AIAAWP hub route, HTML artifact, PDF artifact, DOCX artifact, manifest, and checksums all return HTTP 200.
-- Verified production HTML/PDF/DOCX/manifest hashes match the R6 staged expected hashes.
-- Verified the production checksums file validates the public artifacts.
-- Verified metadata, citation metadata, and JSON-LD parse and use production URLs.
-- Verified representative mobile, tablet, and desktop screenshots with no detected body-level horizontal overflow.
-- Verified production PDF metadata, 141 page count, and text extraction for chapters 0-16, appendices A-F, AARM L0-L5, and MRO-01 through MRO-16.
-- Verified production DOCX openability, metadata, table structure, and extracted content markers.
-- Verified Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, research index, Concepts Map, and robots readiness.
-- Verified boundary sweep found only negative or limiting statements for restricted claims.
+- The earlier R6B report remains a historical verification record.
+- It is not a substitute for R6A semantic mapping completion.
+- It is not an authorization for final seal.
+- R6B must be rerun or reaccepted after R6A.
 
-Remaining known issues:
+Remaining known issues before final seal:
 
-- No P0 production verification blocker remains.
-- Author release decision, final artifact seal, dedicated launch pack, distribution evidence capture, and optional AIAAWP-specific social artwork remain future tasks.
-- No indexing, search ranking, answer-engine pickup, SEO/GEO uplift, external adoption, certification, assurance, legal, regulator, endorsement, procurement, or vendor-ranking outcome is claimed.
+- R6B production verification must occur after R6A.
+- Author release decision remains required.
+- Final seal remains blocked until explicitly authorized.
+- Distribution evidence capture remains a later task.
 
 Boundary discipline:
 
-- R6B is verification-only and did not modify public route content, public artifacts, metadata, JSON-LD, entity graph, `llms.txt`, sitemap source, GAIC artifacts, scores, or methodology.
-- The AIAAWP remains a public research candidate and is not claimed final or sealed.
-- Pre-existing untracked `public/social/*` files remain unstaged.
+- This correction does not claim final/sealed status, indexing, search ranking, answer-engine pickup, SEO/GEO uplift, external adoption, certification, assurance, legal compliance proof, regulator approval, endorsement, procurement guidance, or vendor ranking.
 
-**AIAAWP-R6B Status:** ✓ PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE
+**AIAAWP-R6B Status:** ◐ SUPERSEDED BY R6A PRE-SEAL GATE / RERUN OR REACCEPT AFTER R6A
+
+---
+
+## AIAAWP-R6A Known Issues
+
+### Semantic Mapping SOP And Pre-Seal Gate Complete
+
+AIAAWP-R6A adds the mandatory Whitepaper Semantic Mapping Completion Gate and completes the missing sitewide semantic mapping layer.
+
+Resolved in this wave:
+
+- Added the Whitepaper Semantic Mapping Completion Gate to `whitepaper-series-publication-sop-v1.md`.
+- Mapped AIAAWP into Definitions with index-level entries for Agentic AI Auditability, Agentic Audit Object, Audit Evidence Chain, AARM, and lifecycle-responsibility-linked agent work.
+- Added AIAAWP links to Governance, Playbooks, Ecosystem Mapping, About/Entity Authority, Concept Core, AIAAWP hub context links, and MPLP/project context.
+- Updated entity graph relation names and added the AIAAWP -> formalizes -> Audit Evidence Chain edge.
+- Verified JSON-LD, entity graph, `llms.txt`, sitemap, and boundary checks.
+
+Remaining known issues:
+
+- No P0 semantic mapping blocker remains.
+- R6B production live verification remains the next required wave.
+- Author release decision, final seal, distribution campaign, and post-release evidence capture remain future tasks.
+
+Boundary discipline:
+
+- R6A does not regenerate artifacts, alter GAIC artifacts, change scores/methodology, claim production live verification, claim final/sealed status, or claim indexing, answer-engine recognition, SEO/GEO uplift, certification, assurance, legal, regulator, endorsement, procurement, or vendor-ranking outcomes.
+
+**AIAAWP-R6A Status:** ✓ SEMANTIC MAPPING SOP AND PRE-SEAL GATE COMPLETE / READY FOR PRODUCTION LIVE VERIFICATION

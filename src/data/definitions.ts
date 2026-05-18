@@ -141,6 +141,114 @@ export const definitions: DefinitionEntry[] = [
     ]
   },
   {
+    slug: "audit-evidence-chain",
+    term: "Audit Evidence Chain",
+    section: "governance",
+    definition:
+      "An Audit Evidence Chain is a responsibility-linked evidence chain for agentic work that connects authority, role, tool action, evidence, outcome, exception, privacy treatment, and remediation closure.",
+    distinction:
+      "Not raw logs, traces, screenshots, or observability alone. AIAAWP treats audit evidence chains as lifecycle evidence architecture, not as an audit standard or assurance opinion.",
+    evidence: [
+      {
+        label: "AIAAWP: logs are not audit evidence chains",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains"
+      }
+    ],
+    related: [
+      { label: "Evidence Chain", href: "#evidence-chain" },
+      { label: "Agentic Audit Object", href: "#agentic-audit-object" },
+      { label: "Agentic AI Auditability", href: "#agentic-ai-auditability" }
+    ]
+  },
+  {
+    slug: "agentic-ai-auditability",
+    term: "Agentic AI Auditability",
+    section: "governance",
+    definition:
+      "Agentic AI Auditability is the ability to reconstruct, test, and evidence agentic lifecycle work across authority, responsibility, tools, outcomes, exceptions, privacy treatment, and closure.",
+    distinction:
+      "Not certification, an audit standard, legal compliance proof, assurance opinion, or vendor ranking. It is the AIAAWP public research candidate's auditability framing.",
+    evidence: [
+      {
+        label: "AIAAWP 2026 white paper hub",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/"
+      },
+      {
+        label: "AIAAWP executive thesis",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis"
+      }
+    ],
+    related: [
+      { label: "Audit Evidence Chain", href: "#audit-evidence-chain" },
+      { label: "AARM", href: "#aarm" },
+      { label: "AI Agent Governance", href: "#ai-agent-governance" }
+    ]
+  },
+  {
+    slug: "agentic-audit-object",
+    term: "Agentic Audit Object",
+    section: "governance",
+    definition:
+      "An Agentic Audit Object is a proposed review object for agentic work that makes delegated lifecycle activity inspectable through authority, role, tool, evidence, outcome, exception, privacy, and closure fields.",
+    distinction:
+      "Not a legal liability object, certification criterion, mandatory implementation schema, or audit-procedure template.",
+    evidence: [
+      {
+        label: "AIAAWP: Agentic Audit Object model",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview"
+      }
+    ],
+    related: [
+      { label: "Agentic AI Auditability", href: "#agentic-ai-auditability" },
+      { label: "Audit Evidence Chain", href: "#audit-evidence-chain" },
+      { label: "Lifecycle Responsibility Objects", href: "#lifecycle-responsibility-objects" }
+    ]
+  },
+  {
+    slug: "aarm",
+    term: "Agentic Auditability Readiness Model (AARM)",
+    section: "governance",
+    definition:
+      "AARM is the Agentic Auditability Readiness Model from AIAAWP, describing L0-L5 readiness states for lifecycle evidence, audit evidence chains, and assurance-planning discussion.",
+    distinction:
+      "Not a score, benchmark, certification, assurance result, legal compliance proof, procurement tool, or vendor comparison.",
+    evidence: [
+      {
+        label: "AIAAWP: Agentic Auditability Readiness Model",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model"
+      }
+    ],
+    related: [
+      { label: "Agentic AI Auditability", href: "#agentic-ai-auditability" },
+      { label: "Audit Evidence Chain", href: "#audit-evidence-chain" },
+      { label: "MRO", href: "/concepts/missing-regulatory-objects/" }
+    ]
+  },
+  {
+    slug: "lifecycle-responsibility-linked-agent-work",
+    term: "Lifecycle-Responsibility-Linked Agent Work",
+    section: "governance",
+    definition:
+      "Lifecycle-responsibility-linked agent work is agent work whose intent, authority, responsibility, tool actions, evidence, review, accepted outcome, exception handling, and closure remain connected.",
+    distinction:
+      "Not task completion, autonomous execution, generic observability, or a claim that a system is audit-ready by default.",
+    evidence: [
+      {
+        label: "AIAAWP 2026 white paper hub",
+        href: "/research/agentic-ai-auditability-assurance-white-paper-2026/"
+      },
+      {
+        label: "Agentic Lifecycle Governance concept core",
+        href: "/concepts/agentic-lifecycle-governance/"
+      }
+    ],
+    related: [
+      { label: "Agentic AI Auditability", href: "#agentic-ai-auditability" },
+      { label: "Evidence Chain", href: "#evidence-chain" },
+      { label: "Accepted Outcome", href: "#accepted-outcome" }
+    ]
+  },
+  {
     slug: "semantic-loss",
     term: "Semantic Loss",
     section: "governance",

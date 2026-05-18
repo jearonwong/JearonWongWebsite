@@ -602,7 +602,7 @@
     },
     {
       "source": "aiaawp-white-paper-2026",
-      "relation": "introduces_or_formalizes",
+      "relation": "formalizes",
       "target": "aarm",
       "evidence_status": "authored-analysis",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
@@ -610,7 +610,15 @@
     },
     {
       "source": "aiaawp-white-paper-2026",
-      "relation": "maps",
+      "relation": "formalizes",
+      "target": "audit-evidence-chain",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Evidence-chain formalization only; not an audit procedure or assurance opinion."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "maps_to",
       "target": "mro-to-audit-evidence",
       "evidence_status": "authored-analysis",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",

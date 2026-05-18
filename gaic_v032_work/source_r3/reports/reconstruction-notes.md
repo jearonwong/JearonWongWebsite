@@ -3811,37 +3811,46 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 
 **AIAAWP-R6 Status:** ✓ PUBLICATION STAGING COMPLETE / DEPLOYMENT VERIFICATION REQUIRED.
 
-## AIAAWP-R6B Notes (May 18, 2026)
+## AIAAWP-R6B Sequence Correction Notes (May 18, 2026)
 
-**Scope:** Production live verification for the Agentic AI Auditability & Assurance White Paper 2026 public research candidate.
+**Scope:** Correct governance ordering after the user identified the missing semantic mapping gate.
+
+The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94a875e21` is treated as sequence-premature. It remains historical evidence, but it is not accepted as the current release-complete gate because AIAAWP had not yet completed the new Whitepaper Semantic Mapping Completion Gate.
+
+**Corrected order:**
+
+1. R6 publication staging.
+2. R6A semantic mapping SOP and pre-seal gate.
+3. R6B production live verification after R6A.
+4. Author release decision.
+5. Final seal only if explicitly authorized.
+
+**AIAAWP-R6B Status:** ◐ SUPERSEDED BY R6A PRE-SEAL GATE / RERUN OR REACCEPT AFTER R6A.
+
+## AIAAWP-R6A Notes (May 18, 2026)
+
+**Scope:** Semantic mapping SOP extension and AIAAWP sitewide semantic mapping completion.
 
 **Actions completed:**
 
-1. Confirmed repo truth on `main`: local and origin were aligned at `5e23197b8a8cad4e94490c60c75074a1ff2bf63c` before AIAAWP-R6B reports.
-2. Verified production URL availability for the AIAAWP hub route, HTML/PDF/DOCX artifacts, manifest, checksums, GAIC hub, Evidence Registry, Concepts Map, research index, `llms.txt`, sitemap files, `robots.txt`, and entity graph.
-3. Downloaded production artifacts to `/tmp/aiaawp-r6b-live/` and confirmed hashes match R6 staged expected values.
-4. Confirmed the production checksums file validates the public HTML, PDF, DOCX, and manifest files.
-5. Parsed production metadata, citation metadata, and JSON-LD from the public hub route.
-6. Captured representative production screenshots for hub and HTML artifact at mobile, tablet, and desktop widths.
-7. Verified production PDF metadata, 141 page count, text extraction, document ID, chapters, appendices, AARM levels, and MRO markers.
-8. Verified production DOCX openability, metadata, table count, extracted text markers, and editable-derivative role.
-9. Verified Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, research index, Concepts Map, and robots technical visibility wiring.
-10. Completed production boundary and forbidden-claim sweep.
-11. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
-12. Created R6B preflight, production URL availability, artifact integrity, metadata/JSON-LD, visual/responsive, PDF/DOCX, SEO/GEO/entity wiring, boundary, build/validation, and final QA reports.
+1. Confirmed repo truth on `main`: local and origin were aligned at `4d85d862280fe2917f226ec805602cc94a875e21` before R6A edits.
+2. Added the Whitepaper Semantic Mapping Completion Gate to the Whitepaper Series Publication SOP.
+3. Audited AIAAWP against Research, Evidence Registry, Concepts, Concepts Map, Definitions, Governance, Playbooks, Ecosystem Mapping, About/Entity Authority, Project/MPLP, Entity Graph, `llms.txt`, sitemap, robots, metadata, JSON-LD, citation metadata, OG/Twitter metadata, and artifact integrity surfaces.
+4. Patched Definitions with index-level AIAAWP terms and source links.
+5. Patched Governance, Playbooks, Ecosystem Mapping, About/Entity Authority, Concept Core, AIAAWP hub context links, and MPLP/project context.
+6. Updated entity graph relation naming and added the AIAAWP formalizes Audit Evidence Chain edge.
+7. Verified JSON-LD parse, entity graph parse, `llms.txt` coverage, sitemap coverage, boundary discipline, and GAIC artifact hashes.
+8. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
 
 **Artifact discipline:**
 
-- AIAAWP public artifacts were verified on production but not modified.
-- No public route content, artifact, metadata, JSON-LD, entity graph, `llms.txt`, sitemap source, or visual implementation was changed.
-- No sealed GAIC candidate artifact changed.
-- Public GAIC PDF metadata re-seal remains unchanged.
-- Responsive public GAIC HTML artifact remains unchanged.
+- No AIAAWP PDF/HTML/DOCX artifact was regenerated.
+- No GAIC sealed/public artifact changed.
+- No public GAIC PDF metadata or responsive GAIC HTML was modified.
 - No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
 
 **Boundary discipline:**
 
-- R6B records production live verification completion only for the AIAAWP public research candidate.
-- It does not claim AIAAWP is final, sealed, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+- R6A does not claim production live verification, final/sealed status, external adoption, indexing, answer-engine recognition, SEO/GEO uplift, certification, regulator approval, legal compliance proof, assurance opinion, endorsement, procurement guidance, vendor ranking, MPLP requirement, Cognitive OS requirement, or SoloCrew enterprise readiness.
 
-**AIAAWP-R6B Status:** ✓ PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE.
+**AIAAWP-R6A Status:** ✓ SEMANTIC MAPPING SOP AND PRE-SEAL GATE COMPLETE / READY FOR PRODUCTION LIVE VERIFICATION.

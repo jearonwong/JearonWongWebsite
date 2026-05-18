@@ -58,6 +58,10 @@ export const siteSemanticBaseline = {
     "Agentic AI Risk Management",
     "Board Reporting for Agentic AI",
     "Audit Readiness for AI Agents",
+    "Agentic AI Auditability",
+    "Audit Evidence Chain",
+    "Agentic Audit Object",
+    "AARM",
     "Prompt Engineering vs Harness Engineering",
     "Agentic Delivery Architecture Checklist",
     "Regulatory and Enterprise Governance Mapping",
@@ -2407,6 +2411,7 @@ export interface PlaybookEntry {
 const commonGaicPlaybookLinks: PlaybookLink[] = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" }

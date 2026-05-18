@@ -14,6 +14,7 @@ const aboutKeywords = [
   "AI Agent Lifecycle",
   "Agentic Lifecycle Governance",
   "Global AI Compliance White Paper 2026",
+  "Agentic AI Auditability & Assurance White Paper 2026",
   "MPLP",
   "AI agent governance"
 ];
@@ -32,6 +33,11 @@ const knownFor = [
     label: "Global AI Compliance White Paper 2026",
     href: "/research/global-ai-compliance-white-paper-2026/",
     body: "The technical report that formalizes Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and Agentic Lifecycle Governance."
+  },
+  {
+    label: "Agentic AI Auditability & Assurance White Paper 2026",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    body: "The public research candidate extending the series into agentic AI auditability, audit evidence chains, AARM, and MRO-to-audit-evidence mapping."
   }
 ];
 const authoredAndDefined = [
@@ -39,6 +45,8 @@ const authoredAndDefined = [
   { label: "Missing Regulatory Objects", href: "/concepts/missing-regulatory-objects/", relation: "introduces / formalizes" },
   { label: "RCCS-M", href: "/concepts/rccs-m/", relation: "defines as MRO-adjusted coverage model" },
   { label: "ALCS", href: "/concepts/alcs/", relation: "defines as lifecycle conformance model" },
+  { label: "Agentic AI Auditability", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", relation: "develops through AIAAWP" },
+  { label: "AARM", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model", relation: "formalizes as auditability readiness model" },
   { label: "Deterministic Delivery", href: "/concepts/deterministic-delivery/", relation: "develops as engineering discipline" },
   { label: "Agentic Delivery", href: "/concepts/agentic-delivery/", relation: "names as delivery category" }
 ];
@@ -52,6 +60,7 @@ const evidenceLinks = [
   { label: "Evidence Registry / Citation Kit", href: "/evidence/" },
   { label: "Concepts Map / Entity Mesh", href: "/concepts/map/" },
   { label: "GAIC responsive HTML full text", href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html" },
+  { label: "AIAAWP white paper hub", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/" },
   { label: "GAIC systems mapping", href: "/research/global-ai-compliance-white-paper-2026/systems/" },
   { label: "Entity graph JSON artifact", href: "/entity/jearonwong-mplp-gaic-entity-graph.json" }
 ];
@@ -85,6 +94,7 @@ const aboutPageJsonLd = {
   },
   relatedLink: [
     absoluteUrl("/research/global-ai-compliance-white-paper-2026/"),
+    absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/"),
     absoluteUrl("/concepts/agentic-lifecycle-governance/"),
     absoluteUrl("/projects/mplp/"),
     absoluteUrl("/projects/")
@@ -147,6 +157,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
           </div>
           <div class="identity-routes">
             <a href="/research/global-ai-compliance-white-paper-2026/">Global AI Compliance White Paper 2026</a>
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/">AIAAWP 2026</a>
             <a href="/concepts/agentic-lifecycle-governance/">Agentic Lifecycle Governance</a>
             <a href="/projects/mplp/">MPLP protocol path</a>
             <a href="/evidence/">Evidence Registry</a>

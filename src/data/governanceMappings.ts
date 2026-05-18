@@ -31,6 +31,7 @@ export interface GovernanceMapping {
 const commonGovernanceLinks = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
@@ -133,6 +134,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "AI Agent Governance",
       "AI agent compliance",
       "agentic lifecycle governance",
+      "Agentic AI Auditability",
       "Evidence Chain",
       "Accepted Outcome",
       "Authority Boundary",
@@ -232,6 +234,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Enterprise Agent Governance",
       "enterprise AI agent governance",
       "AI agent auditability",
+      "Agentic AI Auditability & Assurance White Paper 2026",
       "evidence retention",
       "vendor substitution",
       "incident closure"

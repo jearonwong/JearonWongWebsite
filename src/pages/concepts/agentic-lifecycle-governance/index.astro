@@ -8,6 +8,8 @@ const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const whitePaperPdf = "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf";
 const whitePaperHtml = "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html";
+const aiaawpHub = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
+const aiaawpHtml = "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html";
 const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const governancePath = "/governance/";
@@ -24,6 +26,9 @@ const keywords = [
   "MPLP",
   "Multi-Agent Lifecycle Protocol",
   "Evidence Chain",
+  "Agentic AI Auditability",
+  "Audit Evidence Chain",
+  "AARM",
   "Accepted Outcome",
   "Authority Boundary",
   "Regulatory and Enterprise Governance Mapping",
@@ -125,6 +130,9 @@ const internalLinks = [
   { href: "/playbooks/ai-coding-agent-auditability/", label: "AI Coding Agent Auditability" },
   { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" },
   { href: whitePaperHub, label: "White paper hub" },
+  { href: aiaawpHub, label: "AIAAWP auditability companion" },
+  { href: `${aiaawpHtml}#4-why-logs-are-not-audit-evidence-chains`, label: "Audit Evidence Chain" },
+  { href: `${aiaawpHtml}#13-agentic-auditability-readiness-model`, label: "AARM" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },
@@ -182,7 +190,14 @@ const articleJsonLd = {
     "@type": "TechArticle",
     name: "Global AI Compliance White Paper 2026",
     url: `${siteConfig.siteUrl}${whitePaperHub}`
-  }
+  },
+  mentions: [
+    {
+      "@type": "TechArticle",
+      name: "Agentic AI Auditability & Assurance White Paper 2026",
+      url: `${siteConfig.siteUrl}${aiaawpHub}`
+    }
+  ]
 };
 const definedTermJsonLd = {
   "@context": "https://schema.org",
@@ -257,6 +272,7 @@ const breadcrumbJsonLd = {
         <div class="hero-actions" aria-label="Concept Core actions">
           <a href="#concept-core" class="button button-primary">Read the concept core</a>
           <a href={whitePaperHub} class="button button-outline">Open white paper</a>
+          <a href={aiaawpHub} class="button button-outline">Open auditability companion</a>
           <a href="/concepts/map/" class="button button-outline">Open Concepts Map</a>
         </div>
       </div>

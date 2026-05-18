@@ -14,6 +14,7 @@ const definitionsUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 const conceptsMapPath = "/concepts/map/";
 const conceptIndexPath = "/concepts/";
 const governanceAiAgentPath = "/governance/ai-agent-governance/";
+const aiaawpPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
 
 const definitionsPageJsonLd = {
   "@context": "https://schema.org",
@@ -30,7 +31,8 @@ const definitionsPageJsonLd = {
   },
   significantLink: [
     `${siteConfig.siteUrl}${conceptIndexPath}`,
-    `${siteConfig.siteUrl}${conceptsMapPath}`
+    `${siteConfig.siteUrl}${conceptsMapPath}`,
+    `${siteConfig.siteUrl}${aiaawpPath}`
   ],
   breadcrumb: {
     "@id": `${definitionsUrl}#breadcrumb`
@@ -107,6 +109,7 @@ const breadcrumbJsonLd = {
           <a href={conceptIndexPath}>Concepts reference layer</a>
           <a href={conceptsMapPath}>Concepts Map / Entity Mesh</a>
           <a href={governanceAiAgentPath}>AI Agent Governance mapping</a>
+          <a href={aiaawpPath}>AIAAWP auditability white paper</a>
         </div>
       </section>
 
