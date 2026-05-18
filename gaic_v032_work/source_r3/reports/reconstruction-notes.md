@@ -3810,3 +3810,38 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim AIAAWP is production live verified, final, sealed, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
 
 **AIAAWP-R6 Status:** ✓ PUBLICATION STAGING COMPLETE / DEPLOYMENT VERIFICATION REQUIRED.
+
+## AIAAWP-R6B Notes (May 18, 2026)
+
+**Scope:** Production live verification for the Agentic AI Auditability & Assurance White Paper 2026 public research candidate.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `5e23197b8a8cad4e94490c60c75074a1ff2bf63c` before AIAAWP-R6B reports.
+2. Verified production URL availability for the AIAAWP hub route, HTML/PDF/DOCX artifacts, manifest, checksums, GAIC hub, Evidence Registry, Concepts Map, research index, `llms.txt`, sitemap files, `robots.txt`, and entity graph.
+3. Downloaded production artifacts to `/tmp/aiaawp-r6b-live/` and confirmed hashes match R6 staged expected values.
+4. Confirmed the production checksums file validates the public HTML, PDF, DOCX, and manifest files.
+5. Parsed production metadata, citation metadata, and JSON-LD from the public hub route.
+6. Captured representative production screenshots for hub and HTML artifact at mobile, tablet, and desktop widths.
+7. Verified production PDF metadata, 141 page count, text extraction, document ID, chapters, appendices, AARM levels, and MRO markers.
+8. Verified production DOCX openability, metadata, table count, extracted text markers, and editable-derivative role.
+9. Verified Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, research index, Concepts Map, and robots technical visibility wiring.
+10. Completed production boundary and forbidden-claim sweep.
+11. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+12. Created R6B preflight, production URL availability, artifact integrity, metadata/JSON-LD, visual/responsive, PDF/DOCX, SEO/GEO/entity wiring, boundary, build/validation, and final QA reports.
+
+**Artifact discipline:**
+
+- AIAAWP public artifacts were verified on production but not modified.
+- No public route content, artifact, metadata, JSON-LD, entity graph, `llms.txt`, sitemap source, or visual implementation was changed.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- R6B records production live verification completion only for the AIAAWP public research candidate.
+- It does not claim AIAAWP is final, sealed, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+
+**AIAAWP-R6B Status:** ✓ PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE.

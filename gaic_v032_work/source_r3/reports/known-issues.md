@@ -3081,3 +3081,37 @@ Boundary discipline:
 - No GAIC sealed/public artifacts, GAIC scores, or GAIC methodology changed.
 
 **AIAAWP-R6 Status:** ✓ PUBLICATION STAGING COMPLETE / DEPLOYMENT VERIFICATION REQUIRED
+
+---
+
+## AIAAWP-R6B Known Issues
+
+### Production Live Verification Complete
+
+AIAAWP-R6B verified the production deployment of the Agentic AI Auditability & Assurance White Paper 2026 public research candidate.
+
+Resolved in this wave:
+
+- Verified the production AIAAWP hub route, HTML artifact, PDF artifact, DOCX artifact, manifest, and checksums all return HTTP 200.
+- Verified production HTML/PDF/DOCX/manifest hashes match the R6 staged expected hashes.
+- Verified the production checksums file validates the public artifacts.
+- Verified metadata, citation metadata, and JSON-LD parse and use production URLs.
+- Verified representative mobile, tablet, and desktop screenshots with no detected body-level horizontal overflow.
+- Verified production PDF metadata, 141 page count, and text extraction for chapters 0-16, appendices A-F, AARM L0-L5, and MRO-01 through MRO-16.
+- Verified production DOCX openability, metadata, table structure, and extracted content markers.
+- Verified Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, research index, Concepts Map, and robots readiness.
+- Verified boundary sweep found only negative or limiting statements for restricted claims.
+
+Remaining known issues:
+
+- No P0 production verification blocker remains.
+- Author release decision, final artifact seal, dedicated launch pack, distribution evidence capture, and optional AIAAWP-specific social artwork remain future tasks.
+- No indexing, search ranking, answer-engine pickup, SEO/GEO uplift, external adoption, certification, assurance, legal, regulator, endorsement, procurement, or vendor-ranking outcome is claimed.
+
+Boundary discipline:
+
+- R6B is verification-only and did not modify public route content, public artifacts, metadata, JSON-LD, entity graph, `llms.txt`, sitemap source, GAIC artifacts, scores, or methodology.
+- The AIAAWP remains a public research candidate and is not claimed final or sealed.
+- Pre-existing untracked `public/social/*` files remain unstaged.
+
+**AIAAWP-R6B Status:** ✓ PRODUCTION LIVE VERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE
