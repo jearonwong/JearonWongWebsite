@@ -3749,3 +3749,34 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
 
 **AIAAWP-R5 Status:** ✓ FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING.
+
+## AIAAWP-R5A Notes (May 18, 2026)
+
+**Scope:** Whitepaper Series Publication SOP Patch.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `a560d80ae579567f6ec2bff84d870c190fd0f111` before AIAAWP-R5A edits.
+2. Inspected SOURCE MASTER, known issues, reconstruction notes, AIAAWP R4B/R4C/R4D/R5 reports, GAIC R3D-3 responsive/mobile reports, GAIC R3K metadata reports, GAIC publication manifest/checksum notes, and generation scripts for reference only.
+3. Confirmed no dedicated Whitepaper Series Publication SOP existed; existing materials were GAIC-specific or wave-specific rather than a future pre-generation gate.
+4. Created `reports/whitepaper-series-publication-sop-v1.md`.
+5. Defined a mandatory GAIC Publication Standard Reuse Gate before future artifact generation.
+6. Required future AIAAWP-R6, WP3, Guide 1, Guide 2, and Guide 3 waves to pass the SOP gate before artifact generation or publication staging.
+7. Created R5A preflight, SOP QA, build/validation, and final QA records.
+
+**Artifact discipline:**
+
+- No AIAAWP artifact was modified or regenerated.
+- No public page or public route was created.
+- No artifact was copied to `public/`.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- AIAAWP-R5A is a governance/SOP patch only.
+- It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+
+**AIAAWP-R5A Status:** ✓ WHITEPAPER SERIES PUBLICATION SOP PATCH COMPLETE / READY FOR AIAAWP-R6 PUBLICATION STAGING.

@@ -3015,3 +3015,39 @@ Boundary discipline:
 - No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, indexing, public release, or external adoption claim was introduced.
 
 **AIAAWP-R5 Status:** ✓ FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING
+
+---
+
+## AIAAWP-R5A Known Issues
+
+### Whitepaper Series Publication SOP Patch Complete
+
+AIAAWP-R5A adds a mandatory publication SOP for future Agentic Lifecycle Governance Industry Series artifacts.
+
+Resolved in this wave:
+
+- Created `whitepaper-series-publication-sop-v1.md`.
+- Required a GAIC Publication Standard Reuse Gate before future HTML/PDF/DOCX artifact generation.
+- Required reuse or explicit adaptation of the GAIC publication shell, responsive/mobile/WAP rules, PDF generation approach, DOCX derivative strategy, metadata/citation/JSON-LD rules, manifest/checksum pattern, boundary language, and public naming pattern.
+- Preserved the artifact role model: HTML and PDF are visual authority; DOCX is an editable derivative; Markdown/source is working text; manifest/checksum is the integrity layer.
+- Added hard fail conditions for generator-first artifact generation, file-existence-only QA, missing mobile rules, public-facing WP2/WP3 identity, premature public copies, and unsupported SEO/GEO outcome claims.
+- Applied the SOP explicitly to AIAAWP-R6 publication staging, WP3 artifact generation, Guide 1 artifact generation, Guide 2 artifact generation, and Guide 3 artifact generation.
+
+Remaining known issues:
+
+- No P0 SOP blocker remains.
+- AIAAWP-R6 publication staging still requires author release decision, public route/hub work, public artifact placement, Evidence Registry, entity graph, `llms.txt`, sitemap, GAIC hub crosslink, OG/Twitter image, public checksum exposure, final seal, and launch pack.
+- Future WP3 / Guide 1 / Guide 2 / Guide 3 waves must pass the SOP gate before artifact generation.
+
+Boundary discipline:
+
+- No AIAAWP artifact was modified or regenerated.
+- No public page or public route was created.
+- No artifact was copied to `public/`.
+- No sealed GAIC candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper source, score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+- No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, indexing, public release, or external adoption claim was introduced.
+
+**AIAAWP-R5A Status:** ✓ WHITEPAPER SERIES PUBLICATION SOP PATCH COMPLETE / READY FOR AIAAWP-R6 PUBLICATION STAGING
