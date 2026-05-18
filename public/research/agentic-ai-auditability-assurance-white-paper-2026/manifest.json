@@ -1,0 +1,63 @@
+{
+  "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+  "title": "Agentic AI Auditability & Assurance White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
+  "author": "Jearon Wong",
+  "series": "Agentic Lifecycle Governance Industry Series",
+  "status": "public_research_candidate_staged",
+  "publication_stage": "publication_staging",
+  "deployment_verification_required": true,
+  "not_final": true,
+  "not_sealed": true,
+  "production_live_verified": false,
+  "public_route": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+  "canonical_artifact_base": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+  "artifact_role_model": {
+    "html": "responsive web-reading visual authority",
+    "pdf": "fixed-layout visual authority",
+    "docx": "editable derivative"
+  },
+  "gaic_standard_reuse": {
+    "sop": "gaic_v032_work/source_r3/reports/whitepaper-series-publication-sop-v1.md",
+    "r5_source_status": "AIAAWP-R5 FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING",
+    "html_pdf_visual_authority": true,
+    "docx_editable_derivative": true,
+    "metadata_jsonld_aligned": true,
+    "manifest_checksum_pattern_aligned": true
+  },
+  "artifacts": [
+    {
+      "role": "HTML",
+      "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
+      "media_type": "text/html",
+      "sha256": "e1b248765f50aa1c4e5ffbef9276d8dcea155cafdb1262719a9d1badbe1c790e",
+      "bytes": 271443
+    },
+    {
+      "role": "PDF",
+      "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
+      "media_type": "application/pdf",
+      "sha256": "e72b6def99790965d14c6f9292360f6ec768abc1aefbdb51ad43c355af468e0d",
+      "bytes": 1369639
+    },
+    {
+      "role": "DOCX",
+      "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "4868c30c19bb102fe399947fa9760307b34cf4148300ceef4cad908cffdaec37",
+      "bytes": 105667
+    }
+  ],
+  "checksums": "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
+  "boundary": "Public research candidate staged in repository for deployment verification. Not final, not sealed, not production-live verified, not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.",
+  "staging_normalization": {
+    "scope": "public-copy-only metadata/status normalization",
+    "internal_r5_artifacts_unchanged": true,
+    "reason": "Public route artifacts must not describe themselves as internal-only or noindex once staged under a public research path.",
+    "docx_status_text_patch": "Updated public DOCX copy status from internal candidate wording to public research candidate wording.",
+    "pdf_regenerated_from_public_html": "Public PDF regenerated from normalized public HTML after stale internal-only status text was detected in PDF text extraction."
+  },
+  "generated_at_utc": "2026-05-18T06:50:54Z",
+  "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
+  "updated_at_utc": "2026-05-18T07:29:10Z"
+}

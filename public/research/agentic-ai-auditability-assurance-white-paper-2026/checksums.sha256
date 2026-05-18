@@ -1,0 +1,6 @@
+# SHA256 checksums for AIAAWP R6 public research candidate artifacts
+# Paths are relative to this directory. checksums.sha256 excludes itself.
+e1b248765f50aa1c4e5ffbef9276d8dcea155cafdb1262719a9d1badbe1c790e  agentic-ai-auditability-assurance-white-paper-2026.html
+e72b6def99790965d14c6f9292360f6ec768abc1aefbdb51ad43c355af468e0d  agentic-ai-auditability-assurance-white-paper-2026.pdf
+4868c30c19bb102fe399947fa9760307b34cf4148300ceef4cad908cffdaec37  agentic-ai-auditability-assurance-white-paper-2026.docx
+efd53a2a1975631e4b2540ca3b386ba93ca565f3f43bd439679bca09034812df  manifest.json

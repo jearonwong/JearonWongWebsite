@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-r3m1",
-  "generated_at": "2026-05-14",
-  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, external adoption, indexing, ranking, backlinks, or answer-engine citation.",
+  "version": "2026-05-r6-aiaawp-staging",
+  "generated_at": "2026-05-18",
+  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, sealed artifact status, or production live verification.",
   "nodes": [
     {
       "id": "jearon-wong",
@@ -227,6 +227,96 @@
       "source_authority": "external-official-source",
       "description": "External system treated as an interpretation subject in GAIC lifecycle governance mapping.",
       "boundary": "Official product facts remain with Google official documentation."
+    },
+    {
+      "id": "agentic-lifecycle-governance-industry-series",
+      "name": "Agentic Lifecycle Governance Industry Series",
+      "type": "CreativeWorkSeries",
+      "canonical_url": "https://www.jearonwong.com/research/",
+      "source_authority": "owned-canonical",
+      "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets.",
+      "boundary": "Series grouping only; not certification, legal advice, regulator approval, or publication-live verification."
+    },
+    {
+      "id": "aiaawp-white-paper-2026",
+      "name": "Agentic AI Auditability & Assurance White Paper 2026",
+      "type": "TechnicalReport",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "source_authority": "authored-analysis",
+      "description": "Public research candidate AIAAWP-2026-v0.1-R4-CANDIDATE defining agentic AI auditability, audit evidence chains, AARM, and MRO-to-audit-evidence mapping.",
+      "boundary": "Public research candidate staged for deployment verification; not final, sealed, live-verified, legal compliance proof, audit standard, certification, regulator approval, assurance opinion, endorsement, vendor ranking, or procurement guidance."
+    },
+    {
+      "id": "agentic-ai-auditability",
+      "name": "Agentic AI Auditability",
+      "type": "GovernanceConcept",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis",
+      "source_authority": "authored-analysis",
+      "description": "Auditability framing for reconstructing agentic work through lifecycle evidence, authority, roles, tools, outcomes, exceptions, and closure.",
+      "boundary": "Author-analytical concept; not an audit standard or assurance opinion."
+    },
+    {
+      "id": "agentic-audit-object",
+      "name": "Agentic Audit Object",
+      "type": "GovernanceObject",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview",
+      "source_authority": "authored-analysis",
+      "description": "Object model for lifecycle-linked auditability of agent work.",
+      "boundary": "Proposed object model; not legal liability assignment or certification criteria."
+    },
+    {
+      "id": "audit-evidence-chain",
+      "name": "Audit Evidence Chain",
+      "type": "GovernanceConcept",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains",
+      "source_authority": "authored-analysis",
+      "description": "Responsibility-linked evidence chain that distinguishes raw logs from reviewable audit evidence.",
+      "boundary": "Evidence architecture concept; not an audit procedure or assurance conclusion."
+    },
+    {
+      "id": "aarm",
+      "name": "AARM",
+      "type": "EvaluationModel",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model",
+      "source_authority": "authored-analysis",
+      "description": "Agentic Auditability Readiness Model describing L0-L5 readiness levels and auditability dimensions.",
+      "boundary": "Readiness model only; not certification, vendor score, assurance result, or legal compliance proof."
+    },
+    {
+      "id": "mro-to-audit-evidence",
+      "name": "MRO-to-Audit-Evidence Mapping",
+      "type": "MappingLayer",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#6-mro-to-audit-evidence-mapping",
+      "source_authority": "authored-analysis",
+      "description": "Mapping from GAIC Missing Regulatory Objects to audit evidence objects in AIAAWP.",
+      "boundary": "Author-synthesis mapping; not regulator-approved mapping, audit standard, or procurement guidance."
+    },
+    {
+      "id": "guide-1-audit-ready-ai-agent-systems",
+      "name": "CIO/CTO Guide to Audit-Ready AI Agent Systems",
+      "type": "PlannedGuide",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#series-title",
+      "source_authority": "planned-series-reference",
+      "description": "Future practitioner guide that may translate AIAAWP into audit-ready technical implementation planning.",
+      "boundary": "Planned future asset; no public guide or implementation mandate is claimed."
+    },
+    {
+      "id": "guide-2-agentic-lifecycle-governance",
+      "name": "Chief Compliance Officer Guide to Agentic Lifecycle Governance",
+      "type": "PlannedGuide",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#series-title",
+      "source_authority": "planned-series-reference",
+      "description": "Future practitioner guide that may translate GAIC and AIAAWP into compliance operating-model planning.",
+      "boundary": "Planned future asset; no public guide, legal advice, or compliance proof is claimed."
+    },
+    {
+      "id": "agentic-ai-insurability-white-paper-2026",
+      "name": "Agentic AI Insurability White Paper 2026",
+      "type": "PlannedTechnicalReport",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/#series-title",
+      "source_authority": "planned-series-reference",
+      "description": "Future white paper expected to address insurability after separate source research and QA.",
+      "boundary": "Planned future asset; no insurance guarantee, underwriting standard, or publication-live status is claimed."
     }
   ],
   "edges": [
@@ -466,6 +556,102 @@
       "source": "evidence-registry",
       "relation": "is_evidence_surface_for",
       "target": "gaic-white-paper-2026",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/evidence/",
+      "boundary": "Citation and evidence index only; no answer-engine or indexing outcome claim."
+    },
+    {
+      "source": "jearon-wong",
+      "relation": "authored",
+      "target": "aiaawp-white-paper-2026",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Authorship relation for public research candidate; no external adoption, indexing, or live verification claim."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "belongs_to",
+      "target": "agentic-lifecycle-governance-industry-series",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Series relationship only; not a final/sealed publication claim."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "builds_on",
+      "target": "gaic-white-paper-2026",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Companion-paper relationship; GAIC artifacts and methodology remain unchanged."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "defines",
+      "target": "agentic-ai-auditability",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Concept definition, not an audit standard."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "defines",
+      "target": "agentic-audit-object",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Object-model definition, not legal liability assignment."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "introduces_or_formalizes",
+      "target": "aarm",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Readiness model only; no certification or assurance result."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "maps",
+      "target": "mro-to-audit-evidence",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Mapping layer, not regulator-approved guidance."
+    },
+    {
+      "source": "mro-to-audit-evidence",
+      "relation": "builds_on",
+      "target": "missing-regulatory-objects",
+      "evidence_status": "authored-analysis",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Derived from GAIC source truth without changing GAIC scores or methodology."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "supports",
+      "target": "guide-1-audit-ready-ai-agent-systems",
+      "evidence_status": "planned-series-reference",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Support relation for future planning only; no public guide artifact is claimed."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "supports",
+      "target": "guide-2-agentic-lifecycle-governance",
+      "evidence_status": "planned-series-reference",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Support relation for future planning only; no legal or compliance result is claimed."
+    },
+    {
+      "source": "aiaawp-white-paper-2026",
+      "relation": "prepares_for",
+      "target": "agentic-ai-insurability-white-paper-2026",
+      "evidence_status": "planned-series-reference",
+      "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+      "boundary": "Future insurability research relationship only; no insurance guarantee or underwriting standard claim."
+    },
+    {
+      "source": "evidence-registry",
+      "relation": "is_evidence_surface_for",
+      "target": "aiaawp-white-paper-2026",
       "evidence_status": "owned-canonical",
       "evidence_url": "https://www.jearonwong.com/evidence/",
       "boundary": "Citation and evidence index only; no answer-engine or indexing outcome claim."

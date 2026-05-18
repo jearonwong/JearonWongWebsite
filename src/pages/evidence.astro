@@ -8,10 +8,13 @@ const canonicalPath = "/evidence/";
 const pageUrl = absoluteUrl(canonicalPath);
 const entityGraphPath = "/entity/jearonwong-mplp-gaic-entity-graph.json";
 const gaicAssetBase = "/research/global-ai-compliance-white-paper-2026";
+const aiaawpAssetBase = "/research/agentic-ai-auditability-assurance-white-paper-2026";
 const pageDescription =
-  "Evidence Registry and Citation Kit for Jearon Wong, MPLP, Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces.";
+  "Evidence Registry and Citation Kit for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces.";
 const citationText =
   "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.";
+const aiaawpCitationText =
+  "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026.";
 const evidenceItems = [
   {
     group: "Identity",
@@ -27,9 +30,21 @@ const evidenceItems = [
   },
   {
     group: "Research",
+    label: "Agentic AI Auditability & Assurance White Paper 2026 hub",
+    href: `${aiaawpAssetBase}/`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Research",
     label: "GAIC responsive HTML full text",
     href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.html`,
     status: "authored-analysis"
+  },
+  {
+    group: "Research",
+    label: "AIAAWP responsive HTML full text",
+    href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`,
+    status: "public-research-candidate"
   },
   {
     group: "Research",
@@ -39,9 +54,21 @@ const evidenceItems = [
   },
   {
     group: "Research",
+    label: "AIAAWP PDF",
+    href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Research",
     label: "GAIC DOCX derivative",
     href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.docx`,
     status: "authored-analysis"
+  },
+  {
+    group: "Research",
+    label: "AIAAWP DOCX derivative",
+    href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`,
+    status: "public-research-candidate"
   },
   {
     group: "Integrity",
@@ -51,9 +78,21 @@ const evidenceItems = [
   },
   {
     group: "Integrity",
+    label: "AIAAWP checksums",
+    href: `${aiaawpAssetBase}/checksums.sha256`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Integrity",
     label: "Publication candidate manifest",
     href: `${gaicAssetBase}/publication-candidate-manifest.json`,
     status: "owned-canonical"
+  },
+  {
+    group: "Integrity",
+    label: "AIAAWP manifest",
+    href: `${aiaawpAssetBase}/manifest.json`,
+    status: "public-research-candidate"
   },
   {
     group: "Integrity",
@@ -150,6 +189,7 @@ const canonicalUrls = [
   { label: "Jearon Wong", href: "/about/" },
   { label: "MPLP", href: "/projects/mplp/" },
   { label: "Global AI Compliance White Paper 2026", href: "/research/global-ai-compliance-white-paper-2026/" },
+  { label: "Agentic AI Auditability & Assurance White Paper 2026", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/" },
   { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" },
   { label: "Concepts Map / Entity Mesh", href: "/concepts/map/" },
   { label: "Evidence Registry / Citation Kit", href: canonicalPath },
@@ -159,8 +199,13 @@ const technicalArtifacts = [
   { label: "GAIC PDF", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.pdf` },
   { label: "GAIC responsive HTML", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.html` },
   { label: "GAIC DOCX derivative", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.docx` },
+  { label: "AIAAWP PDF", href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf` },
+  { label: "AIAAWP responsive HTML", href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.html` },
+  { label: "AIAAWP DOCX derivative", href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx` },
   { label: "Checksums", href: `${gaicAssetBase}/checksums.sha256` },
+  { label: "AIAAWP checksums", href: `${aiaawpAssetBase}/checksums.sha256` },
   { label: "Publication candidate manifest", href: `${gaicAssetBase}/publication-candidate-manifest.json` },
+  { label: "AIAAWP manifest", href: `${aiaawpAssetBase}/manifest.json` },
   { label: "Public PDF metadata re-seal manifest", href: `${gaicAssetBase}/public-pdf-metadata-reseal-manifest.json` },
   { label: "Entity graph JSON", href: entityGraphPath }
 ];
@@ -245,7 +290,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Evidence Registry / Citation Kit"
     objectType="PAGE_ROLE"
     objectValue="EVIDENCE SHELF"
-    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces."
+    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, Agentic Lifecycle Governance, and related source surfaces."
   />
 
   <div class="zone-b page-body page-body--standard">
@@ -265,6 +310,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <a href="/about/">Jearon Wong</a>
           <a href="/projects/mplp/">MPLP</a>
           <a href="/research/global-ai-compliance-white-paper-2026/">GAIC 2026</a>
+          <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/">AIAAWP 2026</a>
           <a href="/concepts/map/">Concepts Map</a>
           <a href={entityGraphPath}>Entity graph JSON</a>
         </div>
@@ -307,6 +353,10 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <article>
             <h3>Global AI Compliance White Paper 2026</h3>
             <p>{citationText}</p>
+          </article>
+          <article>
+            <h3>Agentic AI Auditability &amp; Assurance White Paper 2026</h3>
+            <p>{aiaawpCitationText}</p>
           </article>
         </div>
         <div class="bibtex-block">
@@ -492,7 +542,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
   .citation-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
   .citation-grid article,

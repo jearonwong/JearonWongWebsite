@@ -8,7 +8,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       customPages: [
-        "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html"
+        "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+        "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html"
       ],
       filter: (page) =>
         !page.endsWith("/theory-clusters/") &&

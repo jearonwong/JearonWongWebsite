@@ -3,24 +3,28 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SiteHeader from "../../../components/SiteHeader.astro";
 import { siteConfig } from "../../../data/site";
 
-const assetBase = "/research/global-ai-compliance-white-paper-2026";
-const canonicalPath = "/research/global-ai-compliance-white-paper-2026/";
+const assetBase = "/research/agentic-ai-auditability-assurance-white-paper-2026";
+const canonicalPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
-const pdfUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.pdf`;
-const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.html`;
-const docxUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.docx`;
-const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
+const pdfUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`;
+const htmlUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`;
+const docxUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`;
+const manifestUrl = `${siteConfig.siteUrl}${assetBase}/manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
-const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
-const documentId = "GACWP-2026-v0.3.2-FRC-R3";
-const reportTitle = "Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance";
-const reportVersion = "v0.3.2 Public Edition";
+const gaicHubPath = "/research/global-ai-compliance-white-paper-2026/";
+const documentId = "AIAAWP-2026-v0.1-R4-CANDIDATE";
+const reportTitle = "Agentic AI Auditability & Assurance White Paper 2026";
+const reportSubtitle = "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance";
+const reportVersion = "v0.1 Public Research Candidate";
 const publicationMonth = "May 2026";
-const citationText = "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.";
-const metaDescription = "A 2026 white paper by Jearon Wong defining Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.";
-const citationKeywords = "AI Agent Lifecycle Governance; Agentic Lifecycle Conformance; Missing Regulatory Objects; RCCS-T; RCCS-M; ALCS; Multi-Agent Lifecycle Protocol; MPLP; AI Agent Compliance; Multi-Agent Systems; Deterministic Delivery";
+const metaDescription =
+  "A public research candidate by Jearon Wong defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.";
+const citationText =
+  "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026.";
+const citationKeywords =
+  "Agentic AI Auditability; AI Agent Auditability; Audit Evidence Chain; Agentic Audit Object; AARM; MRO; Agentic Lifecycle Governance; Enterprise AI Governance; Lifecycle Evidence";
 const citationMetaTags = [
-  { name: "citation_title", content: reportTitle },
+  { name: "citation_title", content: `${reportTitle}: ${reportSubtitle}` },
   { name: "citation_author", content: "Wong, Jearon" },
   { name: "citation_publication_date", content: "2026/05" },
   { name: "citation_technical_report_number", content: documentId },
@@ -31,95 +35,101 @@ const citationMetaTags = [
 ];
 const shaRows = [
   {
-    label: "PDF",
-    value: "facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329"
+    label: "HTML web-reading candidate",
+    value: "e1b248765f50aa1c4e5ffbef9276d8dcea155cafdb1262719a9d1badbe1c790e"
   },
   {
-    label: "HTML web edition",
-    value: "ffacf14849b1f1d6ff743f635442a4f646e27ba0c77e61c53db01258842fe8ce"
+    label: "PDF visual candidate",
+    value: "e72b6def99790965d14c6f9292360f6ec768abc1aefbdb51ad43c355af468e0d"
   },
   {
-    label: "DOCX",
-    value: "b3c5fec8e9a5446a15266ab394a51b51f9dac62b6f9cf366646b5d38306134aa"
+    label: "DOCX editable derivative",
+    value: "4868c30c19bb102fe399947fa9760307b34cf4148300ceef4cad908cffdaec37"
+  },
+  {
+    label: "Manifest",
+    value: "efd53a2a1975631e4b2540ca3b386ba93ca565f3f43bd439679bca09034812df"
   }
 ];
 const keyConcepts = [
-  { label: "AI Agent Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" },
-  { label: "Agentic Lifecycle Conformance", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#chapter-8-agentic-lifecycle-conformance-score-alcs` },
-  { label: "Missing Regulatory Objects", href: "/concepts/missing-regulatory-objects/" },
-  { label: "MRO-01 through MRO-16", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#mro-overview` },
-  { label: "RCCS-T", href: `${assetBase}/global-ai-compliance-white-paper-2026.html#rccs-t` },
-  { label: "RCCS-M", href: "/concepts/rccs-m/" },
-  { label: "ALCS", href: "/concepts/alcs/" },
-  { label: "Intent Drift", href: "/concepts/intent-drift/" },
-  { label: "Authority Boundary", href: "/concepts/authority-boundary/" },
-  { label: "Evidence Chain", href: "/concepts/lifecycle-evidence/" },
+  { label: "Agentic AI Auditability", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis` },
+  { label: "Agentic Audit Object", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview` },
+  { label: "Audit Evidence Chain", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains` },
+  { label: "AARM", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model` },
+  { label: "MRO-to-Audit-Evidence Mapping", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#6-mro-to-audit-evidence-mapping` },
+  { label: "Lifecycle-responsibility-linked agent work", href: "/concepts/agentic-lifecycle-governance/" },
   { label: "Accepted Outcome", href: "/concepts/accepted-outcome/" },
-  { label: "Deterministic Delivery", href: "/concepts/deterministic-delivery/" },
-  { label: "MPLP as one protocol path", href: "/projects/mplp/" },
-  { label: "AI Agent Compliance", href: "/governance/ai-agent-compliance/" },
-  { label: "Multi-Agent System Governance", href: "/governance/multi-agent-system-governance/" },
-  { label: "Vendor / Runtime Substitution Conformance", href: "/governance/vendor-runtime-substitution-conformance/" },
-  { label: "Incident / Dispute / Remediation Closure", href: "/governance/incident-dispute-remediation-closure/" }
+  { label: "Tool-action evidence", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#5-the-agentic-audit-object-model` },
+  { label: "Remediation Closure", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#11-exception-dispute-and-remediation-closure` },
+  { label: "Privacy and selective disclosure", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#10-privacy-selective-disclosure-and-audit-evidence-minimization` }
 ];
-const internalLinks = [
-  { href: "/about/", label: "About Jearon Wong" },
-  { href: "/evidence/", label: "Evidence Registry / Citation Kit" },
-  { href: systemsPath, label: "Systems discussed in the white paper" },
-  { href: "/concepts/map/", label: "Concepts Map / Entity Mesh" },
-  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance Concept Core" },
-  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
-  { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
-  { href: "/governance/", label: "Regulatory and enterprise governance" },
-  { href: "/governance/ai-agent-compliance/", label: "AI Agent Compliance" },
-  { href: "/playbooks/agentic-delivery-architecture-checklist/", label: "Agentic Delivery Architecture Checklist" },
-  { href: "/playbooks/", label: "Applied governance playbooks" },
-  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
-  { href: "/concepts/rccs-m/", label: "RCCS-M" },
-  { href: "/concepts/alcs/", label: "ALCS" },
-  { href: "/projects/mplp/", label: "MPLP protocol path" },
-  { href: "/lifecycle/", label: "AI Agent Lifecycle" },
-  { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle definition" },
-  { href: "/concepts/agentic-delivery/", label: "Agentic Delivery definition" },
-  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-  { href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/", label: "Lifecycle governance essay" }
-];
-const relatedWhitePapers = [
+const seriesLinks = [
   {
-    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
-    label: "Agentic AI Auditability & Assurance White Paper 2026",
-    body: "The companion public research candidate stages the auditability and lifecycle evidence layer for the same industry series."
+    label: "Global AI Compliance White Paper 2026",
+    href: gaicHubPath,
+    body: "Defines the broader compliance object layer, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility governance."
+  },
+  {
+    label: "AIAAWP 2026",
+    href: canonicalPath,
+    body: "Stages the auditability and lifecycle evidence layer for author release decision and deployment verification."
+  },
+  {
+    label: "Future Guide 1",
+    href: "/playbooks/agentic-delivery-architecture-checklist/",
+    body: "Will translate audit-ready AI agent systems into CIO/CTO implementation planning."
+  },
+  {
+    label: "Future Guide 2",
+    href: "/governance/",
+    body: "Will translate agentic lifecycle governance into CCO operating-model planning."
   }
 ];
+const nonGoals = [
+  "Not an audit standard.",
+  "Not certification.",
+  "Not legal advice or legal compliance proof.",
+  "Not an assurance opinion.",
+  "Not regulator approval.",
+  "Not Big Four or audit-body endorsement.",
+  "Not procurement recommendation or vendor ranking.",
+  "MPLP is an optional protocol path only."
+];
+const contextLinks = [
+  { href: gaicHubPath, label: "GAIC main white paper hub" },
+  { href: "/evidence/", label: "Evidence Registry / Citation Kit" },
+  { href: "/concepts/map/", label: "Concepts Map / Entity Mesh" },
+  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
+  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
+  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
+  { href: "/projects/mplp/", label: "MPLP protocol path" },
+  { href: "/projects/validation-lab/", label: "Validation Lab" },
+  { href: "/governance/", label: "Regulatory and enterprise governance" }
+];
 const aboutTerms = [
-  "Jearon Wong",
-  "Global AI Compliance White Paper 2026",
+  "Agentic AI Auditability",
+  "AI Agent Auditability",
+  "Audit Evidence Chain",
+  "Agentic Audit Object",
   "Agentic Lifecycle Governance",
-  "AI Agent Governance",
-  "Multi-Agent Systems Governance",
+  "Global AI Compliance White Paper 2026",
   "Missing Regulatory Objects",
-  "RCCS-M",
-  "RCCS-T",
-  "ALCS",
-  "MPLP",
-  "Multi-Agent Lifecycle Protocol",
-  "Evidence Chain",
+  "MRO-to-Audit-Evidence Mapping",
+  "AARM",
+  "Lifecycle Evidence",
   "Accepted Outcome",
   "Authority Boundary",
-  "Deterministic Delivery",
-  "Agent Architecture Governance",
-  "Rollbackable Agent Workflows",
-  "Verifiable AI Agents",
-  "Regulatory and Enterprise Governance Mapping",
-  "AI Agent Compliance",
-  "Enterprise Agent Governance"
+  "Enterprise AI Governance",
+  "AI Agent Governance",
+  "Auditability Readiness"
 ];
 const articleJsonLd = {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
+  "@type": ["TechArticle", "Report"],
   "@id": `${pageUrl}#whitepaper`,
-  headline: "Global AI Compliance White Paper 2026",
-  alternativeHeadline: "From Model Governance to Agentic Lifecycle Conformance",
+  headline: reportTitle,
+  alternativeHeadline: reportSubtitle,
   description: metaDescription,
   url: pageUrl,
   identifier: documentId,
@@ -130,28 +140,39 @@ const articleJsonLd = {
   publisher: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  datePublished: "2026-05-12",
-  dateModified: "2026-05-12",
+  datePublished: "2026-05-18",
+  dateModified: "2026-05-18",
   version: reportVersion,
   genre: "Technical report",
   creativeWorkStatus: "PublicationCandidate",
   citation: citationText,
   keywords: aboutTerms,
+  isBasedOn: {
+    "@type": "CreativeWork",
+    name: "Global AI Compliance White Paper 2026",
+    url: `${siteConfig.siteUrl}${gaicHubPath}`
+  },
+  isPartOf: [
+    {
+      "@type": "CreativeWorkSeries",
+      name: "Agentic Lifecycle Governance Industry Series"
+    },
+    {
+      "@id": `${siteConfig.siteUrl}#website`
+    }
+  ],
   about: aboutTerms.map((term) => ({
     "@type": "Thing",
     name: term
   })),
   mentions: [
-    "AI Agent Lifecycle Governance",
-    "Agentic Lifecycle Conformance",
-    "Missing Regulatory Objects",
-    "RCCS-T",
-    "RCCS-M",
-    "ALCS",
+    "AARM",
+    "MRO",
+    "Audit Evidence Chain",
+    "Agentic Audit Object",
+    "Validation Lab",
     "MPLP",
-    "Deterministic Delivery",
-    "Enterprise AI Governance",
-    "Multi-Agent Systems"
+    "Enterprise AI Governance"
   ].map((term) => ({
     "@type": "Thing",
     name: term
@@ -159,14 +180,14 @@ const articleJsonLd = {
   encoding: [
     {
       "@type": "MediaObject",
-      encodingFormat: "application/pdf",
-      contentUrl: pdfUrl,
+      encodingFormat: "text/html",
+      contentUrl: htmlUrl,
       sha256: shaRows[0].value
     },
     {
       "@type": "MediaObject",
-      encodingFormat: "text/html",
-      contentUrl: htmlUrl,
+      encodingFormat: "application/pdf",
+      contentUrl: pdfUrl,
       sha256: shaRows[1].value
     },
     {
@@ -176,9 +197,6 @@ const articleJsonLd = {
       sha256: shaRows[2].value
     }
   ],
-  isPartOf: {
-    "@id": `${siteConfig.siteUrl}#website`
-  },
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": `${pageUrl}#webpage`
@@ -189,7 +207,7 @@ const pageJsonLd = {
   "@type": "WebPage",
   "@id": `${pageUrl}#webpage`,
   url: pageUrl,
-  name: "Global AI Compliance White Paper 2026",
+  name: reportTitle,
   description: metaDescription,
   breadcrumb: {
     "@id": `${pageUrl}#breadcrumb`
@@ -218,25 +236,36 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Global AI Compliance White Paper 2026",
+      name: reportTitle,
       item: pageUrl
     }
   ]
+};
+const artifactListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${pageUrl}#artifacts`,
+  name: "AIAAWP public research candidate artifacts",
+  itemListElement: [
+    { name: "Read HTML", url: htmlUrl },
+    { name: "Download PDF", url: pdfUrl },
+    { name: "Download DOCX derivative", url: docxUrl },
+    { name: "Manifest", url: manifestUrl },
+    { name: "Checksums", url: checksumUrl }
+  ].map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    url: item.url
+  }))
 };
 const definedTermSetJsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
   "@id": `${pageUrl}#defined-terms`,
-  name: "Global AI Compliance White Paper 2026 Terms",
-  description: "Key terms introduced or used by the Global AI Compliance White Paper 2026.",
-  hasDefinedTerm: [
-    "Missing Regulatory Objects",
-    "RCCS-T",
-    "RCCS-M",
-    "ALCS",
-    "Agentic Lifecycle Governance",
-    "MPLP"
-  ].map((term) => ({
+  name: "AIAAWP 2026 Terms",
+  description: "Key terms used by the Agentic AI Auditability & Assurance White Paper 2026.",
+  hasDefinedTerm: aboutTerms.slice(0, 10).map((term) => ({
     "@type": "DefinedTerm",
     name: term,
     inDefinedTermSet: `${pageUrl}#defined-terms`
@@ -245,19 +274,19 @@ const definedTermSetJsonLd = {
 ---
 
 <BaseLayout
-  title="Global AI Compliance White Paper 2026"
+  title={reportTitle}
   description={metaDescription}
-  shareTitle="Global AI Compliance White Paper 2026"
+  shareTitle={reportTitle}
   shareDescription={metaDescription}
-  twitterTitle="Global AI Compliance White Paper 2026"
+  twitterTitle={reportTitle}
   twitterDescription={metaDescription}
   canonicalPath={canonicalPath}
   ogType="article"
-  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, definedTermSetJsonLd]}
+  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, artifactListJsonLd, definedTermSetJsonLd]}
   keywords={aboutTerms}
   metaTags={citationMetaTags}
   ogImagePath="/social/jearonwong-og.png"
-  ogImageAlt="Global AI Compliance White Paper 2026 by Jearon Wong"
+  ogImageAlt="Agentic AI Auditability & Assurance White Paper 2026 by Jearon Wong"
 >
   <div class="zone-a registry-grid release-hero-shell">
     <SiteHeader />
@@ -268,34 +297,35 @@ const definedTermSetJsonLd = {
           <span>/</span>
           <a href="/research/">Research</a>
         </nav>
-        <h1>Global AI Compliance White Paper 2026</h1>
-        <p class="release-subtitle">From Model Governance to Agentic Lifecycle Conformance</p>
+        <h1>{reportTitle}</h1>
+        <p class="release-subtitle">{reportSubtitle}</p>
         <p class="release-thesis">
-          Model governance is necessary but insufficient for AI agent and multi-agent systems.
-          Agentic compliance requires lifecycle responsibility objects: authority boundaries,
-          evidence partitioning, accepted outcomes, substitution conformance, and remediation closure.
+          This public research candidate defines auditability for AI agent and multi-agent work as
+          lifecycle evidence: reconstructable authority, roles, tool actions, accepted outcomes,
+          exceptions, remediation, and privacy-preserving disclosure boundaries.
         </p>
         <div class="hero-actions" aria-label="White paper actions">
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.pdf`} class="button button-primary">Download PDF</a>
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.html`} class="button button-outline">Read full HTML</a>
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`} class="button button-primary">Read HTML</a>
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`} class="button button-outline">Download PDF</a>
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`} class="button button-outline">Download DOCX</a>
           <a href="#cite" class="button button-outline">Cite this paper</a>
         </div>
       </div>
       <aside class="release-meta-panel" aria-label="Release metadata">
         <div class="registry-annotation">
-          <span class="registry-key">VERSION</span>: <span class="registry-value">v0.3.2 Public Edition</span>
+          <span class="registry-key">STATUS</span>: <span class="registry-value">PUBLIC_RESEARCH_CANDIDATE</span>
         </div>
         <div class="meta-line">
-          <span>Internal trace</span>
+          <span>Document ID</span>
           <strong>{documentId}</strong>
         </div>
         <div class="meta-line">
-          <span>Status</span>
-          <strong>Publication candidate sealed for human release review.</strong>
+          <span>Release state</span>
+          <strong>Publication staged; deployment verification required.</strong>
         </div>
         <div class="meta-line">
-          <span>Page count</span>
-          <strong>425</strong>
+          <span>Artifact role model</span>
+          <strong>HTML/PDF are visual authority. DOCX is an editable derivative.</strong>
         </div>
       </aside>
     </section>
@@ -306,13 +336,36 @@ const definedTermSetJsonLd = {
       <section class="release-section release-grid">
         <div>
           <div class="registry-annotation section-tag">
+            <span class="registry-key">SERIES</span>: <span class="registry-value">AGENTIC_LIFECYCLE_GOVERNANCE</span>
+          </div>
+          <h2>Part of the same white paper standard.</h2>
+          <p class="section-lead">
+            AIAAWP inherits the GAIC publication shell, responsive reading model, artifact role model,
+            metadata discipline, checksum pattern, and boundary language. It builds on GAIC by turning
+            lifecycle responsibility objects into audit evidence objects.
+          </p>
+        </div>
+        <div class="series-ledger">
+          {seriesLinks.map((item, index) => (
+            <a href={item.href}>
+              <strong>{String(index + 1).padStart(2, "0")}</strong>
+              <span>{item.label}</span>
+              <em>{item.body}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="release-section release-grid">
+        <div>
+          <div class="registry-annotation section-tag">
             <span class="registry-key">KEY_CONCEPTS</span>
           </div>
           <h2>Key concepts covered.</h2>
           <p class="section-lead">
-            The paper treats AI agent / MAS compliance as lifecycle responsibility compliance: what
-            remains attached to authority, evidence, validation, substitution, and remediation after
-            model execution ends.
+            The paper distinguishes raw logs from audit evidence chains and frames auditability as
+            responsibility-linked evidence that can support readiness discussion without becoming a
+            standard, legal conclusion, certification, or assurance opinion.
           </p>
         </div>
         <div class="concept-ledger">
@@ -328,58 +381,36 @@ const definedTermSetJsonLd = {
             <div class="registry-annotation section-tag">
               <span class="registry-key">ARTIFACTS</span>
             </div>
-            <h2 id="download-title">Download and read.</h2>
+            <h2 id="download-title">Read, download, and verify.</h2>
           </div>
-          <a href={checksumUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">View checksums</a>
+          <a href={`${assetBase}/checksums.sha256`} class="section-side-link">View checksums</a>
         </div>
         <div class="artifact-grid">
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.pdf`} class="artifact-card">
-            <span class="artifact-kind">PDF</span>
-            <strong>Download PDF</strong>
-            <span>Visual review artifact</span>
-          </a>
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.html`} class="artifact-card">
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`} class="artifact-card">
             <span class="artifact-kind">HTML</span>
             <strong>Read full HTML</strong>
-            <span>Responsive web-reading edition</span>
+            <span>Responsive web-reading visual authority</span>
           </a>
-          <a href={`${assetBase}/global-ai-compliance-white-paper-2026.docx`} class="artifact-card">
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`} class="artifact-card">
+            <span class="artifact-kind">PDF</span>
+            <strong>Download PDF</strong>
+            <span>Fixed-layout visual authority</span>
+          </a>
+          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.docx`} class="artifact-card">
             <span class="artifact-kind">DOCX</span>
             <strong>Download DOCX derivative</strong>
-            <span>Editable derivative</span>
+            <span>Editable derivative, not visual authority</span>
           </a>
-          <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
+          <a href={`${assetBase}/manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
-            <strong>Seal manifest</strong>
-            <span>Historical publication-candidate metadata</span>
+            <strong>Public staging manifest</strong>
+            <span>Artifact role model and integrity record</span>
           </a>
-          <a href={`${assetBase}/public-pdf-metadata-reseal-manifest.json`} class="artifact-card">
-            <span class="artifact-kind">JSON</span>
-            <strong>PDF metadata re-seal</strong>
-            <span>Public distribution metadata record</span>
+          <a href={`${assetBase}/checksums.sha256`} class="artifact-card">
+            <span class="artifact-kind">SHA256</span>
+            <strong>Checksums</strong>
+            <span>Public artifact hashes</span>
           </a>
-        </div>
-      </section>
-
-      <section class="release-section release-grid" aria-labelledby="series-title">
-        <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">RELATED_WHITE_PAPERS</span>
-          </div>
-          <h2 id="series-title">Industry series / related white papers.</h2>
-          <p class="section-lead">
-            The Agentic Lifecycle Governance Industry Series extends the GAIC publication standard
-            into adjacent research. The current companion candidate is AIAAWP.
-          </p>
-        </div>
-        <div class="series-ledger">
-          {relatedWhitePapers.map((item, index) => (
-            <a href={item.href}>
-              <strong>{String(index + 1).padStart(2, "0")}</strong>
-              <span>{item.label}</span>
-              <em>{item.body}</em>
-            </a>
-          ))}
         </div>
       </section>
 
@@ -392,9 +423,10 @@ const definedTermSetJsonLd = {
           <p class="citation-block">{citationText}</p>
           <dl class="identity-ledger" aria-label="Technical report identity">
             <div><dt>Title</dt><dd>{reportTitle}</dd></div>
+            <div><dt>Subtitle</dt><dd>{reportSubtitle}</dd></div>
             <div><dt>Author</dt><dd>Jearon Wong</dd></div>
-            <div><dt>Document ID / Trace Tag</dt><dd>{documentId}</dd></div>
-            <div><dt>Version</dt><dd>{reportVersion}</dd></div>
+            <div><dt>Document ID</dt><dd>{documentId}</dd></div>
+            <div><dt>Status</dt><dd>{reportVersion}; deployment verification required.</dd></div>
             <div><dt>Publication month</dt><dd>{publicationMonth}</dd></div>
             <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
             <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
@@ -402,39 +434,33 @@ const definedTermSetJsonLd = {
             <div><dt>DOCX</dt><dd><a href={docxUrl}>{docxUrl}</a></dd></div>
             <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
             <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
-            <div><dt>Public PDF metadata re-seal</dt><dd><a href={`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}>{`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}</a></dd></div>
           </dl>
         </div>
         <div class="boundary-panel">
           <strong>Boundary statement</strong>
           <p>
-            This paper introduces author-analytical governance models and protocol-level concepts.
-            It is not legal advice, legal compliance proof, certification, regulator-approved benchmark,
-            vendor ranking, or procurement recommendation.
+            This page stages a public research candidate. It does not claim production live verification,
+            final release, sealed artifact status, legal compliance proof, audit standard status,
+            certification, regulator approval, assurance opinion, procurement guidance, vendor ranking,
+            or endorsement by any firm or professional body.
           </p>
         </div>
       </section>
 
-      <section class="release-section release-grid" aria-labelledby="systems-title">
+      <section class="release-section release-grid" aria-labelledby="non-goals-title">
         <div>
           <div class="registry-annotation section-tag">
-            <span class="registry-key">SYSTEMS</span>: <span class="registry-value">SOURCE_QUALIFIED</span>
+            <span class="registry-key">NON_GOALS</span>: <span class="registry-value">BOUNDARY_SAFE</span>
           </div>
-          <h2 id="systems-title">Systems and frameworks discussed.</h2>
+          <h2 id="non-goals-title">What the paper does not do.</h2>
           <p class="section-lead">
-            The white paper discusses selected platforms, frameworks, and protocol paths as part of a
-            lifecycle responsibility analysis. The systems layer is source-qualified, provisional,
-            non-ranking, and not procurement guidance.
+            The candidate is meant for source-grounded research, readiness discussion, and later author
+            release decision. Its boundary language is part of the publication standard.
           </p>
         </div>
-        <div class="systems-link-panel">
-          <p>
-            Open the GAIC-cited systems layer for mappings to MPLP, IBM watsonx.governance,
-            Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK
-            + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI.
-          </p>
-          <a href={systemsPath} class="section-side-link">Open systems index</a>
-        </div>
+        <ul class="non-goal-list">
+          {nonGoals.map((item) => <li>{item}</li>)}
+        </ul>
       </section>
 
       <section class="release-section" aria-labelledby="integrity-title">
@@ -445,14 +471,14 @@ const definedTermSetJsonLd = {
             </div>
             <h2 id="integrity-title">Artifact integrity.</h2>
           </div>
-          <a href={checksumUrl.replace(siteConfig.siteUrl, "")} class="section-side-link">Open checksum file</a>
+          <a href={`${assetBase}/manifest.json`} class="section-side-link">Open manifest</a>
         </div>
         <div class="integrity-grid">
           <div class="commit-ledger">
-            <div><span>Source commit</span><strong>943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e</strong></div>
-            <div><span>Seal commit</span><strong>448afd6f7d9ebef56b3e8afcd3c97c2f22b5daea</strong></div>
-            <div><span>Cleanup commit</span><strong>a9c5747efb36915470721c11855142f7c7fa9b25</strong></div>
-            <div><span>Page count</span><strong>425</strong></div>
+            <div><span>R5A SOP commit</span><strong>5c05972fe57189bd4d6ae35948429767c9de0735</strong></div>
+            <div><span>Document ID</span><strong>{documentId}</strong></div>
+            <div><span>Page count</span><strong>141</strong></div>
+            <div><span>Next phase</span><strong>Deployment/live verification</strong></div>
           </div>
           <div class="checksum-table" aria-label="SHA256 checksums">
             {shaRows.map((row) => (
@@ -464,10 +490,8 @@ const definedTermSetJsonLd = {
           </div>
         </div>
         <p class="integrity-note">
-          The DOCX retains its sealed publication-candidate hash. The public PDF is a metadata-hardened
-          distribution re-seal of the sealed candidate PDF; its visible content and page count are unchanged,
-          and the sealed candidate PDF remains preserved. The public HTML file is the responsive web-reading
-          edition derived from the sealed content and carries its own checksum.
+          Public artifacts were staged from the R5 internal final candidate package, then normalized only
+          for public-copy status and metadata. The internal R5 candidate package remains unchanged.
         </p>
       </section>
 
@@ -476,14 +500,14 @@ const definedTermSetJsonLd = {
           <div class="registry-annotation section-tag">
             <span class="registry-key">CONTEXT</span>
           </div>
-          <h2 id="context-title">Follow the surrounding concept graph.</h2>
+          <h2 id="context-title">Follow the surrounding graph.</h2>
           <p class="section-lead">
-            The Agentic Lifecycle Governance Concept Core is the short concept entry layer for readers
-            who need the 2-3 minute version before entering the full white paper.
+            AIAAWP belongs to the Agentic Lifecycle Governance Industry Series and should be read with
+            GAIC, the Evidence Registry, and the concept graph rather than as a standalone design system.
           </p>
         </div>
         <div class="internal-link-grid">
-          {internalLinks.map((link) => (
+          {contextLinks.map((link) => (
             <a href={link.href}>{link.label}</a>
           ))}
         </div>
@@ -530,20 +554,20 @@ const definedTermSetJsonLd = {
   }
 
   .release-hero h1 {
-    max-width: 12ch;
+    max-width: 13ch;
     margin: 0;
     color: var(--text-registry-primary);
-    font-size: clamp(3.4rem, 8vw, 7.2rem);
-    line-height: 0.9;
+    font-size: clamp(3rem, 7vw, 6.45rem);
+    line-height: 0.94;
     letter-spacing: 0;
   }
 
   .release-subtitle {
-    max-width: 42rem;
+    max-width: 44rem;
     margin: 1.25rem 0 0;
     color: var(--accent-proof);
     font-family: var(--font-mono);
-    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    font-size: clamp(0.84rem, 1.15vw, 0.96rem);
     line-height: 1.55;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -632,7 +656,8 @@ const definedTermSetJsonLd = {
   }
 
   .concept-ledger,
-  .series-ledger {
+  .series-ledger,
+  .internal-link-grid {
     display: grid;
     border-top: 1px solid var(--current-line);
   }
@@ -640,7 +665,7 @@ const definedTermSetJsonLd = {
   .concept-ledger a,
   .series-ledger a {
     display: grid;
-    gap: 1rem;
+    gap: 0.35rem;
     padding: 0.9rem 0;
     border-bottom: 1px solid var(--current-line);
     color: var(--current-text);
@@ -649,14 +674,12 @@ const definedTermSetJsonLd = {
 
   .concept-ledger a {
     grid-template-columns: 3rem 1fr;
-  }
-
-  .series-ledger a {
-    gap: 0.35rem;
+    gap: 1rem;
   }
 
   .concept-ledger a:hover,
-  .series-ledger a:hover {
+  .series-ledger a:hover,
+  .internal-link-grid a:hover {
     color: var(--accent-signal);
   }
 
@@ -704,7 +727,7 @@ const definedTermSetJsonLd = {
 
   .artifact-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -804,22 +827,6 @@ const definedTermSetJsonLd = {
     color: var(--text-registry-primary);
   }
 
-  .systems-link-panel {
-    display: grid;
-    gap: 1rem;
-    padding: var(--registry-card-padding);
-    border: 1px solid var(--current-border);
-    border-left: 3px solid var(--accent-proof);
-    background: var(--current-surface);
-  }
-
-  .systems-link-panel p {
-    margin: 0;
-    color: var(--current-muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
   .boundary-panel strong {
     display: block;
     margin-bottom: 0.75rem;
@@ -835,6 +842,24 @@ const definedTermSetJsonLd = {
     color: rgba(241, 245, 249, 0.76);
     font-size: 0.95rem;
     line-height: 1.7;
+  }
+
+  .non-goal-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--current-line);
+    list-style: none;
+  }
+
+  .non-goal-list li,
+  .internal-link-grid a {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+    font-weight: 650;
   }
 
   .integrity-grid {
@@ -889,22 +914,10 @@ const definedTermSetJsonLd = {
     line-height: 1.5;
   }
 
-  .internal-link-grid {
-    display: grid;
-    gap: 0;
-    border-top: 1px solid var(--current-line);
-  }
-
-  .internal-link-grid a {
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--current-line);
-    color: var(--current-text);
-    text-decoration: none;
-    font-weight: 650;
-  }
-
-  .internal-link-grid a:hover {
-    color: var(--accent-signal);
+  @media (max-width: 1120px) {
+    .artifact-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 980px) {
@@ -933,7 +946,6 @@ const definedTermSetJsonLd = {
     .release-meta-panel,
     .concept-ledger,
     .series-ledger,
-    .systems-link-panel,
     .checksum-table,
     .commit-ledger {
       min-width: 0;
@@ -946,7 +958,7 @@ const definedTermSetJsonLd = {
     }
 
     .release-hero h1 {
-      font-size: clamp(2.75rem, 18vw, 4rem);
+      font-size: clamp(2.55rem, 16vw, 3.7rem);
     }
 
     .hero-actions,

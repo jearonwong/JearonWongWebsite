@@ -3051,3 +3051,33 @@ Boundary discipline:
 - No publication, final, sealed, live, legal advice, legal compliance proof, audit standard, certification, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, SEO/GEO uplift, answer-engine recognition, indexing, public release, or external adoption claim was introduced.
 
 **AIAAWP-R5A Status:** ✓ WHITEPAPER SERIES PUBLICATION SOP PATCH COMPLETE / READY FOR AIAAWP-R6 PUBLICATION STAGING
+---
+
+## AIAAWP-R6 Known Issues
+
+### Publication Staging Complete
+
+AIAAWP-R6 stages the public route and repository public artifacts for the Agentic AI Auditability & Assurance White Paper 2026.
+
+Resolved in this wave:
+
+- Enforced `whitepaper-series-publication-sop-v1.md` and created the R6 Publication Standard Reuse Proof.
+- Staged public HTML/PDF/DOCX artifacts, manifest, and checksums under `public/research/agentic-ai-auditability-assurance-white-paper-2026/`.
+- Created the public AIAAWP hub route and reused the GAIC white paper hub style, artifact grid, citation metadata, JSON-LD, boundary panel, and checksum pattern.
+- Updated the research index, Evidence Registry, GAIC hub crosslink, Concepts Map, entity graph JSON, `llms.txt`, and sitemap custom page list.
+- Reused the existing tracked OG image and left unrelated untracked `public/social/*` files unstaged.
+- Verified public artifact checksums and public PDF metadata.
+
+Remaining known issues:
+
+- R6B deployment/live verification remains required after deploy.
+- Dedicated AIAAWP OG/social campaign artwork is optional launch-pack polish.
+- Final author release decision, final artifact seal, and post-deploy evidence capture remain future launch tasks.
+
+Boundary discipline:
+
+- Production live verification is not claimed.
+- AIAAWP is not claimed final, sealed, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+- No GAIC sealed/public artifacts, GAIC scores, or GAIC methodology changed.
+
+**AIAAWP-R6 Status:** ✓ PUBLICATION STAGING COMPLETE / DEPLOYMENT VERIFICATION REQUIRED

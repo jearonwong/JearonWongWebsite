@@ -3780,3 +3780,33 @@ Generate fresh R3 Phase 1D DOCX/PDF artifacts from the current `source_r3` Markd
 - It does not claim AIAAWP is published, final, sealed, live, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
 
 **AIAAWP-R5A Status:** ✓ WHITEPAPER SERIES PUBLICATION SOP PATCH COMPLETE / READY FOR AIAAWP-R6 PUBLICATION STAGING.
+## AIAAWP-R6 Notes (May 18, 2026)
+
+**Scope:** Publication staging for the Agentic AI Auditability & Assurance White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin were aligned at `5c05972fe57189bd4d6ae35948429767c9de0735` before AIAAWP-R6 edits.
+2. Inspected the Whitepaper Series Publication SOP and created the required Publication Standard Reuse Proof before public staging.
+3. Staged public AIAAWP artifacts under `public/research/agentic-ai-auditability-assurance-white-paper-2026/` with clean public filenames.
+4. Performed public-copy-only status/metadata normalization so staged artifacts describe themselves as public research candidates with deployment verification pending rather than internal-only candidates.
+5. Created the public AIAAWP route at `/research/agentic-ai-auditability-assurance-white-paper-2026/` using the GAIC hub publication style, artifact grid, citation identity, boundary block, and integrity pattern.
+6. Updated the research index, Evidence Registry, GAIC hub crosslink, Concepts Map, entity graph JSON, `llms.txt`, and sitemap custom pages.
+7. Reused the existing tracked GAIC-family OG image `/social/jearonwong-og.png`; no unrelated untracked `public/social/*` files were staged.
+8. Created R6 preflight, publication-standard reuse proof, public artifact staging, route QA, SEO/GEO/entity wiring QA, OG/social QA, public integrity QA, boundary QA, build/validation, and final QA records.
+
+**Artifact discipline:**
+
+- Public artifacts are staged in repository, but production live verification is not claimed.
+- Internal R5 candidate artifacts remain unchanged.
+- No GAIC sealed candidate artifact changed.
+- Public GAIC PDF metadata re-seal remains unchanged.
+- Responsive public GAIC HTML artifact remains unchanged.
+- No white paper score, methodology, RCCS-T/RCCS-M/ALCS framing, or scoring value changed.
+
+**Boundary discipline:**
+
+- AIAAWP-R6 is publication staging only.
+- It does not claim AIAAWP is production live verified, final, sealed, externally adopted, indexed, answer-engine-recognized, SEO/GEO-improved, certified, regulator-approved, legally sufficient, assurance-producing, endorsed, procurement-ready, or vendor-ranking.
+
+**AIAAWP-R6 Status:** ✓ PUBLICATION STAGING COMPLETE / DEPLOYMENT VERIFICATION REQUIRED.

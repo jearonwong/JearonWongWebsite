@@ -15,6 +15,11 @@ const keywords = [
   "Jearon Wong",
   "Agentic Lifecycle Governance",
   "Global AI Compliance White Paper 2026",
+  "Agentic AI Auditability & Assurance White Paper 2026",
+  "Agentic AI Auditability",
+  "Agentic Audit Object",
+  "Audit Evidence Chain",
+  "AARM",
   "Missing Regulatory Objects",
   "RCCS-M",
   "ALCS",
@@ -108,6 +113,41 @@ const mapNodes = [
     layer: "Authority Source",
     href: "/research/global-ai-compliance-white-paper-2026/",
     description: "The public research authority source for MRO, RCCS-M, ALCS, and lifecycle responsibility governance."
+  },
+  {
+    id: "aiaawp",
+    label: "Agentic AI Auditability & Assurance White Paper 2026",
+    layer: "Authority Source",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    description: "The public research candidate for agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, and MRO-to-audit-evidence mapping."
+  },
+  {
+    id: "agentic-ai-auditability",
+    label: "Agentic AI Auditability",
+    layer: "Auditability Layer",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis",
+    description: "Auditability framing for reconstructing agentic work through lifecycle evidence."
+  },
+  {
+    id: "agentic-audit-object",
+    label: "Agentic Audit Object",
+    layer: "Auditability Layer",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview",
+    description: "Object model for lifecycle-linked auditability of agent work."
+  },
+  {
+    id: "audit-evidence-chain",
+    label: "Audit Evidence Chain",
+    layer: "Auditability Layer",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains",
+    description: "Responsibility-linked evidence chain that distinguishes raw logs from reviewable audit evidence."
+  },
+  {
+    id: "aarm",
+    label: "AARM",
+    layer: "Auditability Layer",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model",
+    description: "Agentic Auditability Readiness Model for L0-L5 auditability readiness."
   },
   {
     id: "gaic-cited-systems",
@@ -358,6 +398,16 @@ const extractableLayerGroups = [
     ]
   },
   {
+    name: "Auditability Layer",
+    description: "AIAAWP auditability concepts for lifecycle evidence, audit evidence chains, object modeling, and readiness discussion.",
+    links: [
+      { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
+      { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview", label: "Agentic Audit Object" },
+      { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains", label: "Audit Evidence Chain" },
+      { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model", label: "AARM" }
+    ]
+  },
+  {
     name: "Evaluation Layer",
     description: "MRO-adjusted and lifecycle conformance evaluation language.",
     links: [
@@ -435,6 +485,12 @@ const relationGroups = [
     relation: "Global AI Compliance White Paper 2026 -> Systems Discussed in GAIC",
     nodes: ["Global AI Compliance White Paper 2026", "Systems Discussed in GAIC"],
     body: "The systems layer exposes source-qualified semantic anchors for systems already discussed in the white paper. It is not vendor ranking or procurement guidance."
+  },
+  {
+    name: "Auditability Layer",
+    relation: "Global AI Compliance White Paper 2026 -> AIAAWP -> Audit Evidence Chain / AARM",
+    nodes: ["Global AI Compliance White Paper 2026", "Agentic AI Auditability & Assurance White Paper 2026", "Audit Evidence Chain", "AARM"],
+    body: "The AIAAWP candidate applies the GAIC publication standard and extends the series into auditability, lifecycle evidence, MRO-to-audit-evidence mapping, and readiness discussion without claiming an audit standard, certification, or assurance opinion."
   },
   {
     name: "Extended Ecosystem Mapping",
@@ -516,6 +572,20 @@ const explicitEntityRelationships = [
     status: "authored-analysis"
   },
   {
+    source: "Agentic AI Auditability & Assurance White Paper 2026",
+    relation: "builds on",
+    target: "GAIC and maps MROs to audit evidence objects",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    status: "public-research-candidate"
+  },
+  {
+    source: "AIAAWP",
+    relation: "defines",
+    target: "Agentic AI Auditability, Agentic Audit Object, Audit Evidence Chain, and AARM",
+    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
     source: "Missing Regulatory Objects",
     relation: "maps regulatory language to",
     target: "lifecycle responsibility objects",
@@ -562,6 +632,7 @@ const primaryLinks = [
   { href: "/evidence/", label: "Evidence Registry" },
   { href: "/entity/jearonwong-mplp-gaic-entity-graph.json", label: "Entity graph JSON" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
+  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "AIAAWP white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
   { href: "/governance/", label: "Regulatory governance" },
@@ -580,6 +651,7 @@ const semanticChain = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
+  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
   { href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" },
   { href: "/governance/", label: "Regulatory and Enterprise Governance Mapping" },
@@ -798,6 +870,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <div class="mesh-row mesh-row--authority">
             <a href="/research/global-ai-compliance-white-paper-2026/" class="mesh-node mesh-node--authority">Global AI Compliance White Paper 2026</a>
             <span class="mesh-arrow">-&gt;</span>
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/" class="mesh-node mesh-node--authority">AIAAWP 2026</a>
+            <span class="mesh-arrow">-&gt;</span>
             <a href="/research/global-ai-compliance-white-paper-2026/systems/" class="mesh-node mesh-node--authority">Systems Discussed in GAIC</a>
             <span class="mesh-arrow">-&gt;</span>
             <a href={extendedEcosystemPath} class="mesh-node mesh-node--authority">Extended Ecosystem Mapping</a>
@@ -817,6 +891,12 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/concepts/accepted-outcome/" class="mesh-node">Accepted Outcome</a>
             <a href="/concepts/lifecycle-evidence/" class="mesh-node">Evidence Chain</a>
             <a href="/concepts/confirmation-boundary/" class="mesh-node">Confirmation Boundary</a>
+          </div>
+          <div class="mesh-row mesh-row--auditability">
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis" class="mesh-node mesh-node--strong">Agentic AI Auditability</a>
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview" class="mesh-node">Agentic Audit Object</a>
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains" class="mesh-node">Audit Evidence Chain</a>
+            <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model" class="mesh-node">AARM</a>
           </div>
           <div class="mesh-row mesh-row--engineering">
             <a href="/concepts/deterministic-delivery/" class="mesh-node mesh-node--strong">Deterministic Delivery</a>
@@ -1144,6 +1224,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .mesh-row--governance,
   .mesh-row--primitive,
+  .mesh-row--auditability,
   .mesh-row--engineering {
     padding-top: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
