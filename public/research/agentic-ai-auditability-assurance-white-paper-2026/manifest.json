@@ -37,8 +37,8 @@
       "role": "PDF",
       "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "e72b6def99790965d14c6f9292360f6ec768abc1aefbdb51ad43c355af468e0d",
-      "bytes": 1369639
+      "sha256": "547bb2c428cf7490fd8211b38c37c243eb1ca442e1047438d5f60bb1453e59b7",
+      "bytes": 1226727
     },
     {
       "role": "DOCX",
@@ -59,5 +59,5 @@
   },
   "generated_at_utc": "2026-05-18T06:50:54Z",
   "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
-  "updated_at_utc": "2026-05-18T07:29:10Z"
+  "updated_at_utc": "2026-05-18T13:52:46Z"
 }

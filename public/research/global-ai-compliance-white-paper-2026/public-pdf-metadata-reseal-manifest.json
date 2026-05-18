@@ -1,11 +1,11 @@
 {
-  "manifest_type": "GAIC public distribution PDF metadata re-seal manifest",
-  "task_id": "GAIC-R3K-0C-PDF-METADATA-CONTROLLED-RESEAL",
-  "date": "2026-05-14",
+  "manifest_type": "GAIC public distribution PDF A4 layout repair manifest",
+  "task_id": "WHITEPAPER-R8-MULTI-FORMAT-PUBLICATION-STANDARD-AND-PDF-A4-REPAIR",
+  "date": "2026-05-18",
   "document_id": "GACWP-2026-v0.3.2-FRC-R3",
-  "old_public_pdf_sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643",
-  "new_public_pdf_sha256": "facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329",
   "sealed_candidate_pdf_sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643",
+  "previous_public_pdf_sha256": "facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329",
+  "new_public_pdf_sha256": "8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9",
   "public_pdf_path": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
   "sealed_candidate_pdf_path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.pdf",
   "metadata_fields_applied": {
@@ -15,13 +15,14 @@
     "Keywords": "Global AI Compliance White Paper 2026; GACWP-2026-v0.3.2-FRC-R3; AI Agent Lifecycle Governance; Agentic Lifecycle Governance; Missing Regulatory Objects; MRO; RCCS-T; RCCS-M; ALCS; MPLP; Multi-Agent Lifecycle Protocol; Deterministic Delivery; AI Agent Compliance; Multi-Agent Systems; Enterprise AI Governance; Evidence Chain; Accepted Outcome; Authority Boundary"
   },
   "page_count_before": 425,
-  "page_count_after": 425,
-  "visual_parity_validation": {
-    "method": "pdftoppm sampled render at 120 DPI, byte-identical PNG comparison",
-    "sample_pages": [1, 2, 3, 50, 120, 200, 300, 425],
+  "page_count_after": 488,
+  "a4_layout_validation": {
+    "method": "pdftoppm sampled render at 120 DPI plus pdfinfo and pdftotext validation",
+    "sample_pages": [1, 2, 3, 5, 50, 120, 300, 488],
     "result": "PASS"
   },
-  "content_change_statement": "PDF metadata only. Visible content, text content, page count, layout, scoring, methodology, and white paper prose were not changed.",
-  "sealed_candidate_statement": "This is a public distribution PDF metadata re-seal. The sealed publication-candidate PDF remains preserved in the repository history and source_r3/out/publication_candidate.",
+  "content_change_statement": "A4 layout repair only. Visible layout and pagination changed intentionally to satisfy the PDF A4 Print Profile. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
+  "sealed_candidate_statement": "The sealed publication-candidate PDF remains preserved at the recorded sealed candidate hash. This R8 update changes only the public distribution PDF.",
+  "production_reverification_required": true,
   "commit": "PENDING"
 }

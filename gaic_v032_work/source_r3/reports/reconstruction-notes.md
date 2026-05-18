@@ -1,5 +1,33 @@
 # Reconstruction Notes
 
+## WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair Notes (May 18, 2026)
+
+**Scope:** Correct the whitepaper publication system so HTML, PDF, and DOCX share canonical identity and metadata discipline while using profile-specific rendering rules. Repair GAIC and AIAAWP public PDFs under the PDF A4 Print Profile without forcing the public HTML artifacts into A4 pagination.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at `93cf0b7547e5504c2466debe9cc6faaaffe0ba09`.
+2. Upgraded `whitepaper-series-publication-sop-v1.md` to SOP v2 with a shared canonical publication standard and three rendering profiles.
+3. Added the Whitepaper A4 PDF Layout Gate, including render-proof requirements and hard fails for split covers, inset covers, broken TOCs, and unreadable tables.
+4. Added `scripts/render_whitepaper_r8_a4_pdf.py`, which reads public HTML into temporary PDF-mode HTML, strips the web navigation, injects A4 print CSS, renders through headless Chrome, and patches PDF metadata.
+5. Regenerated the GAIC public PDF and AIAAWP public PDF as A4 print-profile artifacts.
+6. Rendered current and repaired PDF page proofs under `reports/whitepaper-r8-current-pdf-renders/` and `reports/whitepaper-r8-new-pdf-renders/`.
+7. Updated GAIC public PDF checksum and public PDF repair manifest to the new public A4 PDF hash.
+
+**Artifact discipline:**
+
+- GAIC public PDF changed intentionally to `8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9`.
+- AIAAWP public PDF changed intentionally to `547bb2c428cf7490fd8211b38c37c243eb1ca442e1047438d5f60bb1453e59b7`; its public manifest and checksum file were updated to match.
+- GAIC sealed candidate PDF remains unchanged at `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Public HTML artifacts remain governed by the HTML Web Reading Profile and were not forced into A4 fixed-page constraints.
+- Pre-existing untracked `public/social/*` assets remain outside R8 scope.
+
+**Boundary discipline:**
+
+- R8 does not claim Final Seal, production reverification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+
+**WHITEPAPER-R8 Status:** WHITEPAPER-R8 MULTI-FORMAT PUBLICATION STANDARD AND PDF A4 REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
 ## WP2-R4C Content and Public Naming QA Notes (May 18, 2026)
 
 **Scope:** Content completeness, cross-format parity, public-facing naming correction, and format issue registration.

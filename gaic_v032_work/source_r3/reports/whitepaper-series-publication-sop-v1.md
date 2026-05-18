@@ -1,8 +1,9 @@
-# Whitepaper Series Publication SOP v1
+# Whitepaper Series Publication SOP v2
 
 **Status:** Active internal SOP
 **Applies to:** Agentic Lifecycle Governance Industry Series
 **Created by:** AIAAWP-R5A Whitepaper Series Publication SOP Patch
+**R8 update:** Multi-format publication standard with profile-specific rendering gates.
 
 ## 1. Purpose
 
@@ -42,6 +43,78 @@ Future series artifacts must preserve the GAIC artifact role model:
 
 Hard rule: DOCX must not be treated as the visual authority unless explicitly approved.
 
+## 3A. Shared Canonical Publication Standard
+
+The whitepaper series uses one publication system, not separate HTML, PDF, and DOCX publication systems. All rendering profiles must inherit the same canonical publication standard:
+
+- same source-grounded document identity
+- same title, subtitle, author, document ID, trace tag, and status boundary
+- same series relationship and related-asset mapping
+- same citation metadata discipline
+- same JSON-LD / SEO / GEO readiness discipline
+- same entity graph, `llms.txt`, sitemap, manifest, and checksum discipline
+- same source register / citation register provenance
+- same legal, audit, assurance, certification, endorsement, procurement, ranking, indexing, answer-engine, and SEO/GEO outcome boundaries
+- same GAIC visual family and publication authority tone
+
+Hard rule: a format-specific artifact may adapt physical layout, but it must not drift from the canonical document identity, semantic mapping, metadata, source basis, artifact role model, or boundary language.
+
+## 3B. Rendering Profiles
+
+Each whitepaper or guide must declare and QA three rendering profiles when those artifacts exist.
+
+### HTML Web Reading Profile
+
+Purpose: responsive, crawlable, linkable, machine-readable, anchor-friendly web reading.
+
+The HTML profile must preserve:
+
+- responsive layout from mobile through desktop
+- semantic headings and stable anchors
+- crawlable text, metadata, citation tags, JSON-LD, and internal links
+- table overflow controls for small screens
+- readable long-form web typography
+- publication visual family, cover/title grammar, status/boundary styling, citation/source-note style, and artifact identity
+
+The HTML profile must not be forced into:
+
+- A4 fixed page size
+- print margins
+- forced page breaks
+- fixed-height PDF cover behavior
+- PDF-only table pagination
+- page-number header/footer logic
+
+### PDF A4 Print Profile
+
+Purpose: formal A4 publication artifact for download, citation, boardroom, audit, assurance, and enterprise circulation.
+
+The PDF profile must provide:
+
+- full-page A4 publication cover
+- no accidental cover split
+- status/boundary block that fits on the cover or moves to an intentionally designed following page
+- controlled Publication Contents / TOC pagination
+- intentional chapter and appendix starts
+- readable wide-table and row-card treatment
+- proper A4 margins after the cover
+- PDF metadata
+- render-proof QA screenshots
+
+### DOCX Editable Derivative Profile
+
+Purpose: editable review/distribution derivative, not visual authority.
+
+The DOCX profile must provide:
+
+- editable text and tables
+- source/content parity with canonical source and HTML/PDF
+- document metadata where practical
+- clear derivative status
+- no stronger visual-authority or final/sealed claim than the canonical status allows
+
+DOCX may adapt layout for editability and may use simplified table treatment, but it must not introduce semantic drift, score/methodology drift, public identity drift, or boundary drift.
+
 ## 4. Mandatory Pre-Generation Gate
 
 Before any HTML/PDF/DOCX generation for future series assets, Codex must prove it has inspected and reused the GAIC standard.
@@ -72,7 +145,7 @@ Every future whitepaper/guide artifact generation must reuse or explicitly adapt
 - appendix/source section style
 - table/row-card treatment
 
-### Responsive HTML
+### Responsive HTML / HTML Web Reading Profile
 
 - GAIC R3D-3 responsive web-reading rules
 - mobile-width handling
@@ -80,14 +153,21 @@ Every future whitepaper/guide artifact generation must reuse or explicitly adapt
 - scroll-contained tables
 - readable line length
 - no body-level horizontal overflow
+- stable anchors and crawlable semantic sections
+- no A4 fixed-page constraints in the public web-reading artifact
 
-### PDF
+### PDF / A4 Print Profile
 
 - generated from publication-quality HTML or approved publication shell
 - not from broken/raw Markdown conversion
 - metadata must be set
 - tables must be readable
 - sampled page proof required
+- full-page A4 cover
+- no accidental cover split
+- controlled TOC pagination
+- intentional chapter and appendix starts
+- no huge unintended white margins around the cover
 
 ### DOCX
 
@@ -251,7 +331,54 @@ Hard fail conditions:
 - SEO/GEO outcome is claimed without evidence.
 - External adoption or endorsement relation is fabricated.
 
-## 9. Required Phase Order
+## 9. Whitepaper A4 PDF Layout Gate
+
+The Whitepaper A4 PDF Layout Gate belongs to the PDF A4 Print Profile. It must run before:
+
+- Final Candidate QA
+- public staging
+- production live verification
+- final seal
+- large-scale distribution
+
+Required PDF layout rules:
+
+1. PDF must be designed for A4, not merely accepted because a browser produced a PDF.
+2. Cover must be a full-page A4 publication cover.
+3. Cover content must not split across pages.
+4. Boundary/status block must either fit on the cover or move to a deliberately designed second page.
+5. TOC / Publication Contents must use controlled pagination.
+6. Each major chapter must start cleanly.
+7. Appendices must start cleanly.
+8. Wide tables must be transformed into row-card, split-table, or otherwise print-safe layouts.
+9. No catastrophic table cutoff is allowed.
+10. No accidental blank pages are allowed.
+11. No huge unintended white margins around the cover are allowed.
+12. PDF metadata must be set.
+13. Page proof/render QA is mandatory.
+14. File existence/hash is not sufficient for PDF PASS.
+15. PDF must be visually accepted before public distribution or final seal.
+
+Hard fail if:
+
+- cover is split across pages
+- cover is rendered as a small inset panel with large white page margins
+- TOC is broken unintentionally
+- table pages are unreadable
+- PDF is generated from non-publication-quality HTML/CSS
+- no page-render proof exists
+
+## 10. Profile-Specific QA Gate
+
+Every release wave must report the relevant rendering profile status:
+
+- HTML Web Reading Profile: PASS / PARTIAL / BLOCKED
+- PDF A4 Print Profile: PASS / PARTIAL / BLOCKED
+- DOCX Editable Derivative Profile: PASS / PARTIAL / BLOCKED
+
+The shared canonical publication standard can pass while one rendering profile is blocked, but final seal and large-scale distribution remain blocked until all required profiles for the release have passed or have an explicitly approved deferral.
+
+## 11. Required Phase Order
 
 Future series assets must follow this phase order:
 
@@ -262,21 +389,27 @@ Future series assets must follow this phase order:
 5. Editorial/source/boundary QA
 6. Publication-candidate source package
 7. Publication Standard Reuse Gate
-8. Artifact generation
-9. Format/publication design pass
-10. Final candidate QA
-11. Publication staging
-12. Whitepaper Semantic Mapping Completion Gate
-13. Production live verification
-14. Author release decision
-15. Final seal, only if explicitly authorized
-16. Post-release evidence capture
+8. Shared Canonical Publication Standard check
+9. Rendering Profile declaration
+10. Artifact generation
+11. HTML Web Reading Profile QA
+12. PDF A4 Print Profile QA
+13. DOCX Editable Derivative Profile QA
+14. Metadata / SEO / GEO / JSON-LD / citation QA
+15. Artifact integrity QA
+16. Final candidate QA
+17. Publication staging
+18. Whitepaper Semantic Mapping Completion Gate
+19. Production live verification
+20. Author release decision
+21. Final seal, only if explicitly authorized
+22. Post-release evidence capture
 
 Hard rule: do not generate artifacts before step 7.
 
-Hard rule: do not accept production live verification as release-complete or proceed to final seal until step 12 passes.
+Hard rule: do not accept production live verification as release-complete or proceed to final seal until the semantic mapping gate and required rendering profile gates pass.
 
-## 10. Public Naming Rule
+## 12. Public Naming Rule
 
 Internal task shorthand is allowed only in:
 
@@ -292,7 +425,7 @@ Public-facing artifacts must use:
 - actual trace tag
 - no WP2/WP3-style internal numbering
 
-## 11. Future Application
+## 13. Future Application
 
 This SOP explicitly applies to:
 

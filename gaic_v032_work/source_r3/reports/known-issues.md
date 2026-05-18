@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 18, 2026 (AIAAWP-R7 Author Release Decision and Post-Release Evidence Capture Pack)
+**Last Updated:** May 18, 2026 (WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair)
+
+## WHITEPAPER-R8 Multi-Format Publication Standard and PDF A4 Repair
+
+### Status: WHITEPAPER-R8 MULTI-FORMAT PUBLICATION STANDARD AND PDF A4 REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+R8 corrected the publication-quality issue identified after AIAAWP-R7: HTML, PDF, and DOCX must belong to one publication system, but they cannot share one physical layout rule. The Whitepaper Series Publication SOP now uses a shared canonical standard with separate rendering profiles for HTML Web Reading, PDF A4 Print, and DOCX Editable Derivative outputs.
+
+Resolved in this wave:
+
+1. Added the multi-format publication standard and profile-specific rendering gates to the SOP.
+2. Added the Whitepaper A4 PDF Layout Gate.
+3. Repaired GAIC and AIAAWP public PDFs through a PDF-only A4 render pipeline.
+4. Preserved public HTML as responsive web-reading artifacts and did not force HTML into A4 pagination rules.
+5. Updated GAIC and AIAAWP public PDF checksum/manifest records for the new A4 public PDFs.
+6. Created current/new PDF render proof sets and R8 QA reports.
+
+Remaining known issue:
+
+- Production live reverification is required because public PDF artifacts and at least one public checksum manifest changed.
+
+Boundary discipline:
+
+- R8 does not claim Final Seal, certification, audit standard status, assurance opinion, legal compliance proof, regulator approval, endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+- R8 does not change GAIC scores, GAIC methodology, AIAAWP content semantics, GAIC sealed candidate artifacts, or DOCX derivative content.
 
 ## WP2-R4B Candidate Artifact Generation
 
