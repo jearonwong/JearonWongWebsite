@@ -3332,3 +3332,35 @@ Boundary discipline:
 - No final seal, certification, audit standard, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, MPLP requirement, Cognitive OS requirement, SoloCrew enterprise-readiness, external adoption, indexing pickup, answer-engine recognition, or SEO/GEO uplift claim was introduced.
 
 **AIAAWP-R7 Status:** ✓ AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED
+
+---
+
+## WHITEPAPER-R8E-0 Known Issues
+
+### Publication Design Remediation Plan Complete
+
+R8E-0 is a planning-only response to owner review feedback that the remaining PDF quality problem is not just CSS/table transformation. It requires publication design, information hierarchy, semantic pagination, and table-design review before any further implementation.
+
+Resolved in this planning wave:
+
+- Created the R8E-0 preflight report and recorded that current `origin/main` is `6e13d6897e77bd4c8aabb4ffcfcb26def8b80463`, while `66f1757f532c3992dbf0ca0f185fb9ce807a291e` remains the user-accepted R8D baseline.
+- Created a publication design review framework requiring semantic pagination, table-purpose classification, density-aware orientation, visual hierarchy, profile-aware rendering, and owner review before implementation.
+- Audited GAIC and AIAAWP pagination/page structure, including the GAIC landscape-table semantic discontinuity where explanatory text and table are separated across page families.
+- Created table layout decision plans for GAIC and AIAAWP, including P0/P1 handling for vertical-text table failures, T-11-01, score overview hierarchy, dimension coverage heatmap/table treatment, AIAAWP Table 9, and evidence/object row-card usage.
+- Created visual hierarchy, chart/heatmap/table, header/footer/copyright, metadata/SEO/GEO, and implementation roadmap plans.
+- Created boundary QA confirming the planning files do not claim final/sealed status, production live verification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+
+Remaining known issues:
+
+- Owner review is required before any R8E-1 implementation.
+- Exact footer/copyright wording requires owner decision.
+- Future implementation must decide which GAIC score/coverage tables become scorecard/heatmap modules versus improved landscape tables.
+- Future implementation must verify any owner-observed vertical OpenAI Agents SDK column defect against the selected implementation baseline and treat reproduction as P0.
+- Production reverification remains blocked until after an accepted implementation wave and deployment.
+- Final Seal remains blocked.
+
+Boundary discipline:
+
+- R8E-0 does not implement layout changes, regenerate PDFs, modify public HTML, modify public PDFs, modify manifests/checksums, reintroduce public DOCX, change GAIC scores/methodology, change AIAAWP content, change routes, or claim production reverification.
+
+**WHITEPAPER-R8E-0 Status:** ✓ PUBLICATION DESIGN REMEDIATION PLAN COMPLETE / OWNER REVIEW REQUIRED BEFORE IMPLEMENTATION

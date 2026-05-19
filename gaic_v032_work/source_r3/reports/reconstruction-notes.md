@@ -4062,3 +4062,34 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - R7 does not claim Final Seal, external launch execution, LinkedIn publication, group distribution, indexing, answer-engine recognition, SEO/GEO uplift, backlink authority, citation authority, external adoption, certification, regulator approval, legal compliance proof, assurance opinion, endorsement, procurement guidance, vendor ranking, MPLP requirement, Cognitive OS requirement, or SoloCrew enterprise readiness.
 
 **AIAAWP-R7 Status:** ✓ AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED.
+
+## WHITEPAPER-R8E-0 Notes (May 19, 2026)
+
+**Scope:** Planning-only publication design remediation plan for GAIC and AIAAWP PDFs.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main`: local and origin are aligned at `6e13d6897e77bd4c8aabb4ffcfcb26def8b80463`; user-accepted R8D baseline remains `66f1757f532c3992dbf0ca0f185fb9ce807a291e`.
+2. Inspected the Whitepaper Series Publication SOP, R8/R8C/R8D/R8E reports, current public GAIC and AIAAWP PDFs/HTML, public manifests/checksums, public hubs, Evidence Registry, `llms.txt`, entity graph, metadata/JSON-LD references, and current R8E proof images.
+3. Created the R8E-0 publication design review framework, requiring semantic pagination before CSS, table purpose before table format, density before orientation, visual hierarchy before styling, profile-aware rendering, and owner review before implementation.
+4. Created the GAIC/AIAAWP pagination and page-structure audit, including the GAIC landscape-table semantic discontinuity where explanatory text and table are separated across portrait/landscape page families.
+5. Created the GAIC/AIAAWP table layout decision audit, visual hierarchy/typography audit, chart/heatmap/table decision plan, header/footer/copyright plan, metadata/SEO/GEO consistency plan, and implementation roadmap.
+6. Created boundary QA, build/non-mutation validation, and final QA reports for the planning-only wave.
+
+**Artifact discipline:**
+
+- No GAIC or AIAAWP PDF was regenerated.
+- No public HTML artifact was changed.
+- No public manifest or checksum was changed.
+- No renderer code was changed.
+- No public route was changed.
+- No public DOCX was reintroduced.
+- No score, methodology, RCCS-T/RCCS-M/ALCS framing, AARM content, MRO content, or source argument was changed.
+
+**Boundary discipline:**
+
+- R8E-0 is a remediation plan only.
+- Owner review is required before R8E-1 implementation.
+- R8E-0 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+
+**WHITEPAPER-R8E-0 Status:** ✓ PUBLICATION DESIGN REMEDIATION PLAN COMPLETE / OWNER REVIEW REQUIRED BEFORE IMPLEMENTATION.
