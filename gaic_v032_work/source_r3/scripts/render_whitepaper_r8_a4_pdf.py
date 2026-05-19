@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass
+from html import escape, unescape
 from pathlib import Path
 
 try:
@@ -27,6 +28,11 @@ except Exception:  # pragma: no cover
 
 REPO = Path(__file__).resolve().parents[3]
 TMP_ROOT = Path("/tmp/whitepaper-r8-a4-render")
+TABLE_RE = re.compile(r"<table(?P<attrs>[^>]*)>(?P<body>[\s\S]*?)</table>", re.IGNORECASE)
+TR_RE = re.compile(r"<tr[^>]*>([\s\S]*?)</tr>", re.IGNORECASE)
+TH_RE = re.compile(r"<th[^>]*>([\s\S]*?)</th>", re.IGNORECASE)
+TD_RE = re.compile(r"<td[^>]*>([\s\S]*?)</td>", re.IGNORECASE)
+TAG_RE = re.compile(r"<[^>]+>")
 
 
 @dataclass(frozen=True)
@@ -270,15 +276,65 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
     width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
-    table-layout: fixed !important;
+    table-layout: auto !important;
   }}
   th,
   td {{
     font-size: 7.4pt !important;
     line-height: 1.25 !important;
     padding: 3pt !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }}
+  .pdf-wide-table-card-set {{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 4mm !important;
+    margin: 4mm 0 6mm !important;
+    break-inside: auto !important;
+  }}
+  .pdf-wide-table-row-card {{
+    break-inside: avoid !important;
+    border: 0.6pt solid #cbd6df !important;
+    border-radius: 2mm !important;
+    padding: 3mm !important;
+    background: #ffffff !important;
+  }}
+  .pdf-wide-table-row-card h4 {{
+    margin: 0 0 2.2mm !important;
+    font-size: 9.2pt !important;
+    line-height: 1.2 !important;
+    color: #102a35 !important;
+  }}
+  .pdf-wide-table-row-card dl {{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.8mm !important;
+    margin: 0 !important;
+  }}
+  .pdf-wide-table-row-card dl div {{
+    display: grid !important;
+    grid-template-columns: 34mm minmax(0, 1fr) !important;
+    gap: 3mm !important;
+    align-items: start !important;
+    padding-top: 1.5mm !important;
+    border-top: 0.4pt solid #e3e9ee !important;
+  }}
+  .pdf-wide-table-row-card dt {{
+    margin: 0 !important;
+    font-size: 7pt !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #526670 !important;
+  }}
+  .pdf-wide-table-row-card dd {{
+    margin: 0 !important;
+    font-size: 8pt !important;
+    line-height: 1.32 !important;
+    color: #182c35 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
   }}
   .table-block,
   .template-code {{
@@ -307,10 +363,68 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
 """
 
 
+def plain_text(fragment: str) -> str:
+    text = TAG_RE.sub(" ", fragment)
+    text = re.sub(r"\s+", " ", unescape(text)).strip()
+    return text
+
+
+def should_transform_table(headers: list[str], rows: list[list[str]], table_html: str) -> bool:
+    if len(headers) >= 4:
+        return True
+    if len(headers) >= 3 and sum(len(header) for header in headers) >= 58:
+        return True
+    if any(len(header) >= 26 for header in headers):
+        return True
+    return len(rows) >= 6 and len(table_html) >= 2400
+
+
+def transform_wide_tables_for_pdf(html: str) -> str:
+    """Convert wide source tables to PDF-only row cards in temporary HTML.
+
+    This keeps the public HTML artifact unchanged while preventing Chrome's
+    print engine from compressing wide tables into unreadable vertical text.
+    """
+
+    def replace_table(match: re.Match[str]) -> str:
+        table_html = match.group(0)
+        body = match.group("body")
+        header_fragments = TH_RE.findall(body)
+        headers = [plain_text(header) for header in header_fragments]
+        row_fragments = TR_RE.findall(body)
+        rows: list[list[str]] = []
+        for row_fragment in row_fragments:
+            cells = TD_RE.findall(row_fragment)
+            if cells and len(cells) >= 2:
+                rows.append(cells)
+        if not headers or not rows or not should_transform_table(headers, rows, table_html):
+            return table_html
+
+        cards: list[str] = ['<div class="pdf-wide-table-card-set table-block">']
+        for index, cells in enumerate(rows, start=1):
+            title = plain_text(cells[0]) or f"Row {index}"
+            cards.append('<article class="pdf-wide-table-row-card">')
+            cards.append(f"<h4>{escape(title)}</h4>")
+            cards.append("<dl>")
+            for cell_index, cell in enumerate(cells):
+                label = headers[cell_index] if cell_index < len(headers) else f"Field {cell_index + 1}"
+                cards.append("<div>")
+                cards.append(f"<dt>{escape(label)}</dt>")
+                cards.append(f"<dd>{cell}</dd>")
+                cards.append("</div>")
+            cards.append("</dl>")
+            cards.append("</article>")
+        cards.append("</div>")
+        return "\n".join(cards)
+
+    return TABLE_RE.sub(replace_table, html)
+
+
 def prepare_html(config: WhitepaperConfig) -> Path:
     TMP_ROOT.mkdir(parents=True, exist_ok=True)
     html = config.html_path.read_text(encoding="utf-8", errors="ignore")
     html = re.sub(r"<nav class=\"web-edition-nav\"[\s\S]*?</nav>\s*", "", html, count=1)
+    html = transform_wide_tables_for_pdf(html)
     html = html.replace("<body>", f'<body class="r8-{config.key}-pdf-profile">', 1)
     html = html.replace("</head>", f"{pdf_css(config)}\n</head>", 1)
     out = TMP_ROOT / config.tmp_name

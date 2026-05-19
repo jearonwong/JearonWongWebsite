@@ -101,6 +101,34 @@ The PDF profile must provide:
 - PDF metadata
 - render-proof QA screenshots
 
+#### PDF Wide Table Layout Gate
+
+PDF must fail if:
+
+- any table column collapses into vertical single-character text
+- table headers become vertical letter stacks
+- long cell text forces columns below readable width
+- continuation pages repeat broken column widths
+- tables are clipped horizontally
+- table is technically present but practically unreadable
+
+Required repair methods:
+
+- convert wide tables to semantic row-card layouts in PDF mode
+- or use controlled landscape pages
+- or split wide tables into multiple narrower tables with repeated context
+- or use key-value stacked blocks for system, vendor, or scoring matrices
+
+Required QA:
+
+- identify all wide tables before PDF PASS
+- render every repaired wide-table page, or at least every unique table pattern
+- record before/after proof
+- verify text extraction still contains table content
+- verify the HTML Web Reading Profile is not damaged
+
+Hard rule: a table that is readable in HTML may still fail PDF. PDF needs its own wide-table treatment. Any table that produces vertical single-character columns is a P0 blocker.
+
 ### DOCX Editable Derivative Profile
 
 Purpose: editable review/distribution derivative, not visual authority.

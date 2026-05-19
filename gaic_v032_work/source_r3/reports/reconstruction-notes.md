@@ -1,5 +1,35 @@
 # Reconstruction Notes
 
+## WHITEPAPER-R8C GAIC PDF Wide-Table Layout Repair Notes (May 19, 2026)
+
+**Scope:** Repair the GAIC public PDF wide-table P0 layout defect while preserving the multi-format publication model. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at `37b63206196f9362f7f8a047034496db772621b6`.
+2. Reproduced the GAIC PDF vertical-column table defect on the Comparative Field Positioning Matrix.
+3. Added the PDF Wide Table Layout Gate to the Whitepaper Series Publication SOP.
+4. Patched the PDF-only renderer so wide tables are transformed in temporary PDF-mode HTML into semantic row-card blocks where needed, without mutating public HTML.
+5. Regenerated the GAIC public PDF and refreshed the AIAAWP public PDF through the same PDF profile.
+6. Rendered current defect and repaired wide-table page proofs under `reports/whitepaper-r8c-current-wide-table-renders/` and `reports/whitepaper-r8c-new-wide-table-renders/`.
+7. Updated public checksum, manifest, hub hash, and public PDF repair records.
+
+**Artifact discipline:**
+
+- GAIC public HTML remains `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- GAIC public PDF changed intentionally to `bf7f241642719a9ab0214fc6110d0e7018b532b055a3be2bd2f1e12fff1330c8`.
+- AIAAWP public HTML remains `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+- AIAAWP public PDF changed intentionally to `cc13249074a7cdd79c0a071f29ccfe1ba89dce2103dc61fb09dded7b0304caca`.
+- GAIC sealed candidate PDF remains unchanged at `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Public DOCX remains absent from `public/research/` and public manifest/checksum/link surfaces.
+- Pre-existing untracked `public/social/*` assets remain outside R8C scope.
+
+**Boundary discipline:**
+
+- R8C does not claim Final Seal, production reverification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+
+**WHITEPAPER-R8C Status:** WHITEPAPER-R8C GAIC PDF WIDE-TABLE LAYOUT REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
 ## WHITEPAPER-R8B DOCX Public Offboarding Notes (May 18, 2026)
 
 **Scope:** Remove both white papers' public DOCX distribution surface after owner decision. Public website distribution is now HTML plus PDF only; DOCX remains an internal/editable derivative profile unless separately approved for public distribution.

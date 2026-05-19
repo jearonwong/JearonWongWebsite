@@ -1,7 +1,31 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 18, 2026 (WHITEPAPER-R8B DOCX Public Offboarding)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8C GAIC PDF Wide-Table Repair)
+
+## WHITEPAPER-R8C GAIC PDF Wide-Table Layout Repair
+
+### Status: WHITEPAPER-R8C GAIC PDF WIDE-TABLE LAYOUT REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+R8C corrects the P0 GAIC PDF table defect discovered after R8: the Comparative Field Positioning Matrix produced an unreadable PDF continuation where `ALCS Posture` and related columns collapsed into vertical single-character text. The issue was specific to the PDF A4 Print Profile and did not require forcing the HTML Web Reading Profile into A4 rules.
+
+Resolved in this wave:
+
+1. Added a PDF Wide Table Layout Gate to the Whitepaper Series Publication SOP.
+2. Patched the PDF-only renderer so wide tables are transformed in temporary PDF-mode HTML into readable stacked row cards where needed.
+3. Regenerated the GAIC public PDF with the vertical-column table defect repaired.
+4. Refreshed the AIAAWP public PDF through the same PDF profile and verified representative dense table pages remain readable.
+5. Updated public PDF hashes, checksums, manifest records, and hub hash displays.
+6. Preserved HTML/PDF-only public distribution and confirmed public DOCX remains offboarded.
+
+Remaining known issue:
+
+- Production live reverification is required after deploy because public PDFs and public checksum/manifest surfaces changed again.
+
+Boundary discipline:
+
+- R8C does not claim Final Seal, certification, audit standard status, assurance opinion, legal compliance proof, regulator approval, endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+- R8C does not change GAIC scores, GAIC methodology, AIAAWP argument semantics, or the GAIC sealed candidate artifact.
 
 ## WHITEPAPER-R8B DOCX Public Offboarding
 

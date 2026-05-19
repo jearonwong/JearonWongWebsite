@@ -13,7 +13,7 @@ Public website distribution now exposes only HTML and PDF. Earlier editable deri
 The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18.
 
 - Previous metadata-hardened public PDF: `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`
-- Current public A4 Print Profile PDF: `8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9`
+- Current public A4 Print Profile PDF: `bf7f241642719a9ab0214fc6110d0e7018b532b055a3be2bd2f1e12fff1330c8`
 - Current public PDF page count: 488
 
 The R8 public PDF update is a controlled layout repair. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, or boundary status. Production live reverification is required after deployment.
