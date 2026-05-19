@@ -4190,3 +4190,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 **WHITEPAPER-R8E-3 Status:** ✓ PUBLICATION SURFACE METADATA AND HOMEPAGE EXPOSURE FIX COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
 
 ---
+
+## WHITEPAPER-R8E-4 Notes (May 19, 2026)
+
+**Scope:** Homepage Research Series hierarchy repair.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `cf4622b000cf01f87bd8305f32fe8d57fc337b3c`.
+2. Inspected the R8E-3 homepage exposure decision record, visual QA, SOURCE MASTER, known issues, reconstruction notes, and `src/pages/index.astro`.
+3. Replaced the R8E-3 equal two-column Research Series layout with a vertical ordered stack.
+4. Added data-array-driven homepage series rendering for GAIC and AIAAWP.
+5. Presented GAIC as `01 / Foundation` and AIAAWP as `02 / Auditability & Assurance`.
+6. Preserved GAIC `485-page PDF` and AIAAWP `118-page PDF` labels.
+7. Verified homepage JSON-LD parses and continues to represent GAIC and AIAAWP without publishing a third whitepaper.
+8. Ran visual/responsive QA at 375px, 768px, and 1440px and saved proof screenshots.
+
+**Artifact discipline:**
+
+- No PDFs were regenerated.
+- No public PDF artifact changed.
+- No standalone public whitepaper HTML artifact changed.
+- No manifests or checksums were changed.
+- No GAIC scores, GAIC methodology, or AIAAWP whitepaper content changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- R8E-4 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+- Production reverification is required after deployment.
+
+**WHITEPAPER-R8E-4 Status:** ✓ HOMEPAGE RESEARCH SERIES HIERARCHY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.

@@ -3465,3 +3465,36 @@ Boundary discipline:
 - R8E-0 does not implement layout changes, regenerate PDFs, modify public HTML, modify public PDFs, modify manifests/checksums, reintroduce public DOCX, change GAIC scores/methodology, change AIAAWP content, change routes, or claim production reverification.
 
 **WHITEPAPER-R8E-0 Status:** ✓ PUBLICATION DESIGN REMEDIATION PLAN COMPLETE / OWNER REVIEW REQUIRED BEFORE IMPLEMENTATION
+
+---
+
+## WHITEPAPER-R8E-4 Known Issues
+
+### Homepage Research Series Hierarchy Repair Complete
+
+R8E-4 repairs the homepage Research Series module after owner review found that the R8E-3 two-card layout visually flattened GAIC and AIAAWP into peer assets.
+
+Resolved in this wave:
+
+- Replaced the equal two-column Research Series card grid with a vertical ordered series stack.
+- Labeled GAIC as `01 / Foundation`.
+- Labeled AIAAWP as `02 / Auditability & Assurance`.
+- Preserved GAIC `485-page PDF` and AIAAWP `118-page PDF` labels.
+- Kept whitepaper CTAs to `Read paper` and `Download PDF`.
+- Kept Evidence Registry and Concept Core links as supporting links, not equal whitepaper CTAs.
+- Made the homepage structure data-array-driven so a future third whitepaper can be added without redesign.
+- Verified homepage JSON-LD still includes GAIC and AIAAWP and does not represent an unpublished third whitepaper as a published TechArticle.
+- Captured responsive homepage screenshots at 375px, 768px, and 1440px.
+
+Remaining known issues:
+
+- Production reverification remains required after deployment.
+- Final Seal remains blocked.
+- No newsletter/distribution wave should proceed until production reverification closes.
+
+Boundary discipline:
+
+- R8E-4 does not regenerate PDFs, change whitepaper artifacts, change standalone public whitepaper HTML artifacts, update manifests/checksums, change GAIC scores/methodology, change AIAAWP content, reintroduce public DOCX, create a public third-whitepaper route, or claim production reverification.
+- No certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, external adoption, or final/sealed claim was introduced.
+
+**WHITEPAPER-R8E-4 Status:** ✓ HOMEPAGE RESEARCH SERIES HIERARCHY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
