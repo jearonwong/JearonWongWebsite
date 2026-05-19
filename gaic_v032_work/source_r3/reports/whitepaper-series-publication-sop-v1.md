@@ -129,6 +129,92 @@ Required QA:
 
 Hard rule: a table that is readable in HTML may still fail PDF. PDF needs its own wide-table treatment. Any table that produces vertical single-character columns is a P0 blocker.
 
+#### PDF Table Semantic Gate
+
+PDF table rendering must preserve the semantic purpose of each table. Wide-table repair is not allowed to erase the table's primary reading mode.
+
+##### Table Profiles
+
+1. Comparative Matrix Profile
+
+Purpose: side-by-side comparison across systems, categories, vendors, methods, or postures.
+
+Default rendering: table/grid.
+
+Allowed PDF strategies:
+
+- A4 landscape page
+- split matrix with repeated key columns
+- two-panel matrix
+- reduced but readable font
+- controlled column widths
+- stable repeated headers
+- continuation pages with preserved comparison context
+
+Row-card fallback is discouraged and requires explicit justification.
+
+2. Score / Rubric Matrix Profile
+
+Purpose: compare scoring dimensions, maturity levels, readiness levels, or rubric states.
+
+Default rendering: matrix/grid or split grid.
+
+Row-card fallback is allowed only if the rubric is not primarily comparative.
+
+3. Lifecycle Mapping Table Profile
+
+Purpose: map lifecycle phases to objects, evidence, controls, or responsibilities.
+
+Default rendering: table, split table, or structured stage blocks.
+
+Row-card layout is allowed when each lifecycle phase is self-contained.
+
+4. Registry / Inventory Table Profile
+
+Purpose: list artifacts, evidence objects, sources, terms, or references.
+
+Default rendering: table or row-card depending on width.
+
+Row-card layout is acceptable.
+
+5. Evidence Request Table Profile
+
+Purpose: specify evidence asks or checklists.
+
+Default rendering: checklist table or row-card.
+
+Row-card layout is acceptable.
+
+6. Appendix Long Table Profile
+
+Purpose: preserve completeness.
+
+Default rendering: split table, row-card, or compact registry format.
+
+Row-card layout is acceptable if content remains extractable and readable.
+
+##### Hard Fail Conditions
+
+PDF fails if:
+
+- a comparative matrix is converted to row-card without justification
+- a comparison-heavy table loses side-by-side readability
+- a score/rubric table loses level-to-level comparability
+- a vendor/system posture table loses scanability
+- table headers collapse into vertical single-character text
+- columns are readable only one cell at a time with no comparison context
+- continuation pages omit repeated context
+
+##### Required QA
+
+For every P0/P1 table:
+
+- record the semantic profile
+- record the target rendering
+- include before/after proof images where available
+- verify comparison preservation
+- verify text extraction
+
 ### DOCX Editable Derivative Profile
 
 Purpose: editable review/distribution derivative, not visual authority.

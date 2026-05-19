@@ -33,6 +33,14 @@ TR_RE = re.compile(r"<tr[^>]*>([\s\S]*?)</tr>", re.IGNORECASE)
 TH_RE = re.compile(r"<th[^>]*>([\s\S]*?)</th>", re.IGNORECASE)
 TD_RE = re.compile(r"<td[^>]*>([\s\S]*?)</td>", re.IGNORECASE)
 TAG_RE = re.compile(r"<[^>]+>")
+READINESS_BLOCK_RE = re.compile(
+    r'(?P<h3><h3 id="table-9-auditability-readiness-levels">[\s\S]*?</h3>)\s*'
+    r'<div class="semantic-row-card-set table-block">(?P<body>[\s\S]*?)(?=<p><strong>Table note:)',
+    re.IGNORECASE,
+)
+ARTICLE_RE = re.compile(r'<article class="semantic-row-card">(?P<body>[\s\S]*?)</article>', re.IGNORECASE)
+H4_RE = re.compile(r"<h4>([\s\S]*?)</h4>", re.IGNORECASE)
+DL_PAIR_RE = re.compile(r"<div><dt>([\s\S]*?)</dt><dd>([\s\S]*?)</dd></div>", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -287,6 +295,86 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
     word-break: normal !important;
     hyphens: auto !important;
   }}
+  .table-system-profile table,
+  .table-matrix table,
+  .table-rubric table {{
+    table-layout: fixed !important;
+  }}
+  .table-system-profile th,
+  .table-system-profile td {{
+    font-size: 6.45pt !important;
+    line-height: 1.16 !important;
+    padding: 2.1pt !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }}
+  .table-system-profile table:nth-of-type(1) th:nth-child(1),
+  .table-system-profile table:nth-of-type(1) td:nth-child(1) {{
+    width: 20% !important;
+  }}
+  .table-system-profile table:nth-of-type(1) th:nth-child(2),
+  .table-system-profile table:nth-of-type(1) td:nth-child(2) {{
+    width: 34% !important;
+  }}
+  .table-system-profile table:nth-of-type(1) th:nth-child(3),
+  .table-system-profile table:nth-of-type(1) td:nth-child(3) {{
+    width: 46% !important;
+  }}
+  .table-system-profile table:nth-of-type(2) th:nth-child(1),
+  .table-system-profile table:nth-of-type(2) td:nth-child(1) {{
+    width: 20% !important;
+  }}
+  .table-system-profile table:nth-of-type(2) th:nth-child(2),
+  .table-system-profile table:nth-of-type(2) td:nth-child(2),
+  .table-system-profile table:nth-of-type(2) th:nth-child(3),
+  .table-system-profile table:nth-of-type(2) td:nth-child(3) {{
+    width: 22% !important;
+  }}
+  .table-system-profile table:nth-of-type(2) th:nth-child(4),
+  .table-system-profile table:nth-of-type(2) td:nth-child(4) {{
+    width: 36% !important;
+  }}
+  .table-system-profile .layout-note,
+  .table-system-profile .continuation-label {{
+    font-size: 7.5pt !important;
+    line-height: 1.25 !important;
+  }}
+  .pdf-score-rubric-matrix table {{
+    table-layout: fixed !important;
+  }}
+  .pdf-score-rubric-matrix th,
+  .pdf-score-rubric-matrix td {{
+    font-size: 6.8pt !important;
+    line-height: 1.18 !important;
+    padding: 2.3pt !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }}
+  .pdf-score-rubric-matrix table:nth-of-type(1) th:nth-child(1),
+  .pdf-score-rubric-matrix table:nth-of-type(1) td:nth-child(1),
+  .pdf-score-rubric-matrix table:nth-of-type(2) th:nth-child(1),
+  .pdf-score-rubric-matrix table:nth-of-type(2) td:nth-child(1) {{
+    width: 17% !important;
+  }}
+  .pdf-score-rubric-matrix table:nth-of-type(1) th:nth-child(2),
+  .pdf-score-rubric-matrix table:nth-of-type(1) td:nth-child(2) {{
+    width: 31% !important;
+  }}
+  .pdf-score-rubric-matrix table:nth-of-type(1) th:nth-child(3),
+  .pdf-score-rubric-matrix table:nth-of-type(1) td:nth-child(3),
+  .pdf-score-rubric-matrix table:nth-of-type(1) th:nth-child(4),
+  .pdf-score-rubric-matrix table:nth-of-type(1) td:nth-child(4) {{
+    width: 26% !important;
+  }}
+  .pdf-score-rubric-matrix table:nth-of-type(2) th:nth-child(2),
+  .pdf-score-rubric-matrix table:nth-of-type(2) td:nth-child(2) {{
+    width: 38% !important;
+  }}
+  .pdf-score-rubric-matrix table:nth-of-type(2) th:nth-child(3),
+  .pdf-score-rubric-matrix table:nth-of-type(2) td:nth-child(3) {{
+    width: 45% !important;
+  }}
   .pdf-wide-table-card-set {{
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -379,11 +467,64 @@ def should_transform_table(headers: list[str], rows: list[list[str]], table_html
     return len(rows) >= 6 and len(table_html) >= 2400
 
 
-def transform_wide_tables_for_pdf(html: str) -> str:
-    """Convert wide source tables to PDF-only row cards in temporary HTML.
+def table_profile(context_html: str, headers: list[str], table_html: str) -> str:
+    context_text = plain_text(context_html).lower()
+    header_text = " ".join(headers).lower()
+    table_text = plain_text(table_html[:1200]).lower()
+    profile_text = f"{context_text} {header_text} {table_text}"
+
+    if (
+        "table-system-profile" in context_html
+        or "comparative field positioning matrix" in profile_text
+        or "comparative" in profile_text
+        or "positioning matrix" in profile_text
+        or "posture" in header_text
+        or ("rccs-m" in header_text and "alcs" in header_text)
+    ):
+        return "comparative_matrix"
+    if (
+        "table-rubric" in context_html
+        or "rubric" in profile_text
+        or "score" in profile_text
+        or "scoring" in profile_text
+        or "readiness levels" in profile_text
+    ):
+        return "score_rubric_matrix"
+    if (
+        "mro-to-audit-evidence" in profile_text
+        or "lifecycle stage" in profile_text
+        or "lifecycle mapping" in profile_text
+        or "responsibility matrix" in profile_text
+    ):
+        return "lifecycle_mapping"
+    if (
+        "evidence request" in profile_text
+        or "evidence checklist" in profile_text
+        or "checklist" in profile_text
+    ):
+        return "evidence_request"
+    if (
+        "registry" in profile_text
+        or "inventory" in profile_text
+        or "source register" in profile_text
+        or "citation" in profile_text
+        or "appendix" in context_text
+    ):
+        return "registry_inventory"
+    return "narrative_support"
+
+
+def should_preserve_matrix(profile: str) -> bool:
+    return profile in {"comparative_matrix", "score_rubric_matrix"}
+
+
+def transform_tables_for_pdf(html: str) -> str:
+    """Apply profile-aware PDF table rendering in temporary HTML.
 
     This keeps the public HTML artifact unchanged while preventing Chrome's
     print engine from compressing wide tables into unreadable vertical text.
+    Comparative and score/rubric matrices stay in table form; row cards are
+    reserved for lower-comparison registry, inventory, and evidence tables.
     """
 
     def replace_table(match: re.Match[str]) -> str:
@@ -398,6 +539,10 @@ def transform_wide_tables_for_pdf(html: str) -> str:
             if cells and len(cells) >= 2:
                 rows.append(cells)
         if not headers or not rows or not should_transform_table(headers, rows, table_html):
+            return table_html
+        context_html = html[max(0, match.start() - 2400) : match.start()]
+        profile = table_profile(context_html, headers, table_html)
+        if should_preserve_matrix(profile):
             return table_html
 
         cards: list[str] = ['<div class="pdf-wide-table-card-set table-block">']
@@ -420,11 +565,72 @@ def transform_wide_tables_for_pdf(html: str) -> str:
     return TABLE_RE.sub(replace_table, html)
 
 
+def transform_readiness_levels_for_pdf(html: str) -> str:
+    """Render AARM readiness levels as a split rubric matrix in PDF mode."""
+
+    def replace_block(match: re.Match[str]) -> str:
+        cards = []
+        for article in ARTICLE_RE.findall(match.group("body")):
+            heading_match = H4_RE.search(article)
+            if not heading_match:
+                continue
+            fields = {plain_text(label).lower(): value for label, value in DL_PAIR_RE.findall(article)}
+            cards.append(
+                {
+                    "level": plain_text(heading_match.group(1)),
+                    "definition": fields.get("definition", ""),
+                    "observable": fields.get("observable traits", ""),
+                    "evidence": fields.get("minimum evidence", ""),
+                    "not_prove": fields.get("what it does not prove", ""),
+                    "source": fields.get("source / synthesis note", ""),
+                }
+            )
+        if not cards:
+            return match.group(0)
+
+        def row(card: dict[str, str], keys: list[str]) -> str:
+            cells = [f"<td>{card[key]}</td>" for key in keys]
+            return "<tr>" + "".join(cells) + "</tr>"
+
+        panel_one_rows = "\n".join(row(card, ["level", "definition", "observable", "evidence"]) for card in cards)
+        panel_two_rows = "\n".join(row(card, ["level", "not_prove", "source"]) for card in cards)
+        return f"""{match.group("h3")}
+<div class="table-block table-matrix table-compact pdf-score-rubric-matrix">
+<div class="table-caption">Table 9: Auditability Readiness Levels</div>
+<div class="layout-note">Readiness-level rubric rendered as split matrices in PDF mode; the level key is repeated to preserve level-to-level comparison.</div>
+<div class="continuation-label">Panel 1 of 2</div>
+<table>
+<thead><tr>
+<th>Level</th>
+<th>Definition</th>
+<th>Observable Traits</th>
+<th>Minimum Evidence</th>
+</tr></thead>
+<tbody>
+{panel_one_rows}
+</tbody></table>
+<div class="continuation-label">Panel 2 of 2</div>
+<table>
+<thead><tr>
+<th>Level</th>
+<th>What It Does Not Prove</th>
+<th>Source / Synthesis Note</th>
+</tr></thead>
+<tbody>
+{panel_two_rows}
+</tbody></table>
+</div>
+"""
+
+    return READINESS_BLOCK_RE.sub(replace_block, html)
+
+
 def prepare_html(config: WhitepaperConfig) -> Path:
     TMP_ROOT.mkdir(parents=True, exist_ok=True)
     html = config.html_path.read_text(encoding="utf-8", errors="ignore")
     html = re.sub(r"<nav class=\"web-edition-nav\"[\s\S]*?</nav>\s*", "", html, count=1)
-    html = transform_wide_tables_for_pdf(html)
+    html = transform_readiness_levels_for_pdf(html)
+    html = transform_tables_for_pdf(html)
     html = html.replace("<body>", f'<body class="r8-{config.key}-pdf-profile">', 1)
     html = html.replace("</head>", f"{pdf_css(config)}\n</head>", 1)
     out = TMP_ROOT / config.tmp_name

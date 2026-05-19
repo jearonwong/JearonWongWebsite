@@ -1,7 +1,32 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8C GAIC PDF Wide-Table Repair)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8D Comparative Table PDF Semantic Repair)
+
+## WHITEPAPER-R8D Comparative Table PDF Semantic Repair
+
+### Status: WHITEPAPER-R8D COMPARATIVE TABLE PDF SEMANTIC REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+R8D corrects the R8C residual publication-quality issue: the GAIC wide table was readable after R8C, but the row-card fallback weakened the comparison semantics of the primary comparative matrix. R8D adds a table semantic profile gate so comparison-heavy tables remain matrix-like in PDF.
+
+Resolved in this wave:
+
+1. Added the PDF Table Semantic Gate to the Whitepaper Series Publication SOP.
+2. Classified major GAIC and AIAAWP tables by semantic purpose.
+3. Patched the PDF-only renderer so comparative and score/rubric tables preserve matrix comparison.
+4. Converted GAIC Table T-11-01 into a split matrix with repeated `System / Category` key column.
+5. Converted AIAAWP Table 9 into split readiness-level rubric matrices in PDF mode.
+6. Regenerated public PDFs and updated public hashes, checksums, manifests, and hub hash displays.
+7. Preserved public HTML hashes and public DOCX offboarding.
+
+Remaining known issue:
+
+- Production live reverification is required after deploy because public PDFs and public checksum/manifest surfaces changed again.
+
+Boundary discipline:
+
+- R8D does not claim Final Seal, certification, audit standard status, assurance opinion, legal compliance proof, regulator approval, endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+- R8D does not change GAIC scores, GAIC methodology, AIAAWP argument semantics, or the GAIC sealed candidate artifact.
 
 ## WHITEPAPER-R8C GAIC PDF Wide-Table Layout Repair
 

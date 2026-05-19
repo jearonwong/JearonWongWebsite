@@ -1,5 +1,35 @@
 # Reconstruction Notes
 
+## WHITEPAPER-R8D Comparative Table PDF Semantic Repair Notes (May 19, 2026)
+
+**Scope:** Repair the R8C residual comparative-table semantic weakness while preserving the multi-format publication model. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at `eb10b32963cd5a849c9104758e1b875f02dc1b7c`.
+2. Audited GAIC and AIAAWP tables by semantic purpose: comparative matrix, score/rubric matrix, lifecycle mapping, registry/inventory, evidence request, appendix long table, and narrative support table.
+3. Added the PDF Table Semantic Gate to the Whitepaper Series Publication SOP.
+4. Patched the PDF-only renderer to preserve matrix rendering for comparative and score/rubric tables while keeping row-card fallback for non-comparative profiles.
+5. Regenerated the GAIC and AIAAWP public PDFs.
+6. Rendered comparative-table proof images under `reports/whitepaper-r8d-new-comparative-table-renders/`.
+7. Updated public checksum, manifest, hub hash, and public PDF repair records.
+
+**Artifact discipline:**
+
+- GAIC public HTML remains `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- GAIC public PDF changed intentionally to `e37654ae3eb4e99aa0a3ed125952ee88a4a3bb8a1b3e3f4362135a0cb87b38b5`.
+- AIAAWP public HTML remains `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+- AIAAWP public PDF changed intentionally to `1a8289b375ea51d6bdd601d5575f8c4b2f530f7f8f9cb1867b62864766520e71`.
+- GAIC sealed candidate PDF remains unchanged at `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Public DOCX remains absent from `public/research/` and public manifest/checksum/link surfaces.
+- Pre-existing untracked `public/social/*` assets remain outside R8D scope.
+
+**Boundary discipline:**
+
+- R8D does not claim Final Seal, production reverification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+
+**WHITEPAPER-R8D Status:** WHITEPAPER-R8D COMPARATIVE TABLE PDF SEMANTIC REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
 ## WHITEPAPER-R8C GAIC PDF Wide-Table Layout Repair Notes (May 19, 2026)
 
 **Scope:** Repair the GAIC public PDF wide-table P0 layout defect while preserving the multi-format publication model. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.

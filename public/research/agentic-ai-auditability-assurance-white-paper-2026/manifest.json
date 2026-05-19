@@ -35,8 +35,8 @@
       "role": "PDF",
       "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "cc13249074a7cdd79c0a071f29ccfe1ba89dce2103dc61fb09dded7b0304caca",
-      "bytes": 1261849
+      "sha256": "1a8289b375ea51d6bdd601d5575f8c4b2f530f7f8f9cb1867b62864766520e71",
+      "bytes": 1363042
     }
   ],
   "checksums": "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
@@ -47,9 +47,10 @@
     "reason": "Public route artifacts must not describe themselves as internal-only or noindex once staged under a public research path.",
     "editable_derivative_public_distribution_removed": "Owner decision removed editable derivative files from public distribution; public site now exposes HTML and PDF only.",
     "pdf_regenerated_from_public_html": "Public PDF regenerated from normalized public HTML after stale internal-only status text was detected in PDF text extraction.",
-    "r8c_pdf_profile_refresh": "Public PDF regenerated through the R8C PDF Wide Table Layout Gate while preserving HTML/PDF-only public distribution."
+    "r8c_pdf_profile_refresh": "Public PDF regenerated through the R8C PDF Wide Table Layout Gate while preserving HTML/PDF-only public distribution.",
+    "r8d_pdf_profile_refresh": "Public PDF regenerated through the R8D PDF Table Semantic Gate to preserve rubric/matrix comparison while keeping row-card layouts only for appropriate inventory or evidence tables."
   },
   "generated_at_utc": "2026-05-18T06:50:54Z",
   "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
-  "updated_at_utc": "2026-05-19T04:24:50Z"
+  "updated_at_utc": "2026-05-19T09:36:44Z"
 }

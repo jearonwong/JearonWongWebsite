@@ -10,13 +10,13 @@ The sealed publication-candidate PDF artifact retains its sealed hash:
 
 Public website distribution now exposes only HTML and PDF. Earlier editable derivative files are no longer linked, listed in public checksums, or served from the public research artifact directory.
 
-The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18.
+The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18 and the WHITEPAPER-R8D comparative table semantic repair on 2026-05-19.
 
 - Previous metadata-hardened public PDF: `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`
-- Current public A4 Print Profile PDF: `bf7f241642719a9ab0214fc6110d0e7018b532b055a3be2bd2f1e12fff1330c8`
-- Current public PDF page count: 488
+- Current public A4 Print Profile PDF: `e37654ae3eb4e99aa0a3ed125952ee88a4a3bb8a1b3e3f4362135a0cb87b38b5`
+- Current public PDF page count: 489
 
-The R8 public PDF update is a controlled layout repair. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, or boundary status. Production live reverification is required after deployment.
+The R8D public PDF update is a controlled comparative table semantic repair. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, or boundary status. Production live reverification is required after deployment.
 
 The original sealed HTML publication-candidate artifact remains preserved under:
 

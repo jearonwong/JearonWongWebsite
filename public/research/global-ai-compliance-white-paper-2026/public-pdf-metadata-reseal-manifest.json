@@ -1,11 +1,11 @@
 {
-  "manifest_type": "GAIC public distribution PDF wide-table layout repair manifest",
-  "task_id": "WHITEPAPER-R8C-GAIC-PDF-WIDE-TABLE-REPAIR-HTML-PDF-ONLY",
+  "manifest_type": "GAIC public distribution PDF comparative table semantic repair manifest",
+  "task_id": "WHITEPAPER-R8D-COMPARATIVE-TABLE-PDF-SEMANTIC-REPAIR",
   "date": "2026-05-19",
   "document_id": "GACWP-2026-v0.3.2-FRC-R3",
   "sealed_candidate_pdf_sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643",
-  "previous_public_pdf_sha256": "8db768291af10dd390f8eeaa0a9bb8950f90026a31647b8bbfb8513d9fc094c9",
-  "new_public_pdf_sha256": "bf7f241642719a9ab0214fc6110d0e7018b532b055a3be2bd2f1e12fff1330c8",
+  "previous_public_pdf_sha256": "bf7f241642719a9ab0214fc6110d0e7018b532b055a3be2bd2f1e12fff1330c8",
+  "new_public_pdf_sha256": "e37654ae3eb4e99aa0a3ed125952ee88a4a3bb8a1b3e3f4362135a0cb87b38b5",
   "public_pdf_path": "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
   "sealed_candidate_pdf_path": "gaic_v032_work/source_r3/out/publication_candidate/Global-AI-Compliance-White-Paper-2026-v0.3.2-FRC-R3-HTML-Publication-Candidate.pdf",
   "metadata_fields_applied": {
@@ -14,15 +14,15 @@
     "Subject": "Technical governance analysis of AI Agent Lifecycle Governance, Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and agentic lifecycle conformance.",
     "Keywords": "Global AI Compliance White Paper 2026; GACWP-2026-v0.3.2-FRC-R3; AI Agent Lifecycle Governance; Agentic Lifecycle Governance; Missing Regulatory Objects; MRO; RCCS-T; RCCS-M; ALCS; MPLP; Multi-Agent Lifecycle Protocol; Deterministic Delivery; AI Agent Compliance; Multi-Agent Systems; Enterprise AI Governance; Evidence Chain; Accepted Outcome; Authority Boundary"
   },
-  "page_count_before": 488,
-  "page_count_after": 526,
+  "page_count_before": 526,
+  "page_count_after": 489,
   "a4_layout_validation": {
     "method": "pdftoppm sampled render at 120 DPI plus pdfinfo and pdftotext validation",
-    "sample_pages": [1, 2, 3, 5, 166, 167, 168, 526],
+    "sample_pages": [1, 2, 3, 5, 152, 153, 154, 389, 390, 489],
     "result": "PASS"
   },
-  "content_change_statement": "PDF wide-table layout repair only. Visible layout and pagination changed intentionally to satisfy the PDF A4 Print Profile and PDF Wide Table Layout Gate. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
-  "sealed_candidate_statement": "The sealed publication-candidate PDF remains preserved at the recorded sealed candidate hash. This R8 update changes only the public distribution PDF.",
+  "content_change_statement": "PDF comparative table semantic repair only. Visible layout and pagination changed intentionally to preserve comparison-heavy matrices while maintaining the PDF A4 Print Profile. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
+  "sealed_candidate_statement": "The sealed publication-candidate PDF remains preserved at the recorded sealed candidate hash. This R8D update changes only the public distribution PDF.",
   "production_reverification_required": true,
   "commit": "PENDING"
 }
