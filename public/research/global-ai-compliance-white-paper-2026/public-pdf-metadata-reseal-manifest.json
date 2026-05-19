@@ -36,5 +36,5 @@
   "content_change_statement": "Publication-quality PDF repair only. Visible layout and pagination changed intentionally to fix owner-rejected R8E-1 defects: Appendix D vertical single-character table rendering, over-compressed system-by-system analytical profiles, and inconsistent body header/footer treatment. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
   "sealed_candidate_statement": "The historical publication-candidate PDF remains preserved at the recorded candidate hash. This R8E-2 update changes only the public distribution PDF.",
   "production_reverification_required": true,
-  "commit": "PENDING"
+  "commit": "c34c6be153de8e7dc949b25d933ab17dec5a9cc3"
 }

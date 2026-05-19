@@ -93,6 +93,11 @@ const homepageJsonLd = {
       url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
     },
     {
+      "@type": "TechArticle",
+      name: "Agentic AI Auditability & Assurance White Paper 2026",
+      url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
+    },
+    {
       "@type": "CollectionPage",
       name: "Systems Discussed in the Global AI Compliance White Paper 2026",
       url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/systems/")
@@ -185,27 +190,60 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     </section>
   </div>
 
-  <!-- 2. GAIC Research Release -->
-  <section class="zone-b gaic-release-band" aria-labelledby="gaic-release-title">
+  <!-- 2. Research Series -->
+  <section class="zone-b research-series-band" aria-labelledby="research-series-title">
     <div class="shell">
-      <div class="gaic-release-panel registry-chassis">
-        <div class="gaic-release-copy">
-          <div class="registry-annotation gaic-release-label">
-            <span class="registry-key">RESEARCH RELEASE</span>: <span class="registry-value">GLOBAL AI COMPLIANCE WHITE PAPER 2026</span>
+      <div class="research-series-panel registry-chassis">
+        <div class="research-series-header">
+          <div class="registry-annotation research-series-label">
+            <span class="registry-key">RESEARCH SERIES</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE INDUSTRY SERIES</span>
           </div>
-          <h2 id="gaic-release-title">Global AI Compliance White Paper 2026</h2>
-          <p class="gaic-release-thesis">
-            AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.
-          </p>
-          <p class="gaic-release-support">
-            A 425-page public research candidate defining Missing Regulatory Objects, RCCS-M, ALCS,
-            and lifecycle responsibility governance for AI agent and multi-agent systems.
+          <h2 id="research-series-title">Whitepaper series.</h2>
+          <p class="research-series-thesis">
+            From lifecycle responsibility objects to audit evidence chains.
           </p>
         </div>
-        <div class="gaic-release-actions" aria-label="Global AI Compliance White Paper actions">
-          <a href="/research/global-ai-compliance-white-paper-2026/" class="button button-primary">Read the White Paper</a>
-          <a href="/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf" class="button button-outline">Download PDF</a>
-          <a href="/concepts/agentic-lifecycle-governance/" class="button button-outline">Explore Concept Core</a>
+        <div class="research-series-grid" aria-label="Whitepaper series">
+          <article class="research-series-card research-series-card--primary">
+            <div class="registry-annotation research-series-card-label">
+              <span class="registry-key">FOUNDATION</span>: <span class="registry-value">GLOBAL COMPLIANCE</span>
+            </div>
+            <h3>Global AI Compliance White Paper 2026</h3>
+            <p>
+              Defines Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility
+              governance for AI agent and multi-agent systems.
+            </p>
+            <div class="research-series-meta" aria-label="GAIC artifact metadata">
+              <span>v0.3.2 Public Edition</span>
+              <span>485-page PDF</span>
+            </div>
+            <div class="research-series-actions">
+              <a href="/research/global-ai-compliance-white-paper-2026/" class="button button-primary">Read GAIC</a>
+              <a href="/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf" class="button button-outline">Download PDF</a>
+            </div>
+          </article>
+          <article class="research-series-card">
+            <div class="registry-annotation research-series-card-label">
+              <span class="registry-key">SPECIALIZATION</span>: <span class="registry-value">AUDITABILITY / ASSURANCE</span>
+            </div>
+            <h3>Agentic AI Auditability &amp; Assurance White Paper 2026</h3>
+            <p>
+              Specializes the series into audit evidence chains, AARM, and MRO-to-audit-evidence
+              mapping for enterprise AI governance.
+            </p>
+            <div class="research-series-meta" aria-label="AIAAWP artifact metadata">
+              <span>Public research candidate</span>
+              <span>118-page PDF</span>
+            </div>
+            <div class="research-series-actions">
+              <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/" class="button button-primary">Read AIAAWP</a>
+              <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf" class="button button-outline">Download PDF</a>
+            </div>
+          </article>
+        </div>
+        <div class="research-series-footer">
+          <a href="/evidence/" class="section-link">View Evidence Registry</a>
+          <a href="/concepts/agentic-lifecycle-governance/" class="section-link">Explore Concept Core</a>
         </div>
       </div>
     </div>
@@ -455,8 +493,8 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     gap: 0.75rem;
   }
 
-  /* -- GAIC Research Release -- */
-  .gaic-release-band {
+  /* -- Research Series -- */
+  .research-series-band {
     padding: clamp(2.5rem, 5vw, 4.75rem) 0;
     background:
       linear-gradient(rgba(17, 17, 17, 0.025) 1px, transparent 1px),
@@ -467,11 +505,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   }
 
-  .gaic-release-panel {
+  .research-series-panel {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
-    gap: clamp(1.5rem, 4vw, 3rem);
-    align-items: center;
+    gap: clamp(1.4rem, 3vw, 2.2rem);
     padding: var(--registry-panel-padding);
     background: #ffffff;
     border: 1px solid rgba(17, 17, 17, 0.1);
@@ -479,12 +515,12 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
   }
 
-  .gaic-release-label {
+  .research-series-label {
     margin-bottom: 1rem;
   }
 
-  .gaic-release-panel h2 {
-    max-width: 15ch;
+  .research-series-panel h2 {
+    max-width: 20ch;
     margin: 0;
     color: #111111;
     font-size: clamp(2rem, 4vw, 3.35rem);
@@ -492,7 +528,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     letter-spacing: 0;
   }
 
-  .gaic-release-thesis {
+  .research-series-thesis {
     max-width: 48rem;
     margin: 1rem 0 0;
     color: #111111;
@@ -501,45 +537,93 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     line-height: 1.5;
   }
 
-  .gaic-release-support {
-    max-width: 58rem;
-    margin: 0.85rem 0 0;
+  .research-series-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(17, 17, 17, 0.12);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+  }
+
+  .research-series-card {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    min-width: 0;
+    padding: clamp(1.2rem, 2.4vw, 1.8rem);
+    background: #ffffff;
+  }
+
+  .research-series-card--primary {
+    background: #fbfdff;
+  }
+
+  .research-series-card-label {
+    color: var(--accent-signal);
+  }
+
+  .research-series-card h3 {
+    margin: 0;
+    color: #111111;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .research-series-card p {
+    max-width: 58ch;
+    margin: 0;
     color: #525252;
     font-size: 0.98rem;
-    line-height: 1.68;
+    line-height: 1.65;
   }
 
-  .gaic-release-actions {
-    display: grid;
+  .research-series-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .research-series-meta span {
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    padding: 0.42rem 0.55rem;
+    font-family: var(--font-mono);
+    color: #525252;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .research-series-actions,
+  .research-series-footer {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.75rem;
-    align-content: center;
   }
 
-  .gaic-release-actions .button {
-    width: 100%;
+  .research-series-actions .button {
     text-align: center;
     text-decoration: none;
     white-space: normal;
   }
 
-  .gaic-release-actions .button-primary {
+  .research-series-actions .button-primary {
     background: #111111;
     border-color: #111111;
     color: #ffffff;
   }
 
-  .gaic-release-actions .button-primary:hover {
+  .research-series-actions .button-primary:hover {
     background: #000000;
     border-color: #000000;
   }
 
-  .gaic-release-actions .button-outline {
+  .research-series-actions .button-outline {
     background: transparent;
     border-color: rgba(17, 17, 17, 0.18);
     color: #111111;
   }
 
-  .gaic-release-actions .button-outline:hover {
+  .research-series-actions .button-outline:hover {
     border-color: var(--accent-signal);
     color: var(--accent-signal);
   }
@@ -907,7 +991,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       padding-top: 6.1rem;
       padding-bottom: 4.25rem;
     }
-    .gaic-release-panel {
+    .research-series-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -966,6 +1050,13 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     }
     .section-header {
       margin-bottom: 2.5rem;
+    }
+    .research-series-panel,
+    .research-series-card {
+      padding: var(--registry-card-padding);
+    }
+    .research-series-actions .button {
+      width: 100%;
     }
     .lifecycle-category-bridge {
       padding-top: var(--space-section-y-mobile);

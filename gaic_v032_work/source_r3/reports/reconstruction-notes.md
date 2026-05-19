@@ -4158,3 +4158,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - Production reverification is required after deployment.
 
 **WHITEPAPER-R8E-2 Status:** ✓ FULL PDF PUBLICATION QUALITY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+## WHITEPAPER-R8E-3 Notes (May 19, 2026)
+
+**Scope:** Publication surface metadata and homepage exposure fix before production reverification.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `c34c6be153de8e7dc949b25d933ab17dec5a9cc3`.
+2. Verified current PDF page counts directly with `pdfinfo`: GAIC `485`, AIAAWP `118`.
+3. Audited public route/data surfaces for stale `425`, `141`, artifact hashes, page-count displays, JSON-LD artifact references, DOCX references, and homepage exposure.
+4. Replaced the homepage GAIC-only release panel with a restrained Agentic Lifecycle Governance Industry Series module exposing GAIC and AIAAWP together.
+5. Added AIAAWP to homepage JSON-LD `hasPart`.
+6. Corrected GAIC and AIAAWP page counts on the research index and GAIC hub.
+7. Updated GAIC/AIAAWP manifests and checksums so current public PDF facts are encoded while preserving historical GAIC sealed-candidate facts as historical context only.
+8. Confirmed public DOCX remains offboarded.
+
+**Artifact discipline:**
+
+- No PDFs were regenerated.
+- No standalone public HTML artifacts were changed.
+- GAIC public PDF remains `e2525ad333ee110ee59ab2819717b4918ae844ef21d682a380d7384041fb9124`.
+- AIAAWP public PDF remains `62c9f8ed05d67a0187a9e51385b80b86e0af4411e783ae9523d8d9e412ca8d0e`.
+- GAIC public HTML remains `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- AIAAWP public HTML remains `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+
+**Boundary discipline:**
+
+- R8E-3 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+- Production reverification is required after deployment.
+
+**WHITEPAPER-R8E-3 Status:** ✓ PUBLICATION SURFACE METADATA AND HOMEPAGE EXPOSURE FIX COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
+---

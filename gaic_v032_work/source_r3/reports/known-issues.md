@@ -1,7 +1,40 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-2 Full PDF Publication Quality Repair)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-3 Publication Surface Metadata and Homepage Exposure Fix)
+
+## WHITEPAPER-R8E-3 Known Issues
+
+### Publication Surface Metadata and Homepage Exposure Fix Complete
+
+R8E-3 closes the owner-observed public-surface metadata drift after R8E-2. The PDFs had correct post-R8E-2 page counts, but public route surfaces still exposed stale page counts.
+
+Resolved in this wave:
+
+- Confirmed actual public PDF page counts with `pdfinfo`: GAIC `485`, AIAAWP `118`.
+- Corrected homepage GAIC copy from the stale `425-page` value and replaced the single GAIC release surface with a restrained Research Series module exposing both GAIC and AIAAWP.
+- Added AIAAWP to homepage JSON-LD `hasPart`.
+- Corrected research index page counts: GAIC `485 pages`, AIAAWP `118 pages`.
+- Corrected GAIC hub hero metadata page count to `485`.
+- Repointed GAIC hub primary manifest link to the current public PDF metadata manifest and labeled the old seal manifest as historical.
+- Updated GAIC and AIAAWP manifests/checksums so page count, PDF hash, and manifest checksum values align with R8E-2 artifact truth.
+
+Remaining known issues:
+
+- Production reverification remains required after deployment.
+- Final Seal remains blocked.
+- Historical GAIC sealed-candidate records still legitimately mention `425` as the May 12 sealed-candidate PDF count; those records are historical and not current public PDF truth.
+
+Boundary discipline:
+
+- R8E-3 did not regenerate PDFs or mutate standalone public HTML artifacts.
+- R8E-3 did not reintroduce public DOCX.
+- R8E-3 did not change GAIC scores, methodology, RCCS-T/RCCS-M/ALCS framing, MRO definitions, or AIAAWP AARM/MRO content.
+- R8E-3 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+
+**WHITEPAPER-R8E-3 Status:** ✓ PUBLICATION SURFACE METADATA AND HOMEPAGE EXPOSURE FIX COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+---
 
 ## WHITEPAPER-R8E-2 Known Issues
 

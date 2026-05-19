@@ -8,7 +8,7 @@ const canonicalPath = "/research/global-ai-compliance-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const pdfUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.pdf`;
 const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.html`;
-const manifestUrl = `${siteConfig.siteUrl}${assetBase}/publication-candidate-manifest.json`;
+const manifestUrl = `${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
 const documentId = "GACWP-2026-v0.3.2-FRC-R3";
@@ -284,7 +284,7 @@ const definedTermSetJsonLd = {
         </div>
         <div class="meta-line">
           <span>Page count</span>
-          <strong>425</strong>
+          <strong>485</strong>
         </div>
       </aside>
     </section>
@@ -332,15 +332,15 @@ const definedTermSetJsonLd = {
             <strong>Read full HTML</strong>
             <span>Responsive web-reading edition</span>
           </a>
-          <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
-            <span class="artifact-kind">JSON</span>
-            <strong>Seal manifest</strong>
-            <span>Historical publication-candidate metadata</span>
-          </a>
           <a href={`${assetBase}/public-pdf-metadata-reseal-manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
-            <strong>PDF metadata re-seal</strong>
-            <span>Public distribution metadata record</span>
+            <strong>Current PDF manifest</strong>
+            <span>R8E-2 public distribution metadata</span>
+          </a>
+          <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
+            <span class="artifact-kind">JSON</span>
+            <strong>Historical seal manifest</strong>
+            <span>Sealed candidate metadata</span>
           </a>
         </div>
       </section>

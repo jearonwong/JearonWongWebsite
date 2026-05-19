@@ -6,6 +6,7 @@
   "series": "Agentic Lifecycle Governance Industry Series",
   "status": "public_research_candidate_staged",
   "publication_stage": "publication_staging",
+  "page_count": 118,
   "deployment_verification_required": true,
   "not_final": true,
   "not_sealed": true,
@@ -54,5 +55,5 @@
   },
   "generated_at_utc": "2026-05-18T06:50:54Z",
   "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
-  "updated_at_utc": "2026-05-19T14:14:15Z"
+  "updated_at_utc": "2026-05-19T15:07:50Z"
 }
