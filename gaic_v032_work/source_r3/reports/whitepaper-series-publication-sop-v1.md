@@ -290,6 +290,29 @@ PDF fails if:
 - comparison-heavy table loses comparison context
 - no table-specific decision record exists
 
+#### Full PDF Publication Visual QA Gate
+
+A whitepaper PDF cannot pass publication quality based on sampled pages only.
+
+Before production reverification:
+
+- all pages must be rendered or systematically reviewed
+- all table-heavy pages must be inspected
+- all landscape pages must be inspected
+- all scoring/comparison pages must be inspected
+- all vendor/system profile pages must be inspected
+- all source/citation/appendix pages must be inspected
+
+Hard fail conditions:
+
+- any vertical single-character text remains
+- any high-value analytical table is unreadable
+- system/vendor analysis is compressed in a way that weakens market/compliance interpretation
+- score hierarchy makes secondary range more prominent than primary score
+- intro text is separated from its figure/table where context is required
+- page header/footer is missing from body pages without explicit page-family exception
+- PDF page family rules are inconsistent across GAIC and AIAAWP
+
 ### DOCX Editable Derivative Profile
 
 Purpose: editable review/distribution derivative, not visual authority.

@@ -1,7 +1,40 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-1 Publication Design Implementation)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-2 Full PDF Publication Quality Repair)
+
+## WHITEPAPER-R8E-2 Known Issues
+
+### Full PDF Publication Quality Repair Complete
+
+R8E-2 supersedes the owner-rejected visual acceptance status of R8E-1. R8E-1 remains a useful implementation commit, but it did not pass owner publication-quality review because GAIC Appendix D still contained vertical single-character table text and GAIC system-by-system analytical profiles remained over-compressed.
+
+Resolved in this wave:
+
+- Added a Full PDF Publication Visual QA Gate to the Whitepaper Series Publication SOP.
+- Rendered all current GAIC and AIAAWP PDF pages to temporary image sets for systematic visual sweep.
+- Recorded page-level P0/P1 defects for GAIC Appendix D vertical text and GAIC system profile compression.
+- Patched the PDF renderer so Appendix D Expanded Cross-System MRO Mapping uses a landscape split matrix with repeated `MRO ID` and explicit content-aware columns.
+- Patched the PDF renderer so GAIC system-by-system analytical profiles render as full-width sequential profile blocks.
+- Added restrained page headers and consistent footer/copyright treatment across GAIC and AIAAWP body/landscape pages.
+- Generated internal proof PDFs and proof images before public replacement.
+- Replaced public GAIC and AIAAWP PDFs only after internal proof QA passed.
+- Updated public PDF hashes, checksums, manifests, hub hash displays, and JSON-LD hash references.
+
+Remaining known issues:
+
+- Production reverification is required after deployment.
+- Final Seal remains blocked.
+- Owner may still perform discretionary visual review before broader release/distribution.
+
+Boundary discipline:
+
+- Public HTML artifacts were not changed.
+- Public DOCX remains offboarded.
+- GAIC scores, methodology, MRO definitions, RCCS-T/RCCS-M/ALCS framing, and AIAAWP AARM/MRO content were not changed.
+- No production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement recommendation, vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption claim was introduced.
+
+**WHITEPAPER-R8E-2 Status:** ✓ FULL PDF PUBLICATION QUALITY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
 
 ## WHITEPAPER-R8E-1 Known Issues
 

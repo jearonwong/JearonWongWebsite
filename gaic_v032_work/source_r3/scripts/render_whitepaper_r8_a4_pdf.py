@@ -54,6 +54,13 @@ HEATMAP_BLOCK_RE = re.compile(
     r'(?=<h2>System-by-System Analytical Profiles</h2>)',
     re.IGNORECASE,
 )
+APPENDIX_D_MRO_MAPPING_RE = re.compile(
+    r'(?P<h2><h2 id="d-2-expanded-cross-system-mro-mapping">[\s\S]*?</h2>)\s*'
+    r'(?P<note><p><strong>Note:</strong>[\s\S]*?</p>)\s*'
+    r'(?P<table><div class="table-block table-system-profile table-compact">[\s\S]*?</div>)\s*'
+    r'(?P<next><hr class="section-rule">\s*<h2 id="d-3-pattern-level-interpretation">)',
+    re.IGNORECASE,
+)
 T1101_BLOCK_RE = re.compile(
     r'(?P<h2><h2 id="11-3-comparative-field-positioning-matrix">[\s\S]*?</h2>)\s*'
     r'(?P<intro><p>The following table provides high-level positioning[\s\S]*?</p>)\s*'
@@ -153,6 +160,8 @@ def pdf_page_count(pdf_path: Path) -> int:
 
 
 def pdf_css(config: WhitepaperConfig) -> str:
+    header_left = config.short_title
+    header_right = "Public PDF edition"
     footer_left = f"{config.short_title} | {config.document_id}"
     footer_center = "jearonwong.com"
     footer_right = 'Page " counter(page) " | Copyright © 2026 Jearon Wong. All rights reserved.'
@@ -166,7 +175,17 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
 @media print {{
   @page {{
     size: A4;
-    margin: 15mm 14mm 19mm;
+    margin: 18mm 14mm 19mm;
+    @top-left {{
+      content: "{header_left}";
+      font-size: 6.3pt;
+      color: #6b7c86;
+    }}
+    @top-right {{
+      content: "{header_right}";
+      font-size: 6.3pt;
+      color: #6b7c86;
+    }}
     @bottom-left {{
       content: "{footer_left}";
       font-size: 6.5pt;
@@ -186,13 +205,25 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
   @page :first {{
     size: A4;
     margin: 0;
+    @top-left {{ content: ""; }}
+    @top-right {{ content: ""; }}
     @bottom-left {{ content: ""; }}
     @bottom-center {{ content: ""; }}
     @bottom-right {{ content: ""; }}
   }}
   @page r8-landscape {{
     size: A4 landscape;
-    margin: 12mm 11mm 17mm;
+    margin: 15mm 11mm 17mm;
+    @top-left {{
+      content: "{header_left}";
+      font-size: 6pt;
+      color: #6b7c86;
+    }}
+    @top-right {{
+      content: "{header_right}";
+      font-size: 6pt;
+      color: #6b7c86;
+    }}
     @bottom-left {{
       content: "{footer_left}";
       font-size: 6.2pt;
@@ -665,6 +696,181 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
     line-height: 1.25 !important;
     color: #5b6d78 !important;
   }}
+  .pdf-mro-landscape-module {{
+    page: r8-landscape !important;
+    break-before: page !important;
+    break-after: page !important;
+    break-inside: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }}
+  .pdf-mro-landscape-module .table-system-profile {{
+    margin: 0 !important;
+  }}
+  .pdf-mro-landscape-module .continuation-label {{
+    margin: 2.5mm 0 1.2mm !important;
+    padding: 0 !important;
+    font-size: 6.8pt !important;
+    font-weight: 800 !important;
+    color: #3d5360 !important;
+  }}
+  .pdf-mro-landscape-module table {{
+    table-layout: fixed !important;
+    width: 100% !important;
+    break-inside: auto !important;
+    margin: 0 0 2.2mm !important;
+  }}
+  .pdf-mro-landscape-module th,
+  .pdf-mro-landscape-module td {{
+    font-size: 5.55pt !important;
+    line-height: 1.1 !important;
+    padding: 1.45pt 1.6pt !important;
+    vertical-align: top !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }}
+  .pdf-mro-landscape-module th {{
+    font-size: 5.7pt !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+    color: #102a35 !important;
+  }}
+  .pdf-mro-landscape-module th *,
+  .pdf-mro-landscape-module td * {{
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }}
+  .pdf-mro-landscape-module table:nth-of-type(1) th:nth-child(1),
+  .pdf-mro-landscape-module table:nth-of-type(1) td:nth-child(1),
+  .pdf-mro-landscape-module table:nth-of-type(2) th:nth-child(1),
+  .pdf-mro-landscape-module table:nth-of-type(2) td:nth-child(1),
+  .pdf-mro-landscape-module table:nth-of-type(3) th:nth-child(1),
+  .pdf-mro-landscape-module table:nth-of-type(3) td:nth-child(1) {{
+    width: 12% !important;
+  }}
+  .pdf-mro-landscape-module table:nth-of-type(1) th:nth-child(2),
+  .pdf-mro-landscape-module table:nth-of-type(1) td:nth-child(2) {{
+    width: 34% !important;
+  }}
+  .pdf-mro-landscape-module table:nth-of-type(1) th:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(1) td:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(1) th:nth-child(4),
+  .pdf-mro-landscape-module table:nth-of-type(1) td:nth-child(4) {{
+    width: 27% !important;
+  }}
+  .pdf-mro-landscape-module table:nth-of-type(2) th:nth-child(2),
+  .pdf-mro-landscape-module table:nth-of-type(2) td:nth-child(2),
+  .pdf-mro-landscape-module table:nth-of-type(2) th:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(2) td:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(2) th:nth-child(4),
+  .pdf-mro-landscape-module table:nth-of-type(2) td:nth-child(4),
+  .pdf-mro-landscape-module table:nth-of-type(3) th:nth-child(2),
+  .pdf-mro-landscape-module table:nth-of-type(3) td:nth-child(2),
+  .pdf-mro-landscape-module table:nth-of-type(3) th:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(3) td:nth-child(3),
+  .pdf-mro-landscape-module table:nth-of-type(3) th:nth-child(4),
+  .pdf-mro-landscape-module table:nth-of-type(3) td:nth-child(4) {{
+    width: 29.333% !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-grid {{
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card {{
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 0 7mm !important;
+    padding: 6mm !important;
+    border: 0.7pt solid #cbd6df !important;
+    border-left: 3pt solid #0ea5b7 !important;
+    border-radius: 2mm !important;
+    background: #ffffff !important;
+    break-inside: avoid-page !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card + .evaluation-profile-card {{
+    break-before: page !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card .profile-kicker {{
+    margin: 0 0 1.2mm !important;
+    font-size: 6.4pt !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    color: #536a75 !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card h3 {{
+    margin: 0 0 3mm !important;
+    font-size: 16pt !important;
+    line-height: 1.1 !important;
+    color: #102a35 !important;
+  }}
+  .r8-gaic-pdf-profile .profile-postures {{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1.45fr !important;
+    gap: 2.4mm !important;
+    margin: 0 0 3.5mm !important;
+  }}
+  .r8-gaic-pdf-profile .profile-postures span {{
+    display: block !important;
+    min-width: 0 !important;
+    padding: 2.4mm !important;
+    border: 0.5pt solid #d6e1e8 !important;
+    border-radius: 1.6mm !important;
+    background: #f7fbfc !important;
+    color: #0b2530 !important;
+    font-size: 16pt !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+  }}
+  .r8-gaic-pdf-profile .profile-postures span:last-child {{
+    font-size: 8pt !important;
+    line-height: 1.18 !important;
+    color: #29415f !important;
+    font-weight: 700 !important;
+    background: #eef4ff !important;
+  }}
+  .r8-gaic-pdf-profile .profile-postures strong {{
+    display: block !important;
+    margin: 0 0 1.1mm !important;
+    font-size: 6.2pt !important;
+    line-height: 1.05 !important;
+    font-weight: 800 !important;
+    color: #536a75 !important;
+  }}
+  .r8-gaic-pdf-profile .profile-postures em {{
+    display: block !important;
+    margin-top: 1mm !important;
+    font-size: 6.2pt !important;
+    line-height: 1.1 !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    color: #6b7c86 !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card p {{
+    margin: 0 0 2mm !important;
+    font-size: 8.3pt !important;
+    line-height: 1.32 !important;
+    color: #1d3038 !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card p strong {{
+    color: #102a35 !important;
+  }}
+  .r8-gaic-pdf-profile .evaluation-profile-card .profile-boundary {{
+    margin-top: 3mm !important;
+    padding-top: 2mm !important;
+    border-top: 0.5pt solid #dbe5ea !important;
+    color: #536a75 !important;
+    font-size: 7.6pt !important;
+  }}
   .pdf-score-rubric-matrix table {{
     table-layout: fixed !important;
   }}
@@ -1035,6 +1241,30 @@ def transform_heatmap_for_pdf(html: str) -> str:
     return HEATMAP_BLOCK_RE.sub(replace_block, html)
 
 
+def transform_appendix_d_mro_mapping_for_pdf(html: str) -> str:
+    """Keep Appendix D's cross-system MRO matrix readable in landscape groups.
+
+    R8E-1 left the third split matrix in portrait flow, which let Chromium
+    compress long vendor headers into single-character vertical text. This
+    transform keeps the title, note, legend, and all three source split tables
+    together on landscape pages with explicit repeated MRO ID columns.
+    """
+
+    def replace_block(match: re.Match[str]) -> str:
+        return f"""
+<section class="pdf-mro-landscape-module" data-table-profile="comparative_matrix" data-adaptive-rendering="landscape_split_matrix">
+{match.group("h2")}
+<p class="pdf-landscape-intro">Expanded Cross-System MRO Mapping is a high-comparison appendix matrix. It is rendered as landscape split panels with the MRO ID repeated so long system names wrap horizontally rather than collapsing into vertical single-character columns.</p>
+<div class="pdf-boundary-strip">All cell values remain provisional analytical mappings in fixed source order. This matrix is not a vendor ranking, procurement recommendation, certification, regulatory approval signal, or legal compliance proof.</div>
+{match.group("note")}
+{match.group("table")}
+</section>
+{match.group("next")}
+"""
+
+    return APPENDIX_D_MRO_MAPPING_RE.sub(replace_block, html)
+
+
 def transform_t1101_for_pdf(html: str) -> str:
     """Keep the T-11-01 heading and explanatory paragraph attached to the matrix."""
 
@@ -1162,6 +1392,7 @@ def prepare_html(config: WhitepaperConfig) -> Path:
     html = transform_t1101_for_pdf(html)
     html = transform_score_overview_for_pdf(html)
     html = transform_heatmap_for_pdf(html)
+    html = transform_appendix_d_mro_mapping_for_pdf(html)
     html = transform_tables_for_pdf(html)
     html = html.replace("<body>", f'<body class="r8-{config.key}-pdf-profile">', 1)
     html = html.replace("</head>", f"{pdf_css(config)}\n</head>", 1)
