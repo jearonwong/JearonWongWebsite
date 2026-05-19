@@ -1,5 +1,35 @@
 # Reconstruction Notes
 
+## WHITEPAPER-R8E Adaptive PDF Table Layout Repair Notes (May 19, 2026)
+
+**Scope:** Replace any rigid table fallback direction with adaptive PDF table layout. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at `66f1757f532c3992dbf0ca0f185fb9ce807a291e`.
+2. Audited major GAIC and AIAAWP tables by semantic profile, comparison importance, density, column count, long-header risk, long-cell risk, current rendering, and target rendering.
+3. Added the Adaptive PDF Table Layout Gate to the Whitepaper Series Publication SOP.
+4. Patched the PDF-only renderer with explicit table metrics and per-table adaptive decisions.
+5. Regenerated the GAIC and AIAAWP public PDFs.
+6. Rendered adaptive table proof images under `reports/whitepaper-r8e-new-adaptive-table-renders/`.
+7. Updated public checksum, manifest, hub hash, and public PDF repair records.
+
+**Artifact discipline:**
+
+- GAIC public HTML remains `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- GAIC public PDF changed intentionally to `ce06d40fc4cd66e42e4f1144a4a2238753d9ead66313ae2bd04692786301d396`.
+- AIAAWP public HTML remains `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+- AIAAWP public PDF changed intentionally to `a034219994b245bcfbc359e97155557501d4baf814bbe6fe7a39d900f2d6f45c`.
+- GAIC sealed candidate PDF remains unchanged at `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+- Public DOCX remains absent from `public/research/` and public manifest/checksum/link surfaces.
+- Pre-existing untracked `public/social/*` assets remain outside R8E scope.
+
+**Boundary discipline:**
+
+- R8E does not claim Final Seal, production reverification, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four endorsement, audit body endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+
+**WHITEPAPER-R8E Status:** WHITEPAPER-R8E ADAPTIVE PDF TABLE LAYOUT REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
 ## WHITEPAPER-R8D Comparative Table PDF Semantic Repair Notes (May 19, 2026)
 
 **Scope:** Repair the R8C residual comparative-table semantic weakness while preserving the multi-format publication model. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.

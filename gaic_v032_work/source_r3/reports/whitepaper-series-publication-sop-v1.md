@@ -215,6 +215,81 @@ For every P0/P1 table:
 - verify comparison preservation
 - verify text extraction
 
+#### Adaptive PDF Table Layout Gate
+
+PDF table rendering must preserve both readability and table purpose.
+
+##### Core Rule
+
+Do not use a universal fallback.
+
+The renderer must choose a table layout based on:
+
+- semantic profile
+- comparison importance
+- content density
+- column count
+- long-header risk
+- long-cell risk
+- portrait readability
+- landscape benefit
+
+##### Rendering Options
+
+1. Portrait Inline Table
+
+Use when:
+
+- table is small or medium
+- portrait A4 is readable
+- no vertical text appears
+- no clipping appears
+- table fits within normal report flow
+
+2. Portrait Split Matrix
+
+Use when:
+
+- table is comparative
+- portrait can work if split
+- repeated key column preserves comparison
+
+3. Dedicated Landscape A4 Table Page
+
+Use when:
+
+- table is high-comparison
+- density is high
+- portrait A4 would collapse columns or weaken comparison
+- landscape materially improves side-by-side scanning
+
+4. Landscape Split Matrix
+
+Use when:
+
+- landscape helps but the table remains too dense as a single grid
+- repeated key columns are needed
+
+5. Row-card / Registry Card
+
+Use when:
+
+- table is registry, inventory, evidence, request, source, or descriptive style
+- comparison importance is low
+- completeness and readability matter more than side-by-side scanning
+
+##### Hard Fail Conditions
+
+PDF fails if:
+
+- a small readable table is unnecessarily forced into landscape
+- a high-density comparison table remains row-card without justification
+- row-card is used as a blanket fallback
+- table headers collapse into vertical single-character text
+- columns are unreadable
+- comparison-heavy table loses comparison context
+- no table-specific decision record exists
+
 ### DOCX Editable Derivative Profile
 
 Purpose: editable review/distribution derivative, not visual authority.

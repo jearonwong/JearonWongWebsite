@@ -1,7 +1,33 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8D Comparative Table PDF Semantic Repair)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8E Adaptive PDF Table Layout Repair)
+
+## WHITEPAPER-R8E Adaptive PDF Table Layout Repair
+
+### Status: WHITEPAPER-R8E ADAPTIVE PDF TABLE LAYOUT REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+R8E corrects the remaining table-layout governance risk: landscape is useful for some dense comparison tables, but it must not become a blanket rule. The renderer now selects portrait, portrait split matrix, dedicated landscape A4, or row-card table by table.
+
+Resolved in this wave:
+
+1. Added the Adaptive PDF Table Layout Gate to the Whitepaper Series Publication SOP.
+2. Added explicit adaptive table metrics and decisions to the PDF renderer.
+3. Kept small/medium readable tables in portrait flow.
+4. Kept GAIC T-11-01 as portrait split matrix.
+5. Used dedicated landscape A4 only for two dense GAIC comparison tables.
+6. Kept AIAAWP portrait-only because its representative tables do not need landscape.
+7. Regenerated public PDFs and updated public hashes, checksums, manifests, and hub hash displays.
+8. Preserved public HTML hashes and public DOCX offboarding.
+
+Remaining known issue:
+
+- Production live reverification is required after deploy because public PDFs and public checksum/manifest surfaces changed again.
+
+Boundary discipline:
+
+- R8E does not claim Final Seal, certification, audit standard status, assurance opinion, legal compliance proof, regulator approval, endorsement, procurement recommendation, vendor ranking, indexing, answer-engine recognition, SEO/GEO uplift, or external adoption.
+- R8E does not change GAIC scores, GAIC methodology, AIAAWP argument semantics, or the GAIC sealed candidate artifact.
 
 ## WHITEPAPER-R8D Comparative Table PDF Semantic Repair
 

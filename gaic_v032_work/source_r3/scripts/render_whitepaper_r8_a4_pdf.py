@@ -56,6 +56,27 @@ class WhitepaperConfig:
     subtitle_pt: int
 
 
+@dataclass(frozen=True)
+class TableMetrics:
+    profile: str
+    comparison_importance: str
+    density: str
+    column_count: int
+    row_count: int
+    max_header_len: int
+    max_cell_len: int
+    total_text_len: int
+    long_header_risk: str
+    long_cell_risk: str
+
+
+@dataclass(frozen=True)
+class TableDecision:
+    rendering: str
+    reason: str
+    metrics: TableMetrics
+
+
 CONFIGS = {
     "gaic": WhitepaperConfig(
         key="gaic",
@@ -117,6 +138,7 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
 @media print {{
   @page {{ size: A4; margin: 15mm 14mm; }}
   @page :first {{ size: A4; margin: 0; }}
+  @page r8-landscape {{ size: A4 landscape; margin: 12mm 11mm; }}
   html,
   body {{
     margin: 0 !important;
@@ -340,6 +362,40 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
     font-size: 7.5pt !important;
     line-height: 1.25 !important;
   }}
+  .pdf-landscape-table-page {{
+    page: r8-landscape !important;
+    break-before: page !important;
+    break-after: page !important;
+    break-inside: avoid !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }}
+  .pdf-landscape-table-page table {{
+    table-layout: fixed !important;
+    width: 100% !important;
+  }}
+  .pdf-landscape-table-page th,
+  .pdf-landscape-table-page td {{
+    font-size: 5.8pt !important;
+    line-height: 1.12 !important;
+    padding: 1.8pt !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }}
+  .pdf-landscape-table-page th *,
+  .pdf-landscape-table-page td * {{
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: 0 !important;
+  }}
+  .pdf-landscape-table-page .layout-note {{
+    margin: 0 0 2.5mm !important;
+    font-size: 7.2pt !important;
+    line-height: 1.25 !important;
+    color: #5b6d78 !important;
+  }}
   .pdf-score-rubric-matrix table {{
     table-layout: fixed !important;
   }}
@@ -467,6 +523,14 @@ def should_transform_table(headers: list[str], rows: list[list[str]], table_html
     return len(rows) >= 6 and len(table_html) >= 2400
 
 
+def risk_level(value: int, medium: int, high: int) -> str:
+    if value >= high:
+        return "high"
+    if value >= medium:
+        return "medium"
+    return "low"
+
+
 def table_profile(context_html: str, headers: list[str], table_html: str) -> str:
     context_text = plain_text(context_html).lower()
     header_text = " ".join(headers).lower()
@@ -514,17 +578,149 @@ def table_profile(context_html: str, headers: list[str], table_html: str) -> str
     return "narrative_support"
 
 
-def should_preserve_matrix(profile: str) -> bool:
-    return profile in {"comparative_matrix", "score_rubric_matrix"}
+def comparison_importance(profile: str, context_html: str, headers: list[str], table_html: str) -> str:
+    profile_text = f"{plain_text(context_html[-1600:])} {' '.join(headers)} {plain_text(table_html[:1200])}".lower()
+    if profile in {"comparative_matrix", "score_rubric_matrix"}:
+        return "high"
+    if profile == "lifecycle_mapping":
+        return "medium"
+    if "matrix" in profile_text or "crosswalk" in profile_text or "comparison" in profile_text:
+        return "medium"
+    return "low"
+
+
+def table_metrics(context_html: str, headers: list[str], rows: list[list[str]], table_html: str) -> TableMetrics:
+    cell_texts = [plain_text(cell) for row in rows for cell in row]
+    profile = table_profile(context_html, headers, table_html)
+    max_header_len = max((len(header) for header in headers), default=0)
+    max_cell_len = max((len(cell) for cell in cell_texts), default=0)
+    total_text_len = sum(len(cell) for cell in cell_texts) + sum(len(header) for header in headers)
+    column_count = len(headers)
+    row_count = len(rows)
+    density_score = 0
+    if column_count >= 7:
+        density_score += 2
+    elif column_count >= 5:
+        density_score += 1
+    if row_count >= 12:
+        density_score += 1
+    if max_header_len >= 32:
+        density_score += 1
+    if max_cell_len >= 220:
+        density_score += 2
+    elif max_cell_len >= 140:
+        density_score += 1
+    if total_text_len >= 5200:
+        density_score += 2
+    elif total_text_len >= 2600:
+        density_score += 1
+    density = "high" if density_score >= 4 else "medium" if density_score >= 2 else "low"
+    return TableMetrics(
+        profile=profile,
+        comparison_importance=comparison_importance(profile, context_html, headers, table_html),
+        density=density,
+        column_count=column_count,
+        row_count=row_count,
+        max_header_len=max_header_len,
+        max_cell_len=max_cell_len,
+        total_text_len=total_text_len,
+        long_header_risk=risk_level(max_header_len, 24, 36),
+        long_cell_risk=risk_level(max_cell_len, 140, 240),
+    )
+
+
+def adaptive_table_decision(context_html: str, headers: list[str], rows: list[list[str]], table_html: str) -> TableDecision:
+    metrics = table_metrics(context_html, headers, rows, table_html)
+
+    if metrics.column_count <= 2 and metrics.long_cell_risk != "high":
+        return TableDecision("portrait_inline_table", "small or medium two-column table remains readable in portrait flow", metrics)
+
+    if "table-system-profile" in context_html and metrics.column_count <= 4:
+        return TableDecision("portrait_split_matrix", "source already splits this matrix with repeated key/context columns", metrics)
+
+    if metrics.comparison_importance == "high":
+        if metrics.column_count >= 7 or (
+            metrics.density == "high" and metrics.column_count >= 6 and metrics.long_cell_risk != "high"
+        ):
+            return TableDecision(
+                "dedicated_landscape_a4_table",
+                "dense high-comparison table benefits materially from landscape side-by-side scanning",
+                metrics,
+            )
+        return TableDecision("portrait_inline_table", "comparison table remains readable in portrait or existing split-matrix form", metrics)
+
+    if metrics.comparison_importance == "medium":
+        if metrics.column_count <= 5 and metrics.density != "high":
+            return TableDecision("portrait_inline_table", "medium-comparison table is readable in normal portrait report flow", metrics)
+        if metrics.column_count >= 6 and metrics.long_cell_risk != "high":
+            return TableDecision(
+                "dedicated_landscape_a4_table",
+                "medium-comparison high-column table benefits from landscape without row-card loss",
+                metrics,
+            )
+        return TableDecision(
+            "row_card_registry",
+            "dense lifecycle/descriptive mapping is safer as cards because comparison is not the primary mode",
+            metrics,
+        )
+
+    if metrics.column_count <= 4 and metrics.density == "low":
+        return TableDecision("portrait_inline_table", "low-density table remains readable in portrait flow", metrics)
+
+    if metrics.profile in {"registry_inventory", "evidence_request", "narrative_support", "lifecycle_mapping"}:
+        return TableDecision(
+            "row_card_registry",
+            "low-comparison registry, evidence, appendix, or descriptive table prioritizes readable completeness",
+            metrics,
+        )
+
+    return TableDecision("portrait_inline_table", "default adaptive choice keeps readable tables in portrait flow", metrics)
+
+
+def render_table_cards(headers: list[str], rows: list[list[str]]) -> str:
+    cards: list[str] = ['<div class="pdf-wide-table-card-set table-block">']
+    for index, cells in enumerate(rows, start=1):
+        title = plain_text(cells[0]) or f"Row {index}"
+        cards.append('<article class="pdf-wide-table-row-card">')
+        cards.append(f"<h4>{escape(title)}</h4>")
+        cards.append("<dl>")
+        for cell_index, cell in enumerate(cells):
+            label = headers[cell_index] if cell_index < len(headers) else f"Field {cell_index + 1}"
+            cards.append("<div>")
+            cards.append(f"<dt>{escape(label)}</dt>")
+            cards.append(f"<dd>{cell}</dd>")
+            cards.append("</div>")
+        cards.append("</dl>")
+        cards.append("</article>")
+    cards.append("</div>")
+    return "\n".join(cards)
+
+
+def render_landscape_table(table_html: str, decision: TableDecision) -> str:
+    metrics = decision.metrics
+    note = (
+        "Adaptive PDF table layout: dense comparison table rendered on a dedicated landscape A4 page "
+        "to preserve side-by-side scanning without forcing other tables into landscape."
+    )
+    return (
+        '<div class="pdf-landscape-table-page table-block" '
+        f'data-table-profile="{escape(metrics.profile)}" '
+        f'data-adaptive-rendering="{escape(decision.rendering)}">\n'
+        f'<div class="layout-note">{escape(note)}</div>\n'
+        f"{table_html}\n"
+        "</div>"
+    )
 
 
 def transform_tables_for_pdf(html: str) -> str:
-    """Apply profile-aware PDF table rendering in temporary HTML.
+    """Apply adaptive, profile-aware PDF table rendering in temporary HTML.
 
     This keeps the public HTML artifact unchanged while preventing Chrome's
     print engine from compressing wide tables into unreadable vertical text.
-    Comparative and score/rubric matrices stay in table form; row cards are
-    reserved for lower-comparison registry, inventory, and evidence tables.
+    The decision is table-specific: readable portrait tables stay portrait,
+    dense comparison tables may receive a dedicated landscape page, split
+    matrices are preserved, and row cards are reserved for low-comparison
+    registry, inventory, evidence, appendix, and descriptive tables.
     """
 
     def replace_table(match: re.Match[str]) -> str:
@@ -538,29 +734,17 @@ def transform_tables_for_pdf(html: str) -> str:
             cells = TD_RE.findall(row_fragment)
             if cells and len(cells) >= 2:
                 rows.append(cells)
-        if not headers or not rows or not should_transform_table(headers, rows, table_html):
+        if not headers or not rows:
             return table_html
         context_html = html[max(0, match.start() - 2400) : match.start()]
-        profile = table_profile(context_html, headers, table_html)
-        if should_preserve_matrix(profile):
+        decision = adaptive_table_decision(context_html, headers, rows, table_html)
+        if decision.rendering in {"portrait_inline_table", "portrait_split_matrix"}:
             return table_html
-
-        cards: list[str] = ['<div class="pdf-wide-table-card-set table-block">']
-        for index, cells in enumerate(rows, start=1):
-            title = plain_text(cells[0]) or f"Row {index}"
-            cards.append('<article class="pdf-wide-table-row-card">')
-            cards.append(f"<h4>{escape(title)}</h4>")
-            cards.append("<dl>")
-            for cell_index, cell in enumerate(cells):
-                label = headers[cell_index] if cell_index < len(headers) else f"Field {cell_index + 1}"
-                cards.append("<div>")
-                cards.append(f"<dt>{escape(label)}</dt>")
-                cards.append(f"<dd>{cell}</dd>")
-                cards.append("</div>")
-            cards.append("</dl>")
-            cards.append("</article>")
-        cards.append("</div>")
-        return "\n".join(cards)
+        if decision.rendering == "dedicated_landscape_a4_table":
+            return render_landscape_table(table_html, decision)
+        if not should_transform_table(headers, rows, table_html):
+            return table_html
+        return render_table_cards(headers, rows)
 
     return TABLE_RE.sub(replace_table, html)
 

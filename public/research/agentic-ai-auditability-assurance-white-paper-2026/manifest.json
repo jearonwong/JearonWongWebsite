@@ -35,8 +35,8 @@
       "role": "PDF",
       "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "1a8289b375ea51d6bdd601d5575f8c4b2f530f7f8f9cb1867b62864766520e71",
-      "bytes": 1363042
+      "sha256": "a034219994b245bcfbc359e97155557501d4baf814bbe6fe7a39d900f2d6f45c",
+      "bytes": 1284023
     }
   ],
   "checksums": "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
@@ -48,9 +48,10 @@
     "editable_derivative_public_distribution_removed": "Owner decision removed editable derivative files from public distribution; public site now exposes HTML and PDF only.",
     "pdf_regenerated_from_public_html": "Public PDF regenerated from normalized public HTML after stale internal-only status text was detected in PDF text extraction.",
     "r8c_pdf_profile_refresh": "Public PDF regenerated through the R8C PDF Wide Table Layout Gate while preserving HTML/PDF-only public distribution.",
-    "r8d_pdf_profile_refresh": "Public PDF regenerated through the R8D PDF Table Semantic Gate to preserve rubric/matrix comparison while keeping row-card layouts only for appropriate inventory or evidence tables."
+    "r8d_pdf_profile_refresh": "Public PDF regenerated through the R8D PDF Table Semantic Gate to preserve rubric/matrix comparison while keeping row-card layouts only for appropriate inventory or evidence tables.",
+    "r8e_pdf_profile_refresh": "Public PDF regenerated through the R8E Adaptive PDF Table Layout Gate; AIAAWP representative tables remain portrait because landscape is not materially needed."
   },
   "generated_at_utc": "2026-05-18T06:50:54Z",
   "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
-  "updated_at_utc": "2026-05-19T09:36:44Z"
+  "updated_at_utc": "2026-05-19T10:45:00Z"
 }
