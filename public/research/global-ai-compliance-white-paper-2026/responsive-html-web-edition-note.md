@@ -1,7 +1,7 @@
 # Responsive HTML Web-Reading Edition Note
 
 **Date:** 2026-05-13
-**Last updated:** 2026-05-18
+**Last updated:** 2026-05-19
 **Scope:** Public HTML web-reading edition for the Global AI Compliance White Paper 2026.
 
 The sealed publication-candidate PDF artifact retains its sealed hash:
@@ -10,13 +10,13 @@ The sealed publication-candidate PDF artifact retains its sealed hash:
 
 Public website distribution now exposes only HTML and PDF. Earlier editable derivative files are no longer linked, listed in public checksums, or served from the public research artifact directory.
 
-The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18, the WHITEPAPER-R8D comparative table semantic repair on 2026-05-19, and the WHITEPAPER-R8E adaptive PDF table layout repair on 2026-05-19.
+The public distribution PDF was metadata-hardened by a controlled public re-seal on 2026-05-14. It was later replaced by the WHITEPAPER-R8 PDF A4 Print Profile layout repair on 2026-05-18, the WHITEPAPER-R8D comparative table semantic repair on 2026-05-19, the WHITEPAPER-R8E adaptive PDF table layout repair on 2026-05-19, and the WHITEPAPER-R8E-1 publication design implementation on 2026-05-19.
 
 - Previous metadata-hardened public PDF: `facc70c0ea0a52bb3bdeb0bb73be346cb34dc3cb5629c85de9ef993e3cdcf329`
-- Current public A4 Print Profile PDF: `ce06d40fc4cd66e42e4f1144a4a2238753d9ead66313ae2bd04692786301d396`
-- Current public PDF page count: 475
+- Current public A4 Print Profile PDF: `4ec048822d60b1b6bd935ce27f0b5cb2c3e96b1c69dd72489edf9142f101cc2d`
+- Current public PDF page count: 484
 
-The R8E public PDF update is a controlled adaptive table layout repair. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, or boundary status. Production live reverification is required after deployment.
+The R8E-1 public PDF update is a controlled publication design implementation. It improves semantic pagination, table-specific rendering, score/heatmap hierarchy, and restrained PDF footer/copyright treatment. It does not change white paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, or boundary status. Production live reverification is required after deployment.
 
 The original sealed HTML publication-candidate artifact remains preserved under:
 

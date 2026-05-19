@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8E Adaptive PDF Table Layout Repair)
+**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-1 Publication Design Implementation)
+
+## WHITEPAPER-R8E-1 Known Issues
+
+### Publication Design Implementation Complete
+
+R8E-1 implements the owner-approved R8E-0 remediation plan for GAIC and AIAAWP public PDFs. It is an implementation wave, not a Final Seal wave and not production live reverification.
+
+Resolved in this wave:
+
+- Patched the PDF-only renderer with internal proof output support so public PDFs are not replaced before QA.
+- Added restrained PDF footer/copyright treatment using short running titles, document ID/version, site URL, page number, and `Copyright © 2026 Jearon Wong. All rights reserved.`
+- Kept cover pages clean with no standard footer.
+- Added semantic pagination controls for high-risk table intro/table continuity.
+- Repaired GAIC T-11-01 so the heading, explanatory paragraph, and split matrix start together.
+- Rendered GAIC RCCS-T/RCCS-M/ALCS score overview as a score-first landscape matrix with boundary context.
+- Rendered GAIC dimension-level coverage patterns as a landscape heatmap module with context and boundary strip.
+- Preserved ordinary portrait tables, including T-13-06.
+- Preserved AIAAWP representative tables as portrait or split rubric because landscape is not materially needed.
+- Generated internal proof PDFs/images and passed internal proof QA before replacing public PDFs.
+- Regenerated GAIC and AIAAWP public PDFs and updated checksums, manifests, hub hash displays, and GAIC public PDF note.
+
+Remaining known issues:
+
+- Production reverification is required after deployment.
+- Final Seal remains blocked.
+- External distribution, indexing, answer-engine recognition, and adoption evidence remain outside this wave.
+
+Boundary discipline:
+
+- Public HTML artifacts were not changed.
+- Public DOCX remains offboarded.
+- GAIC scores, methodology, MRO definitions, RCCS-T/RCCS-M/ALCS framing, and AIAAWP AARM/MRO content were not changed.
+- No final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement recommendation, vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption claim was introduced.
+
+**WHITEPAPER-R8E-1 Status:** ✓ PUBLICATION DESIGN IMPLEMENTATION COMPLETE / PRODUCTION REVERIFICATION REQUIRED
 
 ## WHITEPAPER-R8E Adaptive PDF Table Layout Repair
 

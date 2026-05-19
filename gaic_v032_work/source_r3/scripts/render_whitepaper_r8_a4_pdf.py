@@ -9,6 +9,7 @@ Web Reading Profile.
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import shutil
@@ -41,12 +42,32 @@ READINESS_BLOCK_RE = re.compile(
 ARTICLE_RE = re.compile(r'<article class="semantic-row-card">(?P<body>[\s\S]*?)</article>', re.IGNORECASE)
 H4_RE = re.compile(r"<h4>([\s\S]*?)</h4>", re.IGNORECASE)
 DL_PAIR_RE = re.compile(r"<div><dt>([\s\S]*?)</dt><dd>([\s\S]*?)</dd></div>", re.IGNORECASE)
+SCORE_OVERVIEW_BLOCK_RE = re.compile(
+    r'<h2>RCCS-T / RCCS-M / ALCS Score Overview</h2>\s*'
+    r'<div class="score-overview-table table-block table-scorecard">(?P<body>[\s\S]*?)</div>\s*'
+    r'(?=<figure class="chart-card" id="chart-rccs-alcs-score-bars">)',
+    re.IGNORECASE,
+)
+HEATMAP_BLOCK_RE = re.compile(
+    r'<h2>Dimension-Level Coverage Patterns</h2>\s*'
+    r'<div class="heatmap-card" id="system-dimension-heatmap">(?P<body>[\s\S]*?)</div>\s*'
+    r'(?=<h2>System-by-System Analytical Profiles</h2>)',
+    re.IGNORECASE,
+)
+T1101_BLOCK_RE = re.compile(
+    r'(?P<h2><h2 id="11-3-comparative-field-positioning-matrix">[\s\S]*?</h2>)\s*'
+    r'(?P<intro><p>The following table provides high-level positioning[\s\S]*?</p>)\s*'
+    r'(?P<table><div class="table-block table-system-profile table-compact">[\s\S]*?</div>)',
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
 class WhitepaperConfig:
     key: str
     title: str
+    short_title: str
+    document_id: str
     subject: str
     keywords: str
     html_path: Path
@@ -81,6 +102,8 @@ CONFIGS = {
     "gaic": WhitepaperConfig(
         key="gaic",
         title="Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance",
+        short_title="GAIC White Paper 2026",
+        document_id="GACWP-2026-v0.3.2-FRC-R3",
         subject="Technical governance analysis of AI Agent Lifecycle Governance, Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and agentic lifecycle conformance.",
         keywords="Global AI Compliance White Paper 2026; GACWP-2026-v0.3.2-FRC-R3; AI Agent Lifecycle Governance; Agentic Lifecycle Governance; Missing Regulatory Objects; MRO; RCCS-T; RCCS-M; ALCS; MPLP; Multi-Agent Lifecycle Protocol; Deterministic Delivery; AI Agent Compliance; Multi-Agent Systems; Enterprise AI Governance; Evidence Chain; Accepted Outcome; Authority Boundary",
         html_path=REPO / "public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
@@ -92,6 +115,8 @@ CONFIGS = {
     "aiaawp": WhitepaperConfig(
         key="aiaawp",
         title="Agentic AI Auditability & Assurance White Paper 2026",
+        short_title="AIAAWP 2026",
+        document_id="AIAAWP-2026-v0.1-R4-CANDIDATE",
         subject="A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
         keywords="Agentic AI Auditability; AI Agent Auditability; Audit Evidence Chain; Agentic Audit Object; AARM; MRO; Agentic Lifecycle Governance; Enterprise AI Governance; Lifecycle Evidence",
         html_path=REPO / "public/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
@@ -128,6 +153,9 @@ def pdf_page_count(pdf_path: Path) -> int:
 
 
 def pdf_css(config: WhitepaperConfig) -> str:
+    footer_left = f"{config.short_title} | {config.document_id}"
+    footer_center = "jearonwong.com"
+    footer_right = 'Page " counter(page) " | Copyright © 2026 Jearon Wong. All rights reserved.'
     return f"""
 <style id="r8-pdf-a4-print-profile">
 nav.web-edition-nav,
@@ -136,9 +164,51 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
   display: none !important;
 }}
 @media print {{
-  @page {{ size: A4; margin: 15mm 14mm; }}
-  @page :first {{ size: A4; margin: 0; }}
-  @page r8-landscape {{ size: A4 landscape; margin: 12mm 11mm; }}
+  @page {{
+    size: A4;
+    margin: 15mm 14mm 19mm;
+    @bottom-left {{
+      content: "{footer_left}";
+      font-size: 6.5pt;
+      color: #6b7c86;
+    }}
+    @bottom-center {{
+      content: "{footer_center}";
+      font-size: 6.5pt;
+      color: #6b7c86;
+    }}
+    @bottom-right {{
+      content: "{footer_right}";
+      font-size: 6.5pt;
+      color: #6b7c86;
+    }}
+  }}
+  @page :first {{
+    size: A4;
+    margin: 0;
+    @bottom-left {{ content: ""; }}
+    @bottom-center {{ content: ""; }}
+    @bottom-right {{ content: ""; }}
+  }}
+  @page r8-landscape {{
+    size: A4 landscape;
+    margin: 12mm 11mm 17mm;
+    @bottom-left {{
+      content: "{footer_left}";
+      font-size: 6.2pt;
+      color: #6b7c86;
+    }}
+    @bottom-center {{
+      content: "{footer_center}";
+      font-size: 6.2pt;
+      color: #6b7c86;
+    }}
+    @bottom-right {{
+      content: "{footer_right}";
+      font-size: 6.2pt;
+      color: #6b7c86;
+    }}
+  }}
   html,
   body {{
     margin: 0 !important;
@@ -292,7 +362,12 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
   h2,
   h3,
   h4 {{
-    break-after: avoid !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }}
+  h1 {{
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
   }}
   p,
   li {{
@@ -370,6 +445,200 @@ body.r8-aiaawp-pdf-profile .web-edition-nav {{
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+  }}
+  .pdf-scorecard-landscape-page,
+  .pdf-heatmap-landscape-page {{
+    page: r8-landscape !important;
+    break-before: page !important;
+    break-after: page !important;
+    break-inside: avoid !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }}
+  .pdf-table-intro-keep {{
+    break-before: page !important;
+    break-inside: auto !important;
+  }}
+  .pdf-table-intro-keep h2 {{
+    margin-top: 0 !important;
+  }}
+  .pdf-table-intro-keep > p:first-of-type {{
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }}
+  .pdf-landscape-title {{
+    margin: 0 0 1.8mm !important;
+    font-size: 12pt !important;
+    line-height: 1.12 !important;
+    color: #102a35 !important;
+  }}
+  .pdf-landscape-intro {{
+    margin: 0 0 2.4mm !important;
+    max-width: 250mm !important;
+    font-size: 7.4pt !important;
+    line-height: 1.28 !important;
+    color: #536a75 !important;
+  }}
+  .pdf-boundary-strip {{
+    margin: 0 0 2.4mm !important;
+    padding: 1.7mm 2.2mm !important;
+    border-left: 2pt solid #0ea5b7 !important;
+    background: #edfafa !important;
+    color: #24424d !important;
+    font-size: 6.7pt !important;
+    line-height: 1.25 !important;
+  }}
+  .pdf-scorecard-table {{
+    table-layout: fixed !important;
+    width: 100% !important;
+  }}
+  .pdf-scorecard-table th,
+  .pdf-scorecard-table td {{
+    font-size: 5.9pt !important;
+    line-height: 1.12 !important;
+    padding: 1.7pt !important;
+    vertical-align: top !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }}
+  .pdf-scorecard-table th:nth-child(1),
+  .pdf-scorecard-table td:nth-child(1) {{
+    width: 17% !important;
+  }}
+  .pdf-scorecard-table th:nth-child(2),
+  .pdf-scorecard-table td:nth-child(2) {{
+    width: 11% !important;
+  }}
+  .pdf-scorecard-table th:nth-child(3),
+  .pdf-scorecard-table td:nth-child(3),
+  .pdf-scorecard-table th:nth-child(4),
+  .pdf-scorecard-table td:nth-child(4),
+  .pdf-scorecard-table th:nth-child(5),
+  .pdf-scorecard-table td:nth-child(5) {{
+    width: 7.2% !important;
+  }}
+  .pdf-scorecard-table th:nth-child(6),
+  .pdf-scorecard-table td:nth-child(6) {{
+    width: 13.6% !important;
+  }}
+  .pdf-scorecard-table th:nth-child(7),
+  .pdf-scorecard-table td:nth-child(7) {{
+    width: 37% !important;
+  }}
+  .pdf-scorecard-table td:nth-child(1) {{
+    font-weight: 800 !important;
+    color: #102a35 !important;
+  }}
+  .pdf-scorecard-table td:nth-child(2) {{
+    font-size: 5.55pt !important;
+    color: #415a65 !important;
+  }}
+  .pdf-scorecard-table td:nth-child(3) strong,
+  .pdf-scorecard-table td:nth-child(4) strong,
+  .pdf-scorecard-table td:nth-child(5) strong {{
+    display: block !important;
+    margin: 0 0 0.6mm !important;
+    font-size: 8.4pt !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    color: #0b2530 !important;
+  }}
+  .pdf-scorecard-table td:nth-child(6) {{
+    color: #29415f !important;
+    font-weight: 700 !important;
+  }}
+  .pdf-scorecard-table td:nth-child(7) {{
+    font-size: 5.5pt !important;
+    line-height: 1.12 !important;
+    color: #1d3038 !important;
+  }}
+  .pdf-scorecard-table td:nth-child(7) .score-range {{
+    display: block !important;
+    margin-top: 0.8mm !important;
+    color: #6b7c86 !important;
+    font-size: 5.25pt !important;
+    line-height: 1.1 !important;
+  }}
+  .score-system-name {{
+    font-weight: 800 !important;
+    color: #102a35 !important;
+  }}
+  .score-type {{
+    color: #415a65 !important;
+  }}
+  .score-primary {{
+    display: block !important;
+    margin: 0 0 0.6mm !important;
+    font-size: 8.4pt !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    color: #0b2530 !important;
+  }}
+  .score-range {{
+    display: block !important;
+    font-size: 5.6pt !important;
+    line-height: 1.1 !important;
+    color: #6a7d87 !important;
+  }}
+  .score-confidence {{
+    display: inline-block !important;
+    padding: 0.7mm 1mm !important;
+    border-radius: 1.4mm !important;
+    background: #eef4ff !important;
+    color: #29415f !important;
+    font-weight: 700 !important;
+    font-size: 5.7pt !important;
+    line-height: 1.12 !important;
+  }}
+  .score-interpretation {{
+    font-size: 5.8pt !important;
+    line-height: 1.14 !important;
+    color: #1d3038 !important;
+  }}
+  .score-evidence-note {{
+    display: block !important;
+    margin-top: 0.8mm !important;
+    color: #6b7c86 !important;
+    font-size: 5.35pt !important;
+    line-height: 1.12 !important;
+  }}
+  .pdf-heatmap-landscape-page .heatmap-title {{
+    margin: 0 0 1.4mm !important;
+    font-size: 12pt !important;
+    line-height: 1.12 !important;
+  }}
+  .pdf-heatmap-landscape-page .heatmap-note {{
+    margin: 0 0 2mm !important;
+    font-size: 7pt !important;
+    line-height: 1.25 !important;
+    color: #536a75 !important;
+  }}
+  .pdf-heatmap-landscape-page .heatmap-table {{
+    table-layout: fixed !important;
+    width: 100% !important;
+  }}
+  .pdf-heatmap-landscape-page .heatmap-table th,
+  .pdf-heatmap-landscape-page .heatmap-table td {{
+    font-size: 6.3pt !important;
+    line-height: 1.15 !important;
+    padding: 2.1pt !important;
+    text-align: center !important;
+  }}
+  .pdf-heatmap-landscape-page .heatmap-table th:first-child,
+  .pdf-heatmap-landscape-page .heatmap-table td:first-child {{
+    width: 25% !important;
+    text-align: left !important;
+    font-weight: 800 !important;
+  }}
+  .pdf-heatmap-landscape-page .heat {{
+    display: inline-block !important;
+    min-width: 20mm !important;
+    padding: 1mm 1.6mm !important;
+    border-radius: 1.5mm !important;
+    font-weight: 800 !important;
+    font-size: 5.9pt !important;
   }}
   .pdf-landscape-table-page table {{
     table-layout: fixed !important;
@@ -712,6 +981,75 @@ def render_landscape_table(table_html: str, decision: TableDecision) -> str:
     )
 
 
+def add_class_to_first_table(fragment: str, class_name: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        attrs = match.group("attrs")
+        class_match = re.search(r'class=(["\'])(?P<class>.*?)\1', attrs, re.IGNORECASE)
+        if class_match:
+            existing = class_match.group("class")
+            if class_name in existing.split():
+                return match.group(0)
+            quote = class_match.group(1)
+            updated = attrs[: class_match.start()] + f'class={quote}{existing} {class_name}{quote}' + attrs[class_match.end() :]
+            return f"<table{updated}>"
+        return f'<table{attrs} class="{class_name}">'
+
+    return re.sub(r"<table(?P<attrs>[^>]*)>", replace, fragment, count=1, flags=re.IGNORECASE)
+
+
+def transform_score_overview_for_pdf(html: str) -> str:
+    """Render the GAIC score overview as a score-first landscape matrix."""
+
+    def replace_block(match: re.Match[str]) -> str:
+        body = add_class_to_first_table(match.group("body"), "pdf-scorecard-table")
+        return f"""
+<section class="pdf-scorecard-landscape-page table-block" data-table-profile="score_rubric_matrix" data-adaptive-rendering="scorecard_landscape">
+<h2 class="pdf-landscape-title">RCCS-T / RCCS-M / ALCS Score Overview</h2>
+<p class="pdf-landscape-intro">Compact scorecard matrix for side-by-side comparison. Primary scores are visually dominant; ranges and evidence notes remain secondary uncertainty and source-boundary context.</p>
+<div class="pdf-boundary-strip">Fixed source order; provisional analytical framing; non-ranking. Scores are analytical profiles, not vendor rankings, legal compliance proof, certifications, regulatory approval signals, or procurement recommendations.</div>
+<div class="score-overview-table table-block table-scorecard pdf-scorecard-module">
+{body}
+</div>
+</section>
+"""
+
+    return SCORE_OVERVIEW_BLOCK_RE.sub(replace_block, html)
+
+
+def transform_heatmap_for_pdf(html: str) -> str:
+    """Keep the dimension heatmap and its context together on landscape PDF pages."""
+
+    def replace_block(match: re.Match[str]) -> str:
+        body = match.group("body")
+        return f"""
+<section class="pdf-heatmap-landscape-page table-block" data-table-profile="heatmap" data-adaptive-rendering="heatmap_landscape">
+<h2 class="pdf-landscape-title">Dimension-Level Coverage Patterns</h2>
+<p class="pdf-landscape-intro">Landscape heatmap module keeps the explanatory context and system-by-dimension posture table together, preserving scanability without applying landscape to ordinary portrait tables.</p>
+<div class="pdf-boundary-strip">Qualitative, source-qualified posture labels. Fixed source order; no leaderboard, certification, legal compliance proof, regulatory approval signal, or procurement recommendation is implied.</div>
+<div class="heatmap-card" id="system-dimension-heatmap">
+{body}
+</div>
+</section>
+"""
+
+    return HEATMAP_BLOCK_RE.sub(replace_block, html)
+
+
+def transform_t1101_for_pdf(html: str) -> str:
+    """Keep the T-11-01 heading and explanatory paragraph attached to the matrix."""
+
+    def replace_block(match: re.Match[str]) -> str:
+        return f"""
+<section class="pdf-table-intro-keep" data-table-profile="comparative_matrix" data-adaptive-rendering="portrait_split_matrix">
+{match.group("h2")}
+{match.group("intro")}
+{match.group("table")}
+</section>
+"""
+
+    return T1101_BLOCK_RE.sub(replace_block, html)
+
+
 def transform_tables_for_pdf(html: str) -> str:
     """Apply adaptive, profile-aware PDF table rendering in temporary HTML.
 
@@ -725,6 +1063,8 @@ def transform_tables_for_pdf(html: str) -> str:
 
     def replace_table(match: re.Match[str]) -> str:
         table_html = match.group(0)
+        if "pdf-scorecard-table" in table_html or "heatmap-table" in table_html:
+            return table_html
         body = match.group("body")
         header_fragments = TH_RE.findall(body)
         headers = [plain_text(header) for header in header_fragments]
@@ -737,6 +1077,11 @@ def transform_tables_for_pdf(html: str) -> str:
         if not headers or not rows:
             return table_html
         context_html = html[max(0, match.start() - 2400) : match.start()]
+        if (
+            context_html.rfind('class="pdf-scorecard-landscape-page') > context_html.rfind("</section>")
+            or context_html.rfind('class="pdf-heatmap-landscape-page') > context_html.rfind("</section>")
+        ):
+            return table_html
         decision = adaptive_table_decision(context_html, headers, rows, table_html)
         if decision.rendering in {"portrait_inline_table", "portrait_split_matrix"}:
             return table_html
@@ -814,6 +1159,9 @@ def prepare_html(config: WhitepaperConfig) -> Path:
     html = config.html_path.read_text(encoding="utf-8", errors="ignore")
     html = re.sub(r"<nav class=\"web-edition-nav\"[\s\S]*?</nav>\s*", "", html, count=1)
     html = transform_readiness_levels_for_pdf(html)
+    html = transform_t1101_for_pdf(html)
+    html = transform_score_overview_for_pdf(html)
+    html = transform_heatmap_for_pdf(html)
     html = transform_tables_for_pdf(html)
     html = html.replace("<body>", f'<body class="r8-{config.key}-pdf-profile">', 1)
     html = html.replace("</head>", f"{pdf_css(config)}\n</head>", 1)
@@ -822,10 +1170,12 @@ def prepare_html(config: WhitepaperConfig) -> Path:
     return out
 
 
-def render_pdf(config: WhitepaperConfig) -> None:
+def render_pdf(config: WhitepaperConfig, output_pdf: Path | None = None) -> Path:
     tmp_html = prepare_html(config)
-    if config.pdf_path.exists():
-        config.pdf_path.unlink()
+    pdf_path = output_pdf or config.pdf_path
+    pdf_path.parent.mkdir(parents=True, exist_ok=True)
+    if pdf_path.exists():
+        pdf_path.unlink()
     profile = TMP_ROOT / f"chrome-profile-{config.key}"
     shutil.rmtree(profile, ignore_errors=True)
     profile.mkdir(parents=True, exist_ok=True)
@@ -840,7 +1190,7 @@ def render_pdf(config: WhitepaperConfig) -> None:
         "--no-first-run",
         "--no-default-browser-check",
         f"--user-data-dir={profile}",
-        f"--print-to-pdf={config.pdf_path}",
+        f"--print-to-pdf={pdf_path}",
         tmp_html.resolve().as_uri(),
     ]
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -853,11 +1203,11 @@ def render_pdf(config: WhitepaperConfig) -> None:
         if process.poll() is not None:
             stdout, stderr = process.communicate(timeout=60)
             break
-        if config.pdf_path.exists():
-            size = config.pdf_path.stat().st_size
+        if pdf_path.exists():
+            size = pdf_path.stat().st_size
             stable_ticks = stable_ticks + 1 if size > 0 and size == last_size else 0
             last_size = size
-            if stable_ticks >= 3 and pdf_page_count(config.pdf_path) > 0:
+            if stable_ticks >= 3 and pdf_page_count(pdf_path) > 0:
                 process.terminate()
                 try:
                     stdout, stderr = process.communicate(timeout=15)
@@ -872,15 +1222,16 @@ def render_pdf(config: WhitepaperConfig) -> None:
         raise RuntimeError(f"Chrome PDF render timed out\nSTDOUT:\n{stdout}\nSTDERR:\n{stderr}")
 
     shutil.rmtree(profile, ignore_errors=True)
-    if not config.pdf_path.exists() or pdf_page_count(config.pdf_path) <= 0:
+    if not pdf_path.exists() or pdf_page_count(pdf_path) <= 0:
         raise RuntimeError(f"Chrome PDF render failed\nSTDOUT:\n{stdout}\nSTDERR:\n{stderr}")
-    patch_metadata(config)
+    patch_metadata(config, pdf_path)
+    return pdf_path
 
 
-def patch_metadata(config: WhitepaperConfig) -> None:
+def patch_metadata(config: WhitepaperConfig, pdf_path: Path) -> None:
     if PdfReader is None or PdfWriter is None:
         return
-    reader = PdfReader(str(config.pdf_path))
+    reader = PdfReader(str(pdf_path))
     writer = PdfWriter()
     for page in reader.pages:
         writer.add_page(page)
@@ -894,24 +1245,33 @@ def patch_metadata(config: WhitepaperConfig) -> None:
             "/Creator": "Whitepaper R8 PDF A4 Print Profile renderer",
         }
     )
-    tmp = config.pdf_path.with_suffix(".pdf.tmp")
+    tmp = pdf_path.with_suffix(".pdf.tmp")
     with tmp.open("wb") as handle:
         writer.write(handle)
-    tmp.replace(config.pdf_path)
+    tmp.replace(pdf_path)
 
 
 def main(argv: list[str]) -> int:
-    keys = argv[1:] or ["gaic", "aiaawp"]
+    parser = argparse.ArgumentParser(description="Render GAIC/AIAAWP public whitepaper PDFs from public HTML.")
+    parser.add_argument("keys", nargs="*", help="Whitepaper keys to render: gaic, aiaawp. Defaults to both.")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Optional internal proof output directory. When omitted, public PDF paths are replaced.",
+    )
+    args = parser.parse_args(argv[1:])
+    keys = args.keys or ["gaic", "aiaawp"]
     rendered = {}
     for key in keys:
         if key not in CONFIGS:
             raise SystemExit(f"Unknown whitepaper key: {key}")
         config = CONFIGS[key]
-        render_pdf(config)
+        output_pdf = args.output_dir / config.pdf_path.name if args.output_dir else None
+        pdf_path = render_pdf(config, output_pdf=output_pdf)
         rendered[key] = {
-            "pdf": str(config.pdf_path.relative_to(REPO)),
-            "pages": pdf_page_count(config.pdf_path),
-            "bytes": config.pdf_path.stat().st_size,
+            "pdf": str(pdf_path.relative_to(REPO) if pdf_path.is_relative_to(REPO) else pdf_path),
+            "pages": pdf_page_count(pdf_path),
+            "bytes": pdf_path.stat().st_size,
         }
     print(json.dumps(rendered, indent=2))
     return 0

@@ -4093,3 +4093,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - R8E-0 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
 
 **WHITEPAPER-R8E-0 Status:** ✓ PUBLICATION DESIGN REMEDIATION PLAN COMPLETE / OWNER REVIEW REQUIRED BEFORE IMPLEMENTATION.
+## WHITEPAPER-R8E-1 Notes (May 19, 2026)
+
+**Scope:** Controlled implementation of the owner-approved R8E-0 publication design remediation plan for GAIC and AIAAWP PDFs.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `5a2696350af6b95a326d82d9118289f561c3cd33` before implementation.
+2. Patched `render_whitepaper_r8_a4_pdf.py` to support `--output-dir` internal proof PDFs.
+3. Added restrained PDF footer/copyright page-family rules with short running titles, document ID/version, site URL, page number, and approved copyright.
+4. Added semantic pagination and table-intro retention controls, including GAIC T-11-01 heading/intro/matrix cohesion.
+5. Added GAIC scorecard and heatmap landscape modules with repeated context and boundary strips.
+6. Preserved T-13-06 and AIAAWP representative tables in portrait/split rubric form where landscape was not needed.
+7. Generated internal proof PDFs and proof images before replacing public PDFs.
+8. Regenerated GAIC and AIAAWP public PDFs after internal proof passed.
+9. Updated public checksums, manifests, hub hash displays, and GAIC public PDF note.
+10. Created R8E-1 QA reports for proof, regeneration, final visual QA, HTML regression, DOCX offboarding, content parity, metadata/integrity, boundary, build/validation, and final QA.
+
+**Artifact discipline:**
+
+- GAIC public PDF changed from `ce06d40fc4cd66e42e4f1144a4a2238753d9ead66313ae2bd04692786301d396` to `4ec048822d60b1b6bd935ce27f0b5cb2c3e96b1c69dd72489edf9142f101cc2d`.
+- AIAAWP public PDF changed from `a034219994b245bcfbc359e97155557501d4baf814bbe6fe7a39d900f2d6f45c` to `43f6be26a098747eed44daa06268c164678f7a35c47b3671a53fea27aef36996`.
+- GAIC public HTML hash remains `3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e`.
+- AIAAWP public HTML hash remains `4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4`.
+- Public DOCX remains offboarded.
+- GAIC historical publication-candidate PDF hash remains `3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643`.
+
+**Boundary discipline:**
+
+- R8E-1 does not claim production live verification, final/sealed status, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, or external adoption.
+- Production reverification is required after deployment.
+
+**WHITEPAPER-R8E-1 Status:** ✓ PUBLICATION DESIGN IMPLEMENTATION COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
