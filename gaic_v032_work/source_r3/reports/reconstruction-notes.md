@@ -4259,3 +4259,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - Owner release execution and post-release evidence capture are the next phase.
 
 **WHITEPAPER-R8F Status:** ✓ PRODUCTION AND SITEWIDE ASSET CONSISTENCY REVERIFICATION COMPLETE / READY FOR OWNER RELEASE EXECUTION.
+
+---
+
+## WP3-R0 Notes (May 20, 2026)
+
+**Scope:** Planning-only architecture baseline for Agentic AI Insurability & Risk Transfer White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `5536c8f6117c55b4b933b813c8142c181482e7a2`.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` assets and kept them outside the WP3-R0 change set.
+4. Inspected GAIC SOURCE MASTER, R8F reports, Whitepaper Series Publication SOP, GAIC/AIAAWP generation scripts, manifests, checksums, metadata/JSON-LD patterns, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, MPLP context, entity graph, `llms.txt`, and sitemap outputs.
+5. Created WP3-R0 reports for publication-standard reuse, preflight, positioning, audience, Chapter 0, Chapters 1-3, full Chapter 0-16 architecture, AIO v2, AIRM, 4+3 series closure map, source research requirements, appendix architecture, writing method/style, boundary QA, build validation, and final QA.
+6. Updated governance status in SOURCE MASTER, known issues, and reconstruction notes.
+
+**Artifact discipline:**
+
+- No WP3 body text was drafted.
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R0 is architecture and source-plan only.
+- WP3-R0 does not claim source research completion, formal draft completion, publication-candidate readiness, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R0 Status:** ✓ INSURABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR WP3-R1 SOURCE RESEARCH.

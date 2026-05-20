@@ -3529,3 +3529,37 @@ Boundary discipline:
 - R8F does not change GAIC scores/methodology, AIAAWP core content, public PDFs, or standalone public whitepaper HTML artifacts.
 
 **WHITEPAPER-R8F Status:** ✓ PRODUCTION AND SITEWIDE ASSET CONSISTENCY REVERIFICATION COMPLETE / READY FOR OWNER RELEASE EXECUTION
+
+---
+
+## WP3-R0 Known Issues
+
+### Insurability Architecture Baseline Complete
+
+WP3-R0 freezes the internal architecture for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Created a publication-standard reuse plan requiring WP3 to inherit GAIC/AIAAWP HTML, PDF, DOCX, metadata, JSON-LD, manifest, checksum, boundary, and semantic-mapping discipline.
+- Confirmed repo truth on latest `origin/main` before planning edits.
+- Created positioning, audience, Chapter 0, Chapters 1-3, and full Chapter 0-16 architecture reports.
+- Defined AIO v2 as an analytical insurability object layer.
+- Defined AIRM as a readiness vocabulary for evidence visibility and claim reviewability.
+- Created the 4+3 series closure map with WP1 as root framework and WP2/WP3/WP4 as interpretation/synthesis layers.
+- Created WP3-R1 source research requirements for insurance, reinsurance, E&O, cyber, D&O, AI exclusions, AI-specific products, claims reconstruction, and aggregation risk.
+- Created appendix and writing-method baselines.
+- Created boundary QA confirming the planning files remain non-public and non-advisory.
+
+Remaining known issues:
+
+- WP3-R1 source research is required before source-grounded outline or drafting.
+- Owner review is required before source research, drafting, publication-candidate generation, or public staging.
+- No source-grounded market facts have been asserted yet.
+- No WP3 body text exists.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R0 does not write the full whitepaper body, conduct source research, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
+
+**WP3-R0 Status:** ✓ INSURABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR WP3-R1 SOURCE RESEARCH
