@@ -1,0 +1,45 @@
+{
+  "document_id": "GACWP-2026-v0.3.2-FRC-R3",
+  "title": "Global AI Compliance White Paper 2026",
+  "subtitle": "From Model Governance to Agentic Lifecycle Conformance",
+  "author": "Jearon Wong",
+  "series": "Agentic Lifecycle Governance Industry Series",
+  "status": "public_edition_live_r8f_reverified",
+  "publication_stage": "production_and_sitewide_consistency_reverified",
+  "page_count": 485,
+  "not_final": true,
+  "final_seal_authorized": false,
+  "production_live_verified": true,
+  "public_route": "/research/global-ai-compliance-white-paper-2026/",
+  "canonical_artifact_base": "/research/global-ai-compliance-white-paper-2026/",
+  "artifact_role_model": {
+    "html": "responsive web-reading edition",
+    "pdf": "fixed-layout public PDF edition"
+  },
+  "artifacts": [
+    {
+      "role": "HTML",
+      "path": "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
+      "media_type": "text/html",
+      "sha256": "3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e",
+      "bytes": 1446222
+    },
+    {
+      "role": "PDF",
+      "path": "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
+      "media_type": "application/pdf",
+      "sha256": "e2525ad333ee110ee59ab2819717b4918ae844ef21d682a380d7384041fb9124",
+      "bytes": 6946939,
+      "page_count": 485
+    }
+  ],
+  "checksums": "/research/global-ai-compliance-white-paper-2026/checksums.sha256",
+  "related_manifests": {
+    "historical_publication_candidate_manifest": "/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json",
+    "current_public_pdf_metadata_manifest": "/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json"
+  },
+  "boundary": "Public edition with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete. Not final-sealed, not legal advice, not certification, not legal compliance proof, not regulator approval, not procurement guidance, and not vendor ranking.",
+  "public_distribution_note": "Public distribution exposes HTML and PDF only. Public DOCX remains offboarded.",
+  "updated_at_utc": "2026-05-20T04:20:00Z",
+  "next_phase": "Owner release execution and post-release evidence capture; final seal remains blocked until owner authorization."
+}

@@ -8,7 +8,8 @@ const canonicalPath = "/research/global-ai-compliance-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const pdfUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.pdf`;
 const htmlUrl = `${siteConfig.siteUrl}${assetBase}/global-ai-compliance-white-paper-2026.html`;
-const manifestUrl = `${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`;
+const manifestUrl = `${siteConfig.siteUrl}${assetBase}/manifest.json`;
+const pdfMetadataManifestUrl = `${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const systemsPath = "/research/global-ai-compliance-white-paper-2026/systems/";
 const documentId = "GACWP-2026-v0.3.2-FRC-R3";
@@ -332,9 +333,14 @@ const definedTermSetJsonLd = {
             <strong>Read full HTML</strong>
             <span>Responsive web-reading edition</span>
           </a>
+          <a href={`${assetBase}/manifest.json`} class="artifact-card">
+            <span class="artifact-kind">JSON</span>
+            <strong>Current public manifest</strong>
+            <span>R8F public distribution metadata</span>
+          </a>
           <a href={`${assetBase}/public-pdf-metadata-reseal-manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
-            <strong>Current PDF manifest</strong>
+            <strong>Current PDF metadata manifest</strong>
             <span>R8E-2 public distribution metadata</span>
           </a>
           <a href={`${assetBase}/publication-candidate-manifest.json`} class="artifact-card">
@@ -385,7 +391,7 @@ const definedTermSetJsonLd = {
             <div><dt>PDF</dt><dd><a href={pdfUrl}>{pdfUrl}</a></dd></div>
             <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
             <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
-            <div><dt>Public PDF metadata re-seal</dt><dd><a href={`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}>{`${siteConfig.siteUrl}${assetBase}/public-pdf-metadata-reseal-manifest.json`}</a></dd></div>
+            <div><dt>Public PDF metadata re-seal</dt><dd><a href={pdfMetadataManifestUrl}>{pdfMetadataManifestUrl}</a></dd></div>
           </dl>
         </div>
         <div class="boundary-panel">

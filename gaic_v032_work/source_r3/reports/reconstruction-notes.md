@@ -4222,3 +4222,40 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - Production reverification is required after deployment.
 
 **WHITEPAPER-R8E-4 Status:** ✓ HOMEPAGE RESEARCH SERIES HIERARCHY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED.
+
+---
+
+## WHITEPAPER-R8F Notes (May 20, 2026)
+
+**Scope:** Production and sitewide asset consistency reverification for the GAIC + AIAAWP whitepaper series.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `7edc582ef21fa6c0e49dab5f16abdbc87bba5d2b`.
+2. Verified production GAIC and AIAAWP HTML/PDF artifact hashes.
+3. Verified production PDF page counts: GAIC `485`, AIAAWP `118`.
+4. Verified production homepage ordered Research Series hierarchy from R8E-4.
+5. Audited sitewide semantic mapping across Research, Evidence, Concepts, Definitions, Governance, Playbooks, Ecosystem Mapping, About, MPLP, entity graph, `llms.txt`, sitemap, robots, and metadata utilities.
+6. Added a current GAIC public manifest and linked it from checksums, GAIC hub, Evidence Registry, and `llms.txt`.
+7. Updated AIAAWP manifest/status surfaces to R8F production and sitewide consistency reverified while preserving public-research-candidate and final-seal-blocked boundary language.
+8. Added AIAAWP concept terms and Person `subjectOf` relation to shared schema data.
+9. Updated entity graph and `llms.txt` to reflect GAIC/AIAAWP as a coherent Agentic Lifecycle Governance Industry Series.
+10. Added a noindex `/ecosystem-mapping/` compatibility alias to the canonical Extended Ecosystem route.
+11. Rendered representative production PDF proof pages for GAIC and AIAAWP and verified no R8E-1 visual defect regression in checked pages.
+12. Ran typecheck, lint, build, checksum validation, JSON parse checks, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No PDFs were regenerated.
+- No standalone public whitepaper HTML artifacts were changed.
+- No public DOCX files or links were reintroduced.
+- No GAIC scores, GAIC methodology, MRO definitions, or AIAAWP core content changed.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- R8F records production and sitewide consistency reverification only.
+- R8F does not claim Final Seal authorization, certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, endorsement, procurement/vendor ranking, SEO/GEO uplift, indexing pickup, answer-engine recognition, external adoption, or WP3 publication.
+- Owner release execution and post-release evidence capture are the next phase.
+
+**WHITEPAPER-R8F Status:** ✓ PRODUCTION AND SITEWIDE ASSET CONSISTENCY REVERIFICATION COMPLETE / READY FOR OWNER RELEASE EXECUTION.

@@ -24,6 +24,12 @@ export const siteEntityTerms = [
   "Prompt Engineering vs Harness Engineering",
   "Agentic Delivery Architecture Checklist",
   "Global AI Compliance White Paper 2026",
+  "Agentic AI Auditability & Assurance White Paper 2026",
+  "Agentic AI Auditability",
+  "Agentic Audit Object",
+  "Audit Evidence Chain",
+  "AARM",
+  "MRO-to-Audit-Evidence Mapping",
   "Missing Regulatory Objects",
   "Lifecycle Responsibility Objects",
   "RCCS-M",
@@ -108,6 +114,11 @@ export function createPersonJsonLd() {
         "@type": "TechArticle",
         name: "Global AI Compliance White Paper 2026",
         url: absoluteUrl("/research/global-ai-compliance-white-paper-2026/")
+      },
+      {
+        "@type": "TechArticle",
+        name: "Agentic AI Auditability & Assurance White Paper 2026",
+        url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
       },
       {
         "@type": "CreativeWork",

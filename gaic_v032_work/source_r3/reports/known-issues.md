@@ -3498,3 +3498,34 @@ Boundary discipline:
 - No certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, SEO/GEO uplift, indexing, answer-engine recognition, external adoption, or final/sealed claim was introduced.
 
 **WHITEPAPER-R8E-4 Status:** ✓ HOMEPAGE RESEARCH SERIES HIERARCHY REPAIR COMPLETE / PRODUCTION REVERIFICATION REQUIRED
+
+## WHITEPAPER-R8F Known Issues
+
+### Production and Sitewide Asset Consistency Reverification Complete
+
+R8F verified the GAIC and AIAAWP whitepaper series as production artifacts and as sitewide semantic assets.
+
+Resolved in this wave:
+
+- Verified production GAIC and AIAAWP HTML/PDF hashes against expected R8E-2/R8E-3 facts.
+- Verified production PDF page counts: GAIC `485`, AIAAWP `118`.
+- Verified homepage ordered Research Series is live with GAIC as `01 / Foundation` and AIAAWP as `02 / Auditability & Assurance`.
+- Added a current GAIC `manifest.json` route and included it in checksums, GAIC hub, Evidence Registry, and `llms.txt`.
+- Updated AIAAWP manifest/status surfaces to R8F production and sitewide consistency reverified while preserving candidate/final-seal-blocked boundary.
+- Added AIAAWP concept terms and `subjectOf` relation to shared schema JSON-LD utilities.
+- Updated entity graph JSON and `llms.txt` so GAIC/AIAAWP series mapping is current.
+- Added a noindex `/ecosystem-mapping/` compatibility route to the canonical `/mapping/extended-ecosystem/` surface.
+- Verified public DOCX remains offboarded.
+- Verified no PDFs or standalone public whitepaper HTML artifacts were regenerated.
+
+Remaining known issues:
+
+- Final Seal remains blocked until owner authorization.
+- Owner release execution and post-release evidence capture remain the next phase.
+
+Boundary discipline:
+
+- R8F does not claim certification, audit standard status, legal compliance proof, assurance opinion, regulator approval, Big Four/audit body endorsement, procurement recommendation, vendor ranking, SEO/GEO uplift, indexing pickup, answer-engine recognition, external adoption, or WP3 publication.
+- R8F does not change GAIC scores/methodology, AIAAWP core content, public PDFs, or standalone public whitepaper HTML artifacts.
+
+**WHITEPAPER-R8F Status:** ✓ PRODUCTION AND SITEWIDE ASSET CONSISTENCY REVERIFICATION COMPLETE / READY FOR OWNER RELEASE EXECUTION

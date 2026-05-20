@@ -4,13 +4,13 @@
   "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
   "author": "Jearon Wong",
   "series": "Agentic Lifecycle Governance Industry Series",
-  "status": "public_research_candidate_staged",
-  "publication_stage": "publication_staging",
+  "status": "public_research_candidate_live_r8f_reverified",
+  "publication_stage": "production_and_sitewide_consistency_reverified",
   "page_count": 118,
-  "deployment_verification_required": true,
+  "deployment_verification_required": false,
   "not_final": true,
   "not_sealed": true,
-  "production_live_verified": false,
+  "production_live_verified": true,
   "public_route": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
   "canonical_artifact_base": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
   "artifact_role_model": {
@@ -41,7 +41,7 @@
     }
   ],
   "checksums": "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
-  "boundary": "Public research candidate staged in repository for deployment verification. Not final, not sealed, not production-live verified, not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.",
+  "boundary": "Public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete. Not final, not sealed, not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.",
   "staging_normalization": {
     "scope": "public-copy-only metadata/status normalization",
     "internal_r5_artifacts_unchanged": true,
@@ -54,6 +54,6 @@
     "r8e2_full_publication_quality_repair": "Public PDF regenerated through the R8E-2 full PDF publication quality repair after internal proof QA. Header/footer rules are consistent with GAIC, HTML remains the responsive web-reading edition, and public DOCX remains offboarded."
   },
   "generated_at_utc": "2026-05-18T06:50:54Z",
-  "next_phase": "AIAAWP-R6B deployment/live verification after deploy",
-  "updated_at_utc": "2026-05-19T15:07:50Z"
+  "next_phase": "Owner release execution and post-release evidence capture; final seal remains blocked until owner authorization.",
+  "updated_at_utc": "2026-05-20T04:20:00Z"
 }

@@ -15,6 +15,7 @@ const documentId = "AIAAWP-2026-v0.1-R4-CANDIDATE";
 const reportTitle = "Agentic AI Auditability & Assurance White Paper 2026";
 const reportSubtitle = "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance";
 const reportVersion = "v0.1 Public Research Candidate";
+const releaseState = "Public HTML/PDF live; R8F production and sitewide consistency reverification complete.";
 const publicationMonth = "May 2026";
 const metaDescription =
   "A public research candidate by Jearon Wong defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.";
@@ -43,7 +44,7 @@ const shaRows = [
   },
   {
     label: "Manifest",
-    value: "8511f5705995967bbbbd75090691853ba5322067d76f605f7f7338d2d605ad55"
+    value: "945ff67e88c283baf23f998726676db353f302e5416eff3814ae4d2c2f18834d"
   }
 ];
 const keyConcepts = [
@@ -67,7 +68,7 @@ const seriesLinks = [
   {
     label: "AIAAWP 2026",
     href: canonicalPath,
-    body: "Stages the auditability and lifecycle evidence layer for author release decision and deployment verification."
+    body: "Extends the series into the auditability and lifecycle evidence layer; final seal remains blocked pending owner authorization."
   },
   {
     label: "Future Guide 1",
@@ -311,7 +312,7 @@ const definedTermSetJsonLd = {
         </div>
         <div class="meta-line">
           <span>Release state</span>
-          <strong>Publication staged; deployment verification required.</strong>
+          <strong>{releaseState}</strong>
         </div>
         <div class="meta-line">
           <span>Artifact role model</span>
@@ -411,7 +412,7 @@ const definedTermSetJsonLd = {
             <div><dt>Subtitle</dt><dd>{reportSubtitle}</dd></div>
             <div><dt>Author</dt><dd>Jearon Wong</dd></div>
             <div><dt>Document ID</dt><dd>{documentId}</dd></div>
-            <div><dt>Status</dt><dd>{reportVersion}; deployment verification required.</dd></div>
+            <div><dt>Status</dt><dd>{reportVersion}; R8F production and sitewide consistency reverification complete.</dd></div>
             <div><dt>Publication month</dt><dd>{publicationMonth}</dd></div>
             <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
             <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
@@ -423,10 +424,10 @@ const definedTermSetJsonLd = {
         <div class="boundary-panel">
           <strong>Boundary statement</strong>
           <p>
-            This page stages a public research candidate. It does not claim production live verification,
-            final release, sealed artifact status, legal compliance proof, audit standard status,
-            certification, regulator approval, assurance opinion, procurement guidance, vendor ranking,
-            or endorsement by any firm or professional body.
+            This page presents a public research candidate and records R8F production and sitewide
+            consistency reverification. It does not claim final release, sealed artifact status, legal
+            compliance proof, audit standard status, certification, regulator approval, assurance
+            opinion, procurement guidance, vendor ranking, or endorsement by any firm or professional body.
           </p>
         </div>
       </section>
@@ -462,7 +463,7 @@ const definedTermSetJsonLd = {
             <div><span>R5A SOP commit</span><strong>5c05972fe57189bd4d6ae35948429767c9de0735</strong></div>
             <div><span>Document ID</span><strong>{documentId}</strong></div>
             <div><span>Page count</span><strong>118</strong></div>
-            <div><span>Next phase</span><strong>Deployment/live verification</strong></div>
+            <div><span>Next phase</span><strong>Owner release execution; final seal remains blocked.</strong></div>
           </div>
           <div class="checksum-table" aria-label="SHA256 checksums">
             {shaRows.map((row) => (

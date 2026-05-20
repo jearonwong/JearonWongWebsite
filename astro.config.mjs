@@ -13,7 +13,8 @@ export default defineConfig({
       ],
       filter: (page) =>
         !page.endsWith("/theory-clusters/") &&
-        !page.endsWith("/theory-clusters")
+        !page.endsWith("/theory-clusters") &&
+        !page.endsWith("/ecosystem-mapping/")
     })
   ],
   server: {

@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-r6-aiaawp-staging",
-  "generated_at": "2026-05-18",
-  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, sealed artifact status, or production live verification.",
+  "version": "2026-05-r8f-production-sitewide-consistency",
+  "generated_at": "2026-05-20",
+  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, or sealed artifact status. R8F production reverification is limited to public URL, artifact, page-count, hash, homepage series, and sitewide wiring checks.",
   "nodes": [
     {
       "id": "jearon-wong",
@@ -9,7 +9,7 @@
       "type": "Person",
       "canonical_url": "https://www.jearonwong.com/about/",
       "source_authority": "owned-canonical",
-      "description": "Protocol Architect for the Agent Era; creator of MPLP and author of the Global AI Compliance White Paper 2026.",
+      "description": "Protocol Architect for the Agent Era; creator of MPLP and author of the Global AI Compliance White Paper 2026 and Agentic AI Auditability & Assurance White Paper 2026.",
       "boundary": "Owned-canonical identity surface; no claim of regulator approval, vendor endorsement, external adoption, indexing, or answer-engine citation."
     },
     {
@@ -144,7 +144,7 @@
       "type": "EvidenceRegistry",
       "canonical_url": "https://www.jearonwong.com/evidence/",
       "source_authority": "owned-canonical",
-      "description": "Single citation and evidence shelf for Jearon Wong, MPLP, GAIC, and related source artifacts.",
+      "description": "Single citation and evidence shelf for Jearon Wong, MPLP, GAIC, AIAAWP, and related source artifacts.",
       "boundary": "Evidence index; external evidence defaults to pending unless separately recorded."
     },
     {
@@ -235,7 +235,7 @@
       "canonical_url": "https://www.jearonwong.com/research/",
       "source_authority": "owned-canonical",
       "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets.",
-      "boundary": "Series grouping only; not certification, legal advice, regulator approval, or publication-live verification."
+      "boundary": "Series grouping only; not certification, legal advice, regulator approval, final release, or sealed artifact status."
     },
     {
       "id": "aiaawp-white-paper-2026",
@@ -244,7 +244,7 @@
       "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
       "source_authority": "authored-analysis",
       "description": "Public research candidate AIAAWP-2026-v0.1-R4-CANDIDATE defining agentic AI auditability, audit evidence chains, AARM, and MRO-to-audit-evidence mapping.",
-      "boundary": "Public research candidate staged for deployment verification; not final, sealed, live-verified, legal compliance proof, audit standard, certification, regulator approval, assurance opinion, endorsement, vendor ranking, or procurement guidance."
+      "boundary": "Public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, sealed, legal compliance proof, audit standard, certification, regulator approval, assurance opinion, endorsement, vendor ranking, or procurement guidance."
     },
     {
       "id": "agentic-ai-auditability",
@@ -566,7 +566,7 @@
       "target": "aiaawp-white-paper-2026",
       "evidence_status": "authored-analysis",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
-      "boundary": "Authorship relation for public research candidate; no external adoption, indexing, or live verification claim."
+      "boundary": "Authorship relation for public research candidate; no external adoption, indexing, final seal, certification, or assurance claim."
     },
     {
       "source": "aiaawp-white-paper-2026",
