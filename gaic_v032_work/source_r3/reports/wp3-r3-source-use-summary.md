@@ -15,7 +15,7 @@ This draft uses the R1/R2/R2A source base as its source truth. External claims s
 | 04 | MKT-01 to MKT-08, INS-07, INS-08, INS-09, INS-10 | INT-01, INT-03 | Market map | Consensus overclaim |
 | 05 | INS-01, CLAIM-01, CYB-02, CYB-03, CYB-04 | INT-01 to INT-07 | Insurability gap | Absolute "uninsurable" language |
 | 06 | AI-01, AI-02, CLAIM-01 | INT-01 to INT-07 | Translation logic | Compliance-to-insurance overclaim |
-| 07 | CLAIM-01, CLAIM-02, CLAIM-03, TECH-01, TECH-04, EVID-02, EVID-03 | INT-05, INT-06 | Logs/evidence split | Traces-as-evidence overclaim |
+| 07 | CLAIM-01, CLAIM-02, CLAIM-03, TECH-01, TECH-04 | INT-05, INT-06 | Logs/evidence split | Traces-as-evidence overclaim |
 | 08 | CLAIM-01, CLAIM-02, CYB-02 | INT-06 | AIO v2 | Treating AIO as standard |
 | 09 | INS-05, INS-07, MKT-03, MKT-05, MKT-08, TECH-01, TECH-02 | INT-05, INT-06 | Boundary logic | Coverage opinion drift |
 | 10 | CLAIM-01, CLAIM-02, CLAIM-03, TECH-04 | INT-05, INT-06 | Reconstruction | Legal causation drift |

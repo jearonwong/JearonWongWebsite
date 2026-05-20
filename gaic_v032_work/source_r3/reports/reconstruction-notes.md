@@ -4421,3 +4421,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R3 does not claim public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R3 Status:** ✓ FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP3-R4 EDITORIAL SOURCE AND BOUNDARY QA.
+
+## WP3-R4 Notes (May 20, 2026)
+
+**Scope:** Paragraph-level editorial, source-marker, consistency, and boundary QA for the R3 internal draft of `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `7acdc5e48597fd6d8e6bff45f9247155f8445120` before the R4 QA wave.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the R3 internal draft master, Chapters 00-16, Appendices A-G, source summaries, draft QA notes, WP3-R0/R1/R2/R2A/R3 report sets, GAIC SOURCE MASTER, WP1/WP2 source truth, the Whitepaper Series Publication SOP, and R8F reports.
+4. Completed core thesis/logic QA, chapter-by-chapter editorial QA, source/citation marker QA, insurance/legal boundary QA, AIO/AIRM consistency QA, series closure QA, table/figure editorial QA, plain-English reader QA, boundary-sensitive paragraph register, R5 readiness planning, and boundary QA.
+5. Applied bounded internal draft patches only: one malformed Chapter 5 technical marker, Chapter 7 WP2-origin marker cleanup, and the matching R3 source-use summary cleanup.
+6. Confirmed AIO and AIRM remain Jearon Wong synthesis / analytical object models.
+7. Confirmed market examples remain fragmented and conditional source signals.
+8. Confirmed technical framework traces remain technical inputs, not insurance conclusions or claim evidence by themselves.
+9. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R4 is editorial/source/boundary QA only.
+- WP3-R4 does not claim public release, final seal, publication-candidate creation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R4 Status:** ✓ EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP3-R5 PUBLICATION-CANDIDATE PREPARATION.

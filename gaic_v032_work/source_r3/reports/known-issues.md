@@ -3701,3 +3701,34 @@ Boundary discipline:
 - WP3-R3 does not claim public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R3 Status:** ✓ FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP3-R4 EDITORIAL SOURCE AND BOUNDARY QA
+
+## WP3-R4 Known Issues
+
+### Editorial Source and Boundary QA Complete
+
+WP3-R4 completes paragraph-level editorial, source, consistency, and boundary QA for the R3 internal draft.
+
+Resolved in this wave:
+
+- Reviewed Chapters 00-16 at paragraph level for thesis consistency, plain-English clarity, source support, synthesis labels, and insurance/legal boundary safety.
+- Reviewed Appendices A-G at section/table level for internal-only template framing.
+- Corrected one malformed Chapter 5 technical marker from `[TECH-01]` to `[SRC: TECH-01]`.
+- Replaced WP2-origin `EVID-02/EVID-03` marker remnants in Chapter 7 with audited WP3/internal markers.
+- Updated the R3 source-use summary so Chapter 7 no longer references unsupported `EVID` markers.
+- Confirmed AIO and AIRM remain Jearon Wong synthesis / analytical object models.
+- Confirmed market examples remain fragmented, conditional source signals rather than industry consensus.
+- Confirmed technical framework traces remain useful technical inputs, not insurance evidence or claim evidence by themselves.
+
+Remaining known issues:
+
+- R5 publication-candidate preparation is the next required wave.
+- Citation/source-note normalization remains future R5 work.
+- Publication candidate artifact generation remains out of scope until a separate approved wave.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R4 is editorial/source/boundary QA only.
+- WP3-R4 does not claim public release, final seal, publication-candidate creation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R4 Status:** ✓ EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP3-R5 PUBLICATION-CANDIDATE PREPARATION

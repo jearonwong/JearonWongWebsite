@@ -27,8 +27,8 @@ Vendor assurances can support risk discussion. They are not coverage authority. 
 
 | Signal | What it shows | What it does not show | Source |
 | --- | --- | --- | --- |
-| Logs | Events, timestamps, service activity | Authority or accepted outcome | [SRC: EVID-02][SRC: EVID-03][INT: INT-05] |
-| Traces | Workflow path and service flow | Responsibility transfer or legal causation | [SRC: EVID-02][INT: INT-05] |
+| Logs | Events, timestamps, service activity | Authority or accepted outcome | [SRC: CLAIM-01][SRC: TECH-01][INT: INT-05] |
+| Traces | Workflow path and service flow | Responsibility transfer or legal causation | [SRC: CLAIM-01][SRC: TECH-04][INT: INT-05] |
 | Vendor assurances | Market position or product intent | Coverage boundary or claim approval | [SRC: MKT-03][SRC: MKT-05][SRC: MKT-08] |
 | Incident guidance | Response and recovery vocabulary | Insurance decision | [SRC: CLAIM-01][SRC: CLAIM-02][SRC: CLAIM-03] |
 

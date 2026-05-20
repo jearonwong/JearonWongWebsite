@@ -15,7 +15,7 @@ Agentic AI is not yet broadly insurable because insurers still need to bound the
 
 ### Draft Body
 
-The core claim should be narrow: current sources show market experimentation and governance pressure, but not a standardized lifecycle object layer for agentic AI. [SRC: MKT-01][SRC: MKT-05][SRC: MKT-08][SRC: CLAIM-01][TECH-01]
+The core claim should be narrow: current sources show market experimentation and governance pressure, but not a standardized lifecycle object layer for agentic AI. [SRC: MKT-01][SRC: MKT-05][SRC: MKT-08][SRC: CLAIM-01][SRC: TECH-01]
 
 That means the gap is not just the LLM, the framework, or the vendor. It is the missing layer that turns action into reviewable risk. [SYNTHESIS: Jearon Wong][INT: INT-06]
 
