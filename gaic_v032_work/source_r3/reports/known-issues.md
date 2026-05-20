@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 20, 2026 (WP3-R2 Source-Grounded Outline)
+**Last Updated:** May 20, 2026 (WP3-R2A External Source Accuracy Audit)
 
 ## WHITEPAPER-R8E-3 Known Issues
 
@@ -3635,3 +3635,38 @@ Boundary discipline:
 - WP3-R2 does not draft the whitepaper body, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
 
 **WP3-R2 Status:** ✓ SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT
+
+---
+
+## WP3-R2A Known Issues
+
+### External Source Accuracy Audit Complete
+
+WP3-R2A inserts the owner-required external source accuracy gate before any WP3-R3 formal drafting.
+
+Resolved in this wave:
+
+- Audited every external R1/R2 source for existence, accessibility, authority, date/freshness, topic fit, source tier, claim support, scope limitation, jurisdiction limitation, marketing/access risk, and recommended action.
+- Audited major R2 external-source-backed claim classes for support, correct scope, overclaim risk, safer R3 wording, affected chapters, and R3 drafting instructions.
+- Audited high-risk sources including paywall/rate-limit/blocked sources, broker/insurer marketing, product announcements, jurisdiction-specific legal/regulatory sources, technical framework docs, and sources used for market claims.
+- Audited source-to-chapter placement for Chapters 0-16.
+- Audited technical framework sources and confirmed they may support technical capability claims only, not insurance-grade evidence, coverage boundary, legal authority, or underwriting sufficiency.
+- Audited insurance/legal boundary claims and created updated R3 drafting restrictions.
+- Created a source correction plan with no P0 blockers remaining.
+
+Remaining known issues:
+
+- R3 must use the current A2A documentation instead of the old `google-a2a.github.io` URL.
+- R3 must split the LangGraph durable execution and persistence URLs.
+- R3 must replace or remove the old Coalition `cyber-threat-index` URL from any R3-critical claim.
+- Access-caveated sources such as QBE, WTW, Allianz, and OpenAI docs must not be used as sole support for central claims.
+- Exact AI exclusion endorsements, exact sublimit wording, AI claims handling examples, AI underwriting questionnaires, jurisdiction-specific coverage analysis, and direct agentic AI aggregation actuarial sources remain P1/P2 enrichment gaps.
+- No WP3 body text exists.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R2A is external source audit only.
+- WP3-R2A does not draft the whitepaper body, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
+
+**WP3-R2A Status:** ✓ EXTERNAL SOURCE ACCURACY AUDIT COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT

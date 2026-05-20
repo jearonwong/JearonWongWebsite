@@ -4358,3 +4358,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R2 does not claim body drafting, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R2 Status:** ✓ SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT.
+
+## WP3-R2A Notes (May 20, 2026)
+
+**Scope:** External source accuracy and claim-support audit for Agentic AI Insurability & Risk Transfer White Paper 2026 before formal internal drafting.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `b246e2e45300d4eff734f83e8a45626455909190`.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected WP3-R1 source files, WP3-R2 outline/source-map files, GAIC SOURCE MASTER, WP1/WP2 source truth anchors, the Whitepaper Series Publication SOP, and R8F reports.
+4. Performed live URL/access checks for the external source layer and targeted browser/search verification for blocked, rate-limited, broken, or high-risk sources.
+5. Created R2A reports for preflight, external source verification inventory, claim support audit, high-risk source audit, source-to-chapter accuracy audit, technical framework source accuracy audit, insurance/legal boundary accuracy audit, source correction plan, updated R3 drafting restrictions, boundary QA, build validation, and final QA.
+6. Recorded no P0 source accuracy blockers.
+7. Recorded P1/P2 source hygiene and enrichment requirements for A2A URL replacement, LangGraph URL splitting, Coalition source replacement/downgrade, access caveats, exact policy forms, AI claims examples, AI underwriting questionnaires, and direct agentic AI aggregation actuarial sources.
+8. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No WP3 body text was drafted.
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R2A is external source audit only.
+- WP3-R2A does not claim body drafting, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R2A Status:** ✓ EXTERNAL SOURCE ACCURACY AUDIT COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT.
