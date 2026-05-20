@@ -1,0 +1,65 @@
+{
+  "document_id": "AIIRWP-2026-v0.1-R6-CANDIDATE",
+  "title": "Agentic AI Insurability & Risk Transfer White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+  "author": "Jearon Wong",
+  "series": "Agentic Lifecycle Governance Industry Series",
+  "series_position": "03 / Insurability & Risk Transfer",
+  "status": "public_staging_candidate",
+  "publication_stage": "publication_staging_preparation",
+  "page_count": 59,
+  "deployment_verification_required": true,
+  "production_live_verified": false,
+  "not_final": true,
+  "not_sealed": true,
+  "final_seal_authorized": false,
+  "not_insurer_accepted": true,
+  "not_coverage_ready": true,
+  "not_underwriting_ready": true,
+  "not_certification": true,
+  "public_route": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+  "canonical_artifact_base": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+  "artifact_role_model": {
+    "html": "responsive web-reading public staging candidate",
+    "pdf": "fixed-layout public staging candidate"
+  },
+  "artifacts": [
+    {
+      "role": "HTML",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+      "media_type": "text/html",
+      "sha256": "7af4b31b551a0e469548529d6b5d1c253e7ec738f8f13fc109d6f1b506c65777",
+      "bytes": 105392
+    },
+    {
+      "role": "PDF",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+      "media_type": "application/pdf",
+      "sha256": "742d97a7cbbd2d69ec35a1988ae39ca80ff29f60a2df1e46bf33680c14e3ceaf",
+      "bytes": 803049,
+      "page_count": 59
+    }
+  ],
+  "checksums": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+  "source_basis": [
+    "R6B accepted internal candidate artifacts",
+    "Final candidate artifact QA complete and ready for publication staging preparation",
+    "R5 metadata, JSON-LD, generation, semantic mapping, and boundary plans",
+    "GAIC/AIAAWP public route, artifact, metadata, JSON-LD, manifest, and checksum patterns"
+  ],
+  "public_distribution_note": "Public staging exposes HTML and PDF only. No public DOCX is staged.",
+  "boundary": "Public staging candidate prepared for deployment and production reverification. Not final, not sealed, not production verified, not insurer-accepted, not coverage-ready, not underwriting-ready, not certification, not endorsement, not legal advice, not insurance advice, not a coverage opinion, not an underwriting standard, and not claims approval guidance.",
+  "staging_normalization": {
+    "scope": "public staging identity and metadata normalization only",
+    "r6b_source_artifacts_used": true,
+    "no_substantive_content_change": true,
+    "html_source_sha256_before_public_staging": "311b1ded83a2b1f6ba5a8b415499f22533748bcf136bbca23c9e563edf85d733",
+    "pdf_source_sha256_before_public_staging": "651753f529a18629feb8d588b2b4f16a1b6d35a9e4024910672980ff26a06b7b",
+    "r6b_pdf_page_count_preserved": true,
+    "r6b_appendix_f_matrix_treatment_preserved": true,
+    "literal_legacy_a2a_url_remains_removed": true,
+    "public_docx_offboarded": true
+  },
+  "generated_at_utc": "2026-05-20T17:40:36Z",
+  "next_phase": "R7B production reverification is required before any production-live verification, final seal, or author release claim."
+}

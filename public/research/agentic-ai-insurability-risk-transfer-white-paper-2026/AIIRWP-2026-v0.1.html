@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Jearon Wong">
+<meta name="description" content="Public staging candidate artifact for Agentic AI Insurability &amp; Risk Transfer White Paper 2026. Not final, not sealed, not insurer-accepted, not coverage-ready, not underwriting-ready, not production verified, not certified, and not endorsed.">
+<title>Agentic AI Insurability &amp; Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1</title>
+<style>
+:root { --ink:#111827; --muted:#52616b; --line:#d9e1e7; --paper:#f7f8f7; --card:#ffffff; --accent:#0f766e; --accent2:#334155; --soft:#eef6f4; --warn:#fff7ed; --mark:#f1f5f9; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+.print-running-header, .print-running-footer { display: none; }
+body { margin: 0; font-family: ui-serif, Georgia, 'Times New Roman', serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+a { color: #0f766e; }
+.cover { min-height: 92vh; padding: clamp(2.2rem, 5vw, 5rem); color: #f8fafc; background: linear-gradient(135deg, #0f172a 0%, #134e4a 48%, #334155 100%); display: flex; align-items: center; }
+.cover-inner { max-width: 1040px; width: 100%; border-top: 1px solid rgba(255,255,255,.35); border-bottom: 1px solid rgba(255,255,255,.2); padding: clamp(1.8rem, 4vw, 3.4rem) 0; }
+.kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; color: #cbd5e1; margin: 0 0 1.2rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+h1 { font-size: clamp(2.35rem, 7vw, 5.2rem); line-height: .96; margin: 0; letter-spacing: 0; max-width: 980px; }
+.subtitle { font-size: clamp(1.05rem, 2.3vw, 1.55rem); color: #d7f4ef; max-width: 760px; margin: 1.2rem 0 0; }
+.meta-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-top: 2rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+.meta-grid div { border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.07); padding: .8rem; border-radius: 7px; min-width: 0; }
+.meta-grid strong { display: block; font-size: .7rem; text-transform: uppercase; color: #a7f3d0; letter-spacing: .08em; }
+.meta-grid span { display: block; font-size: .88rem; color: #f8fafc; overflow-wrap: anywhere; }
+.notice { margin-top: 1rem; border-left: 4px solid #a7f3d0; background: rgba(255,255,255,.08); padding: .8rem 1rem; font-family: ui-sans-serif, system-ui, sans-serif; color: #e2e8f0; max-width: 920px; }
+.wrapper { max-width: 1120px; margin: 0 auto; padding: clamp(1.2rem, 4vw, 3rem); }
+.toc, main { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(1rem, 3vw, 2rem); box-shadow: 0 18px 50px rgba(15,23,42,.05); }
+.toc { margin: 2rem 0; }
+.toc ol { columns: 2; padding-left: 1.2rem; }
+.toc li { break-inside: avoid; margin: .28rem 0; }
+main h2 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.08; margin: 3rem 0 1rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+main h2:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+main h3 { font-size: clamp(1.3rem, 2.5vw, 2rem); line-height: 1.15; margin: 2rem 0 .7rem; color: #123b37; }
+main h4 { font-size: 1.05rem; margin: 1.4rem 0 .4rem; color: #334155; }
+p { margin: .75rem 0; }
+ul { padding-left: 1.3rem; }
+li { margin: .35rem 0; }
+code { background: var(--mark); padding: .08rem .28rem; border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+.code-block { white-space: pre-wrap; background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 7px; overflow: auto; }
+.section-rule { border: 0; border-top: 1px solid var(--line); margin: 2.4rem 0; }
+.source-marker, .synthesis-marker { display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .74em; border: 1px solid #cbd5e1; border-radius: 4px; padding: 0 .22rem; color: #334155; background: #f8fafc; white-space: nowrap; }
+.synthesis-marker { border-color: #99f6e4; background: #ecfdf5; color: #115e59; }
+.table-block { margin: 1rem 0 1.4rem; }
+.table-caption { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; background: #fff; }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+th, td { border-bottom: 1px solid #e5e7eb; border-right: 1px solid #e5e7eb; padding: .58rem .62rem; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+th { background: #f1f5f9; color: #0f172a; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem; }
+tr:last-child td { border-bottom: 0; }
+th:last-child, td:last-child { border-right: 0; }
+.registry-card-set { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.registry-card { border: 1px solid var(--line); border-radius: 7px; padding: .85rem; background: #fff; break-inside: avoid; }
+.registry-card h4 { margin: 0 0 .55rem; }
+.registry-card dl { display: grid; grid-template-columns: 8.5rem minmax(0,1fr); gap: .35rem .7rem; margin: 0; }
+.registry-card div { display: contents; }
+.registry-card dt { color: var(--muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .76rem; }
+.registry-card dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.footer { color: var(--muted); text-align: center; padding: 2rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .85rem; }
+@media (max-width: 760px) { .meta-grid, .registry-card-set { grid-template-columns: 1fr; } .toc ol { columns: 1; } .wrapper { padding: 1rem; } main, .toc { padding: 1rem; } table { font-size: .82rem; min-width: 620px; } }
+@media print {
+  .print-running-header { display: block; position: fixed; top: 5mm; left: 13mm; right: 13mm; z-index: 20; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 6.5pt; color: #64748b; border-bottom: .3pt solid #dbe4ea; padding-bottom: 2mm; }
+  .print-running-footer { display: flex; justify-content: space-between; gap: 6mm; position: fixed; bottom: 5mm; left: 13mm; right: 13mm; z-index: 20; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 5.8pt; color: #64748b; border-top: .3pt solid #dbe4ea; padding-top: 2mm; }
+
+  @page { size: A4; margin: 16mm 13mm 18mm; }
+  @page:first { margin: 0; }
+  body { background: #fff; font-size: 10.2pt; line-height: 1.44; }
+  .cover { min-height: 297mm; page-break-after: always; padding: 26mm 20mm; }
+  .cover-inner { padding-top: 34mm; }
+  h1 { font-size: 34pt; }
+  .subtitle { font-size: 13pt; }
+  .meta-grid { grid-template-columns: repeat(2, 1fr); }
+  .wrapper { max-width: none; margin: 0; padding: 0; }
+  .toc, main { box-shadow: none; border: 0; border-radius: 0; padding: 0; }
+  .toc { page-break-after: always; }
+  .toc ol { columns: 2; }
+  main h2 { page-break-before: always; font-size: 22pt; padding-top: 0; border-top: 0; }
+  main h3 { font-size: 15pt; break-after: avoid; }
+  main h4 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  .table-block, .registry-card, pre { break-inside: avoid; }
+  .table-scroll { overflow: visible; border-color: #cbd5e1; }
+  table { font-size: 7.8pt; table-layout: fixed; }
+  th, td { padding: 4.5pt; overflow-wrap: break-word; word-break: normal; }
+  .table-comparison-matrix table, .table-rubric-matrix table, .table-lifecycle-mapping table { table-layout: auto; }
+  .registry-card-set { grid-template-columns: 1fr; }
+  .registry-card dl { grid-template-columns: 34mm minmax(0, 1fr); }
+  .source-marker, .synthesis-marker { font-size: 6.8pt; }
+  .footer { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="print-running-header">Agentic AI Insurability & Risk Transfer White Paper 2026 | Public Staging Candidate</div>
+<div class="print-running-footer"><span>AIIRWP-2026-v0.1-R6-CANDIDATE</span><span>jearonwong.com</span><span>© 2026 Jearon Wong</span></div>
+<section class="cover">
+  <div class="cover-inner">
+    <p class="kicker">Jearon Wong / Agentic Lifecycle Governance Industry Series / 03 Insurability &amp; Risk Transfer</p>
+    <h1>Agentic AI Insurability &amp; Risk Transfer White Paper 2026</h1>
+    <p class="subtitle">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</p>
+    <div class="meta-grid">
+      <div><strong>Candidate ID</strong><span>AIIRWP-2026-v0.1-R6-CANDIDATE</span></div>
+      <div><strong>Status</strong><span>Public staging candidate</span></div>
+      <div><strong>Artifact Role</strong><span>HTML/PDF public staging candidates</span></div>
+      <div><strong>Prepared</strong><span>2026-05-21</span></div>
+    </div>
+    <div class="notice">Public staging candidate artifact. Not final, not sealed, not production verified, not insurer-accepted, not coverage-ready, not underwriting-ready, not legal advice, not insurance advice, not a coverage opinion, not an underwriting standard, and not claims approval guidance.</div>
+  </div>
+</section>
+<div class="wrapper">
+<nav class="toc" aria-label="Publication contents"><h2>Publication Contents</h2><ol><li class="toc-l2"><a href="#a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</a></li><li class="toc-l2"><a href="#candidate-boundary">Candidate Boundary</a></li><li class="toc-l2"><a href="#governing-thesis">Governing Thesis</a></li><li class="toc-l2"><a href="#mandatory-boundary-sentences">Mandatory Boundary Sentences</a></li><li class="toc-l2"><a href="#source-posture">Source Posture</a></li><li class="toc-l2"><a href="#contents">Contents</a></li><li class="toc-l2"><a href="#chapter-00">Chapter 00</a></li><li class="toc-l2"><a href="#chapter-01">Chapter 01</a></li><li class="toc-l2"><a href="#chapter-02">Chapter 02</a></li><li class="toc-l2"><a href="#chapter-03">Chapter 03</a></li><li class="toc-l2"><a href="#chapter-04">Chapter 04</a></li><li class="toc-l2"><a href="#chapter-05">Chapter 05</a></li><li class="toc-l2"><a href="#chapter-06">Chapter 06</a></li><li class="toc-l2"><a href="#chapter-07">Chapter 07</a></li><li class="toc-l2"><a href="#chapter-08">Chapter 08</a></li><li class="toc-l2"><a href="#chapter-09">Chapter 09</a></li><li class="toc-l2"><a href="#chapter-10">Chapter 10</a></li><li class="toc-l2"><a href="#chapter-11">Chapter 11</a></li><li class="toc-l2"><a href="#chapter-12">Chapter 12</a></li><li class="toc-l2"><a href="#chapter-13">Chapter 13</a></li><li class="toc-l2"><a href="#chapter-14">Chapter 14</a></li><li class="toc-l2"><a href="#chapter-15">Chapter 15</a></li><li class="toc-l2"><a href="#chapter-16">Chapter 16</a></li><li class="toc-l2"><a href="#appendix-a">Appendix A</a></li><li class="toc-l2"><a href="#appendix-b">Appendix B</a></li><li class="toc-l2"><a href="#appendix-c">Appendix C</a></li><li class="toc-l2"><a href="#appendix-d">Appendix D</a></li><li class="toc-l2"><a href="#appendix-e">Appendix E</a></li><li class="toc-l2"><a href="#appendix-f">Appendix F</a></li><li class="toc-l2"><a href="#appendix-g">Appendix G</a></li><li class="toc-l2"><a href="#source-register-and-citation-notes">Source Register and Citation Notes</a></li><li class="toc-l2"><a href="#final-source-use-rules">Final Source Use Rules</a></li><li class="toc-l2"><a href="#final-source-id-list">Final Source ID List</a></li><li class="toc-l2"><a href="#required-pre-publication-recheck">Required Pre-Publication Recheck</a></li><li class="toc-l2"><a href="#finalization-decision">Finalization Decision</a></li><li class="toc-l2"><a href="#source-marker-style">Source Marker Style</a></li><li class="toc-l2"><a href="#marker-validation">Marker Validation</a></li><li class="toc-l2"><a href="#r2a-citation-hygiene-checks">R2A Citation Hygiene Checks</a></li><li class="toc-l2"><a href="#r6-r6b-citation-tasks">R6/R6B Citation Tasks</a></li></ol></nav>
+<main>
+<h1 id="agentic-ai-insurability-risk-transfer-white-paper-2026">Agentic AI Insurability &amp; Risk Transfer White Paper 2026</h1>
+<h2 id="a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</h2>
+<p><strong>Candidate ID:</strong> AIIRWP-2026-v0.1-R6-CANDIDATE</p>
+<p><strong>Status:</strong> Public staging candidate source</p>
+<p><strong>Series:</strong> Agentic Lifecycle Governance Industry Series</p>
+<p><strong>Series Position:</strong> 03 / Insurability &amp; Risk Transfer</p>
+<p><strong>Author:</strong> Jearon Wong</p>
+<p><strong>Prepared:</strong> 2026-05-21</p>
+<p><strong>Source Basis:</strong> R4-reviewed R3 internal draft plus AIIRWP R0/R1/R2/R2A/R4 source and boundary QA.</p>
+<p>&gt; Public staging candidate source. Not final. Not sealed. Not production verified. Not insurer-accepted. Not coverage-ready. Not underwriting-ready. Not an underwriting standard. Not legal or insurance advice. Not claims approval guidance.</p>
+<h2 id="candidate-boundary">Candidate Boundary</h2>
+<p>This staged candidate source preserves the R2A source accuracy gate, the R4 editorial/source/boundary QA result, and the R6B artifact QA result. R7 public staging does not alter substantive arguments, source markers, or boundary caveats and does not create DOCX, final seal, production verification, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal advice, insurance advice, coverage opinion, or claims approval guidance.</p>
+<h2 id="governing-thesis">Governing Thesis</h2>
+<p>Agentic AI cannot become broadly insurable until insurers can distinguish the insured legal subject from the agentic risk object, map human and organizational responsibility to agentic actions, and reconstruct the lifecycle evidence that connects authority, action, loss, remediation, and coverage boundaries.</p>
+<h2 id="mandatory-boundary-sentences">Mandatory Boundary Sentences</h2>
+<ul>
+<li>AI agents are not the insured legal subject.</li>
+<li>The company may be insured. The AI agent usually is not.</li>
+<li>Logs do not make AI agents insurable. Reconstructable lifecycle evidence does.</li>
+<li>Tool permission is not coverage authority.</li>
+<li>Framework trace is not claim evidence by itself.</li>
+<li>Workflow completion is not an insured outcome.</li>
+<li>Agentic AI risk is not only model risk. It is lifecycle risk.</li>
+</ul>
+<h2 id="source-posture">Source Posture</h2>
+<p>External source usage is limited to verified, scoped, boundary-safe claims from the R1/R2/R2A source base. Public market examples are treated as market signals or product examples, not proof of consensus. Technical framework docs are technical capability sources only, not insurance conclusions. AIO and AIRM are Jearon Wong synthesis / analytical object models unless directly source-supported.</p>
+<h2 id="contents">Contents</h2>
+<p>1. Chapter 00: The Plain-English Problem: Why Agentic AI Breaks Today's Insurance Logic</p>
+<p>2. Chapter 01: The Insured Subject Problem: Who Is Covered When an Agent Acts?</p>
+<p>3. Chapter 02: The Insurable Object Problem: What Exactly Is Being Covered?</p>
+<p>4. Chapter 03: The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect</p>
+<p>5. Chapter 04: What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap</p>
+<p>6. Chapter 05: Why Agentic AI Is Not Yet Broadly Insurable</p>
+<p>7. Chapter 06: From Compliance and Auditability to Insurability</p>
+<p>8. Chapter 07: Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence</p>
+<p>9. Chapter 08: The Agentic Insurability Object Model</p>
+<p>10. Chapter 09: Coverage Boundaries, Authority, Delegation, and Exclusion Triggers</p>
+<p>11. Chapter 10: Loss Event Reconstruction and Causality Tracing</p>
+<p>12. Chapter 11: Third-Party, Vendor, Model, and Tool Dependency Risk</p>
+<p>13. Chapter 12: Evidence Requirements for Underwriting</p>
+<p>14. Chapter 13: Evidence Requirements for Claims Review</p>
+<p>15. Chapter 14: Aggregation and Accumulation Risk</p>
+<p>16. Chapter 15: Agentic Insurability Readiness Model</p>
+<p>17. Chapter 16: Conclusion: From Agentic Deployment to Insurable Risk Transfer</p>
+<p>18. Appendix A: Agentic Insurability Object Checklist</p>
+<p>19. Appendix B: Underwriting Evidence Request Template</p>
+<p>20. Appendix C: Claims Reconstruction Evidence Package</p>
+<p>21. Appendix D: AIO-to-MRO Mapping</p>
+<p>22. Appendix E: AIO-to-Audit-Evidence-Chain Mapping</p>
+<p>23. Appendix F: AIRM Readiness Matrix</p>
+<p>24. Appendix G: Boundary and Non-Claim Language</p>
+<hr class="section-rule">
+<h2 id="chapter-00">Chapter 00</h2>
+<h3 id="the-plain-english-problem-why-agentic-ai-breaks-today-s-insurance-logic">The Plain-English Problem: Why Agentic AI Breaks Today’s Insurance Logic</h3>
+<p>Insurance still starts with plain questions: who is covered, what risk is covered, what happened, who was responsible, and what evidence supports the claim. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span></p>
+<p>Public market examples show AI-specific cover at the edge, but they remain narrow, conditional, and product-specific rather than broad lifecycle risk transfer. <span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span></p>
+<p>This paper defines the bridge from policy subject to claim review as:</p>
+<p>Legal Subject -&gt; Human Responsibility Role -&gt; Agent / MAS Role -&gt; Agentic Work Unit -&gt; Loss Event -&gt; Claim Evidence Chain -&gt; Coverage / Exclusion Decision. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="bridge-figure">Bridge Figure</h4>
+<pre class="code-block mermaid"><code>flowchart LR
+  A["Legal Subject"] --&gt; B["Human Responsibility Role"]
+  B --&gt; C["Agent / MAS Role"]
+  C --&gt; D["Agentic Work Unit"]
+  D --&gt; E["Loss Event"]
+  E --&gt; F["Claim Evidence Chain"]
+  F --&gt; G["Coverage / Exclusion Decision"]</code></pre>
+<h4 id="insurance-basics-in-plain-english">Insurance Basics in Plain English</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Question</th><th>Plain-English answer</th><th>Why it matters for agentic AI</th><th>Source</th></tr></thead><tbody><tr><td>Who is covered?</td><td>A person, firm, officer, vendor, or organization.</td><td>The AI system is not automatically the insured party.</td><td><span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></td></tr><tr><td>What is covered?</td><td>A policy-defined risk, limit, or exposure.</td><td>A model name or workflow label is not enough.</td><td><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-07]</span></td></tr><tr><td>What happened?</td><td>A loss event with facts and timing.</td><td>Agentic work needs event reconstruction.</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span></td></tr><tr><td>Who was responsible?</td><td>A mapped human or organizational role.</td><td>Responsibility cannot stay hidden inside automation.</td><td><span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>What evidence exists?</td><td>Records that support review.</td><td>Logs are inputs, not the full claim file.</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[INT: INT-05]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion">Discussion</h4>
+<p>The insurance problem is not that agentic AI is mysterious. It is that the usual insurance questions break apart when action, authority, and responsibility are split across a person, a company, a tool, a model, and a workflow. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[INT: INT-01]</span></p>
+<p>AI governance sources already expect documentation, controls, and reviewability. That does not make those records insurance evidence by themselves, but it does show why the evidence question comes first. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: AI-01]</span><span class="source-marker">[SRC: AI-08]</span><span class="source-marker">[INT: INT-05]</span></p>
+<h4 id="wp1-wp2-bridge">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 contributes MROs, ALCS, accepted outcome, authority boundary, and remediation closure. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-02]</span></li>
+<li>WP2 contributes the Audit Evidence Chain and the logs-versus-evidence distinction. <span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></li>
+<li>This white paper translates those into the claim-review and risk-transfer question. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></li>
+</ul>
+<h4 id="boundary">Boundary</h4>
+<ul>
+<li>Not a coverage opinion.</li>
+<li>Not an underwriting standard.</li>
+<li>Not claims approval guidance.</li>
+<li>Not a legal liability determination.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-01">Chapter 01</h2>
+<h3 id="the-insured-subject-problem-who-is-covered-when-an-agent-acts">The Insured Subject Problem: Who Is Covered When an Agent Acts?</h3>
+<p>Insurance analysis starts with an insured party, policy subject, or insured role. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></p>
+<p>An AI agent can act, recommend, draft, route, or invoke tools, but that does not make the agent the insured legal subject. The company may be insured. The AI agent usually is not. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[INT: INT-01]</span><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></p>
+<h4 id="argument">Argument</h4>
+<p>The subject question comes before the model question. If the policy attaches to a person, firm, officer, or organization, then the analysis begins there and works outward to responsibility and evidence. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-08]</span></p>
+<p>Additional insured and D&amp;O/E&amp;O sources help show that insured status is a policy relationship, not a model attribute. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: INS-08]</span></p>
+<h4 id="subject-map">Subject Map</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Insurance question</th><th>Traditional answer</th><th>Agentic AI problem</th><th>Required mapping</th><th>Source</th></tr></thead><tbody><tr><td>Who is insured?</td><td>Named insured, additional insured, officer, professional, vendor, organization.</td><td>The agent may act without being the insured subject.</td><td>Legal subject first, agent second.</td><td><span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></td></tr><tr><td>Who is accountable?</td><td>A legal or organizational party named or implied by the contract.</td><td>HITL does not equal responsibility structure.</td><td>Human role must be explicit.</td><td><span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: MKT-07]</span><span class="source-marker">[INT: INT-01]</span></td></tr><tr><td>What is not enough?</td><td>A tool label or model name.</td><td>The AI agent name is not the policy subject.</td><td>Policy language must anchor the subject.</td><td><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-06]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-2">Discussion</h4>
+<p>The safe wording is simple: an AI agent is generally a tool or actor, not the insured legal subject. That does not settle liability, and it does not decide coverage. It only preserves the insurance starting point. <span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></p>
+<p>This chapter should use examples where a human, a firm, or an officer is the covered subject while the agent is the acting layer. That makes the policy question visible before the automation question arrives. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></p>
+<h4 id="wp1-wp2-bridge-2">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 MROs support the subject and responsibility split. <span class="source-marker">[INT: INT-01]</span></li>
+<li>WP2 adds the audit-evidence lens for who accepted, reviewed, or remediated the output. <span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></li>
+<li>Chapter 1 should not drift into legal advice or jurisdiction-specific doctrine. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></li>
+</ul>
+<h4 id="boundary-2">Boundary</h4>
+<ul>
+<li>Not a legal opinion.</li>
+<li>Not a coverage decision.</li>
+<li>Not a liability determination.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-02">Chapter 02</h2>
+<h3 id="the-insurable-object-problem-what-exactly-is-being-covered">The Insurable Object Problem: What Exactly Is Being Covered?</h3>
+<p>The insured subject is not the same as the risk object. A policy can cover a person or organization while the exposure is a narrower activity, event, or operation. <span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span></p>
+<p>Public AI and cyber materials describe performance, error, misuse, cyber events, or AI-linked service harm. They do not make a model name or workflow label into the insurable object by itself. <span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: INS-09]</span><span class="source-marker">[SRC: INS-10]</span></p>
+<h4 id="claim">Claim</h4>
+<p>This white paper defines the bounded agentic work unit, operation, exposure, or loss-triggering activity as the reviewable risk object. That is author synthesis, not a market standard. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="layer-table">Layer Table</h4>
+<section class="table-block table-regular-matrix" data-table-profile="regular-matrix"><div class="table-scroll"><table><thead><tr><th>Layer</th><th>What it is</th><th>Insurance function</th><th>Agentic AI gap</th><th>Source</th></tr></thead><tbody><tr><td>Subject</td><td>Covered person or organization</td><td>Identifies who can be indemnified or defended</td><td>AI agent is usually not the subject</td><td><span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></td></tr><tr><td>Work unit</td><td>Bounded agentic task or operation</td><td>Makes exposure reviewable</td><td>No external source names this as a policy object</td><td><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></td></tr><tr><td>Workflow label</td><td>System or product name</td><td>Operational shorthand only</td><td>Label alone does not bound loss</td><td><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-04]</span></td></tr><tr><td>Vendor/model name</td><td>Provider or model identity</td><td>Useful dependency context</td><td>Not the same as the insurable object</td><td><span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-04]</span></td></tr><tr><td>Exposure boundary</td><td>Scope, authority, time, data, tools, outcome</td><td>Enables review of what was at stake</td><td>Must be reconstructed, not assumed</td><td><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[INT: INT-05]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-3">Discussion</h4>
+<p>Chapter 2 should keep the distinction sharp: the object of review is not "the agent" in the abstract. It is the bounded thing the agent did, under the authority it had, with the tools it used, inside the scope the enterprise accepted. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-05]</span></p>
+<p>That bounded object is the analytic bridge between technical logs and insurance review. It is a synthesis object that makes the exposure legible without pretending to be a policy form. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="wp1-wp2-bridge-3">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 MRO-02, MRO-04, MRO-05, and MRO-08 help bound the exposure.</li>
+<li>WP2 auditability work helps separate workflow labels from evidence objects. <span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></li>
+</ul>
+<h4 id="boundary-3">Boundary</h4>
+<ul>
+<li>Not an underwriting standard.</li>
+<li>Not a policy form.</li>
+<li>Not a claim decision.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-03">Chapter 03</h2>
+<h3 id="the-responsibility-mapping-problem-how-human-liability-and-agentic-ai-risk-connect">The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect</h3>
+<p>Human-in-the-loop is not the same thing as responsibility mapping. A button click can confirm an action, but it does not by itself establish authority, liability structure, or responsibility transfer. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[SRC: MKT-07]</span><span class="source-marker">[INT: INT-05]</span></p>
+<h4 id="argument-2">Argument</h4>
+<p>The insurance bridge needs to show how a human role, an agent role, a work unit, evidence, and a loss event connect back to a legal subject. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></p>
+<p>Governance and D&amp;O / professional-liability sources support the idea that responsibility is organizational and role-based. They do not say the AI agent becomes the liable subject. <span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: INS-08]</span><span class="source-marker">[SRC: MKT-07]</span></p>
+<h4 id="responsibility-matrix">Responsibility Matrix</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Human role</th><th>Agent role</th><th>Work unit</th><th>Evidence needed</th><th>Loss question</th><th>Legal subject</th></tr></thead><tbody><tr><td>Approver</td><td>Tool-using agent</td><td>Bounded task</td><td>Approval record, authority scope, timestamp</td><td>What was approved?</td><td>Company or officer</td></tr><tr><td>Operator</td><td>Delegating employee</td><td>Service workflow</td><td>Delegation, handoff, output record</td><td>Who ran the workflow?</td><td>Firm or team</td></tr><tr><td>Reviewer</td><td>Multi-agent controller</td><td>Escalated exception</td><td>Review notes, exception route, acceptance/rejection</td><td>Who accepted the result?</td><td>Organization or officer</td></tr><tr><td>Remediator</td><td>Recovery owner</td><td>Post-loss closure</td><td>Fix record, recheck, closure state</td><td>Was it contained?</td><td>Legal subject with duty</td></tr></tbody></table></div></section>
+<h4 id="discussion-4">Discussion</h4>
+<p>This chapter should say plainly that responsibility mapping is an evidence problem before it is a legal problem. The paper is not deciding liability; it is showing what evidence a later liability or coverage review would need. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span></p>
+<p>The precise bridge is the internal relationship between human role, agent role, and work unit. This white paper uses that bridge to separate oversight from responsibility and responsibility from legal conclusion. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></p>
+<h4 id="wp1-wp2-bridge-4">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 human-role and MAS mapping becomes the responsibility path.</li>
+<li>WP2 audit evidence becomes the reviewable chain for acceptance, exception, and remediation.</li>
+<li>HITL is only one input; it is not the whole responsibility model. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></li>
+</ul>
+<h4 id="boundary-4">Boundary</h4>
+<ul>
+<li>Not a legal liability determination.</li>
+<li>Not a coverage opinion.</li>
+<li>Not a certification or standard.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-04">Chapter 04</h2>
+<h3 id="what-ai-insurance-covers-today-and-why-agentic-ai-still-falls-through-the-gap">What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap</h3>
+<p>Public market examples show AI-specific products, broker framing, cyber-linked AI cover, and D&amp;O/E&amp;O discussion around AI risk. They do not show a broad, standardized lifecycle risk-transfer market. <span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-06]</span><span class="source-marker">[SRC: MKT-07]</span><span class="source-marker">[SRC: MKT-08]</span></p>
+<h4 id="current-ai-insurance-focus">Current AI Insurance Focus</h4>
+<section class="table-block table-regular-matrix" data-table-profile="regular-matrix"><div class="table-scroll"><table><thead><tr><th>Focus</th><th>What it may cover</th><th>Why it is not enough for agentic AI</th><th>Source</th></tr></thead><tbody><tr><td>AI-specific product examples</td><td>Model performance, error, or bespoke AI risk</td><td>Product existence is not market consensus</td><td><span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span></td></tr><tr><td>AI-linked cyber</td><td>Data breach, misuse, LLMjacking, response costs</td><td>Cyber controls are not claim evidence by themselves</td><td><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-04]</span><span class="source-marker">[SRC: INS-09]</span><span class="source-marker">[SRC: INS-10]</span></td></tr><tr><td>E&amp;O / professional liability</td><td>Professional mistakes or omissions</td><td>The AI agent is not the insured professional subject</td><td><span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: MKT-06]</span></td></tr><tr><td>D&amp;O / corporate exposure</td><td>Governance, oversight, disclosure, board risk</td><td>Does not create an agentic lifecycle object</td><td><span class="source-marker">[SRC: INS-08]</span><span class="source-marker">[SRC: MKT-07]</span></td></tr><tr><td>Silent AI exposure</td><td>AI may appear inside existing lines</td><td>Silent exposure is a market-risk signal, not a coverage conclusion</td><td><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span><span class="source-marker">[SRC: CYB-02]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-5">Discussion</h4>
+<p>This chapter should read like a market map, not a verdict. The public source base points to fragmented and conditional coverage at the edges. <span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-02]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span></p>
+<p>The safe language is "certain product materials describe" and "some sources discuss." The unsafe language is "the industry believes" or "AI is broadly covered." <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-03]</span></p>
+<h4 id="boundary-5">Boundary</h4>
+<ul>
+<li>Use market examples as examples.</li>
+<li>Do not convert product pages into consensus claims.</li>
+<li>Do not convert broker views into policy interpretation.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-05">Chapter 05</h2>
+<h3 id="why-agentic-ai-is-not-yet-broadly-insurable">Why Agentic AI Is Not Yet Broadly Insurable</h3>
+<p>Agentic AI is not yet broadly insurable because insurers still need to bound the object, attribute the act, reconstruct the event, and understand aggregation before they can review the loss with confidence. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span></p>
+<h4 id="gap-table">Gap Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Insurance question</th><th>Current AI stack often provides</th><th>Missing lifecycle object</th><th>Source</th></tr></thead><tbody><tr><td>What is the object?</td><td>Model name, workflow name, vendor name</td><td>Bounded agentic work unit</td><td><span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: TECH-01]</span><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></td></tr><tr><td>Who is responsible?</td><td>Logs, approvals, handoffs</td><td>Human-agent responsibility map</td><td><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>What happened?</td><td>Events and traces</td><td>Loss event record with context</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>What was remediated?</td><td>Alerts or tickets</td><td>Remediation and recovery record</td><td><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>What depends on what?</td><td>Technical dependency lists</td><td>Dependency and aggregation view</td><td><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span><span class="source-marker">[INT: INT-03]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-6">Discussion</h4>
+<p>The core claim should be narrow: current sources show market experimentation and governance pressure, but not a standardized lifecycle object layer for agentic AI. <span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: TECH-01]</span></p>
+<p>That means the gap is not just the LLM, the framework, or the vendor. It is the missing layer that turns action into reviewable risk. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="wp1-wp2-bridge-5">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 shows why lifecycle failure modes need object boundaries.</li>
+<li>WP2 shows why auditability needs evidence chains, not just logs. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></li>
+<li>This white paper converts those into insurability terms.</li>
+</ul>
+<h4 id="boundary-6">Boundary</h4>
+<ul>
+<li>Do not say "AI agents are uninsurable."</li>
+<li>Do not say "AI agents are insurable."</li>
+<li>Do not imply the market has settled the question.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-06">Chapter 06</h2>
+<h3 id="from-compliance-and-auditability-to-insurability">From Compliance and Auditability to Insurability</h3>
+<p>WP1 and WP2 do not become insurance standards. They become source truth for translating compliance and auditability into claim-relevant language. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span><span class="source-marker">[INT: INT-07]</span></p>
+<h4 id="translation-table">Translation Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>WP1 / WP2 object</th><th>Insurance translation in this paper</th><th>Why it matters</th><th>Source</th></tr></thead><tbody><tr><td>MRO</td><td>AIO review object family</td><td>Gives the risk object vocabulary</td><td><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-06]</span></td></tr><tr><td>ALCS</td><td>Claim reconstructability lens</td><td>Shows how visible the lifecycle is</td><td><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-02]</span></td></tr><tr><td>Audit Evidence Chain</td><td>Claim Evidence Chain</td><td>Connects event, responsibility, and recovery</td><td><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>AARM</td><td>AIRM readiness vocabulary</td><td>Describes evidence readiness without certification</td><td><span class="source-marker">[INT: INT-07]</span></td></tr><tr><td>Enterprise failure scenarios</td><td>Insurance failure modes</td><td>Shows what can break in loss review</td><td><span class="source-marker">[INT: INT-01]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-7">Discussion</h4>
+<p>The useful sentence is simple: compliance and auditability are necessary ingredients, but they do not by themselves establish insurability. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></p>
+<p>This chapter should help readers see the lineage. WP1 gives the lifecycle objects. WP2 gives the evidence-chain lens. this white paper gives the insurance translation of both. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span><span class="source-marker">[INT: INT-07]</span></p>
+<h4 id="boundary-7">Boundary</h4>
+<ul>
+<li>Not an assurance opinion.</li>
+<li>Not a coverage opinion.</li>
+<li>Not a certification claim.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-07">Chapter 07</h2>
+<h3 id="why-logs-traces-and-vendor-assurances-are-not-claim-evidence">Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence</h3>
+<p>Technical traces are useful inputs, not claim evidence by themselves. They can show activity, timing, and flow, but they do not automatically prove authority, responsibility, remediation, or coverage boundary. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-04]</span></p>
+<h4 id="sequence-figure">Sequence Figure</h4>
+<pre class="code-block mermaid"><code>flowchart LR
+  A["Intent"] --&gt; B["Authority"]
+  B --&gt; C["Agent Action"]
+  C --&gt; D["Tool Use"]
+  D --&gt; E["Loss Event"]
+  E --&gt; F["Control Failure"]
+  F --&gt; G["Responsibility"]
+  G --&gt; H["Remediation"]
+  H --&gt; I["Claim Review"]</code></pre>
+<h4 id="discussion-8">Discussion</h4>
+<p>Logs and traces can help reconstruct what happened. They cannot, by themselves, answer the insurance questions that matter most: was the action authorized, who owned it, what failed, what was remediated, and what evidence belongs in the claim file. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[INT: INT-05]</span></p>
+<p>Vendor assurances can support risk discussion. They are not coverage authority. Framework traces can support technical reconstruction. They are not claim evidence by themselves. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="source-layer-distinction">Source-Layer Distinction</h4>
+<section class="table-block table-regular-matrix" data-table-profile="regular-matrix"><div class="table-scroll"><table><thead><tr><th>Signal</th><th>What it shows</th><th>What it does not show</th><th>Source</th></tr></thead><tbody><tr><td>Logs</td><td>Events, timestamps, service activity</td><td>Authority or accepted outcome</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>Traces</td><td>Workflow path and service flow</td><td>Responsibility transfer or legal causation</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: TECH-04]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>Vendor assurances</td><td>Market position or product intent</td><td>Coverage boundary or claim approval</td><td><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span></td></tr><tr><td>Incident guidance</td><td>Response and recovery vocabulary</td><td>Insurance decision</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span></td></tr></tbody></table></div></section>
+<h4 id="boundary-8">Boundary</h4>
+<ul>
+<li>Do not say traces prove the claim.</li>
+<li>Do not say logs are useless.</li>
+<li>Do not say a vendor statement creates insurance evidence.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-08">Chapter 08</h2>
+<h3 id="the-agentic-insurability-object-model">The Agentic Insurability Object Model</h3>
+<p>AIO v2 is a Jearon Wong synthesis: an analytical insurability object model, not an external standard, policy form, or insurer requirement. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="aio-catalog">AIO Catalog</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>AIO</th><th>Plain-English label</th><th>Insurance use</th><th>Boundary note</th><th>Source</th></tr></thead><tbody><tr><td>AIO-01</td><td>Legal insured subject</td><td>Names the covered party</td><td>Not legal advice</td><td><span class="source-marker">[SRC: INS-04]</span><span class="source-marker">[SRC: INS-06]</span><span class="source-marker">[SRC: INS-08]</span></td></tr><tr><td>AIO-02</td><td>Insurable agentic work unit</td><td>Binds exposure to a bounded action</td><td>Synthesis object</td><td><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></td></tr><tr><td>AIO-03</td><td>Human-agent responsibility map</td><td>Links action back to human role</td><td>Not liability finding</td><td><span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: INS-08]</span><span class="source-marker">[INT: INT-01]</span></td></tr><tr><td>AIO-04</td><td>Coverage boundary</td><td>Frames limits, exclusions, scope</td><td>Not coverage opinion</td><td><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: MKT-05]</span></td></tr><tr><td>AIO-05</td><td>Authority and delegation boundary</td><td>Separates permission from business authority</td><td>Not coverage authority</td><td><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-02]</span><span class="source-marker">[INT: INT-05]</span></td></tr><tr><td>AIO-06</td><td>Loss event record</td><td>Anchors event, time, consequence</td><td>Not proof of loss alone</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span></td></tr><tr><td>AIO-07</td><td>Causality reconstruction trace</td><td>Links sequence and contributors</td><td>Not legal causation proof</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: TECH-04]</span></td></tr><tr><td>AIO-08</td><td>Control failure record</td><td>Shows failed or bypassed control</td><td>Not negligence finding</td><td><span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: AI-01]</span><span class="source-marker">[SRC: CLAIM-01]</span></td></tr><tr><td>AIO-09</td><td>Claim evidence chain</td><td>Packages reviewable evidence</td><td>Not claim approval</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[INT: INT-04]</span></td></tr><tr><td>AIO-10</td><td>Remediation and recovery record</td><td>Shows containment and closure</td><td>Not legal closure</td><td><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span></td></tr><tr><td>AIO-11</td><td>Vendor / model / tool dependency map</td><td>Shows dependency concentration</td><td>No vendor ranking</td><td><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-03]</span><span class="source-marker">[SRC: TECH-04]</span><span class="source-marker">[SRC: TECH-05]</span></td></tr><tr><td>AIO-12</td><td>Exclusion trigger / boundary breach map</td><td>Helps review boundary facts</td><td>Not exclusion determination</td><td><span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-08]</span></td></tr><tr><td>AIO-13</td><td>Aggregation and accumulation risk view</td><td>Shows correlated exposure</td><td>Not actuarial proof</td><td><span class="source-marker">[SRC: CYB-01]</span><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span></td></tr><tr><td>AIO-14</td><td>Dispute-ready claim package</td><td>Organizes evidence for review</td><td>Not guaranteed payment</td><td><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[INT: INT-05]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-9">Discussion</h4>
+<p>The AIO family is the paper's central object layer. It turns an agentic system into something underwriting, claims, and dispute review can discuss without pretending that a model name is enough. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="boundary-9">Boundary</h4>
+<ul>
+<li>AIO is not a standard.</li>
+<li>AIO is not an insurer product requirement.</li>
+<li>AIO is not a legal conclusion.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-09">Chapter 09</h2>
+<h3 id="coverage-boundaries-authority-delegation-and-exclusion-triggers">Coverage Boundaries, Authority, Delegation, and Exclusion Triggers</h3>
+<p>Coverage boundaries are review questions, not coverage opinions. Authority and delegation boundaries help show whether the action was within the permitted scope, but they do not by themselves decide the claim. <span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: INS-07]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span><span class="source-marker">[INT: INT-05]</span></p>
+<h4 id="boundary-table">Boundary Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Action</th><th>Tool permission</th><th>Business authority</th><th>Confirmation required</th><th>Coverage risk</th></tr></thead><tbody><tr><td>Drafts a message</td><td>Allowed by tool</td><td>Maybe allowed</td><td>Low</td><td>May be low unless content causes harm</td></tr><tr><td>Submits a payment</td><td>Allowed by tool</td><td>Needs explicit scope</td><td>High</td><td>Higher if outside delegated authority</td></tr><tr><td>Changes a record</td><td>Allowed by tool</td><td>Needs role-based approval</td><td>High</td><td>Boundary review may be needed</td></tr><tr><td>Escalates an exception</td><td>Allowed by tool</td><td>Needs owner review</td><td>Medium</td><td>Coverage depends on facts and terms</td></tr><tr><td>Calls a vendor tool</td><td>Allowed by tool</td><td>Depends on business scope</td><td>Medium</td><td>Dependency and exclusion review may matter</td></tr></tbody></table></div></section>
+<h4 id="discussion-10">Discussion</h4>
+<p>This chapter should keep three things separate: technical permission, business authority, and insurance boundary. Tool permission is not coverage authority. <span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-02]</span><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></p>
+<p>Exclusion triggers and boundary breaches are evidence contexts. They are not denial rules in the abstract. The paper should keep the language careful and policy-neutral. <span class="source-marker">[SRC: INS-05]</span><span class="source-marker">[SRC: MKT-03]</span><span class="source-marker">[SRC: MKT-05]</span><span class="source-marker">[SRC: MKT-08]</span></p>
+<h4 id="wp1-wp2-bridge-6">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 authority and confirmation boundary becomes the review of permission versus delegated scope.</li>
+<li>WP2 exception traceability becomes the claim boundary inquiry.</li>
+<li>AIO-04, AIO-05, and AIO-12 carry the chapter's analytical load. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></li>
+</ul>
+<h4 id="boundary-10">Boundary</h4>
+<ul>
+<li>Not a coverage opinion.</li>
+<li>Not a denial rule.</li>
+<li>Not an underwriting standard.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-10">Chapter 10</h2>
+<h3 id="loss-event-reconstruction-and-causality-tracing">Loss Event Reconstruction and Causality Tracing</h3>
+<p>The claim question is not just what happened. It is how the event can be reconstructed, what failed, what was remediated, and what evidence chain supports review. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span></p>
+<h4 id="reconstruction-table">Reconstruction Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Reconstruction element</th><th>Evidence needed</th><th>Source type</th><th>Boundary risk</th></tr></thead><tbody><tr><td>Loss event record</td><td>Time, event, effect, owner</td><td>Incident / disclosure guidance</td><td>Not a full claim by itself</td></tr><tr><td>Causality trace</td><td>Sequence, dependencies, contributors</td><td>Incident response + technical trace</td><td>Not legal causation proof</td></tr><tr><td>Control failure record</td><td>Failed or bypassed control</td><td>Governance / incident guidance</td><td>Not negligence finding</td></tr><tr><td>Remediation record</td><td>Fix, recheck, closure</td><td>Response and recovery guidance</td><td>Not settlement or legal closure</td></tr><tr><td>Dispute-ready package</td><td>Combined review file</td><td>Internal synthesis</td><td>Not guaranteed payment</td></tr></tbody></table></div></section>
+<h4 id="discussion-11">Discussion</h4>
+<p>Logs and traces can support reconstruction, but reconstruction must reach beyond the raw record. It needs role, authority, and remediation context so the claim file can be reviewed rather than guessed. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[INT: INT-05]</span></p>
+<p>This chapter should distinguish sequence from causation. Sequence can be documented. Legal causation cannot be assumed from telemetry. <span class="source-marker">[SRC: TECH-04]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="wp1-wp2-bridge-7">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 accepted outcome and remediation closure map to the post-loss story.</li>
+<li>WP2 Audit Evidence Chain becomes this paper's Claim Evidence Chain.</li>
+<li>AIO-06 to AIO-10 do most of the work here. <span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></li>
+</ul>
+<h4 id="boundary-11">Boundary</h4>
+<ul>
+<li>Not legal causation.</li>
+<li>Not claim approval guidance.</li>
+<li>Not a settlement promise.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-11">Chapter 11</h2>
+<h3 id="third-party-vendor-model-and-tool-dependency-risk">Third-Party, Vendor, Model, and Tool Dependency Risk</h3>
+<p>Agentic AI risk is rarely single-node risk. It spreads across models, tools, vendors, subprocessors, runtimes, templates, and repeated workflows. <span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span><span class="source-marker">[SRC: MKT-08]</span><span class="source-marker">[SRC: TECH-01]</span><span class="source-marker">[SRC: TECH-02]</span><span class="source-marker">[SRC: TECH-03]</span><span class="source-marker">[SRC: TECH-04]</span><span class="source-marker">[SRC: TECH-05]</span></p>
+<h4 id="dependency-table">Dependency Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Dependency layer</th><th>Risk</th><th>Evidence needed</th><th>Aggregation concern</th><th>Source</th></tr></thead><tbody><tr><td>Model provider</td><td>Model change, outage, error</td><td>Dependency map, version record</td><td>Shared model exposure</td><td><span class="source-marker">[SRC: MKT-01]</span><span class="source-marker">[SRC: TECH-01]</span></td></tr><tr><td>Tool provider</td><td>Tool failure or misuse</td><td>Tool inventory, permission scope</td><td>Shared tool exposure</td><td><span class="source-marker">[SRC: TECH-02]</span><span class="source-marker">[SRC: TECH-05]</span></td></tr><tr><td>Vendor chain</td><td>Subprocessor or upstream service issue</td><td>Contract and handoff map</td><td>Concentrated dependency</td><td><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span></td></tr><tr><td>Runtime / framework</td><td>Checkpoint, handoff, or persistence issues</td><td>Trace and state record</td><td>Shared orchestration exposure</td><td><span class="source-marker">[SRC: TECH-04]</span></td></tr><tr><td>Cross-project reuse</td><td>Same template across many work units</td><td>Work-unit registry</td><td>Correlated loss across projects</td><td><span class="source-marker">[INT: INT-03]</span><span class="source-marker">[INT: INT-06]</span></td></tr></tbody></table></div></section>
+<h4 id="discussion-12">Discussion</h4>
+<p>This chapter should frame dependency risk as evidence for concentration, not as a vendor scorecard. The reader should understand the chain without seeing a ranking. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-03]</span></p>
+<p>Cyber accumulation sources are useful only as analogy and risk framing. They do not become direct actuarial proof for agentic AI. <span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span></p>
+<h4 id="boundary-12">Boundary</h4>
+<ul>
+<li>No vendor ranking.</li>
+<li>No procurement recommendation.</li>
+<li>No claim that one provider is safer by default.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-12">Chapter 12</h2>
+<h3 id="evidence-requirements-for-underwriting">Evidence Requirements for Underwriting</h3>
+<p>Underwriting discussion needs visible evidence categories before it can assess an agentic system. That is not the same thing as a formal underwriting standard. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: INS-09]</span><span class="source-marker">[SRC: INS-10]</span><span class="source-marker">[SRC: AI-01]</span><span class="source-marker">[SRC: CLAIM-01]</span></p>
+<h4 id="evidence-table">Evidence Table</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>Evidence category</th><th>Why it matters</th><th>AIO</th><th>Boundary note</th></tr></thead><tbody><tr><td>Subject evidence</td><td>Shows who the insured party is</td><td>AIO-01</td><td>Not legal advice</td></tr><tr><td>Work-unit evidence</td><td>Shows what the agentic system actually did</td><td>AIO-02</td><td>Not a policy form</td></tr><tr><td>Authority evidence</td><td>Shows what was permitted</td><td>AIO-05</td><td>Not coverage authority</td></tr><tr><td>Dependency evidence</td><td>Shows what systems and vendors were involved</td><td>AIO-11</td><td>No vendor ranking</td></tr><tr><td>Control evidence</td><td>Shows what control points existed</td><td>AIO-08</td><td>Not sufficient by itself</td></tr><tr><td>Aggregation evidence</td><td>Shows correlated exposure</td><td>AIO-13</td><td>Not actuarial proof</td></tr><tr><td>Remediation evidence</td><td>Shows how failure was handled</td><td>AIO-10</td><td>Not a guarantee of insurability</td></tr></tbody></table></div></section>
+<h4 id="discussion-13">Discussion</h4>
+<p>The chapter should say that pre-bind evidence helps underwriting discussion because it makes scope visible. It should not present a checklist as a universal insurer requirement. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="boundary-13">Boundary</h4>
+<ul>
+<li>Not an underwriting standard.</li>
+<li>Not an insurer checklist.</li>
+<li>Not a pricing model.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-13">Chapter 13</h2>
+<h3 id="evidence-requirements-for-claims-review">Evidence Requirements for Claims Review</h3>
+<p>Claims review needs a reconstructable package, not just a log dump. The review has to connect event, authority, responsibility, loss, and remediation. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[SRC: INS-05]</span></p>
+<h4 id="claims-table">Claims Table</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>Claims evidence category</th><th>Why it matters</th><th>AIO</th><th>Boundary note</th></tr></thead><tbody><tr><td>Loss event record</td><td>Anchors the incident</td><td>AIO-06</td><td>Not proof of payment</td></tr><tr><td>Causality trace</td><td>Shows sequence and contributors</td><td>AIO-07</td><td>Not legal causation proof</td></tr><tr><td>Responsibility map</td><td>Shows who owned the action</td><td>AIO-03</td><td>Not liability finding</td></tr><tr><td>Boundary map</td><td>Shows scope and exclusions context</td><td>AIO-04, AIO-12</td><td>Not coverage opinion</td></tr><tr><td>Remediation record</td><td>Shows containment and closure</td><td>AIO-10</td><td>Not legal closure</td></tr><tr><td>Dispute-ready package</td><td>Makes review efficient</td><td>AIO-14</td><td>Not claim approval guidance</td></tr></tbody></table></div></section>
+<h4 id="discussion-14">Discussion</h4>
+<p>The claims story should be written in the language of reconstruction and review. It should not promise payment or imply that a package guarantees approval. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="boundary-14">Boundary</h4>
+<ul>
+<li>Not claim approval guidance.</li>
+<li>Not a coverage opinion.</li>
+<li>Not a settlement promise.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-14">Chapter 14</h2>
+<h3 id="aggregation-and-accumulation-risk">Aggregation and Accumulation Risk</h3>
+<p>The concern is correlated loss, not isolated error. Shared models, shared tools, shared templates, and shared vendors can create a portfolio shape that behaves more like accumulation than one-off failure. <span class="source-marker">[SRC: CYB-01]</span><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span><span class="source-marker">[SRC: MKT-08]</span></p>
+<h4 id="aggregation-table">Aggregation Table</h4>
+<section class="table-block table-comparison-matrix" data-table-profile="comparison-matrix"><div class="table-scroll"><table><thead><tr><th>Aggregation driver</th><th>Example</th><th>Evidence needed</th><th>Reinsurance concern</th></tr></thead><tbody><tr><td>Shared model</td><td>Many teams use the same model version</td><td>Model/version map</td><td>Concentrated loss path</td></tr><tr><td>Shared tool</td><td>Same orchestration tool across workflows</td><td>Tool inventory</td><td>Multi-workflow correlation</td></tr><tr><td>Shared template</td><td>Same prompt or agent recipe reused widely</td><td>Work-unit registry</td><td>Repeated exposure pattern</td></tr><tr><td>Shared vendor</td><td>Same provider in many deployments</td><td>Dependency map</td><td>Upstream concentration</td></tr><tr><td>Shared sector</td><td>Same use case across one industry</td><td>Portfolio grouping</td><td>Sector-level shock</td></tr></tbody></table></div></section>
+<h4 id="discussion-15">Discussion</h4>
+<p>Cyber accumulation sources are the best public analogy in the current source base. They help explain the concern, but they do not prove a direct actuarial model for agentic AI. <span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[SRC: CYB-03]</span><span class="source-marker">[SRC: CYB-04]</span><span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></p>
+<h4 id="boundary-15">Boundary</h4>
+<ul>
+<li>Not an actuarial model.</li>
+<li>Not a quantified accumulation study.</li>
+<li>Not a vendor ranking.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-15">Chapter 15</h2>
+<h3 id="agentic-insurability-readiness-model">Agentic Insurability Readiness Model</h3>
+<p>AIRM is readiness vocabulary, not certification, insurer acceptance, an actuarial score, a coverage guarantee, claims approval guidance, or a procurement benchmark. It is a Jearon Wong synthesis. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span><span class="source-marker">[INT: INT-07]</span></p>
+<h4 id="airm-matrix">AIRM Matrix</h4>
+<section class="table-block table-rubric-matrix" data-table-profile="rubric-matrix"><div class="table-scroll"><table><thead><tr><th>Level</th><th>Label</th><th>Evidence visibility</th><th>Insurance reading</th><th>Boundary</th></tr></thead><tbody><tr><td>L0</td><td>Uninsurable Black Box</td><td>Very low</td><td>Hard to review</td><td>Analytical label only</td></tr><tr><td>L1</td><td>Logged but Not Attributable</td><td>Low</td><td>Events visible, ownership weak</td><td>Logs are not enough</td></tr><tr><td>L2</td><td>Bounded but Weakly Reconstructable</td><td>Medium</td><td>Some scope visible, chain incomplete</td><td>Not underwriting-ready</td></tr><tr><td>L3</td><td>Evidence-Linked and Claim-Reviewable</td><td>Good</td><td>Reviewable after loss</td><td>Not claim-approved</td></tr><tr><td>L4</td><td>Underwriting-Ready Lifecycle System</td><td>High</td><td>Pre-loss evidence is strong</td><td>Not insurer acceptance</td></tr><tr><td>L5</td><td>Dispute-Ready Risk Transfer Architecture</td><td>Very high</td><td>Review and dispute readiness are robust</td><td>Not certification</td></tr></tbody></table></div></section>
+<h4 id="discussion-16">Discussion</h4>
+<p>The readiness ladder lets the paper talk about maturity without pretending there is a certified industry scale. It can say what is more visible, more reviewable, and more disputable, without claiming a guarantee. <span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CYB-02]</span><span class="source-marker">[INT: INT-07]</span></p>
+<h4 id="wp1-wp2-bridge-8">WP1 / WP2 Bridge</h4>
+<ul>
+<li>WP1 ALCS supports the lifecycle-conformance side.</li>
+<li>WP2 AARM becomes the source shape for the readiness translation.</li>
+<li>AIRM should remain clearly separate from any certification logic. <span class="source-marker">[INT: INT-02]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-07]</span></li>
+</ul>
+<h4 id="boundary-16">Boundary</h4>
+<ul>
+<li>Not a certification.</li>
+<li>Not a benchmark.</li>
+<li>Not insurer acceptance.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="chapter-16">Chapter 16</h2>
+<h3 id="conclusion-from-agentic-deployment-to-insurable-risk-transfer">Conclusion: From Agentic Deployment to Insurable Risk Transfer</h3>
+<p>Agentic AI becomes more insurable not because it becomes more intelligent, but because its work becomes bounded, evidenced, attributable, reconstructable, remediated, and disputable. <span class="source-marker">[SRC: INS-01]</span><span class="source-marker">[SRC: CLAIM-01]</span><span class="source-marker">[SRC: CLAIM-02]</span><span class="source-marker">[SRC: CLAIM-03]</span><span class="source-marker">[SRC: MKT-08]</span><span class="source-marker">[INT: INT-01]</span><span class="source-marker">[INT: INT-04]</span><span class="source-marker">[INT: INT-05]</span><span class="source-marker">[INT: INT-06]</span></p>
+<h4 id="closing-argument">Closing Argument</h4>
+<ul>
+<li>The insured subject must be clear.</li>
+<li>The insurable object must be bounded.</li>
+<li>The responsibility path must be visible.</li>
+<li>The loss event must be reconstructable.</li>
+<li>The evidence package must be reviewable.</li>
+<li>The boundary must be legible.</li>
+</ul>
+<p>WP4 will later translate compliance, auditability, and insurability into enterprise implementation synthesis. This chapter should stop there and not promise final or guaranteed transfer. <span class="synthesis-marker">[SYNTHESIS: Jearon Wong]</span></p>
+<h4 id="boundary-17">Boundary</h4>
+<ul>
+<li>Not a public release claim.</li>
+<li>Not a final or sealed claim.</li>
+<li>Not insurer acceptance.</li>
+<li>Not a coverage promise.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="appendix-a">Appendix A</h2>
+<h3 id="agentic-insurability-object-checklist">Agentic Insurability Object Checklist</h3>
+<p>This appendix is a staging candidate template. It is illustrative only and not operational, normative, or insurer-approved.</p>
+<h4 id="checklist-skeleton">Checklist Skeleton</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>Item</th><th>Question</th><th>Evidence pointer</th><th>AIO</th></tr></thead><tbody><tr><td>Subject</td><td>Who is the legal subject?</td><td>Policy / entity record</td><td>AIO-01</td></tr><tr><td>Work unit</td><td>What exact work was done?</td><td>Work-unit registry</td><td>AIO-02</td></tr><tr><td>Authority</td><td>Was it within scope?</td><td>Authority record</td><td>AIO-05</td></tr><tr><td>Loss</td><td>What happened?</td><td>Incident record</td><td>AIO-06</td></tr><tr><td>Remediation</td><td>What was fixed?</td><td>Closure record</td><td>AIO-10</td></tr><tr><td>Dependency</td><td>What depended on what?</td><td>Dependency map</td><td>AIO-11</td></tr><tr><td>Boundary</td><td>What may be excluded or disputed?</td><td>Boundary note</td><td>AIO-04 / AIO-12</td></tr></tbody></table></div></section>
+<h4 id="boundary-notes">Boundary Notes</h4>
+<ul>
+<li>Do not imply legal sufficiency.</li>
+<li>Do not imply claims approval.</li>
+<li>Do not imply underwriting standard.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="appendix-b">Appendix B</h2>
+<h3 id="underwriting-evidence-request-template">Underwriting Evidence Request Template</h3>
+<p>This appendix is a draft request structure, not a required insurer form.</p>
+<h4 id="template-skeleton">Template Skeleton</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>Evidence category</th><th>Prompt</th><th>AIO</th><th>Boundary</th></tr></thead><tbody><tr><td>Subject</td><td>Who is the insured party?</td><td>AIO-01</td><td>Not legal advice</td></tr><tr><td>Scope</td><td>What work units are in scope?</td><td>AIO-02</td><td>Not a policy form</td></tr><tr><td>Authority</td><td>What can the agent do?</td><td>AIO-05</td><td>Not coverage authority</td></tr><tr><td>Dependencies</td><td>Which vendors and tools are involved?</td><td>AIO-11</td><td>No vendor ranking</td></tr><tr><td>Controls</td><td>What controls and review points exist?</td><td>AIO-08</td><td>Not sufficient by itself</td></tr><tr><td>Aggregation</td><td>Where can correlated loss arise?</td><td>AIO-13</td><td>Not actuarial proof</td></tr></tbody></table></div></section>
+<hr class="section-rule">
+<h2 id="appendix-c">Appendix C</h2>
+<h3 id="claims-reconstruction-evidence-package">Claims Reconstruction Evidence Package</h3>
+<p>This appendix is a candidate package template for review readiness, not a claims approval kit.</p>
+<h4 id="package-skeleton">Package Skeleton</h4>
+<p>1. Loss event record.</p>
+<p>2. Causality trace.</p>
+<p>3. Responsibility map.</p>
+<p>4. Boundary / exclusion context.</p>
+<p>5. Remediation record.</p>
+<p>6. Dispute-ready summary.</p>
+<h4 id="table">Table</h4>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>Package element</th><th>What it answers</th><th>AIO</th></tr></thead><tbody><tr><td>Event record</td><td>What happened?</td><td>AIO-06</td></tr><tr><td>Trace</td><td>How did it happen?</td><td>AIO-07</td></tr><tr><td>Responsibility map</td><td>Who owned it?</td><td>AIO-03</td></tr><tr><td>Boundary map</td><td>What context mattered?</td><td>AIO-04 / AIO-12</td></tr><tr><td>Remediation</td><td>How was it fixed?</td><td>AIO-10</td></tr><tr><td>Review package</td><td>How can it be disputed or reviewed?</td><td>AIO-14</td></tr></tbody></table></div></section>
+<h4 id="boundary-notes-2">Boundary Notes</h4>
+<ul>
+<li>Not a guarantee of payment.</li>
+<li>Not legal causation proof.</li>
+<li>Not legal closure.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="appendix-d">Appendix D</h2>
+<h3 id="aio-to-mro-mapping">AIO-to-MRO Mapping</h3>
+<p>This appendix maps this paper's object language back to WP1 source truth.</p>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>AIO</th><th>WP1 / GAIC relation</th><th>Why it matters</th><th>Boundary</th></tr></thead><tbody><tr><td>AIO-01</td><td>MRO subject / role logic</td><td>Anchors the insured party</td><td>Internal translation only</td></tr><tr><td>AIO-02</td><td>MRO work-unit logic</td><td>Binds exposure to bounded action</td><td>Not a standard</td></tr><tr><td>AIO-03</td><td>MRO responsibility logic</td><td>Connects action back to role</td><td>Not liability finding</td></tr><tr><td>AIO-04</td><td>MRO boundary logic</td><td>Shows what is in or out of scope</td><td>Not coverage opinion</td></tr><tr><td>AIO-05</td><td>MRO authority logic</td><td>Distinguishes permission from power</td><td>Not coverage authority</td></tr><tr><td>AIO-06 to AIO-10</td><td>MRO event / remediation / accepted outcome logic</td><td>Supports reconstruction</td><td>Not claim approval</td></tr><tr><td>AIO-11 to AIO-14</td><td>MRO dependency / aggregation / dispute logic</td><td>Supports review and dispute readiness</td><td>Not vendor ranking</td></tr></tbody></table></div></section>
+<hr class="section-rule">
+<h2 id="appendix-e">Appendix E</h2>
+<h3 id="aio-to-audit-evidence-chain-mapping">AIO-to-Audit-Evidence-Chain Mapping</h3>
+<p>This appendix maps this paper's object language back to WP2 evidence logic.</p>
+<section class="table-block table-lifecycle-mapping" data-table-profile="lifecycle-mapping"><div class="table-scroll"><table><thead><tr><th>AIO</th><th>WP2 relation</th><th>Why it matters</th><th>Boundary</th></tr></thead><tbody><tr><td>AIO-06</td><td>Audit event record</td><td>Shows what happened</td><td>Not proof of claim</td></tr><tr><td>AIO-07</td><td>Evidence reconstruction trace</td><td>Shows sequence</td><td>Not legal causation</td></tr><tr><td>AIO-08</td><td>Control failure evidence</td><td>Shows failed control point</td><td>Not negligence finding</td></tr><tr><td>AIO-09</td><td>Audit evidence chain</td><td>Packages evidence for review</td><td>Not claim approval</td></tr><tr><td>AIO-10</td><td>Remediation closure</td><td>Shows response and recovery</td><td>Not legal closure</td></tr><tr><td>AIO-14</td><td>Dispute-ready package</td><td>Supports review and challenge</td><td>Not guaranteed payment</td></tr></tbody></table></div></section>
+<hr class="section-rule">
+<h2 id="appendix-f">Appendix F</h2>
+<h3 id="airm-readiness-matrix">AIRM Readiness Matrix</h3>
+<p>This appendix is the long-form version of the readiness ladder.</p>
+<h4 id="matrix-skeleton">Matrix Skeleton</h4>
+<section class="table-block table-rubric-matrix" data-table-profile="rubric-matrix"><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>L0</th><th>L1</th><th>L2</th><th>L3</th><th>L4</th><th>L5</th></tr></thead><tbody><tr><td>Visibility</td><td>None</td><td>Logs only</td><td>Partial boundary</td><td>Reviewable chain</td><td>Strong pre-loss</td><td>Dispute-ready</td></tr><tr><td>Attribution</td><td>None</td><td>Weak</td><td>Partial</td><td>Good</td><td>Strong</td><td>Very strong</td></tr><tr><td>Reconstruction</td><td>None</td><td>Weak</td><td>Partial</td><td>Good</td><td>Strong</td><td>Very strong</td></tr><tr><td>Underwriting use</td><td>None</td><td>Minimal</td><td>Cautious</td><td>Possible</td><td>Better</td><td>Best available</td></tr><tr><td>Claims use</td><td>None</td><td>Minimal</td><td>Cautious</td><td>Reviewable</td><td>Strong</td><td>Dispute-ready</td></tr><tr><td>Boundary risk</td><td>Extreme</td><td>High</td><td>Medium</td><td>Lower</td><td>Lower</td><td>Lowest</td></tr></tbody></table></div></section>
+<h4 id="boundary-notes-3">Boundary Notes</h4>
+<ul>
+<li>Not a certification.</li>
+<li>Not a benchmark.</li>
+<li>Not insurer acceptance.</li>
+</ul>
+<hr class="section-rule">
+<h2 id="appendix-g">Appendix G</h2>
+<h3 id="boundary-and-non-claim-language">Boundary and Non-Claim Language</h3>
+<p>This appendix is the safety rail for the internal candidate.</p>
+<h4 id="required-safe-phrases">Required Safe Phrases</h4>
+<ul>
+<li>market signals suggest</li>
+<li>some sources indicate</li>
+<li>in certain policy contexts</li>
+<li>may be treated as</li>
+<li>does not by itself establish</li>
+<li>should be understood as an analytical object, not a standard</li>
+<li>author synthesis</li>
+<li>not a coverage opinion</li>
+<li>not an underwriting standard</li>
+<li>not claims approval guidance</li>
+<li>technical trace, not claim evidence by itself</li>
+<li>tool permission, not coverage authority</li>
+<li>necessary layer, not sufficient insurability layer</li>
+</ul>
+<h4 id="forbidden-phrases">Forbidden Phrases</h4>
+<ul>
+<li>The insurance industry believes</li>
+<li>AI agents are insurable</li>
+<li>AI agents are uninsurable</li>
+<li>Coverage applies</li>
+<li>Claims will be paid</li>
+<li>Insurers will accept</li>
+<li>This is underwriting-ready</li>
+<li>This proves legal liability</li>
+<li>MPLP makes agentic AI insurable</li>
+<li>Validation Lab certifies insurability</li>
+</ul>
+<hr class="section-rule">
+<h2 id="source-register-and-citation-notes">Source Register and Citation Notes</h2>
+<p>This section preserves citation review context for public staging. It is not a final public footnote system and does not create a claim of third-party source acceptance.</p>
+<h1 id="aiirwp-r5-source-register-finalization-plan">AIIRWP R5 Source Register Finalization Plan</h1>
+<p><strong>Status:</strong> Candidate source-register finalization plan for public staging.</p>
+<p><strong>Boundary:</strong> This plan does not create final public footnotes, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or production verification claims.</p>
+<h2 id="final-source-use-rules">Final Source Use Rules</h2>
+<ul>
+<li>Insurance basics sources support subject, policy, limits, D&amp;O, E&amp;O, and cyber terminology only; they do not support coverage opinions.</li>
+<li>AI insurance market sources support market signals, product examples, broker/reinsurer framing, and fragmentation language only; they do not prove industry consensus.</li>
+<li>Cyber accumulation sources support analogy and risk framing; they do not provide direct actuarial proof for agentic AI.</li>
+<li>Technical framework sources support technical capabilities only; they do not establish insurance evidence, claim evidence, legal authority, or underwriting sufficiency.</li>
+<li>Internal GAIC/AIAAWP/AIIRWP source truth supports framework translation and author synthesis, not external validation.</li>
+<li>AIO and AIRM remain Jearon Wong synthesis / analytical object models.</li>
+</ul>
+<h2 id="final-source-id-list">Final Source ID List</h2>
+<section class="table-block table-registry" data-table-profile="registry"><div class="registry-card-set"><article class="registry-card"><h4>INS-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary evidence</dd></div><div><dt>Chapter usage</dt><dd>0, 4, 5, 12</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>State adoption varies; model bulletin is not universal law.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Supporting context</dd></div><div><dt>Chapter usage</dt><dd>0, 4</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Press release; use bulletin for primary detail.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Boundary reference</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 12</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Adoption list can change; verify again before publication.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-04</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary evidence for insurance terminology</dd></div><div><dt>Chapter usage</dt><dd>1, 9</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>General industry definition, not policy-specific advice.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-05</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary evidence for insurance terminology</dd></div><div><dt>Chapter usage</dt><dd>4, 9, 13</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>General definition; not policy interpretation.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-06</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Legal/industry terminology</dd></div><div><dt>Chapter usage</dt><dd>1</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>U.S.-oriented legal encyclopedia; use only for plain-English basics.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-07</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary terminology</dd></div><div><dt>Chapter usage</dt><dd>3, 4, 9, 13</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Legal education source, not coverage advice.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-08</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary terminology</dd></div><div><dt>Chapter usage</dt><dd>1, 3, 4, 9</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>General education source; not policy advice.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-09</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary context</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 12, 13</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Small-business oriented; not all enterprise forms.</dd></div></dl></article>
+<article class="registry-card"><h4>INS-10</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Broker context</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 12</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Broker explanatory material; not market consensus.</dd></div></dl></article>
+<article class="registry-card"><h4>AI-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>AI governance reference</dd></div><div><dt>Chapter usage</dt><dd>5, 6, 12, 15</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Not insurance-specific.</dd></div></dl></article>
+<article class="registry-card"><h4>AI-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Regulation context</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 6, 9, 12</dd></div><div><dt>Access caveat</dt><dd>Public text accessible.</dd></div><div><dt>Citation risk</dt><dd>Do not convert into insurance advice or coverage conclusions.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary market evidence</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 12</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Marketing/product page; do not infer broad market consensus.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary insurer/reinsurer report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 9, 12</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Reinsurer-authored; not industry standard.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary market evidence</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 9</dd></div><div><dt>Access caveat</dt><dd>Public page may block automated access; verify manually before final citation.</dd></div><div><dt>Citation risk</dt><dd>Insurer product announcement; not consensus or policy wording.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-04</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Risk engineering context</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 7, 11, 12</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible through QBE link.</dd></div><div><dt>Citation risk</dt><dd>Risk engineering guidance, not claims evidence by itself.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-05</h4><dl><div><dt>Source tier</dt><dd>Tier 2</dd></div><div><dt>Source role</dt><dd>Broker thought leadership</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 9, 14</dd></div><div><dt>Access caveat</dt><dd>Public page may rate-limit automated checks.</dd></div><div><dt>Citation risk</dt><dd>Thought-leadership format; verify final page text before publication.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-06</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Broker report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 9, 12</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Broker perspective; not policy interpretation.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-07</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Broker context</dd></div><div><dt>Chapter usage</dt><dd>3, 4, 9</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Podcast/insight format; use as context, not legal conclusion.</dd></div></dl></article>
+<article class="registry-card"><h4>MKT-08</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Industry association report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 14, 16</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Report is GenAI-focused, not all agentic AI.</dd></div></dl></article>
+<article class="registry-card"><h4>CYB-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Insurer market/risk report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 14</dd></div><div><dt>Access caveat</dt><dd>Public PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Survey-based risk ranking; do not use as coverage proof.</dd></div></dl></article>
+<article class="registry-card"><h4>CYB-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Primary aggregation/reinsurance context</dd></div><div><dt>Chapter usage</dt><dd>5, 11, 14, 15</dd></div><div><dt>Access caveat</dt><dd>Public page/PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Cyber-specific; AI mapping is author synthesis.</dd></div></dl></article>
+<article class="registry-card"><h4>CYB-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Marketplace/reinsurance context</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 11, 14</dd></div><div><dt>Access caveat</dt><dd>Public page accessible.</dd></div><div><dt>Citation risk</dt><dd>Press release; use report for detailed claims if cited later.</dd></div></dl></article>
+<article class="registry-card"><h4>CYB-04</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Reinsurer market report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 14</dd></div><div><dt>Access caveat</dt><dd>Public page accessible if final URL remains stable.</dd></div><div><dt>Citation risk</dt><dd>Not AI-specific in every section.</dd></div></dl></article>
+<article class="registry-card"><h4>CYB-05</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Cyber insurer/threat report</dd></div><div><dt>Chapter usage</dt><dd>4, 5, 7, 11</dd></div><div><dt>Access caveat</dt><dd>Public page accessible; report details may require form.</dd></div><div><dt>Citation risk</dt><dd>Insurer/threat-intelligence view; not coverage consensus.</dd></div></dl></article>
+<article class="registry-card"><h4>CLAIM-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Incident-response evidence context</dd></div><div><dt>Chapter usage</dt><dd>7, 10, 13</dd></div><div><dt>Access caveat</dt><dd>Public page/PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Cybersecurity source, not insurance claims standard.</dd></div></dl></article>
+<article class="registry-card"><h4>CLAIM-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Incident playbook reference</dd></div><div><dt>Chapter usage</dt><dd>7, 10, 13</dd></div><div><dt>Access caveat</dt><dd>Public page/PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Federal playbook, not private-sector insurance rule.</dd></div></dl></article>
+<article class="registry-card"><h4>CLAIM-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Disclosure/governance context</dd></div><div><dt>Chapter usage</dt><dd>3, 10, 13</dd></div><div><dt>Access caveat</dt><dd>Public page/PDF accessible.</dd></div><div><dt>Citation risk</dt><dd>Securities disclosure context, not claim approval.</dd></div></dl></article>
+<article class="registry-card"><h4>TECH-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Technical context</dd></div><div><dt>Chapter usage</dt><dd>2, 3, 7, 11, 12</dd></div><div><dt>Access caveat</dt><dd>Public docs accessible.</dd></div><div><dt>Citation risk</dt><dd>Do not infer insurance evidence or coverage authority.</dd></div></dl></article>
+<article class="registry-card"><h4>TECH-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Technical context</dd></div><div><dt>Chapter usage</dt><dd>2, 3, 7, 11</dd></div><div><dt>Access caveat</dt><dd>Public docs accessible.</dd></div><div><dt>Citation risk</dt><dd>Not insurance or governance standard.</dd></div></dl></article>
+<article class="registry-card"><h4>TECH-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Technical context</dd></div><div><dt>Chapter usage</dt><dd>2, 3, 11</dd></div><div><dt>Access caveat</dt><dd>Public docs accessible.</dd></div><div><dt>Citation risk</dt><dd>Not responsibility or insurance evidence by itself.</dd></div></dl></article>
+<article class="registry-card"><h4>TECH-04</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Technical context</dd></div><div><dt>Chapter usage</dt><dd>7, 10, 11, 12</dd></div><div><dt>Access caveat</dt><dd>Public docs accessible.</dd></div><div><dt>Citation risk</dt><dd>Product docs; do not convert to insurance evidence claim.</dd></div></dl></article>
+<article class="registry-card"><h4>TECH-05</h4><dl><div><dt>Source tier</dt><dd>Tier 1</dd></div><div><dt>Source role</dt><dd>Technical context</dd></div><div><dt>Chapter usage</dt><dd>2, 3, 7, 11</dd></div><div><dt>Access caveat</dt><dd>Public docs accessible.</dd></div><div><dt>Citation risk</dt><dd>Product docs; not insurance authority.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-01</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>Internal framework source</dd></div><div><dt>Chapter usage</dt><dd>0-16</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Internal author framework; label as internal source truth.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-02</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>Internal source QA</dd></div><div><dt>Chapter usage</dt><dd>6, 8, 12, 15</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Internal QA; not external validation.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-03</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>Internal evidence QA</dd></div><div><dt>Chapter usage</dt><dd>6, 7, 8, 11, 12, 13</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Internal QA; not third-party acceptance.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-04</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>Internal WP2 source truth</dd></div><div><dt>Chapter usage</dt><dd>6, 7, 13, 15</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Internal preparatory source register.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-05</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>Internal WP2 source truth</dd></div><div><dt>Chapter usage</dt><dd>7, 10, 13</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Internal author synthesis with source references.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-06</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>AIIRWP architecture source</dd></div><div><dt>Chapter usage</dt><dd>8, 12, 13, 15</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Author synthesis, not external standard.</dd></div></dl></article>
+<article class="registry-card"><h4>INT-07</h4><dl><div><dt>Source tier</dt><dd>Tier 1 internal</dd></div><div><dt>Source role</dt><dd>AIIRWP architecture source</dd></div><div><dt>Chapter usage</dt><dd>15</dd></div><div><dt>Access caveat</dt><dd>Repo file accessible.</dd></div><div><dt>Citation risk</dt><dd>Author synthesis, not certification or insurer acceptance.</dd></div></dl></article></div></section>
+<h2 id="required-pre-publication-recheck">Required Pre-Publication Recheck</h2>
+<p>Before production release or final seal consideration, R7B/R8 must recheck:</p>
+<ul>
+<li>all live URLs and redirects;</li>
+<li>current A2A documentation URL, replacing the legacy A2A source path;</li>
+<li>split LangGraph durable execution and persistence URLs;</li>
+<li>any blocked, rate-limited, paywalled, or partial-access sources;</li>
+<li>insurer, broker, reinsurer, product, and startup materials for market-signal framing;</li>
+<li>source-note wording around legal, insurance, underwriting, claims, coverage, and aggregation risk.</li>
+</ul>
+<h2 id="finalization-decision">Finalization Decision</h2>
+<p>PASS for R5 preparation. Final public footnote style and public source-note rendering remain R6/R6B tasks after artifact generation is authorized.</p>
+<hr class="section-rule">
+<h1 id="aiirwp-r5-citation-normalization-report">AIIRWP R5 Citation Normalization Report</h1>
+<p><strong>Status:</strong> Candidate citation/source-note normalization report for public staging.</p>
+<p><strong>Boundary:</strong> This report records source normalization only. It does not create final public footnotes, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or production verification claims.</p>
+<h2 id="source-marker-style">Source Marker Style</h2>
+<p>Candidate source uses the R3/R4 marker model:</p>
+<ul>
+<li>external claims: <code>[SRC: ID]</code></li>
+<li>internal framework claims: <code>[INT: ID]</code></li>
+<li>author synthesis: <code>[SYNTHESIS: Jearon Wong]</code></li>
+</ul>
+<h2 id="marker-validation">Marker Validation</h2>
+<section class="table-block table-registry" data-table-profile="registry"><div class="table-scroll"><table><thead><tr><th>Source marker</th><th>Candidate count</th><th>Inventory status</th></tr></thead><tbody><tr><td>AI-01</td><td>3</td><td>valid</td></tr><tr><td>AI-08</td><td>1</td><td>missing</td></tr><tr><td>CLAIM-01</td><td>27</td><td>valid</td></tr><tr><td>CLAIM-02</td><td>16</td><td>valid</td></tr><tr><td>CLAIM-03</td><td>13</td><td>valid</td></tr><tr><td>CYB-01</td><td>2</td><td>valid</td></tr><tr><td>CYB-02</td><td>11</td><td>valid</td></tr><tr><td>CYB-03</td><td>8</td><td>valid</td></tr><tr><td>CYB-04</td><td>7</td><td>valid</td></tr><tr><td>INS-01</td><td>12</td><td>valid</td></tr><tr><td>INS-04</td><td>10</td><td>valid</td></tr><tr><td>INS-05</td><td>10</td><td>valid</td></tr><tr><td>INS-06</td><td>9</td><td>valid</td></tr><tr><td>INS-07</td><td>7</td><td>valid</td></tr><tr><td>INS-08</td><td>11</td><td>valid</td></tr><tr><td>INS-09</td><td>3</td><td>valid</td></tr><tr><td>INS-10</td><td>3</td><td>valid</td></tr><tr><td>INT-01</td><td>26</td><td>valid</td></tr><tr><td>INT-02</td><td>3</td><td>valid</td></tr><tr><td>INT-03</td><td>4</td><td>valid</td></tr><tr><td>INT-04</td><td>17</td><td>valid</td></tr><tr><td>INT-05</td><td>33</td><td>valid</td></tr><tr><td>INT-06</td><td>19</td><td>valid</td></tr><tr><td>INT-07</td><td>6</td><td>valid</td></tr><tr><td>MKT-01</td><td>10</td><td>valid</td></tr><tr><td>MKT-02</td><td>6</td><td>valid</td></tr><tr><td>MKT-03</td><td>8</td><td>valid</td></tr><tr><td>MKT-04</td><td>1</td><td>valid</td></tr><tr><td>MKT-05</td><td>9</td><td>valid</td></tr><tr><td>MKT-06</td><td>2</td><td>valid</td></tr><tr><td>MKT-07</td><td>5</td><td>valid</td></tr><tr><td>MKT-08</td><td>12</td><td>valid</td></tr><tr><td>TECH-01</td><td>11</td><td>valid</td></tr><tr><td>TECH-02</td><td>4</td><td>valid</td></tr><tr><td>TECH-03</td><td>2</td><td>valid</td></tr><tr><td>TECH-04</td><td>9</td><td>valid</td></tr><tr><td>TECH-05</td><td>3</td><td>valid</td></tr></tbody></table></div></section>
+<p>Missing marker result: BLOCKER - missing markers: AI-08</p>
+<h2 id="r2a-citation-hygiene-checks">R2A Citation Hygiene Checks</h2>
+<section class="table-block table-registry" data-table-profile="registry"><div class="table-scroll"><table><thead><tr><th>Check</th><th>Result</th><th>Notes</th></tr></thead><tbody><tr><td>Old A2A URL marker remains</td><td>PASS</td><td>Candidate source uses <code>[SRC: TECH-03]</code>; final source notes must use current A2A docs, not the legacy A2A source path.</td></tr><tr><td>LangGraph references split correctly</td><td>PASS for R5 plan</td><td>Candidate source uses <code>[SRC: TECH-04]</code>; final source notes must keep durable execution and persistence URLs split.</td></tr><tr><td>Old Coalition source used for critical claims</td><td>PASS</td><td>Candidate body does not use <code>[SRC: CYB-05]</code>.</td></tr><tr><td>QBE/WTW/Allianz/OpenAI caveated</td><td>PASS</td><td>Access-caveated sources are framed as signals or technical context, not sole support.</td></tr><tr><td>Insurer/broker/product sources as market signals</td><td>PASS</td><td>Market framing remains fragmented and conditional.</td></tr><tr><td>Technical framework docs used only for capabilities</td><td>PASS</td><td>Candidate preserves necessary-but-insufficient framing.</td></tr><tr><td>AIO/AIRM synthesis preserved</td><td>PASS</td><td>Candidate uses synthesis markers and boundary language.</td></tr><tr><td>Fake citations or unsupported quotes</td><td>PASS</td><td>No fabricated quotations introduced in R5.</td></tr></tbody></table></div></section>
+<h2 id="r6-r6b-citation-tasks">R6/R6B Citation Tasks</h2>
+<ul>
+<li>Decide whether source IDs remain visible, become endnotes, or appear in a source-note appendix.</li>
+<li>Recheck all URLs before artifact generation.</li>
+<li>Add access caveat notes for blocked/rate-limited/partial sources.</li>
+<li>Preserve the R2A source accuracy gate when formatting final citations.</li>
+</ul>
+</main>
+</div>
+<footer class="footer">Agentic AI Insurability &amp; Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE | Public staging candidate artifact</footer>
+</body>
+</html>

@@ -4554,3 +4554,31 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R6B does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R6B Status:** ✓ FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R7 PUBLICATION STAGING PREPARATION.
+
+## WP3-R7 Notes (May 21, 2026)
+
+**Scope:** Public publication staging preparation for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `2af4c01161ff3e32b6039dbc735e118d64419c1b`.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Staged the public AIIRWP route and artifact bundle under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+4. Wired the route into homepage, research index, GAIC hub, AIAAWP hub, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, entity graph, `llms.txt`, and sitemap surfaces.
+5. Verified the public route, homepage series, and direct artifact HTML with viewport metrics at 375, 768, and 1440 widths; body-level horizontal overflow remained absent.
+6. Validated public artifact checksums and manifest fields from the artifact directory.
+7. Confirmed the public PDF is still 59 A4 pages and that no public DOCX exists for AIIRWP.
+
+**Artifact discipline:**
+
+- Public HTML/PDF hashes remain `7af4b31b551a0e469548529d6b5d1c253e7ec738f8f13fc109d6f1b506c65777` and `742d97a7cbbd2d69ec35a1988ae39ca80ff29f60a2df1e46bf33680c14e3ceaf`.
+- Public manifest hash remains `aa0e690184c7dd136d471fe7f3b29a890c5bb4ba5732ce3cd0c0734784661893`.
+- Public DOCX remains offboarded.
+- GAIC and AIAAWP public artifacts were not regenerated in this wave.
+
+**Boundary discipline:**
+
+- WP3-R7 is publication staging preparation only.
+- WP3-R7 does not claim production live verification, final seal, public release completion, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or legal/insurance advice.
+
+**WP3-R7 Status:** WP3-R7 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED.

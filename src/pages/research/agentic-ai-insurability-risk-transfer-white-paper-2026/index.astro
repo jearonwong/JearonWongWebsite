@@ -3,30 +3,32 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SiteHeader from "../../../components/SiteHeader.astro";
 import { siteConfig } from "../../../data/site";
 
-const assetBase = "/research/agentic-ai-auditability-assurance-white-paper-2026";
-const canonicalPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
+const assetBase = "/research/agentic-ai-insurability-risk-transfer-white-paper-2026";
+const canonicalPath = "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
-const pdfUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`;
-const htmlUrl = `${siteConfig.siteUrl}${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`;
+const pdfUrl = `${siteConfig.siteUrl}${assetBase}/AIIRWP-2026-v0.1.pdf`;
+const htmlUrl = `${siteConfig.siteUrl}${assetBase}/AIIRWP-2026-v0.1.html`;
 const manifestUrl = `${siteConfig.siteUrl}${assetBase}/manifest.json`;
 const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
 const gaicHubPath = "/research/global-ai-compliance-white-paper-2026/";
-const documentId = "AIAAWP-2026-v0.1-R4-CANDIDATE";
-const reportTitle = "Agentic AI Auditability & Assurance White Paper 2026";
-const reportSubtitle = "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance";
-const reportVersion = "v0.1 Public Research Candidate";
-const releaseState = "Public HTML/PDF live; R8F production and sitewide consistency reverification complete.";
+const aiaawpHubPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
+const documentId = "AIIRWP-2026-v0.1-R6-CANDIDATE";
+const reportTitle = "Agentic AI Insurability & Risk Transfer White Paper 2026";
+const reportSubtitle = "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer";
+const reportVersion = "v0.1 Public Staging Candidate";
+const releaseState = "Public route and HTML/PDF artifacts staged; R7B deployment and production reverification required.";
 const publicationMonth = "May 2026";
 const metaDescription =
-  "A public research candidate by Jearon Wong defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.";
+  "A public staging candidate by Jearon Wong defining agentic AI insurability, risk-transfer evidence, Agentic Insurability Objects, AIRM, and boundary-safe lifecycle evidence for underwriting and claims discussion.";
 const citationText =
-  "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026.";
+  "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Technical Report AIIRWP-2026-v0.1-R6-CANDIDATE, May 2026.";
 const citationKeywords =
-  "Agentic AI Auditability; AI Agent Auditability; Audit Evidence Chain; Agentic Audit Object; AARM; MRO; Agentic Lifecycle Governance; Enterprise AI Governance; Lifecycle Evidence";
+  "Agentic AI Insurability; AI risk transfer; Agentic Insurability Objects; AIO; Agentic Insurability Readiness Model; AIRM; claim evidence chain; lifecycle evidence; AI insurance boundary";
 const citationMetaTags = [
   { name: "citation_title", content: `${reportTitle}: ${reportSubtitle}` },
   { name: "citation_author", content: "Wong, Jearon" },
   { name: "citation_publication_date", content: "2026/05" },
+  { name: "citation_online_date", content: "2026/05/21" },
   { name: "citation_technical_report_number", content: documentId },
   { name: "citation_pdf_url", content: pdfUrl },
   { name: "citation_fulltext_html_url", content: htmlUrl },
@@ -35,99 +37,97 @@ const citationMetaTags = [
 ];
 const shaRows = [
   {
-    label: "HTML web-reading candidate",
-    value: "4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4"
+    label: "HTML web-reading staging candidate",
+    value: "7af4b31b551a0e469548529d6b5d1c253e7ec738f8f13fc109d6f1b506c65777"
   },
   {
-    label: "PDF visual candidate",
-    value: "62c9f8ed05d67a0187a9e51385b80b86e0af4411e783ae9523d8d9e412ca8d0e"
+    label: "PDF visual staging candidate",
+    value: "742d97a7cbbd2d69ec35a1988ae39ca80ff29f60a2df1e46bf33680c14e3ceaf"
   },
   {
     label: "Manifest",
-    value: "945ff67e88c283baf23f998726676db353f302e5416eff3814ae4d2c2f18834d"
+    value: "aa0e690184c7dd136d471fe7f3b29a890c5bb4ba5732ce3cd0c0734784661893"
   }
 ];
 const keyConcepts = [
-  { label: "Agentic AI Auditability", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis` },
-  { label: "Agentic Audit Object", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview` },
-  { label: "Audit Evidence Chain", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains` },
-  { label: "AARM", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model` },
-  { label: "MRO-to-Audit-Evidence Mapping", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#6-mro-to-audit-evidence-mapping` },
-  { label: "Lifecycle-responsibility-linked agent work", href: "/concepts/agentic-lifecycle-governance/" },
-  { label: "Accepted Outcome", href: "/concepts/accepted-outcome/" },
-  { label: "Tool-action evidence", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#5-the-agentic-audit-object-model` },
-  { label: "Remediation Closure", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#11-exception-dispute-and-remediation-closure` },
-  { label: "Privacy and selective disclosure", href: `${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html#10-privacy-selective-disclosure-and-audit-evidence-minimization` }
+  { label: "Agentic AI Insurability", href: `${assetBase}/AIIRWP-2026-v0.1.html#governing-thesis` },
+  { label: "Insured Legal Subject", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-02` },
+  { label: "Agentic Risk Object", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-02` },
+  { label: "Responsibility Mapping", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-03` },
+  { label: "Claim Evidence Chain", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-10` },
+  { label: "Agentic Insurability Objects", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-08` },
+  { label: "AIO-01 through AIO-14", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-08` },
+  { label: "AIRM", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-15` },
+  { label: "Lifecycle Evidence", href: "/concepts/lifecycle-evidence/" },
+  { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" }
 ];
 const seriesLinks = [
   {
     label: "Global AI Compliance White Paper 2026",
     href: gaicHubPath,
-    body: "Defines the broader compliance object layer, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility governance."
+    body: "Defines the root lifecycle compliance framework, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility governance."
   },
   {
-    label: "AIAAWP 2026",
+    label: "Agentic AI Auditability & Assurance White Paper 2026",
+    href: aiaawpHubPath,
+    body: "Interprets the same lifecycle governance framework through auditability, audit evidence chains, and assurance-readiness boundaries."
+  },
+  {
+    label: reportTitle,
     href: canonicalPath,
-    body: "Extends the series into the auditability and lifecycle evidence layer; final seal remains blocked pending owner authorization."
+    body: "Interprets the lifecycle governance framework through insurability, risk transfer, underwriting evidence, and claims evidence boundaries."
   },
   {
-    label: "AIIRWP 2026",
-    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-    body: "Adjacent risk-transfer interpretation of the same lifecycle governance framework; auditability supports but does not equal insurability."
-  },
-  {
-    label: "Future Guide 1",
-    href: "/playbooks/agentic-delivery-architecture-checklist/",
-    body: "Will translate audit-ready AI agent systems into CIO/CTO implementation planning."
-  },
-  {
-    label: "Future Guide 2",
-    href: "/governance/",
-    body: "Will translate agentic lifecycle governance into CCO operating-model planning."
+    label: "Future enterprise implementation synthesis",
+    href: "/research/",
+    body: "Planned future synthesis only. No public artifact, implementation guide, release, or operational mandate is claimed."
   }
 ];
 const nonGoals = [
-  "Not an audit standard.",
-  "Not certification.",
-  "Not legal advice or legal compliance proof.",
-  "Not an assurance opinion.",
-  "Not regulator approval.",
-  "Not Big Four or audit-body endorsement.",
-  "Not procurement recommendation or vendor ranking.",
-  "MPLP is an optional protocol path only."
+  "Not legal advice or insurance advice.",
+  "Not a coverage opinion.",
+  "Not an underwriting standard.",
+  "Not actuarial pricing guidance.",
+  "Not claims approval guidance.",
+  "Not certification, endorsement, insurer acceptance, or coverage guarantee.",
+  "Not coverage-ready or underwriting-ready status for any system.",
+  "No public DOCX artifact is staged."
 ];
 const contextLinks = [
   { href: gaicHubPath, label: "GAIC main white paper hub" },
-  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "AIIRWP insurability sibling" },
+  { href: aiaawpHubPath, label: "AIAAWP auditability sibling" },
   { href: "/evidence/", label: "Evidence Registry / Citation Kit" },
   { href: "/definitions/", label: "Definitions index" },
   { href: "/concepts/map/", label: "Concepts Map / Entity Mesh" },
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
-  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
+  { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
   { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
   { href: "/projects/mplp/", label: "MPLP protocol path" },
-  { href: "/projects/validation-lab/", label: "Validation Lab" },
   { href: "/governance/", label: "Regulatory and enterprise governance" },
   { href: "/playbooks/", label: "Applied playbooks" },
   { href: "/mapping/extended-ecosystem/", label: "Extended ecosystem mapping" }
 ];
 const aboutTerms = [
-  "Agentic AI Auditability",
-  "AI Agent Auditability",
-  "Audit Evidence Chain",
-  "Agentic Audit Object",
+  "Agentic AI Insurability",
+  "AI risk transfer",
+  "Agentic Insurability Objects",
+  "Agentic Insurability Readiness Model",
+  "AIO",
+  "AIRM",
+  "Insured Legal Subject",
+  "Agentic Risk Object",
+  "Claim Evidence Chain",
+  "Lifecycle Evidence",
   "Agentic Lifecycle Governance",
   "Global AI Compliance White Paper 2026",
+  "Agentic AI Auditability & Assurance White Paper 2026",
   "Missing Regulatory Objects",
-  "MRO-to-Audit-Evidence Mapping",
   "AARM",
-  "Lifecycle Evidence",
-  "Accepted Outcome",
+  "Evidence Chain",
   "Authority Boundary",
-  "Enterprise AI Governance",
-  "AI Agent Governance",
-  "Auditability Readiness"
+  "Accepted Outcome",
+  "Enterprise Risk Transfer"
 ];
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -145,8 +145,8 @@ const articleJsonLd = {
   publisher: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  datePublished: "2026-05-18",
-  dateModified: "2026-05-18",
+  datePublished: "2026-05-21",
+  dateModified: "2026-05-21",
   version: reportVersion,
   genre: "Technical report",
   creativeWorkStatus: "PublicationCandidate",
@@ -171,13 +171,14 @@ const articleJsonLd = {
     name: term
   })),
   mentions: [
+    "AIO",
+    "AIRM",
+    "Insured Legal Subject",
+    "Agentic Risk Object",
+    "Claim Evidence Chain",
+    "Agentic AI Auditability",
     "AARM",
-    "MRO",
-    "Audit Evidence Chain",
-    "Agentic Audit Object",
-    "Validation Lab",
-    "MPLP",
-    "Enterprise AI Governance"
+    "MPLP"
   ].map((term) => ({
     "@type": "Thing",
     name: term
@@ -244,7 +245,7 @@ const artifactListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "@id": `${pageUrl}#artifacts`,
-  name: "AIAAWP public research candidate artifacts",
+  name: "AIIRWP public staging artifacts",
   itemListElement: [
     { name: "Read HTML", url: htmlUrl },
     { name: "Download PDF", url: pdfUrl },
@@ -261,9 +262,9 @@ const definedTermSetJsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
   "@id": `${pageUrl}#defined-terms`,
-  name: "AIAAWP 2026 Terms",
-  description: "Key terms used by the Agentic AI Auditability & Assurance White Paper 2026.",
-  hasDefinedTerm: aboutTerms.slice(0, 10).map((term) => ({
+  name: "AIIRWP 2026 Terms",
+  description: "Key terms used by the Agentic AI Insurability & Risk Transfer White Paper 2026.",
+  hasDefinedTerm: aboutTerms.slice(0, 12).map((term) => ({
     "@type": "DefinedTerm",
     name: term,
     inDefinedTermSet: `${pageUrl}#defined-terms`
@@ -284,7 +285,7 @@ const definedTermSetJsonLd = {
   keywords={aboutTerms}
   metaTags={citationMetaTags}
   ogImagePath="/social/jearonwong-og.png"
-  ogImageAlt="Agentic AI Auditability & Assurance White Paper 2026 by Jearon Wong"
+  ogImageAlt="Agentic AI Insurability & Risk Transfer White Paper 2026 by Jearon Wong"
 >
   <div class="zone-a registry-grid release-hero-shell">
     <SiteHeader />
@@ -298,19 +299,19 @@ const definedTermSetJsonLd = {
         <h1>{reportTitle}</h1>
         <p class="release-subtitle">{reportSubtitle}</p>
         <p class="release-thesis">
-          This public research candidate defines auditability for AI agent and multi-agent work as
-          lifecycle evidence: reconstructable authority, roles, tool actions, accepted outcomes,
-          exceptions, remediation, and privacy-preserving disclosure boundaries.
+          This public staging candidate frames insurability as a lifecycle evidence problem: separating
+          the insured legal subject from the agentic risk object, mapping responsibility, and preserving
+          claim-reviewable evidence without turning the framework into insurance advice.
         </p>
         <div class="hero-actions" aria-label="White paper actions">
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`} class="button button-primary">Read HTML</a>
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`} class="button button-outline">Download PDF</a>
+          <a href={`${assetBase}/AIIRWP-2026-v0.1.html`} class="button button-primary">Read HTML</a>
+          <a href={`${assetBase}/AIIRWP-2026-v0.1.pdf`} class="button button-outline">Download PDF</a>
           <a href="#cite" class="button button-outline">Cite this paper</a>
         </div>
       </div>
       <aside class="release-meta-panel" aria-label="Release metadata">
         <div class="registry-annotation">
-          <span class="registry-key">STATUS</span>: <span class="registry-value">PUBLIC_RESEARCH_CANDIDATE</span>
+          <span class="registry-key">STATUS</span>: <span class="registry-value">PUBLIC_STAGING_CANDIDATE</span>
         </div>
         <div class="meta-line">
           <span>Document ID</span>
@@ -322,7 +323,7 @@ const definedTermSetJsonLd = {
         </div>
         <div class="meta-line">
           <span>Artifact role model</span>
-          <strong>Public distribution exposes HTML and PDF only.</strong>
+          <strong>Public staging exposes HTML and PDF only. No DOCX is staged.</strong>
         </div>
       </aside>
     </section>
@@ -337,9 +338,9 @@ const definedTermSetJsonLd = {
           </div>
           <h2>Part of the same white paper standard.</h2>
           <p class="section-lead">
-            AIAAWP inherits the GAIC publication shell, responsive reading model,
-            metadata discipline, checksum pattern, and boundary language. It builds on GAIC by turning
-            lifecycle responsibility objects into audit evidence objects.
+            AIIRWP reuses the GAIC/AIAAWP publication shell, responsive reading model,
+            PDF A4 profile, metadata discipline, checksum pattern, and boundary language. It interprets
+            the same root lifecycle governance framework through insurability and risk transfer.
           </p>
         </div>
         <div class="series-ledger">
@@ -360,9 +361,8 @@ const definedTermSetJsonLd = {
           </div>
           <h2>Key concepts covered.</h2>
           <p class="section-lead">
-            The paper distinguishes raw logs from audit evidence chains and frames auditability as
-            responsibility-linked evidence that can support readiness discussion without becoming a
-            standard, legal conclusion, certification, or assurance opinion.
+            The paper distinguishes market signals from coverage conclusions and treats AIO and AIRM
+            as Jearon Wong analytical synthesis terms, not insurer requirements, certifications, or standards.
           </p>
         </div>
         <div class="concept-ledger">
@@ -383,15 +383,15 @@ const definedTermSetJsonLd = {
           <a href={`${assetBase}/checksums.sha256`} class="section-side-link">View checksums</a>
         </div>
         <div class="artifact-grid">
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.html`} class="artifact-card">
+          <a href={`${assetBase}/AIIRWP-2026-v0.1.html`} class="artifact-card">
             <span class="artifact-kind">HTML</span>
             <strong>Read full HTML</strong>
-            <span>Responsive web-reading visual authority</span>
+            <span>Responsive web-reading staging candidate</span>
           </a>
-          <a href={`${assetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`} class="artifact-card">
+          <a href={`${assetBase}/AIIRWP-2026-v0.1.pdf`} class="artifact-card">
             <span class="artifact-kind">PDF</span>
             <strong>Download PDF</strong>
-            <span>Fixed-layout visual authority</span>
+            <span>Fixed-layout staging candidate</span>
           </a>
           <a href={`${assetBase}/manifest.json`} class="artifact-card">
             <span class="artifact-kind">JSON</span>
@@ -418,7 +418,7 @@ const definedTermSetJsonLd = {
             <div><dt>Subtitle</dt><dd>{reportSubtitle}</dd></div>
             <div><dt>Author</dt><dd>Jearon Wong</dd></div>
             <div><dt>Document ID</dt><dd>{documentId}</dd></div>
-            <div><dt>Status</dt><dd>{reportVersion}; R8F production and sitewide consistency reverification complete.</dd></div>
+            <div><dt>Status</dt><dd>{reportVersion}; deployment and production reverification required.</dd></div>
             <div><dt>Publication month</dt><dd>{publicationMonth}</dd></div>
             <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
             <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
@@ -430,10 +430,11 @@ const definedTermSetJsonLd = {
         <div class="boundary-panel">
           <strong>Boundary statement</strong>
           <p>
-            This page presents a public research candidate and records R8F production and sitewide
-            consistency reverification. It does not claim final release, sealed artifact status, legal
-            compliance proof, audit standard status, certification, regulator approval, assurance
-            opinion, procurement guidance, vendor ranking, or endorsement by any firm or professional body.
+            This page presents a public staging candidate and requires R7B deployment and production
+            reverification before any production-live verification, final seal, or author release claim.
+            It does not provide insurance advice, legal advice, a coverage opinion, an underwriting
+            standard, claims approval guidance, certification, endorsement, insurer acceptance,
+            coverage-ready status, or underwriting-ready status.
           </p>
         </div>
       </section>
@@ -445,8 +446,8 @@ const definedTermSetJsonLd = {
           </div>
           <h2 id="non-goals-title">What the paper does not do.</h2>
           <p class="section-lead">
-            The candidate is meant for source-grounded research, readiness discussion, and later author
-            release decision. Its boundary language is part of the publication standard.
+            The staging candidate is meant for source-grounded research, route integration, and later
+            production reverification. Its boundary language is part of the publication standard.
           </p>
         </div>
         <ul class="non-goal-list">
@@ -466,10 +467,10 @@ const definedTermSetJsonLd = {
         </div>
         <div class="integrity-grid">
           <div class="commit-ledger">
-            <div><span>R5A SOP commit</span><strong>5c05972fe57189bd4d6ae35948429767c9de0735</strong></div>
+            <div><span>Accepted source gate</span><strong>R6B final candidate artifact QA accepted with notes</strong></div>
             <div><span>Document ID</span><strong>{documentId}</strong></div>
-            <div><span>Page count</span><strong>118</strong></div>
-            <div><span>Next phase</span><strong>Owner release execution; final seal remains blocked.</strong></div>
+            <div><span>Page count</span><strong>59</strong></div>
+            <div><span>Next phase</span><strong>R7B production reverification required.</strong></div>
           </div>
           <div class="checksum-table" aria-label="SHA256 checksums">
             {shaRows.map((row) => (
@@ -481,8 +482,9 @@ const definedTermSetJsonLd = {
           </div>
         </div>
         <p class="integrity-note">
-          Public artifacts were staged from the R5 internal final candidate package, then normalized only
-          for public-copy status and metadata. The internal R5 candidate package remains unchanged.
+          Public staging artifacts were derived from the R6B-accepted internal candidate HTML/PDF.
+          R7 normalized public-staging identity and metadata only, preserved the 59-page A4 PDF,
+          and did not introduce public DOCX distribution.
         </p>
       </section>
 
@@ -493,8 +495,9 @@ const definedTermSetJsonLd = {
           </div>
           <h2 id="context-title">Follow the surrounding graph.</h2>
           <p class="section-lead">
-            AIAAWP belongs to the Agentic Lifecycle Governance Industry Series and should be read with
-            GAIC, the Evidence Registry, and the concept graph rather than as a standalone design system.
+            AIIRWP belongs to the Agentic Lifecycle Governance Industry Series and should be read with
+            GAIC, AIAAWP, the Evidence Registry, and the concept graph rather than as a standalone
+            insurance rulebook.
           </p>
         </div>
         <div class="internal-link-grid">
@@ -718,7 +721,7 @@ const definedTermSetJsonLd = {
 
   .artifact-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -907,7 +910,7 @@ const definedTermSetJsonLd = {
 
   @media (max-width: 1120px) {
     .artifact-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -921,10 +924,6 @@ const definedTermSetJsonLd = {
     .identity-ledger div {
       grid-template-columns: 1fr;
       gap: 0.35rem;
-    }
-
-    .artifact-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .release-hero h1 {

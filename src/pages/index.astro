@@ -66,6 +66,18 @@ const researchSeriesItems = [
     href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
     pdfHref: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
     primary: false
+  },
+  {
+    sequence: "03",
+    role: "Insurability & Risk Transfer",
+    scope: "Risk-transfer specialization",
+    title: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+    description:
+      "Specializes the series into insured-subject and agentic-risk-object separation, AIO, AIRM, claim evidence chains, and risk-transfer boundaries.",
+    metadata: ["Public staging candidate", "59-page PDF"],
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    pdfHref: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+    primary: false
   }
 ];
 const canonicalPath = "/";
@@ -122,6 +134,11 @@ const homepageJsonLd = {
       "@type": "TechArticle",
       name: "Agentic AI Auditability & Assurance White Paper 2026",
       url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
+    },
+    {
+      "@type": "TechArticle",
+      name: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+      url: absoluteUrl("/research/agentic-ai-insurability-risk-transfer-white-paper-2026/")
     },
     {
       "@type": "CollectionPage",
@@ -226,7 +243,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
           </div>
           <h2 id="research-series-title">Whitepaper series.</h2>
           <p class="research-series-thesis">
-            From lifecycle responsibility objects to audit evidence chains.
+            From lifecycle responsibility objects to audit evidence and risk-transfer evidence chains.
           </p>
         </div>
         <ol class="research-series-stack" aria-label="Ordered whitepaper series">

@@ -25,10 +25,17 @@ export const siteEntityTerms = [
   "Agentic Delivery Architecture Checklist",
   "Global AI Compliance White Paper 2026",
   "Agentic AI Auditability & Assurance White Paper 2026",
+  "Agentic AI Insurability & Risk Transfer White Paper 2026",
   "Agentic AI Auditability",
   "Agentic Audit Object",
   "Audit Evidence Chain",
   "AARM",
+  "Agentic AI Insurability",
+  "Agentic Insurability Objects",
+  "Agentic Insurability Readiness Model",
+  "Insured Legal Subject",
+  "Agentic Risk Object",
+  "Claim Evidence Chain",
   "MRO-to-Audit-Evidence Mapping",
   "Missing Regulatory Objects",
   "Lifecycle Responsibility Objects",
@@ -119,6 +126,11 @@ export function createPersonJsonLd() {
         "@type": "TechArticle",
         name: "Agentic AI Auditability & Assurance White Paper 2026",
         url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
+      },
+      {
+        "@type": "TechArticle",
+        name: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        url: absoluteUrl("/research/agentic-ai-insurability-risk-transfer-white-paper-2026/")
       },
       {
         "@type": "CreativeWork",

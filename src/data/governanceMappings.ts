@@ -32,6 +32,7 @@ const commonGovernanceLinks = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
+  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" },

@@ -225,6 +225,126 @@ export const definitions: DefinitionEntry[] = [
     ]
   },
   {
+    slug: "agentic-ai-insurability",
+    term: "Agentic AI Insurability",
+    section: "governance",
+    definition:
+      "Agentic AI Insurability is the ability to describe agentic work through lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records for risk-transfer discussion.",
+    distinction:
+      "Not insurance advice, a coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, certification, or a guarantee that any system is insurable.",
+    evidence: [
+      {
+        label: "AIIRWP 2026 white paper hub",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
+      }
+    ],
+    related: [
+      { label: "Agentic Insurability Objects", href: "#agentic-insurability-objects" },
+      { label: "Agentic Insurability Readiness Model", href: "#agentic-insurability-readiness-model" },
+      { label: "Evidence Chain", href: "#evidence-chain" }
+    ]
+  },
+  {
+    slug: "agentic-insurability-objects",
+    term: "Agentic Insurability Objects (AIO)",
+    section: "governance",
+    definition:
+      "Agentic Insurability Objects are AIIRWP analytical objects that separate insured legal subject, agentic risk object, authority, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions.",
+    distinction:
+      "Not insurer product requirements, policy terms, legal liability objects, certification criteria, or a mandatory implementation schema.",
+    evidence: [
+      {
+        label: "AIIRWP: Agentic Insurability Objects",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08"
+      }
+    ],
+    related: [
+      { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
+      { label: "Insured Legal Subject", href: "#insured-legal-subject" },
+      { label: "Agentic Risk Object", href: "#agentic-risk-object" }
+    ]
+  },
+  {
+    slug: "agentic-insurability-readiness-model",
+    term: "Agentic Insurability Readiness Model (AIRM)",
+    section: "governance",
+    definition:
+      "AIRM is the Agentic Insurability Readiness Model from AIIRWP, describing L0-L5 readiness vocabulary for evidence visibility, claims review, underwriting discussion, and dispute readiness.",
+    distinction:
+      "Not an actuarial score, insurer acceptance, coverage guarantee, underwriting standard, claims approval guide, certification, vendor score, or procurement benchmark.",
+    evidence: [
+      {
+        label: "AIIRWP: Agentic Insurability Readiness Model",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15"
+      }
+    ],
+    related: [
+      { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
+      { label: "Agentic Insurability Objects", href: "#agentic-insurability-objects" },
+      { label: "Claim Evidence Chain", href: "#claim-evidence-chain" }
+    ]
+  },
+  {
+    slug: "insured-legal-subject",
+    term: "Insured Legal Subject",
+    section: "governance",
+    definition:
+      "An Insured Legal Subject is the person or organization whose risk-transfer relationship must remain separate from the agentic system, work unit, tool, model, or workflow being analyzed.",
+    distinction:
+      "Not a liability determination, coverage opinion, insured-status opinion, or conclusion that a policy applies.",
+    evidence: [
+      {
+        label: "AIIRWP: insured subject and agentic risk object distinction",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02"
+      }
+    ],
+    related: [
+      { label: "Agentic Risk Object", href: "#agentic-risk-object" },
+      { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
+      { label: "Authority Boundary", href: "#authority-boundary" }
+    ]
+  },
+  {
+    slug: "agentic-risk-object",
+    term: "Agentic Risk Object",
+    section: "governance",
+    definition:
+      "An Agentic Risk Object is the bounded agentic work unit, action path, dependency, evidence chain, or loss-relevant lifecycle object being evaluated for risk-transfer analysis.",
+    distinction:
+      "Not the insured party, not a legal subject, not a standalone coverage trigger, and not a claim that a system is insurable.",
+    evidence: [
+      {
+        label: "AIIRWP: insured subject and agentic risk object distinction",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02"
+      }
+    ],
+    related: [
+      { label: "Insured Legal Subject", href: "#insured-legal-subject" },
+      { label: "Agentic Insurability Objects", href: "#agentic-insurability-objects" },
+      { label: "Evidence Chain", href: "#evidence-chain" }
+    ]
+  },
+  {
+    slug: "claim-evidence-chain",
+    term: "Claim Evidence Chain",
+    section: "governance",
+    definition:
+      "A Claim Evidence Chain is the lifecycle evidence needed to reconstruct authority, action, loss event, dependency, remediation, dispute posture, and boundary risk for claim review.",
+    distinction:
+      "Not claims approval guidance, a payment guarantee, legal causation proof, settlement advice, or an insurer-required form.",
+    evidence: [
+      {
+        label: "AIIRWP: claims evidence and loss reconstruction",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10"
+      }
+    ],
+    related: [
+      { label: "Evidence Chain", href: "#evidence-chain" },
+      { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
+      { label: "Agentic Insurability Readiness Model", href: "#agentic-insurability-readiness-model" }
+    ]
+  },
+  {
     slug: "lifecycle-responsibility-linked-agent-work",
     term: "Lifecycle-Responsibility-Linked Agent Work",
     section: "governance",

@@ -3833,3 +3833,32 @@ Boundary discipline:
 - WP3-R6B does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R6B Status:** ✓ FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R7 PUBLICATION STAGING PREPARATION
+
+## WP3-R7 Known Issues
+
+### Public Staging Preparation Complete
+
+WP3-R7 prepares the public staging surface for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Created the public route `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+- Staged the public HTML, PDF, manifest, and checksums under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+- Wired route metadata, citation metadata, JSON-LD, homepage research series, research index, GAIC hub, AIAAWP hub, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, entity graph, `llms.txt`, sitemap, and route/build output.
+- Preserved the R6B-accepted HTML/PDF content, title/subtitle, source markers, citation notes, AIO/AIRM synthesis labels, boundary language, and no-DOCX public stance.
+- Validated public artifact checksums, manifest fields, and build output presence.
+- Verified route, homepage, and artifact HTML with viewport metrics and DOM/text checks at 375, 768, and 1440 widths; no body-level overflow or console errors were observed.
+
+Remaining known issues:
+
+- R7B production reverification is the next required wave.
+- Final Seal remains blocked.
+- Public staging is not production verification.
+- No DOCX was staged.
+
+Boundary discipline:
+
+- WP3-R7 is publication staging preparation only.
+- WP3-R7 does not claim production live verification, final seal, public release completion, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or legal/insurance advice.
+
+**WP3-R7 Status:** ✓ PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED

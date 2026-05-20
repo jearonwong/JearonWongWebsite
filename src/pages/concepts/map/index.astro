@@ -8,7 +8,7 @@ const canonicalPath = "/concepts/map/";
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = absoluteUrl(canonicalPath);
 const metaDescription =
-  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings.";
+  "A visible entity mesh connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, AIAAWP, AIIRWP, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings.";
 const keywords = [
   "Concepts Map",
   "Entity Mesh",
@@ -16,10 +16,17 @@ const keywords = [
   "Agentic Lifecycle Governance",
   "Global AI Compliance White Paper 2026",
   "Agentic AI Auditability & Assurance White Paper 2026",
+  "Agentic AI Insurability & Risk Transfer White Paper 2026",
   "Agentic AI Auditability",
   "Agentic Audit Object",
   "Audit Evidence Chain",
   "AARM",
+  "Agentic AI Insurability",
+  "Agentic Insurability Objects",
+  "Agentic Insurability Readiness Model",
+  "Insured Legal Subject",
+  "Agentic Risk Object",
+  "Claim Evidence Chain",
   "Missing Regulatory Objects",
   "RCCS-M",
   "ALCS",
@@ -122,6 +129,13 @@ const mapNodes = [
     description: "The public research candidate for agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, and MRO-to-audit-evidence mapping."
   },
   {
+    id: "aiirwp",
+    label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+    layer: "Insurability Layer",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    description: "The public staging candidate for agentic AI insurability, risk-transfer evidence, AIO, AIRM, insured subject separation, and claims evidence boundaries."
+  },
+  {
     id: "agentic-ai-auditability",
     label: "Agentic AI Auditability",
     layer: "Auditability Layer",
@@ -148,6 +162,34 @@ const mapNodes = [
     layer: "Auditability Layer",
     href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model",
     description: "Agentic Auditability Readiness Model for L0-L5 auditability readiness."
+  },
+  {
+    id: "agentic-ai-insurability",
+    label: "Agentic AI Insurability",
+    layer: "Insurability Layer",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+    description: "Insurability framing for agentic work through lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records."
+  },
+  {
+    id: "agentic-insurability-objects",
+    label: "Agentic Insurability Objects",
+    layer: "Insurability Layer",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+    description: "AIO object model for separating insured legal subject, agentic risk object, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions."
+  },
+  {
+    id: "claim-evidence-chain",
+    label: "Claim Evidence Chain",
+    layer: "Insurability Layer",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+    description: "Lifecycle evidence chain used to reconstruct authority, action, loss event, dependency, remediation, dispute posture, and boundary risk for claim review."
+  },
+  {
+    id: "airm",
+    label: "AIRM",
+    layer: "Insurability Layer",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+    description: "Agentic Insurability Readiness Model for L0-L5 evidence visibility and risk-transfer readiness vocabulary."
   },
   {
     id: "gaic-cited-systems",
@@ -408,6 +450,16 @@ const extractableLayerGroups = [
     ]
   },
   {
+    name: "Insurability Layer",
+    description: "AIIRWP insurability concepts for risk-transfer evidence, AIO, AIRM, insured subject separation, agentic risk objects, and claims evidence boundaries.",
+    links: [
+      { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
+      { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08", label: "Agentic Insurability Objects" },
+      { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10", label: "Claim Evidence Chain" },
+      { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15", label: "AIRM" }
+    ]
+  },
+  {
     name: "Evaluation Layer",
     description: "MRO-adjusted and lifecycle conformance evaluation language.",
     links: [
@@ -491,6 +543,12 @@ const relationGroups = [
     relation: "Global AI Compliance White Paper 2026 -> AIAAWP -> Audit Evidence Chain / AARM",
     nodes: ["Global AI Compliance White Paper 2026", "Agentic AI Auditability & Assurance White Paper 2026", "Audit Evidence Chain", "AARM"],
     body: "The AIAAWP candidate applies the GAIC publication standard and extends the series into auditability, lifecycle evidence, MRO-to-audit-evidence mapping, and readiness discussion without claiming an audit standard, certification, or assurance opinion."
+  },
+  {
+    name: "Insurability Layer",
+    relation: "Global AI Compliance White Paper 2026 -> AIIRWP -> AIO / AIRM",
+    nodes: ["Global AI Compliance White Paper 2026", "Agentic AI Insurability & Risk Transfer White Paper 2026", "Agentic Insurability Objects", "AIRM"],
+    body: "The AIIRWP staging candidate applies the same publication standard and extends the series into insurability, risk-transfer evidence, claims reconstruction, and readiness discussion without claiming insurance advice, coverage opinion, insurer acceptance, or underwriting standards."
   },
   {
     name: "Extended Ecosystem Mapping",
@@ -586,6 +644,34 @@ const explicitEntityRelationships = [
     status: "authored-analysis"
   },
   {
+    source: "Jearon Wong",
+    relation: "authored",
+    target: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    status: "public-staging-candidate"
+  },
+  {
+    source: "AIIRWP",
+    relation: "interprets",
+    target: "GAIC as insurability and risk-transfer lifecycle evidence",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
+    source: "AIIRWP",
+    relation: "complements",
+    target: "AIAAWP without equating auditability with insurability",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    status: "authored-analysis"
+  },
+  {
+    source: "AIIRWP",
+    relation: "defines / synthesizes",
+    target: "Agentic Insurability Objects and Agentic Insurability Readiness Model",
+    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    status: "author-synthesis / not standard"
+  },
+  {
     source: "Missing Regulatory Objects",
     relation: "maps regulatory language to",
     target: "lifecycle responsibility objects",
@@ -633,6 +719,7 @@ const primaryLinks = [
   { href: "/entity/jearonwong-mplp-gaic-entity-graph.json", label: "Entity graph JSON" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "GAIC white paper hub" },
   { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "AIAAWP white paper hub" },
+  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "AIIRWP white paper hub" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited systems" },
   { href: extendedEcosystemPath, label: "Extended ecosystem mapping" },
   { href: "/governance/", label: "Regulatory governance" },
@@ -652,6 +739,7 @@ const semanticChain = [
   { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
+  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
   { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "Systems Discussed in GAIC" },
   { href: extendedEcosystemPath, label: "Extended Ecosystem Mapping" },
   { href: "/governance/", label: "Regulatory and Enterprise Governance Mapping" },
@@ -755,7 +843,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Concepts Map / Entity Mesh"
     objectType="GEO_NAVIGATION"
     objectValue="VISIBLE_ENTITY_MESH"
-    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings."
+    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, AIAAWP, AIIRWP, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings."
   >
     <div class="map-hero-links">
       {primaryLinks.map((link) => (
@@ -897,6 +985,13 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview" class="mesh-node">Agentic Audit Object</a>
             <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains" class="mesh-node">Audit Evidence Chain</a>
             <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model" class="mesh-node">AARM</a>
+          </div>
+          <div class="mesh-row mesh-row--auditability">
+            <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/" class="mesh-node mesh-node--authority">AIIRWP 2026</a>
+            <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis" class="mesh-node mesh-node--strong">Agentic AI Insurability</a>
+            <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08" class="mesh-node">AIO</a>
+            <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10" class="mesh-node">Claim Evidence Chain</a>
+            <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15" class="mesh-node">AIRM</a>
           </div>
           <div class="mesh-row mesh-row--engineering">
             <a href="/concepts/deterministic-delivery/" class="mesh-node mesh-node--strong">Deterministic Delivery</a>

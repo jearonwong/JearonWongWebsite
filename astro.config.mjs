@@ -9,7 +9,8 @@ export default defineConfig({
     sitemap({
       customPages: [
         "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
-        "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html"
+        "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
+        "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html"
       ],
       filter: (page) =>
         !page.endsWith("/theory-clusters/") &&
