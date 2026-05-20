@@ -3801,3 +3801,35 @@ Boundary discipline:
 - WP3-R6 does not claim public release, final seal, publication staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R6 Status:** ✓ CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R6B FINAL CANDIDATE ARTIFACT QA
+
+## WP3-R6B Known Issues
+
+### Final Candidate Artifact QA Complete
+
+WP3-R6B completes final internal candidate artifact QA for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Performed rendered HTML QA at 375, 390, 768, and 1440 widths with Chrome DevTools Protocol.
+- Confirmed no body-level HTML overflow, no public canonical, no public JSON-LD, and no console errors.
+- Performed PDF A4 QA with `pdfinfo`, `pdftotext`, representative page renders, and contact-sheet review.
+- Repaired Appendix F AIRM readiness matrix from registry-card rendering to a high-comparison rubric matrix.
+- Regenerated the PDF without Chrome default local file URL/date/page header/footer.
+- Shortened the fixed print footer to prevent right-edge clipping.
+- Removed the literal legacy A2A URL string from rendered source-note hygiene text.
+- Updated and validated R6 artifact manifest/checksums after R6B repairs.
+- Created the R6B visual proof index and final candidate artifact acceptance report.
+
+Remaining known issues:
+
+- R7 publication staging preparation is the next required wave if authorized.
+- R7 must not interpret R6B as public release, final seal, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or legal/insurance advice.
+- R7 must preserve the repaired Appendix F matrix treatment, PDF header/footer discipline, no public DOCX stance, and no-literal-legacy-A2A-source-note rule.
+- Public semantic mapping, public route creation, public artifact staging, Evidence Registry updates, entity graph updates, `llms.txt` updates, sitemap updates, homepage exposure, and research index updates remain out of scope until R7 authorization.
+
+Boundary discipline:
+
+- WP3-R6B is final internal candidate artifact QA only.
+- WP3-R6B does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R6B Status:** ✓ FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R7 PUBLICATION STAGING PREPARATION

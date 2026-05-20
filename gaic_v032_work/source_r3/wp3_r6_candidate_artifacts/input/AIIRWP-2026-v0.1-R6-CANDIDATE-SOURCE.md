@@ -887,7 +887,7 @@ This section preserves internal citation review context for R6 artifact generati
 Before any public artifact generation or public staging, R6/R7 must recheck:
 
 - all live URLs and redirects;
-- current A2A documentation URL, replacing the old `google-a2a.github.io` source path;
+- current A2A documentation URL, replacing the legacy A2A source path;
 - split LangGraph durable execution and persistence URLs;
 - any blocked, rate-limited, paywalled, or partial-access sources;
 - insurer, broker, reinsurer, product, and startup materials for market-signal framing;
@@ -961,7 +961,7 @@ Missing marker result: BLOCKER - missing markers: AI-08
 
 | Check | Result | Notes |
 | --- | --- | --- |
-| Old A2A URL marker remains | PASS | Candidate source uses `[SRC: TECH-03]`; final source notes must use current A2A docs, not old `google-a2a.github.io`. |
+| Old A2A URL marker remains | PASS | Candidate source uses `[SRC: TECH-03]`; final source notes must use current A2A docs, not the legacy A2A source path. |
 | LangGraph references split correctly | PASS for R5 plan | Candidate source uses `[SRC: TECH-04]`; final source notes must keep durable execution and persistence URLs split. |
 | Old Coalition source used for critical claims | PASS | Candidate body does not use `[SRC: CYB-05]`. |
 | QBE/WTW/Allianz/OpenAI caveated | PASS | Access-caveated sources are framed as signals or technical context, not sole support. |

@@ -3,8 +3,8 @@
   "title": "Agentic AI Insurability & Risk Transfer White Paper 2026",
   "subtitle": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
   "artifact_status": "internal_candidate_artifacts",
-  "generated_at": "2026-05-20T16:00:00Z",
-  "generator": "R6 internal Node generator reusing GAIC/AIAAWP publication standard patterns; Chrome headless PDF export; PyPDF2 metadata pass",
+  "generated_at": "2026-05-20T17:08:00Z",
+  "generator": "R6 internal Node generator reusing GAIC/AIAAWP publication standard patterns; R6B Appendix F matrix and PDF header/footer repair; Chrome DevTools printToPDF; PyPDF2 metadata pass",
   "source_basis": [
     "R5 publication-candidate source package",
     "WP3 R2A source accuracy gate",
@@ -17,16 +17,16 @@
     "AIIRWP-2026-v0.1-R6-CANDIDATE.html",
     "AIIRWP-2026-v0.1-R6-CANDIDATE.pdf"
   ],
-  "source_sha256": "e03cab050491c1bfa6fd33e4daa88181eda90889faee06520627943ee44f2782",
-  "html_sha256": "4962889ecdbdbe29bef143e5b773aa12ad7e6b3746e6d7aa6083f7c1ba830572",
-  "pdf_sha256": "18ffa50e71b4f1078a2811ce602d34c84aad7b4efba848df4335f30aa4b7decc",
-  "html_bytes": 106037,
-  "pdf_bytes": 823539,
-  "pdf_page_count": 61,
+  "source_sha256": "a7b19cb39e0dfe69d423fd250cbdb3eead6eedea6a6802a34125b9869abc9bd7",
+  "html_sha256": "311b1ded83a2b1f6ba5a8b415499f22533748bcf136bbca23c9e563edf85d733",
+  "pdf_sha256": "651753f529a18629feb8d588b2b4f16a1b6d35a9e4024910672980ff26a06b7b",
+  "html_bytes": 105067,
+  "pdf_bytes": 799795,
+  "pdf_page_count": 59,
   "table_stats": {
     "total": 25,
-    "registry_cards": 2,
-    "matrices": 23
+    "registry_cards": 1,
+    "matrices": 24
   },
   "no_public_route": true,
   "no_public_artifact_status": true,
@@ -38,5 +38,12 @@
   "not_insurer_accepted": true,
   "not_coverage_ready": true,
   "not_underwriting_ready": true,
-  "print_running_header_footer": "present in internal PDF print CSS"
+  "print_running_header_footer": "present in internal PDF print CSS",
+  "r6b_repair": {
+    "applied": true,
+    "repair": "Appendix F AIRM readiness matrix changed from registry card rendering to rubric matrix rendering; PDF regenerated without Chrome default file URL/date/page header/footer; print footer shortened to prevent clipping; literal legacy A2A URL removed from rendered source-note hygiene text.",
+    "old_pdf_page_count": 61,
+    "new_pdf_page_count": 59,
+    "no_substantive_content_change": true
+  }
 }

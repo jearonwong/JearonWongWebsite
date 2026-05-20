@@ -1,0 +1,252 @@
+{
+  "fileUrl": "file:///Users/jasonwang/Documents/AI_Dev/JearonWong/gaic_v032_work/source_r3/wp3_r6_candidate_artifacts/out/AIIRWP-2026-v0.1-R6-CANDIDATE.html",
+  "screenshots": [
+    {
+      "file": "html-mobile-375-top.png",
+      "width": 375,
+      "height": 1100,
+      "target": "top",
+      "metrics": {
+        "viewport": [
+          375,
+          1100
+        ],
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "bodyScrollWidth": 375,
+        "bodyClientWidth": 375,
+        "bodyOverflow": false,
+        "targetTop": null,
+        "headingText": null,
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    },
+    {
+      "file": "html-mobile-375-table-sample.png",
+      "width": 375,
+      "height": 1100,
+      "target": "insurance-basics-in-plain-english",
+      "metrics": {
+        "viewport": [
+          375,
+          1100
+        ],
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "bodyScrollWidth": 375,
+        "bodyClientWidth": 375,
+        "bodyOverflow": false,
+        "targetTop": 18,
+        "headingText": "Insurance Basics in Plain English",
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    },
+    {
+      "file": "html-mobile-390-aio-sample.png",
+      "width": 390,
+      "height": 1100,
+      "target": "the-agentic-insurability-object-model",
+      "metrics": {
+        "viewport": [
+          390,
+          1100
+        ],
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390,
+        "bodyOverflow": false,
+        "targetTop": 18,
+        "headingText": "The Agentic Insurability Object Model",
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    },
+    {
+      "file": "html-tablet-768-top.png",
+      "width": 768,
+      "height": 1100,
+      "target": "top",
+      "metrics": {
+        "viewport": [
+          768,
+          1100
+        ],
+        "scrollWidth": 753,
+        "clientWidth": 753,
+        "bodyScrollWidth": 753,
+        "bodyClientWidth": 753,
+        "bodyOverflow": false,
+        "targetTop": null,
+        "headingText": null,
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    },
+    {
+      "file": "html-desktop-1440-top.png",
+      "width": 1440,
+      "height": 1100,
+      "target": "top",
+      "metrics": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "bodyScrollWidth": 1425,
+        "bodyClientWidth": 1425,
+        "bodyOverflow": false,
+        "targetTop": null,
+        "headingText": null,
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    },
+    {
+      "file": "html-desktop-1440-source-section.png",
+      "width": 1440,
+      "height": 1100,
+      "target": "source-register-and-citation-notes",
+      "metrics": {
+        "viewport": [
+          1440,
+          1100
+        ],
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "bodyScrollWidth": 1425,
+        "bodyClientWidth": 1425,
+        "bodyOverflow": false,
+        "targetTop": 18,
+        "headingText": "Source Register and Citation Notes",
+        "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1-R6-CANDIDATE",
+        "canonical": false,
+        "jsonld": false,
+        "sourceMarkers": 343,
+        "synthesisMarkers": 23,
+        "tables": 24,
+        "appendixFMatrix": true,
+        "legacyA2A": false,
+        "requiredPresent": {
+          "#chapter-00": true,
+          "#chapter-16": true,
+          "#appendix-a": true,
+          "#appendix-g": true,
+          "#source-register-and-citation-notes": true
+        },
+        "textChecks": {
+          "candidateId": true,
+          "notFinal": true,
+          "notPublished": true,
+          "AIO14": true,
+          "AIRM_L5": true
+        }
+      }
+    }
+  ],
+  "consoleIssues": []
+}

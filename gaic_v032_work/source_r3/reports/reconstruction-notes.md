@@ -4519,3 +4519,38 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R6 does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R6 Status:** ✓ CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R6B FINAL CANDIDATE ARTIFACT QA.
+
+## WP3-R6B Notes (May 21, 2026)
+
+**Scope:** Final internal candidate artifact QA for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `68546ac2c1a5a4b312ab5daebd3a14ef8052ace8` before the R6B QA wave.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the R6 internal artifact package, R6 reports, R5 generation/semantic/boundary plans, Whitepaper Series Publication SOP, GAIC/AIAAWP artifact QA patterns, and R8/R8D/R8E/R8F publication quality records.
+4. Performed rendered HTML QA at 375, 390, 768, and 1440 widths with Chrome DevTools Protocol, proof screenshots, overflow checks, marker counts, section-anchor checks, and console issue capture.
+5. Performed PDF QA with `pdfinfo`, `pdftotext`, representative page renders, PDF contact-sheet review, metadata checks, and table-layout inspection.
+6. Repaired Appendix F AIRM readiness matrix from registry-card rendering to rubric-matrix rendering so high-comparison semantics are preserved.
+7. Regenerated the PDF through Chrome DevTools `Page.printToPDF` with default Chrome header/footer disabled, then reapplied metadata with PyPDF2.
+8. Shortened the fixed print footer to prevent visible right-edge clipping.
+9. Removed the literal legacy A2A URL string from source-note hygiene text while preserving the current-A2A-docs instruction.
+10. Updated `manifest.json` and `checksums.sha256`; checksum validation passed for source, HTML, PDF, and manifest.
+11. Created R6B reports for preflight, HTML QA, PDF QA, table semantic layout QA, source/citation rendering QA, boundary rendering QA, cross-artifact/manifest QA, final candidate artifact acceptance, build validation, and final QA.
+
+**Artifact discipline:**
+
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No DOCX was generated.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R6B is final internal candidate artifact QA only.
+- WP3-R6B does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R6B Status:** ✓ FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R7 PUBLICATION STAGING PREPARATION.
