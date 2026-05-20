@@ -4327,3 +4327,34 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - AIO/AIRM remain author synthesis unless directly source-supported.
 
 **WP3-R1 Status:** ✓ INSURABILITY SOURCE RESEARCH COMPLETE / READY FOR WP3-R2 SOURCE-GROUNDED OUTLINE.
+
+## WP3-R2 Notes (May 20, 2026)
+
+**Scope:** Source-grounded outline package for Agentic AI Insurability & Risk Transfer White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `52c053b78d1e05662c6c5cdb09d8903412ecc5c0` before the R2 outline work.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the WP3-R0 and WP3-R1 anchor files, GAIC SOURCE MASTER, the Whitepaper Series Publication SOP, and the R8F reports as source truth for the outline.
+4. Created R2 reports for the thesis and argument ladder, chapter 0-16 outline, chapter-level source register, source claim vs synthesis matrix, tables and figures skeleton, AIO/AIRM integration plan, appendix skeleton, drafting packet, source gap closure, boundary QA, build validation, and final QA.
+5. Preserved the rule that AIO and AIRM are author synthesis unless directly source-supported.
+6. Kept all content outline-only and source-grounded, with no body draft and no public surface changes.
+7. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No WP3 body text was drafted.
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R2 is source-grounded outline only.
+- WP3-R2 does not claim body drafting, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R2 Status:** ✓ SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT.

@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 19, 2026 (WHITEPAPER-R8E-3 Publication Surface Metadata and Homepage Exposure Fix)
+**Last Updated:** May 20, 2026 (WP3-R2 Source-Grounded Outline)
 
 ## WHITEPAPER-R8E-3 Known Issues
 
@@ -3604,3 +3604,34 @@ Boundary discipline:
 - WP3-R1 does not draft the whitepaper body, create a source-grounded full outline, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
 
 **WP3-R1 Status:** ✓ INSURABILITY SOURCE RESEARCH COMPLETE / READY FOR WP3-R2 SOURCE-GROUNDED OUTLINE
+
+---
+
+## WP3-R2 Known Issues
+
+### Source-Grounded Outline Complete
+
+WP3-R2 completes the source-grounded outline package for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Converted the R0 architecture and R1 research into a chapter-by-chapter source-grounded outline for Chapters 0-16.
+- Added the thesis and argument ladder so R3 can draft in a stable order.
+- Added the chapter-level source register, source claim vs synthesis matrix, tables and figures skeleton, AIO/AIRM integration plan, appendix skeleton, drafting packet, source gap closure note, boundary QA, build validation, and final QA.
+- Preserved the rule that AIO and AIRM remain author synthesis unless directly source-supported.
+- Preserved the rule that technical layers are necessary layers, not sufficient insurability layers.
+- Confirmed no P0 source blockers remain for outline work.
+
+Remaining known issues:
+
+- R3 formal internal draft is required before any full body prose exists.
+- Exact AI policy forms, exact exclusion wording, exact claims handling examples, AI underwriting questionnaires, and direct agentic AI aggregation actuarial sources remain P1/P2 enrichment items.
+- No WP3 body text exists.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R2 is source-grounded outline only.
+- WP3-R2 does not draft the whitepaper body, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
+
+**WP3-R2 Status:** ✓ SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT
