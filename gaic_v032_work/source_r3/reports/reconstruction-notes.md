@@ -4291,3 +4291,39 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R0 does not claim source research completion, formal draft completion, publication-candidate readiness, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R0 Status:** ✓ INSURABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR WP3-R1 SOURCE RESEARCH.
+
+---
+
+## WP3-R1 Notes (May 20, 2026)
+
+**Scope:** Source research foundation for Agentic AI Insurability & Risk Transfer White Paper 2026.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `bd44abd6cbdcee4bd2252d815b1604fcfdff268a`.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected WP3-R0 final QA, positioning, Chapter 0, Chapters 1-3, full chapter architecture, AIO, AIRM, series closure, writing-method baseline, source research requirements, SOURCE MASTER, WP1 source truth, WP2 source truth, R8F reports, and the Whitepaper Series Publication SOP.
+4. Created R1 reports for preflight, source inventory, current AI insurance market map, insurability gap analysis, LLM/framework/vendor/platform gap map, WP1/WP2-to-WP3 mapping, chapter source map, AIO/AIRM source grounding, source risk and citation boundaries, source gaps, boundary QA, build validation, and final QA.
+5. Source-classified insurance basics, AI-specific insurance market examples, AI-linked cyber and LLMjacking, professional liability/E&O, D&O, cyber/technology evidence, claims/incident reconstruction, aggregation/reinsurance, AI frameworks/protocols, and WP1/WP2 internal source truth.
+6. Closed all P0 source blockers for R2 outline readiness while preserving P1/P2 enrichment gaps.
+7. Ran `npm ci`, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+8. Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+**Artifact discipline:**
+
+- No WP3 body text was drafted.
+- No source-grounded full outline was created.
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Generated `dist/` output from build remains ignored and unstaged.
+
+**Boundary discipline:**
+
+- WP3-R1 is source research only.
+- WP3-R1 does not claim formal draft completion, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+- AIO/AIRM remain author synthesis unless directly source-supported.
+
+**WP3-R1 Status:** ✓ INSURABILITY SOURCE RESEARCH COMPLETE / READY FOR WP3-R2 SOURCE-GROUNDED OUTLINE.

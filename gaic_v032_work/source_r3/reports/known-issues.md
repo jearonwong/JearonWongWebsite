@@ -3563,3 +3563,44 @@ Boundary discipline:
 - WP3-R0 does not write the full whitepaper body, conduct source research, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
 
 **WP3-R0 Status:** ✓ INSURABILITY ARCHITECTURE BASELINE COMPLETE / READY FOR WP3-R1 SOURCE RESEARCH
+
+---
+
+## WP3-R1 Known Issues
+
+### Insurability Source Research Complete
+
+WP3-R1 completes the internal source research foundation for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Confirmed repo truth on latest `origin/main` before R1 edits.
+- Created the WP3-R1 preflight report.
+- Created the source inventory with source IDs, tiers, roles, risks, access limitations, affected chapters, and AIO/AIRM relevance.
+- Created the current AI insurance market map for AI-specific products, AI-linked cyber, professional liability/E&O, D&O, silent AI exposure, exclusions/sublimits, and broad agentic lifecycle risk-transfer gaps.
+- Created the insurability gap analysis covering legal subject, insurable object, responsibility mapping, authority boundary, causality reconstruction, claim evidence, exclusion triggers, dependencies, aggregation, and remediation closure.
+- Created the LLM/framework/vendor/platform gap map, preserving the rule that technical layers are necessary but not sufficient insurability layers.
+- Created the WP1/WP2-to-WP3 mapping for MRO, ALCS, enterprise failure scenarios, Audit Evidence Chain, AARM, authority/confirmation, accepted outcome, remediation closure, dependencies, and aggregation.
+- Created the chapter source map for WP3 Chapters 0-16.
+- Created the AIO/AIRM source grounding map and labeled AIO/AIRM as author synthesis where external sources do not directly support the same object.
+- Created the source risk and citation boundary register.
+- Created the source gap register and closed all P0 source blockers for R2 outline work.
+- Created boundary QA, build validation, and final QA reports.
+- Updated SOURCE MASTER, known issues, and reconstruction notes.
+
+Remaining known issues:
+
+- R2 must create the source-grounded outline before any body drafting.
+- Exact AI exclusion endorsements, sublimit wording, and public AI-specific policy forms remain P1 enrichment gaps.
+- AI-specific claims handling examples and AI underwriting questionnaires remain P1 enrichment gaps.
+- Jurisdiction-specific insured-subject or coverage analysis remains out of scope unless separately sourced and approved.
+- Direct agentic AI aggregation actuarial data remains a P1/P2 enrichment gap; R1 uses cyber aggregation sources only as analogy with explicit author-synthesis labeling.
+- No WP3 body text exists.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R1 is source research only.
+- WP3-R1 does not draft the whitepaper body, create a source-grounded full outline, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
+
+**WP3-R1 Status:** ✓ INSURABILITY SOURCE RESEARCH COMPLETE / READY FOR WP3-R2 SOURCE-GROUNDED OUTLINE

@@ -1,0 +1,29 @@
+# WP3-R1 Chapter Source Map
+
+**Task ID:** WP3-R1-INSURABILITY-SOURCE-RESEARCH
+**Mode:** Source research only
+**Boundary:** This map prepares R2 outline decisions. It is not a source-grounded full outline and does not draft body text.
+
+| Ch. | Chapter | Required source groups | Candidate source IDs | Internal WP1/WP2 dependencies | Source gaps | Risks | Allowed claim type | Forbidden claim type |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | The Plain-English Problem | 1, 2, 5, 6, 9 | INS-01, INS-04, INS-06, MKT-01, MKT-03, CLAIM-01, INT-01, INT-05 | WP1 MRO/ALCS; WP2 logs-vs-evidence | Need one concise legal-subject source in final citation style | Overstating market gap | Source-grounded problem framing plus author synthesis | AI agents are legal insured subjects |
+| 1 | The Insured Subject Problem | 1, 4, 9 | INS-04, INS-06, INS-08, INT-01 | MRO-01/MRO-03; human/agent responsibility mapping | Jurisdiction-specific insured-subject treatment remains out of scope | Legal advice | Plain-English insured-subject distinction | Legal liability assignment |
+| 2 | The Insurable Object Problem | 1, 2, 5, 8, 9 | INS-01, MKT-01, MKT-02, TECH-01, TECH-04, INT-06 | MRO-02/MRO-04/MRO-05/MRO-08; audit object clarity | No public standard for "agentic work unit" as insurance object | Underwriting-standard overclaim | Need for bounded risk object as author synthesis | Model name itself is insurable object |
+| 3 | The Responsibility Mapping Problem | 1, 4, 6, 9 | INS-01, INS-08, MKT-07, CLAIM-03, INT-05 | MRO-01/MRO-03/MRO-06/MRO-16; WP2 Agentic Audit Object | Need final body to avoid professional liability advice | Liability determination | Responsibility mapping and governance evidence needs | HITL creates legal responsibility map |
+| 4 | What AI Insurance Covers Today | 2, 3, 4, 5, 7 | MKT-01, MKT-02, MKT-03, MKT-05, MKT-06, MKT-08, INS-07, INS-09, INS-10 | WP1 market-neutral boundary | Exact public policy forms and endorsements are P1 | Unsupported market consensus | Market map with caveats and source IDs | AI is broadly covered/excluded |
+| 5 | Why Agentic AI Is Not Yet Broadly Insurable | 2, 3, 5, 6, 7, 8, 9 | INS-01, MKT-08, CYB-02, CLAIM-01, TECH-01 to TECH-05, INT-06, INT-07 | MRO set, ALCS, Audit Evidence Chain | No insurer source directly adopts AIO/AIRM | Insurer acceptance claim | Gap analysis / author synthesis | AIO/AIRM is accepted by insurers |
+| 6 | From Compliance and Auditability to Insurability | 8, 9 | AI-01, AI-02, INT-01 to INT-07 | GAIC MRO/ALCS; WP2 AARM/Audit Evidence Chain | External sources do not validate GAIC/AIAAWP | Compliance guarantee | Internal-to-external mapping with labels | Compliance or auditability guarantees insurance |
+| 7 | Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence | 6, 8, 9 | CLAIM-01, CLAIM-02, TECH-01, TECH-04, INT-05 | WP2 logs-vs-evidence | Need careful phrasing that logs are useful ingredients | Vendor/product overclaim | Technical trace vs claim evidence distinction | Logs are useless or sufficient |
+| 8 | The Agentic Insurability Object Model | 1, 2, 6, 7, 9 | INS-04, INS-06, INS-07, CLAIM-01, CYB-02, INT-06 | AIO v2 | External support is partial; AIO is synthesis | Treating AIO as standard | Object catalog as author synthesis | AIO is policy form or insurer standard |
+| 9 | Coverage Boundaries, Authority, Delegation, and Exclusion Triggers | 1, 3, 4, 8, 9 | INS-05, INS-07, MKT-03, MKT-05, TECH-02, INT-05 | Authority boundary; exception traceability | Exact exclusions and sublimits P1 | Coverage opinion | Boundary-review questions | Any specific action is covered/excluded |
+| 10 | Loss Event Reconstruction and Causality Tracing | 6, 8, 9 | CLAIM-01, CLAIM-02, CLAIM-03, TECH-04, INT-05 | MRO-04/MRO-08/MRO-16 | Insurance-claims-specific public sources limited | Causation finding | Reconstruction evidence needs | Evidence chain proves legal causation |
+| 11 | Third-Party, Vendor, Model, and Tool Dependency Risk | 5, 7, 8, 9 | CYB-02, CYB-03, TECH-01 to TECH-05, INT-03 | MRO-14/MRO-15; agent/tool partitioning | Need optional additional subprocessor source in R2 | Vendor ranking | Dependency mapping need | Any vendor is safer/worse |
+| 12 | Evidence Requirements for Underwriting | 1, 5, 8, 9 | INS-01, INS-09, INS-10, AI-01, CLAIM-01, INT-06 | MRO/ALCS; WP2 evidence sufficiency | Public AI underwriting questionnaires scarce | Underwriting standard | Evidence categories for review | Required underwriting checklist |
+| 13 | Evidence Requirements for Claims Review | 1, 6, 8, 9 | CLAIM-01, CLAIM-02, CLAIM-03, INS-05, INT-05, INT-06 | Audit Evidence Chain -> Claim Evidence Chain | Claims-handler AI-specific public guidance scarce | Claims approval guidance | Post-loss evidence package structure | Claim package guarantees payment |
+| 14 | Aggregation and Accumulation Risk | 5, 7, 8, 9 | CYB-01, CYB-02, CYB-03, CYB-04, MKT-08, TECH-03, INT-03 | Enterprise failure scenarios; MRO-14/MRO-15 | Direct agentic AI aggregation actuarial sources scarce | Actuarial modeling | Cyber aggregation analogy plus author synthesis | Quantified AI accumulation model |
+| 15 | Agentic Insurability Readiness Model | 6, 7, 9 | CLAIM-01, CYB-02, INT-07, INT-04 | AARM -> AIRM; ALCS | External source support is indirect | Certification/benchmark | Readiness vocabulary only | AIRM certifies insurability |
+| 16 | Conclusion | All groups as synthesis | Use no new factual sources beyond cited chapter sources | WP1/WP2/WP3 closure | None blocking | Overclaiming finality | Synthesis and next-step caveats | WP3 published/final/guaranteed |
+
+## Source-Grounded Outline Readiness
+
+The chapter map has credible source coverage for R2 outline development. R2 must still decide which claims are external-source claims, which claims are internal-source claims, and which claims are clearly labeled Jearon Wong synthesis.
