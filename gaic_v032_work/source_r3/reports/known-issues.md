@@ -3732,3 +3732,37 @@ Boundary discipline:
 - WP3-R4 does not claim public release, final seal, publication-candidate creation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R4 Status:** ✓ EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP3-R5 PUBLICATION-CANDIDATE PREPARATION
+
+## WP3-R5 Known Issues
+
+### Internal Publication-Candidate Preparation Complete
+
+WP3-R5 prepares the internal publication-candidate package for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Proved reuse of the existing GAIC/AIAAWP whitepaper publication standard before any artifact generation planning.
+- Created the internal package directory `wp3_r5_publication_candidate/`.
+- Assembled `AIIRWP-2026-v0.1-R5-PUBLICATION-CANDIDATE.md` from the R4-reviewed R3 chapters and appendices.
+- Removed stale R3 draft notes from the candidate source and normalized visible body headings.
+- Preserved source markers, boundary statements, AIO/AIRM synthesis labels, fragmented/conditional market framing, and technical-framework necessary-but-insufficient framing.
+- Created internal package `manifest.json` and `checksums.sha256`.
+- Validated package checksums for internal candidate package files only.
+- Created metadata, JSON-LD, source-register finalization, citation normalization, generation, semantic mapping, boundary final sweep, and author review plans.
+- Created R5 preflight, candidate package QA, citation/source QA, metadata/JSON-LD plan QA, semantic mapping plan QA, boundary QA, build validation, and final QA reports.
+
+Remaining known issues:
+
+- R6 candidate artifact generation is the next required wave.
+- R6 must generate internal candidate HTML/PDF only if authorized; it must not create public routes or public artifacts.
+- Final public footnote/endnote styling remains future work.
+- Live source URL recheck remains required before any artifact generation or public staging.
+- Public semantic mapping, public route creation, public artifact staging, Evidence Registry updates, entity graph updates, `llms.txt` updates, sitemap updates, homepage exposure, and research index updates remain out of scope until later authorized waves.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R5 is internal publication-candidate preparation only.
+- WP3-R5 does not claim public release, final seal, publication staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R5 Status:** ✓ PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP3-R6 CANDIDATE ARTIFACT GENERATION

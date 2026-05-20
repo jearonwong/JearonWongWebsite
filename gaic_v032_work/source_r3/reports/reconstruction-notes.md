@@ -4453,3 +4453,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R4 does not claim public release, final seal, publication-candidate creation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R4 Status:** ✓ EDITORIAL SOURCE AND BOUNDARY QA COMPLETE / READY FOR WP3-R5 PUBLICATION-CANDIDATE PREPARATION.
+
+## WP3-R5 Notes (May 20, 2026)
+
+**Scope:** Internal publication-candidate preparation for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `3bf99e2e0a403a5b1f856bb6e98cde20a5a1fdd3` before the R5 preparation wave.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the R3 internal draft, R4 QA reports, WP3-R0/R1/R2/R2A/R3 report sets, GAIC SOURCE MASTER, WP1/WP2 source truth, the Whitepaper Series Publication SOP, R8F reports, and GAIC/AIAAWP publication package patterns.
+4. Created the internal `wp3_r5_publication_candidate/` package with candidate Markdown source, manifest, checksums, metadata plan, JSON-LD plan, source-register finalization plan, citation-normalization report, candidate integrity notes, generation plan, semantic mapping plan, boundary final sweep, and author review checklist.
+5. Assembled the candidate source from R4-reviewed R3 chapters and appendices, removed stale R3 draft notes, and normalized body headings for candidate-source readability.
+6. Preserved source markers, AIO/AIRM synthesis labels, R2A source restrictions, fragmented/conditional AI insurance market framing, and technical-framework necessary-but-insufficient framing.
+7. Created R5 reports for publication standard reuse proof, preflight, candidate package QA, citation/source QA, metadata/JSON-LD plan QA, semantic mapping plan QA, boundary QA, build validation, and final QA.
+8. Validated internal package checksums with `shasum -a 256 -c checksums.sha256`.
+9. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R5 is internal publication-candidate preparation only.
+- WP3-R5 does not claim public release, final seal, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R5 Status:** ✓ PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP3-R6 CANDIDATE ARTIFACT GENERATION.
