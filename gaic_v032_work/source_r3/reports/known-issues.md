@@ -3670,3 +3670,34 @@ Boundary discipline:
 - WP3-R2A does not draft the whitepaper body, create public pages, create public routes, create public PDF/HTML/DOCX artifacts, modify GAIC/AIAAWP public assets, modify homepage, modify `llms.txt`, modify entity graph, modify sitemap, modify the Evidence Registry, modify the research index, claim WP3 publication, claim insurance advice, claim underwriting standard, claim actuarial pricing model, claim coverage opinion, claim claims approval framework, claim legal liability determination, claim certification, claim insurer acceptance, claim MPLP requirement, claim Validation Lab certification, rank vendors, or make procurement recommendations.
 
 **WP3-R2A Status:** ✓ EXTERNAL SOURCE ACCURACY AUDIT COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT
+
+## WP3-R3 Known Issues
+
+### Formal Internal Draft Complete
+
+WP3-R3 completes the first formal internal draft for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Drafted Chapters 00-16 in the internal draft directory.
+- Drafted Appendices A-G as internal templates.
+- Created source register and citation-use summaries.
+- Created draft integrity notes, boundary-sensitive paragraphs notes, and R4 review focus notes.
+- Created the R3 source-use summary, structure consistency QA, boundary-sensitive QA, table-and-figure QA, publication-readiness gap, boundary QA, build-and-validation report, and final QA report.
+- Preserved the rule that AIO and AIRM remain Jearon Wong synthesis unless directly source-supported.
+- Preserved the rule that market examples remain fragmented, conditional, and caveated.
+- Preserved the rule that technical framework traces are technical inputs, not claim evidence by themselves.
+
+Remaining known issues:
+
+- R4 editorial source and boundary QA is the next required pass.
+- Citation formatting and source-note polish remain future editorial work.
+- Publication staging remains out of scope for R3.
+- No public WP3 route, public artifact, sitemap entry, entity graph entry, `llms.txt` entry, homepage card, Evidence Registry entry, research index entry, or public DOCX exists.
+
+Boundary discipline:
+
+- WP3-R3 is internal draft only.
+- WP3-R3 does not claim public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R3 Status:** ✓ FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP3-R4 EDITORIAL SOURCE AND BOUNDARY QA

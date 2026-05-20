@@ -4390,3 +4390,34 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R2A does not claim body drafting, public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R2A Status:** ✓ EXTERNAL SOURCE ACCURACY AUDIT COMPLETE / READY FOR WP3-R3 FORMAL INTERNAL DRAFT.
+
+## WP3-R3 Notes (May 20, 2026)
+
+**Scope:** Formal internal draft for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `dbed116ebb5b900eb3e3387a3964b92524f0b0b4` before the R3 drafting wave.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the WP3-R0, R1, R2, and R2A anchor files, GAIC SOURCE MASTER, the Whitepaper Series Publication SOP, and the R8F reports as source truth for the draft.
+4. Created the internal R3 draft directory with master, Chapters 00-16, Appendices A-G, source summaries, and QA notes.
+5. Created the R3 report set for preflight, source use, structure consistency, boundary-sensitive QA, tables and figures QA, publication readiness gap, boundary QA, build and validation, and final QA.
+6. Preserved the rule that AIO and AIRM are Jearon Wong synthesis / analytical object models.
+7. Kept all chapter content source-grounded, boundary-aware, and internal-only.
+8. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R3 is formal internal draft only.
+- WP3-R3 does not claim public release, final seal, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R3 Status:** ✓ FORMAL INTERNAL DRAFT COMPLETE / READY FOR WP3-R4 EDITORIAL SOURCE AND BOUNDARY QA.
