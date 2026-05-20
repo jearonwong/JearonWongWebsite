@@ -1,0 +1,42 @@
+{
+  "candidate_id": "AIIRWP-2026-v0.1-R6-CANDIDATE",
+  "title": "Agentic AI Insurability & Risk Transfer White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+  "artifact_status": "internal_candidate_artifacts",
+  "generated_at": "2026-05-20T16:00:00Z",
+  "generator": "R6 internal Node generator reusing GAIC/AIAAWP publication standard patterns; Chrome headless PDF export; PyPDF2 metadata pass",
+  "source_basis": [
+    "R5 publication-candidate source package",
+    "WP3 R2A source accuracy gate",
+    "WP3 R4 boundary QA",
+    "Whitepaper Series Publication SOP v2",
+    "GAIC/AIAAWP generation and R8 table-layout records"
+  ],
+  "source_file": "../input/AIIRWP-2026-v0.1-R6-CANDIDATE-SOURCE.md",
+  "artifacts": [
+    "AIIRWP-2026-v0.1-R6-CANDIDATE.html",
+    "AIIRWP-2026-v0.1-R6-CANDIDATE.pdf"
+  ],
+  "source_sha256": "e03cab050491c1bfa6fd33e4daa88181eda90889faee06520627943ee44f2782",
+  "html_sha256": "4962889ecdbdbe29bef143e5b773aa12ad7e6b3746e6d7aa6083f7c1ba830572",
+  "pdf_sha256": "18ffa50e71b4f1078a2811ce602d34c84aad7b4efba848df4335f30aa4b7decc",
+  "html_bytes": 106037,
+  "pdf_bytes": 823539,
+  "pdf_page_count": 61,
+  "table_stats": {
+    "total": 25,
+    "registry_cards": 2,
+    "matrices": 23
+  },
+  "no_public_route": true,
+  "no_public_artifact_status": true,
+  "no_public_docx": true,
+  "no_final_or_seal_status": true,
+  "not_published": true,
+  "not_final": true,
+  "not_sealed": true,
+  "not_insurer_accepted": true,
+  "not_coverage_ready": true,
+  "not_underwriting_ready": true,
+  "print_running_header_footer": "present in internal PDF print CSS"
+}

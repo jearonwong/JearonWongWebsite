@@ -4485,3 +4485,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R5 does not claim public release, final seal, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
 
 **WP3-R5 Status:** ✓ PUBLICATION-CANDIDATE PREPARATION COMPLETE / READY FOR WP3-R6 CANDIDATE ARTIFACT GENERATION.
+
+## WP3-R6 Notes (May 21, 2026)
+
+**Scope:** Internal candidate HTML/PDF artifact generation for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `dff0c72b3a09aa005ef85b0cdb67739446d04a7a` before the R6 artifact generation wave.
+2. Confirmed `origin/HEAD` matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected the R5 candidate package, R5/R4 reports, WP3-R0/R1/R2/R2A/R3 report sets, GAIC/AIAAWP publication standard files, the Whitepaper Series Publication SOP, R8 records, and generation patterns.
+4. Completed publication standard reuse proof and source/citation pre-generation checks.
+5. Created the internal `wp3_r6_candidate_artifacts/` package with input source, internal HTML, internal PDF, manifest, checksums, proof files, and QA files.
+6. Generated internal HTML with a responsive whitepaper shell aligned to GAIC/AIAAWP publication patterns.
+7. Generated internal A4 PDF with Chrome headless export, a PyPDF2 metadata pass, and restrained print-only running header/footer identity treatment.
+8. Generated proof images for HTML mobile/desktop and PDF pages 1, 2, 3, and 61, plus PDF text extraction.
+9. Validated internal artifact checksums with `shasum -a 256 -c checksums.sha256`.
+10. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public pages or routes were created.
+- No public WP3 HTML, PDF, DOCX, manifest, checksum, or social asset was created.
+- No DOCX was generated.
+- No GAIC or AIAAWP public HTML/PDF artifacts were changed.
+- No homepage, `llms.txt`, entity graph, sitemap config/output, Evidence Registry, research index, Concepts, Definitions, Governance, Playbooks, About/Entity Authority, or MPLP public surface was changed.
+- Public DOCX remains offboarded.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R6 is internal candidate artifact generation only.
+- WP3-R6 does not claim public release, final seal, public staging, public artifact generation, insurance advice, underwriting standard, actuarial pricing model, coverage opinion, claims approval framework, legal liability determination, certification, insurer acceptance, coverage readiness, underwriting readiness, MPLP requirement, Validation Lab certification, vendor ranking, procurement recommendation, unsupported market fact, or WP4 implementation.
+
+**WP3-R6 Status:** ✓ CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R6B FINAL CANDIDATE ARTIFACT QA.
