@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 21, 2026 (WP3-R12 Body Expansion Rewrite)
+**Last Updated:** May 22, 2026 (WP3-R13 Editorial Body Acceptance QA)
+
+## WP3-R13 Editorial Body Acceptance QA
+
+### Status: WP3-R13 EDITORIAL BODY ACCEPTANCE QA COMPLETE / READY FOR WP3-R14 ARTIFACT GENERATION PLANNING WITH NOTES
+
+R13 reviewed the R12 expanded body directly and accepted it for artifact generation planning with minor editorial notes. R13 is not artifact generation and does not make the body a final public publication artifact.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` and accepted R12 commit ancestry.
+2. Read the R12 body chapter by chapter, including Chapters 0-10, appendices A-D, source notes, the R12 body quality self-check, and body-vs-evidence discipline check.
+3. Created body acceptance gate, chapter-by-chapter acceptance QA, Chapter 0-6 pain/market density recheck, source notes QA, scenario/example QA, AIO/AIRM QA, table/figure QA, GAIC/AIAAWP tone alignment QA, boundary/overclaim QA, artifact generation planning readiness, editorial decision report, boundary QA, build/validation, and final QA reports.
+4. Classified the body as `BODY_ACCEPTED_WITH_MINOR_EDITORIAL_NOTES`.
+5. Determined no R13B body text patch is required before R14 planning.
+6. Confirmed R14 should be artifact generation planning only.
+7. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+Remaining known issues:
+
+- R14 Artifact Generation Planning is required before any candidate artifact generation.
+- R14 must plan conversion of the Chapter 4 raw Mermaid placeholder into a rendered publication figure.
+- R14 must plan source-note/endnote rendering for HTML/PDF.
+- R14 must plan semantic table layout for Chapter 5 and AIRM.
+- AIIRWP remains under editorial review publicly until a later authorized staging wave.
+- No public HTML/PDF/DOCX artifact was generated in R13.
+
+Boundary discipline:
+
+- R13 does not claim final/sealed status, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+- R13 does not create DOCX.
+
+**WP3-R13 Status:** BODY ACCEPTED WITH MINOR EDITORIAL NOTES / READY FOR WP3-R14 ARTIFACT GENERATION PLANNING WITH NOTES
 
 ## WP3-R12 Body Expansion Rewrite
 

@@ -1,5 +1,36 @@
 # Reconstruction Notes
 
+## WP3-R13 Editorial Body Acceptance QA Notes (May 22, 2026)
+
+**Scope:** Editorial body acceptance QA for the R12 AIIRWP expanded source. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` at `959ee434c4aead50715000d0c9e144834e5e9e22`; accepted R12 commit `2deb8d9bb0525da42dee9cc512dbf04b9c764411` is an ancestor.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the R12 package, R12 reports, R11 acceptance baseline, R9 quality reset constraints, and source/evidence context needed for acceptance.
+4. Read the R12 body directly chapter by chapter, including Chapters 0-10, appendices A-D, source notes, body quality self-check, and body-vs-evidence discipline check.
+5. Created R13 reports for preflight, body reading confirmation, body acceptance gate, chapter acceptance, Chapter 0-6 pain/market density, source notes, scenarios, AIO/AIRM, table/figure acceptance, GAIC/AIAAWP tone alignment, boundary/overclaim acceptance, artifact planning readiness, editorial decision, boundary QA, build/validation, and final QA.
+6. Classified the R12 body as `BODY_ACCEPTED_WITH_MINOR_EDITORIAL_NOTES`.
+7. Determined no R13B text patch is required before R14 planning.
+8. Updated SOURCE MASTER and governance records with the R13 status.
+9. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+**Artifact discipline:**
+
+- No public HTML artifact was generated.
+- No public PDF was generated.
+- No DOCX was created.
+- No public CTAs were restored.
+- AIIRWP remains under editorial review publicly from R9-R13.
+- Pre-existing untracked `public/social/*` assets remain outside R13 scope.
+
+**Boundary discipline:**
+
+- R13 does not claim Final Seal, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R13 Status:** WP3-R13 EDITORIAL BODY ACCEPTANCE QA COMPLETE / READY FOR WP3-R14 ARTIFACT GENERATION PLANNING WITH NOTES.
+
 ## WP3-R12 Body Expansion Rewrite Notes (May 21, 2026)
 
 **Scope:** Expand the R10 AIIRWP rewrite body according to R11 editorial QA. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.
