@@ -3922,3 +3922,33 @@ Boundary discipline:
 - WP3-R8 does not execute release actions, create public artifacts, create DOCX, change public AIIRWP artifacts, claim external adoption, claim indexing, claim SEO/GEO uplift, claim answer-engine recognition, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement, claim legal proof, claim insurance advice, or claim legal advice.
 
 **WP3-R8 Status:** ✓ WP3-R8 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED
+
+## WP3-R9 Known Issues
+
+### Emergency Publication Hold and Whitepaper Quality Reset Complete
+
+WP3-R9 places `Agentic AI Insurability & Risk Transfer White Paper 2026` on emergency publication hold after owner review determined the staged body is not acceptable as a release-quality white paper.
+
+Resolved in this wave:
+
+- Retained the AIIRWP route as a `noindex` editorial review placeholder.
+- Removed or disabled active AIIRWP public artifact CTAs from the route, homepage, research index, and related public semantic surfaces.
+- Removed AIIRWP artifact promotion from `llms.txt`.
+- Removed AIIRWP route/artifact promotion from sitemap configuration.
+- Updated the entity graph from AIIRWP public staging candidate language to editorial-review language.
+- Downgraded AIIRWP exposure across homepage, research index, Evidence Registry, Concepts, Definitions, Governance, Playbooks, GAIC hub, AIAAWP hub, About, and Extended Ecosystem Mapping.
+- Created the R9 emergency hold report, root-cause audit, body-vs-evidence separation plan, publication-grade rewrite brief, Whitepaper Body Quality Gate, boundary QA, build validation, and final QA.
+
+Remaining known issues:
+
+- WP3-R10 publication-grade rewrite is required before AIIRWP can become a public white paper candidate again.
+- The prior staged AIIRWP HTML/PDF files remain in `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/` as historical staging artifacts, but they are not promoted as release-quality artifacts.
+- The current route is an editorial review placeholder, not a public release.
+- Final Seal remains separately blocked pending explicit owner authorization.
+
+Boundary discipline:
+
+- WP3-R9 is an emergency publication hold and quality reset only.
+- WP3-R9 does not rewrite the full white paper, generate a new PDF, generate a new public HTML artifact, create DOCX, claim author release execution, claim Final Seal, claim external adoption, claim indexing, claim SEO/GEO uplift, claim answer-engine recognition, claim insurer acceptance, claim coverage-ready or underwriting-ready status, claim certification or endorsement, claim legal proof, provide insurance advice, or provide legal advice.
+
+**WP3-R9 Status:** ✓ WP3-R9 EMERGENCY PUBLICATION HOLD AND WHITEPAPER QUALITY RESET COMPLETE / READY FOR WP3-R10 PUBLICATION-GRADE REWRITE

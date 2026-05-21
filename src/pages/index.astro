@@ -70,13 +70,13 @@ const researchSeriesItems = [
   {
     sequence: "03",
     role: "Insurability & Risk Transfer",
-    scope: "Risk-transfer specialization",
+    scope: "Editorial review",
     title: "Agentic AI Insurability & Risk Transfer White Paper 2026",
     description:
-      "Specializes the series into insured-subject and agentic-risk-object separation, AIO, AIRM, claim evidence chains, and risk-transfer boundaries.",
-    metadata: ["Public staging candidate", "59-page PDF"],
+      "Publication-quality reset in progress. The previous staged body is held as an internal evidence/source pack while the public white paper is rewritten.",
+    metadata: ["Under editorial review", "Publication revision pending"],
     href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-    pdfHref: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+    pdfHref: "",
     primary: false
   }
 ];
@@ -136,8 +136,8 @@ const homepageJsonLd = {
       url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
     },
     {
-      "@type": "TechArticle",
-      name: "Agentic AI Insurability & Risk Transfer White Paper 2026",
+      "@type": "WebPage",
+      name: "Agentic AI Insurability & Risk Transfer White Paper 2026 — Under Editorial Review",
       url: absoluteUrl("/research/agentic-ai-insurability-risk-transfer-white-paper-2026/")
     },
     {
@@ -266,8 +266,12 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
                     ))}
                   </div>
                   <div class="research-series-actions">
-                    <a href={item.href} class="button button-primary">Read paper</a>
-                    <a href={item.pdfHref} class="button button-outline">Download PDF</a>
+                    <a href={item.href} class="button button-primary">{item.pdfHref ? "Read paper" : "View editorial status"}</a>
+                    {item.pdfHref ? (
+                      <a href={item.pdfHref} class="button button-outline">Download PDF</a>
+                    ) : (
+                      <span class="button button-outline button-disabled" aria-disabled="true">PDF temporarily unavailable</span>
+                    )}
                   </div>
                 </div>
               </article>
@@ -725,6 +729,14 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .research-series-actions .button-outline:hover {
     border-color: var(--accent-signal);
     color: var(--accent-signal);
+  }
+
+  .research-series-actions .button-disabled,
+  .research-series-actions .button-disabled:hover {
+    cursor: not-allowed;
+    opacity: 0.62;
+    border-color: rgba(17, 17, 17, 0.18);
+    color: #525252;
   }
 
   /* ── Sections ── */

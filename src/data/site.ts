@@ -2111,8 +2111,8 @@ export const projects: ProjectEntry[] = [
       },
       {
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-        label: "AIIRWP insurability source",
-        description: "Public staging candidate that treats MPLP as one optional lifecycle evidence path for risk-transfer analysis, not as insurance advice or an underwriting requirement."
+        label: "AIIRWP editorial review status",
+        description: "Planned insurability and risk-transfer interpretation under editorial review; not insurance advice or an underwriting requirement."
       },
       {
         href: "/concepts/agentic-lifecycle-governance/",
@@ -2424,7 +2424,7 @@ const commonGaicPlaybookLinks: PlaybookLink[] = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
-  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
+  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "AIIRWP editorial review status" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" }

@@ -3,205 +3,27 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SiteHeader from "../../../components/SiteHeader.astro";
 import { siteConfig } from "../../../data/site";
 
-const assetBase = "/research/agentic-ai-insurability-risk-transfer-white-paper-2026";
 const canonicalPath = "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
-const pdfUrl = `${siteConfig.siteUrl}${assetBase}/AIIRWP-2026-v0.1.pdf`;
-const htmlUrl = `${siteConfig.siteUrl}${assetBase}/AIIRWP-2026-v0.1.html`;
-const manifestUrl = `${siteConfig.siteUrl}${assetBase}/manifest.json`;
-const checksumUrl = `${siteConfig.siteUrl}${assetBase}/checksums.sha256`;
-const gaicHubPath = "/research/global-ai-compliance-white-paper-2026/";
-const aiaawpHubPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
-const documentId = "AIIRWP-2026-v0.1-R6-CANDIDATE";
 const reportTitle = "Agentic AI Insurability & Risk Transfer White Paper 2026";
 const reportSubtitle = "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer";
-const reportVersion = "v0.1 Public Staging Candidate";
-const releaseState = "Public route and HTML/PDF artifacts staged; R7B deployment and production reverification required.";
-const publicationMonth = "May 2026";
 const metaDescription =
-  "A public staging candidate by Jearon Wong defining agentic AI insurability, risk-transfer evidence, Agentic Insurability Objects, AIRM, and boundary-safe lifecycle evidence for underwriting and claims discussion.";
-const citationText =
-  "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Technical Report AIIRWP-2026-v0.1-R6-CANDIDATE, May 2026.";
-const citationKeywords =
-  "Agentic AI Insurability; AI risk transfer; Agentic Insurability Objects; AIO; Agentic Insurability Readiness Model; AIRM; claim evidence chain; lifecycle evidence; AI insurance boundary";
-const citationMetaTags = [
-  { name: "citation_title", content: `${reportTitle}: ${reportSubtitle}` },
-  { name: "citation_author", content: "Wong, Jearon" },
-  { name: "citation_publication_date", content: "2026/05" },
-  { name: "citation_online_date", content: "2026/05/21" },
-  { name: "citation_technical_report_number", content: documentId },
-  { name: "citation_pdf_url", content: pdfUrl },
-  { name: "citation_fulltext_html_url", content: htmlUrl },
-  { name: "citation_language", content: "en" },
-  { name: "citation_keywords", content: citationKeywords }
+  "AIIRWP is under editorial review after a publication quality reset. The current staged artifact is not promoted as a release-quality white paper while the body is rewritten.";
+const gaicHubPath = "/research/global-ai-compliance-white-paper-2026/";
+const aiaawpHubPath = "/research/agentic-ai-auditability-assurance-white-paper-2026/";
+const statusNotes = [
+  "Current public artifact promotion is paused.",
+  "HTML and PDF download CTAs are temporarily unavailable.",
+  "The previous staged body is being treated as an internal evidence and source pack.",
+  "A publication-grade rewrite must pass the Whitepaper Body Quality Gate before a new candidate is generated."
 ];
-const shaRows = [
-  {
-    label: "HTML web-reading staging candidate",
-    value: "7af4b31b551a0e469548529d6b5d1c253e7ec738f8f13fc109d6f1b506c65777"
-  },
-  {
-    label: "PDF visual staging candidate",
-    value: "742d97a7cbbd2d69ec35a1988ae39ca80ff29f60a2df1e46bf33680c14e3ceaf"
-  },
-  {
-    label: "Manifest",
-    value: "aa0e690184c7dd136d471fe7f3b29a890c5bb4ba5732ce3cd0c0734784661893"
-  }
+const rewritePrinciples = [
+  "Industry pain and reader understanding must come before object models.",
+  "Evidence supports the argument; evidence cannot replace the argument.",
+  "AIO and AIRM must emerge from the problem, not appear as raw mapping inventory.",
+  "Raw source markers, internal QA labels, and pipeline language must not appear in the public body.",
+  "The rewritten paper must match the GAIC/AIAAWP publication tone and visual standard."
 ];
-const keyConcepts = [
-  { label: "Agentic AI Insurability", href: `${assetBase}/AIIRWP-2026-v0.1.html#governing-thesis` },
-  { label: "Insured Legal Subject", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-02` },
-  { label: "Agentic Risk Object", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-02` },
-  { label: "Responsibility Mapping", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-03` },
-  { label: "Claim Evidence Chain", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-10` },
-  { label: "Agentic Insurability Objects", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-08` },
-  { label: "AIO-01 through AIO-14", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-08` },
-  { label: "AIRM", href: `${assetBase}/AIIRWP-2026-v0.1.html#chapter-15` },
-  { label: "Lifecycle Evidence", href: "/concepts/lifecycle-evidence/" },
-  { label: "Agentic Lifecycle Governance", href: "/concepts/agentic-lifecycle-governance/" }
-];
-const seriesLinks = [
-  {
-    label: "Global AI Compliance White Paper 2026",
-    href: gaicHubPath,
-    body: "Defines the root lifecycle compliance framework, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility governance."
-  },
-  {
-    label: "Agentic AI Auditability & Assurance White Paper 2026",
-    href: aiaawpHubPath,
-    body: "Interprets the same lifecycle governance framework through auditability, audit evidence chains, and assurance-readiness boundaries."
-  },
-  {
-    label: reportTitle,
-    href: canonicalPath,
-    body: "Interprets the lifecycle governance framework through insurability, risk transfer, underwriting evidence, and claims evidence boundaries."
-  },
-  {
-    label: "Future enterprise implementation synthesis",
-    href: "/research/",
-    body: "Planned future synthesis only. No public artifact, implementation guide, release, or operational mandate is claimed."
-  }
-];
-const nonGoals = [
-  "Not legal advice or insurance advice.",
-  "Not a coverage opinion.",
-  "Not an underwriting standard.",
-  "Not actuarial pricing guidance.",
-  "Not claims approval guidance.",
-  "Not certification, endorsement, insurer acceptance, or coverage guarantee.",
-  "Not coverage-ready or underwriting-ready status for any system.",
-  "No public DOCX artifact is staged."
-];
-const contextLinks = [
-  { href: gaicHubPath, label: "GAIC main white paper hub" },
-  { href: aiaawpHubPath, label: "AIAAWP auditability sibling" },
-  { href: "/evidence/", label: "Evidence Registry / Citation Kit" },
-  { href: "/definitions/", label: "Definitions index" },
-  { href: "/concepts/map/", label: "Concepts Map / Entity Mesh" },
-  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
-  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-  { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-  { href: "/projects/mplp/", label: "MPLP protocol path" },
-  { href: "/governance/", label: "Regulatory and enterprise governance" },
-  { href: "/playbooks/", label: "Applied playbooks" },
-  { href: "/mapping/extended-ecosystem/", label: "Extended ecosystem mapping" }
-];
-const aboutTerms = [
-  "Agentic AI Insurability",
-  "AI risk transfer",
-  "Agentic Insurability Objects",
-  "Agentic Insurability Readiness Model",
-  "AIO",
-  "AIRM",
-  "Insured Legal Subject",
-  "Agentic Risk Object",
-  "Claim Evidence Chain",
-  "Lifecycle Evidence",
-  "Agentic Lifecycle Governance",
-  "Global AI Compliance White Paper 2026",
-  "Agentic AI Auditability & Assurance White Paper 2026",
-  "Missing Regulatory Objects",
-  "AARM",
-  "Evidence Chain",
-  "Authority Boundary",
-  "Accepted Outcome",
-  "Enterprise Risk Transfer"
-];
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["TechArticle", "Report"],
-  "@id": `${pageUrl}#whitepaper`,
-  headline: reportTitle,
-  alternativeHeadline: reportSubtitle,
-  description: metaDescription,
-  url: pageUrl,
-  identifier: documentId,
-  inLanguage: "en",
-  author: {
-    "@id": `${siteConfig.siteUrl}#person`
-  },
-  publisher: {
-    "@id": `${siteConfig.siteUrl}#person`
-  },
-  datePublished: "2026-05-21",
-  dateModified: "2026-05-21",
-  version: reportVersion,
-  genre: "Technical report",
-  creativeWorkStatus: "PublicationCandidate",
-  citation: citationText,
-  keywords: aboutTerms,
-  isBasedOn: {
-    "@type": "CreativeWork",
-    name: "Global AI Compliance White Paper 2026",
-    url: `${siteConfig.siteUrl}${gaicHubPath}`
-  },
-  isPartOf: [
-    {
-      "@type": "CreativeWorkSeries",
-      name: "Agentic Lifecycle Governance Industry Series"
-    },
-    {
-      "@id": `${siteConfig.siteUrl}#website`
-    }
-  ],
-  about: aboutTerms.map((term) => ({
-    "@type": "Thing",
-    name: term
-  })),
-  mentions: [
-    "AIO",
-    "AIRM",
-    "Insured Legal Subject",
-    "Agentic Risk Object",
-    "Claim Evidence Chain",
-    "Agentic AI Auditability",
-    "AARM",
-    "MPLP"
-  ].map((term) => ({
-    "@type": "Thing",
-    name: term
-  })),
-  encoding: [
-    {
-      "@type": "MediaObject",
-      encodingFormat: "text/html",
-      contentUrl: htmlUrl,
-      sha256: shaRows[0].value
-    },
-    {
-      "@type": "MediaObject",
-      encodingFormat: "application/pdf",
-      contentUrl: pdfUrl,
-      sha256: shaRows[1].value
-    }
-  ],
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `${pageUrl}#webpage`
-  }
-};
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -209,317 +31,148 @@ const pageJsonLd = {
   url: pageUrl,
   name: reportTitle,
   description: metaDescription,
-  breadcrumb: {
-    "@id": `${pageUrl}#breadcrumb`
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
   },
-  mainEntity: {
-    "@id": `${pageUrl}#whitepaper`
-  }
-};
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": `${pageUrl}#breadcrumb`,
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: siteConfig.siteUrl
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Research",
-      item: `${siteConfig.siteUrl}/research/`
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: reportTitle,
-      item: pageUrl
-    }
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  creativeWorkStatus: "UnderEditorialReview",
+  about: [
+    { "@type": "Thing", name: "Agentic AI Insurability" },
+    { "@type": "Thing", name: "Risk Transfer" },
+    { "@type": "Thing", name: "Lifecycle Evidence" }
   ]
-};
-const artifactListJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "@id": `${pageUrl}#artifacts`,
-  name: "AIIRWP public staging artifacts",
-  itemListElement: [
-    { name: "Read HTML", url: htmlUrl },
-    { name: "Download PDF", url: pdfUrl },
-    { name: "Manifest", url: manifestUrl },
-    { name: "Checksums", url: checksumUrl }
-  ].map((item, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    name: item.name,
-    url: item.url
-  }))
-};
-const definedTermSetJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "DefinedTermSet",
-  "@id": `${pageUrl}#defined-terms`,
-  name: "AIIRWP 2026 Terms",
-  description: "Key terms used by the Agentic AI Insurability & Risk Transfer White Paper 2026.",
-  hasDefinedTerm: aboutTerms.slice(0, 12).map((term) => ({
-    "@type": "DefinedTerm",
-    name: term,
-    inDefinedTermSet: `${pageUrl}#defined-terms`
-  }))
 };
 ---
 
 <BaseLayout
   title={reportTitle}
   description={metaDescription}
-  shareTitle={reportTitle}
+  shareTitle={`${reportTitle} — Under Editorial Review`}
   shareDescription={metaDescription}
-  twitterTitle={reportTitle}
+  twitterTitle={`${reportTitle} — Under Editorial Review`}
   twitterDescription={metaDescription}
   canonicalPath={canonicalPath}
-  ogType="article"
-  jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, artifactListJsonLd, definedTermSetJsonLd]}
-  keywords={aboutTerms}
-  metaTags={citationMetaTags}
+  noindex={true}
+  jsonLd={[pageJsonLd]}
+  keywords={[
+    "Agentic AI Insurability",
+    "AI risk transfer",
+    "lifecycle evidence",
+    "whitepaper editorial review",
+    "Agentic Lifecycle Governance"
+  ]}
   ogImagePath="/social/jearonwong-og.png"
-  ogImageAlt="Agentic AI Insurability & Risk Transfer White Paper 2026 by Jearon Wong"
+  ogImageAlt="AIIRWP editorial review placeholder by Jearon Wong"
 >
-  <div class="zone-a registry-grid release-hero-shell">
+  <div class="zone-a registry-grid hold-hero-shell">
     <SiteHeader />
-    <section class="shell release-hero">
-      <div class="release-hero__copy">
+    <section class="shell hold-hero">
+      <div class="hold-copy">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span>/</span>
           <a href="/research/">Research</a>
         </nav>
+        <div class="registry-annotation hold-status">
+          <span class="registry-key">STATUS</span>: <span class="registry-value">UNDER EDITORIAL REVIEW</span>
+        </div>
         <h1>{reportTitle}</h1>
-        <p class="release-subtitle">{reportSubtitle}</p>
-        <p class="release-thesis">
-          This public staging candidate frames insurability as a lifecycle evidence problem: separating
-          the insured legal subject from the agentic risk object, mapping responsibility, and preserving
-          claim-reviewable evidence without turning the framework into insurance advice.
+        <p class="hold-subtitle">{reportSubtitle}</p>
+        <p class="hold-thesis">
+          The AIIRWP public route is temporarily held for publication-quality reset. The previously
+          staged artifact is being treated as an internal evidence and source pack, not as the
+          release-quality public white paper body.
         </p>
-        <div class="hero-actions" aria-label="White paper actions">
-          <a href={`${assetBase}/AIIRWP-2026-v0.1.html`} class="button button-primary">Read HTML</a>
-          <a href={`${assetBase}/AIIRWP-2026-v0.1.pdf`} class="button button-outline">Download PDF</a>
-          <a href="#cite" class="button button-outline">Cite this paper</a>
-        </div>
       </div>
-      <aside class="release-meta-panel" aria-label="Release metadata">
-        <div class="registry-annotation">
-          <span class="registry-key">STATUS</span>: <span class="registry-value">PUBLIC_STAGING_CANDIDATE</span>
-        </div>
-        <div class="meta-line">
-          <span>Document ID</span>
-          <strong>{documentId}</strong>
-        </div>
-        <div class="meta-line">
-          <span>Release state</span>
-          <strong>{releaseState}</strong>
-        </div>
-        <div class="meta-line">
-          <span>Artifact role model</span>
-          <strong>Public staging exposes HTML and PDF only. No DOCX is staged.</strong>
-        </div>
+      <aside class="hold-panel" aria-label="Editorial review status">
+        <strong>Publication hold</strong>
+        <p>
+          Public promotion and artifact CTAs are paused while the paper is rewritten around a
+          coherent industry problem definition, explanatory argument, and evidence-backed thesis.
+        </p>
       </aside>
     </section>
   </div>
 
   <div class="zone-b page-body page-body--standard">
-    <article class="shell release-stack">
-      <section class="release-section release-grid">
-        <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">SERIES</span>: <span class="registry-value">AGENTIC_LIFECYCLE_GOVERNANCE</span>
-          </div>
-          <h2>Part of the same white paper standard.</h2>
-          <p class="section-lead">
-            AIIRWP reuses the GAIC/AIAAWP publication shell, responsive reading model,
-            PDF A4 profile, metadata discipline, checksum pattern, and boundary language. It interprets
-            the same root lifecycle governance framework through insurability and risk transfer.
-          </p>
+    <article class="shell hold-stack">
+      <section class="registry-chassis hold-section">
+        <div class="registry-annotation">
+          <span class="registry-key">R9_HOLD</span>: <span class="registry-value">PUBLICATION_QUALITY_RESET</span>
         </div>
-        <div class="series-ledger">
-          {seriesLinks.map((item, index) => (
-            <a href={item.href}>
-              <strong>{String(index + 1).padStart(2, "0")}</strong>
-              <span>{item.label}</span>
-              <em>{item.body}</em>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section class="release-section release-grid">
-        <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">KEY_CONCEPTS</span>
-          </div>
-          <h2>Key concepts covered.</h2>
-          <p class="section-lead">
-            The paper distinguishes market signals from coverage conclusions and treats AIO and AIRM
-            as Jearon Wong analytical synthesis terms, not insurer requirements, certifications, or standards.
-          </p>
-        </div>
-        <div class="concept-ledger">
-          {keyConcepts.map((concept, index) => (
-            <a href={concept.href}><strong>{String(index + 1).padStart(2, "0")}</strong>{concept.label}</a>
-          ))}
-        </div>
-      </section>
-
-      <section class="release-section" aria-labelledby="download-title">
-        <div class="section-heading-row">
-          <div>
-            <div class="registry-annotation section-tag">
-              <span class="registry-key">ARTIFACTS</span>
-            </div>
-            <h2 id="download-title">Read, download, and verify.</h2>
-          </div>
-          <a href={`${assetBase}/checksums.sha256`} class="section-side-link">View checksums</a>
-        </div>
-        <div class="artifact-grid">
-          <a href={`${assetBase}/AIIRWP-2026-v0.1.html`} class="artifact-card">
-            <span class="artifact-kind">HTML</span>
-            <strong>Read full HTML</strong>
-            <span>Responsive web-reading staging candidate</span>
-          </a>
-          <a href={`${assetBase}/AIIRWP-2026-v0.1.pdf`} class="artifact-card">
-            <span class="artifact-kind">PDF</span>
-            <strong>Download PDF</strong>
-            <span>Fixed-layout staging candidate</span>
-          </a>
-          <a href={`${assetBase}/manifest.json`} class="artifact-card">
-            <span class="artifact-kind">JSON</span>
-            <strong>Public staging manifest</strong>
-            <span>Artifact role model and integrity record</span>
-          </a>
-          <a href={`${assetBase}/checksums.sha256`} class="artifact-card">
-            <span class="artifact-kind">SHA256</span>
-            <strong>Checksums</strong>
-            <span>Public artifact hashes</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="cite" class="release-section release-grid" aria-labelledby="citation-title">
-        <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">CITATION_IDENTITY</span>
-          </div>
-          <h2 id="citation-title">Citation and artifact identity.</h2>
-          <p class="citation-block">{citationText}</p>
-          <dl class="identity-ledger" aria-label="Technical report identity">
-            <div><dt>Title</dt><dd>{reportTitle}</dd></div>
-            <div><dt>Subtitle</dt><dd>{reportSubtitle}</dd></div>
-            <div><dt>Author</dt><dd>Jearon Wong</dd></div>
-            <div><dt>Document ID</dt><dd>{documentId}</dd></div>
-            <div><dt>Status</dt><dd>{reportVersion}; deployment and production reverification required.</dd></div>
-            <div><dt>Publication month</dt><dd>{publicationMonth}</dd></div>
-            <div><dt>Canonical URL</dt><dd><a href={pageUrl}>{pageUrl}</a></dd></div>
-            <div><dt>HTML full text</dt><dd><a href={htmlUrl}>{htmlUrl}</a></dd></div>
-            <div><dt>PDF</dt><dd><a href={pdfUrl}>{pdfUrl}</a></dd></div>
-            <div><dt>Manifest</dt><dd><a href={manifestUrl}>{manifestUrl}</a></dd></div>
-            <div><dt>Checksums</dt><dd><a href={checksumUrl}>{checksumUrl}</a></dd></div>
-          </dl>
-        </div>
-        <div class="boundary-panel">
-          <strong>Boundary statement</strong>
-          <p>
-            This page presents a public staging candidate and requires R7B deployment and production
-            reverification before any production-live verification, final seal, or author release claim.
-            It does not provide insurance advice, legal advice, a coverage opinion, an underwriting
-            standard, claims approval guidance, certification, endorsement, insurer acceptance,
-            coverage-ready status, or underwriting-ready status.
-          </p>
-        </div>
-      </section>
-
-      <section class="release-section release-grid" aria-labelledby="non-goals-title">
-        <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">NON_GOALS</span>: <span class="registry-value">BOUNDARY_SAFE</span>
-          </div>
-          <h2 id="non-goals-title">What the paper does not do.</h2>
-          <p class="section-lead">
-            The staging candidate is meant for source-grounded research, route integration, and later
-            production reverification. Its boundary language is part of the publication standard.
-          </p>
-        </div>
-        <ul class="non-goal-list">
-          {nonGoals.map((item) => <li>{item}</li>)}
+        <h2>Why this route is held.</h2>
+        <p>
+          R7B verified that the route and artifacts were technically reachable. R9 corrects a different
+          problem: the staged body did not read like a publication-grade industry white paper. It exposed
+          internal source, evidence, QA, and mapping scaffolding that belongs in an evidence package, not
+          in the reader-facing body.
+        </p>
+        <ul class="hold-list">
+          {statusNotes.map((item) => <li>{item}</li>)}
         </ul>
       </section>
 
-      <section class="release-section" aria-labelledby="integrity-title">
-        <div class="section-heading-row">
-          <div>
-            <div class="registry-annotation section-tag">
-              <span class="registry-key">INTEGRITY</span>
-            </div>
-            <h2 id="integrity-title">Artifact integrity.</h2>
-          </div>
-          <a href={`${assetBase}/manifest.json`} class="section-side-link">Open manifest</a>
+      <section class="registry-chassis hold-section">
+        <div class="registry-annotation">
+          <span class="registry-key">R10_DIRECTION</span>: <span class="registry-value">PUBLICATION_GRADE_REWRITE</span>
         </div>
-        <div class="integrity-grid">
-          <div class="commit-ledger">
-            <div><span>Accepted source gate</span><strong>R6B final candidate artifact QA accepted with notes</strong></div>
-            <div><span>Document ID</span><strong>{documentId}</strong></div>
-            <div><span>Page count</span><strong>59</strong></div>
-            <div><span>Next phase</span><strong>R7B production reverification required.</strong></div>
-          </div>
-          <div class="checksum-table" aria-label="SHA256 checksums">
-            {shaRows.map((row) => (
-              <div class="checksum-row">
-                <span>{row.label}</span>
-                <code>{row.value}</code>
-              </div>
-            ))}
-          </div>
-        </div>
-        <p class="integrity-note">
-          Public staging artifacts were derived from the R6B-accepted internal candidate HTML/PDF.
-          R7 normalized public-staging identity and metadata only, preserved the 59-page A4 PDF,
-          and did not introduce public DOCX distribution.
+        <h2>Rewrite direction.</h2>
+        <p>
+          The next candidate must first explain the industry problem: why existing AI insurance logic is
+          fragmented, why agentic workflows cross policy boundaries, and why claims reconstruction needs
+          lifecycle evidence. AIO and AIRM should appear only after the reader understands the problem.
         </p>
+        <ul class="hold-list">
+          {rewritePrinciples.map((item) => <li>{item}</li>)}
+        </ul>
       </section>
 
-      <section class="release-section release-grid" aria-labelledby="context-title">
+      <section class="registry-chassis hold-section hold-grid">
         <div>
-          <div class="registry-annotation section-tag">
-            <span class="registry-key">CONTEXT</span>
+          <div class="registry-annotation">
+            <span class="registry-key">SERIES_CONTEXT</span>
           </div>
-          <h2 id="context-title">Follow the surrounding graph.</h2>
-          <p class="section-lead">
-            AIIRWP belongs to the Agentic Lifecycle Governance Industry Series and should be read with
-            GAIC, AIAAWP, the Evidence Registry, and the concept graph rather than as a standalone
-            insurance rulebook.
+          <h2>Series context remains.</h2>
+          <p>
+            GAIC remains the root lifecycle governance paper. AIAAWP remains the auditability and
+            assurance interpretation. AIIRWP remains planned as the insurability and risk-transfer
+            interpretation, but the current body is under revision.
           </p>
         </div>
-        <div class="internal-link-grid">
-          {contextLinks.map((link) => (
-            <a href={link.href}>{link.label}</a>
-          ))}
+        <div class="hold-links">
+          <a href={gaicHubPath}>Global AI Compliance White Paper 2026</a>
+          <a href={aiaawpHubPath}>Agentic AI Auditability & Assurance White Paper 2026</a>
+          <a href="/research/">Research index</a>
+          <a href="/evidence/">Evidence Registry</a>
         </div>
+      </section>
+
+      <section class="registry-chassis boundary-panel">
+        <strong>Boundary statement</strong>
+        <p>
+          This page does not claim Final Seal, release execution, external adoption, indexing,
+          SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status,
+          underwriting-ready status, certification, endorsement, insurance advice, legal advice,
+          coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval
+          guidance.
+        </p>
       </section>
     </article>
   </div>
 </BaseLayout>
 
 <style>
-  .release-hero-shell {
-    min-height: 100svh;
+  .hold-hero-shell {
+    min-height: 82svh;
     border-bottom: 1px solid var(--border-registry);
   }
 
-  .release-hero {
-    min-height: 100svh;
+  .hold-hero {
+    min-height: 82svh;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.38fr);
     gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
     padding-top: clamp(7rem, 8vw, 8rem);
@@ -547,17 +200,22 @@ const definedTermSetJsonLd = {
     color: var(--accent-proof);
   }
 
-  .release-hero h1 {
+  .hold-status {
+    margin-bottom: 1.1rem;
+    color: var(--accent-proof);
+  }
+
+  .hold-hero h1 {
     max-width: 13ch;
     margin: 0;
     color: var(--text-registry-primary);
-    font-size: clamp(3rem, 7vw, 6.45rem);
+    font-size: clamp(3rem, 7vw, 6.2rem);
     line-height: 0.94;
     letter-spacing: 0;
   }
 
-  .release-subtitle {
-    max-width: 44rem;
+  .hold-subtitle {
+    max-width: 45rem;
     margin: 1.25rem 0 0;
     color: var(--accent-proof);
     font-family: var(--font-mono);
@@ -567,402 +225,108 @@ const definedTermSetJsonLd = {
     text-transform: uppercase;
   }
 
-  .release-thesis {
-    max-width: 50rem;
+  .hold-thesis {
+    max-width: 52rem;
     margin: 1.4rem 0 0;
-    color: rgba(241, 245, 249, 0.76);
-    font-size: clamp(1.06rem, 1.65vw, 1.25rem);
-    line-height: 1.7;
+    color: rgba(241, 245, 249, 0.78);
+    font-size: clamp(1.08rem, 1.4vw, 1.22rem);
+    line-height: 1.62;
   }
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    margin-top: 2rem;
-  }
-
-  .release-meta-panel {
-    display: grid;
-    gap: 1.1rem;
-    padding: var(--registry-card-padding);
-    border: 1px solid var(--border-registry);
-    background: rgba(26, 26, 26, 0.84);
-    backdrop-filter: blur(10px);
-  }
-
-  .meta-line {
-    display: grid;
-    gap: 0.35rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-registry);
-  }
-
-  .meta-line span {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    color: var(--text-registry-muted);
-    text-transform: uppercase;
-  }
-
-  .meta-line strong {
-    color: var(--text-registry-primary);
-    font-size: 0.94rem;
-    line-height: 1.45;
-  }
-
-  .release-stack {
-    display: grid;
-    gap: var(--space-8);
-  }
-
-  .release-section {
-    display: grid;
-    gap: 1.35rem;
-  }
-
-  .release-grid {
-    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.55fr);
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: start;
-  }
-
-  .section-tag {
-    margin-bottom: 0.85rem;
-  }
-
-  .release-section h2 {
-    max-width: 17ch;
-    margin: 0;
-    color: var(--current-text);
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 0.98;
-    letter-spacing: 0;
-  }
-
-  .section-lead {
-    max-width: 66ch;
-    margin: 1rem 0 0;
-    color: var(--current-muted);
-    font-size: 1.04rem;
-    line-height: 1.75;
-  }
-
-  .concept-ledger,
-  .series-ledger,
-  .internal-link-grid {
-    display: grid;
-    border-top: 1px solid var(--current-line);
-  }
-
-  .concept-ledger a,
-  .series-ledger a {
-    display: grid;
-    gap: 0.35rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--current-line);
-    color: var(--current-text);
-    text-decoration: none;
-  }
-
-  .concept-ledger a {
-    grid-template-columns: 3rem 1fr;
-    gap: 1rem;
-  }
-
-  .concept-ledger a:hover,
-  .series-ledger a:hover,
-  .internal-link-grid a:hover {
-    color: var(--accent-signal);
-  }
-
-  .concept-ledger strong,
-  .series-ledger strong {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--accent-signal);
-    letter-spacing: 0.08em;
-  }
-
-  .series-ledger span {
-    font-weight: 750;
-    line-height: 1.35;
-  }
-
-  .series-ledger em {
-    color: var(--current-muted);
-    font-size: 0.9rem;
-    font-style: normal;
-    line-height: 1.55;
-  }
-
-  .section-heading-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-    align-items: end;
-  }
-
-  .section-side-link {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-signal);
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .section-side-link:hover {
-    color: var(--current-text);
-  }
-
-  .artifact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .artifact-card {
-    display: grid;
-    align-content: start;
-    min-height: 12rem;
-    padding: var(--registry-supporting-card-padding);
-    border: 1px solid var(--current-border);
-    background: var(--current-surface);
-    color: inherit;
-    text-decoration: none;
-    transition: border-color 0.18s ease, transform 0.18s ease;
-  }
-
-  .artifact-card:hover {
-    border-color: var(--accent-signal);
-    transform: translateY(-2px);
-  }
-
-  .artifact-kind {
-    margin-bottom: 2rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--accent-signal);
-    letter-spacing: 0.08em;
-  }
-
-  .artifact-card strong {
-    color: var(--current-text);
-    font-size: 1.06rem;
-    line-height: 1.25;
-  }
-
-  .artifact-card span:last-child {
-    margin-top: 0.65rem;
-    color: var(--current-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .citation-block {
-    margin: 1rem 0 0;
-    padding: 1.2rem 1.35rem;
-    border-left: 3px solid var(--accent-proof);
-    background: var(--current-surface);
-    color: var(--current-text);
-    font-size: 1rem;
-    line-height: 1.72;
-  }
-
-  .identity-ledger {
-    display: grid;
-    margin: 1rem 0 0;
-    border-top: 1px solid var(--current-line);
-  }
-
-  .identity-ledger div {
-    display: grid;
-    grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr);
-    gap: 1rem;
-    padding: 0.78rem 0;
-    border-bottom: 1px solid var(--current-line);
-  }
-
-  .identity-ledger dt {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--accent-signal);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .identity-ledger dd {
-    min-width: 0;
-    margin: 0;
-    color: var(--current-text);
-    overflow-wrap: anywhere;
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  .identity-ledger a {
-    color: inherit;
-    text-decoration-color: var(--current-line);
-    text-underline-offset: 0.16em;
-  }
-
-  .identity-ledger a:hover {
-    color: var(--accent-signal);
-  }
-
+  .hold-panel,
   .boundary-panel {
-    padding: var(--registry-card-padding);
-    border: 1px solid var(--current-border);
-    background: #111111;
-    color: var(--text-registry-primary);
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    background: rgba(15, 23, 42, 0.56);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
   }
 
+  .hold-panel strong,
   .boundary-panel strong {
     display: block;
-    margin-bottom: 0.75rem;
-    color: var(--accent-proof);
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    color: var(--text-registry-primary);
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
   }
 
+  .hold-panel p,
   .boundary-panel p {
     margin: 0;
-    color: rgba(241, 245, 249, 0.76);
-    font-size: 0.95rem;
+    color: var(--current-muted);
     line-height: 1.7;
   }
 
-  .non-goal-list {
+  .hold-stack {
     display: grid;
-    gap: 0;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--current-line);
-    list-style: none;
+    gap: var(--space-5);
   }
 
-  .non-goal-list li,
-  .internal-link-grid a {
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--current-line);
+  .hold-section {
+    padding: var(--registry-panel-padding);
+  }
+
+  .hold-section h2 {
+    margin: 0.9rem 0 1rem;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: 0;
     color: var(--current-text);
-    text-decoration: none;
-    font-weight: 650;
   }
 
-  .integrity-grid {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
-    gap: 1.25rem;
-  }
-
-  .integrity-note {
-    max-width: var(--lead-measure);
+  .hold-section p {
+    max-width: 74ch;
     margin: 0;
     color: var(--current-muted);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hold-list {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1.4rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--current-muted);
     line-height: 1.65;
   }
 
-  .commit-ledger,
-  .checksum-table {
-    border: 1px solid var(--current-border);
-    background: var(--current-surface);
-  }
-
-  .commit-ledger div,
-  .checksum-row {
+  .hold-grid {
     display: grid;
-    gap: 0.45rem;
-    padding: 0.9rem 1rem;
-    border-bottom: 1px solid var(--current-line);
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.34fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
   }
 
-  .commit-ledger div:last-child,
-  .checksum-row:last-child {
-    border-bottom: 0;
+  .hold-links {
+    display: grid;
+    gap: 0.75rem;
   }
 
-  .commit-ledger span,
-  .checksum-row span {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
+  .hold-links a {
+    display: block;
+    border: 1px solid var(--current-line);
+    padding: 0.85rem 1rem;
     color: var(--accent-signal);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .commit-ledger strong,
-  .checksum-row code {
-    min-width: 0;
-    overflow-wrap: anywhere;
-    color: var(--current-text);
     font-family: var(--font-mono);
-    font-size: 0.78rem;
-    line-height: 1.5;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
-  @media (max-width: 1120px) {
-    .artifact-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .hold-links a:hover {
+    color: var(--current-text);
+    border-color: var(--accent-signal);
   }
 
-  @media (max-width: 980px) {
-    .release-hero,
-    .release-grid,
-    .integrity-grid {
+  @media (max-width: 820px) {
+    .hold-hero,
+    .hold-grid {
       grid-template-columns: 1fr;
     }
 
-    .identity-ledger div {
-      grid-template-columns: 1fr;
-      gap: 0.35rem;
-    }
-
-    .release-hero h1 {
-      max-width: 11ch;
-    }
-
-    .release-hero,
-    .release-grid,
-    .integrity-grid,
-    .release-meta-panel,
-    .concept-ledger,
-    .series-ledger,
-    .checksum-table,
-    .commit-ledger {
-      min-width: 0;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .release-hero {
-      padding-top: 6.75rem;
-    }
-
-    .release-hero h1 {
-      font-size: clamp(2.55rem, 16vw, 3.7rem);
-    }
-
-    .hero-actions,
-    .section-heading-row {
-      align-items: stretch;
-      flex-direction: column;
-    }
-
-    .hero-actions .button {
-      width: 100%;
-    }
-
-    .artifact-grid {
-      grid-template-columns: 1fr;
+    .hold-hero h1 {
+      max-width: 12ch;
+      font-size: clamp(2.7rem, 15vw, 4.2rem);
     }
   }
 </style>

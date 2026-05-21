@@ -234,7 +234,7 @@ export const definitions: DefinitionEntry[] = [
       "Not insurance advice, a coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, certification, or a guarantee that any system is insurable.",
     evidence: [
       {
-        label: "AIIRWP 2026 white paper hub",
+        label: "AIIRWP editorial review status",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -254,8 +254,8 @@ export const definitions: DefinitionEntry[] = [
       "Not insurer product requirements, policy terms, legal liability objects, certification criteria, or a mandatory implementation schema.",
     evidence: [
       {
-        label: "AIIRWP: Agentic Insurability Objects",
-        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08"
+        label: "AIIRWP editorial review status",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
@@ -274,8 +274,8 @@ export const definitions: DefinitionEntry[] = [
       "Not an actuarial score, insurer acceptance, coverage guarantee, underwriting standard, claims approval guide, certification, vendor score, or procurement benchmark.",
     evidence: [
       {
-        label: "AIIRWP: Agentic Insurability Readiness Model",
-        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15"
+        label: "AIIRWP editorial review status",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
@@ -294,8 +294,8 @@ export const definitions: DefinitionEntry[] = [
       "Not a liability determination, coverage opinion, insured-status opinion, or conclusion that a policy applies.",
     evidence: [
       {
-        label: "AIIRWP: insured subject and agentic risk object distinction",
-        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02"
+        label: "AIIRWP editorial review status",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
@@ -314,8 +314,8 @@ export const definitions: DefinitionEntry[] = [
       "Not the insured party, not a legal subject, not a standalone coverage trigger, and not a claim that a system is insurable.",
     evidence: [
       {
-        label: "AIIRWP: insured subject and agentic risk object distinction",
-        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02"
+        label: "AIIRWP editorial review status",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
@@ -334,8 +334,8 @@ export const definitions: DefinitionEntry[] = [
       "Not claims approval guidance, a payment guarantee, legal causation proof, settlement advice, or an insurer-required form.",
     evidence: [
       {
-        label: "AIIRWP: claims evidence and loss reconstruction",
-        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10"
+        label: "AIIRWP editorial review status",
+        href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [

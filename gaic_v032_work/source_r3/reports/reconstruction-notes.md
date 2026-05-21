@@ -4645,3 +4645,36 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R8 does not claim Final Seal, owner release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
 
 **WP3-R8 Status:** WP3-R8 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED.
+
+## WP3-R9 Notes (May 21, 2026)
+
+**Scope:** Emergency publication hold and whitepaper quality reset for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `b9e06748b84c78761a4baea7f4c7f039dcf30553` and confirmed `origin/HEAD` matched before R9 work.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected R7B and R8 reports, the AIIRWP route, public artifact directory, homepage, research index, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, Extended Ecosystem Mapping, GAIC/AIAAWP hubs, entity graph, `llms.txt`, sitemap configuration, robots, SOURCE MASTER, known issues, and reconstruction notes.
+4. Replaced the AIIRWP public route body with an editorial review placeholder and `noindex` metadata.
+5. Removed active public `Read full HTML` and `Download PDF` CTAs for AIIRWP and reframed public exposure as `Under editorial review` / `Publication revision pending`.
+6. Downgraded AIIRWP semantic exposure across homepage, research index, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, Extended Ecosystem Mapping, GAIC hub, and AIAAWP hub.
+7. Removed AIIRWP artifact promotion from `llms.txt` and changed AIIRWP entity graph nodes/edges to editorial-review status.
+8. Removed AIIRWP route/artifact promotion from sitemap configuration while leaving GAIC and AIAAWP untouched.
+9. Added robots disallow rules for the old AIIRWP HTML/PDF/manifest/checksum artifact URLs while leaving the editorial review route available.
+10. Created the emergency hold report, whitepaper quality root-cause audit, body-vs-evidence separation plan, publication-grade rewrite brief, Whitepaper Body Quality Gate, boundary QA, build validation, and final QA.
+
+**Artifact discipline:**
+
+- No new public AIIRWP HTML artifact was generated.
+- No new PDF was generated.
+- No DOCX was created.
+- Existing staged AIIRWP HTML/PDF files remain only as historical staging artifacts and are not promoted as release-quality.
+- GAIC and AIAAWP public artifacts were not changed.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R9 is an emergency publication hold and quality reset only.
+- WP3-R9 does not claim Final Seal, owner release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R9 Status:** WP3-R9 EMERGENCY PUBLICATION HOLD AND WHITEPAPER QUALITY RESET COMPLETE / READY FOR WP3-R10 PUBLICATION-GRADE REWRITE.

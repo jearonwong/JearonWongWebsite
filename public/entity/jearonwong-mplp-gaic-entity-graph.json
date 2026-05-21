@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-r7-aiirwp-public-staging",
+  "version": "2026-05-r9-aiirwp-editorial-hold",
   "generated_at": "2026-05-21",
-  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, AIIRWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, production verification, or sealed artifact status. AIIRWP is a public staging candidate and requires R7B production reverification.",
+  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, AIIRWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, author-release execution, or sealed artifact status. AIIRWP is under editorial review after R9; the previous staged body is treated as internal evidence/source-pack history and is not promoted as a release-quality white paper.",
   "nodes": [
     {
       "id": "jearon-wong",
@@ -234,7 +234,7 @@
       "type": "CreativeWorkSeries",
       "canonical_url": "https://www.jearonwong.com/research/",
       "source_authority": "owned-canonical",
-      "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets.",
+      "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets. AIIRWP is currently under editorial review and pending a publication-grade rewrite.",
       "boundary": "Series grouping only; not certification, legal advice, regulator approval, final release, or sealed artifact status."
     },
     {
@@ -312,64 +312,64 @@
     {
       "id": "aiirwp-white-paper-2026",
       "name": "Agentic AI Insurability & Risk Transfer White Paper 2026",
-      "type": "TechnicalReport",
+      "type": "WebPage",
       "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-      "source_authority": "authored-analysis",
-      "description": "Public staging candidate AIIRWP-2026-v0.1-R6-CANDIDATE defining agentic AI insurability, risk-transfer evidence, Agentic Insurability Objects, AIRM, insured legal subject and agentic risk object separation, and claim evidence chains.",
-      "boundary": "Public staging candidate; not final, sealed, production verified, insurance advice, coverage opinion, underwriting standard, certification, endorsement, insurer acceptance, coverage-ready status, underwriting-ready status, or claims approval guidance."
+      "source_authority": "owned-canonical / editorial-review",
+      "description": "Editorial review placeholder for the planned AIIRWP insurability and risk-transfer interpretation. The previous staged body is held as internal evidence/source-pack history while a publication-grade rewrite is prepared.",
+      "boundary": "Under editorial review; not final, sealed, author-release executed, insurance advice, coverage opinion, underwriting standard, certification, endorsement, insurer acceptance, coverage-ready status, underwriting-ready status, or claims approval guidance."
     },
     {
       "id": "agentic-ai-insurability",
       "name": "Agentic AI Insurability",
       "type": "GovernanceConcept",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
-      "source_authority": "authored-analysis",
-      "description": "Insurability framing for agentic work through lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "Planned AIIRWP framing for agentic work through lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records.",
       "boundary": "Author-analytical concept; not insurance advice, coverage opinion, insurer acceptance, or underwriting standard."
     },
     {
       "id": "agentic-insurability-objects",
       "name": "Agentic Insurability Objects",
       "type": "GovernanceObject",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
-      "source_authority": "authored-analysis",
-      "description": "AIO object model for separating insured legal subject, agentic risk object, authority, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "AIO remains an author-synthesis rewrite target for separating insured legal subject, agentic risk object, authority, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions.",
       "boundary": "Author-synthesis object model; not an insurer product requirement, policy term, legal liability object, or certification criterion."
     },
     {
       "id": "insured-legal-subject",
       "name": "Insured Legal Subject",
       "type": "GovernanceConcept",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
-      "source_authority": "authored-analysis",
-      "description": "The person or organization whose risk-transfer relationship must remain separate from the agentic system, work unit, tool, model, or workflow being analyzed.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "Planned AIIRWP concept for the person or organization whose risk-transfer relationship must remain separate from the agentic system, work unit, tool, model, or workflow being analyzed.",
       "boundary": "Not a liability determination, coverage opinion, insured-status opinion, or conclusion that a policy applies."
     },
     {
       "id": "agentic-risk-object",
       "name": "Agentic Risk Object",
       "type": "GovernanceObject",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
-      "source_authority": "authored-analysis",
-      "description": "The bounded agentic work unit, action path, dependency, evidence chain, or loss-relevant lifecycle object being evaluated for risk-transfer analysis.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "Planned AIIRWP concept for the bounded agentic work unit, action path, dependency, evidence chain, or loss-relevant lifecycle object being evaluated for risk-transfer analysis.",
       "boundary": "Not the insured party, not a legal subject, not a standalone coverage trigger, and not a claim that a system is insurable."
     },
     {
       "id": "claim-evidence-chain",
       "name": "Claim Evidence Chain",
       "type": "GovernanceConcept",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
-      "source_authority": "authored-analysis",
-      "description": "Lifecycle evidence needed to reconstruct authority, action, loss event, dependency, remediation, dispute posture, and boundary risk for claim review.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "Planned AIIRWP concept for lifecycle evidence needed to reconstruct authority, action, loss event, dependency, remediation, dispute posture, and boundary risk for claim review.",
       "boundary": "Not claims approval guidance, a payment guarantee, legal causation proof, settlement advice, or an insurer-required form."
     },
     {
       "id": "airm",
       "name": "AIRM",
       "type": "EvaluationModel",
-      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
-      "source_authority": "authored-analysis",
-      "description": "Agentic Insurability Readiness Model describing L0-L5 evidence visibility and risk-transfer readiness vocabulary.",
+      "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "source_authority": "author-synthesis / editorial-review",
+      "description": "AIRM remains an author-synthesis rewrite target for L0-L5 evidence visibility and risk-transfer readiness vocabulary.",
       "boundary": "Readiness vocabulary only; not actuarial pricing guidance, certification, insurer acceptance, coverage guarantee, underwriting standard, claims approval guidance, vendor score, or procurement benchmark."
     }
   ],
@@ -722,23 +722,23 @@
       "source": "jearon-wong",
       "relation": "authored",
       "target": "aiirwp-white-paper-2026",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-      "boundary": "Authorship relation for public staging candidate; no external adoption, indexing, final seal, production verification, certification, insurer acceptance, coverage-ready status, or underwriting-ready status claim."
+      "boundary": "Authorship relation for planned AIIRWP; current public body is under editorial review and not promoted as release-quality. No external adoption, indexing, final seal, author-release execution, certification, insurer acceptance, coverage-ready status, or underwriting-ready status claim."
     },
     {
       "source": "aiirwp-white-paper-2026",
       "relation": "belongs_to",
       "target": "agentic-lifecycle-governance-industry-series",
-      "evidence_status": "owned-canonical",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-      "boundary": "Series relationship only; not a final, sealed, production-verified, certification, insurer-accepted, coverage-ready, or underwriting-ready claim."
+      "boundary": "Series relationship only; current AIIRWP body is under editorial review and not a final, sealed, author-release-executed, certification, insurer-accepted, coverage-ready, or underwriting-ready claim."
     },
     {
       "source": "aiirwp-white-paper-2026",
       "relation": "interprets",
       "target": "gaic-white-paper-2026",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Insurability and risk-transfer interpretation of the root lifecycle governance framework; no claim that GAIC makes systems insurable."
     },
@@ -746,7 +746,7 @@
       "source": "aiirwp-white-paper-2026",
       "relation": "defines",
       "target": "agentic-ai-insurability",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Concept definition, not insurance advice or coverage opinion."
     },
@@ -754,7 +754,7 @@
       "source": "aiirwp-white-paper-2026",
       "relation": "defines",
       "target": "agentic-insurability-objects",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Object-model definition, not insurer product requirement or certification criterion."
     },
@@ -762,7 +762,7 @@
       "source": "agentic-insurability-objects",
       "relation": "separates",
       "target": "insured-legal-subject",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Analytical separation only; not legal liability determination."
     },
@@ -770,7 +770,7 @@
       "source": "agentic-insurability-objects",
       "relation": "separates",
       "target": "agentic-risk-object",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Analytical separation only; not coverage trigger or insurability guarantee."
     },
@@ -778,7 +778,7 @@
       "source": "aiirwp-white-paper-2026",
       "relation": "formalizes",
       "target": "claim-evidence-chain",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Evidence-chain formalization only; not claims approval guidance or payment guarantee."
     },
@@ -786,7 +786,7 @@
       "source": "aiirwp-white-paper-2026",
       "relation": "formalizes",
       "target": "airm",
-      "evidence_status": "authored-analysis",
+      "evidence_status": "under-editorial-review",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "boundary": "Readiness model only; no actuarial score, certification, insurer acceptance, coverage guarantee, underwriting standard, or claims approval guidance."
     },
