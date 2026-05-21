@@ -1,5 +1,36 @@
 # Reconstruction Notes
 
+## WP3-R10 Publication-Grade Rewrite Notes (May 21, 2026)
+
+**Scope:** Create a source-only publication-grade rewrite of AIIRWP after R9 placed the previous public body on emergency publication hold. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at accepted R9 commit `cd323d91b14a458a08fb410d60fc88742d94a023`.
+2. Inspected R9 emergency hold, root-cause audit, body-vs-evidence separation plan, rewrite brief, and Whitepaper Body Quality Gate.
+3. Reviewed WP3 R0-R9 source/evidence reports, WP1/GAIC source truth, WP2/AIAAWP source truth, and the Whitepaper Series Publication SOP.
+4. Created `gaic_v032_work/source_r3/wp3_r10_publication_grade_rewrite/`.
+5. Wrote `AIIRWP-2026-v0.2-R10-PUBLICATION-GRADE-REWRITE.md` as a 10-chapter reader-facing body plus appendices A-D.
+6. Created body-quality gate self-check, body-vs-evidence separation check, source-note conversion plan, style-alignment notes, and author-review notes.
+7. Created R10 preflight, boundary QA, build/validation, and final QA reports.
+8. Updated SOURCE MASTER and governance records with R10 status.
+9. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+**Artifact discipline:**
+
+- No public HTML artifact was generated.
+- No public PDF was generated.
+- No DOCX was created.
+- No public CTAs were restored.
+- AIIRWP remains under editorial review publicly from R9.
+- Pre-existing untracked `public/social/*` assets remain outside R10 scope.
+
+**Boundary discipline:**
+
+- R10 does not claim Final Seal, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R10 Status:** WP3-R10 PUBLICATION-GRADE REWRITE COMPLETE / READY FOR WP3-R11 EDITORIAL BODY QUALITY QA.
+
 ## WHITEPAPER-R8E Adaptive PDF Table Layout Repair Notes (May 19, 2026)
 
 **Scope:** Replace any rigid table fallback direction with adaptive PDF table layout. Public distribution remains HTML plus PDF only; DOCX remains offboarded from public surfaces.

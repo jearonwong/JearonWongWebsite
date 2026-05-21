@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 20, 2026 (WP3-R2A External Source Accuracy Audit)
+**Last Updated:** May 21, 2026 (WP3-R10 Publication-Grade Rewrite)
+
+## WP3-R10 Publication-Grade Rewrite
+
+### Status: WP3-R10 PUBLICATION-GRADE REWRITE COMPLETE / READY FOR WP3-R11 EDITORIAL BODY QUALITY QA
+
+R10 creates a new source-only, reader-facing AIIRWP body after the R9 emergency hold determined that the prior staged body read like an evidence/source/QA package rather than a publication-grade white paper.
+
+Resolved in this wave:
+
+1. Created `gaic_v032_work/source_r3/wp3_r10_publication_grade_rewrite/`.
+2. Created `AIIRWP-2026-v0.2-R10-PUBLICATION-GRADE-REWRITE.md` with the 10-chapter public body architecture and appendices A-D.
+3. Created the body-quality gate self-check, body-vs-evidence separation check, source-note conversion plan, style-alignment notes, and author-review notes.
+4. Converted raw source-marker practice into numbered source notes.
+5. Kept AIO/AIRM late in the argument, after subject, object, responsibility, market, and evidence gaps are established.
+6. Created R10 preflight, boundary QA, build/validation, and final QA reports.
+7. Passed `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+Remaining known issues:
+
+- R11 editorial body quality QA remains required before any future artifact generation.
+- The public AIIRWP route remains under editorial review from R9.
+- No public HTML/PDF artifact was generated in R10.
+- No Final Seal, owner release execution, or public release claim exists.
+
+Boundary discipline:
+
+- R10 does not claim final/sealed status, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+- R10 does not create DOCX.
+
+**WP3-R10 Status:** ✓ PUBLICATION-GRADE REWRITE COMPLETE / READY FOR WP3-R11 EDITORIAL BODY QUALITY QA
+
+---
 
 ## WHITEPAPER-R8E-3 Known Issues
 
