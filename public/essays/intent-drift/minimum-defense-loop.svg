@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1480" viewBox="0 0 1000 1480" role="img" aria-labelledby="title desc">
+  <title id="title">Minimum Defense Loop for Intent Drift</title>
+  <desc id="desc">Minimum defense loop for Intent Drift: Intent Model, Plan, Execution, Drift Detection, Delta Intent, Confirm or Recover, Trace, and Accepted Outcome.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .grid-line{stroke:rgba(241,245,249,0.055);stroke-width:1}
+      .frame{fill:none;stroke:rgba(241,245,249,0.15);stroke-width:1.2}
+      .node{fill:rgba(255,255,255,0.04);stroke:rgba(241,245,249,0.18);stroke-width:1.4}
+      .node-hot{fill:rgba(34,211,238,0.07);stroke:rgba(34,211,238,0.58);stroke-width:1.8}
+      .node-blue{fill:rgba(59,130,246,0.08);stroke:rgba(59,130,246,0.55);stroke-width:1.8}
+      .line{stroke:rgba(34,211,238,0.86);stroke-width:3;fill:none}
+      .feedback{stroke:rgba(59,130,246,0.7);stroke-width:2.6;fill:none;stroke-dasharray:9 9}
+      .kicker{fill:#22d3ee;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .title{fill:#f1f5f9;font:820 50px "Outfit",Inter,sans-serif}
+      .subtitle{fill:#94a3b8;font:560 24px Inter,sans-serif}
+      .label{fill:#f1f5f9;font:800 30px "Outfit",Inter,sans-serif}
+      .small{fill:#94a3b8;font:700 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.8px}
+      .note{fill:#64748b;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.8px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" class="grid-line"/>
+    </pattern>
+    <marker id="arrow" markerWidth="15" markerHeight="12" refX="14" refY="6" orient="auto">
+      <path d="M0,0 L15,6 L0,12 Z" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="15" markerHeight="12" refX="14" refY="6" orient="auto">
+      <path d="M0,0 L15,6 L0,12 Z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="1480" class="bg"/>
+  <rect width="1000" height="1480" fill="url(#grid)"/>
+  <rect x="44" y="44" width="912" height="1392" class="frame"/>
+
+  <text x="78" y="104" class="kicker">INTENT DRIFT / MINIMUM DEFENSE LOOP</text>
+  <text x="78" y="168" class="title">Minimum defense loop</text>
+  <text x="78" y="214" class="subtitle">Observe execution. Compare meaning. Revalidate authority.</text>
+
+  <g transform="translate(120 290)">
+    <rect width="570" height="96" rx="2" class="node-hot"/>
+    <text x="38" y="43" class="label">Intent Model</text>
+    <text x="38" y="70" class="small">ACTIVE MEANING</text>
+  </g>
+  <path d="M405 396 V446" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120 468)">
+    <rect width="570" height="96" rx="2" class="node"/>
+    <text x="38" y="43" class="label">Plan</text>
+    <text x="38" y="70" class="small">EXPECTED LIFECYCLE PATH</text>
+  </g>
+  <path d="M405 574 V624" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120 646)">
+    <rect width="570" height="96" rx="2" class="node"/>
+    <text x="38" y="43" class="label">Execution</text>
+    <text x="38" y="70" class="small">WORLD ACTION</text>
+  </g>
+  <path d="M405 752 V802" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120 824)">
+    <rect width="570" height="96" rx="2" class="node-blue"/>
+    <text x="38" y="43" class="label">Drift Detection</text>
+    <text x="38" y="70" class="small">RUNTIME DIVERGENCE SIGNAL</text>
+  </g>
+  <path d="M405 930 V980" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120 1002)">
+    <rect width="570" height="96" rx="2" class="node-hot"/>
+    <text x="38" y="43" class="label">Delta Intent</text>
+    <text x="38" y="70" class="small">MEANING COMPARISON</text>
+  </g>
+  <path d="M405 1108 V1158" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120 1180)">
+    <rect width="570" height="96" rx="2" class="node-blue"/>
+    <text x="38" y="43" class="label">Confirm / Recover</text>
+    <text x="38" y="70" class="small">REVALIDATE OR REOPEN</text>
+  </g>
+
+  <g transform="translate(740 646)">
+    <rect width="160" height="96" rx="2" class="node"/>
+    <text x="80" y="43" text-anchor="middle" class="label">Trace</text>
+    <text x="80" y="70" text-anchor="middle" class="small">REVIEW</text>
+  </g>
+
+  <g transform="translate(700 468)">
+    <rect width="220" height="96" rx="2" class="node"/>
+    <text x="110" y="43" text-anchor="middle" class="label">Accepted</text>
+    <text x="110" y="70" text-anchor="middle" class="small">OUTCOME</text>
+  </g>
+
+  <path d="M690 1228 H805 V760" class="feedback" marker-end="url(#arrowBlue)"/>
+  <path d="M805 646 V574" class="feedback" marker-end="url(#arrowBlue)"/>
+  <path d="M700 516 H690" class="feedback" marker-end="url(#arrowBlue)"/>
+
+  <text x="78" y="1352" class="note">Accepted Outcome can close the loop. Drift or dispute reopens intent and plan.</text>
+  <text x="78" y="1388" class="note">Jearon Wong / Agentic Delivery / Lifecycle responsibility semantics</text>
+</svg>

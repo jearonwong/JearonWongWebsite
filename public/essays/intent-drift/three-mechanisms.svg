@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Intent Drift, Delta Intent, and Drift Detection</title>
+  <desc id="desc">Three mechanisms for defending against Intent Drift: Intent Drift as failure mode, Delta Intent as comparison object, and Drift Detection as runtime observation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .grid-line{stroke:rgba(241,245,249,0.055);stroke-width:1}
+      .frame{fill:none;stroke:rgba(241,245,249,0.15);stroke-width:1.2}
+      .panel{fill:rgba(255,255,255,0.035);stroke:rgba(241,245,249,0.16);stroke-width:1.4}
+      .panel-a{fill:rgba(34,211,238,0.065);stroke:rgba(34,211,238,0.58);stroke-width:1.8}
+      .panel-b{fill:rgba(59,130,246,0.075);stroke:rgba(59,130,246,0.54);stroke-width:1.8}
+      .connect{stroke:rgba(34,211,238,0.42);stroke-width:2;fill:none}
+      .kicker{fill:#22d3ee;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .title{fill:#f1f5f9;font:820 50px "Outfit",Inter,sans-serif}
+      .subtitle{fill:#94a3b8;font:560 24px Inter,sans-serif}
+      .key{fill:#22d3ee;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .name{fill:#f1f5f9;font:820 42px "Outfit",Inter,sans-serif}
+      .role{fill:#cbd5e1;font:760 25px Inter,sans-serif}
+      .question{fill:#94a3b8;font:560 25px Inter,sans-serif}
+      .note{fill:#64748b;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.8px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" class="grid-line"/>
+    </pattern>
+    <marker id="arrow" markerWidth="14" markerHeight="11" refX="13" refY="5.5" orient="auto">
+      <path d="M0,0 L14,5.5 L0,11 Z" fill="#22d3ee" opacity=".85"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="1320" class="bg"/>
+  <rect width="1000" height="1320" fill="url(#grid)"/>
+  <rect x="44" y="44" width="912" height="1232" class="frame"/>
+
+  <text x="78" y="104" class="kicker">MINIMUM DEFENSE / SEPARATE THE OBJECTS</text>
+  <text x="78" y="168" class="title">Failure. Comparison. Signal.</text>
+  <text x="78" y="214" class="subtitle">Governance becomes inspectable only when these stay distinct.</text>
+
+  <g transform="translate(90 292)">
+    <rect width="820" height="230" rx="2" class="panel-a"/>
+    <text x="42" y="58" class="key">FAILURE MODE</text>
+    <text x="42" y="112" class="name">Intent Drift</text>
+    <text x="42" y="154" class="role">What meaning degraded?</text>
+    <text x="42" y="188" class="question">The work kept moving while intended meaning</text>
+    <text x="42" y="220" class="question">changed or decayed.</text>
+  </g>
+
+  <path d="M500 546 V608" class="connect" marker-end="url(#arrow)"/>
+
+  <g transform="translate(90 632)">
+    <rect width="820" height="230" rx="2" class="panel-b"/>
+    <text x="42" y="58" class="key">COMPARISON OBJECT</text>
+    <text x="42" y="112" class="name">Delta Intent</text>
+    <text x="42" y="154" class="role">What changed between intended work</text>
+    <text x="42" y="188" class="role">and observed or proposed execution?</text>
+  </g>
+
+  <path d="M500 886 V962" class="connect" marker-end="url(#arrow)"/>
+
+  <g transform="translate(90 986)">
+    <rect width="820" height="220" rx="2" class="panel"/>
+    <text x="42" y="58" class="key">RUNTIME OBSERVATION</text>
+    <text x="42" y="112" class="name">Drift Detection</text>
+    <text x="42" y="150" class="role">Where did expected lifecycle state diverge</text>
+    <text x="42" y="184" class="role">from observed reality?</text>
+  </g>
+
+  <text x="78" y="1260" class="note">Jearon Wong / Delta Intent records the change / Drift Detection observes divergence</text>
+</svg>

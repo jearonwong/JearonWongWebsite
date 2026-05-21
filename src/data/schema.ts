@@ -90,6 +90,8 @@ export const siteEntityTerms = [
   "Validation Lab",
   "Semantic Loss",
   "Intent Drift",
+  "Delta Intent",
+  "Drift Detection",
   "Context Drift",
   "protocol engineering",
   "production-grade AI agents",
