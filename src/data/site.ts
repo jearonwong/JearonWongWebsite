@@ -76,6 +76,8 @@ export const siteSemanticBaseline = {
     "Multi-Agent Lifecycle Governance",
     "Confirmation Boundary",
     "Evidence Chain",
+    "Delta Intent",
+    "Drift Detection",
     "Semantic Loss",
     "lifecycle protocol",
     "accountable outcomes",
@@ -1167,6 +1169,7 @@ export const concepts: ConceptEntry[] = [
     evidenceRoute:
       "The evidence route for Intent Drift runs through the origin essay and the lifecycle governance essay. The origin essay names the experience of project intent shifting across prompts, summaries, and sessions. The governance essay then shows why intent needs a lifecycle authority layer rather than a one-time instruction. MPLP, Cognitive OS, and Validation Lab each test a different part of that route: protocol, runtime state, and evidence review.",
     relatedEssays: [
+      "defining-intent-drift-in-agentic-workflows",
       "ai-agent-lifecycle-it-was-not-designed-it-grew",
       "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
     ],

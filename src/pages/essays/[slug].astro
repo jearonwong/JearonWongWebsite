@@ -669,6 +669,215 @@ const articleJsonLd = {
     font-size: 1rem;
     line-height: 1.65;
   }
+  .article-content :global(.essay-concept-anchor),
+  .article-content :global(.essay-mechanism-strip),
+  .article-content :global(.essay-ledger-block),
+  .article-content :global(.essay-framework-ledger),
+  .article-content :global(.essay-closing-ledger) {
+    margin: 3rem 0;
+    max-width: 100%;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    border-left: 3px solid var(--accent-signal);
+    background:
+      linear-gradient(rgba(17, 17, 17, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.022) 1px, transparent 1px),
+      rgba(17, 17, 17, 0.018);
+    background-size: 28px 28px;
+  }
+  .article-content :global(.essay-concept-anchor) {
+    padding: clamp(1.5rem, 3vw, 2.2rem);
+  }
+  .article-content :global(.essay-concept-anchor--thesis) {
+    border-left-color: var(--accent-proof);
+    background:
+      linear-gradient(rgba(34, 211, 238, 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.07) 1px, transparent 1px),
+      #111111;
+    background-size: 32px 32px;
+    color: #f1f5f9;
+  }
+  .article-content :global(.essay-concept-anchor__label),
+  .article-content :global(.essay-mechanism-strip__label),
+  .article-content :global(.essay-ledger-block__label) {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+  }
+  .article-content :global(.essay-concept-anchor--thesis .essay-concept-anchor__label) {
+    color: var(--accent-proof);
+  }
+  .article-content :global(.essay-concept-anchor__statement) {
+    margin: 0;
+    color: inherit;
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 4.2vw, 3.25rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+  .article-content :global(.essay-concept-anchor__support) {
+    max-width: 38rem;
+    margin: 1rem 0 0;
+    color: rgba(241, 245, 249, 0.76);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .article-content :global(.essay-mechanism-strip) {
+    padding: 1.1rem;
+  }
+  .article-content :global(.essay-mechanism-strip__grid) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .article-content :global(.essay-mechanism-strip__grid div) {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    background: #ffffff;
+  }
+  .article-content :global(.essay-mechanism-strip__grid span) {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+  .article-content :global(.essay-mechanism-strip__grid strong) {
+    display: block;
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+  .article-content :global(.essay-mechanism-strip__support) {
+    margin: 1rem 0 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .article-content :global(.essay-pull-quote) {
+    border-left-color: var(--accent-proof);
+    background:
+      linear-gradient(rgba(34, 211, 238, 0.065) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.045) 1px, transparent 1px),
+      rgba(34, 211, 238, 0.035);
+    background-size: 28px 28px;
+    color: var(--current-text);
+    font-style: normal;
+  }
+  .article-content :global(.essay-pull-quote p) {
+    margin: 0;
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    font-weight: 820;
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+  .article-content :global(.essay-pull-quote footer) {
+    margin-top: 0.85rem;
+    color: var(--current-muted);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .article-content :global(.essay-pairwise-callout) {
+    display: grid;
+    gap: 0.7rem;
+    margin: 2.6rem 0;
+    padding: 1.1rem;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    border-left: 3px solid var(--accent-proof);
+    background:
+      linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.045) 1px, transparent 1px),
+      rgba(59, 130, 246, 0.032);
+    background-size: 28px 28px;
+  }
+  .article-content :global(.essay-pairwise-callout p) {
+    margin: 0;
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .article-content :global(.essay-ledger-block) {
+    padding: 1.15rem;
+  }
+  .article-content :global(.essay-ledger-block dl),
+  .article-content :global(.essay-framework-ledger) {
+    display: grid;
+    gap: 0;
+  }
+  .article-content :global(.essay-ledger-block dl) {
+    margin: 0;
+  }
+  .article-content :global(.essay-ledger-block dl div),
+  .article-content :global(.essay-framework-ledger div) {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
+  }
+  .article-content :global(.essay-ledger-block dt),
+  .article-content :global(.essay-framework-ledger strong) {
+    margin: 0;
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .article-content :global(.essay-ledger-block dd),
+  .article-content :global(.essay-framework-ledger span) {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .article-content :global(.essay-framework-ledger) {
+    padding: 0.2rem 1.15rem;
+    border-left-color: var(--accent-proof);
+  }
+  .article-content :global(.essay-closing-ledger) {
+    padding: clamp(1.25rem, 2.4vw, 1.7rem);
+    border-left-color: var(--accent-proof);
+    background:
+      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      #111111;
+    background-size: 30px 30px;
+  }
+  .article-content :global(.essay-closing-ledger p) {
+    margin: 0;
+    color: #f1f5f9;
+    font-family: var(--font-display);
+    font-size: clamp(1.18rem, 2.2vw, 1.55rem);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+  .article-content :global(.essay-closing-ledger p + p) {
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid rgba(241, 245, 249, 0.11);
+  }
+  .article-content :global(.article-figure--intent-drift img) {
+    background: #111111;
+  }
   .article-content :global(.protocol-example-card),
   .article-content :global(.lifecycle-event-card) {
     margin: 2.6rem 0;
@@ -926,6 +1135,28 @@ const articleJsonLd = {
     }
     .article-content :global(.protocol-object-grid) {
       grid-template-columns: 1fr;
+    }
+    .article-content :global(.essay-concept-anchor),
+    .article-content :global(.essay-mechanism-strip),
+    .article-content :global(.essay-ledger-block),
+    .article-content :global(.essay-framework-ledger),
+    .article-content :global(.essay-closing-ledger) {
+      margin: 2.2rem 0;
+    }
+    .article-content :global(.essay-mechanism-strip__grid) {
+      grid-template-columns: 1fr;
+    }
+    .article-content :global(.essay-ledger-block dl div),
+    .article-content :global(.essay-framework-ledger div) {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+      padding: 0.85rem 0;
+    }
+    .article-content :global(.essay-concept-anchor__support),
+    .article-content :global(.essay-mechanism-strip__support),
+    .article-content :global(.essay-ledger-block dd),
+    .article-content :global(.essay-framework-ledger span) {
+      font-size: 0.92rem;
     }
     .article-content :global(.workflow-strip) {
       gap: 0.55rem;

@@ -406,7 +406,13 @@ export const definitions: DefinitionEntry[] = [
       "Intent Drift is the gradual separation between the original human objective and the direction an agent system actually follows.",
     distinction:
       "Not model hallucination. Not factual error. Intent Drift is a lifecycle failure where the system lacks a stable way to preserve, update, and verify intent over time.",
-    evidence: [{ label: "Concepts: Intent Drift", href: "/concepts/intent-drift/" }],
+    evidence: [
+      { label: "Concepts: Intent Drift", href: "/concepts/intent-drift/" },
+      {
+        label: "Intent Drift essay",
+        href: "/essays/defining-intent-drift-in-agentic-workflows/"
+      }
+    ],
     related: [
       { label: "Context Drift", href: "#context-drift" },
       { label: "Semantic Loss", href: "#semantic-loss" },

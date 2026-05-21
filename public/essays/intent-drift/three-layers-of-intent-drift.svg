@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1180" viewBox="0 0 1000 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Three Layers of Intent Drift</title>
+  <desc id="desc">Three layers of Intent Drift: human-input drift, single-model interpretation drift, and multi-agent semantic-loss drift.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .grid-line{stroke:rgba(241,245,249,0.06);stroke-width:1}
+      .frame{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
+      .rail{stroke:rgba(34,211,238,0.46);stroke-width:3;fill:none}
+      .panel{fill:rgba(255,255,255,0.035);stroke:rgba(241,245,249,0.16);stroke-width:1.4}
+      .panel-hot{fill:rgba(34,211,238,0.065);stroke:rgba(34,211,238,0.58);stroke-width:1.8}
+      .panel-blue{fill:rgba(59,130,246,0.075);stroke:rgba(59,130,246,0.52);stroke-width:1.8}
+      .kicker{fill:#22d3ee;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .title{fill:#f1f5f9;font:820 54px "Outfit",Inter,sans-serif}
+      .subtitle{fill:#94a3b8;font:560 25px Inter,sans-serif}
+      .index{fill:#22d3ee;font:800 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .name{fill:#f1f5f9;font:800 36px "Outfit",Inter,sans-serif}
+      .copy{fill:#cbd5e1;font:560 25px Inter,sans-serif}
+      .note{fill:#64748b;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.8px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" class="grid-line"/>
+    </pattern>
+    <marker id="arrow" markerWidth="16" markerHeight="12" refX="15" refY="6" orient="auto">
+      <path d="M0,0 L16,6 L0,12 Z" fill="#22d3ee" opacity=".9"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="1180" class="bg"/>
+  <rect width="1000" height="1180" fill="url(#grid)"/>
+  <rect x="44" y="44" width="912" height="1092" class="frame"/>
+
+  <text x="78" y="104" class="kicker">INTENT DRIFT / LIFECYCLE FAILURE STACK</text>
+  <text x="78" y="172" class="title">Three layers of drift</text>
+  <text x="78" y="218" class="subtitle">Meaning degrades before the dashboard turns red.</text>
+
+  <path d="M500 318 V840" class="rail" marker-end="url(#arrow)"/>
+
+  <g transform="translate(90 282)">
+    <rect width="820" height="186" rx="2" class="panel-hot"/>
+    <text x="42" y="58" class="index">LAYER 01</text>
+    <text x="42" y="108" class="name">Human-input drift</text>
+    <text x="42" y="154" class="copy">Human intent changes before the model fails.</text>
+  </g>
+
+  <g transform="translate(130 536)">
+    <rect width="780" height="186" rx="2" class="panel"/>
+    <text x="42" y="58" class="index">LAYER 02</text>
+    <text x="42" y="108" class="name">Single-model interpretation drift</text>
+    <text x="42" y="154" class="copy">The model reframes the task while appearing helpful.</text>
+  </g>
+
+  <g transform="translate(170 790)">
+    <rect width="740" height="214" rx="2" class="panel-blue"/>
+    <text x="42" y="58" class="index">LAYER 03</text>
+    <text x="42" y="108" class="name">Multi-agent semantic-loss drift</text>
+    <text x="42" y="154" class="copy">Meaning degrades across agents, memory, tools,</text>
+    <text x="42" y="190" class="copy">and time.</text>
+  </g>
+
+  <text x="78" y="1086" class="note">Jearon Wong / AI Agent Lifecycle / Execution is not Delivery</text>
+</svg>

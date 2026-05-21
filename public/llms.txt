@@ -238,6 +238,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Defines why agent orchestration coordinates execution but does not define delivery, and introduces lifecycle responsibility consensus as the orchestration-layer mechanism for aligning human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.
 - From Model Governance to Agentic Lifecycle Conformance: https://www.jearonwong.com/essays/from-model-governance-to-agentic-lifecycle-conformance/
   Explains why AI Agent / MAS compliance cannot stop at model governance. It connects the Global AI Compliance White Paper 2026 from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, system mapping, and lifecycle responsibility compliance.
+- Defining Intent Drift in Agentic Workflows: https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/
+  Defines Intent Drift as a lifecycle failure mode inside the AI Agent Lifecycle thesis. Delta Intent records the semantic change, Drift Detection observes runtime divergence, Trace makes it reviewable, and Accepted Outcome decides whether execution became delivery.
 
 ## Project Proof Path
 
