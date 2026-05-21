@@ -1,5 +1,35 @@
 # Reconstruction Notes
 
+## WP3-R11 Editorial Body Quality QA Notes (May 21, 2026)
+
+**Scope:** Editorial body quality QA for the R10 AIIRWP rewrite source. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at accepted R10 commit `2a79330a06f93f39682e88aed0c8836481c4895d`.
+2. Inspected the R10 rewrite package, R10 reports, R9 quality reset files, and the source/evidence substrate from WP3-R0 through WP3-R10, plus WP1 and WP2 source truth.
+3. Read the actual R10 body chapter by chapter, including Chapters 0-10, appendices A-D, source notes, and the QA support files.
+4. Assessed whitepaper body quality, chapter-by-chapter editorial strength, pain density, narrative rhythm, source-note style, AIO/AIRM placement, table/figure usage, style alignment, and boundary discipline.
+5. Determined the R10 body is directionally correct but still too compressed and table-forward for publication-body readiness.
+6. Created the R11 QA reports, including the body reading confirmation, body quality reassessment, chapter QA, pain-density audit, rhythm QA, citation style QA, AIO/AIRM placement QA, table/figure QA, style alignment QA, boundary QA, and R12 expansion plan.
+7. Updated SOURCE MASTER and governance records with the R11 status.
+8. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+**Artifact discipline:**
+
+- No public HTML artifact was generated.
+- No public PDF was generated.
+- No DOCX was created.
+- No public CTAs were restored.
+- AIIRWP remains under editorial review publicly from R9/R10.
+- Pre-existing untracked `public/social/*` assets remain outside R11 scope.
+
+**Boundary discipline:**
+
+- R11 does not claim Final Seal, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R11 Status:** WP3-R11 EDITORIAL BODY QUALITY QA COMPLETE / R12 BODY EXPANSION REQUIRED.
+
 ## WP3-R10 Publication-Grade Rewrite Notes (May 21, 2026)
 
 **Scope:** Create a source-only publication-grade rewrite of AIIRWP after R9 placed the previous public body on emergency publication hold. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.

@@ -1,7 +1,38 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 21, 2026 (WP3-R10 Publication-Grade Rewrite)
+**Last Updated:** May 21, 2026 (WP3-R11 Editorial Body Quality QA)
+
+## WP3-R11 Editorial Body Quality QA
+
+### Status: WP3-R11 EDITORIAL BODY QUALITY QA COMPLETE / R12 BODY EXPANSION REQUIRED
+
+R11 reviewed the actual R10 rewrite body chapter by chapter and confirmed the direction is correct, but the body is still too compressed and table-forward for publication-body readiness.
+
+Resolved in this wave:
+
+1. Read the R10 body directly, including Chapters 0-10, appendices A-D, source notes, and the body quality support files.
+2. Confirmed the document no longer reads like a source pack.
+3. Confirmed AIO/AIRM appear after the reader pain is established.
+4. Confirmed boundary discipline remains intact with no raw source-pack residue in the body.
+5. Created the R11 editorial QA reports, pain-density audit, rhythm QA, style-alignment QA, table/figure QA, and R12 expansion plan.
+6. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+Remaining known issues:
+
+- The body still lacks enough narrative density, market pressure, and Chapter 0-5 pain to be publication-body ready.
+- Chapter 5, and to a lesser degree Chapters 7-9, remain too compact.
+- R12 body expansion is required before any artifact generation.
+- The public AIIRWP route remains under editorial review.
+- No public HTML/PDF/DOCX artifact was generated in R11.
+- No Final Seal, owner release execution, or public release claim exists.
+
+Boundary discipline:
+
+- R11 does not claim final/sealed status, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+- R11 does not create DOCX.
+
+**WP3-R11 Status:** ✓ EDITORIAL BODY QUALITY QA COMPLETE / R12 BODY EXPANSION REQUIRED
 
 ## WP3-R10 Publication-Grade Rewrite
 
