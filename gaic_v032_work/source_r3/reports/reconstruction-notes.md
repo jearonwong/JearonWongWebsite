@@ -1,5 +1,38 @@
 # Reconstruction Notes
 
+## WP3-R12 Body Expansion Rewrite Notes (May 21, 2026)
+
+**Scope:** Expand the R10 AIIRWP rewrite body according to R11 editorial QA. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` baseline at accepted R11 commit `214540a474391e326a7ff6d76c876f37054e1057`.
+2. Inspected the R10 rewrite package, R11 editorial QA reports, R9 quality reset files, R1/R2A source quality files, and R5 source-register finalization plan.
+3. Created `gaic_v032_work/source_r3/wp3_r12_body_expansion_rewrite/`.
+4. Wrote `AIIRWP-2026-v0.3-R12-BODY-EXPANSION-REWRITE.md` as an expanded 10-chapter body plus appendices A-D.
+5. Expanded body length to 8,500 words excluding appendices.
+6. Expanded Chapters 0-6 substantially and strengthened Chapter 5 market categories.
+7. Added or expanded five scenario types: refund/support/account update, external tool/API payment loss, professional-service boundary, post-loss reconstruction, and cross-vendor/shared dependency.
+8. Refined source notes into 12 numbered source-note families while keeping raw source tags out of body prose.
+9. Created R12 package support files, preflight, boundary QA, build/validation, and final QA reports.
+10. Updated SOURCE MASTER and governance records with R12 status.
+11. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+**Artifact discipline:**
+
+- No public HTML artifact was generated.
+- No public PDF was generated.
+- No DOCX was created.
+- No public CTAs were restored.
+- AIIRWP remains under editorial review publicly from R9/R10/R11.
+- Pre-existing untracked `public/social/*` assets remain outside R12 scope.
+
+**Boundary discipline:**
+
+- R12 does not claim Final Seal, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R12 Status:** WP3-R12 BODY EXPANSION REWRITE COMPLETE / READY FOR WP3-R13 EDITORIAL BODY ACCEPTANCE QA.
+
 ## WP3-R11 Editorial Body Quality QA Notes (May 21, 2026)
 
 **Scope:** Editorial body quality QA for the R10 AIIRWP rewrite source. Do not generate public HTML, public PDF, DOCX, public CTAs, release claims, or Final Seal.

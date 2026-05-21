@@ -1,7 +1,41 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 21, 2026 (WP3-R11 Editorial Body Quality QA)
+**Last Updated:** May 21, 2026 (WP3-R12 Body Expansion Rewrite)
+
+## WP3-R12 Body Expansion Rewrite
+
+### Status: WP3-R12 BODY EXPANSION REWRITE COMPLETE / READY FOR WP3-R13 EDITORIAL BODY ACCEPTANCE QA
+
+R12 expands the R10 rewrite body according to the R11 decision that the body was directionally correct but too short, segmented, and table-forward for publication-body readiness.
+
+Resolved in this wave:
+
+1. Created `gaic_v032_work/source_r3/wp3_r12_body_expansion_rewrite/`.
+2. Created `AIIRWP-2026-v0.3-R12-BODY-EXPANSION-REWRITE.md`.
+3. Expanded the body to 8,500 words excluding appendices.
+4. Preserved the 10-chapter architecture and appendices A-D.
+5. Expanded Chapters 0-6 substantially and strengthened Chapter 5 market reality.
+6. Added or expanded five concrete scenario types: refund/support/account update, external tool/API payment loss, professional-service boundary, post-loss reconstruction, and cross-vendor dependency.
+7. Refined source notes from 9 to 12 note families without reintroducing raw source markers.
+8. Created expansion change log, chapter expansion summary, source-note refinement notes, table/figure refinement notes, body-vs-evidence discipline check, body-quality gate self-check, author review notes, preflight, boundary QA, build/validation, and final QA reports.
+9. Passed `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+Remaining known issues:
+
+- R13 Editorial Body Acceptance QA is required before any artifact generation planning.
+- R13 should judge whether Chapter 5 source notes are granular enough for publication.
+- R13 should decide whether the Chapter 4 Mermaid placeholder remains acceptable as source until a rendered-figure wave.
+- Public AIIRWP remains under editorial review.
+- No public HTML/PDF/DOCX artifact was generated in R12.
+- No Final Seal, owner release execution, or public release claim exists.
+
+Boundary discipline:
+
+- R12 does not claim final/sealed status, public release, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+- R12 does not create DOCX.
+
+**WP3-R12 Status:** ✓ BODY EXPANSION REWRITE COMPLETE / READY FOR WP3-R13 EDITORIAL BODY ACCEPTANCE QA
 
 ## WP3-R11 Editorial Body Quality QA
 
