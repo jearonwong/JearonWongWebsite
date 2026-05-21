@@ -1,7 +1,40 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 22, 2026 (WP3-R13 Editorial Body Acceptance QA)
+**Last Updated:** May 22, 2026 (WP3-R14 Artifact Generation Planning)
+
+## WP3-R14 Artifact Generation Planning
+
+### Status: WP3-R14 ARTIFACT GENERATION PLANNING COMPLETE / READY FOR WP3-R15 CANDIDATE ARTIFACT GENERATION
+
+R14 creates the planning-only package for turning the R13-accepted R12 AIIRWP body into internal candidate HTML/PDF artifacts in a later R15 wave.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` at accepted R13 commit `02d4d38adb61bd3cf8831b4e7c88ee28d0826989`.
+2. Inspected R12 accepted body files, R13 acceptance QA files, the Whitepaper Series Publication SOP, AIAAWP publication standard reuse proof, R8E/R8F repair reports, and the current AIIRWP editorial-review route.
+3. Created `gaic_v032_work/source_r3/wp3_r14_artifact_generation_planning/`.
+4. Created artifact generation master plan, HTML responsive rendering plan, PDF A4 rendering plan, figure rendering plan, table layout plan, source-note rendering plan, metadata/JSON-LD plan, manifest/checksum plan, body-to-artifact parity plan, candidate artifact QA plan, public staging readiness plan, no-DOCX public distribution plan, and R15 execution brief.
+5. Created R14 preflight, publication standard reuse QA, artifact planning QA, boundary QA, build/validation, and final QA reports.
+6. Confirmed R15 should generate internal candidate HTML/PDF only and should not public-stage.
+7. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+Remaining known issues:
+
+- R15 Candidate Artifact Generation is required before any candidate QA.
+- R15 must generate internal candidate HTML/PDF only.
+- R15 must render the Chapter 4 responsibility bridge figure.
+- R15 must implement source-note rendering and table layout decisions.
+- R15 must generate internal manifest/checksums only.
+- R15B Final Candidate Artifact QA is required before public staging preparation.
+- AIIRWP remains under editorial review publicly.
+
+Boundary discipline:
+
+- R14 does not generate HTML, PDF, DOCX, public artifacts, public manifests, public checksums, public CTAs, sitemap updates, `llms.txt` updates, entity graph updates, or public route changes.
+- R14 does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R14 Status:** ARTIFACT GENERATION PLANNING COMPLETE / READY FOR WP3-R15 CANDIDATE ARTIFACT GENERATION
 
 ## WP3-R13 Editorial Body Acceptance QA
 
