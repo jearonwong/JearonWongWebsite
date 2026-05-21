@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Defining Intent Drift in Agentic Workflows</title>
-  <desc id="desc">Open graph image for Jearon Wong essay on Intent Drift, Delta Intent, and Drift Detection.</desc>
+  <desc id="desc">Open graph image for the Jearon Wong essay Defining Intent Drift in Agentic Workflows.</desc>
   <defs>
     <style>
       .bg{fill:#111111}
@@ -26,8 +26,8 @@
   <rect x="72" y="72" width="1056" height="486" fill="none" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
 
   <text x="96" y="122" class="label">DEFINE THE AI AGENT LIFECYCLE / INTENT DRIFT</text>
-  <text x="96" y="214" class="title">Defining</text>
-  <text x="96" y="282" class="title">Intent Drift</text>
+  <text x="96" y="214" class="title">Defining Intent Drift</text>
+  <text x="96" y="282" class="title">in Agentic Workflows</text>
   <text x="96" y="350" class="subtitle">Execution can succeed while <tspan class="hot">intent fails.</tspan></text>
   <text x="96" y="392" class="subtitle">Delta Intent records the change.</text>
   <text x="96" y="430" class="subtitle">Drift Detection observes divergence.</text>
