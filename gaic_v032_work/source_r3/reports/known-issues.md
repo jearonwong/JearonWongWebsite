@@ -3895,3 +3895,30 @@ Boundary discipline:
 - WP3-R7B does not claim Final Seal, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, or legal advice.
 
 **WP3-R7B Status:** ✓ WP3-R7B PRODUCTION LIVE REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE
+
+## WP3-R8 Known Issues
+
+### Author Release Decision and Evidence Capture Pack Complete
+
+WP3-R8 prepares the internal author release decision and post-release evidence capture pack for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Created the internal R8 launch directory under `gaic_v032_work/source_r3/launch/aiirwp-r8/`.
+- Created the author release decision record with `author_release_decision: pending owner execution`.
+- Created the owner release checklist, newsletter draft, standalone post draft, and five short social post variants.
+- Created the distribution tracker, monitoring tracker, authority signal tracker, evidence capture log, post-release monitoring SOP, and boundary/non-claim reminders.
+- Verified the launch pack does not falsely claim owner execution, published posts, captured evidence, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, or legal advice.
+
+Remaining known issues:
+
+- Owner execution is required before any release announcement can be claimed.
+- Actual post URLs, timestamps, screenshots, comments, shares, backlinks, citations, inbound responses, search results, or answer-engine results remain empty/pending until owner execution and observation.
+- Final Seal remains separately blocked pending explicit owner authorization.
+
+Boundary discipline:
+
+- WP3-R8 is author release decision and post-release evidence capture pack preparation only.
+- WP3-R8 does not execute release actions, create public artifacts, create DOCX, change public AIIRWP artifacts, claim external adoption, claim indexing, claim SEO/GEO uplift, claim answer-engine recognition, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement, claim legal proof, claim insurance advice, or claim legal advice.
+
+**WP3-R8 Status:** ✓ WP3-R8 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED

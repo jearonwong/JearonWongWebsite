@@ -4616,3 +4616,32 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R7B does not claim Final Seal, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, or legal advice.
 
 **WP3-R7B Status:** WP3-R7B PRODUCTION LIVE REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE.
+
+## WP3-R8 Notes (May 21, 2026)
+
+**Scope:** Internal author release decision and post-release evidence capture pack for `Agentic AI Insurability & Risk Transfer White Paper 2026` after R7B production live reverification.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `1fa3f8626d29d2e959914cb8d87ee5c9e7f1c1fa` and confirmed `origin/HEAD` matched before R8 work.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected R7B final QA, production reverification acceptance, production artifact integrity, metadata/JSON-LD QA, visual/PDF QA, semantic mapping, entity/llms/sitemap QA, boundary claims QA, GAIC/AIAAWP integrity, and build validation reports.
+4. Created the internal launch pack under `gaic_v032_work/source_r3/launch/aiirwp-r8/`.
+5. Created the author release decision record with default state `author_release_decision: pending owner execution`.
+6. Created owner-facing release checklist, LinkedIn Newsletter draft, standalone post draft, five short social post variants, distribution tracker, monitoring tracker, authority signal tracker, evidence capture log, post-release monitoring SOP, and boundary/non-claim reminders.
+7. Created R8 reports for preflight, launch pack QA, boundary QA, build validation, and final QA.
+
+**Artifact discipline:**
+
+- No public AIIRWP route or artifact was changed.
+- No public HTML, PDF, manifest, checksum, or social asset was created.
+- No DOCX was created.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R8 is author release decision and evidence capture pack preparation only.
+- Author release remains pending owner execution.
+- WP3-R8 does not claim Final Seal, owner release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R8 Status:** WP3-R8 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED.

@@ -1,0 +1,18 @@
+# AIIRWP Distribution Tracker
+
+Default status for all rows: `planned / owner execution required`
+
+No row in this tracker records a completed post, approval, share, citation, backlink, or engagement signal.
+
+| Group/channel | Platform | Target audience | Post type | Planned message | Status | Owner action required | Published URL | Timestamp | Engagement notes | Evidence screenshot/path | Boundary notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LinkedIn Newsletter | LinkedIn | AI governance, enterprise risk, audit, insurance, technology leadership | Long-form newsletter | Core thesis: AI agents are not the insured legal subject; link route/PDF. | planned / owner execution required | Review, approve, publish, and record URL. |  |  |  |  | Do not claim release until URL and timestamp are recorded. |
+| LinkedIn standalone post | LinkedIn | Cross-domain professional audience | Standalone post | Short thesis and discussion question. | planned / owner execution required | Review, approve, publish, and record URL. |  |  |  |  | Discussion prompt is not endorsement evidence. |
+| X article/post | X | AI builders, governance researchers, insurance/risk readers | Short post or thread | Insured subject vs agentic risk object. | planned / owner execution required | Adapt, publish, and record URL. |  |  |  |  | Do not claim reach or indexing without evidence. |
+| Relevant AI governance groups | LinkedIn / community groups | Governance, compliance, risk, assurance practitioners | Group post | Lifecycle evidence and responsibility mapping angle. | planned / owner execution required | Select groups, comply with group rules, record approval/post URL. |  |  |  |  | Group approval is not certification or adoption. |
+| Insurance / risk management groups | LinkedIn / forums | Insurance, risk management, claims, broker, CRO audience | Group post | Insurability object and claim evidence chain angle. | planned / owner execution required | Select channels and record exact evidence. |  |  |  |  | No insurance advice, coverage opinion, or underwriting guidance. |
+| Cyber insurance communities | Community / forum | Cyber insurance and technology risk readers | Short post | Logs vs claim evidence and agentic tool-use boundary. | planned / owner execution required | Select channels and record exact evidence. |  |  |  |  | No coverage-ready or insurer acceptance claim. |
+| Enterprise risk / CRO communities | Community / LinkedIn | CRO, ERM, operational risk, legal/risk leadership | Short post | Legal subject, business authority, loss event, and evidence chain. | planned / owner execution required | Select channels and record exact evidence. |  |  |  |  | No legal advice or legal proof claim. |
+| Big Four / audit-adjacent contacts | Direct / LinkedIn | Audit, assurance, technology risk, advisory contacts | Direct share | Relation to GAIC/AIAAWP and auditability sibling context. | planned / owner execution required | Share only if owner chooses; record any response. |  |  |  |  | Response is feedback, not endorsement or assurance opinion. |
+| Broker / reinsurer contacts | Direct / LinkedIn / email | Broker, reinsurer, underwriting, claims, risk-transfer contacts | Direct share | AIO/AIRM as analytical vocabulary, not standard. | planned / owner execution required | Share only if owner chooses; record any response. |  |  |  |  | No insurer acceptance, coverage-ready, or underwriting-ready claim. |
+| Personal website newsletter if applicable | Website / email list | Existing followers/readers | Newsletter note | Trilogy announcement and public research links. | planned / owner execution required | Publish only if channel exists and owner authorizes. |  |  |  |  | Do not fabricate subscriber or engagement data. |
