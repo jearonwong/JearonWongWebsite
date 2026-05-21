@@ -3862,3 +3862,36 @@ Boundary discipline:
 - WP3-R7 does not claim production live verification, final seal, public release completion, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or legal/insurance advice.
 
 **WP3-R7 Status:** ✓ PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED
+
+
+## WP3-R7B Known Issues
+
+### Production Live Reverification Complete
+
+WP3-R7B verifies the production deployment and sitewide semantic consistency of `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Verified production availability for the AIIRWP route, HTML, PDF, manifest, checksums, homepage, research index, semantic mapping pages, entity graph, `llms.txt`, sitemap, and robots.
+- Verified production AIIRWP HTML, PDF, and manifest hashes against R7 expected staged hashes.
+- Validated production checksums and confirmed the AIIRWP DOCX URL returns 404.
+- Verified the production PDF is 59 A4 pages with correct title, author, subject, and no Chrome default header/footer artifacts.
+- Parsed production route metadata and JSON-LD blocks.
+- Performed live responsive DOM/console/overflow checks across required AIIRWP viewports and broader semantic surfaces.
+- Rendered representative production PDF proof pages and reviewed cover, TOC, chapters, major tables, Appendix F, source/citation, and final page.
+- Verified live entity graph, `llms.txt`, sitemap, robots, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, MPLP, and extended ecosystem mapping.
+- Repaired a GAIC hub related-whitepapers series-number display issue so AIAAWP remains `02` and AIIRWP appears as `03`.
+- Confirmed GAIC and AIAAWP production artifact hashes match current repo/source truth.
+
+Remaining known issues:
+
+- Author Release Decision + Post-release Evidence Capture Pack is the next required wave if owner authorizes it.
+- Final Seal remains separately blocked pending explicit owner authorization.
+- Browser plugin screenshot capture timed out during R7B; Browser DOM/console/overflow metrics passed and headless Chrome screenshots were saved as supplementary proof.
+
+Boundary discipline:
+
+- WP3-R7B is production live reverification only.
+- WP3-R7B does not claim Final Seal, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, or legal advice.
+
+**WP3-R7B Status:** ✓ WP3-R7B PRODUCTION LIVE REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE

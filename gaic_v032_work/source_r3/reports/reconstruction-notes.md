@@ -4582,3 +4582,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R7 does not claim production live verification, final seal, public release completion, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, or legal/insurance advice.
 
 **WP3-R7 Status:** WP3-R7 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED.
+
+
+## WP3-R7B Notes (May 21, 2026)
+
+**Scope:** Production live reverification for `Agentic AI Insurability & Risk Transfer White Paper 2026` after R7 public staging preparation.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `ad109f3707cae3b6beea7f7713d9e7137977c567` and confirmed `origin/HEAD` matched before R7B work.
+2. Verified production HTTP availability for the AIIRWP route, public artifacts, homepage, research index, semantic mapping pages, entity graph, `llms.txt`, sitemap, and robots.
+3. Downloaded production AIIRWP HTML, PDF, manifest, and checksums; verified hashes and checksum validation against the expected R7 staged hashes.
+4. Confirmed no production AIIRWP DOCX is available and no local AIIRWP DOCX exists in `public` or `dist`.
+5. Verified production PDF metadata, 59-page A4 layout, text extraction, and representative rendered pages.
+6. Parsed production route metadata and JSON-LD; confirmed production canonical/artifact URLs and no DOCX metadata.
+7. Performed live Browser DOM/console/overflow checks for required responsive viewports and semantic pages. Browser screenshot capture timed out, so headless Chrome screenshots were saved as supplementary proof.
+8. Verified live sitewide semantic mapping across homepage, research index, GAIC hub, AIAAWP hub, Evidence Registry, Concepts, Definitions, Governance, Playbooks, About, MPLP, and extended ecosystem mapping.
+9. Repaired a GAIC hub related-whitepapers numbering issue so related AIAAWP/AIIRWP links use true series positions `02` and `03`.
+10. Reverified GAIC and AIAAWP production artifact hashes against current repo/source truth.
+11. Ran AIIRWP checksum validation, JSON parse checks, JSON-LD parse checks, DOCX scans, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public AIIRWP HTML/PDF/manifest/checksum artifact was regenerated or content-mutated in R7B.
+- No DOCX was created.
+- No GAIC/AIAAWP standalone public artifacts were changed.
+- One public route source file was patched for semantic series numbering only.
+- Unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R7B is production live reverification only.
+- WP3-R7B does not claim Final Seal, author release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, or legal advice.
+
+**WP3-R7B Status:** WP3-R7B PRODUCTION LIVE REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE.

@@ -1,0 +1,4286 @@
+[
+  {
+    "page": "homepage",
+    "url": "https://www.jearonwong.com/",
+    "finalUrl": "https://www.jearonwong.com/",
+    "title": "Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 375,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Read paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        }
+      ],
+      "bodyClientWidth": 360,
+      "bodyScrollWidth": 360,
+      "clientWidth": 360,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Execution is not Delivery.",
+        "Whitepaper series.",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Agentic Delivery Stack",
+        "Delivery, not isolated execution",
+        "Lifecycle Protocol",
+        "Execution Runtime",
+        "Delivery Surface",
+        "Evidence / Adjudication Surface",
+        "Execution is not Delivery.",
+        "Start from AI Agent Lifecycle.",
+        "Protocol Path and Proof Path",
+        "MPLP",
+        "Cognitive OS",
+        "SoloCrew",
+        "Validation Lab",
+        "Reading Path",
+        "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+        "The Industry Misdefined Multi-Agent AI",
+        "Agent Orchestration Is Not Delivery",
+        "From Model Governance to Agentic Lifecycle Conformance",
+        "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+        "The Agentic AI Inflection Point: Project Delivery",
+        "Writing tracks.",
+        "Get in touch."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 386,
+          "right": 686,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 411,
+          "right": 647,
+          "tag": "DIV",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "brand-name",
+          "left": 411,
+          "right": 503,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 603,
+          "right": 647,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 411,
+          "right": 647,
+          "tag": "UL",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 647,
+          "tag": "LI",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 647,
+          "tag": "A",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 647,
+          "tag": "LI",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 647,
+          "tag": "A",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 647,
+          "tag": "LI",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 647,
+          "tag": "A",
+          "text": "",
+          "width": 236
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 647,
+          "tag": "LI",
+          "text": "",
+          "width": 236
+        }
+      ],
+      "scrollWidth": 360,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 700,
+        "width": 375
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "homepage",
+    "url": "https://www.jearonwong.com/",
+    "finalUrl": "https://www.jearonwong.com/",
+    "title": "Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 390,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Read paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        }
+      ],
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "clientWidth": 375,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Execution is not Delivery.",
+        "Whitepaper series.",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Agentic Delivery Stack",
+        "Delivery, not isolated execution",
+        "Lifecycle Protocol",
+        "Execution Runtime",
+        "Delivery Surface",
+        "Evidence / Adjudication Surface",
+        "Execution is not Delivery.",
+        "Start from AI Agent Lifecycle.",
+        "Protocol Path and Proof Path",
+        "MPLP",
+        "Cognitive OS",
+        "SoloCrew",
+        "Validation Lab",
+        "Reading Path",
+        "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+        "The Industry Misdefined Multi-Agent AI",
+        "Agent Orchestration Is Not Delivery",
+        "From Model Governance to Agentic Lifecycle Conformance",
+        "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+        "The Agentic AI Inflection Point: Project Delivery",
+        "Writing tracks.",
+        "Get in touch."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 401,
+          "right": 701,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 426,
+          "right": 677,
+          "tag": "DIV",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "brand-name",
+          "left": 426,
+          "right": 518,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 633,
+          "right": 677,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 426,
+          "right": 677,
+          "tag": "UL",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        }
+      ],
+      "scrollWidth": 375,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 390
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "homepage",
+    "url": "https://www.jearonwong.com/",
+    "finalUrl": "https://www.jearonwong.com/",
+    "title": "Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 768,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Read paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        }
+      ],
+      "bodyClientWidth": 753,
+      "bodyScrollWidth": 753,
+      "clientWidth": 753,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Execution is not Delivery.",
+        "Whitepaper series.",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Agentic Delivery Stack",
+        "Delivery, not isolated execution",
+        "Lifecycle Protocol",
+        "Execution Runtime",
+        "Delivery Surface",
+        "Evidence / Adjudication Surface",
+        "Execution is not Delivery.",
+        "Start from AI Agent Lifecycle.",
+        "Protocol Path and Proof Path",
+        "MPLP",
+        "Cognitive OS",
+        "SoloCrew",
+        "Validation Lab",
+        "Reading Path",
+        "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+        "The Industry Misdefined Multi-Agent AI",
+        "Agent Orchestration Is Not Delivery",
+        "From Model Governance to Agentic Lifecycle Conformance",
+        "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+        "The Agentic AI Inflection Point: Project Delivery",
+        "Writing tracks.",
+        "Get in touch."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 775,
+          "right": 1075,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 800,
+          "right": 1051,
+          "tag": "DIV",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "brand-name",
+          "left": 800,
+          "right": 892,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1007,
+          "right": 1051,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 800,
+          "right": 1051,
+          "tag": "UL",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        }
+      ],
+      "scrollWidth": 753,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "homepage",
+    "url": "https://www.jearonwong.com/",
+    "finalUrl": "https://www.jearonwong.com/",
+    "title": "Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Read paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Execution is not Delivery.",
+        "Whitepaper series.",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Agentic Delivery Stack",
+        "Delivery, not isolated execution",
+        "Lifecycle Protocol",
+        "Execution Runtime",
+        "Delivery Surface",
+        "Evidence / Adjudication Surface",
+        "Execution is not Delivery.",
+        "Start from AI Agent Lifecycle.",
+        "Protocol Path and Proof Path",
+        "MPLP",
+        "Cognitive OS",
+        "SoloCrew",
+        "Validation Lab",
+        "Reading Path",
+        "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+        "The Industry Misdefined Multi-Agent AI",
+        "Agent Orchestration Is Not Delivery",
+        "From Model Governance to Agentic Lifecycle Conformance",
+        "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+        "The Agentic AI Inflection Point: Project Delivery",
+        "Writing tracks.",
+        "Get in touch."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-route",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 375,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#main-content",
+          "text": "SKIP TO MAIN CONTENT"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "Read HTML"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#cite",
+          "text": "Cite this paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "03\nAgentic AI Insurability & Risk Transfer White Paper 2026\nInterprets the lifecycle governance framework through insura"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "01\nAgentic AI Insurability"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "02\nInsured Legal Subject"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "03\nAgentic Risk Object"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "04\nResponsibility Mapping"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "05\nClaim Evidence Chain"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "06\nAgentic Insurability Objects"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "07\nAIO-01 through AIO-14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "08\nAIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "VIEW CHECKSUMS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "HTML\nRead full HTML\nResponsive web-reading staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "PDF\nDownload PDF\nFixed-layout staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "JSON\nPublic staging manifest\nArtifact role model and integrity record"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "SHA256\nChecksums\nPublic artifact hashes"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "OPEN MANIFEST"
+        }
+      ],
+      "bodyClientWidth": 360,
+      "bodyScrollWidth": 360,
+      "clientWidth": 360,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Part of the same white paper standard.",
+        "Key concepts covered.",
+        "Read, download, and verify.",
+        "Citation and artifact identity.",
+        "What the paper does not do.",
+        "Artifact integrity.",
+        "Follow the surrounding graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 386,
+          "right": 686,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 411,
+          "right": 662,
+          "tag": "DIV",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "brand-name",
+          "left": 411,
+          "right": 503,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 618,
+          "right": 662,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 411,
+          "right": 662,
+          "tag": "UL",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 662,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 662,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 662,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 662,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 662,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 411,
+          "right": 662,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 411,
+          "right": 662,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        }
+      ],
+      "scrollWidth": 360,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": true,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 375
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-route",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 390,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#main-content",
+          "text": "SKIP TO MAIN CONTENT"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "Read HTML"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#cite",
+          "text": "Cite this paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "03\nAgentic AI Insurability & Risk Transfer White Paper 2026\nInterprets the lifecycle governance framework through insura"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "01\nAgentic AI Insurability"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "02\nInsured Legal Subject"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "03\nAgentic Risk Object"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "04\nResponsibility Mapping"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "05\nClaim Evidence Chain"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "06\nAgentic Insurability Objects"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "07\nAIO-01 through AIO-14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "08\nAIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "VIEW CHECKSUMS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "HTML\nRead full HTML\nResponsive web-reading staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "PDF\nDownload PDF\nFixed-layout staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "JSON\nPublic staging manifest\nArtifact role model and integrity record"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "SHA256\nChecksums\nPublic artifact hashes"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "OPEN MANIFEST"
+        }
+      ],
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "clientWidth": 375,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Part of the same white paper standard.",
+        "Key concepts covered.",
+        "Read, download, and verify.",
+        "Citation and artifact identity.",
+        "What the paper does not do.",
+        "Artifact integrity.",
+        "Follow the surrounding graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 401,
+          "right": 701,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 426,
+          "right": 677,
+          "tag": "DIV",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "brand-name",
+          "left": 426,
+          "right": 518,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 633,
+          "right": 677,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 426,
+          "right": 677,
+          "tag": "UL",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 426,
+          "right": 677,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 426,
+          "right": 677,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        }
+      ],
+      "scrollWidth": 375,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": true,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 390
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-route",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 768,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#main-content",
+          "text": "SKIP TO MAIN CONTENT"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "Read HTML"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#cite",
+          "text": "Cite this paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "03\nAgentic AI Insurability & Risk Transfer White Paper 2026\nInterprets the lifecycle governance framework through insura"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "01\nAgentic AI Insurability"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "02\nInsured Legal Subject"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "03\nAgentic Risk Object"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "04\nResponsibility Mapping"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "05\nClaim Evidence Chain"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "06\nAgentic Insurability Objects"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "07\nAIO-01 through AIO-14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "08\nAIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "VIEW CHECKSUMS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "HTML\nRead full HTML\nResponsive web-reading staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "PDF\nDownload PDF\nFixed-layout staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "JSON\nPublic staging manifest\nArtifact role model and integrity record"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "SHA256\nChecksums\nPublic artifact hashes"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "OPEN MANIFEST"
+        }
+      ],
+      "bodyClientWidth": 753,
+      "bodyScrollWidth": 753,
+      "clientWidth": 753,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Part of the same white paper standard.",
+        "Key concepts covered.",
+        "Read, download, and verify.",
+        "Citation and artifact identity.",
+        "What the paper does not do.",
+        "Artifact integrity.",
+        "Follow the surrounding graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 775,
+          "right": 1075,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 800,
+          "right": 1051,
+          "tag": "DIV",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "brand-name",
+          "left": 800,
+          "right": 892,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1007,
+          "right": 1051,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 800,
+          "right": 1051,
+          "tag": "UL",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "drawer-link",
+          "left": 800,
+          "right": 1051,
+          "tag": "A",
+          "text": "",
+          "width": 251
+        },
+        {
+          "cls": "",
+          "left": 800,
+          "right": 1051,
+          "tag": "LI",
+          "text": "",
+          "width": 251
+        }
+      ],
+      "scrollWidth": 753,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": true,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-route",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#main-content",
+          "text": "SKIP TO MAIN CONTENT"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "Read HTML"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "Download PDF"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/#cite",
+          "text": "Cite this paper"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "03\nAgentic AI Insurability & Risk Transfer White Paper 2026\nInterprets the lifecycle governance framework through insura"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "01\nAgentic AI Insurability"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "02\nInsured Legal Subject"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "03\nAgentic Risk Object"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "04\nResponsibility Mapping"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "05\nClaim Evidence Chain"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "06\nAgentic Insurability Objects"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "07\nAIO-01 through AIO-14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "08\nAIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "VIEW CHECKSUMS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "HTML\nRead full HTML\nResponsive web-reading staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "PDF\nDownload PDF\nFixed-layout staging candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "JSON\nPublic staging manifest\nArtifact role model and integrity record"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "SHA256\nChecksums\nPublic artifact hashes"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "OPEN MANIFEST"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Part of the same white paper standard.",
+        "Key concepts covered.",
+        "Read, download, and verify.",
+        "Citation and artifact identity.",
+        "What the paper does not do.",
+        "Artifact integrity.",
+        "Follow the surrounding graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": true,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-html",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1",
+    "width": 375,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer",
+          "text": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#candidate-boundary",
+          "text": "Candidate Boundary"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "Governing Thesis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#mandatory-boundary-sentences",
+          "text": "Mandatory Boundary Sentences"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#source-posture",
+          "text": "Source Posture"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#contents",
+          "text": "Contents"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-00",
+          "text": "Chapter 00"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-01",
+          "text": "Chapter 01"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "Chapter 02"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "Chapter 03"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-04",
+          "text": "Chapter 04"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-05",
+          "text": "Chapter 05"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-06",
+          "text": "Chapter 06"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-07",
+          "text": "Chapter 07"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "Chapter 08"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-09",
+          "text": "Chapter 09"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "Chapter 10"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-11",
+          "text": "Chapter 11"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-12",
+          "text": "Chapter 12"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-13",
+          "text": "Chapter 13"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-14",
+          "text": "Chapter 14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "Chapter 15"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-16",
+          "text": "Chapter 16"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-a",
+          "text": "Appendix A"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-b",
+          "text": "Appendix B"
+        }
+      ],
+      "bodyClientWidth": 360,
+      "bodyScrollWidth": 360,
+      "clientWidth": 360,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Publication Contents",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+        "Candidate Boundary",
+        "Governing Thesis",
+        "Mandatory Boundary Sentences",
+        "Source Posture",
+        "Contents",
+        "Chapter 00",
+        "The Plain-English Problem: Why Agentic AI Breaks Today’s Insurance Logic",
+        "Chapter 01",
+        "The Insured Subject Problem: Who Is Covered When an Agent Acts?",
+        "Chapter 02",
+        "The Insurable Object Problem: What Exactly Is Being Covered?",
+        "Chapter 03",
+        "The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect",
+        "Chapter 04",
+        "What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap",
+        "Chapter 05",
+        "Why Agentic AI Is Not Yet Broadly Insurable",
+        "Chapter 06",
+        "From Compliance and Auditability to Insurability",
+        "Chapter 07",
+        "Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence",
+        "Chapter 08",
+        "The Agentic Insurability Object Model",
+        "Chapter 09",
+        "Coverage Boundaries, Authority, Delegation, and Exclusion Triggers",
+        "Chapter 10"
+      ],
+      "protruders": [
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TABLE",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A perso",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "THEAD",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TR",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 278,
+          "right": 451,
+          "tag": "TH",
+          "text": "Why it matters for agentic AI",
+          "width": 173
+        },
+        {
+          "cls": "",
+          "left": 451,
+          "right": 654,
+          "tag": "TH",
+          "text": "Source",
+          "width": 203
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TBODY",
+          "text": "Who is covered? A person, firm, officer, vendor, or organization. The AI system is not aut",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TR",
+          "text": "Who is covered? A person, firm, officer, vendor, or organization. The AI system is not aut",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 278,
+          "right": 451,
+          "tag": "TD",
+          "text": "The AI system is not automatically the insured party.",
+          "width": 173
+        },
+        {
+          "cls": "",
+          "left": 451,
+          "right": 654,
+          "tag": "TD",
+          "text": "[SRC: INS-04][SRC: INS-06][SRC: INS-08]",
+          "width": 203
+        },
+        {
+          "cls": "source-marker",
+          "left": 462,
+          "right": 547,
+          "tag": "SPAN",
+          "text": "[SRC: INS-04]",
+          "width": 85
+        },
+        {
+          "cls": "source-marker",
+          "left": 547,
+          "right": 631,
+          "tag": "SPAN",
+          "text": "[SRC: INS-06]",
+          "width": 85
+        },
+        {
+          "cls": "source-marker",
+          "left": 462,
+          "right": 547,
+          "tag": "SPAN",
+          "text": "[SRC: INS-08]",
+          "width": 85
+        }
+      ],
+      "scrollWidth": 360,
+      "tableInfo": [
+        {
+          "scrollWidth": 620,
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A person, firm, officer, vendor, or o",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Insurance question Traditional answer Agentic AI problem Required mapping Source Who is insured? Named insured, addition",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Layer What it is Insurance function Agentic AI gap Source Subject Covered person or organization Identifies who can be i",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Human role Agent role Work unit Evidence needed Loss question Legal subject Approver Tool-using agent Bounded task Appro",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Focus What it may cover Why it is not enough for agentic AI Source AI-specific product examples Model performance, error",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Insurance question Current AI stack often provides Missing lifecycle object Source What is the object? Model name, workf",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "WP1 / WP2 object Insurance translation in this paper Why it matters Source MRO AIO review object family Gives the risk o",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Signal What it shows What it does not show Source Logs Events, timestamps, service activity Authority or accepted outcom",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "AIO Plain-English label Insurance use Boundary note Source AIO-01 Legal insured subject Names the covered party Not lega",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Action Tool permission Business authority Confirmation required Coverage risk Drafts a message Allowed by tool Maybe all",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Reconstruction element Evidence needed Source type Boundary risk Loss event record Time, event, effect, owner Incident /",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Dependency layer Risk Evidence needed Aggregation concern Source Model provider Model change, outage, error Dependency m",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Evidence category Why it matters AIO Boundary note Subject evidence Shows who the insured party is AIO-01 Not legal advi",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Claims evidence category Why it matters AIO Boundary note Loss event record Anchors the incident AIO-06 Not proof of pay",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Aggregation driver Example Evidence needed Reinsurance concern Shared model Many teams use the same model version Model/",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Level Label Evidence visibility Insurance reading Boundary L0 Uninsurable Black Box Very low Hard to review Analytical l",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Item Question Evidence pointer AIO Subject Who is the legal subject? Policy / entity record AIO-01 Work unit What exact ",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Evidence category Prompt AIO Boundary Subject Who is the insured party? AIO-01 Not legal advice Scope What work units ar",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Package element What it answers AIO Event record What happened? AIO-06 Trace How did it happen? AIO-07 Responsibility ma",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        },
+        {
+          "scrollWidth": 620,
+          "text": "AIO WP1 / GAIC relation Why it matters Boundary AIO-01 MRO subject / role logic Anchors the insured party Internal trans",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 294
+        }
+      ],
+      "textChecks": {
+        "aio": true,
+        "airm": true,
+        "appendices": true,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": true,
+        "foundation": false,
+        "insurability": true,
+        "noWP4Published": false,
+        "sources": true,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 375
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-html",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1",
+    "width": 390,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer",
+          "text": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#candidate-boundary",
+          "text": "Candidate Boundary"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "Governing Thesis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#mandatory-boundary-sentences",
+          "text": "Mandatory Boundary Sentences"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#source-posture",
+          "text": "Source Posture"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#contents",
+          "text": "Contents"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-00",
+          "text": "Chapter 00"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-01",
+          "text": "Chapter 01"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "Chapter 02"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "Chapter 03"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-04",
+          "text": "Chapter 04"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-05",
+          "text": "Chapter 05"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-06",
+          "text": "Chapter 06"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-07",
+          "text": "Chapter 07"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "Chapter 08"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-09",
+          "text": "Chapter 09"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "Chapter 10"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-11",
+          "text": "Chapter 11"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-12",
+          "text": "Chapter 12"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-13",
+          "text": "Chapter 13"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-14",
+          "text": "Chapter 14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "Chapter 15"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-16",
+          "text": "Chapter 16"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-a",
+          "text": "Appendix A"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-b",
+          "text": "Appendix B"
+        }
+      ],
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "clientWidth": 375,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Publication Contents",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+        "Candidate Boundary",
+        "Governing Thesis",
+        "Mandatory Boundary Sentences",
+        "Source Posture",
+        "Contents",
+        "Chapter 00",
+        "The Plain-English Problem: Why Agentic AI Breaks Today’s Insurance Logic",
+        "Chapter 01",
+        "The Insured Subject Problem: Who Is Covered When an Agent Acts?",
+        "Chapter 02",
+        "The Insurable Object Problem: What Exactly Is Being Covered?",
+        "Chapter 03",
+        "The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect",
+        "Chapter 04",
+        "What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap",
+        "Chapter 05",
+        "Why Agentic AI Is Not Yet Broadly Insurable",
+        "Chapter 06",
+        "From Compliance and Auditability to Insurability",
+        "Chapter 07",
+        "Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence",
+        "Chapter 08",
+        "The Agentic Insurability Object Model",
+        "Chapter 09",
+        "Coverage Boundaries, Authority, Delegation, and Exclusion Triggers",
+        "Chapter 10"
+      ],
+      "protruders": [
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TABLE",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A perso",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "THEAD",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TR",
+          "text": "Question Plain-English answer Why it matters for agentic AI Source",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 278,
+          "right": 451,
+          "tag": "TH",
+          "text": "Why it matters for agentic AI",
+          "width": 173
+        },
+        {
+          "cls": "",
+          "left": 451,
+          "right": 654,
+          "tag": "TH",
+          "text": "Source",
+          "width": 203
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TBODY",
+          "text": "Who is covered? A person, firm, officer, vendor, or organization. The AI system is not aut",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 34,
+          "right": 654,
+          "tag": "TR",
+          "text": "Who is covered? A person, firm, officer, vendor, or organization. The AI system is not aut",
+          "width": 620
+        },
+        {
+          "cls": "",
+          "left": 278,
+          "right": 451,
+          "tag": "TD",
+          "text": "The AI system is not automatically the insured party.",
+          "width": 173
+        },
+        {
+          "cls": "",
+          "left": 451,
+          "right": 654,
+          "tag": "TD",
+          "text": "[SRC: INS-04][SRC: INS-06][SRC: INS-08]",
+          "width": 203
+        },
+        {
+          "cls": "source-marker",
+          "left": 462,
+          "right": 547,
+          "tag": "SPAN",
+          "text": "[SRC: INS-04]",
+          "width": 85
+        },
+        {
+          "cls": "source-marker",
+          "left": 547,
+          "right": 631,
+          "tag": "SPAN",
+          "text": "[SRC: INS-06]",
+          "width": 85
+        },
+        {
+          "cls": "source-marker",
+          "left": 462,
+          "right": 547,
+          "tag": "SPAN",
+          "text": "[SRC: INS-08]",
+          "width": 85
+        }
+      ],
+      "scrollWidth": 375,
+      "tableInfo": [
+        {
+          "scrollWidth": 620,
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A person, firm, officer, vendor, or o",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Insurance question Traditional answer Agentic AI problem Required mapping Source Who is insured? Named insured, addition",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Layer What it is Insurance function Agentic AI gap Source Subject Covered person or organization Identifies who can be i",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Human role Agent role Work unit Evidence needed Loss question Legal subject Approver Tool-using agent Bounded task Appro",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Focus What it may cover Why it is not enough for agentic AI Source AI-specific product examples Model performance, error",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Insurance question Current AI stack often provides Missing lifecycle object Source What is the object? Model name, workf",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "WP1 / WP2 object Insurance translation in this paper Why it matters Source MRO AIO review object family Gives the risk o",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Signal What it shows What it does not show Source Logs Events, timestamps, service activity Authority or accepted outcom",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "AIO Plain-English label Insurance use Boundary note Source AIO-01 Legal insured subject Names the covered party Not lega",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Action Tool permission Business authority Confirmation required Coverage risk Drafts a message Allowed by tool Maybe all",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Reconstruction element Evidence needed Source type Boundary risk Loss event record Time, event, effect, owner Incident /",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Dependency layer Risk Evidence needed Aggregation concern Source Model provider Model change, outage, error Dependency m",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Evidence category Why it matters AIO Boundary note Subject evidence Shows who the insured party is AIO-01 Not legal advi",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Claims evidence category Why it matters AIO Boundary note Loss event record Anchors the incident AIO-06 Not proof of pay",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Aggregation driver Example Evidence needed Reinsurance concern Shared model Many teams use the same model version Model/",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Level Label Evidence visibility Insurance reading Boundary L0 Uninsurable Black Box Very low Hard to review Analytical l",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Item Question Evidence pointer AIO Subject Who is the legal subject? Policy / entity record AIO-01 Work unit What exact ",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Evidence category Prompt AIO Boundary Subject Who is the insured party? AIO-01 Not legal advice Scope What work units ar",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "Package element What it answers AIO Event record What happened? AIO-06 Trace How did it happen? AIO-07 Responsibility ma",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        },
+        {
+          "scrollWidth": 620,
+          "text": "AIO WP1 / GAIC relation Why it matters Boundary AIO-01 MRO subject / role logic Anchors the insured party Internal trans",
+          "width": 620,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 620,
+          "wrapWidth": 309
+        }
+      ],
+      "textChecks": {
+        "aio": true,
+        "airm": true,
+        "appendices": true,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": true,
+        "foundation": false,
+        "insurability": true,
+        "noWP4Published": false,
+        "sources": true,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 390
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-html",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1",
+    "width": 768,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer",
+          "text": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#candidate-boundary",
+          "text": "Candidate Boundary"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "Governing Thesis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#mandatory-boundary-sentences",
+          "text": "Mandatory Boundary Sentences"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#source-posture",
+          "text": "Source Posture"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#contents",
+          "text": "Contents"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-00",
+          "text": "Chapter 00"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-01",
+          "text": "Chapter 01"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "Chapter 02"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "Chapter 03"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-04",
+          "text": "Chapter 04"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-05",
+          "text": "Chapter 05"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-06",
+          "text": "Chapter 06"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-07",
+          "text": "Chapter 07"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "Chapter 08"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-09",
+          "text": "Chapter 09"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "Chapter 10"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-11",
+          "text": "Chapter 11"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-12",
+          "text": "Chapter 12"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-13",
+          "text": "Chapter 13"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-14",
+          "text": "Chapter 14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "Chapter 15"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-16",
+          "text": "Chapter 16"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-a",
+          "text": "Appendix A"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-b",
+          "text": "Appendix B"
+        }
+      ],
+      "bodyClientWidth": 753,
+      "bodyScrollWidth": 753,
+      "clientWidth": 753,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Publication Contents",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+        "Candidate Boundary",
+        "Governing Thesis",
+        "Mandatory Boundary Sentences",
+        "Source Posture",
+        "Contents",
+        "Chapter 00",
+        "The Plain-English Problem: Why Agentic AI Breaks Today’s Insurance Logic",
+        "Chapter 01",
+        "The Insured Subject Problem: Who Is Covered When an Agent Acts?",
+        "Chapter 02",
+        "The Insurable Object Problem: What Exactly Is Being Covered?",
+        "Chapter 03",
+        "The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect",
+        "Chapter 04",
+        "What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap",
+        "Chapter 05",
+        "Why Agentic AI Is Not Yet Broadly Insurable",
+        "Chapter 06",
+        "From Compliance and Auditability to Insurability",
+        "Chapter 07",
+        "Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence",
+        "Chapter 08",
+        "The Agentic Insurability Object Model",
+        "Chapter 09",
+        "Coverage Boundaries, Authority, Delegation, and Exclusion Triggers",
+        "Chapter 10"
+      ],
+      "protruders": [],
+      "scrollWidth": 753,
+      "tableInfo": [
+        {
+          "scrollWidth": 642,
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A person, firm, officer, vendor, or o",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Insurance question Traditional answer Agentic AI problem Required mapping Source Who is insured? Named insured, addition",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Layer What it is Insurance function Agentic AI gap Source Subject Covered person or organization Identifies who can be i",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Human role Agent role Work unit Evidence needed Loss question Legal subject Approver Tool-using agent Bounded task Appro",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Focus What it may cover Why it is not enough for agentic AI Source AI-specific product examples Model performance, error",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Insurance question Current AI stack often provides Missing lifecycle object Source What is the object? Model name, workf",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "WP1 / WP2 object Insurance translation in this paper Why it matters Source MRO AIO review object family Gives the risk o",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Signal What it shows What it does not show Source Logs Events, timestamps, service activity Authority or accepted outcom",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "AIO Plain-English label Insurance use Boundary note Source AIO-01 Legal insured subject Names the covered party Not lega",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Action Tool permission Business authority Confirmation required Coverage risk Drafts a message Allowed by tool Maybe all",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Reconstruction element Evidence needed Source type Boundary risk Loss event record Time, event, effect, owner Incident /",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Dependency layer Risk Evidence needed Aggregation concern Source Model provider Model change, outage, error Dependency m",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Evidence category Why it matters AIO Boundary note Subject evidence Shows who the insured party is AIO-01 Not legal advi",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Claims evidence category Why it matters AIO Boundary note Loss event record Anchors the incident AIO-06 Not proof of pay",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Aggregation driver Example Evidence needed Reinsurance concern Shared model Many teams use the same model version Model/",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Level Label Evidence visibility Insurance reading Boundary L0 Uninsurable Black Box Very low Hard to review Analytical l",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Item Question Evidence pointer AIO Subject Who is the legal subject? Policy / entity record AIO-01 Work unit What exact ",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Evidence category Prompt AIO Boundary Subject Who is the insured party? AIO-01 Not legal advice Scope What work units ar",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "Package element What it answers AIO Event record What happened? AIO-06 Trace How did it happen? AIO-07 Responsibility ma",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        },
+        {
+          "scrollWidth": 642,
+          "text": "AIO WP1 / GAIC relation Why it matters Boundary AIO-01 MRO subject / role logic Anchors the insured party Internal trans",
+          "width": 642,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 642,
+          "wrapWidth": 644
+        }
+      ],
+      "textChecks": {
+        "aio": true,
+        "airm": true,
+        "appendices": true,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": true,
+        "foundation": false,
+        "insurability": true,
+        "noWP4Published": false,
+        "sources": true,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiirwp-html",
+    "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+    "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.1",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer",
+          "text": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#candidate-boundary",
+          "text": "Candidate Boundary"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "Governing Thesis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#mandatory-boundary-sentences",
+          "text": "Mandatory Boundary Sentences"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#source-posture",
+          "text": "Source Posture"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#contents",
+          "text": "Contents"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-00",
+          "text": "Chapter 00"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-01",
+          "text": "Chapter 01"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "Chapter 02"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-03",
+          "text": "Chapter 03"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-04",
+          "text": "Chapter 04"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-05",
+          "text": "Chapter 05"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-06",
+          "text": "Chapter 06"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-07",
+          "text": "Chapter 07"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "Chapter 08"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-09",
+          "text": "Chapter 09"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "Chapter 10"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-11",
+          "text": "Chapter 11"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-12",
+          "text": "Chapter 12"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-13",
+          "text": "Chapter 13"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-14",
+          "text": "Chapter 14"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "Chapter 15"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-16",
+          "text": "Chapter 16"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-a",
+          "text": "Appendix A"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#appendix-b",
+          "text": "Appendix B"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Publication Contents",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+        "Candidate Boundary",
+        "Governing Thesis",
+        "Mandatory Boundary Sentences",
+        "Source Posture",
+        "Contents",
+        "Chapter 00",
+        "The Plain-English Problem: Why Agentic AI Breaks Today’s Insurance Logic",
+        "Chapter 01",
+        "The Insured Subject Problem: Who Is Covered When an Agent Acts?",
+        "Chapter 02",
+        "The Insurable Object Problem: What Exactly Is Being Covered?",
+        "Chapter 03",
+        "The Responsibility Mapping Problem: How Human Liability and Agentic AI Risk Connect",
+        "Chapter 04",
+        "What AI Insurance Covers Today, and Why Agentic AI Still Falls Through the Gap",
+        "Chapter 05",
+        "Why Agentic AI Is Not Yet Broadly Insurable",
+        "Chapter 06",
+        "From Compliance and Auditability to Insurability",
+        "Chapter 07",
+        "Why Logs, Traces, and Vendor Assurances Are Not Claim Evidence",
+        "Chapter 08",
+        "The Agentic Insurability Object Model",
+        "Chapter 09",
+        "Coverage Boundaries, Authority, Delegation, and Exclusion Triggers",
+        "Chapter 10"
+      ],
+      "protruders": [],
+      "scrollWidth": 1425,
+      "tableInfo": [
+        {
+          "scrollWidth": 956,
+          "text": "Question Plain-English answer Why it matters for agentic AI Source Who is covered? A person, firm, officer, vendor, or o",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Insurance question Traditional answer Agentic AI problem Required mapping Source Who is insured? Named insured, addition",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Layer What it is Insurance function Agentic AI gap Source Subject Covered person or organization Identifies who can be i",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Human role Agent role Work unit Evidence needed Loss question Legal subject Approver Tool-using agent Bounded task Appro",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Focus What it may cover Why it is not enough for agentic AI Source AI-specific product examples Model performance, error",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Insurance question Current AI stack often provides Missing lifecycle object Source What is the object? Model name, workf",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "WP1 / WP2 object Insurance translation in this paper Why it matters Source MRO AIO review object family Gives the risk o",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Signal What it shows What it does not show Source Logs Events, timestamps, service activity Authority or accepted outcom",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "AIO Plain-English label Insurance use Boundary note Source AIO-01 Legal insured subject Names the covered party Not lega",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Action Tool permission Business authority Confirmation required Coverage risk Drafts a message Allowed by tool Maybe all",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Reconstruction element Evidence needed Source type Boundary risk Loss event record Time, event, effect, owner Incident /",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Dependency layer Risk Evidence needed Aggregation concern Source Model provider Model change, outage, error Dependency m",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Evidence category Why it matters AIO Boundary note Subject evidence Shows who the insured party is AIO-01 Not legal advi",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Claims evidence category Why it matters AIO Boundary note Loss event record Anchors the incident AIO-06 Not proof of pay",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Aggregation driver Example Evidence needed Reinsurance concern Shared model Many teams use the same model version Model/",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Level Label Evidence visibility Insurance reading Boundary L0 Uninsurable Black Box Very low Hard to review Analytical l",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Item Question Evidence pointer AIO Subject Who is the legal subject? Policy / entity record AIO-01 Work unit What exact ",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Evidence category Prompt AIO Boundary Subject Who is the insured party? AIO-01 Not legal advice Scope What work units ar",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "Package element What it answers AIO Event record What happened? AIO-06 Trace How did it happen? AIO-07 Responsibility ma",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        },
+        {
+          "scrollWidth": 956,
+          "text": "AIO WP1 / GAIC relation Why it matters Boundary AIO-01 MRO subject / role logic Anchors the insured party Internal trans",
+          "width": 956,
+          "wrapOverflow": "auto",
+          "wrapScrollWidth": 956,
+          "wrapWidth": 958
+        }
+      ],
+      "textChecks": {
+        "aio": true,
+        "airm": true,
+        "appendices": true,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": true,
+        "foundation": false,
+        "insurability": true,
+        "noWP4Published": false,
+        "sources": true,
+        "subtitle": true,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "research-index",
+    "url": "https://www.jearonwong.com/research/",
+    "finalUrl": "https://www.jearonwong.com/research/",
+    "title": "Research | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Agentic AI Insurability & Risk Transfer White Paper 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "OPEN WHITE PAPER HUB"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "READ HTML"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "DOWNLOAD PDF"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Research",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026"
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link is-active",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": true,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "evidence",
+    "url": "https://www.jearonwong.com/evidence/",
+    "finalUrl": "https://www.jearonwong.com/evidence/",
+    "title": "Evidence Registry / Citation Kit | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "RESEARCH\nAgentic AI Insurability & Risk Transfer White Paper 2026 hub\nPUBLIC-STAGING-CANDIDATE"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "RESEARCH\nAIIRWP responsive HTML full text\nPUBLIC-STAGING-CANDIDATE"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "RESEARCH\nAIIRWP PDF\nPUBLIC-STAGING-CANDIDATE"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "INTEGRITY\nAIIRWP checksums\nPUBLIC-STAGING-CANDIDATE"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "INTEGRITY\nAIIRWP manifest\nPUBLIC-STAGING-CANDIDATE"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Agentic AI Insurability & Risk Transfer White Paper 2026\nhttps://www.jearonwong.com/research/agentic-ai-insurability-ris"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf",
+          "text": "AIIRWP PDF\nhttps://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.p"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html",
+          "text": "AIIRWP responsive HTML\nhttps://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+          "text": "AIIRWP checksums\nhttps://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sh"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+          "text": "AIIRWP manifest\nhttps://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Evidence Registry / Citation Kit",
+        "One evidence shelf for readers, writers, and crawlers.",
+        "Evidence Registry.",
+        "How to cite.",
+        "Jearon Wong",
+        "MPLP",
+        "Global AI Compliance White Paper 2026",
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Agentic AI Insurability & Risk Transfer White Paper 2026",
+        "Canonical URLs.",
+        "Technical artifacts.",
+        "Project proof surfaces.",
+        "External evidence status.",
+        "Boundary."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": false,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": true,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "concepts-map",
+    "url": "https://www.jearonwong.com/concepts/map/",
+    "finalUrl": "https://www.jearonwong.com/concepts/map/",
+    "title": "Concepts Map / Entity Mesh | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "LINK\n:\nAIIRWP WHITE PAPER HUB"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP white paper hub"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AGENTIC AI INSURABILITY & RISK TRANSFER WHITE PAPER 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AGENTIC AI INSURABILITY & RISK TRANSFER WHITE PAPER 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "AGENTIC INSURABILITY OBJECTS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "CLAIM EVIDENCE CHAIN"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "AIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Jearon Wong\nAUTHORED\nAgentic AI Insurability & Risk Transfer White Paper 2026\npublic-staging-candidate"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP\nINTERPRETS\nGAIC as insurability and risk-transfer lifecycle evidence\nauthored-analysis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP\nCOMPLEMENTS\nAIAAWP without equating auditability with insurability\nauthored-analysis"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP\nDEFINES / SYNTHESIZES\nAgentic Insurability Objects and Agentic Insurability Readiness Model\nauthor-synthesis / no"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "AGENTIC AI INSURABILITY"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "AIO"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "CLAIM EVIDENCE CHAIN"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "AIRM"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "Agentic AI Insurability & Risk Transfer White Paper 2026"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#governing-thesis",
+          "text": "Agentic AI Insurability"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "Agentic Insurability Objects"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "Claim Evidence Chain"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "AIRM"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Concepts Map / Entity Mesh",
+        "The concept system in one navigable surface.",
+        "Canonical semantic chain.",
+        "Extractable layer index.",
+        "Identity Layer",
+        "Evidence Layer",
+        "Category Layer",
+        "Governance Object Layer",
+        "Auditability Layer",
+        "Insurability Layer",
+        "Evaluation Layer",
+        "Protocol Path",
+        "Systems Discussed in GAIC",
+        "Extended Ecosystem Mapping",
+        "Engineering Practice Layer",
+        "Regulatory and Enterprise Governance Layer",
+        "Applied Playbooks",
+        "Explicit entity relationships.",
+        "Entity mesh.",
+        "Relation groups.",
+        "Identity Layer",
+        "Category Layer",
+        "Governance Object Layer",
+        "Systems Discussed in GAIC",
+        "Auditability Layer",
+        "Insurability Layer",
+        "Extended Ecosystem Mapping",
+        "Regulatory and Enterprise Governance Layer",
+        "Evaluation Layer",
+        "Engineering Practice Layer"
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": true,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": true,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "definitions",
+    "url": "https://www.jearonwong.com/definitions/",
+    "finalUrl": "https://www.jearonwong.com/definitions/",
+    "title": "Definitions for the Agent Era | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP 2026 WHITE PAPER HUB"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-08",
+          "text": "AIIRWP: AGENTIC INSURABILITY OBJECTS"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-15",
+          "text": "AIIRWP: AGENTIC INSURABILITY READINESS MODEL"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "AIIRWP: INSURED SUBJECT AND AGENTIC RISK OBJECT DISTINCTION"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-02",
+          "text": "AIIRWP: INSURED SUBJECT AND AGENTIC RISK OBJECT DISTINCTION"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html#chapter-10",
+          "text": "AIIRWP: CLAIMS EVIDENCE AND LOSS RECONSTRUCTION"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Definitions for the Agent Era",
+        "Core thesis",
+        "AI Agent Lifecycle",
+        "Agentic Delivery",
+        "Execution is not Delivery",
+        "Accepted Outcome",
+        "Accountable Delivery",
+        "Governance primitives",
+        "Confirmation Boundary",
+        "Evidence Chain",
+        "Audit Evidence Chain",
+        "Agentic AI Auditability",
+        "Agentic Audit Object",
+        "Agentic Auditability Readiness Model (AARM)",
+        "Agentic AI Insurability",
+        "Agentic Insurability Objects (AIO)",
+        "Agentic Insurability Readiness Model (AIRM)",
+        "Insured Legal Subject",
+        "Agentic Risk Object",
+        "Claim Evidence Chain",
+        "Lifecycle-Responsibility-Linked Agent Work",
+        "Semantic Loss",
+        "Multi-Agent Lifecycle Governance",
+        "Intent Drift",
+        "Context Drift",
+        "Lifecycle Responsibility Consensus",
+        "System architecture",
+        "MPLP",
+        "Protocol Engineering",
+        "Lifecycle Role Decomposition"
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": true,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": false
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "gaic-hub",
+    "url": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/",
+    "title": "Global AI Compliance White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "02\nAgentic AI Insurability & Risk Transfer White Paper 2026\nThe public staging candidate interprets the root lifecycle g"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Global AI Compliance White Paper 2026",
+        "Key concepts covered.",
+        "Download and read.",
+        "Industry series / related white papers.",
+        "Citation and artifact identity.",
+        "Systems and frameworks discussed.",
+        "Artifact integrity.",
+        "Follow the surrounding concept graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  },
+  {
+    "page": "aiaawp-hub",
+    "url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    "finalUrl": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
+    "title": "Agentic AI Auditability & Assurance White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+    "width": 1440,
+    "result": {
+      "aiirwpLinks": [
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "03\nAIIRWP 2026\nAdjacent risk-transfer interpretation of the same lifecycle governance framework; auditability supports b"
+        },
+        {
+          "href": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+          "text": "AIIRWP insurability sibling"
+        }
+      ],
+      "bodyClientWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "clientWidth": 1425,
+      "docxLinks": [],
+      "hasBodyOverflow": false,
+      "headings": [
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Part of the same white paper standard.",
+        "Key concepts covered.",
+        "Read, download, and verify.",
+        "Citation and artifact identity.",
+        "What the paper does not do.",
+        "Artifact integrity.",
+        "Follow the surrounding graph."
+      ],
+      "protruders": [
+        {
+          "cls": "drawer-panel",
+          "left": 1323,
+          "right": 1623,
+          "tag": "NAV",
+          "text": "",
+          "width": 300
+        },
+        {
+          "cls": "drawer-header",
+          "left": 1352,
+          "right": 1595,
+          "tag": "DIV",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "brand-name",
+          "left": 1352,
+          "right": 1444,
+          "tag": "SPAN",
+          "text": "",
+          "width": 92
+        },
+        {
+          "cls": "drawer-close",
+          "left": 1551,
+          "right": 1595,
+          "tag": "LABEL",
+          "text": "",
+          "width": 44
+        },
+        {
+          "cls": "drawer-list",
+          "left": 1352,
+          "right": 1595,
+          "tag": "UL",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "drawer-link",
+          "left": 1352,
+          "right": 1595,
+          "tag": "A",
+          "text": "",
+          "width": 243
+        },
+        {
+          "cls": "",
+          "left": 1352,
+          "right": 1595,
+          "tag": "LI",
+          "text": "",
+          "width": 243
+        }
+      ],
+      "scrollWidth": 1425,
+      "tableInfo": [],
+      "textChecks": {
+        "aio": false,
+        "airm": false,
+        "appendices": false,
+        "auditability": false,
+        "boundaryVisible": true,
+        "chapters": false,
+        "foundation": false,
+        "insurability": false,
+        "noWP4Published": true,
+        "sources": false,
+        "subtitle": false,
+        "synthesis": false,
+        "title": false
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "consoleIssues": []
+  }
+]

@@ -82,11 +82,13 @@ const internalLinks = [
 ];
 const relatedWhitePapers = [
   {
+    sequence: "02",
     href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
     label: "Agentic AI Auditability & Assurance White Paper 2026",
     body: "The companion public research candidate stages the auditability and lifecycle evidence layer for the same industry series."
   },
   {
+    sequence: "03",
     href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
     label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
     body: "The public staging candidate interprets the root lifecycle governance framework through insurability, risk transfer, underwriting evidence, and claims evidence boundaries."
@@ -370,9 +372,9 @@ const definedTermSetJsonLd = {
           </p>
         </div>
         <div class="series-ledger">
-          {relatedWhitePapers.map((item, index) => (
+          {relatedWhitePapers.map((item) => (
             <a href={item.href}>
-              <strong>{String(index + 1).padStart(2, "0")}</strong>
+              <strong>{item.sequence}</strong>
               <span>{item.label}</span>
               <em>{item.body}</em>
             </a>
