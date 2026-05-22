@@ -4870,3 +4870,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R9 does not claim Final Seal, owner release execution, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
 
 **WP3-R9 Status:** WP3-R9 EMERGENCY PUBLICATION HOLD AND WHITEPAPER QUALITY RESET COMPLETE / READY FOR WP3-R10 PUBLICATION-GRADE REWRITE.
+
+## WP3-R15B Notes (May 22, 2026)
+
+**Scope:** Final candidate artifact QA for the R15 internal HTML/PDF artifacts for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `ef09769315c804e8cc60c184086bb1f6cd7fe320` and confirmed `origin/HEAD` matched before R15B work.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the R15 candidate artifact package, R15 reports, R12 accepted body, R13 acceptance reports, and R14 artifact planning files.
+4. Generated and reviewed R15B HTML proof screenshots at 375, 390, 768, and 1440 widths, with recorded body-level overflow false and console error count zero.
+5. Generated and reviewed R15B PDF proof images for cover, TOC, Chapters 0/1/4/5/8/9, Appendix A, Appendix D, and final page.
+6. Verified the HTML candidate carries the title/subtitle, internal-candidate status, Chapters 0-10, Appendices A-D, 12 source-note families, rendered Chapter 4 figure, readable source markers, and no public canonical or JSON-LD.
+7. Verified body-to-artifact parity against the R12 accepted body and confirmed no body rewrite issue was found.
+8. Verified manifest JSON parsing, R15 checksum validation, and no-DOCX status.
+9. Determined the R15 PDF should not advance to public staging preparation because the 20-page A4 layout is too compressed, the cover has a bottom white-band issue, the PDF lacks mature page identity, and appendix/source-note density is not publication-candidate comfortable.
+10. Created R15B QA reports and artifact acceptance report with `NOT_ACCEPTED_REQUIRES_ARTIFACT_REPAIR`.
+
+**Artifact discipline:**
+
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- R15B proof assets remain internal under `gaic_v032_work/source_r3/wp3_r15b_final_candidate_qa/`.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R15B is final candidate artifact QA only.
+- WP3-R15B does not claim public release, public staging, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R15B Status:** WP3-R15B FINAL CANDIDATE ARTIFACT QA COMPLETE / R15C ARTIFACT REPAIR REQUIRED.

@@ -4146,3 +4146,35 @@ Boundary discipline:
 - WP3-R9 does not rewrite the full white paper, generate a new PDF, generate a new public HTML artifact, create DOCX, claim author release execution, claim Final Seal, claim external adoption, claim indexing, claim SEO/GEO uplift, claim answer-engine recognition, claim insurer acceptance, claim coverage-ready or underwriting-ready status, claim certification or endorsement, claim legal proof, provide insurance advice, or provide legal advice.
 
 **WP3-R9 Status:** ✓ WP3-R9 EMERGENCY PUBLICATION HOLD AND WHITEPAPER QUALITY RESET COMPLETE / READY FOR WP3-R10 PUBLICATION-GRADE REWRITE
+
+## WP3-R15B Known Issues
+
+### Final Candidate Artifact QA Complete
+
+WP3-R15B reviewed the R15 internal candidate HTML/PDF artifacts for `Agentic AI Insurability & Risk Transfer White Paper 2026` before any public staging preparation.
+
+Resolved in this wave:
+
+- Verified R15B started from `main` at `ef09769315c804e8cc60c184086bb1f6cd7fe320` and origin matched.
+- Inspected the R15 internal HTML, PDF, responsibility bridge SVG, manifest, checksums, proof assets, and QA files.
+- Captured and reviewed R15B HTML proof at 375, 390, 768, and 1440 widths.
+- Captured and reviewed representative PDF proof pages for cover, TOC, Chapters 0/1/4/5/8/9, Appendix A, Appendix D, and final page.
+- Confirmed HTML carries the R12 accepted body, source-note families, Chapter 4 rendered figure, AIO/AIRM sections, and internal-candidate boundary language.
+- Confirmed body-to-artifact parity passed and no raw Mermaid, raw `[SRC: ...]`, raw `[SYNTHESIS: ...]`, internal QA leakage, or public release/final/seal claim was accepted.
+- Confirmed manifest/checksum validation passed and no DOCX artifact was created.
+
+Remaining known issues:
+
+- R15C artifact repair is required before any R16 public staging preparation.
+- The R15 PDF is 20 A4 pages and is too compressed for an external serious-whitepaper candidate.
+- The PDF cover shows a large bottom white band and needs A4 cover fit repair.
+- The PDF needs a more mature publication-family page identity, including page number/footer/document ID rhythm.
+- Appendix/source-note density should be relaxed while preserving the numbered source-note model.
+- High-comparison tables should remain matrix-like and be reproofed after PDF density repair.
+
+Boundary discipline:
+
+- WP3-R15B is final candidate artifact QA only.
+- WP3-R15B does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
+
+**WP3-R15B Status:** ◐ WP3-R15B FINAL CANDIDATE ARTIFACT QA COMPLETE / R15C ARTIFACT REPAIR REQUIRED

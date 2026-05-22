@@ -1,0 +1,79 @@
+[
+  {
+    "name": "html-375-top.png",
+    "selector": "#top",
+    "requestedWidth": 375,
+    "innerWidth": 375,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-375-figure.png",
+    "selector": "#responsibility-bridge-figure",
+    "requestedWidth": 375,
+    "innerWidth": 375,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-375-table-sample.png",
+    "selector": "#table-market-edge",
+    "requestedWidth": 375,
+    "innerWidth": 375,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-390-source-note-sample.png",
+    "selector": "#source-note-1",
+    "requestedWidth": 390,
+    "innerWidth": 390,
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "bodyScrollWidth": 390,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-768-top.png",
+    "selector": "#top",
+    "requestedWidth": 768,
+    "innerWidth": 768,
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "bodyScrollWidth": 768,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-1440-top.png",
+    "selector": "#top",
+    "requestedWidth": 1440,
+    "innerWidth": 1440,
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "overflow": false,
+    "consoleErrors": 0
+  },
+  {
+    "name": "html-1440-source-notes.png",
+    "selector": "#appendix-a-source-notes-and-method-boundary",
+    "requestedWidth": 1440,
+    "innerWidth": 1440,
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "overflow": false,
+    "consoleErrors": 0
+  }
+]
