@@ -4208,3 +4208,35 @@ Boundary discipline:
 - WP3-R15C does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
 
 **WP3-R15C Status:** ◐ WP3-R15C ARTIFACT REPAIR COMPLETE / READY FOR WP3-R15D FINAL CANDIDATE ARTIFACT QA WITH NOTES
+
+## WP3-R15D Known Issues
+
+### Final Candidate Artifact QA Complete With Notes
+
+WP3-R15D completed final candidate artifact QA for the repaired R15C internal HTML/PDF package for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Confirmed repo truth on `main` at baseline `9a5c51989b20ae64d145b46117465d4bafd807ed` and confirmed origin matched.
+- Inspected the R15C repaired candidate source, HTML, PDF, responsibility bridge SVG, manifest, checksums, proof assets, QA files, and R15C top-level reports.
+- Captured fresh R15D HTML proof at 375, 390, 768, and 1440 widths and recorded no body-level overflow or console events.
+- Regenerated PDF proof images for cover, TOC, Chapters 0/1/4/5/8/9, Appendices A/B/C/D, final page, `pdfinfo.txt`, and `pdf-text-extract.txt`.
+- Confirmed the repaired PDF remains 27 A4 pages and resolves the R15B 20-page compression blocker.
+- Confirmed the cover white-band blocker is removed; a minor cover seam remains a non-blocking visual note.
+- Confirmed footer/page identity is present and restrained.
+- Confirmed appendix/source-note readability, table readability, figure readability, body-to-artifact parity, boundary rendering, manifest/checksum integrity, and no-DOCX status.
+- Confirmed no tracked public route, public artifact, public CTA, sitemap, `llms.txt`, entity graph, GAIC, or AIAAWP surface changed.
+
+Remaining known issues:
+
+- R16 Publication Staging Preparation is required before any public staging acceptance, production verification, release decision, or Final Seal discussion.
+- R16 should carry forward the minor cover seam note and reproof the public shell after staging.
+- Mobile HTML wide tables rely on contained horizontal scrolling; this is acceptable for R15D but should be rechecked in the public staging shell.
+- Pre-existing unrelated untracked `public/social/*` files remain outside the R15D commit.
+
+Boundary discipline:
+
+- WP3-R15D is final candidate artifact QA only.
+- WP3-R15D does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
+
+**WP3-R15D Status:** ◐ WP3-R15D FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R16 PUBLICATION STAGING PREPARATION WITH NOTES

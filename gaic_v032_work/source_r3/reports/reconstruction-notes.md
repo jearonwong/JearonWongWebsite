@@ -4936,3 +4936,36 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R15C does not claim public release, public staging, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
 
 **WP3-R15C Status:** WP3-R15C ARTIFACT REPAIR COMPLETE / READY FOR WP3-R15D FINAL CANDIDATE ARTIFACT QA WITH NOTES.
+
+## WP3-R15D Notes (May 23, 2026)
+
+**Scope:** Final candidate artifact QA for the repaired R15C internal HTML/PDF package for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `9a5c51989b20ae64d145b46117465d4bafd807ed` and confirmed `origin/HEAD` matched before R15D work.
+2. Confirmed `git pull --ff-only` returned already up to date in preflight.
+3. Inspected the R15C repaired artifacts, R15C reports, R15B repair contract, R12 accepted body source, R13 acceptance reports, R14 artifact planning files, Whitepaper Series Publication SOP, GAIC/AIAAWP publication shell references, and R8/R8E/R8F repair lessons.
+4. Created `gaic_v032_work/source_r3/wp3_r15d_final_candidate_qa/` for proof and notes only, without creating new HTML/PDF artifacts or modifying R15C artifacts.
+5. Captured fresh HTML screenshots at 375, 390, 768, and 1440 widths and recorded viewport metrics with no body-level overflow and no console events.
+6. Regenerated R15D PDF proof images from the R15C PDF for cover, TOC, Chapters 0/1/4/5/8/9, Appendices A/B/C/D, and final page, plus `pdfinfo.txt` and `pdf-text-extract.txt`.
+7. Verified `pdfinfo` reports 27 A4 pages and confirmed the R15B 20-page compression blocker is resolved.
+8. Accepted the cover repair with notes: the white-band blocker is removed and the minor seam is non-blocking.
+9. Verified footer/page identity, appendix/source-note readability, figure rendering, table layout, body-to-artifact parity, boundary rendering, manifest/checksum integrity, and no-DOCX status.
+10. Created R15D QA reports and artifact acceptance report with `ACCEPTED_WITH_NOTES_FOR_PUBLICATION_STAGING_PREPARATION`.
+11. Ran R15C checksum validation, manifest JSON parse, no-DOCX scan, `npm run typecheck`, `npm run lint`, `npm run build`, `git diff --check`, and public-boundary diff checks.
+
+**Artifact discipline:**
+
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- R15D proof assets remain internal under `gaic_v032_work/source_r3/wp3_r15d_final_candidate_qa/`.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R15D is final candidate artifact QA only.
+- WP3-R15D does not claim public staging completion, public release, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R15D Status:** WP3-R15D FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R16 PUBLICATION STAGING PREPARATION WITH NOTES.
