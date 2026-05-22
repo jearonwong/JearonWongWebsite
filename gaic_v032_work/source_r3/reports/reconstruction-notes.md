@@ -4902,3 +4902,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R15B does not claim public release, public staging, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
 
 **WP3-R15B Status:** WP3-R15B FINAL CANDIDATE ARTIFACT QA COMPLETE / R15C ARTIFACT REPAIR REQUIRED.
+
+## WP3-R15C Notes (May 22, 2026)
+
+**Scope:** Internal artifact repair for the R15 AIIRWP candidate package after R15B rejected the PDF publication profile.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `736dee58f73401b02e254327a47c576bf1553d02` and confirmed `origin/HEAD` matched before R15C work.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the R15 internal artifacts, R15B QA reports, R12 accepted body source, R13 acceptance reports, R14 artifact planning files, and R15 generation outputs.
+4. Created `gaic_v032_work/source_r3/scripts/generate_wp3_r15c_candidate_artifacts.mjs` for the internal repair package.
+5. Created the new `wp3_r15c_candidate_artifacts/` package without overwriting the R15 historical package.
+6. Prepared `AIIRWP-2026-v0.4-R15C-CANDIDATE-SOURCE.md` from the accepted source path while preserving Chapters 0-10, Appendices A-D, source-note families, AIO/AIRM synthesis framing, and boundary statements.
+7. Regenerated internal HTML and PDF candidate artifacts.
+8. Expanded the PDF profile from 20 A4 pages to 27 A4 pages, added page identity, and reproofed representative pages.
+9. Removed the cover white-band blocker by applying a first-page PDF cover-background repair pass after Chrome PDF rendering.
+10. Regenerated manifest/checksums and validated them.
+11. Created R15C QA package reports and top-level R15C reports.
+12. Ran checksum validation, manifest JSON parse, `node --check`, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- R15C proof assets remain internal under `gaic_v032_work/source_r3/wp3_r15c_candidate_artifacts/`.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R15C is internal artifact repair only.
+- WP3-R15C does not claim public release, public staging, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R15C Status:** WP3-R15C ARTIFACT REPAIR COMPLETE / READY FOR WP3-R15D FINAL CANDIDATE ARTIFACT QA WITH NOTES.

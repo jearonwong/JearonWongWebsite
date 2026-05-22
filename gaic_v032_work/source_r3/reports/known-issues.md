@@ -4178,3 +4178,33 @@ Boundary discipline:
 - WP3-R15B does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
 
 **WP3-R15B Status:** ◐ WP3-R15B FINAL CANDIDATE ARTIFACT QA COMPLETE / R15C ARTIFACT REPAIR REQUIRED
+
+## WP3-R15C Known Issues
+
+### Artifact Repair Complete With Notes
+
+WP3-R15C repaired the internal candidate artifact profile for `Agentic AI Insurability & Risk Transfer White Paper 2026`.
+
+Resolved in this wave:
+
+- Created a new internal R15C package under `gaic_v032_work/source_r3/wp3_r15c_candidate_artifacts/`.
+- Preserved the R12 accepted body while preparing `AIIRWP-2026-v0.4-R15C-CANDIDATE-SOURCE.md`.
+- Regenerated internal HTML and PDF candidates.
+- Expanded the PDF from the rejected R15 20-page A4 profile to a 27-page A4 repaired candidate.
+- Removed the R15B cover white-band blocker through a first-page PDF cover-background repair pass.
+- Added restrained page identity: short title, internal status, document ID, site, page number, and copyright.
+- Reproofed Chapter 4 figure, major tables, source notes, appendices, manifest/checksums, no-DOCX status, boundary discipline, and body-to-artifact parity.
+
+Remaining known issues:
+
+- R15D Final Candidate Artifact QA is required before any R16 public staging preparation.
+- The repaired cover has no white band, but R15D should visually re-accept the cover composition and minor seam from the PDF cover-background repair pass.
+- Some anchored HTML screenshots are small because headless Chrome captured tight anchor target areas; R15D should rely on fresh rendered inspection in addition to existing DOM/metrics checks.
+- Final public staging remains blocked until R15D accepts the repaired internal HTML/PDF artifacts.
+
+Boundary discipline:
+
+- WP3-R15C is internal artifact repair only.
+- WP3-R15C does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
+
+**WP3-R15C Status:** ◐ WP3-R15C ARTIFACT REPAIR COMPLETE / READY FOR WP3-R15D FINAL CANDIDATE ARTIFACT QA WITH NOTES

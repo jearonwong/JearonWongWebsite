@@ -1,0 +1,1 @@
+Responsibility bridge review path showing legal subject, human responsibility role, agent or MAS role, bounded agentic work unit, lifecycle evidence, loss event, review path, and coverage or exclusion boundary review. The figure is not a liability finding or coverage determination.

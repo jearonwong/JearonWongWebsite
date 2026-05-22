@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="540" viewBox="0 0 1280 540" role="img" aria-labelledby="title desc">
+  <title id="title">Responsibility bridge review path</title>
+  <desc id="desc">Legal Subject connects to Human Responsibility Role, Agent or MAS Role, Bounded Agentic Work Unit, Lifecycle Evidence, Loss Event, Review Path, and Coverage or Exclusion Boundary Review. The diagram is a review path, not a liability finding or coverage determination.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#3fb7c8"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f151a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="540" rx="28" fill="#f4f7f8"/>
+  <rect x="42" y="38" width="1196" height="464" rx="24" fill="#ffffff" stroke="#d8e2e6"/>
+  <text x="72" y="86" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#111418">Responsibility Bridge</text>
+  <text x="72" y="118" font-family="Inter, Arial, sans-serif" font-size="15" fill="#60717b">Review path / evidence path for agentic risk transfer discussion. Not a liability finding or coverage determination.</text>
+  <g font-family="Inter, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(74 172)">
+      <rect width="170" height="86" rx="14" fill="#111418"/>
+      <text x="85" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Legal</text>
+      <text x="85" y="60" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Subject</text>
+    </g>
+    <g transform="translate(282 172)">
+      <rect width="170" height="86" rx="14" fill="#e9f6f8" stroke="#3fb7c8"/>
+      <text x="85" y="33" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Human</text>
+      <text x="85" y="54" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Responsibility</text>
+      <text x="85" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Role</text>
+    </g>
+    <g transform="translate(490 172)">
+      <rect width="170" height="86" rx="14" fill="#eef3f6" stroke="#9cafb7"/>
+      <text x="85" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Agent / MAS</text>
+      <text x="85" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Role</text>
+    </g>
+    <g transform="translate(698 172)">
+      <rect width="196" height="86" rx="14" fill="#f7fbfc" stroke="#3fb7c8"/>
+      <text x="98" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Bounded Agentic</text>
+      <text x="98" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Work Unit</text>
+    </g>
+    <g transform="translate(940 112)">
+      <rect width="196" height="74" rx="14" fill="#eef9f5" stroke="#4aa07f"/>
+      <text x="98" y="33" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Lifecycle</text>
+      <text x="98" y="54" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Evidence</text>
+    </g>
+    <g transform="translate(940 264)">
+      <rect width="196" height="74" rx="14" fill="#fff4ea" stroke="#d89a5b"/>
+      <text x="98" y="33" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Loss</text>
+      <text x="98" y="54" text-anchor="middle" font-size="14" font-weight="700" fill="#111418">Event</text>
+    </g>
+    <g transform="translate(1022 384)">
+      <rect width="170" height="72" rx="14" fill="#111418"/>
+      <text x="85" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Review</text>
+      <text x="85" y="53" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Path</text>
+    </g>
+    <g transform="translate(690 384)">
+      <rect width="248" height="72" rx="14" fill="#f8f1ff" stroke="#8a6bbd"/>
+      <text x="124" y="31" text-anchor="middle" font-size="13" font-weight="700" fill="#111418">Coverage / Exclusion</text>
+      <text x="124" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#111418">Boundary Review</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#3fb7c8" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M244 215 H282"/>
+    <path d="M452 215 H490"/>
+    <path d="M660 215 H698"/>
+    <path d="M894 205 C918 184 918 152 940 149"/>
+    <path d="M894 228 C918 249 918 300 940 301"/>
+    <path d="M1038 186 V384"/>
+    <path d="M1038 338 V384"/>
+    <path d="M1022 420 H938"/>
+  </g>
+  <text x="72" y="480" font-family="Inter, Arial, sans-serif" font-size="13" fill="#60717b">Figure 1. The responsibility bridge links legal subject, human role, agent role, bounded work, evidence, loss, and review boundary without deciding liability or coverage.</text>
+</svg>
