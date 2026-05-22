@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 22, 2026 (WP3-R14 Artifact Generation Planning)
+**Last Updated:** May 22, 2026 (WP3-R15 Candidate Artifact Generation)
+
+## WP3-R15 Candidate Artifact Generation
+
+### Status: WP3-R15 CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R15B FINAL CANDIDATE ARTIFACT QA
+
+R15 generated internal candidate HTML/PDF artifacts from the R12 accepted AIIRWP body according to the R14 artifact generation plan.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` at accepted R14 commit `79363822ba0017aa582454434d86868d7a2b7245`.
+2. Inspected R12 accepted body files, R13 acceptance reports, R14 planning files, publication SOP/reuse patterns, and current AIIRWP editorial-review route state.
+3. Created `gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/`.
+4. Prepared the R15 candidate source from the R12 accepted body without substantive rewrite.
+5. Rendered the Chapter 4 responsibility bridge as internal SVG figure asset.
+6. Generated internal candidate HTML and a 20-page A4 internal candidate PDF.
+7. Created internal manifest and checksums and validated them.
+8. Captured HTML/PDF/figure proof assets and completed HTML, PDF, figure, table, source-note, citation, parity, boundary, manifest/checksum, and no-DOCX QA.
+9. Ran `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+Remaining known issues:
+
+- WP3-R15B Final Candidate Artifact QA is required before any public staging preparation.
+- R15B should visually review the internal candidate HTML/PDF, figure, tables, source notes, and parity evidence.
+- AIIRWP remains under editorial review publicly.
+- No R16 public staging preparation is authorized by R15.
+
+Boundary discipline:
+
+- R15 creates internal candidate artifacts only under `wp3_r15_candidate_artifacts/`.
+- R15 does not copy files into `public/`, restore public CTAs, update sitemap, update `llms.txt`, update entity graph, create DOCX, claim public release, claim Final Seal, claim author release execution, claim production verification, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement, claim legal proof, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, or provide claims approval guidance.
+
+**WP3-R15 Status:** CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R15B FINAL CANDIDATE ARTIFACT QA
 
 ## WP3-R14 Artifact Generation Planning
 

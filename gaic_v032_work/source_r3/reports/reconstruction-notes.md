@@ -1,5 +1,41 @@
 # Reconstruction Notes
 
+## WP3-R15 Candidate Artifact Generation Notes (May 22, 2026)
+
+**Scope:** Generate internal candidate AIIRWP HTML/PDF artifacts from the R12 accepted body using the R14 plan. Do not public-stage, do not write under `public/`, do not create DOCX, do not restore CTAs, and do not claim release, production verification, or Final Seal.
+
+**Actions completed:**
+
+1. Confirmed latest `origin/main` at accepted R14 commit `79363822ba0017aa582454434d86868d7a2b7245`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected R12 accepted body files, R13 acceptance reports, R14 planning files, publication SOP/reuse files, and current AIIRWP editorial-review route state.
+4. Created `gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/`.
+5. Prepared `AIIRWP-2026-v0.4-R15-CANDIDATE-SOURCE.md` from the R12 accepted body.
+6. Rendered the Chapter 4 responsibility bridge figure as `responsibility-bridge.svg`.
+7. Generated internal candidate HTML and a 20-page A4 internal candidate PDF.
+8. Created internal manifest/checksums and validated them.
+9. Captured HTML responsive proof, PDF page proof, figure proof, and text extraction proof.
+10. Created R15 artifact-level QA files and R15 report summaries.
+11. Updated SOURCE MASTER and governance records with the R15 status.
+12. Ran R15 checksum validation, manifest JSON parse, no-DOCX scan, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`; all passed.
+
+**Artifact discipline:**
+
+- Internal artifacts remain under `wp3_r15_candidate_artifacts/`.
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No DOCX was created.
+- No sitemap, `llms.txt`, or entity graph update was made.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R15 scope.
+
+**Boundary discipline:**
+
+- R15 does not claim Final Seal, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
+
+**WP3-R15 Status:** WP3-R15 CANDIDATE ARTIFACT GENERATION COMPLETE / READY FOR WP3-R15B FINAL CANDIDATE ARTIFACT QA.
+
 ## WP3-R14 Artifact Generation Planning Notes (May 22, 2026)
 
 **Scope:** Create planning-only package for turning the R13-accepted R12 AIIRWP body into internal candidate HTML/PDF artifacts in R15. Do not generate HTML, PDF, DOCX, public artifacts, public CTAs, release claims, production verification claims, or Final Seal.

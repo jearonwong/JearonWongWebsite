@@ -1,0 +1,39 @@
+{
+  "title": "Agentic AI Insurability & Risk Transfer White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+  "candidate_id": "AIIRWP-2026-v0.4-R15-CANDIDATE",
+  "artifact_status": "internal candidate only",
+  "generated_at": "2026-05-22T03:30:11.218Z",
+  "generator_script": "gaic_v032_work/source_r3/scripts/generate_wp3_r15_candidate_artifacts.mjs",
+  "source_basis": "R12 accepted body + R13 acceptance + R14 plan",
+  "pdf_pages": "20",
+  "files": {
+    "source": {
+      "path": "gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/input/AIIRWP-2026-v0.4-R15-CANDIDATE-SOURCE.md",
+      "sha256": "0229bf1ccbec075eb7954a34d13fc63299b5ce2832ec2d93cf92b24fddf9c8a4"
+    },
+    "html": {
+      "path": "gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/out/AIIRWP-2026-v0.4-R15-CANDIDATE.html",
+      "sha256": "411d38706b916baf96d7af56248ea04ad9dc018c6c06f2cd473603b7b2f972b2"
+    },
+    "pdf": {
+      "path": "gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/out/AIIRWP-2026-v0.4-R15-CANDIDATE.pdf",
+      "sha256": "78713eeefbb644739c1e5c3d4057bb9d0a9ca3dcc38f47ca535647a5f6dc2eea"
+    },
+    "figure": {
+      "path": "gaic_v032_work/source_r3/wp3_r15_candidate_artifacts/assets/responsibility-bridge.svg",
+      "sha256": "0d62a96f3bb1a92f09f7112ff661a21883c415a788aaad1653bcbd7d17a2d9df"
+    }
+  },
+  "public_route_status": "not public route; AIIRWP public route remains under editorial review",
+  "public_artifact_status": "no public artifact generated",
+  "public_docx": "none",
+  "final_seal_status": "not final; not sealed",
+  "author_release_execution": "not executed",
+  "production_verification": "not performed",
+  "insurer_acceptance": "not claimed",
+  "coverage_ready": "not claimed",
+  "underwriting_ready": "not claimed",
+  "certification": "not claimed",
+  "endorsement": "not claimed"
+}
