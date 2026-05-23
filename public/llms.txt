@@ -116,6 +116,10 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Boundary: public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, not sealed, not legal advice, not audit standard, not certification, not assurance opinion, not legal compliance proof, not regulator approval, not procurement recommendation, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.
 - Agentic AI Insurability & Risk Transfer White Paper 2026: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
   Status: Public research candidate / deployment and production reverification required. Document ID: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE. The v0.2 public research candidate is staged as HTML and PDF; no public DOCX is distributed.
+  HTML: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html
+  PDF: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.pdf
+  Manifest: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json
+  Checksums: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256
   Public distribution: HTML and PDF only; no public DOCX.
   Boundary: not final, not sealed, not author-release executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not actuarial pricing guidance, not claims approval guidance, not certification, not endorsement, not insurer acceptance, not coverage-ready, and not underwriting-ready.
 - Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
