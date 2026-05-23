@@ -4240,3 +4240,33 @@ Boundary discipline:
 - WP3-R15D does not public-stage AIIRWP, does not create public artifacts, does not restore public CTAs, does not create DOCX, and does not claim public release, Final Seal, author release execution, production verification, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, external adoption, indexing/SEO/GEO outcome, answer-engine recognition, or WP4 implementation.
 
 **WP3-R15D Status:** ◐ WP3-R15D FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R16 PUBLICATION STAGING PREPARATION WITH NOTES
+
+## WP3-R16 Known Issues
+
+### Publication Staging Preparation Complete With Notes
+
+WP3-R16 staged the accepted AIIRWP candidate as a public research candidate.
+
+Resolved in this wave:
+
+- Replaced the AIIRWP editorial-review placeholder route with a public research candidate route.
+- Staged public HTML/PDF/manifest/checksums under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/` using public-facing v0.2 filenames.
+- Regenerated the public PDF from public HTML with public candidate metadata and 27 A4 pages.
+- Restored safe public CTAs: Read HTML, Download PDF, View manifest, Verify checksums.
+- Updated homepage trilogy stack, Research index, GAIC/AIAAWP hub links, Evidence Registry, Concepts Map, Definitions, Governance, Playbooks, About/Entity Authority, Extended Ecosystem Mapping, entity graph, `llms.txt`, sitemap configuration, and robots.
+- Verified public checksums, JSON parsing, JSON-LD parsing, PDF spot proof, responsive screenshots, no-DOCX status, boundary discipline, GAIC/AIAAWP integrity, typecheck, lint, build, and `git diff --check`.
+
+Remaining known issues:
+
+- R16B Deployment and Production Reverification is required before any production URL/hash/metadata/JSON-LD/sitemap/llms/robots verification claim.
+- Minor cover seam should be reproofed after deployment.
+- Mobile wide-table contained scrolling should be rechecked in the production public shell.
+- Public distribution remains HTML/PDF only; no public DOCX.
+- Pre-existing unrelated untracked `public/social/*` files remain outside the R16 staging commit.
+
+Boundary discipline:
+
+- WP3-R16 is publication staging preparation only.
+- WP3-R16 does not claim production verification, public release execution, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-R16 Status:** ◐ WP3-R16 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED WITH NOTES

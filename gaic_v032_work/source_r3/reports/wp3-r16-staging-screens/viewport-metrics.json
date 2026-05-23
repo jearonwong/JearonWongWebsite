@@ -1,0 +1,810 @@
+{
+  "browser_path": "Browser plugin route/console/DOM used first; CDP fallback used for committed screenshots because tab.playwright.screenshot was unavailable.",
+  "metrics": [
+    {
+      "name": "homepage-375.png",
+      "path": "/",
+      "viewport": "375x900",
+      "url": "http://127.0.0.1:4321/",
+      "title": "Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": true,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "homepage-1440.png",
+      "path": "/",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/",
+      "title": "Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": true,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "aiirwp-route-375.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "375x1000",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 375,
+      "height": 1000,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "aiirwp-route-1440.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "aiirwp-html-375-top.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "375x1000",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 375,
+      "height": 1000,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 345,
+          "scrollWidth": 640,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "aiirwp-html-375-table-sample.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "375x1000",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 375,
+      "height": 1000,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 345,
+          "scrollWidth": 640,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "aiirwp-html-1440-source-notes.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "research-index-1440.png",
+      "path": "/research/",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/research/",
+      "title": "Research | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "evidence-1440.png",
+      "path": "/evidence/",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/evidence/",
+      "title": "Evidence Registry / Citation Kit | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": false,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "concepts-map-1440.png",
+      "path": "/concepts/map/",
+      "viewport": "1440x1000",
+      "url": "http://127.0.0.1:4321/concepts/map/",
+      "title": "Concepts Map / Entity Mesh | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": false,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "metrics-aiirwp-route-375.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "375x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "metrics-aiirwp-route-390.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "390x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "metrics-aiirwp-route-768.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "768x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "metrics-aiirwp-route-1440.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "viewport": "1440x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | Jearon Wong — Protocol Architect for the Agent Era",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": true,
+      "hasPdfCta": true,
+      "hasManifestCta": true,
+      "hasChecksumCta": true,
+      "hasSourceNotes": false,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": []
+    },
+    {
+      "name": "metrics-aiirwp-html-375.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "375x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 345,
+          "scrollWidth": 640,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 345,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 345,
+          "scrollWidth": 820,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "metrics-aiirwp-html-390.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "390x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 360,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 360,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 360,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 360,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 360,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 360,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 360,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 360,
+          "scrollWidth": 640,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 360,
+          "scrollWidth": 680,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 360,
+          "scrollWidth": 820,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "metrics-aiirwp-html-768.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "768x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 726,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 726,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 726,
+          "scrollWidth": 820,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 726,
+          "scrollWidth": 726,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 726,
+          "scrollWidth": 820,
+          "contained": true
+        }
+      ]
+    },
+    {
+      "name": "metrics-aiirwp-html-1440.png",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "viewport": "1440x900",
+      "url": "http://127.0.0.1:4321/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "title": "Agentic AI Insurability & Risk Transfer White Paper 2026 | AIIRWP-2026-v0.2 Public Research Candidate",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "bodyOverflow": false,
+      "hasPublicCandidate": true,
+      "hasDocxCta": false,
+      "hasHtmlCta": false,
+      "hasPdfCta": false,
+      "hasManifestCta": false,
+      "hasChecksumCta": false,
+      "hasSourceNotes": true,
+      "hasRawSourceMarkers": false,
+      "hasFrameworkOverlay": false,
+      "wideTables": [
+        {
+          "id": "table-definition-nonclaim",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-insured-subject",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-market-edge",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-evidence-ingredients",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-compliance-translation",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-aio-overview",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-airm-matrix",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-source-note-index",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-aio-reference",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        },
+        {
+          "id": "table-airm-reference",
+          "clientWidth": 1058,
+          "scrollWidth": 1058,
+          "contained": true
+        }
+      ]
+    }
+  ]
+}

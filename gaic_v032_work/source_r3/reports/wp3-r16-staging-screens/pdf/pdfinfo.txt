@@ -1,0 +1,22 @@
+Title:           Agentic AI Insurability & Risk Transfer White Paper 2026 - Public Research Candidate
+Subject:         A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer
+Keywords:        AIIRWP; Agentic AI Insurability; Risk Transfer; Lifecycle Evidence; Public Research Candidate; Not Final; Not Sealed
+Author:          Jearon Wong
+Creator:         AIIRWP public staging renderer
+Producer:        Headless Chrome public A4 PDF profile; metadata pass
+CreationDate:    Sat May 23 16:29:46 2026 CST
+ModDate:         Sat May 23 16:29:46 2026 CST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           27
+Encrypted:       no
+Page size:       594.96 x 841.92 pts (A4)
+Page rot:        0
+File size:       891364 bytes
+Optimized:       no
+PDF version:     1.4

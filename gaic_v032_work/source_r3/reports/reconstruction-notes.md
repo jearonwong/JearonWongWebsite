@@ -4969,3 +4969,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R15D does not claim public staging completion, public release, Final Seal, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, or claims approval guidance.
 
 **WP3-R15D Status:** WP3-R15D FINAL CANDIDATE ARTIFACT QA COMPLETE / READY FOR WP3-R16 PUBLICATION STAGING PREPARATION WITH NOTES.
+
+## WP3-R16 Notes (May 23, 2026)
+
+**Scope:** Public staging preparation for the accepted AIIRWP public research candidate.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `0ad40cf719e460ad4fa40eacf3672b9cb5375cf4` and confirmed origin matched before R16 work.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the R15C accepted artifacts and R15D final candidate artifact QA reports.
+4. Created `gaic_v032_work/source_r3/scripts/generate_wp3_r16_public_candidate_artifacts.mjs` for public staging artifact generation.
+5. Staged public HTML/PDF/manifest/checksums under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/` using public v0.2 filenames.
+6. Regenerated the public PDF from public HTML, set public candidate metadata, preserved 27 A4 pages, and retained HTML/PDF-only distribution.
+7. Updated the AIIRWP public route from editorial-review placeholder to public research candidate hub with HTML/PDF/manifest/checksum CTAs and boundary notes.
+8. Updated homepage trilogy, research index, GAIC/AIAAWP hubs, Evidence Registry, Concepts Map, Definitions, Governance, Playbooks, About/Entity Authority, Extended Ecosystem Mapping, entity graph, `llms.txt`, sitemap configuration, and robots.
+9. Used the Browser plugin first for route navigation, DOM, console, CTA, and overflow checks; generated committed screenshots with headless Chrome CDP fallback because the Browser screenshot API was unavailable.
+10. Generated public PDF proof images, `pdfinfo.txt`, and PDF text extract under `reports/wp3-r16-staging-screens/pdf/`.
+11. Verified public checksum validation, manifest/entity graph JSON parsing, route JSON-LD parsing, no-DOCX scans, sitemap/llms/robots signals, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+12. Created R16 QA reports and publication staging acceptance with `PUBLICATION_STAGING_PREPARATION_COMPLETE_WITH_NOTES`.
+
+**Artifact discipline:**
+
+- Public AIIRWP artifacts are HTML/PDF/manifest/checksums only.
+- No public DOCX was created.
+- Old public v0.1 AIIRWP HTML/PDF files were removed from the active public artifact directory and remain blocked by robots as obsolete historical paths.
+- GAIC/AIAAWP artifacts were not regenerated; only crosslink/series language changed where intended.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R16 is public staging preparation only.
+- WP3-R16 does not claim production verification, public release execution, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-R16 Status:** WP3-R16 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED WITH NOTES.

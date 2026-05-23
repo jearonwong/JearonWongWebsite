@@ -130,8 +130,8 @@ export function createPersonJsonLd() {
         url: absoluteUrl("/research/agentic-ai-auditability-assurance-white-paper-2026/")
       },
       {
-        "@type": "WebPage",
-        name: "Agentic AI Insurability & Risk Transfer White Paper 2026 — Under Editorial Review",
+        "@type": "TechArticle",
+        name: "Agentic AI Insurability & Risk Transfer White Paper 2026 — Public Research Candidate",
         url: absoluteUrl("/research/agentic-ai-insurability-risk-transfer-white-paper-2026/")
       },
       {
