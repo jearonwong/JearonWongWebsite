@@ -1,5 +1,38 @@
 # Reconstruction Notes
 
+## WP3-V1-R2 Source-Grounded Outline Notes (May 24, 2026)
+
+**Scope:** Convert the R1 source research foundation into a source-grounded, chapter-by-chapter AIIRWP v1.0 outline. Do not write body prose, create public artifacts, restore public CTAs, modify public route promotion, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed local `main` and `origin/main` at `0d15bf52e8b305f252a434afead5e746969050fb`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline files, R1 source research package, and rejected v0.2 archive.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/outline/r2-source-grounded-outline/`.
+6. Created the master outline, front matter outline, Part I market reality outline, Part II core object problem outline, Part III compliance/auditability/insurability outline, Part IV underwriting outline, Part V claims/disputes outline, Part VI models outline, appendices outline, chapter source map, chapter claim boundary map, chapter reader pain map, and table/figure inventory.
+7. Created the WP1/WP2 closure plan, premium variables outline, responsibility and coverage boundary outline, R3 drafting instructions, and R2 open caveats.
+8. Created R2 preflight and boundary QA reports.
+9. Updated governance/status files with the R2 completion status.
+
+**Artifact discipline:**
+
+- No body draft was created.
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R2 scope.
+
+**Boundary discipline:**
+
+- R2 does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-V1-R2 Status:** WP3-V1-R2 SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-V1-R3 FORMAL BODY DRAFT.
+
 ## WP3-V1-R1 Source Research Notes (May 24, 2026)
 
 **Scope:** Rebuild the AIIRWP v1.0 external insurance source foundation and WP1/WP2 mapping evidence after the v0.2 withdrawal. Do not write body prose, create public artifacts, restore public CTAs, modify public route promotion, create DOCX, or claim publication/release status.

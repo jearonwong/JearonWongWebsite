@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 24, 2026 (WP3-V1-R1 Source Research)
+**Last Updated:** May 24, 2026 (WP3-V1-R2 Source-Grounded Outline)
+
+## WP3-V1-R2 Source-Grounded Outline
+
+### Status: WP3-V1-R2 SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-V1-R3 FORMAL BODY DRAFT
+
+R2 turns the R1 source research foundation into a chapter-by-chapter AIIRWP v1.0 writing blueprint. R2 remains outline-only and does not draft the whitepaper body.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` at accepted R1 commit `0d15bf52e8b305f252a434afead5e746969050fb`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline, R1 source research, and rejected v0.2 archive.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/outline/r2-source-grounded-outline/`.
+5. Created the R2 master outline, front matter outline, Part I-VI outlines, appendices outline, chapter source map, chapter claim boundary map, chapter reader pain map, table/figure inventory, WP1/WP2 closure plan, premium variables outline, responsibility and coverage boundary outline, R3 drafting instructions, and R2 open caveats.
+6. Converted R1 split-market research into a 20-chapter and A-G appendix writing plan.
+7. Preserved the distinction between model-performance coverage, AI-linked cyber coverage, silent exposure, exclusions/limitations, sublimits, and agentic lifecycle risk transfer.
+8. Locked R3 drafting boundaries for WP1/WP2 translation, premium variables, claim reconstruction, responsibility/coverage review, AIO v2, and AIRM v2.
+9. Created R2 preflight and boundary QA reports.
+
+Remaining known issues:
+
+- R3 may draft the formal body only after R2 acceptance.
+- R3 must write from reader pain and market reality, not from internal mapping order.
+- Primary filings or policy-form text remain needed before using exact AIG, WR Berkley, Great American, Verisk, or AI cyber sublimit wording.
+- Insurer claim documentation and AI underwriting questionnaire sources would still strengthen later body chapters if found.
+- AIO/AIRM v2 remain analytical vocabulary only and must not be presented as external standards, certifications, coverage proof, or insurer-accepted models.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R2 is source-grounded outline only.
+- R2 does not write the AIIRWP v1.0 body, create artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF, create DOCX, claim publication, claim final/sealed status, claim insurer acceptance, claim coverage-ready or underwriting-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R2 Status:** WP3-V1-R2 SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-V1-R3 FORMAL BODY DRAFT
 
 ## WP3-V1-R1 Source Research
 

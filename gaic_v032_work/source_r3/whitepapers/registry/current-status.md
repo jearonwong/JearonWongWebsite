@@ -23,16 +23,17 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R1 SOURCE RESEARCH COMPLETE / READY FOR WP3-V1-R2 SOURCE-GROUNDED OUTLINE.
+- Current v1 wave: WP3-V1-R2 SOURCE-GROUNDED OUTLINE COMPLETE / READY FOR WP3-V1-R3 FORMAL BODY DRAFT.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
 - Public route: noindex under-rewrite status page.
 - Active workspace: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/`.
 - Current v1 research package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/`.
+- Current v1 outline package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/outline/r2-source-grounded-outline/`.
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
-- R1 is source research only and does not create a body draft, public artifact, public staging package, public CTA, manifest, checksum, PDF, or DOCX.
+- R2 is source-grounded outline only and does not create a body draft, public artifact, public staging package, public CTA, manifest, checksum, PDF, or DOCX.
 
 ## WP4
 
