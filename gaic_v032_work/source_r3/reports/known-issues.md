@@ -1,7 +1,41 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 24, 2026 (WP3-V1-R2 Source-Grounded Outline)
+**Last Updated:** May 24, 2026 (WP3-V1-R3A Front Matter and Part I Body Draft)
+
+## WP3-V1-R3A Front Matter and Part I Body Draft
+
+### Status: WP3-V1-R3A FRONT MATTER AND PART I BODY DRAFT COMPLETE / READY FOR WP3-V1-R3A EDITORIAL QA
+
+R3A drafts the opening body package for AIIRWP v1.0: Front Matter and Part I only. It uses the R1 source research and R2 source-grounded outline to establish the market-reality opening before any Part II object-model drafting begins.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` at accepted R2 commit `6b75903d4b0c9b6de4e62dc7504c6222c8bc8ba1`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline, R1 source research, R2 source-grounded outline, and rejected v0.2 archive.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3a-front-matter-and-part-i/`.
+5. Drafted `AIIRWP-v1.0-R3A-front-matter-and-part-i.md` at 8,719 words, covering Executive Thesis, Reader Map, Boundary and Non-Claim Note, Relationship to WP1 and WP2, How to Read This Paper, Chapter 1, Chapter 2, and Chapter 3.
+6. Built Part I around the split-market frame: affirmative AI cover, exclusion/endorsement development, sublimit/cap signals, silent exposure, cyber-linked AI risk, professional liability ambiguity, D&O/governance exposure, claim reconstruction need, aggregation/reinsurance concern, model-performance warranty, and agentic lifecycle gap.
+7. Created the R3A source note register, claim-boundary check, reader-pain check, WP1/WP2 bridge check, and continuity notes for R3B.
+8. Preserved all R1/R2 source caveats and kept caveated exclusion/sublimit signals out of central primary-proof wording.
+
+Remaining known issues:
+
+- R3A Editorial QA is required before R3B begins.
+- R3B must not draft Part II until the Front Matter and Part I opening are accepted or repaired.
+- Primary filings or policy-form text remain needed before using exact AIG, WR Berkley, Great American, Verisk, or AI cyber sublimit wording.
+- Insurer claim documentation and AI underwriting questionnaire sources would still strengthen later underwriting/claims chapters if found.
+- AIO/AIRM v2 remain analytical vocabulary only and must not be presented as external standards, certifications, coverage proof, or insurer-accepted models.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3A is body drafting only for Front Matter and Part I.
+- R3A does not draft Parts II-VI, complete the v1.0 body, create artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF, create DOCX, claim publication, claim final/sealed status, claim insurer acceptance, claim coverage-ready or underwriting-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3A Status:** WP3-V1-R3A FRONT MATTER AND PART I BODY DRAFT COMPLETE / READY FOR WP3-V1-R3A EDITORIAL QA
 
 ## WP3-V1-R2 Source-Grounded Outline
 
