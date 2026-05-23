@@ -18,7 +18,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Research anchor: Agentic AI Auditability & Assurance White Paper 2026
   Version: v0.1 Public Research Candidate. Document ID: AIAAWP-2026-v0.1-R4-CANDIDATE. R8F production and sitewide consistency reverification complete; final seal remains blocked.
 - Research anchor: Agentic AI Insurability & Risk Transfer White Paper 2026
-  Status: Public research candidate / deployment and production reverification required. Document ID: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE. Public distribution exposes HTML and PDF only; no public DOCX.
+  Status: Withdrawn for AIIRWP v1.0 rewrite. The v0.2 public candidate is rejected and no current AIIRWP HTML, PDF, manifest, checksum, or DOCX artifact is promoted.
 - Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
@@ -115,12 +115,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Checksums: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256
   Boundary: public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, not sealed, not legal advice, not audit standard, not certification, not assurance opinion, not legal compliance proof, not regulator approval, not procurement recommendation, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.
 - Agentic AI Insurability & Risk Transfer White Paper 2026: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-  Status: Public research candidate / deployment and production reverification required. Document ID: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE. The v0.2 public research candidate is staged as HTML and PDF; no public DOCX is distributed.
-  HTML: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html
-  PDF: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.pdf
-  Manifest: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json
-  Checksums: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256
-  Public distribution: HTML and PDF only; no public DOCX.
+  Status: Withdrawn for AIIRWP v1.0 rewrite. The v0.2 public research candidate is rejected and archived internally for traceability; no current AIIRWP public artifact is promoted.
+  Public distribution: withdrawn; no current AIIRWP public artifact or DOCX is promoted.
   Boundary: not final, not sealed, not author-release executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not actuarial pricing guidance, not claims approval guidance, not certification, not endorsement, not insurer acceptance, not coverage-ready, and not underwriting-ready.
 - Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
   GAIC-cited systems layer for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI. Source-qualified, provisional, non-ranking, non-procurement, and not official vendor documentation.
@@ -158,10 +154,10 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Agent Architecture Governance: https://www.jearonwong.com/concepts/agent-architecture-governance/
   Agent Architecture Governance maps human roles, agent roles, tools, authority boundaries, evidence paths, accepted outcomes, rollback paths, and remediation ownership beyond orchestration topology.
 - Agentic AI Insurability: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-  Agentic AI Insurability is the AIIRWP public candidate framing for risk-transfer discussion based on lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records. The public body is staged as a public research candidate. It is not insurance advice, coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, or certification.
-- Agentic Insurability Objects / AIO: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-- Agentic Insurability Readiness Model / AIRM: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-- Claim Evidence Chain: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
+  Agentic AI Insurability is under AIIRWP v1.0 rewrite after the v0.2 candidate was withdrawn; it remains a draft analytical framing for risk-transfer discussion based on lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records. The withdrawn v0.2 body is not current source truth. It is not insurance advice, coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, or certification.
+- Agentic Insurability Objects / AIO: draft analytical term under AIIRWP v1.0 rewrite
+- Agentic Insurability Readiness Model / AIRM: draft readiness vocabulary under AIIRWP v1.0 rewrite
+- Claim Evidence Chain: planned WP3 v1.0 concept; not current citation artifact
 - Confirmation Boundary: https://www.jearonwong.com/concepts/confirmation-boundary/
 - Evidence Chain: https://www.jearonwong.com/concepts/lifecycle-evidence/
 - Multi-Agent Lifecycle Governance: https://www.jearonwong.com/lifecycle/

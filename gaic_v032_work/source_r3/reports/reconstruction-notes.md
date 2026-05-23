@@ -5071,3 +5071,39 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R17 does not claim author release execution, public announcement execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
 
 **WP3-R17 Status:** WP3-R17 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED.
+
+## WP3-V1-R0 Notes (May 23, 2026)
+
+**Scope:** Emergency hold, public withdrawal, canonicalization, rejected-candidate archival, and AIIRWP v1.0 rewrite baseline.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `2c7f71f0122a69bd4a38dd058ec992d3816bcc77` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded owner decision that the current AIIRWP v0.2 public candidate is rejected and must not continue into R18 release evidence.
+4. Archived the current v0.2 public HTML/PDF/manifest/checksum/SVG files under `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/public-artifacts/`.
+5. Archived selected R15C accepted artifacts, R15D/R16/R16B/R17 trace reports, and the R17 launch pack under the rejected-candidate archive for historical traceability only.
+6. Removed the active v0.2 public HTML/PDF/manifest/checksum/SVG files from `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+7. Replaced the AIIRWP public route with a noindex withdrawn / v1.0 rewrite status page and removed artifact CTAs and citation prompts.
+8. Downgraded homepage, Research index, GAIC/AIAAWP hub references, Evidence Registry, Concepts Map, Definitions, Governance, Playbooks, About/Entity Authority, MPLP-adjacent surfaces, and Extended Ecosystem Mapping so current AIIRWP v0.2 is not promoted.
+9. Updated the entity graph, `llms.txt`, sitemap configuration, and `robots.txt` for withdrawal semantics and obsolete artifact blocking.
+10. Created the canonical whitepaper registry under `gaic_v032_work/source_r3/whitepapers/registry/`.
+11. Created the AIIRWP v1.0 canonical workspace under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/`.
+12. Created the v1.0 rewrite architecture, proposed TOC, source research agenda, writing rules, body quality gate, and repo canonicalization plan.
+13. Created R0 preflight, public withdrawal QA, sitewide withdrawal QA, machine-readable withdrawal QA, boundary QA, build/validation, and final QA reports.
+14. Ran YAML registry parse, entity graph JSON parse, built AIIRWP route JSON-LD parse, no-DOCX scan, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public AIIRWP v1.0 artifacts were created.
+- No full AIIRWP v1.0 body was written.
+- No DOCX was created.
+- GAIC and AIAAWP public artifacts remain intact.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R0 is emergency hold, public withdrawal, canonicalization, rejected-candidate archival, and v1.0 rewrite baseline only.
+- WP3-V1-R0 does not claim public release execution, production verification, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R0 Status:** WP3-V1-R0 EMERGENCY HOLD, CANONICALIZATION, AND V1.0 REWRITE BASELINE COMPLETE / READY FOR WP3-V1-R1 SOURCE RESEARCH.
