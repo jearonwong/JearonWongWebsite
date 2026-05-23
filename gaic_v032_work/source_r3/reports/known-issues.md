@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 22, 2026 (WP3-R15 Candidate Artifact Generation)
+**Last Updated:** May 24, 2026 (WP3-V1-R1 Source Research)
+
+## WP3-V1-R1 Source Research
+
+### Status: WP3-V1-R1 SOURCE RESEARCH COMPLETE / READY FOR WP3-V1-R2 SOURCE-GROUNDED OUTLINE
+
+R1 rebuilds the AIIRWP v1.0 external insurance source foundation after the v0.2 withdrawal and v1.0 canonicalization baseline.
+
+Resolved in this wave:
+
+1. Confirmed latest `origin/main` at accepted R0 commit `0dc0c9e2770a330bbf39175482471a9d92a0610d`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 workspace, writing rules, body quality gate, rejected v0.2 archive, WP1 source truth, and WP2 source truth.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/`.
+5. Created the R1 verified source inventory, source risk register, insurance market signal matrix, exclusion/limitation register, affirmative AI coverage register, AI-linked cyber/sublimit register, silent AI exposure matrix, claims reconstruction source register, reinsurance/aggregation source register, insurer governance/regulatory register, WP1-to-insurability mapping register, WP2-to-claim-evidence mapping register, source-to-chapter map, source-to-claim map, open source gaps/R2 requirements, and R1 boundary notes.
+6. Verified source support for a split insurance market frame: cover, exclusion/endorsement development, sublimit/cap signals, silent exposure, cyber-linked AI risk, model-performance warranty, claim reconstruction, governance, and aggregation.
+7. Marked named AIG / WR Berkley / Great American exclusion details, AI cyber sublimit details, and exact Verisk form wording as R2 caveats requiring primary replacement or recheck before body use.
+8. Created R1 preflight, boundary QA, build/validation, and final QA reports.
+
+Remaining known issues:
+
+- R2 must be source-grounded outline only and must not draft the body.
+- Primary filings or policy-form text should be obtained before using exact AIG, WR Berkley, Great American, Verisk, or AI cyber sublimit wording.
+- Insurer claim documentation and AI underwriting questionnaire sources would strengthen later underwriting/claims chapters if found.
+- AIO/AIRM v2 remain analytical vocabulary only and must not be presented as external standards, certifications, coverage proof, or insurer-accepted models.
+
+Boundary discipline:
+
+- R1 is source research only.
+- R1 does not write the AIIRWP v1.0 body, create artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF, create DOCX, claim publication, claim final/sealed status, claim insurer acceptance, claim coverage-ready or underwriting-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R1 Status:** WP3-V1-R1 SOURCE RESEARCH COMPLETE / READY FOR WP3-V1-R2 SOURCE-GROUNDED OUTLINE
 
 ## WP3-R15 Candidate Artifact Generation
 

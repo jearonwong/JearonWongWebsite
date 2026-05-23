@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R1 Source Research Notes (May 24, 2026)
+
+**Scope:** Rebuild the AIIRWP v1.0 external insurance source foundation and WP1/WP2 mapping evidence after the v0.2 withdrawal. Do not write body prose, create public artifacts, restore public CTAs, modify public route promotion, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed local `main` and `origin/main` at `0dc0c9e2770a330bbf39175482471a9d92a0610d`.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 workspace files, rejected v0.2 archive, WP1 source truth, and WP2 source truth.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/`.
+6. Created all R1 research registers and maps: verified source inventory, source risk register, insurance market signal matrix, exclusion/limitation register, affirmative AI coverage register, AI-linked cyber/sublimit register, silent AI exposure matrix, claims reconstruction source register, reinsurance/aggregation source register, insurer governance/regulatory register, WP1 mapping, WP2 mapping, source-to-chapter map, source-to-claim map, open gaps/R2 requirements, and boundary notes.
+7. Used official or high-authority sources for central claims, including Verisk/ISO, QBE, Munich Re, Armilla, Chaucer, NIST, CISA, SEC, NAIC, NIST AI RMF, EU AI Act, Geneva Association, Swiss Re, Aon, and Beazley sources.
+8. Marked secondary or inaccessible sources as caveated, especially named insurer AI exclusion reports and AI cyber sublimit reports.
+9. Updated governance/status files with the R1 completion status.
+10. Created R1 boundary QA, build/validation, and final QA reports.
+
+**Artifact discipline:**
+
+- No body draft was created.
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R1 scope.
+
+**Boundary discipline:**
+
+- R1 does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-V1-R1 Status:** WP3-V1-R1 SOURCE RESEARCH COMPLETE / READY FOR WP3-V1-R2 SOURCE-GROUNDED OUTLINE.
+
 ## WP3-R15 Candidate Artifact Generation Notes (May 22, 2026)
 
 **Scope:** Generate internal candidate AIIRWP HTML/PDF artifacts from the R12 accepted body using the R14 plan. Do not public-stage, do not write under `public/`, do not create DOCX, do not restore CTAs, and do not claim release, production verification, or Final Seal.
