@@ -4270,3 +4270,35 @@ Boundary discipline:
 - WP3-R16 does not claim production verification, public release execution, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
 
 **WP3-R16 Status:** ◐ WP3-R16 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED WITH NOTES
+
+## WP3-R16B Known Issues
+
+### Production Reverification Complete With Notes
+
+WP3-R16B completed deployment and production reverification for the AIIRWP public research candidate.
+
+Resolved in this wave:
+
+- Verified production URL availability for the homepage, Research index, GAIC hub, AIAAWP hub, AIIRWP route, AIIRWP public artifacts, semantic mapping pages, entity graph, `llms.txt`, sitemap, and robots.
+- Verified live AIIRWP HTML/PDF/SVG/manifest/checksum hashes match repo truth.
+- Verified live manifest/checksum integrity, live metadata, JSON-LD, citation metadata, and no-DOCX status.
+- Verified live responsive behavior at 375, 390, 768, and 1440 widths with no body-level horizontal overflow and no console errors.
+- Generated live screenshots and PDF proof images under `reports/wp3-r16b-live-screens/`.
+- Verified the live PDF remains 27 A4 pages with public candidate metadata, readable cover/TOC/Chapter 4 figure/Chapter 5 table/Appendix A source notes/final boundary page.
+- Verified GAIC and AIAAWP production artifacts remain accessible and hash-match repo truth.
+- Repaired a verified production machine-readable gap: `llms.txt` lacked direct AIIRWP v0.2 HTML/PDF/manifest/checksum links even though the route and no-DOCX boundary were present. The links were added and rechecked live.
+
+Remaining known issues:
+
+- R17 Author Release Decision and Post-Release Evidence Capture is required before any author release execution record.
+- Final Seal remains separately authorized and is not claimed by R16B.
+- Minor cover seam remains a non-blocking watch item.
+- Mobile wide-table contained scrolling is accepted, but should be rechecked after future public style changes.
+- Pre-existing unrelated untracked `public/social/*` files remain outside the R16B commit.
+
+Boundary discipline:
+
+- WP3-R16B is deployment and production reverification only.
+- WP3-R16B does not claim author release execution, public announcement, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-R16B Status:** ◐ WP3-R16B DEPLOYMENT AND PRODUCTION REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE WITH NOTES

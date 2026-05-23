@@ -5003,3 +5003,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R16 does not claim production verification, public release execution, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
 
 **WP3-R16 Status:** WP3-R16 PUBLICATION STAGING PREPARATION COMPLETE / DEPLOYMENT AND PRODUCTION REVERIFICATION REQUIRED WITH NOTES.
+
+## WP3-R16B Notes (May 23, 2026)
+
+**Scope:** Deployment and production reverification for the AIIRWP public research candidate.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at R16 baseline `64092bc353f0e192f1682353ff44121c9e5373cf`, then completed a minimal production blocker repair commit `478d68306066623589cbd36f3fe565668940f803` for `llms.txt`.
+2. Verified production URL availability for the homepage, Research index, GAIC hub, AIAAWP hub, AIIRWP route, AIIRWP HTML/PDF/manifest/checksum/SVG artifacts, Evidence Registry, Concepts Map, Definitions, Governance, Playbooks, About/Entity Authority, MPLP page, Extended Ecosystem Mapping, entity graph, `llms.txt`, sitemap, and robots.
+3. Verified live AIIRWP artifact hashes match repo truth: HTML `5fcd9cfef51ba47c97c9901e601adb23612a4dda465265a46dea6999e001bedb`, PDF `1edd9b09f088b3b65ec35ff96709050dce6b5525a5c2704b5f97fc9d05090c73`, SVG `0d62a96f3bb1a92f09f7112ff661a21883c415a788aaad1653bcbd7d17a2d9df`, manifest `55227b2f5341f017f36ad0bf201d4b05f37c8dcff8f8d380bb2bb572d73670da`.
+4. Parsed live manifest JSON, live entity graph JSON, and live AIIRWP route JSON-LD.
+5. Found and repaired the only production blocker: live/repo `llms.txt` lacked direct AIIRWP v0.2 HTML/PDF/manifest/checksum links. Added the four links and confirmed production `llms.txt` updated.
+6. Used the Browser plugin first for live route navigation and DOM/CTA/status inspection. Used Chrome DevTools fallback for screenshots after Browser screenshot capture timed out and hash-anchor screenshots rendered blank.
+7. Captured live responsive screenshots and viewport metrics under `reports/wp3-r16b-live-screens/`, confirming no body-level overflow and no console errors across required widths.
+8. Captured live PDF proof images, `pdfinfo.txt`, and text extraction under `reports/wp3-r16b-live-screens/pdf/`.
+9. Verified the live PDF remains 27 A4 pages, has public candidate metadata, and has readable cover, TOC, Chapter 4 figure, Chapter 5 table, Appendix A source notes, and final boundary page.
+10. Verified live sitewide semantic mapping, boundary/claims discipline, no-DOCX production status, and GAIC/AIAAWP production integrity.
+11. Ran public checksum validation, JSON parse checks, no-DOCX scans, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+12. Created R16B QA reports and production reverification acceptance with `PRODUCTION_REVERIFICATION_COMPLETE_WITH_NOTES`.
+
+**Artifact discipline:**
+
+- AIIRWP public artifacts remain HTML/PDF/manifest/checksums/SVG only.
+- No public DOCX exists; explicit v0.2 DOCX URL returns 404.
+- AIIRWP HTML/PDF/manifest/checksum/SVG artifacts were not regenerated in R16B.
+- GAIC/AIAAWP artifacts were not regenerated.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R16B is production reverification only.
+- WP3-R16B does not claim author release execution, public announcement, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
+
+**WP3-R16B Status:** WP3-R16B DEPLOYMENT AND PRODUCTION REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE WITH NOTES.

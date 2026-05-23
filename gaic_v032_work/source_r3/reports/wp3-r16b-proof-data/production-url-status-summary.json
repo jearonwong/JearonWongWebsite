@@ -1,0 +1,13 @@
+{
+  "generated_from_live_checks": true,
+  "core_urls": "all expected core, artifact, semantic, and machine-readable URLs returned 200",
+  "docx_negative_test": "AIIRWP-2026-v0.2.docx returned 404",
+  "aiirwp_artifact_hashes": {
+    "html": "5fcd9cfef51ba47c97c9901e601adb23612a4dda465265a46dea6999e001bedb",
+    "pdf": "1edd9b09f088b3b65ec35ff96709050dce6b5525a5c2704b5f97fc9d05090c73",
+    "svg": "0d62a96f3bb1a92f09f7112ff661a21883c415a788aaad1653bcbd7d17a2d9df",
+    "manifest": "55227b2f5341f017f36ad0bf201d4b05f37c8dcff8f8d380bb2bb572d73670da",
+    "checksums_file": "ab15560bf48a7c5c3c56ca913270aec9fb635ad82fb1ce2d874ab64b65171e0c"
+  },
+  "note": "Full live payload downloads were used transiently for verification and removed before commit; durable proof is recorded in R16B reports and screenshot/PDF proof files."
+}

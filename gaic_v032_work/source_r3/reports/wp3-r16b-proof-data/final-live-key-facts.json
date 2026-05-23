@@ -1,0 +1,39 @@
+{
+  "llms": {
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 29100,
+    "sha256": "86003eb284bbb9dc3460f64b54c2cd66ad475a51c0baf17fcfa3cb3addf2cd7d",
+    "hasDirectLinks": true
+  },
+  "html": {
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 103647,
+    "sha256": "5fcd9cfef51ba47c97c9901e601adb23612a4dda465265a46dea6999e001bedb"
+  },
+  "pdf": {
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 891364,
+    "sha256": "1edd9b09f088b3b65ec35ff96709050dce6b5525a5c2704b5f97fc9d05090c73"
+  },
+  "manifest": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 3204,
+    "sha256": "55227b2f5341f017f36ad0bf201d4b05f37c8dcff8f8d380bb2bb572d73670da"
+  },
+  "checksums": {
+    "status": 200,
+    "contentType": "application/octet-stream",
+    "bytes": 354,
+    "sha256": "ab15560bf48a7c5c3c56ca913270aec9fb635ad82fb1ce2d874ab64b65171e0c"
+  },
+  "svg": {
+    "status": 200,
+    "contentType": "image/svg+xml",
+    "bytes": 5000,
+    "sha256": "0d62a96f3bb1a92f09f7112ff661a21883c415a788aaad1653bcbd7d17a2d9df"
+  }
+}

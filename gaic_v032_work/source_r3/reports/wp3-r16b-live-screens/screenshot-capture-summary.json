@@ -1,0 +1,75 @@
+{
+  "method": "Chrome DevTools fallback after Browser screenshot timeout and hash-anchor blank screenshots",
+  "captured": [
+    {
+      "file": "homepage-375.png",
+      "bytes": 172970,
+      "width": 375,
+      "url": "https://www.jearonwong.com/",
+      "selector": null
+    },
+    {
+      "file": "homepage-1440.png",
+      "bytes": 545765,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/",
+      "selector": null
+    },
+    {
+      "file": "aiirwp-route-375.png",
+      "bytes": 71573,
+      "width": 375,
+      "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "selector": null
+    },
+    {
+      "file": "aiirwp-route-1440.png",
+      "bytes": 144605,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+      "selector": null
+    },
+    {
+      "file": "aiirwp-html-375-top.png",
+      "bytes": 264814,
+      "width": 375,
+      "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "selector": null
+    },
+    {
+      "file": "aiirwp-html-375-table-sample.png",
+      "bytes": 70953,
+      "width": 375,
+      "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "selector": "#table-airm-matrix"
+    },
+    {
+      "file": "aiirwp-html-1440-source-notes.png",
+      "bytes": 174988,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html",
+      "selector": "#appendix-a-source-notes-and-method-boundary"
+    },
+    {
+      "file": "research-index-1440.png",
+      "bytes": 78913,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/research/",
+      "selector": null
+    },
+    {
+      "file": "evidence-1440.png",
+      "bytes": 111919,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/evidence/",
+      "selector": null
+    },
+    {
+      "file": "concepts-map-1440.png",
+      "bytes": 133625,
+      "width": 1440,
+      "url": "https://www.jearonwong.com/concepts/map/",
+      "selector": null
+    }
+  ]
+}
