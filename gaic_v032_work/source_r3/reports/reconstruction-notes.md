@@ -5037,3 +5037,37 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-R16B does not claim author release execution, public announcement, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
 
 **WP3-R16B Status:** WP3-R16B DEPLOYMENT AND PRODUCTION REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE WITH NOTES.
+
+## WP3-R17 Notes (May 23, 2026)
+
+**Scope:** Author release decision and post-release evidence capture pack preparation for the AIIRWP public research candidate.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at R16B baseline `590036534d295deae4080686f0947fbed6064353`.
+2. Confirmed origin matched local HEAD and `git pull --ff-only` returned already up to date.
+3. Inspected R16B production reverification reports and production artifact files.
+4. Created `gaic_v032_work/source_r3/launch/aiirwp-r17/`.
+5. Created the author release decision record with `author_release_decision: pending owner execution`.
+6. Created the owner release checklist.
+7. Created newsletter, LinkedIn standalone, X longform, and short social variant drafts for owner review.
+8. Created distribution, monitoring, authority signal, and evidence capture trackers with planned/pending defaults.
+9. Created the post-release monitoring SOP, boundary reminders, and release links.
+10. Created R17 preflight, release pack summary, boundary QA, build/validation, and final QA reports.
+11. Ran R17 boundary scans, no-DOCX checks, `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+**Artifact discipline:**
+
+- No public route or public artifact was changed.
+- No production HTML, PDF, manifest, checksum, sitemap, `llms.txt`, robots, or entity graph artifact was changed.
+- No DOCX was created.
+- No external distribution was executed.
+- No external evidence was fabricated.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-R17 is release-readiness and owner-execution support only.
+- WP3-R17 does not claim author release execution, public announcement execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-R17 Status:** WP3-R17 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED.

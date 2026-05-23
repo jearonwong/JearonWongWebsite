@@ -4302,3 +4302,37 @@ Boundary discipline:
 - WP3-R16B does not claim author release execution, public announcement, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, or WP4 implementation.
 
 **WP3-R16B Status:** ◐ WP3-R16B DEPLOYMENT AND PRODUCTION REVERIFICATION COMPLETE / READY FOR AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE WITH NOTES
+
+## WP3-R17 Known Issues
+
+### Author Release Decision and Evidence Capture Pack Complete
+
+WP3-R17 created the author release decision and post-release evidence capture pack for the AIIRWP public research candidate.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/launch/aiirwp-r17/`.
+- Created the author release decision record with default `author_release_decision: pending owner execution`.
+- Created the owner release checklist.
+- Created newsletter, LinkedIn, X, and short social drafts for owner review.
+- Created distribution, monitoring, authority signal, and evidence capture trackers.
+- Created the post-release monitoring SOP, boundary reminders, and release links.
+- Created R17 preflight, release pack summary, boundary QA, build/validation, and final QA reports.
+
+Remaining known issues:
+
+- Owner release execution remains required before any release execution record can be claimed.
+- Any LinkedIn, newsletter, X, email, group, or community publication must be executed manually by the owner and recorded with evidence in a later wave.
+- Post-release evidence capture remains pending owner execution.
+- Final Seal remains separately authorized and is not claimed by R17.
+- Minor cover seam remains a non-blocking watch item.
+- Mobile wide-table contained scrolling is accepted, but should be watched after future public style changes.
+- Public distribution remains HTML/PDF only; no public DOCX.
+- Pre-existing unrelated untracked `public/social/*` files remain outside the R17 commit.
+
+Boundary discipline:
+
+- WP3-R17 is release-readiness and owner-execution support only.
+- WP3-R17 does not claim author release execution, public announcement execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-R17 Status:** ◐ WP3-R17 AUTHOR RELEASE DECISION AND POST-RELEASE EVIDENCE CAPTURE PACK COMPLETE / OWNER EXECUTION REQUIRED
