@@ -17,8 +17,8 @@ images:
   - url: /essays/mplp-lifecycle-answer/mplp-lifecycle-answer.svg
     alt: "The MPLP lifecycle answer chain: Intent, Context, Plan, Authority, Agent Role, Tool Action, Evidence, Confirm, Accepted Outcome, and Remediation."
     caption: "MPLP treats agentic work as a governed lifecycle, not as isolated model output, tool execution, or workflow completion."
-    width: 1000
-    height: 1320
+    width: 1200
+    height: 760
 publishDate: 2026-05-24
 cluster: ai-agent-lifecycle
 projectProof: MPLP
@@ -93,10 +93,29 @@ That distinction is where the market keeps losing the thread. LLM Lifecycle Gove
 
 ### LLM Lifecycle Governance vs AI Agent Lifecycle Governance
 
-| Layer | Primary object | Who controls it | Core question | Why it matters |
-| --- | --- | --- | --- | --- |
-| LLM Lifecycle Governance | Model lifecycle | Model providers / labs / regulators | How was the model trained, aligned, evaluated, deployed, monitored? | Provider-side governance and model risk remain necessary but opaque to many enterprises. |
-| AI Agent Lifecycle Governance | Agentic work lifecycle | Enterprise runtime / product / governance architecture | How did work move from intent to accepted outcome under authority, evidence, responsibility, and remediation controls? | This is where enterprise agent accountability, auditability, and insurability become operational. |
+<div class="essay-ledger-table essay-ledger-table--five" role="table" aria-label="LLM Lifecycle Governance vs AI Agent Lifecycle Governance">
+  <div class="essay-ledger-table__row essay-ledger-table__head" role="row">
+    <div role="columnheader">Layer</div>
+    <div role="columnheader">Primary object</div>
+    <div role="columnheader">Who controls it</div>
+    <div role="columnheader">Core question</div>
+    <div role="columnheader">Why it matters</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Layer">LLM Lifecycle Governance</div>
+    <div role="cell" data-label="Primary object">Model lifecycle</div>
+    <div role="cell" data-label="Who controls it">Model providers / labs / regulators</div>
+    <div role="cell" data-label="Core question">How was the model trained, aligned, evaluated, deployed, monitored?</div>
+    <div role="cell" data-label="Why it matters">Provider-side governance and model risk remain necessary but opaque to many enterprises.</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Layer">AI Agent Lifecycle Governance</div>
+    <div role="cell" data-label="Primary object">Agentic work lifecycle</div>
+    <div role="cell" data-label="Who controls it">Enterprise runtime / product / governance architecture</div>
+    <div role="cell" data-label="Core question">How did work move from intent to accepted outcome under authority, evidence, responsibility, and remediation controls?</div>
+    <div role="cell" data-label="Why it matters">This is where enterprise agent accountability, auditability, and insurability become operational.</div>
+  </div>
+</div>
 
 ---
 
@@ -119,7 +138,7 @@ This is why [MPLP](/projects/mplp/) is not another orchestration framework. It i
 The protocol defines agentic work as a governed chain: **Intent → Context → Plan → Authority → Agent Role → Tool Action → Evidence → Confirm → Accepted Outcome → Remediation**. Each object in that chain exists because a real governance failure appears when it's absent.
 
 <figure class="article-figure article-figure--diagram">
-  <img src="/essays/mplp-lifecycle-answer/mplp-lifecycle-answer.svg" alt="The MPLP lifecycle answer chain: Intent, Context, Plan, Authority, Agent Role, Tool Action, Evidence, Confirm, Accepted Outcome, and Remediation." width="1000" height="1320" loading="lazy" decoding="async" />
+  <img src="/essays/mplp-lifecycle-answer/mplp-lifecycle-answer.svg" alt="The MPLP lifecycle answer chain: Intent, Context, Plan, Authority, Agent Role, Tool Action, Evidence, Confirm, Accepted Outcome, and Remediation." width="1200" height="760" loading="lazy" decoding="async" />
   <figcaption>MPLP treats agentic work as a governed lifecycle, not as isolated model output, tool execution, or workflow completion.</figcaption>
 </figure>
 
@@ -127,14 +146,50 @@ Without Intent, execution has no original reference point against which drift ca
 
 ### Market Symptom → MPLP Lifecycle Object
 
-| Market symptom | Missing governance object | MPLP lifecycle answer | Evidence produced |
-| --- | --- | --- | --- |
-| Runtime drift | Delta Intent / Project Semantic Graph | Detect intent/context/authority drift | Change record, semantic diff, reopened confirmation if needed |
-| Weak HITL accountability | Human Role / Confirm / Accepted Outcome | Distinguish approval from responsibility | Reviewer role, authority boundary, acceptance record |
-| Audit gaps | Trace / Evidence Chain | Reconstruct lifecycle work | Evidence pointer, tool action record, decision path |
-| Uninsurable agentic risk | Delegated Authority Boundary / Tool-Action Liability Boundary | Define risk object | Authority map, liability boundary, remediation closure |
-| Broken handoffs | Collab / Role / Context | Preserve responsibility across agents | Handoff record, inherited constraints, unresolved risk |
-| Workflow completion without delivery | Accepted Outcome | Separate done from accepted | Acceptance state, dispute state, remediation path |
+<div class="essay-ledger-table essay-ledger-table--four" role="table" aria-label="Market Symptom to MPLP Lifecycle Object">
+  <div class="essay-ledger-table__row essay-ledger-table__head" role="row">
+    <div role="columnheader">Market symptom</div>
+    <div role="columnheader">Missing governance object</div>
+    <div role="columnheader">MPLP lifecycle answer</div>
+    <div role="columnheader">Evidence produced</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Runtime drift</div>
+    <div role="cell" data-label="Missing governance object">Delta Intent / Project Semantic Graph</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Detect intent/context/authority drift</div>
+    <div role="cell" data-label="Evidence produced">Change record, semantic diff, reopened confirmation if needed</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Weak HITL accountability</div>
+    <div role="cell" data-label="Missing governance object">Human Role / Confirm / Accepted Outcome</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Distinguish approval from responsibility</div>
+    <div role="cell" data-label="Evidence produced">Reviewer role, authority boundary, acceptance record</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Audit gaps</div>
+    <div role="cell" data-label="Missing governance object">Trace / Evidence Chain</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Reconstruct lifecycle work</div>
+    <div role="cell" data-label="Evidence produced">Evidence pointer, tool action record, decision path</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Uninsurable agentic risk</div>
+    <div role="cell" data-label="Missing governance object">Delegated Authority Boundary / Tool-Action Liability Boundary</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Define risk object</div>
+    <div role="cell" data-label="Evidence produced">Authority map, liability boundary, remediation closure</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Broken handoffs</div>
+    <div role="cell" data-label="Missing governance object">Collab / Role / Context</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Preserve responsibility across agents</div>
+    <div role="cell" data-label="Evidence produced">Handoff record, inherited constraints, unresolved risk</div>
+  </div>
+  <div class="essay-ledger-table__row" role="row">
+    <div role="cell" data-label="Market symptom">Workflow completion without delivery</div>
+    <div role="cell" data-label="Missing governance object">Accepted Outcome</div>
+    <div role="cell" data-label="MPLP lifecycle answer">Separate done from accepted</div>
+    <div role="cell" data-label="Evidence produced">Acceptance state, dispute state, remediation path</div>
+  </div>
+</div>
 
 ---
 

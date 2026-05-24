@@ -14,8 +14,10 @@ const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
 const lifecycleEssays = essays.filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle);
 const firstColumnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
 const spotlightEssay = lifecycleEssays[0] ?? firstColumnEssay;
-const columnCover = spotlightEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
-const columnCoverAlt = spotlightEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
+const columnCover = spotlightEssay?.data.shareImage ?? spotlightEssay?.data.ogImage ?? spotlightEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
+const columnCoverAlt = spotlightEssay?.data.shareImageAlt ?? spotlightEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
+const columnCoverWidth = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 1200 : spotlightEssay?.data.images?.[0]?.width ?? 1200;
+const columnCoverHeight = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 630 : spotlightEssay?.data.images?.[0]?.height ?? 630;
 const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
@@ -93,8 +95,8 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
               <img
                 src={columnCover}
                 alt={columnCoverAlt}
-                width={spotlightEssay.data.images?.[0]?.width ?? 1200}
-                height={spotlightEssay.data.images?.[0]?.height ?? 630}
+                width={columnCoverWidth}
+                height={columnCoverHeight}
                 loading="lazy"
                 decoding="async"
               />
