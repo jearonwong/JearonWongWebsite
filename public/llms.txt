@@ -240,6 +240,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Explains why AI Agent / MAS compliance cannot stop at model governance. It connects the Global AI Compliance White Paper 2026 from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, system mapping, and lifecycle responsibility compliance.
 - Defining Intent Drift in Agentic Workflows: https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/
   Defines Intent Drift as a lifecycle failure mode inside the AI Agent Lifecycle thesis. Delta Intent records the semantic change, Drift Detection observes runtime divergence, Trace makes it reviewable, and Accepted Outcome decides whether execution became delivery.
+- The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.: https://www.jearonwong.com/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/
+  Defines AI Agent Lifecycle Governance as the missing layer behind fragmented AI agent governance debates. It frames MPLP / Multi-Agent Lifecycle Protocol as one lifecycle protocol answer from intent to authority, evidence, accepted outcome, and remediation.
 
 ## Project Proof Path
 

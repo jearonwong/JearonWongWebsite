@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc">
+  <title id="title">The MPLP Lifecycle Answer</title>
+  <desc id="desc">MPLP lifecycle chain from Intent to Context, Plan, Authority, Agent Role, Tool Action, Evidence, Confirm, Accepted Outcome, and Remediation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}
+      .grid{stroke:rgba(241,245,249,.055);stroke-width:1}
+      .frame{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}
+      .panel{fill:rgba(241,245,249,.035);stroke:rgba(241,245,249,.16);stroke-width:1.2}
+      .panel-hot{fill:rgba(34,211,238,.075);stroke:rgba(34,211,238,.52);stroke-width:1.4}
+      .label{fill:#22d3ee;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1.2px}
+      .kicker{fill:#94a3b8;font:800 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .title{fill:#f8fafc;font:850 50px "Outfit",Inter,sans-serif}
+      .subtitle{fill:#cbd5e1;font:600 20px Inter,sans-serif}
+      .node-title{fill:#f8fafc;font:800 25px "Outfit",Inter,sans-serif}
+      .node-copy{fill:#cbd5e1;font:560 16px Inter,sans-serif}
+      .index{fill:#22d3ee;font:800 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .arrow{fill:none;stroke:#3b82f6;stroke-width:2;stroke-linecap:round}
+      .arrow-head{fill:#3b82f6}
+      .footer{fill:#94a3b8;font:800 14px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1320" class="bg"/>
+  <rect width="1000" height="1320" fill="url(#grid)"/>
+  <rect x="46" y="46" width="908" height="1228" class="frame"/>
+  <rect x="72" y="72" width="856" height="1176" fill="none" stroke="rgba(59,130,246,.34)" stroke-width="1"/>
+
+  <text x="96" y="122" class="label">FIGURE 1 / LIFECYCLE GOVERNANCE CHAIN</text>
+  <text x="96" y="190" class="title">The MPLP Lifecycle Answer</text>
+  <text x="96" y="232" class="subtitle">A governed path from human intent to accepted outcome and closure.</text>
+
+  <g transform="translate(96 292)">
+    <rect width="808" height="74" rx="2" class="panel-hot"/>
+    <text x="24" y="29" class="index">01</text>
+    <text x="82" y="32" class="node-title">Intent</text>
+    <text x="82" y="56" class="node-copy">The original work objective and its acceptance direction.</text>
+
+    <path d="M404 82v31" class="arrow"/><path d="M397 107l7 12 7-12" class="arrow-head"/>
+    <rect y="120" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="149" class="index">02</text>
+    <text x="82" y="152" class="node-title">Context</text>
+    <text x="82" y="176" class="node-copy">The current meaning, constraints, evidence, and state around the work.</text>
+
+    <path d="M404 202v31" class="arrow"/><path d="M397 227l7 12 7-12" class="arrow-head"/>
+    <rect y="240" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="269" class="index">03</text>
+    <text x="82" y="272" class="node-title">Plan</text>
+    <text x="82" y="296" class="node-copy">The executable route before tools, agents, or external systems act.</text>
+
+    <path d="M404 322v31" class="arrow"/><path d="M397 347l7 12 7-12" class="arrow-head"/>
+    <rect y="360" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="389" class="index">04</text>
+    <text x="82" y="392" class="node-title">Authority</text>
+    <text x="82" y="416" class="node-copy">The delegated permission boundary for the work and its consequences.</text>
+
+    <path d="M404 442v31" class="arrow"/><path d="M397 467l7 12 7-12" class="arrow-head"/>
+    <rect y="480" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="509" class="index">05</text>
+    <text x="82" y="512" class="node-title">Agent Role</text>
+    <text x="82" y="536" class="node-copy">The responsibility boundary for the agent acting inside the workflow.</text>
+
+    <path d="M404 562v31" class="arrow"/><path d="M397 587l7 12 7-12" class="arrow-head"/>
+    <rect y="600" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="629" class="index">06</text>
+    <text x="82" y="632" class="node-title">Tool Action</text>
+    <text x="82" y="656" class="node-copy">The external action where agent work changes files, systems, or reality.</text>
+
+    <path d="M404 682v31" class="arrow"/><path d="M397 707l7 12 7-12" class="arrow-head"/>
+    <rect y="720" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="749" class="index">07</text>
+    <text x="82" y="752" class="node-title">Evidence</text>
+    <text x="82" y="776" class="node-copy">The proof surface that makes action, authority, and state reconstructable.</text>
+
+    <path d="M404 802v31" class="arrow"/><path d="M397 827l7 12 7-12" class="arrow-head"/>
+    <rect y="840" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="869" class="index">08</text>
+    <text x="82" y="872" class="node-title">Confirm</text>
+    <text x="82" y="896" class="node-copy">The human revalidation point when scope, authority, or risk requires it.</text>
+
+    <path d="M404 922v31" class="arrow"/><path d="M397 947l7 12 7-12" class="arrow-head"/>
+    <rect y="960" width="808" height="74" rx="2" class="panel-hot"/>
+    <text x="24" y="989" class="index">09</text>
+    <text x="82" y="992" class="node-title">Accepted Outcome</text>
+    <text x="82" y="1016" class="node-copy">The point where execution becomes, or fails to become, accountable delivery.</text>
+
+    <path d="M404 1042v31" class="arrow"/><path d="M397 1067l7 12 7-12" class="arrow-head"/>
+    <rect y="1080" width="808" height="74" rx="2" class="panel"/>
+    <text x="24" y="1109" class="index">10</text>
+    <text x="82" y="1112" class="node-title">Remediation</text>
+    <text x="82" y="1136" class="node-copy">The bounded closure path for dispute, failure, rollback, or correction.</text>
+  </g>
+
+  <text x="96" y="1224" class="footer">MPLP / MULTI-AGENT LIFECYCLE PROTOCOL</text>
+</svg>
