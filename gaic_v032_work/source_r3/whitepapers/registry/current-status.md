@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3A FRONT MATTER AND PART I BODY DRAFT COMPLETE / READY FOR WP3-V1-R3A EDITORIAL QA.
+- Current v1 wave: WP3-V1-R3A EDITORIAL QA COMPLETE / READY FOR WP3-V1-R3B PART II BODY DRAFT WITH NOTES.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -32,9 +32,10 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - Current v1 research package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/`.
 - Current v1 outline package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/outline/r2-source-grounded-outline/`.
 - Current v1 draft package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3a-front-matter-and-part-i/`.
+- Current v1 QA package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3a-editorial-qa/`.
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
-- R3A is Front Matter and Part I body draft only and does not create a full body, public artifact, public staging package, public CTA, manifest, checksum, PDF, or DOCX.
+- R3A Editorial QA accepts Front Matter and Part I for R3B with notes; it does not create a full body, public artifact, public staging package, public CTA, manifest, checksum, PDF, or DOCX.
 
 ## WP4
 
@@ -42,4 +43,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 body is not complete. R3A completion does not authorize R3B; R3A Editorial QA is required next.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 body is not complete. R3A Editorial QA permits R3B with notes only; it does not authorize public artifact restoration or public release.

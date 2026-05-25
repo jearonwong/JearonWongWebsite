@@ -4470,3 +4470,32 @@ Boundary discipline:
 - WP3-V1-R0 does not write the v1.0 body, generate public AIIRWP v1.0 artifacts, execute public release, perform production verification, claim author release execution, claim Final Seal, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, claim insurer acceptance, claim coverage-ready or underwriting-ready status, claim certification or endorsement, provide legal/insurance advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, create public DOCX, or implement WP4.
 
 **WP3-V1-R0 Status:** ✓ WP3-V1-R0 EMERGENCY HOLD, CANONICALIZATION, AND V1.0 REWRITE BASELINE COMPLETE / READY FOR WP3-V1-R1 SOURCE RESEARCH
+
+## WP3-V1-R3A Editorial QA Known Issues
+
+### Editorial QA Complete With Notes
+
+WP3-V1-R3A Editorial QA reviewed the AIIRWP v1.0 R3A Front Matter and Part I body draft and accepts it for R3B with notes.
+
+Resolved in this wave:
+
+- Created the R3A editorial QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3a-editorial-qa/`.
+- Reviewed Front Matter, Chapter 1, Chapter 2, Chapter 3, market reality strength, source use, style/publication rhythm, reader pain/narrative, boundary and claim risk, and WP1/WP2 bridge discipline.
+- Declared `ACCEPTED_WITH_MINOR_NOTES_FOR_R3B`.
+- Confirmed no R3A repair wave is required before R3B.
+- Confirmed R3B may begin with notes and must continue from concrete insurance/enterprise scenarios rather than taxonomy-first drafting.
+
+Remaining known issues:
+
+- Chapter 2 density should be reduced in later continuity editing so prose carries the argument and the Split Market Signal Matrix remains a reader aid.
+- Front Matter boundary language is safe but should be line-edited later to avoid disclaimer-pack rhythm.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- R3B must preserve the insured legal subject versus agentic risk object separation and must not overclaim AIO/AIRM.
+- Pre-existing unrelated `public/social/*` files remain outside the R3A Editorial QA commit.
+
+Boundary discipline:
+
+- WP3-V1-R3A Editorial QA is QA-only.
+- WP3-V1-R3A Editorial QA does not draft Part II, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3A Editorial QA Status:** ✓ WP3-V1-R3A EDITORIAL QA COMPLETE / READY FOR WP3-V1-R3B PART II BODY DRAFT WITH NOTES

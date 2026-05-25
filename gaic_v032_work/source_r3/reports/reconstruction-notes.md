@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3A Editorial QA Notes (May 25, 2026)
+
+**Scope:** QA-only editorial review of the AIIRWP v1.0 R3A Front Matter and Part I body draft. Do not draft R3B, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed local `main` and `origin/main` at `6926d16e22b1fb20adef23ca1d63a86ae71a5213` after `git pull --ff-only`.
+2. Recorded pre-existing untracked `public/social/*` files as out of scope.
+3. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline files, R1 source research package, R2 source-grounded outline package, R3A draft package, and rejected v0.2 archive.
+4. Read the R3A body directly rather than relying only on R3A self-check files.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3a-editorial-qa/`.
+6. Created editorial reviews for Front Matter, Chapters 1-3, market reality strength, source use, publication rhythm, reader pain/narrative, boundary and claim risk, and WP1/WP2 bridge discipline.
+7. Declared `ACCEPTED_WITH_MINOR_NOTES_FOR_R3B`.
+8. Created an R3A repair plan stating that no repair wave is required before R3B; minor notes carry into R3B and later continuity editing.
+9. Created the R3B readiness decision allowing Part II drafting to begin with notes.
+
+**Artifact discipline:**
+
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- No R3B body draft was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3A Editorial QA scope.
+
+**Boundary discipline:**
+
+- R3A Editorial QA does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
+- R3B may begin with notes, but R3A Editorial QA does not draft Part II.
+
+**WP3-V1-R3A Editorial QA Status:** WP3-V1-R3A EDITORIAL QA COMPLETE / READY FOR WP3-V1-R3B PART II BODY DRAFT WITH NOTES.
+
 ## WP3-V1-R3A Front Matter and Part I Body Draft Notes (May 24, 2026)
 
 **Scope:** Draft publication-grade body prose for AIIRWP v1.0 Front Matter and Part I only. Do not draft Parts II-VI, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.
