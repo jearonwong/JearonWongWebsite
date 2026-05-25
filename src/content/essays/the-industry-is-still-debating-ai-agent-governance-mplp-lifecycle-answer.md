@@ -7,11 +7,11 @@ titleLines:
   - "the Lifecycle Answer."
 subtitle: "The market keeps renaming the same failure — fragmentation, audit gaps, weak HITL accountability, runtime drift, uninsurable agentic risk. MPLP defines the missing layer behind all of them: AI Agent Lifecycle Governance."
 description: "The industry keeps debating AI agent governance as fragmentation, audit gaps, runtime drift, weak HITL accountability, and uninsurable agentic risk. MPLP defines the missing lifecycle governance layer behind them."
-shareTitle: "MPLP Defines the Lifecycle Answer"
+shareTitle: "The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer."
 shareSubtitle: "AI Agent Governance is a lifecycle protocol problem."
 shareDescription: "The market keeps renaming the same failure. MPLP defines the missing lifecycle governance layer behind fragmentation, audit gaps, runtime drift, weak HITL accountability, and uninsurable agentic risk."
 shareImage: /social/mplp-lifecycle-answer-og.png
-shareImageAlt: "MPLP Defines the Lifecycle Answer — Jearon Wong"
+shareImageAlt: "The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer. — Jearon Wong"
 ogImage: /social/mplp-lifecycle-answer-og.png
 images:
   - url: /essays/mplp-lifecycle-answer/mplp-lifecycle-answer.svg
