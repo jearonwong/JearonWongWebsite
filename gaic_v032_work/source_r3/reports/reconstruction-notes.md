@@ -5512,3 +5512,36 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-V1-R3I does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
 
 **WP3-V1-R3I Status:** WP3-V1-R3I FULL-BODY EDITORIAL QA COMPLETE / READY FOR R3J FULL-BODY REVISION PASS.
+
+## WP3-V1-R3J Notes (May 26, 2026)
+
+**Scope:** Controlled full-body internal revision pass for the WP3 / AIIRWP v1.0 R3H internal assembled Markdown draft using R3I QA findings.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3I baseline `fe8540fc5d7da61013c245a3fd4068e58f767d29` and confirmed `origin/main` matched before R3J work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3H internal assembled draft package, R3I editorial QA package, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3j-full-body-revision-pass/`.
+5. Copied the R3H internal assembled draft into `AIIRWP-v1.0-R3J-full-body-internal-revision.md` and revised the new R3J file only.
+6. Harmonized terminology to `Agentic Insurability Reasoning Model`, removed `Agentic Insurability Readiness Model` as model terminology, and removed `AIO v2` / `AIRM v2` phrasing.
+7. Compressed selected repeated boundary language and repeated lifecycle-object language while preserving high-risk non-claim controls.
+8. Preserved 28 chapters, table IDs T-02-01 and T-04-01 through T-27-01, and source refs `[1]` through `[62]`.
+9. Adjusted T-02-01 title to `AI Insurance Split-Market Signal Matrix`.
+10. Sharpened Chapter 28 and replaced the stale R3I handoff with R3K revision QA handoff language.
+11. Created revision reports, R3K continuity notes, and R3J QA reports.
+
+**Artifact discipline:**
+
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- R3H was preserved as the prior internal assembly snapshot.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3J is an internal body revision pass only.
+- WP3-V1-R3J does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3J Status:** WP3-V1-R3J FULL-BODY REVISION PASS COMPLETE / READY FOR R3K FULL-BODY REVISION QA.

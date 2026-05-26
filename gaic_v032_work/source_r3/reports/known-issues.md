@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3I Full-Body Editorial QA)
+**Last Updated:** May 26, 2026 (WP3-V1-R3J Full-Body Revision Pass)
+
+## WP3-V1-R3J Full-Body Revision Pass
+
+### Status: WP3-V1-R3J FULL-BODY REVISION PASS COMPLETE / READY FOR R3K FULL-BODY REVISION QA
+
+R3J creates a revised internal full-body Markdown draft from the R3H internal assembled draft using R3I editorial QA findings. R3J preserves R3H as the prior assembly snapshot and does not create public artifacts.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3I commit `fe8540fc5d7da61013c245a3fd4068e58f767d29` before R3J edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3J edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3H assembly package, R3I QA package, and rejected v0.2 boundary context.
+4. Created the R3J revision package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3j-full-body-revision-pass/`.
+5. Created `AIIRWP-v1.0-R3J-full-body-internal-revision.md` without editing the R3H file in place.
+6. Preserved Front Matter through Part VI, Chapters 1-28, Chapter 28 prose conclusion, T-02-01 and T-04-01 through T-27-01, and inline source refs `[1]` through `[62]`.
+7. Harmonized model terminology around `Agentic Insurability Reasoning Model` and removed `Agentic Insurability Readiness Model` as model terminology.
+8. Compressed selected repeated boundary language, WP1/WP2 bridge repetition, evidence-chain lists, and lifecycle-object lists while preserving high-risk boundary controls.
+9. Reviewed and adjusted T-02-01 title to `AI Insurance Split-Market Signal Matrix`.
+10. Sharpened Chapter 28 and replaced stale R3I handoff language with R3K revision QA handoff language.
+11. Created R3J revision change log, R3I finding/action map, boundary preservation report, source/citation revision report, TOC/table revision report, R3K continuity notes, and R3J QA reports.
+
+Remaining known issues:
+
+- R3K full-body revision QA is required before appendix planning, source strengthening, or another revision decision.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Several tables remain future layout risks for artifact planning, especially T-02-01, T-09-01, T-14-01, T-18-01, T-21-01, and T-27-01.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3J is an internal body revision wave only.
+- R3J does not generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3J Status:** WP3-V1-R3J FULL-BODY REVISION PASS COMPLETE / READY FOR R3K FULL-BODY REVISION QA
 
 ## WP3-V1-R3I Full-Body Editorial QA
 
