@@ -1,0 +1,34 @@
+# R3E Source Note Register
+
+**Task ID:** WP3-V1-R3E-PART-V-BODY-DRAFT-01
+**Scope:** Numbered source-note register for the R3E Part V body draft.
+**Boundary:** Source notes support analytical drafting only. They do not create policy wording, legal conclusions, coverage opinions, insurer acceptance, underwriting standards, pricing guidance, claim approval, certification, endorsement, public release, or Final Seal.
+
+## Numbered Notes
+
+R3E continues the R3D note sequence and starts at `[49]`.
+
+| Note | R1 source ID | Title / publisher | URL / canonical path | Used in | Claim supported | Source strength | Overclaim caveat | Allowed wording | Forbidden wording |
+|---|---|---|---|---|---|---|---|---|---|
+| [49] | CLAIM-NIST-80061R3 | SP 800-61 Rev. 3 / NIST | https://csrc.nist.gov/pubs/sp/800/61/r3/final | Ch. 19, 20, 22 | Incident response should include preparation, detection, response, recovery, remediation, and continuous improvement. | Tier 1 primary / official | Incident response source, not insurance claim approval, pricing, or underwriting source. | Structured incident and remediation records support reviewability and reconstruction. | NIST creates claim approval guidance, legal causation proof, underwriting rules, coverage proof, or pricing rules. |
+| [50] | CLAIM-CISA-PLAYBOOK | Federal Government Cybersecurity Incident and Vulnerability Response Playbooks / CISA | https://www.cisa.gov/ncas/current-activity/2021/11/16/new-federal-government-cybersecurity-incident-and-vulnerability | Ch. 19, 20, 22 | CISA playbooks support identification, coordination, containment, remediation, recovery, reporting, and tracking. | Tier 1 primary / official incident response authority | Federal operational playbooks are not private-sector insurance standards. | Operational playbooks show why timeline, coordination, and remediation records matter. | CISA proves coverage, liability, claim approval, or mandatory private underwriting requirements. |
+| [51] | INS-QBE-LLM-2025 / INS-QBE-AI-CYBER-2025 | Understanding LLMjacking; AI-focused cyber coverages / QBE | https://www.qbe.com/media/qbe/north-america/usa/files/cyber/cyber-services-llmjacking.pdf?rev=dfedc9d3cdf440e6affa871bf981923a; https://www.qbe.com/us/newsroom/press-releases/qbe-north-america-introduces-ai-focused-cyber-insurance-coverages-to-address-emerging-risks | Ch. 19, 21 | LLMjacking and AI-linked cyber sources show concrete evidence needs around access, API use, abnormal consumption, containment, and remediation. | Tier 1 primary / official insurer source | Cyber service and announcement context, not policy wording or claim outcome. | AI-linked cyber incidents may require reconstructable access, usage, containment, and remediation evidence. | QBE proves policy response, sublimit wording, pricing, claim approval, or broad agentic lifecycle coverage. |
+| [52] | CLAIM-SEC-CYBER-2023 | Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure / SEC | https://www.sec.gov/rules-regulations/2023/07/s7-09-22 | Ch. 20, 21 | SEC cyber disclosure rules support governance, material incident, risk management, and disclosure context for public companies. | Tier 1 primary / official | Disclosure/governance source, not insurance coverage or liability source. | Cyber incident governance and disclosure context can matter to post-loss evidence. | SEC rules prove D&O coverage, securities liability, or insurance claim outcome. |
+| [53] | INS-AON-AI-2026 / INS-AON-RISK-2026 | AI Fact Sheet 2026 and AI Risk 2026 / Aon | https://assets.aon.com/-/media/files/aon/reports/2026/aon-ai-fact-sheet-2026.pdf; https://www.aon.com/en/insights/articles/ai-risk-2026-practical-agenda | Ch. 21 | Broker context supports AI risk touching cyber, E&O/professional liability, crime, D&O/governance, and other lines. | Tier 2 high-authority secondary | Broker context, not coverage determination or underwriting rule. | AI incidents may raise line-boundary questions that require evidence. | Aon determines coverage, pricing, insurer appetite, or claim outcome. |
+| [54] | WP1-GAIC | Global AI Compliance White Paper 2026 source master | `gaic_v032_work/source_r3/GAIC-2026-v0.3.2-FRC-R3-SOURCE-MASTER.md` | Part V intro, Ch. 19-23 | WP1 provides lifecycle governance vocabulary for authority, accepted outcome, substitution conformance, evidence partition, and remediation closure. | Internal canonical source truth | Internal analytical source; not external insurance evidence. | WP1 helps organize post-loss lifecycle evidence. | WP1 makes systems insurable, coverage-ready, underwriting-ready, certified, or insurer accepted. |
+| [55] | WP2-AIAAWP | Agentic AI Auditability & Assurance White Paper 2026 source | `gaic_v032_work/source_r3/wp2_r4_publication_candidate/AIAAWP-2026-v0.1-R4-CANDIDATE.md` | Part V intro, Ch. 19-23 | WP2 provides audit evidence chain and source-pointer vocabulary for reconstruction. | Internal canonical source truth | Internal analytical source; auditability does not equal claim approval or insurability. | WP2 helps distinguish traces, evidence chains, and reconstruction. | WP2 proves coverage, claim approval, legal causation, or insurer acceptance. |
+| [56] | R1-SILENT-AI-EXPOSURE | Silent AI Exposure Matrix / AIIRWP R1 | `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/silent-ai-exposure-matrix.md` | Ch. 21 | Silent exposure matrix supports line ambiguity across cyber, E&O, professional liability, D&O, crime, media/IP, BI/property, privacy, and other lines. | Internal source-grounded synthesis based on R1 external sources | Analytical matrix; does not prove coverage applies or is denied. | Agentic incidents can straddle lines and need evidence to frame questions. | Silent exposure means coverage applies, coverage is denied, or market has accepted agentic lifecycle risk. |
+
+## R3E Source-Use Notes
+
+- Notes [49]-[50] support incident timeline, containment, remediation, recovery, and tracking evidence only.
+- Note [51] supports AI-linked cyber and LLMjacking evidence needs only.
+- Note [52] supports governance, disclosure, and material incident context only.
+- Note [53] supports broker line-ambiguity context only.
+- Notes [54]-[55] support internal analytical vocabulary for lifecycle and audit evidence only.
+- Note [56] supports silent-exposure line ambiguity as source-grounded synthesis.
+- No R3E source is used to claim coverage determination, legal causation, legal liability, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, claim approval, certification, standard status, actuarial pricing guidance, premium recommendation, or public release.
+
+## R3E Boundary Result
+
+PASS for R3E drafting: source notes map to R1 source inventory or internal WP1/WP2 anchors. R3E adds no unsupported external market claim.

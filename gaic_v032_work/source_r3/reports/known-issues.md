@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3D Part IV Body Draft)
+**Last Updated:** May 26, 2026 (WP3-V1-R3E Part V Body Draft)
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 
@@ -4589,3 +4589,34 @@ Boundary discipline:
 - WP3-V1-R3D does not draft Part V, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3D Status:** ✓ WP3-V1-R3D PART IV BODY DRAFT COMPLETE / READY FOR R3E PART V BODY DRAFT
+
+## WP3-V1-R3E Known Issues
+
+### Part V Body Draft Complete
+
+WP3-V1-R3E drafted Part V for the AIIRWP v1.0 rewrite and keeps the work inside the post-loss responsibility evidence lane.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3e-part-v/`.
+- Drafted Part V: `Claims, Disputes, and Post-Loss Responsibility Evidence`.
+- Drafted Chapters 19-23 covering claim reconstruction after agentic AI incidents, disputes and evidence gaps, coverage-boundary analysis without coverage opinion, post-loss remediation/reauthorization/residual risk, and claims-to-renewal feedback.
+- Added tables T-19-01 through T-23-01.
+- Created R3E source-note, claim-boundary, reader-pain, WP1/WP2 bridge, table-inventory, and R3F continuity checks.
+- Preserved accepted numbering from R3A through R3D.
+- Kept claim reconstruction separate from claim approval, coverage-boundary analysis separate from coverage opinion, remediation closure separate from settlement/no-liability proof, and feedback loops separate from premium, discount, surcharge, appetite, or renewal outcome claims.
+
+Remaining known issues:
+
+- R3F should continue into Part VI only; it should not draft appendices unless explicitly scoped, implementation guidance, artifact generation, or public staging.
+- Full-body assembly should reconcile the original R2 chapter plan, accepted R3B/R3C/R3D/R3E numbering, and final table numbering.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Insurer claim documentation and AI underwriting questionnaire sources would still strengthen later assembly if found.
+- Pre-existing unrelated `public/social/*` files remain outside the R3E commit.
+
+Boundary discipline:
+
+- WP3-V1-R3E is Part V body drafting only.
+- WP3-V1-R3E does not draft Part VI, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3E Status:** ✓ WP3-V1-R3E PART V BODY DRAFT COMPLETE / READY FOR R3F PART VI BODY DRAFT

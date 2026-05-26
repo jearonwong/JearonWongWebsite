@@ -63,3 +63,17 @@ R3D uses:
 - T-18-01: Optional Reviewer Evidence Request Structure.
 
 This preserves the accepted R3B expansion through Chapter 8 and R3C through Chapter 13, then starts Part IV at Chapter 14. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, R3C translation layer, and R3D underwriting-facing architecture before artifact planning. R3D creates no public artifact.
+
+## R3E Draft Continuity Note
+
+R3E follows the owner-approved Part V drafting prompt and adds a draft-specific table inventory under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3e-part-v/r3e-table-inventory.md`.
+
+R3E uses:
+
+- T-19-01: Agentic Claim Reconstruction Map.
+- T-20-01: Dispute and Evidence Gap Register.
+- T-21-01: Coverage Boundary Question Map.
+- T-22-01: Post-Loss Remediation Evidence Map.
+- T-23-01: Claims-to-Renewal Feedback Loop.
+
+This preserves the accepted R3B expansion through Chapter 8, R3C through Chapter 13, and R3D through Chapter 18, then starts Part V at Chapter 19. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, R3C translation layer, R3D underwriting-facing architecture, and R3E post-loss evidence layer before artifact planning. R3E creates no public artifact.
