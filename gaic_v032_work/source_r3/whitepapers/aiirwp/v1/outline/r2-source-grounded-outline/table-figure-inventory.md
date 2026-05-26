@@ -35,3 +35,17 @@ R3B uses:
 - T-08-01: Hard-to-Insure Agentic Risk Patterns.
 
 This differs from the original R2 table plan, where T-08-01 was reserved for the WP1 MRO to Insurability Object Table. R3C/full-body assembly should reconcile final chapter and table numbering before artifact planning. R3B creates no public artifact.
+
+## R3C Draft Continuity Note
+
+R3C follows the owner-approved Part III drafting prompt and adds a draft-specific table inventory under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3c-part-iii/r3c-table-inventory.md`.
+
+R3C uses:
+
+- T-09-01: MRO-to-Insurability Translation Map.
+- T-10-01: Auditability-to-Claim-Reconstruction Crosswalk.
+- T-11-01: Insurance Line Ambiguity Map.
+- T-12-01: Agentic Aggregation Risk Map.
+- T-13-01: Insurance Evidence vs Privacy Control Map.
+
+This preserves the accepted R3B expansion through Chapter 8 and starts Part III at Chapter 9. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, and R3C table numbering before artifact planning. R3C creates no public artifact.
