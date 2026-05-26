@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3K Full-Body Revision QA)
+**Last Updated:** May 27, 2026 (WP3-V1-R3L Appendix Planning)
+
+## WP3-V1-R3L Appendix Planning
+
+### Status: WP3-V1-R3L APPENDIX PLANNING COMPLETE / READY FOR R3M APPENDIX DRAFTING
+
+R3L creates the AIIRWP v1.0 appendix planning package. It does not draft full appendices, revise the R3J body, perform source-strengthening research, or create public artifacts.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3K commit `1512d385b3843b78f144e6ddc6d5d054e83a5d1a` before R3L edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3L edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, and rejected v0.2 boundary context.
+4. Created the R3L appendix planning package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/appendices/r3l-appendix-planning/`.
+5. Planned Appendices A-I: Agentic Insurability Object Model Reference; Non-Scoring Agentic Insurability Reasoning Model; Underwriting-Facing Evidence Request Structure; Claim Reconstruction and Evidence Gap Register; Coverage Boundary Question Map; Source and Claim Boundary Notes; Final Non-Claim Language Register; Table Inventory and Layout Risk Register; Assembly and Revision Change Log.
+6. Created appendix-to-body crosswalk for Chapters 1-28 and table IDs T-02-01 and T-04-01 through T-27-01.
+7. Created appendix boundary/non-claim plan to prevent appendices from becoming standards, checklists, certifications, insurer-adopted methods, coverage opinions, pricing tools, or claim approval packages.
+8. Created source/citation plan preserving refs `[1]` through `[62]` and excluding rejected v0.2 from current source truth.
+9. Created table/layout risk plan carrying forward wide-table risks for T-02-01, T-09-01, T-14-01, T-18-01, T-21-01, and T-27-01.
+10. Recommended `R3M-APPENDIX-DRAFTING` as the next wave.
+
+Remaining known issues:
+
+- R3M should draft appendices only if R3L is accepted.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Wide table layout risks remain future artifact-planning issues and are not solved in R3L.
+- Appendix drafting must preserve non-claim discipline and avoid standards, checklists, certifications, insurer-adopted methods, coverage opinions, pricing tools, claim approval packages, public candidate status, final/sealed status, or release-ready status.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3L is appendix planning only.
+- R3L does not draft full appendices, revise the R3J body, perform source-strengthening research, generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3L Status:** WP3-V1-R3L APPENDIX PLANNING COMPLETE / READY FOR R3M APPENDIX DRAFTING
 
 ## WP3-V1-R3K Full-Body Revision QA
 
