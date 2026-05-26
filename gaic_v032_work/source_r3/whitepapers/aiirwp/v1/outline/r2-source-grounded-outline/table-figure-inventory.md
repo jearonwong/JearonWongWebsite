@@ -21,3 +21,17 @@
 - T-02-01, T-04-02, T-08-01, T-09-01, T-12-01, and T-19-01 are high-comparison tables and must not become row-card-only in future PDF rendering.
 - Dense appendix versions may need landscape, split-matrix, repeated first column, or semantic grouping.
 - Main-body tables should prioritize reader decision clarity over exhaustive source detail.
+
+## R3B Draft Continuity Note
+
+R3B follows the owner-approved Part II drafting prompt and adds a draft-specific table inventory under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3b-part-ii/r3b-table-inventory.md`.
+
+R3B uses:
+
+- T-04-01: Insurance Object Shift.
+- T-05-01: Responsibility Continuity Map.
+- T-06-01: Underwriting Evidence Request Model.
+- T-07-01: Claim Evidence Pack Components.
+- T-08-01: Hard-to-Insure Agentic Risk Patterns.
+
+This differs from the original R2 table plan, where T-08-01 was reserved for the WP1 MRO to Insurability Object Table. R3C/full-body assembly should reconcile final chapter and table numbering before artifact planning. R3B creates no public artifact.

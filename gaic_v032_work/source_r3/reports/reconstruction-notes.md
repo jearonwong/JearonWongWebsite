@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3B Part II Body Draft Notes (May 26, 2026)
+
+**Scope:** Draft AIIRWP v1.0 Part II body only. Do not repair R3A, draft Part III, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `3420eb8f9aff947c617d2fda7f4709b2f46f2acf` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline files, R1 source research package, R2 source-grounded outline package, R3A body draft package, R3A editorial QA package, and rejected v0.2 archive.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3b-part-ii/`.
+6. Drafted `AIIRWP-v1.0-R3B-part-ii.md` with Part II only.
+7. Drafted Chapters 4-8: The Insurable Agentic Risk Object; Agentic Risk Transfer and Responsibility Continuity; Underwriting Evidence Model for Agentic AI; Claim Evidence Pack for Agentic Incidents; and Uninsurable or Hard-to-Insure Agentic Risk Patterns.
+8. Added tables T-04-01 through T-08-01 and created the R3B source-note register, claim-boundary check, reader-pain check, WP1/WP2 bridge check, table inventory, and R3C continuity notes.
+9. Documented the R2/R3B TOC continuity note: R2 originally scoped Part II as Chapters 4-7, while the owner R3B prompt expands Part II through Chapter 8; R3C/full-body assembly should reconcile final numbering before artifact planning.
+
+**Artifact discipline:**
+
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- No Part III body draft was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3B scope.
+
+**Boundary discipline:**
+
+- R3B does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
+- R3B keeps WP3 as insurability/risk-transfer reasoning and does not turn Part II into WP2 auditability prose.
+
+**WP3-V1-R3B Status:** WP3-V1-R3B PART II BODY DRAFT COMPLETE / READY FOR R3C PART III BODY DRAFT.
+
 ## WP3-V1-R3A Editorial QA Notes (May 25, 2026)
 
 **Scope:** QA-only editorial review of the AIIRWP v1.0 R3A Front Matter and Part I body draft. Do not draft R3B, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.

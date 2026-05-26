@@ -4499,3 +4499,32 @@ Boundary discipline:
 - WP3-V1-R3A Editorial QA does not draft Part II, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3A Editorial QA Status:** ✓ WP3-V1-R3A EDITORIAL QA COMPLETE / READY FOR WP3-V1-R3B PART II BODY DRAFT WITH NOTES
+
+## WP3-V1-R3B Known Issues
+
+### Part II Body Draft Complete
+
+WP3-V1-R3B drafted Part II for the AIIRWP v1.0 rewrite and keeps the work inside the insurability/risk-transfer lane.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3b-part-ii/`.
+- Drafted Part II: `The Insurable Agentic Risk Object`.
+- Drafted Chapters 4-8 covering the insurable agentic risk object, responsibility continuity, underwriting evidence reviewability, claim evidence packaging, and hard-to-insure risk patterns.
+- Added tables T-04-01 through T-08-01.
+- Created R3B source-note, claim-boundary, reader-pain, WP1/WP2 bridge, table-inventory, and R3C continuity checks.
+- Preserved R3A editorial notes by avoiding Chapter 2 matrix repetition, keeping boundaries concise, keeping WP1/WP2 as analytical bridges only, and avoiding MPLP brochure framing.
+
+Remaining known issues:
+
+- R3C should reconcile final TOC and table numbering because R2 originally scoped Part II as Chapters 4-7 while the owner R3B prompt expanded Part II through Chapter 8.
+- R3C should continue into Part III only; it should not draft appendices, implementation guidance, artifact generation, or public staging.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Pre-existing unrelated `public/social/*` files remain outside the R3B commit.
+
+Boundary discipline:
+
+- WP3-V1-R3B is Part II body drafting only.
+- WP3-V1-R3B does not draft Part III, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3B Status:** ✓ WP3-V1-R3B PART II BODY DRAFT COMPLETE / READY FOR R3C PART III BODY DRAFT
