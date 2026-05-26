@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3D Part IV Body Draft Notes (May 26, 2026)
+
+**Scope:** Draft AIIRWP v1.0 Part IV body only. Do not repair R3C, draft Part V, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `52a7464adf2942688918f1ab2b0a71cec8f5b740` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected the canonical registry, current status, repo canonicalization plan, AIIRWP v1.0 baseline files, R1 source research package, R2 Part IV underwriting and premium-variable outlines, R3A body/editorial QA, R3B body/QA package, R3C body/QA package, and rejected v0.2 archive.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3d-part-iv/`.
+6. Drafted `AIIRWP-v1.0-R3D-part-iv.md` with Part IV only.
+7. Drafted Chapters 14-18: Underwriting Evidence Architecture; Agentic Exposure Inventory and Risk Segmentation; Premium and Exposure Variables Without Pricing Guidance; Renewal, Change, and Substitution Evidence; and Reviewer-Facing Evidence Requests Without Creating a Standard.
+8. Added tables T-14-01 through T-18-01 and created the R3D source-note register, claim-boundary check, reader-pain check, WP1/WP2 bridge check, table inventory, and R3E continuity notes.
+9. Documented the R2/R3B/R3C/R3D TOC continuity note: R3B is accepted through Chapter 8, R3C through Chapter 13, and R3D begins Part IV at Chapter 14; full-body assembly should reconcile final numbering before artifact planning.
+
+**Artifact discipline:**
+
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- No Part V body draft was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3D scope.
+
+**Boundary discipline:**
+
+- R3D does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3D keeps WP3 as insurability/risk-transfer reasoning and does not turn underwriting-facing evidence architecture into underwriting guidance or pricing methodology.
+
+**WP3-V1-R3D Status:** WP3-V1-R3D PART IV BODY DRAFT COMPLETE / READY FOR R3E PART V BODY DRAFT.
+
 ## WP3-V1-R3C Part III Body Draft Notes (May 26, 2026)
 
 **Scope:** Draft AIIRWP v1.0 Part III body only. Do not repair R3B, draft Part IV, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.

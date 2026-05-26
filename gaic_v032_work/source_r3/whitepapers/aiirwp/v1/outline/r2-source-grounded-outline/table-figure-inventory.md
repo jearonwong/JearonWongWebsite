@@ -49,3 +49,17 @@ R3C uses:
 - T-13-01: Insurance Evidence vs Privacy Control Map.
 
 This preserves the accepted R3B expansion through Chapter 8 and starts Part III at Chapter 9. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, and R3C table numbering before artifact planning. R3C creates no public artifact.
+
+## R3D Draft Continuity Note
+
+R3D follows the owner-approved Part IV drafting prompt and adds a draft-specific table inventory under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3d-part-iv/r3d-table-inventory.md`.
+
+R3D uses:
+
+- T-14-01: Underwriting Evidence Architecture Components.
+- T-15-01: Agentic Exposure Inventory Template.
+- T-16-01: Non-Pricing Exposure Variables.
+- T-17-01: Renewal and Change Evidence Register.
+- T-18-01: Optional Reviewer Evidence Request Structure.
+
+This preserves the accepted R3B expansion through Chapter 8 and R3C through Chapter 13, then starts Part IV at Chapter 14. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, R3C translation layer, and R3D underwriting-facing architecture before artifact planning. R3D creates no public artifact.

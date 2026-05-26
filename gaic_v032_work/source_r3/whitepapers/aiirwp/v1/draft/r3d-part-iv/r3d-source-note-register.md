@@ -1,0 +1,33 @@
+# R3D Source Note Register
+
+**Task ID:** WP3-V1-R3D-PART-IV-BODY-DRAFT-01
+**Scope:** Numbered source-note register for the R3D Part IV body draft.
+**Boundary:** Source notes support analytical drafting only. They do not create policy wording, legal conclusions, coverage opinions, insurer acceptance, underwriting standards, pricing guidance, claim approval, certification, endorsement, public release, or Final Seal.
+
+## Numbered Notes
+
+R3D continues the R3C note sequence and starts at `[41]`.
+
+| Note | R1 source ID | Title / publisher | URL / canonical path | Used in | Claim supported | Source strength | Overclaim caveat | Allowed wording | Forbidden wording |
+|---|---|---|---|---|---|---|---|---|---|
+| [41] | CLAIM-NIST-80061R3 | SP 800-61 Rev. 3 / NIST | https://csrc.nist.gov/pubs/sp/800/61/r3/final | Ch. 14, 16, 17, 18 | Incident response should include preparation, detection, response, recovery, integration, remediation, and continuous improvement. | Tier 1 primary / official | Incident response source, not insurance claim approval, pricing, or underwriting source. | Structured incident and remediation records support reviewability and reconstruction. | NIST creates claim approval guidance, legal causation proof, underwriting rules, or pricing rules. |
+| [42] | CLAIM-CISA-PLAYBOOK | Federal Government Cybersecurity Incident and Vulnerability Response Playbooks / CISA | https://www.cisa.gov/ncas/current-activity/2021/11/16/new-federal-government-cybersecurity-incident-and-vulnerability | Ch. 14, 16, 17, 18 | CISA playbooks support identification, coordination, containment, remediation, recovery, reporting, and tracking. | Tier 1 primary / official incident response authority | Federal operational playbooks are not private-sector insurance standards. | Operational playbooks show why timeline, coordination, and remediation records matter. | CISA proves coverage, liability, claim approval, or mandatory private underwriting requirements. |
+| [43] | INS-AON-AI-2026 / INS-AON-RISK-2026 | AI Fact Sheet 2026 and AI Risk 2026 / Aon | https://assets.aon.com/-/media/files/aon/reports/2026/aon-ai-fact-sheet-2026.pdf; https://www.aon.com/en/insights/articles/ai-risk-2026-practical-agenda | Ch. 14, 18 | Broker context supports AI risk alignment, line ambiguity, governance, and enterprise risk categories. | Tier 2 high-authority secondary | Broker context, not coverage determination or underwriting rule. | AI risk discussions may require line/object/dependency evidence and risk alignment. | Aon determines coverage, pricing, insurer appetite, or claim outcome. |
+| [44] | GOV-NAIC-AI-MB / GOV-NIST-AIRMF | NAIC Model Bulletin on Use of AI by Insurers; NIST AI RMF | https://content.naic.org/sites/default/files/inline-files/2023-12-4%20Model%20Bulletin_Adopted_0.pdf; https://www.nist.gov/itl/ai-risk-management-framework | Ch. 14, 18 | Governance, risk management, documentation, controls, validation, mapping, and third-party oversight context. | Tier 1 primary / official | Governance context, not enterprise insured coverage proof. | AI risk review can require governance, controls, documentation, and third-party visibility. | NAIC/NIST create insurance requirements, coverage proof, or underwriting standards. |
+| [45] | WP1-GAIC / WP2-AIAAWP | GAIC source master; AIAAWP current source | `gaic_v032_work/source_r3/GAIC-2026-v0.3.2-FRC-R3-SOURCE-MASTER.md`; `gaic_v032_work/source_r3/wp2_r4_publication_candidate/AIAAWP-2026-v0.1-R4-CANDIDATE.md` | Ch. 14, 15, 18 | WP1/WP2 provide lifecycle governance and auditability evidence vocabulary for object, authority, evidence, privacy, substitution, and closure. | Internal canonical source truth | Internal analytical sources; not external insurance evidence. | WP1/WP2 help organize reviewable evidence architecture. | WP1/WP2 make systems insurable, coverage-ready, underwriting-ready, certified, or insurer accepted. |
+| [46] | REIN-GENEVA-CYBER-2023 / REIN-GENEVA-GENAI-2025 | Cyber Risk Accumulation; Gen AI Risks for Businesses / Geneva Association | https://www.genevaassociation.org/publication/cyber/cyber-risk-accumulation-fully-tackling-insurability-challenge; https://www.genevaassociation.org/publication/digital-ai-transformation/gen-ai-risks-businesses-exploring-role-insurance | Ch. 15, 16, 18 | Accumulation, systemic/correlated cyber risk, GenAI business risk, and insurance role context. | Tier 1 high-authority industry research | Cyber accumulation and GenAI context; agentic lifecycle use remains analytical extension. | Shared dependencies and accumulation visibility may matter for risk review. | Geneva provides agentic AI pricing, capital model, coverage availability, or reinsurer acceptance. |
+| [47] | REIN-SWISSRE-CLOUD-2024 | Risk concentration in the cloud / Swiss Re | https://www.swissre.com/risk-knowledge/advancing-societal-benefits-digitalisation/risk-concentration-in-the-cloud.html | Ch. 15, 16, 18 | Cloud concentration can create correlated losses and dependency concerns for re/insurers. | Tier 1 reinsurer source | Dependency analogy; not an AI-specific underwriting solution. | Shared cloud/API/model dependency visibility matters for risk review. | Swiss Re proves AI pricing, reinsurer acceptance, or underwriting standard. |
+| [48] | INS-QBE-LLM-2025 | Understanding LLMjacking / QBE Cyber Services | https://www.qbe.com/media/qbe/north-america/usa/files/cyber/cyber-services-llmjacking.pdf?rev=dfedc9d3cdf440e6affa871bf981923a | Ch. 16, 18 | LLMjacking creates concrete AI-linked cyber evidence needs: access, API usage, abnormal consumption, containment, and remediation. | Tier 1 primary / official insurer service guidance | Cyber service guidance, not coverage grant, pricing, or claim approval source. | AI-linked cyber incidents may require reconstructable access and usage evidence. | QBE guidance proves policy response, sublimit wording, pricing, or claim approval. |
+
+## R3D Source-Use Notes
+
+- Notes [41]-[42] support incident/remediation/change evidence only.
+- Notes [43]-[44] support governance and risk-review context only.
+- Note [45] supports internal WP1/WP2 evidence architecture and remains analytical.
+- Notes [46]-[47] support dependency and accumulation visibility; they do not support pricing or reinsurer acceptance claims.
+- Note [48] supports AI-linked cyber evidence needs only.
+- No R3D source is used to claim insurer acceptance, coverage-ready status, underwriting-ready status, claim approval, certification, standard status, actuarial pricing guidance, premium recommendation, or public release.
+
+## R3D Boundary Result
+
+PASS for R3D drafting: source notes map to R1 source inventory or internal WP1/WP2 anchors. R3D adds no new unsupported external market claim.

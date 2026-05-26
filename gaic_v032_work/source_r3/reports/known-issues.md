@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3C Part III Body Draft)
+**Last Updated:** May 26, 2026 (WP3-V1-R3D Part IV Body Draft)
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 
@@ -4558,3 +4558,34 @@ Boundary discipline:
 - WP3-V1-R3C does not draft Part IV, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3C Status:** ✓ WP3-V1-R3C PART III BODY DRAFT COMPLETE / READY FOR R3D PART IV BODY DRAFT
+
+## WP3-V1-R3D Known Issues
+
+### Part IV Body Draft Complete
+
+WP3-V1-R3D drafted Part IV for the AIIRWP v1.0 rewrite and keeps the work inside the underwriting-facing reviewability lane.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3d-part-iv/`.
+- Drafted Part IV: `Underwriting-Facing Architecture for Agentic AI Risk`.
+- Drafted Chapters 14-18 covering underwriting evidence architecture, agentic exposure inventory and segmentation, premium/exposure variables without pricing guidance, renewal/change/substitution evidence, and optional reviewer-facing evidence requests.
+- Added tables T-14-01 through T-18-01.
+- Created R3D source-note, claim-boundary, reader-pain, WP1/WP2 bridge, table-inventory, and R3E continuity checks.
+- Preserved R3B as accepted expanded Part II through Chapter 8 and R3C as accepted Part III through Chapter 13.
+- Kept underwriting-facing architecture as a reviewability layer rather than an underwriting standard, and kept premium/exposure variables separate from pricing, rating, discount, or actuarial guidance.
+
+Remaining known issues:
+
+- R3E should continue into Part V only; it should not draft appendices, implementation guidance, artifact generation, or public staging.
+- Full-body assembly should reconcile the original R2 chapter plan, the accepted R3B Chapter 8 expansion, R3C Chapters 9-13, R3D Chapters 14-18, and final table numbering.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Insurer claim documentation and AI underwriting questionnaire sources would still strengthen later underwriting/claims chapters if found.
+- Pre-existing unrelated `public/social/*` files remain outside the R3D commit.
+
+Boundary discipline:
+
+- WP3-V1-R3D is Part IV body drafting only.
+- WP3-V1-R3D does not draft Part V, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3D Status:** ✓ WP3-V1-R3D PART IV BODY DRAFT COMPLETE / READY FOR R3E PART V BODY DRAFT
