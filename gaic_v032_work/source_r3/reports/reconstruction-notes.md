@@ -1,5 +1,41 @@
 # Reconstruction Notes
 
+## WP3-V1-R3G Full-Body Assembly Planning Notes (May 26, 2026)
+
+**Scope:** Create the AIIRWP v1.0 full-body assembly plan only. Do not assemble the full body, draft full appendices, create public artifacts, restore public CTAs, modify the public route, create HTML/PDF/DOCX/manifest/checksum, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `7146d0e6d80d9e20fd0c8ef1ba5308242a7dc7b0` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected the canonical registry, current status, AIIRWP v1.0 README, writing rules, body quality gate, R1 source research package, R2 source-grounded outline, R3A body/editorial QA, R3B-R3F body/QA packages, R3F continuity notes, and rejected v0.2 only as historical boundary context.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3g-full-body-assembly-planning/`.
+6. Created R3G planning files: README, full-body assembly plan, TOC reconciliation plan, repetition/rhythm audit plan, source/citation assembly plan, boundary/non-claim assembly plan, appendix skeleton decision, full-body QA plan, R3H assembly instructions, and R3H continuity notes.
+7. Documented the accepted R3A-R3F 28-chapter sequence as current assembly source of truth unless the owner rejects it.
+8. Documented the original R2 20-chapter plan as historical outline context.
+9. Planned preservation of table IDs T-02-01 and T-04-01 through T-27-01.
+10. Created R3G preflight, boundary QA, build/validation, and final QA reports.
+
+**Artifact discipline:**
+
+- No full-body draft was assembled.
+- No full appendices were drafted.
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3G scope.
+
+**Boundary discipline:**
+
+- R3G does not claim final/sealed status, public release, public candidate status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, certification, score, standard, readiness certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3G keeps R3H as internal Markdown assembly only and does not authorize artifact generation or public route restoration.
+
+**WP3-V1-R3G Status:** WP3-V1-R3G FULL-BODY ASSEMBLY PLANNING COMPLETE / READY FOR R3H FULL-BODY ASSEMBLY DRAFT.
+
 ## WP3-V1-R3F Part VI Body Draft Notes (May 26, 2026)
 
 **Scope:** Draft AIIRWP v1.0 Part VI body only. Do not repair R3E, draft appendices, create full-body assembly, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.

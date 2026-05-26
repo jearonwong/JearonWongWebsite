@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3F Part VI Body Draft)
+**Last Updated:** May 26, 2026 (WP3-V1-R3G Full-Body Assembly Planning)
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 
@@ -4651,3 +4651,35 @@ Boundary discipline:
 - WP3-V1-R3F does not create a full-body assembly, draft appendices, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3F Status:** ✓ WP3-V1-R3F PART VI BODY DRAFT COMPLETE / READY FOR R3G FULL-BODY ASSEMBLY PLANNING
+
+## WP3-V1-R3G Known Issues
+
+### Full-Body Assembly Planning Complete
+
+WP3-V1-R3G creates the AIIRWP v1.0 full-body assembly planning package. It does not assemble the full body and does not create public artifacts.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3g-full-body-assembly-planning/`.
+- Created `README.md`, `full-body-assembly-plan.md`, `toc-reconciliation-plan.md`, `repetition-and-rhythm-audit-plan.md`, `source-and-citation-assembly-plan.md`, `boundary-and-nonclaim-assembly-plan.md`, `appendix-skeleton-decision.md`, `full-body-qa-plan.md`, `r3h-assembly-instructions.md`, and `r3g-continuity-notes-for-r3h.md`.
+- Confirmed R3A-R3F body drafting is complete.
+- Documented that the accepted R3A-R3F 28-chapter sequence is the current assembly source of truth unless the owner rejects it.
+- Documented the original R2 20-chapter plan as historical outline context rather than a repair target.
+- Planned table preservation for T-02-01 and T-04-01 through T-27-01.
+- Planned source-note, boundary, repetition, appendix-skeleton, and full-body QA handling for R3H.
+
+Remaining known issues:
+
+- R3H must assemble the full internal Markdown draft before editorial full-body QA.
+- R3H must remove wave headers, preserve accepted numbering, compress repetition, preserve source caveats, and keep high-risk boundary language.
+- R3H must not generate artifacts, update public routes, or draft full appendices unless separately authorized.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Insurer claim documentation and AI underwriting questionnaire sources remain strengthening opportunities.
+- Pre-existing unrelated `public/social/*` files remain outside the R3G commit.
+
+Boundary discipline:
+
+- WP3-V1-R3G is planning-only.
+- WP3-V1-R3G does not create an assembled full-body draft, draft full appendices, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, create a public manifest/checksum, claim public release, claim public candidate status, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3G Status:** ✓ WP3-V1-R3G FULL-BODY ASSEMBLY PLANNING COMPLETE / READY FOR R3H FULL-BODY ASSEMBLY DRAFT
