@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3J FULL-BODY REVISION PASS COMPLETE / READY FOR R3K FULL-BODY REVISION QA.
+- Current v1 wave: WP3-V1-R3K FULL-BODY REVISION QA COMPLETE / READY FOR R3L APPENDIX PLANNING.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -46,10 +46,12 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3j-full-body-revision-pass/`
 - Current v1 full-body editorial QA package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3i-full-body-editorial-qa/`
+- Current v1 full-body revision QA package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3k-full-body-revision-qa/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
-- R3J creates a revised internal full-body Markdown draft only and preserves R3H as the prior assembly snapshot.
-- R3J does not create a public artifact, create public staging, restore public CTA, create manifest, checksum, PDF, HTML, DOCX, public candidate, final/sealed status, release-ready status, or public release.
+- R3K reviews the R3J revised internal full-body Markdown draft and accepts it for appendix planning with notes. R3K does not revise the body.
+- R3K does not create a public artifact, create public staging, restore public CTA, create manifest, checksum, PDF, HTML, DOCX, public candidate, final/sealed status, release-ready status, or public release.
 
 ## WP4
 
@@ -57,4 +59,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 internal revision completion does not authorize public artifact restoration, artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 full-body revision QA completion does not authorize public artifact restoration, artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.

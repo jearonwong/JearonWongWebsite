@@ -1,7 +1,43 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3J Full-Body Revision Pass)
+**Last Updated:** May 27, 2026 (WP3-V1-R3K Full-Body Revision QA)
+
+## WP3-V1-R3K Full-Body Revision QA
+
+### Status: WP3-V1-R3K FULL-BODY REVISION QA COMPLETE / READY FOR R3L APPENDIX PLANNING
+
+R3K reviews the R3J revised internal full-body draft. It creates QA reports only, does not revise the body, and does not create public artifacts.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3J commit `65ebb8b2f224d755f3188d508e27a477edff30e4` before R3K edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3K edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3H assembly package, R3I QA package, R3J revision package, and rejected v0.2 boundary context.
+4. Created the R3K QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3k-full-body-revision-qa/`.
+5. Produced the overall verdict `ACCEPTED_FOR_APPENDIX_PLANNING_WITH_NOTES`.
+6. Recommended `R3L-APPENDIX-PLANNING` as the next wave.
+7. Confirmed the R3J revised draft preserves 28 chapters, T-02-01 and T-04-01 through T-27-01, no duplicate table IDs, and source refs `[1]` through `[62]`.
+8. Confirmed `Agentic Insurability Reasoning Model` is the preferred active model term and that `Agentic Insurability Readiness Model`, `AIO v2`, and `AIRM v2` are not active model terminology.
+9. Confirmed AIO/AIRM remain authored analytical constructs only and the Reasoning Model remains non-scoring.
+10. Confirmed R3J boundary compression did not weaken high-risk legal, insurance, underwriting, pricing, claim, certification, score, standard, insurer-adopted, or public-release controls.
+11. Accepted Chapter 28 conclusion force and R3L appendix planning handoff with notes.
+
+Remaining known issues:
+
+- R3L should plan appendices before any appendix drafting or artifact work.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Several tables remain future layout risks for artifact planning, especially T-02-01, T-09-01, T-14-01, T-18-01, T-21-01, and T-27-01.
+- Appendix planning must avoid converting evidence maps, request structures, object models, or reasoning states into standards, scores, certifications, underwriting rules, coverage opinions, pricing tools, claim approval packages, or insurer-adopted methods.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3K is QA only and does not revise the R3J body.
+- R3K does not generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3K Status:** WP3-V1-R3K FULL-BODY REVISION QA COMPLETE / READY FOR R3L APPENDIX PLANNING
 
 ## WP3-V1-R3J Full-Body Revision Pass
 
