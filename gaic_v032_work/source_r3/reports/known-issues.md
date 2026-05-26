@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3H Full-Body Assembly Draft)
+**Last Updated:** May 26, 2026 (WP3-V1-R3I Full-Body Editorial QA)
+
+## WP3-V1-R3I Full-Body Editorial QA
+
+### Status: WP3-V1-R3I FULL-BODY EDITORIAL QA COMPLETE / READY FOR R3J FULL-BODY REVISION PASS
+
+R3I reviews the R3H internal assembled Markdown draft for full-body editorial quality. It creates QA reports only and does not revise the assembled body.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3H commit `f9eafa3ca63d7ff568236a78b4bea089f386fe8c` before R3I edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3I edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R1/R2 packages, R3A-R3F accepted source draft sequence, R3G assembly planning, and R3H internal assembly package.
+4. Created the R3I full-body editorial QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3i-full-body-editorial-qa/`.
+5. Produced the overall verdict `ACCEPTED_FOR_REVISION_PASS_WITH_NOTES`.
+6. Recommended `R3J-FULL-BODY-REVISION-PASS` as the next wave.
+7. Verified the accepted 28-chapter structure, expected table IDs, and source-note continuity remain coherent in the R3H draft.
+8. Identified revision-pass needs: AIRM terminology harmonization, boundary-density compression, WP1/WP2 bridge compression after Part III, lifecycle-object list compression, T-02-01 title review, wide-table layout risk carryover, and conclusion sharpening.
+
+Remaining known issues:
+
+- R3J full-body revision pass is required before appendix planning.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Several tables remain future layout risks for artifact planning, especially T-02-01, T-09-01, T-14-01, T-18-01, T-21-01, and T-27-01.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3I is QA only and does not revise the assembled body.
+- R3I does not generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3I Status:** WP3-V1-R3I FULL-BODY EDITORIAL QA COMPLETE / READY FOR R3J FULL-BODY REVISION PASS
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 

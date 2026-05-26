@@ -5482,3 +5482,33 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-V1-R0 does not claim public release execution, production verification, author release execution, Final Seal, external adoption, indexing, SEO/GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, claims approval guidance, public DOCX, or WP4 implementation.
 
 **WP3-V1-R0 Status:** WP3-V1-R0 EMERGENCY HOLD, CANONICALIZATION, AND V1.0 REWRITE BASELINE COMPLETE / READY FOR WP3-V1-R1 SOURCE RESEARCH.
+
+## WP3-V1-R3I Notes (May 26, 2026)
+
+**Scope:** Full-body editorial QA for the WP3 / AIIRWP v1.0 R3H internal assembled Markdown draft.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3H baseline `f9eafa3ca63d7ff568236a78b4bea089f386fe8c` and confirmed `origin/main` matched before R3I work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R1/R2 packages, R3A-R3F accepted source drafts through R3H assembly, R3G planning, R3H reports, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3i-full-body-editorial-qa/`.
+5. Created the R3I README, editorial verdict, coherence/arc audit, repetition/rhythm audit, source/citation continuity audit, boundary/claim-risk audit, TOC/table audit, WP1/WP2 bridge audit, model-framing audit, conclusion-force audit, publication-readiness gap report, R3J decision recommendation, and R3J continuity notes.
+6. Set the overall verdict to `ACCEPTED_FOR_REVISION_PASS_WITH_NOTES`.
+7. Recommended `R3J-FULL-BODY-REVISION-PASS` because the body is coherent and not blocked, but still needs revision before appendix planning.
+8. Confirmed artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, and public release remain unauthorized.
+
+**Artifact discipline:**
+
+- No assembled-body revision was made.
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3I is full-body editorial QA only.
+- WP3-V1-R3I does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3I Status:** WP3-V1-R3I FULL-BODY EDITORIAL QA COMPLETE / READY FOR R3J FULL-BODY REVISION PASS.
