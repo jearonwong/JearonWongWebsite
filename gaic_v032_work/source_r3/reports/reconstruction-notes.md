@@ -5606,3 +5606,35 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - WP3-V1-R3L does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
 
 **WP3-V1-R3L Status:** WP3-V1-R3L APPENDIX PLANNING COMPLETE / READY FOR R3M APPENDIX DRAFTING.
+
+## WP3-V1-R3M Notes (May 27, 2026)
+
+**Scope:** Appendix drafting for the WP3 / AIIRWP v1.0 R3J revised internal full-body draft.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3L baseline `6ddaad32596e292fa695af46a6b1a623632698ad` and confirmed `origin/main` matched before R3M work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, R3L appendix planning package, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/appendices/r3m-appendix-drafting/`.
+5. Drafted Appendices A-H in `AIIRWP-v1.0-R3M-appendices-internal-draft.md`.
+6. Deferred Appendix I in `appendix-drafting-decision-note.md`.
+7. Created appendix boundary preservation, source/citation, table/layout, and R3N continuity reports.
+8. Confirmed artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, and public release remain unauthorized.
+
+**Artifact discipline:**
+
+- No R3J body revision was made.
+- No source-strengthening research was performed.
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3M is appendix drafting only.
+- WP3-V1-R3M does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- Appendix A remains an authored analytical model, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction-only, Appendix E remains coverage-boundary question framing, Appendix F remains source/caveat discipline, Appendix G remains a non-claim guardrail, and Appendix H remains layout-risk planning only.
+
+**WP3-V1-R3M Status:** WP3-V1-R3M APPENDIX DRAFTING COMPLETE / READY FOR R3N APPENDIX QA.

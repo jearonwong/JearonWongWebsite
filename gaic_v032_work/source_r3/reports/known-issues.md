@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3L Appendix Planning)
+**Last Updated:** May 27, 2026 (WP3-V1-R3M Appendix Drafting)
+
+## WP3-V1-R3M Appendix Drafting
+
+### Status: WP3-V1-R3M APPENDIX DRAFTING COMPLETE / READY FOR R3N APPENDIX QA
+
+R3M creates the AIIRWP v1.0 internal appendix drafting package. It drafts Appendices A-H, defers Appendix I, and does not revise the R3J body, perform source-strengthening research, or create public artifacts.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3L commit `6ddaad32596e292fa695af46a6b1a623632698ad` before R3M edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3M edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, R3L appendix planning package, and rejected v0.2 boundary context.
+4. Created the R3M appendix drafting package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/appendices/r3m-appendix-drafting/`.
+5. Drafted Appendix A through Appendix H as internal reference material.
+6. Deferred Appendix I because assembly/revision traceability already exists in governance packages and may be too process-heavy for the public white paper unless later authorized.
+7. Confirmed source refs `[1]` through `[62]` are preserved by reference, no new source IDs were created, and rejected v0.2 was not used as source truth.
+8. Confirmed wide-table risks for T-02-01, T-09-01, T-14-01, T-18-01, T-21-01, and T-27-01 remain future artifact-planning issues only.
+9. Created appendix boundary, source/citation, table/layout, decision, continuity, and R3M QA reports.
+10. Set the expected next wave to `WP3-V1-R3N-APPENDIX-QA`.
+
+Remaining known issues:
+
+- R3N should QA the R3M appendix draft before integration planning, appendix repair, source strengthening, or any artifact planning.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Wide table layout risks remain future artifact-planning issues and are not solved in R3M.
+- Appendix QA must ensure Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction only, Appendix E remains question framing only, and Appendix H remains layout-risk planning only.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3M is appendix drafting only.
+- R3M does not revise the R3J body, perform source-strengthening research, generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3M Status:** WP3-V1-R3M APPENDIX DRAFTING COMPLETE / READY FOR R3N APPENDIX QA
 
 ## WP3-V1-R3L Appendix Planning
 
