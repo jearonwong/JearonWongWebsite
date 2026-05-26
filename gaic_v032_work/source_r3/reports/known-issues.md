@@ -1,7 +1,44 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3M Appendix Drafting)
+**Last Updated:** May 27, 2026 (WP3-V1-R3N Appendix QA)
+
+## WP3-V1-R3N Appendix QA
+
+### Status: WP3-V1-R3N APPENDIX QA COMPLETE / READY FOR R3O FULL-DRAFT INTEGRATION PLANNING
+
+R3N reviews the AIIRWP v1.0 R3M appendix draft. It creates QA reports only, does not revise appendices, does not revise the R3J body, and does not create public artifacts.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3M commit `4177a9b863e76a2c2b32bab7462db612925fd1b8` before R3N edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3N edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, R3L appendix planning package, R3M appendix drafting package, R3M QA reports, and rejected v0.2 boundary context.
+4. Created the R3N appendix QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3n-appendix-qa/`.
+5. Produced the overall verdict `ACCEPTED_FOR_FULL_DRAFT_INTEGRATION_PLANNING_WITH_NOTES`.
+6. Recommended `R3O-FULL-DRAFT-INTEGRATION-PLANNING` as the next wave.
+7. Confirmed Appendices A-H are present and Appendix I is absent from the appendix draft and explicitly deferred.
+8. Confirmed Appendix A remains authored analytical model, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction-only, Appendix E remains coverage-boundary question framing only, Appendix F preserves source/caveat discipline, Appendix G remains non-claim guardrail, and Appendix H remains layout-risk planning only.
+9. Confirmed source gaps remain strengthening opportunities rather than blockers before integration planning.
+10. Confirmed no R3M appendix draft revision and no R3J body revision were made.
+
+Remaining known issues:
+
+- R3O should perform full draft integration planning only, not integration drafting or artifact generation.
+- R3O must decide whether appendices attach after Chapter 28 or remain separate internal reference material.
+- R3O must decide whether body-to-appendix cross-references require a later body integration draft.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Wide table layout risks remain future artifact-planning issues and are not solved in R3N.
+- Appendix I remains deferred unless separately authorized.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3N is appendix QA only.
+- R3N does not revise appendices, revise the R3J body, perform source-strengthening research, generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3N Status:** WP3-V1-R3N APPENDIX QA COMPLETE / READY FOR R3O FULL-DRAFT INTEGRATION PLANNING
 
 ## WP3-V1-R3M Appendix Drafting
 

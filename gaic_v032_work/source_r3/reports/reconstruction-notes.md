@@ -5638,3 +5638,36 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - Appendix A remains an authored analytical model, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction-only, Appendix E remains coverage-boundary question framing, Appendix F remains source/caveat discipline, Appendix G remains a non-claim guardrail, and Appendix H remains layout-risk planning only.
 
 **WP3-V1-R3M Status:** WP3-V1-R3M APPENDIX DRAFTING COMPLETE / READY FOR R3N APPENDIX QA.
+
+## WP3-V1-R3N Notes (May 27, 2026)
+
+**Scope:** Appendix QA for the WP3 / AIIRWP v1.0 R3M internal appendix draft.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3M baseline `4177a9b863e76a2c2b32bab7462db612925fd1b8` and confirmed `origin/main` matched before R3N work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, R3L appendix planning package, R3M appendix drafting package, R3M QA reports, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3n-appendix-qa/`.
+5. Created R3N appendix QA files: README, appendix QA verdict, scope completeness audit, boundary/non-claim QA, source/citation QA, table/layout QA, body integration readiness QA, appendix risk register, R3O decision recommendation, and R3O continuity notes.
+6. Set the overall verdict to `ACCEPTED_FOR_FULL_DRAFT_INTEGRATION_PLANNING_WITH_NOTES`.
+7. Recommended `R3O-FULL-DRAFT-INTEGRATION-PLANNING` because the R3M appendices are complete enough for integration planning and no appendix repair, source strengthening, or second drafting pass is required before planning.
+8. Confirmed artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, and public release remain unauthorized.
+
+**Artifact discipline:**
+
+- No R3M appendix draft revision was made.
+- No R3J body revision was made.
+- No source-strengthening research was performed.
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3N is appendix QA only.
+- WP3-V1-R3N does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3N confirms Appendix A remains authored analytical model, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction-only, Appendix E remains coverage-boundary question framing, Appendix F remains source/caveat discipline, Appendix G remains non-claim guardrail, Appendix H remains layout-risk planning only, and Appendix I remains deferred.
+
+**WP3-V1-R3N Status:** WP3-V1-R3N APPENDIX QA COMPLETE / READY FOR R3O FULL-DRAFT INTEGRATION PLANNING.
