@@ -1,5 +1,40 @@
 # Reconstruction Notes
 
+## WP3-V1-R3H Full-Body Assembly Draft Notes (May 26, 2026)
+
+**Scope:** Assemble the first full internal Markdown body draft of AIIRWP v1.0 from accepted R3A-R3F source drafts. Do not generate public artifacts, create HTML/PDF/DOCX, modify the public route, restore public CTAs, create manifest/checksum files, draft full appendices, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `19de58b7750bfd1bce4280d0c217282bab1f646b` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date during preflight.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected the canonical registry, current status, AIIRWP v1.0 README, writing rules, body quality gate, R1 source research package, R2 source-grounded outline, R3A body/editorial QA, R3B-R3F body/QA packages, R3G assembly planning package, and rejected v0.2 only as historical boundary context.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3h-full-body-assembly-draft/`.
+6. Created `AIIRWP-v1.0-R3H-full-body-internal-draft.md` by assembling accepted R3A-R3F source drafts.
+7. Preserved Front Matter and Part I from R3A, Part II from R3B, Part III from R3C, Part IV from R3D, Part V from R3E, and Part VI from R3F.
+8. Preserved accepted 28-chapter numbering and table IDs T-02-01 and T-04-01 through T-27-01.
+9. Removed wave headers and draft-scope notes, labeled the existing Chapter 2 matrix as T-02-01, and updated the Chapter 28 handoff from completed R3G planning to R3I editorial QA.
+10. Created R3H assembly change log, TOC/table reconciliation note, repetition/rhythm assembly report, source/citation assembly report, boundary/nonclaim assembly report, R3I continuity notes, preflight report, boundary QA, build/validation report, and final QA.
+
+**Artifact discipline:**
+
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- No full appendices were drafted.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3H scope.
+
+**Boundary discipline:**
+
+- R3H does not claim final/sealed status, public release, public candidate status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, certification, score, standard, readiness certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3H keeps AIO/AIRM-style models as authored analytical constructs only and keeps WP3 public status withdrawn / v1.0 rewrite in progress with public artifact none and public PDF none.
+
+**WP3-V1-R3H Status:** WP3-V1-R3H FULL-BODY ASSEMBLY DRAFT COMPLETE / READY FOR R3I FULL-BODY EDITORIAL QA.
+
 ## WP3-V1-R3G Full-Body Assembly Planning Notes (May 26, 2026)
 
 **Scope:** Create the AIIRWP v1.0 full-body assembly plan only. Do not assemble the full body, draft full appendices, create public artifacts, restore public CTAs, modify the public route, create HTML/PDF/DOCX/manifest/checksum, or claim publication/release status.

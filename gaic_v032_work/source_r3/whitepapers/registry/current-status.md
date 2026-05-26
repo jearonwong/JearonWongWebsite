@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3G FULL-BODY ASSEMBLY PLANNING COMPLETE / READY FOR R3H FULL-BODY ASSEMBLY DRAFT.
+- Current v1 wave: WP3-V1-R3H FULL-BODY ASSEMBLY DRAFT COMPLETE / READY FOR R3I FULL-BODY EDITORIAL QA.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -40,10 +40,12 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3f-part-vi/`
 - Current v1 assembly planning package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3g-full-body-assembly-planning/`
+- Current v1 internal assembly draft package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3h-full-body-assembly-draft/`
 - Current v1 QA package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3a-editorial-qa/`.
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
-- R3G creates full-body assembly planning only and does not create an assembled full-body draft, public artifact, public staging package, public CTA, manifest, checksum, PDF, HTML, or DOCX.
+- R3H creates an internal assembled Markdown draft only and does not create a public artifact, public staging package, public CTA, manifest, checksum, PDF, HTML, DOCX, public candidate, final/sealed status, or public release.
 
 ## WP4
 
@@ -51,4 +53,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 full-body assembly is not complete. R3G planning completion does not authorize public artifact restoration or public release.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 full-body editorial QA is not complete. R3H internal assembly completion does not authorize public artifact restoration or public release.

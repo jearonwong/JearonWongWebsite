@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3G Full-Body Assembly Planning)
+**Last Updated:** May 26, 2026 (WP3-V1-R3H Full-Body Assembly Draft)
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 
@@ -4683,3 +4683,38 @@ Boundary discipline:
 - WP3-V1-R3G does not create an assembled full-body draft, draft full appendices, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, create a public manifest/checksum, claim public release, claim public candidate status, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3G Status:** ✓ WP3-V1-R3G FULL-BODY ASSEMBLY PLANNING COMPLETE / READY FOR R3H FULL-BODY ASSEMBLY DRAFT
+
+## WP3-V1-R3H Known Issues
+
+### Full-Body Internal Assembly Draft Complete
+
+WP3-V1-R3H creates the first full internal Markdown assembly of AIIRWP v1.0 from accepted R3A-R3F source drafts. It does not create public artifacts.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/assembly/r3h-full-body-assembly-draft/`.
+- Created `AIIRWP-v1.0-R3H-full-body-internal-draft.md`.
+- Created `assembly-change-log.md`, `toc-and-table-reconciliation-note.md`, `repetition-and-rhythm-assembly-report.md`, `source-and-citation-assembly-report.md`, `boundary-and-nonclaim-assembly-report.md`, and `r3i-continuity-notes.md`.
+- Assembled Front Matter and Part I from R3A, Part II from R3B, Part III from R3C, Part IV from R3D, Part V from R3E, and Part VI from R3F.
+- Preserved accepted 28-chapter numbering.
+- Preserved table IDs T-02-01 and T-04-01 through T-27-01.
+- Removed wave headers and draft-scope notes.
+- Added internal draft status language and R3I editorial-QA handoff language.
+- Kept AIO/AIRM-style final models as authored analytical constructs only, not scores, standards, certifications, readiness claims, insurer-adopted methods, coverage paths, or public-release signals.
+
+Remaining known issues:
+
+- R3I should perform full-body editorial QA before any revision, appendix drafting, artifact planning, or publication-readiness decision.
+- R3I should review coherence, repetition/rhythm, source/citation continuity, table numbering, WP1/WP2 boundary, claim-risk language, and conclusion force.
+- R3I should decide whether the R3H-added T-02-01 heading is the final table title or should be adjusted in an editorial pass.
+- Source-note consolidation remains unresolved; R3H preserves accepted per-wave source markers rather than creating a final source appendix.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Insurer claim documentation and AI underwriting questionnaire sources remain strengthening opportunities.
+- Pre-existing unrelated `public/social/*` files remain outside the R3H commit.
+
+Boundary discipline:
+
+- WP3-V1-R3H is internal Markdown assembly only.
+- WP3-V1-R3H does not modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, create a public manifest/checksum, create public staging, claim public release, claim public candidate status, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3H Status:** ✓ WP3-V1-R3H FULL-BODY ASSEMBLY DRAFT COMPLETE / READY FOR R3I FULL-BODY EDITORIAL QA
