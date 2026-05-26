@@ -1,7 +1,7 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 26, 2026 (WP3-V1-R3E Part V Body Draft)
+**Last Updated:** May 26, 2026 (WP3-V1-R3F Part VI Body Draft)
 
 ## WP3-V1-R3A Front Matter and Part I Body Draft
 
@@ -4620,3 +4620,34 @@ Boundary discipline:
 - WP3-V1-R3E does not draft Part VI, write the full v1.0 body, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3E Status:** ✓ WP3-V1-R3E PART V BODY DRAFT COMPLETE / READY FOR R3F PART VI BODY DRAFT
+
+## WP3-V1-R3F Known Issues
+
+### Part VI Body Draft Complete
+
+WP3-V1-R3F drafted Part VI for the AIIRWP v1.0 rewrite and keeps the work inside the final analytical model and conclusion lane.
+
+Resolved in this wave:
+
+- Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3f-part-vi/`.
+- Drafted Part VI: `Final Analytical Models and Insurability Architecture`.
+- Drafted Chapters 24-28 covering the Agentic Insurability Object Model, non-scoring Agentic Insurability Reasoning Model, audience takeaways, residual caveats/non-claim discipline, and the final conclusion.
+- Added tables T-24-01 through T-27-01.
+- Created R3F source-note, claim-boundary, reader-pain, WP1/WP2 bridge, table-inventory, and R3G continuity checks.
+- Preserved accepted numbering from R3A through R3E.
+- Kept the final object and reasoning models as authored analytical constructs, not scores, standards, certifications, readiness claims, insurer-adopted methods, coverage paths, or public-release signals.
+
+Remaining known issues:
+
+- R3G should be full-body assembly planning only; it should reconcile TOC/table numbering, repetition, source notes, boundary rhythm, and appendix skeleton decisions before any artifact planning.
+- Full-body assembly should reconcile the original R2 20-chapter plan with the accepted R3A-R3F expanded 28-chapter body draft.
+- Exact exclusion and sublimit signals remain caveated until primary filing or policy wording support is available.
+- Insurer claim documentation and AI underwriting questionnaire sources would still strengthen later assembly if found.
+- Pre-existing unrelated `public/social/*` files remain outside the R3F commit.
+
+Boundary discipline:
+
+- WP3-V1-R3F is Part VI body drafting only.
+- WP3-V1-R3F does not create a full-body assembly, draft appendices, modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, claim public release, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
+
+**WP3-V1-R3F Status:** ✓ WP3-V1-R3F PART VI BODY DRAFT COMPLETE / READY FOR R3G FULL-BODY ASSEMBLY PLANNING

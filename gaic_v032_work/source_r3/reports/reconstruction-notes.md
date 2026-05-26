@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3F Part VI Body Draft Notes (May 26, 2026)
+
+**Scope:** Draft AIIRWP v1.0 Part VI body only. Do not repair R3E, draft appendices, create full-body assembly, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at baseline `96a3133785ce343a7fb334470840bf55473742b7` and confirmed origin matched.
+2. Confirmed `git pull --ff-only` returned already up to date.
+3. Recorded pre-existing untracked `public/social/*` files as out of scope.
+4. Inspected the canonical registry, current status, AIIRWP v1.0 baseline files, writing rules, body quality gate, R1 source research package, R2 final model/conclusion/closure materials, R3A body/editorial QA, R3B body/QA package, R3C body/QA package, R3D body/QA package, R3E body/QA package, and rejected v0.2 archive.
+5. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3f-part-vi/`.
+6. Drafted `AIIRWP-v1.0-R3F-part-vi.md` with Part VI only.
+7. Drafted Chapters 24-28: Agentic Insurability Object Model; Agentic Insurability Reasoning Model; What Enterprises, Brokers, Insurers, Reinsurers, and Counsel Should Take Away; Residual Caveats and Non-Claim Discipline; and Conclusion: From AI Risk Noise to Agentic Risk Objects.
+8. Added tables T-24-01 through T-27-01 and created the R3F source-note register, claim-boundary check, reader-pain check, WP1/WP2 bridge check, table inventory, and R3G continuity notes.
+9. Documented the R2/R3A-R3F TOC continuity note: accepted body drafting now runs through Chapter 28; R3G should be full-body assembly planning and should reconcile final numbering before artifact planning.
+
+**Artifact discipline:**
+
+- No public route was changed.
+- No file was copied into `public/`.
+- No public CTA was restored.
+- No HTML/PDF/manifest/checksum artifact was generated for WP3.
+- No DOCX was created.
+- No appendices or full-body assembly were created.
+- GAIC and AIAAWP public artifacts were not changed.
+- Pre-existing untracked `public/social/*` assets remain outside R3F scope.
+
+**Boundary discipline:**
+
+- R3F does not claim final/sealed status, public release, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, certification, score, standard, readiness certification, endorsement outside insurance-form context, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3F keeps the final Agentic Insurability Object Model and Agentic Insurability Reasoning Model as authored analytical constructs only; reviewability is not coverage, evidence is not insurance, governance is not claim approval, and auditability is not insurability.
+
+**WP3-V1-R3F Status:** WP3-V1-R3F PART VI BODY DRAFT COMPLETE / READY FOR R3G FULL-BODY ASSEMBLY PLANNING.
+
 ## WP3-V1-R3E Part V Body Draft Notes (May 26, 2026)
 
 **Scope:** Draft AIIRWP v1.0 Part V body only. Do not repair R3D, draft Part VI, create public artifacts, restore public CTAs, modify the public route, create DOCX, or claim publication/release status.

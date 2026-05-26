@@ -77,3 +77,16 @@ R3E uses:
 - T-23-01: Claims-to-Renewal Feedback Loop.
 
 This preserves the accepted R3B expansion through Chapter 8, R3C through Chapter 13, and R3D through Chapter 18, then starts Part V at Chapter 19. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, R3C translation layer, R3D underwriting-facing architecture, and R3E post-loss evidence layer before artifact planning. R3E creates no public artifact.
+
+## R3F Draft Continuity Note
+
+R3F follows the owner-approved Part VI drafting prompt and adds a draft-specific table inventory under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/draft/r3f-part-vi/r3f-table-inventory.md`.
+
+R3F uses:
+
+- T-24-01: Agentic Insurability Object Model.
+- T-25-01: Non-Scoring Insurability Reasoning Model.
+- T-26-01: Audience Takeaway Matrix.
+- T-27-01: Final Non-Claim Boundary Register.
+
+This preserves the accepted R3B expansion through Chapter 8, R3C through Chapter 13, R3D through Chapter 18, and R3E through Chapter 23, then starts Part VI at Chapter 24. Full-body assembly should reconcile the original R2 chapter/table plan, R3B expansion, R3C translation layer, R3D underwriting-facing architecture, R3E post-loss evidence layer, and R3F final analytical model layer before artifact planning. R3F creates no public artifact.
