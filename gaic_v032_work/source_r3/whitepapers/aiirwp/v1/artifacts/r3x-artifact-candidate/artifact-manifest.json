@@ -1,0 +1,25 @@
+{
+  "wave_id": "WP3-V1-R3X-ARTIFACT-CANDIDATE-CREATION-HIGH-ROI-01",
+  "source_basis": "gaic_v032_work/source_r3/whitepapers/aiirwp/v1/integration/r3p-full-draft-integration-draft/AIIRWP-v1.0-R3P-full-draft-internal-integrated.md",
+  "source_basis_commit": "e46e094a59d81aab028494c8cdf9a9e234e7290e",
+  "candidate_source_path": "gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-publication-candidate-source.md",
+  "html_candidate_path": "gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-internal-candidate.html",
+  "pdf_candidate_path": "gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-internal-candidate.pdf",
+  "pdf_deferred_note": null,
+  "generated_at": "2026-05-27T14:20:59.764Z",
+  "public_status": "internal-only",
+  "route_status": "no-public-route-change",
+  "no_docx_status": "public DOCX unauthorized; no DOCX created",
+  "rejected_v0_2_exclusion": "true; rejected v0.2 is historical boundary context only and not source truth",
+  "source_refs_range": "[1]-[62]",
+  "table_id_range": "T-02-01, T-04-01 through T-27-01",
+  "appendix_status": "Appendix A-H included; Appendix I deferred",
+  "boundary_status": "not legal advice, not insurance advice, not coverage opinion, not underwriting guidance, not claim approval guidance, not certification, not score, not standard, not final, not sealed, not release-ready, not public release",
+  "artifact_generation_scope": "internal candidate source, internal HTML candidate, internal PDF candidate if generated, manifest, checksum, QA reports; no public route or public artifact restoration",
+  "checksums": {
+    "markdown_candidate_source": "08724a77dc3ffdf91a98aafa5afec8b2c82a75361bd1910dd4d811703a3c6343",
+    "html_candidate": "429df4e916a33433e4f5d36407bd94eb588161049dd81c65eac797a33dd0b0e3",
+    "pdf_candidate": "6ee05f6eed5ef5195f657d793235b927b3d97f996297cc6eb0a811478833bdc7",
+    "artifact_manifest": "recorded in sha256sums.txt"
+  }
+}

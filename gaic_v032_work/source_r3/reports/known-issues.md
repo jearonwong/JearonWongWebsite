@@ -1,7 +1,43 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3W Candidate Source Preparation Planning QA)
+**Last Updated:** May 27, 2026 (WP3-V1-R3X Artifact Candidate Creation)
+
+## WP3-V1-R3X Artifact Candidate Creation
+
+### Status: WP3-V1-R3X ARTIFACT CANDIDATE CREATION COMPLETE / READY FOR R3Y ARTIFACT CANDIDATE QA AND REPAIR
+
+R3X creates the AIIRWP v1.0 internal artifact candidate package from the accepted R3P integrated internal draft. This is the first high-ROI execution wave after the planning/QA chain: candidate source creation, internal HTML/PDF candidate generation, manifest/checksum creation, QA reports, and governance updates are bundled in one wave.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3W commit `e46e094a59d81aab028494c8cdf9a9e234e7290e` before R3X edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3X edits.
+3. Inspected existing WP1/WP2 artifact patterns, historical WP3 internal candidate artifact patterns, current registry/status, R3P integrated draft, and R3Q-R3W planning/QA packages.
+4. Created the R3X internal artifact candidate package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/`.
+5. Created controlled publication-candidate Markdown source `AIIRWP-v1.0-publication-candidate-source.md`.
+6. Created internal HTML candidate `AIIRWP-v1.0-internal-candidate.html`.
+7. Created internal PDF candidate `AIIRWP-v1.0-internal-candidate.pdf`.
+8. Created `artifact-manifest.json` and `sha256sums.txt`.
+9. Created artifact creation, boundary QA, structure QA, table/layout risk, and R3Y continuity reports inside the R3X package.
+10. Confirmed source refs `[1]` through `[62]`, Chapters 1-28, Appendix A-H, Appendix I deferred note, body table IDs, rejected-v0.2 exclusion, and no-DOCX status are preserved.
+11. Recommended `R3Y-ARTIFACT-CANDIDATE-QA-AND-REPAIR` as the next wave.
+
+Remaining known issues:
+
+- R3Y should QA all created internal candidate files and decide whether HTML/PDF repair is required.
+- Future source strengthening remains available for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Wide-table treatment remains a visual/layout QA risk for `T-02-01`, `T-09-01`, `T-14-01`, `T-18-01`, `T-21-01`, and `T-27-01`.
+- Public route restoration remains blocked until later authorization after artifact candidate QA/repair, manifest/checksum QA, metadata QA, boundary QA, and owner authorization.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3X creates internal artifact candidates only.
+- R3X does not create DOCX, copy files into `public/research`, create public files, restore public CTAs, modify the public route, change noindex/index, create public staging, create a public release package, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3X Status:** WP3-V1-R3X ARTIFACT CANDIDATE CREATION COMPLETE / READY FOR R3Y ARTIFACT CANDIDATE QA AND REPAIR
 
 ## WP3-V1-R3W Candidate Source Preparation Planning QA
 

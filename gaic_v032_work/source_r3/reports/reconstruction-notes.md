@@ -1,5 +1,42 @@
 # Reconstruction Notes
 
+## WP3-V1-R3X Notes (May 27, 2026)
+
+**Scope:** Create the WP3 / AIIRWP v1.0 internal artifact candidate package from the accepted R3P integrated internal draft. This wave may create the controlled publication-candidate Markdown source, internal HTML/PDF candidates, manifest, checksum file, artifact QA reports, and governance/status updates. Do not modify public route, restore public CTA, create public staging, change noindex/index, create DOCX, claim public release, claim public candidate status, claim final/sealed/release-ready status, or claim insurance/legal/scoring/certification status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3W baseline `e46e094a59d81aab028494c8cdf9a9e234e7290e` and confirmed `origin/main` matched before R3X work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected existing WP1/WP2 artifact generation patterns, historical WP3 internal candidate artifact patterns, current registry/status, R3P integrated draft, and R3Q-R3W planning/QA packages.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/`.
+5. Created controlled publication-candidate Markdown source, internal HTML candidate, internal PDF candidate, artifact manifest, SHA256 checksum file, artifact creation report, boundary QA report, structure QA report, table/layout risk report, and R3Y continuity notes.
+6. Preserved Front Matter, Part I-VI, Chapters 1-28, Chapter 28 prose conclusion, Appendix A-H, Appendix I deferred note, source refs `[1]` through `[62]`, body table IDs, non-claim language, rejected-v0.2 exclusion, and no-DOCX status.
+7. Confirmed no R3P source mutation, no public route diff, no public/research artifact creation, no DOCX, and checksum/manifest validity.
+8. Recommended `R3Y-ARTIFACT-CANDIDATE-QA-AND-REPAIR`.
+9. Created R3X preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- Internal candidate Markdown source was created.
+- Internal HTML candidate was created.
+- Internal PDF candidate was created.
+- Manifest and checksum files were created.
+- No DOCX was created.
+- No public AIIRWP route, CTA, sitemap, `llms.txt`, entity graph, or public artifact path was modified.
+- No files were created under `public/research`.
+- The R3P integrated draft was not edited.
+- Rejected v0.2 was not used as source truth or citation source.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3X creates internal artifact candidates only.
+- WP3-V1-R3X does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3X hands off to R3Y artifact candidate QA and repair.
+
+**WP3-V1-R3X Status:** WP3-V1-R3X ARTIFACT CANDIDATE CREATION COMPLETE / READY FOR R3Y ARTIFACT CANDIDATE QA AND REPAIR.
+
 ## WP3-V1-R3W Notes (May 27, 2026)
 
 **Scope:** Perform QA on the WP3 / AIIRWP v1.0 R3V candidate source preparation planning package. Do not create publication-candidate Markdown, create the candidate source path, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, modify public route, restore public CTAs, create public staging, create a release package, perform source-strengthening research, or claim release status.

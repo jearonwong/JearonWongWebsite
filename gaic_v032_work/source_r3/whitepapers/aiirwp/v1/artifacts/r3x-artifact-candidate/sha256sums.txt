@@ -1,0 +1,4 @@
+08724a77dc3ffdf91a98aafa5afec8b2c82a75361bd1910dd4d811703a3c6343  gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-publication-candidate-source.md
+429df4e916a33433e4f5d36407bd94eb588161049dd81c65eac797a33dd0b0e3  gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-internal-candidate.html
+6ee05f6eed5ef5195f657d793235b927b3d97f996297cc6eb0a811478833bdc7  gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-internal-candidate.pdf
+d551201e5bc9a4a42ffd0a57192e649d090a2196515e43ac17d737909455945e  gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/artifact-manifest.json
