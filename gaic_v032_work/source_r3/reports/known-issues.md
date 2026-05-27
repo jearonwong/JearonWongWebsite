@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3P Full Draft Integration Draft)
+**Last Updated:** May 27, 2026 (WP3-V1-R3Q Integrated Draft QA)
+
+## WP3-V1-R3Q Integrated Draft QA
+
+### Status: WP3-V1-R3Q INTEGRATED DRAFT QA COMPLETE / READY FOR R3R ARTIFACT PLANNING
+
+R3Q reviews the AIIRWP v1.0 R3P internal integrated full draft without revising it. The overall verdict is `ACCEPTED_FOR_ARTIFACT_PLANNING_WITH_NOTES`, with artifact generation still blocked.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3P commit `d7887f912e7c337e539368d0023d664969b81943` before R3Q edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3Q edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3M appendix drafting package, R3N appendix QA package, R3O integration planning package, R3P integrated draft package, R3P reports, and rejected v0.2 boundary context.
+4. Created the R3Q integrated draft QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3q-integrated-draft-qa/`.
+5. Confirmed Front Matter, Part I through Part VI, Chapters 1-28, Chapter 28 prose conclusion, Appendix A-H after Chapter 28, and Appendix I deferred note are present.
+6. Confirmed appendices support the body without dominating it: Appendix A supports Chapter 24, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction/evidence-gap structure only, Appendix E remains coverage-boundary question framing only, Appendix F/G preserve caveat discipline, and Appendix H remains layout-risk planning only.
+7. Confirmed no new body-to-appendix cross-references were added in R3P; cross-reference risk remains low.
+8. Confirmed source refs `[1]` through `[62]` are preserved and source gaps remain strengthening opportunities rather than blockers before artifact planning.
+9. Confirmed body table headings `T-02-01` and `T-04-01` through `T-27-01` are preserved without duplicate body table headings, and wide-table risks are planning inputs rather than blockers.
+10. Recommended `R3R-ARTIFACT-PLANNING` as internal planning only and confirmed artifact generation remains blocked.
+
+Remaining known issues:
+
+- R3R must perform artifact planning only, not artifact generation.
+- R3R must plan table/layout treatment before any future artifact generation wave.
+- R3R should decide whether minimal body-to-appendix navigation references are needed in a later repair/refinement wave.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3Q is integrated draft QA only.
+- R3Q does not revise the integrated draft, revise source drafts in place, perform source-strengthening research, generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3Q Status:** WP3-V1-R3Q INTEGRATED DRAFT QA COMPLETE / READY FOR R3R ARTIFACT PLANNING
 
 ## WP3-V1-R3P Full Draft Integration Draft
 

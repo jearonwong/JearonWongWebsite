@@ -1,5 +1,41 @@
 # Reconstruction Notes
 
+## WP3-V1-R3Q Notes (May 27, 2026)
+
+**Scope:** Perform QA on the WP3 / AIIRWP v1.0 R3P internal integrated full draft. Do not revise the integrated draft, revise R3J or R3M source files, perform source-strengthening research, generate artifacts, create public files, or claim release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3P baseline `d7887f912e7c337e539368d0023d664969b81943` and confirmed `origin/main` matched before R3Q work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3M appendix drafting package, R3N appendix QA package, R3O integration planning package, R3P integrated draft package, R3P reports, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3q-integrated-draft-qa/`.
+5. Created README, integrated draft QA verdict, integrated structure QA, body/appendix balance QA, cross-reference safety QA, boundary/claim-risk QA, source/citation QA, table/layout risk QA, publication readiness precheck, R3R decision recommendation, and R3R continuity notes.
+6. Returned verdict `ACCEPTED_FOR_ARTIFACT_PLANNING_WITH_NOTES`.
+7. Recommended `R3R-ARTIFACT-PLANNING` as internal planning only.
+8. Confirmed Front Matter, Part I through Part VI, Chapters 1-28, Chapter 28 prose conclusion, Appendix A-H after Chapter 28, and Appendix I deferred note are present.
+9. Confirmed no integrated draft revision, no R3J body source revision, no R3M appendix source revision, no source-strengthening research, and no artifact generation were performed.
+10. Created R3Q preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No R3P integrated draft revision was made.
+- No R3J source body in-place revision was made.
+- No R3M appendix source in-place revision was made.
+- No source-strengthening research was performed.
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3Q is integrated draft QA only.
+- WP3-V1-R3Q does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3Q authorizes internal artifact planning only; artifact generation remains blocked.
+
+**WP3-V1-R3Q Status:** WP3-V1-R3Q INTEGRATED DRAFT QA COMPLETE / READY FOR R3R ARTIFACT PLANNING.
+
 ## WP3-V1-R3P Notes (May 27, 2026)
 
 **Scope:** Create the first internal integrated full draft of WP3 / AIIRWP v1.0 by combining the accepted R3J revised body and accepted R3M Appendix A-H according to R3O integration planning. Do not edit R3J or R3M source files in place, perform source-strengthening research, generate artifacts, create public files, or claim release status.

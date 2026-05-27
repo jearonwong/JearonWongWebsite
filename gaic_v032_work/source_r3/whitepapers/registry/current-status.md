@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3P FULL-DRAFT INTEGRATION DRAFT COMPLETE / READY FOR R3Q INTEGRATED DRAFT QA.
+- Current v1 wave: WP3-V1-R3Q INTEGRATED DRAFT QA COMPLETE / READY FOR R3R ARTIFACT PLANNING.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -58,10 +58,14 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/integration/r3o-full-draft-integration-planning/`
 - Current v1 integrated draft package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/integration/r3p-full-draft-integration-draft/`
+- Current v1 integrated draft QA package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3q-integrated-draft-qa/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
-- R3P creates one internal integrated Markdown draft package only. It integrates the R3J body and R3M Appendix A-H, keeps Appendix I deferred, does not edit the R3J or R3M source files in place, does not perform source-strengthening research, and does not generate artifacts.
-- R3P does not create a public artifact, create public staging, restore public CTA, create manifest, checksum, PDF, HTML, DOCX, public candidate, final/sealed status, release-ready status, or public release.
+- R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
+- R3Q verdict: `ACCEPTED_FOR_ARTIFACT_PLANNING_WITH_NOTES`.
+- R3Q recommends `R3R-ARTIFACT-PLANNING` as internal planning only.
+- R3Q does not create a public artifact, create public staging, restore public CTA, create manifest, checksum, PDF, HTML, DOCX, public candidate, final/sealed status, release-ready status, or public release.
 
 ## WP4
 
@@ -69,4 +73,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 full draft integration draft completion does not authorize public artifact restoration, artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 integrated draft QA completion authorizes internal artifact planning only and does not authorize public artifact restoration, artifact generation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
