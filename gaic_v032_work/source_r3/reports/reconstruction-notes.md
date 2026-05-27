@@ -1,12 +1,12 @@
 # Reconstruction Notes
 
-## WP3-V1-R3AB Notes (May 28, 2026)
+## WP3-V1-R3AB Whitepaper Publication Style System Repair Notes (May 28, 2026)
 
-**Scope:** Repair the white paper publication system after R3AA technical route restoration. R3AB aligns WP1/WP2/WP3 public pages, research index cards, public-facing status language, artifact access presentation, citation/integrity/boundary blocks, and governance standardization. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.
+**Scope:** Repair the white paper publication style system after R3AA technical route restoration and the initial R3AB alignment pass. R3AB aligns WP1/WP2/WP3 public pages, research index cards, public-facing status language, artifact access presentation, citation/integrity/boundary blocks, HTML artifact style, PDF artifact style, and governance standardization. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.
 
 **Actions completed:**
 
-1. Confirmed repo truth on `main` at accepted R3AA baseline `f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9` and confirmed `origin/main` matched before R3AB work.
+1. Continued from the initial accepted R3AB commit `0fd7760f1d0f3fc91c568aaa26fc4f23b138f379`; the user prompt listed the original R3AA baseline `f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9` as historical context.
 2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
 3. Created `gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`.
 4. Created `whitepaper-publication-alignment-audit.md` and `html-pdf-artifact-style-gap-report.md`.
@@ -15,9 +15,13 @@
 7. Converted WP1, WP2, and WP3 public route pages to shared wrappers.
 8. Rebuilt the research index white paper cards from the shared publication registry.
 9. Updated current public-facing AIIRWP language in route data, about/concepts references, `llms.txt`, entity graph, current status, and registry surfaces.
-10. Repaired WP3 public HTML artifact shell language, regenerated the WP3 public PDF with Chrome headless no-header/footer output, and refreshed WP3 public manifest/checksum records.
-11. Created the R3AB package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-publication-system-alignment-repair/`.
-12. Recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+10. Located and inspected governing style sources before repair: `design/VI_System_Brief_v0.4_Registry.md`, `gaic_v032_work/source_r3/reports/whitepaper-series-publication-sop-v1.md`, WP1/WP2 public professional-shell artifacts, WP2 generation scripts, and prior WP3 R15C artifact proof/QA packages.
+11. Created `gaic_v032_work/source_r3/scripts/repair_wp3_r3ab_publication_style.mjs` to extract the current WP3 article body, apply the WP1/WP2 professional whitepaper artifact shell, regenerate PDF through Chrome headless no-header/footer output, patch PDF metadata, and refresh manifest/checksum records.
+12. Repaired WP3 public HTML into the professional-shell artifact grammar.
+13. Regenerated the WP3 public PDF as a 95-page A4 artifact; the page-count change from the R3AA 117-page technical-route PDF is intentional and results from the unified professional shell/print profile.
+14. Refreshed WP3 public manifest/checksum records and route-data hashes.
+15. Created the R3AB style-system package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`.
+16. Recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
 
 **Artifact discipline:**
 
@@ -32,7 +36,7 @@
 
 - WP3-V1-R3AB does not claim public announcement, final/sealed status, release-ready status, Final Seal, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, coverage opinion, underwriting guidance, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
 
-**WP3-V1-R3AB Status:** WP3-V1-R3AB PUBLICATION SYSTEM ALIGNMENT REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA.
+**WP3-V1-R3AB Status:** WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA.
 
 ## WP3-V1-R3Z Notes (May 27, 2026)
 

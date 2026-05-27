@@ -6,7 +6,7 @@ WP3 route page:
 
 `src/pages/research/agentic-ai-insurability-risk-transfer-white-paper-2026/index.astro`
 
-R3AB replaced the standalone WP3 route page implementation with the shared white paper publication page renderer and shared publication data. Public-facing hero language now presents AIIRWP as a public research candidate rather than leading with route-restoration process wording.
+R3AB replaced the standalone WP3 route page implementation with the shared white paper publication page renderer and shared publication data. Public-facing hero language now presents AIIRWP as a public research candidate rather than leading with route-restoration process wording. This report is retained for the initial alignment pass; the current style-system repair package is `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`.
 
 ## Public Artifact Shell Repair
 
@@ -20,19 +20,20 @@ Updated:
 Repair:
 
 - normalized public-facing language from route-restoration process framing to public research candidate availability;
+- repaired the public HTML artifact into the professional-shell whitepaper artifact grammar;
 - preserved non-claim boundary;
-- regenerated PDF from repaired HTML with no browser header/footer;
-- preserved 117 A4 pages;
+- regenerated PDF from repaired professional-shell HTML with no browser header/footer;
+- produced a 95-page A4 PDF after intentional style-system repair;
 - refreshed manifest and checksums.
 
 ## Final Public Artifact Hashes
 
 | Artifact | SHA256 |
 | --- | --- |
-| HTML | `93ab79fb140f9b1cb6f4d14bdd4f619f7dbc7f324efb26b06b13a1e93e9abf0b` |
-| PDF | `8e744639b1b70e99af83bf008fdece661a6a0427b25ca25d309f6ae3deefdb62` |
-| Manifest | `78b6e8994e1042470e8435ffa6856bdc3b09c1f98a8a9f2edfd2ff53e51029be` |
-| Checksum file | `8404715f743a2355a722f2f6e86afbcf24733c6551669136c3a3a0840a309645` |
+| HTML | `3b824adefa629cab151f956344a9908329ecbd297b52573583d972e5f6de949f` |
+| PDF | `e61ceee4e63474599b18953cc404cd5390ac691ea56c9699342d5147d15feef7` |
+| Manifest | `cd6918e46da86dd26ff96bf14079dc7dc972c2313da7a386eeddc74a2e3e7733` |
+| Checksum file | `2699742b4f081e14d4adc42d6379334bd04cf80147ba55a29b9ebfee1a95faac` |
 
 ## Boundary
 

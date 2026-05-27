@@ -4,21 +4,21 @@
 
 ## Result
 
-R3AB repairs route-page alignment and WP3 artifact-shell language. It does not regenerate WP1/WP2 artifacts or force all three long-form artifacts through a new generator.
+R3AB repairs route-page alignment and then the follow-up style-system pass repairs WP3 artifact-shell style into the WP1/WP2 professional-shell lineage. It does not regenerate WP1/WP2 artifacts because they are the canonical baseline.
 
 ## Current Classification
 
 - WP1: mature GAIC public edition artifact.
 - WP2: public research candidate artifact.
-- WP3: public research candidate artifact with R3AB-normalized shell language and regenerated PDF.
+- WP3: public research candidate artifact with R3AB professional-shell HTML and regenerated 95-page A4 PDF.
 
 ## Decision
 
-Artifact-style parity is not a blocker for public route post-restoration QA, but it remains a required R3AC visual QA topic.
+WP3 artifact-style repair is complete for public route post-restoration QA. R3AC must still perform rendered visual QA before any final seal or announcement planning.
 
 ## Carried Risks
 
 - WP3 wide-table readability.
-- PDF visual parity across WP1/WP2/WP3.
-- HTML artifact template parity.
+- PDF visual sampling across WP1/WP2/WP3.
+- HTML artifact responsive/mobile table behavior.
 - Future shared artifact-generation template, if owner wants all artifacts regenerated under one renderer.

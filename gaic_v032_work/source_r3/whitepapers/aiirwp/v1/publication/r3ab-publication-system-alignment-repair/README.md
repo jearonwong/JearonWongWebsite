@@ -3,6 +3,8 @@
 **Task ID:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01
 **Starting HEAD:** f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9
 **Scope:** High-ROI repair wave for WP1/WP2/WP3 public white paper publication-system alignment.
+**Superseded by:** `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`
+**Current R3AB status:** WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA
 
 ## Scope
 
@@ -16,7 +18,7 @@ R3AB may:
 - align the three white paper public pages;
 - normalize the research index card pattern;
 - normalize WP3 public-facing status language;
-- refresh WP3 public HTML/PDF/manifest/checksum after artifact-shell repair;
+- refresh WP3 public HTML/PDF/manifest/checksum after professional-shell artifact-style repair;
 - update governance files.
 
 ## Out of Scope
@@ -42,6 +44,7 @@ R3AB does not:
 - shared WP1/WP2/WP3 public route wrappers
 - aligned research index
 - refreshed WP3 public HTML/PDF/manifest/checksum
+- current style-system repair package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`
 
 ## Expected Next Wave
 

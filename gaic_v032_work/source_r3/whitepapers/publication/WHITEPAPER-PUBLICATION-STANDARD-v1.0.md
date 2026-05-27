@@ -2,7 +2,7 @@
 
 **Status:** Active publication standard
 **Applies to:** WP1 GAIC, WP2 AIAAWP, WP3 AIIRWP, and future Agentic Lifecycle Governance white papers
-**Created by:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01
+**Created by:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01; updated by WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
 **Boundary:** This standard governs publication structure and artifact presentation. It does not authorize final/sealed/release-ready status, public announcement, DOCX publication, certification, legal advice, insurance advice, insurer acceptance, score, standard, or regulator approval.
 
 ## 1. Purpose
@@ -263,6 +263,8 @@ R3AB creates the first shared implementation baseline:
 - WP1/WP2/WP3 public route wrappers using the shared renderer;
 - research index cards generated from the shared publication data;
 - WP3 public-facing status language normalized from route-restoration process language to public research candidate language;
-- WP3 public HTML/PDF/manifest/checksum refreshed after artifact shell language repair.
+- WP3 public HTML/PDF/manifest/checksum refreshed after artifact shell language repair;
+- WP3 public HTML repaired to the same professional whitepaper artifact grammar used by the WP1/WP2 lineage: `cover-page`, `professional-shell`, `cover-frame`, `important-notice`, generated contents, `table-block table-scroll`, and explicit artifact navigation;
+- WP3 public PDF regenerated from the repaired professional-shell HTML using Chrome headless `--no-pdf-header-footer` and metadata patching, producing a 95-page A4 public research-candidate PDF.
 
 R3AB does not authorize final/sealed/release-ready status, public announcement, source Markdown publication, or DOCX.

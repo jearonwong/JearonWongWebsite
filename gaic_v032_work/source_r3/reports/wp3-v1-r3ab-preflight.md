@@ -1,12 +1,13 @@
 # WP3-V1-R3AB Preflight
 
-**Task ID:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01
-**Starting HEAD:** f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9
+**Task ID:** WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
+**Prompt historical starting HEAD:** f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9
+**Actual continuation HEAD:** 0fd7760f1d0f3fc91c568aaa26fc4f23b138f379
 **Branch:** main
 
 ## Scope
 
-R3AB repairs the white paper publication system after R3AA technical route restoration. It aligns WP1/WP2/WP3 public route pages, research index cards, public-facing status language, artifact access, citation, manifest/checksum presentation, and metadata/JSON-LD helpers.
+R3AB repairs the white paper publication style system after R3AA technical route restoration and the initial R3AB alignment pass. It aligns WP1/WP2/WP3 public route pages, research index cards, public-facing status language, artifact access, citation, manifest/checksum presentation, metadata/JSON-LD helpers, and WP3 HTML/PDF artifact style.
 
 ## Preflight Checks
 

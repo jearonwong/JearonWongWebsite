@@ -2,7 +2,7 @@
 
 ## Scope
 
-Validate R3AB publication-system alignment, artifact integrity, and static site build health.
+Validate R3AB whitepaper publication style-system repair, artifact integrity, and static site build health.
 
 ## Expected Commands
 
@@ -38,7 +38,7 @@ Validate R3AB publication-system alignment, artifact integrity, and static site 
 | JSON parse | PASS | Entity graph and WP1/WP2/WP3 public manifests parse. |
 | Public manifest parse | PASS | WP3 public manifest parses after R3AB refresh. |
 | Checksum validation | PASS | WP3 HTML, PDF, and manifest match `checksums.sha256`. |
-| PDF page count | PASS | WP3 public PDF remains 117 A4 pages. |
+| PDF page count | PASS | WP3 public PDF is 95 A4 pages after intentional style-system repair from the prior 117-page technical-route PDF. |
 | no-DOCX scan | PASS | No WP3 public `.docx`; no source Markdown copied to WP3 public route. |
 | rejected v0.2 regression scan | PASS | v0.2 remains rejected and excluded as current source truth. |
 | forbidden positive-claim scan | PASS | Boundary-language hits are contextual negative controls only. |
@@ -64,4 +64,5 @@ Observed:
 - WP3 hub used `AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE`;
 - WP3 hub no longer exposed public-facing `R3AA-PUBLIC-ROUTE` or `route restored` language;
 - WP3 HTML artifact opened from the hub and retained public research candidate/no-DOCX/non-claim language;
+- WP3 HTML artifact uses the professional-shell publication grammar rather than the prior shallow light document shell;
 - Browser console errors/warnings were empty for checked pages.

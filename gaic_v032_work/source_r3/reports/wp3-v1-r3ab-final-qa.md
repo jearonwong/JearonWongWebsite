@@ -6,12 +6,13 @@
 
 ## Summary
 
-R3AB completes the publication-system alignment repair:
+R3AB completes the whitepaper publication style-system repair:
 
 - WP1/WP2/WP3 public route pages use one shared page structure.
 - The research index uses one shared white paper card pattern.
 - WP3 public-facing language is normalized to public research candidate availability.
-- WP3 public HTML/PDF/manifest/checksum are refreshed after artifact-shell repair.
+- WP3 public HTML/PDF/manifest/checksum are refreshed after professional-shell artifact-style repair.
+- WP3 public PDF is regenerated as a 95-page A4 artifact with Chrome browser header/footer suppressed and metadata patched.
 - The white paper publication standard is created and active.
 - R3AB governance package and continuity notes are created.
 
@@ -23,7 +24,7 @@ R3AB completes the publication-system alignment repair:
 
 - R3AC must perform rendered browser QA across research index and all three public white paper pages.
 - R3AC must inspect WP3 artifact links, PDF page count, HTML/PDF readability, wide-table handling, metadata, JSON-LD, `llms.txt`, entity graph, manifest/checksum, and public boundary language.
-- Full artifact-template parity across WP1/WP2/WP3 remains a future artifact-style repair option if R3AC finds a visual blocker.
+- R3AC should perform visual sampling of the repaired WP3 professional-shell HTML/PDF artifacts before any final seal or announcement planning.
 
 ## Boundary
 

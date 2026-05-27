@@ -1,17 +1,17 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AB Publication System Alignment Repair)
+**Last Updated:** May 28, 2026 (WP3-V1-R3AB Whitepaper Publication Style System Repair)
 
-## WP3-V1-R3AB Publication System Alignment Repair
+## WP3-V1-R3AB Whitepaper Publication Style System Repair
 
-### Status: WP3-V1-R3AB PUBLICATION SYSTEM ALIGNMENT REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA
+### Status: WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA
 
-R3AB repairs the publication-system issue identified after R3AA: WP3 route restoration was technically complete, but WP1/WP2/WP3 needed a single public white paper page pattern, shared status language, aligned CTA order, consistent artifact access, and a written publication standard.
+R3AB repairs the publication-rendering-standard issue identified after R3AA: WP3 route restoration was technically complete, but WP1/WP2/WP3 needed a single public white paper page pattern, shared status language, aligned CTA order, consistent artifact access, a written publication standard, and a WP3 HTML/PDF artifact shell aligned to the accepted WP1/WP2 professional whitepaper lineage.
 
 Resolved in this wave:
 
-1. Confirmed local `HEAD` and `origin/main` at accepted R3AA commit `f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9` before R3AB edits.
+1. Continued from the already-accepted initial R3AB commit `0fd7760f1d0f3fc91c568aaa26fc4f23b138f379`; the user prompt listed the original R3AA baseline `f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9` as the historical starting point.
 2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
 3. Created `gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`.
 4. Created cross-WP publication alignment audit and HTML/PDF style-gap report.
@@ -20,16 +20,19 @@ Resolved in this wave:
 7. Replaced WP1/WP2/WP3 public route pages with shared publication-page wrappers.
 8. Rebuilt the research index white paper cards from the shared publication registry.
 9. Normalized WP3 public-facing language from route-restoration process framing to public research candidate availability.
-10. Regenerated WP3 public PDF from repaired public HTML and refreshed public manifest/checksum records.
-11. Created the R3AB publication-system alignment repair package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-publication-system-alignment-repair/`.
-12. Returned verdict `ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`.
-13. Recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+10. Located governing style sources before artifact repair: VI v0.4, Whitepaper Series Publication SOP v2, WP1/WP2 professional-shell artifacts, WP2 generation scripts, and prior WP3 R15C artifact QA.
+11. Created `gaic_v032_work/source_r3/scripts/repair_wp3_r3ab_publication_style.mjs` as a repeatable WP3 style repair entrypoint.
+12. Repaired WP3 public HTML into the professional-shell artifact grammar and regenerated the WP3 PDF as a 95-page A4 artifact with browser header/footer suppressed.
+13. Refreshed WP3 public manifest/checksum records and route data hashes.
+14. Created the R3AB whitepaper publication style-system repair package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`.
+15. Returned verdict `ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`.
+16. Recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
 
 Remaining known issues:
 
 - R3AC must perform rendered public route post-restoration QA across WP1/WP2/WP3.
 - R3AC must verify WP3 public artifact links, manifest/checksum integrity, PDF page count, HTML/PDF readability, metadata, JSON-LD, `llms.txt`, entity graph, and boundary language.
-- Artifact-template parity across WP1/WP2/WP3 HTML/PDF artifacts remains a QA topic; current R3AB decision treats it as non-blocking for route QA but not cleared for final seal.
+- WP3 artifact-template parity has been repaired to the WP1/WP2 professional-shell lineage; R3AC must visually sample the repaired HTML/PDF, especially wide tables and mobile table handling, before any final seal.
 - WP3 wide-table readability remains a visual QA focus before any final seal or announcement preparation.
 - Public announcement, final/sealed status, release-ready status, public source Markdown, and DOCX remain unauthorized.
 
@@ -38,7 +41,7 @@ Boundary discipline:
 - R3AB does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
 - Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
 
-**WP3-V1-R3AB Status:** WP3-V1-R3AB PUBLICATION SYSTEM ALIGNMENT REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA
+**WP3-V1-R3AB Status:** WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA
 
 ## WP3-V1-R3Z Public Route Restoration Readiness
 

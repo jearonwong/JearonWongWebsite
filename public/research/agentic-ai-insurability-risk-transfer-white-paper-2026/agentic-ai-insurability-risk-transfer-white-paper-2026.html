@@ -5,52 +5,377 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <meta name="aiirwp-artifact-status" content="public-research-candidate">
-  <meta name="aiirwp-route-status" content="public-route-active">
   <meta name="author" content="Jearon Wong">
-  <title>Agentic AI Insurability &amp; Risk Transfer White Paper 2026 | Public Research Candidate</title>
+  <meta name="description" content="A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer">
+  <title>Agentic AI Insurability &amp; Risk Transfer White Paper 2026 - AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE</title>
   <style>
-    :root { --ink:#111418; --muted:#5f6e78; --line:#d8e2e6; --panel:#f6f8f9; --accent:#287c8b; --dark:#16212a; }
-    * { box-sizing: border-box; }
-    body { margin:0; color:var(--ink); background:#fff; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .status-banner { background:var(--dark); color:#f7fbfc; border-bottom:4px solid var(--accent); padding:18px clamp(18px,4vw,42px); }
-    .status-banner strong { display:block; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; color:#76d2df; margin-bottom:6px; }
-    .status-banner p { margin:0; max-width:1120px; line-height:1.55; }
-    .cover { min-height:72vh; display:grid; align-items:center; padding:clamp(34px,7vw,90px); background:linear-gradient(135deg,#f7fbfc 0%,#eef5f6 50%,#fff 100%); border-bottom:1px solid var(--line); }
-    .cover-inner { max-width:1080px; }
-    .series { color:var(--accent); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; margin:0 0 18px; }
-    h1 { font-size:clamp(2.5rem,6vw,5.2rem); line-height:.98; margin:0 0 20px; letter-spacing:0; }
-    .subtitle { font-size:clamp(1.15rem,2vw,1.6rem); line-height:1.45; color:#38505c; max-width:840px; margin:0 0 30px; }
-    .meta-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:980px; }
-    .meta-grid div { border:1px solid var(--line); background:#fff; border-radius:8px; padding:14px; }
-    .meta-grid strong { display:block; color:var(--accent); font-size:.72rem; text-transform:uppercase; margin-bottom:6px; }
-    .meta-grid span { color:#24313a; line-height:1.4; }
-    article { width:min(1120px, calc(100% - 40px)); margin:0 auto; padding:54px 0 72px; }
-    article h1 { font-size:2rem; line-height:1.15; }
-    article h2 { margin:68px 0 20px; padding-top:20px; border-top:1px solid var(--line); font-size:clamp(1.65rem,3vw,2.25rem); line-height:1.15; }
-    article h3 { margin:34px 0 12px; font-size:1.28rem; }
-    article h4 { margin:28px 0 10px; font-size:1.02rem; color:#284b58; }
-    p, li { line-height:1.72; }
-    p { margin:0 0 18px; }
-    a { color:#176c7a; text-decoration-thickness:1px; text-underline-offset:2px; }
-    code { background:#edf3f5; border-radius:4px; padding:1px 4px; font-family:"SFMono-Regular", Menlo, Consolas, monospace; font-size:.9em; }
-    blockquote { margin:26px 0; border-left:4px solid var(--accent); padding:10px 18px; background:#f5fafb; color:#2f434d; }
-    .table-scroll { width:100%; overflow-x:auto; margin:24px 0 30px; border:1px solid var(--line); border-radius:8px; background:#fff; }
-    table { width:100%; min-width:760px; border-collapse:collapse; }
-    th, td { border-bottom:1px solid #e7eef1; padding:10px 12px; text-align:left; vertical-align:top; line-height:1.45; }
-    th { background:var(--panel); color:#16212a; font-size:.82rem; text-transform:uppercase; }
-    td { font-size:.92rem; }
-    hr { border:0; border-top:1px solid var(--line); margin:36px 0; }
-    .boundary-note { margin-top:42px; padding:18px; border:1px solid #e2c889; background:#fff9ec; border-radius:8px; color:#4a3a18; }
-    @media (max-width:760px) { .meta-grid { grid-template-columns:1fr; } article { width:min(100% - 28px,1120px); padding:34px 0 54px; } table { min-width:720px; } .cover { min-height:auto; padding:34px 20px; } }
-    @media print { @page { size:A4; margin:18mm 14mm 20mm; } body { font-size:10.4pt; } .status-banner { break-after:avoid; } .cover { min-height:auto; padding:20mm 0 14mm; } h1 { font-size:32pt; } article { width:100%; padding:0; } article h2 { break-before:page; font-size:18pt; } article h2:first-of-type { break-before:auto; } p, li { line-height:1.58; } .table-scroll { overflow:visible; break-inside:auto; border-radius:0; } table { min-width:0; table-layout:fixed; } th, td { font-size:7.6pt; padding:6px; overflow-wrap:anywhere; } }
+:root {
+  --monolith: #111111;
+  --slate: #1a1a1a;
+  --machine: #f1f5f9;
+  --registry: #3b82f6;
+  --evidence: #22d3ee;
+  --status: #64748b;
+  --grid: #d8dee8;
+  --amber: #b7791f;
+  --fault: #991b1b;
+  --paper: #ffffff;
+  --ink: #172033;
+  --muted: #5b6678;
+  --soft: #f4f7fb;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; color: var(--ink); background: var(--paper); }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.64;
+}
+a { color: #1d5fd0; text-underline-offset: 2px; }
+.web-edition-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px max(18px, calc((100vw - 1180px) / 2));
+  background: rgba(17, 17, 17, 0.94);
+  color: var(--machine);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+.web-edition-nav a { color: var(--machine); text-decoration: none; }
+.publication { background: #fff; }
+.cover-page.professional-shell {
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+  padding: clamp(42px, 7vw, 86px) max(24px, calc((100vw - 1180px) / 2));
+  background:
+    linear-gradient(135deg, rgba(17,17,17,.96), rgba(17,17,17,.90)),
+    radial-gradient(circle at 78% 18%, rgba(34,211,238,.18), transparent 36%),
+    var(--monolith);
+  color: var(--machine);
+}
+.cover-frame {
+  max-width: 1120px;
+  border: 1px solid rgba(241,245,249,.2);
+  padding: clamp(26px, 5vw, 54px);
+  background: rgba(26,26,26,.72);
+  box-shadow: 0 28px 90px rgba(0,0,0,.32);
+}
+.cover-kicker,
+.notice-label,
+.toc-note,
+.table-caption {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.cover-kicker { color: var(--evidence); font-size: .78rem; margin-bottom: 22px; }
+.cover-page h1 {
+  max-width: 14ch;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: .94;
+  letter-spacing: 0;
+}
+.cover-subtitle {
+  max-width: 820px;
+  margin: 24px 0 0;
+  color: rgba(241,245,249,.82);
+  font-size: clamp(1.15rem, 2.1vw, 1.6rem);
+  line-height: 1.45;
+}
+.cover-role { color: rgba(241,245,249,.68); font-size: 1rem; margin: 14px 0 0; }
+.thesis-strip {
+  display: grid;
+  gap: 8px;
+  max-width: 900px;
+  margin: 28px 0;
+  padding-left: 18px;
+  border-left: 4px solid var(--evidence);
+  color: rgba(241,245,249,.82);
+}
+.thesis-strip strong { color: #fff; }
+.cover-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+.cover-meta div {
+  border: 1px solid rgba(241,245,249,.18);
+  background: rgba(255,255,255,.06);
+  padding: 14px;
+}
+.cover-meta span {
+  display: block;
+  color: var(--evidence);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.cover-meta strong { display: block; color: #fff; line-height: 1.45; overflow-wrap: anywhere; }
+.cover-notice {
+  margin-top: 28px;
+  padding: 16px;
+  border-left: 4px solid var(--amber);
+  background: rgba(183,121,31,.12);
+  color: rgba(241,245,249,.82);
+  line-height: 1.58;
+}
+.important-notice,
+.generated-toc,
+.whitepaper-body,
+.html-footer {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.important-notice {
+  margin-top: 44px;
+  margin-bottom: 34px;
+  padding: 22px;
+  border: 1px solid #ead9b0;
+  border-left: 5px solid var(--amber);
+  background: #fff8e8;
+}
+.important-notice h2 { margin: 0 0 10px; font-size: 1.35rem; }
+.important-notice p { margin: 0; max-width: 92ch; color: #4d3b17; }
+.notice-label { color: #8a5a0a; font-size: .72rem; margin-bottom: 8px; }
+.generated-toc { padding: 28px 0 42px; }
+.toc-note { color: var(--status); font-size: .75rem; margin-bottom: 14px; }
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.toc-grid div {
+  border: 1px solid var(--grid);
+  background: #fbfcfe;
+  padding: 14px;
+}
+.toc-grid h3 { margin: 0 0 8px; color: var(--monolith); font-size: .95rem; }
+.toc-grid ol { margin: 0; padding-left: 1.2rem; }
+.toc-grid li { margin: 0 0 7px; font-size: .88rem; line-height: 1.35; }
+.whitepaper-body { padding: 24px 0 74px; }
+.whitepaper-body h2 {
+  margin: 72px 0 18px;
+  padding-top: 22px;
+  border-top: 1px solid var(--grid);
+  color: var(--monolith);
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.whitepaper-body h3 {
+  margin: 38px 0 14px;
+  color: #1f3344;
+  font-size: 1.34rem;
+  line-height: 1.2;
+}
+.whitepaper-body h4.table-caption {
+  margin: 28px 0 10px;
+  color: #29465b;
+  font-size: .82rem;
+}
+.whitepaper-body p,
+.whitepaper-body li {
+  max-width: 86ch;
+  color: #243244;
+  font-size: 1rem;
+  line-height: 1.74;
+}
+.whitepaper-body p { margin: 0 0 18px; }
+.whitepaper-body ul,
+.whitepaper-body ol { padding-left: 1.35rem; }
+.professional-notice {
+  max-width: 92ch;
+  margin: 24px 0;
+  border-left: 4px solid var(--registry);
+  background: #f5f8ff;
+  color: #243244;
+  padding: 12px 18px;
+}
+code {
+  background: #f1f5f9;
+  border: 1px solid #dbe3ef;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em;
+}
+.table-block {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 22px 0 32px;
+  border: 1px solid var(--grid);
+  background: #fff;
+}
+.table-block table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+.table-block th,
+.table-block td {
+  border-right: 1px solid #e5ebf3;
+  border-bottom: 1px solid #e5ebf3;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.45;
+}
+.table-block th {
+  background: #f3f7fb;
+  color: #172033;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.table-block tr:last-child td { border-bottom: 0; }
+.table-block th:last-child,
+.table-block td:last-child { border-right: 0; }
+.closing-boundary { margin-bottom: 72px; }
+.html-footer {
+  padding: 26px 0 46px;
+  border-top: 1px solid var(--grid);
+  color: var(--status);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .75rem;
+}
+@media (max-width: 860px) {
+  .cover-meta,
+  .toc-grid { grid-template-columns: 1fr; }
+  .cover-page.professional-shell { min-height: auto; }
+  .cover-frame { padding: 22px; }
+  .web-edition-nav { position: static; display: grid; gap: 8px; }
+}
+@page { size: A4; margin: 17mm 14mm 19mm; }
+@media print {
+  html, body { background: #fff; }
+  body { font-size: 10.2pt; }
+  .web-edition-nav { display: none; }
+  .cover-page.professional-shell {
+    min-height: 264mm;
+    padding: 0;
+    background: var(--monolith);
+    break-after: page;
+    page-break-after: always;
+  }
+  .cover-frame {
+    min-height: 240mm;
+    margin: 0;
+    border-color: rgba(241,245,249,.28);
+    box-shadow: none;
+  }
+  .cover-page h1 { font-size: 42pt; max-width: 13ch; }
+  .cover-subtitle { font-size: 15pt; }
+  .cover-meta { gap: 8px; }
+  .cover-meta div { padding: 10px; }
+  .important-notice,
+  .generated-toc,
+  .whitepaper-body,
+  .html-footer {
+    width: 100%;
+  }
+  .generated-toc { break-after: page; page-break-after: always; padding: 0; }
+  .toc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .toc-grid div { padding: 9px; }
+  .toc-grid li { font-size: 7.4pt; }
+  .whitepaper-body { padding: 0; }
+  .whitepaper-body h2 {
+    break-before: page;
+    page-break-before: always;
+    margin: 0 0 14pt;
+    padding-top: 0;
+    font-size: 20pt;
+  }
+  .whitepaper-body h2:first-child { break-before: auto; page-break-before: auto; }
+  .whitepaper-body h3 { font-size: 12.5pt; margin: 18pt 0 7pt; }
+  .whitepaper-body h4.table-caption { font-size: 8.5pt; margin: 14pt 0 5pt; }
+  .whitepaper-body p,
+  .whitepaper-body li {
+    max-width: none;
+    font-size: 9.4pt;
+    line-height: 1.46;
+  }
+  .table-block {
+    overflow: visible;
+    break-inside: auto;
+    page-break-inside: auto;
+    border-radius: 0;
+    margin: 12pt 0 15pt;
+  }
+  .table-block table {
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 6.9pt;
+  }
+  .table-block th,
+  .table-block td {
+    padding: 4.2pt;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .professional-notice,
+  .important-notice {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
   </style>
 </head>
 <body>
-  <section class="status-banner"><strong>Public Research Candidate</strong><p>AIIRWP v1.0 is a public research candidate with HTML/PDF artifacts plus manifest/checksum verification. It is not final, not sealed, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not a score or standard. No public DOCX is authorized.</p></section>
-  <section class="cover"><div class="cover-inner"><p class="series">Agentic Lifecycle Governance Industry Series / WP3</p><h1>Agentic AI Insurability &amp; Risk Transfer White Paper 2026</h1><p class="subtitle">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</p><div class="meta-grid"><div><strong>Document ID</strong><span>AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE</span></div><div><strong>Status</strong><span>Public Research Candidate; not final, not sealed, not release-ready.</span></div><div><strong>Artifact Role</strong><span>HTML and PDF are available. Manifest and checksum records are provided for integrity verification.</span></div><div><strong>Boundary</strong><span>Public announcement not executed. Source Markdown and DOCX are not public.</span></div></div></div></section>
-  <article><h1 id="agentic-ai-insurability--risk-transfer-white-paper-2026">Agentic AI Insurability &#x26; Risk Transfer White Paper 2026</h1>
-<h2 id="a-lifecycle-evidence-guide-for-underwriting-claims-and-enterprise-risk-transfer">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</h2>
-<p><strong>Public Research Candidate Status:</strong> This public HTML artifact is the AIIRWP v1.0 public research candidate. It is not final, not sealed, not release-ready, not a public release announcement, and not a source Markdown publication. Public distribution is HTML/PDF plus manifest/checksum only; no public DOCX is authorized.</p>
+  <nav class="web-edition-nav" aria-label="Artifact navigation">
+    <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/">WP3 publication hub</a>
+    <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json">Manifest</a>
+    <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256">Checksums</a>
+    <span>AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE</span>
+  </nav>
+  <main class="publication">
+    <section class="cover-page professional-shell">
+      <div class="cover-frame">
+        <div class="cover-kicker">Jearon Wong / Agentic Lifecycle Governance Industry Series / WP3</div>
+        <h1>Agentic AI Insurability &amp; Risk Transfer White Paper 2026</h1>
+        <p class="cover-subtitle">A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer</p>
+        <p class="cover-role">Jearon Wong - Protocol Architect for the Agent Era</p>
+        <div class="thesis-strip">
+          <strong>A lifecycle evidence guide for risk-transfer analysis, claim reconstruction, and underwriting-facing reviewability.</strong>
+          <span>HTML and PDF are public research-candidate artifacts. Manifest and checksum records are provided for integrity verification.</span>
+        </div>
+        <div class="cover-meta">
+          <div><span>Document ID</span><strong>AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE</strong></div>
+          <div><span>Version</span><strong>v1.0 Public Research Candidate</strong></div>
+          <div><span>Status</span><strong>Public Research Candidate; not final, not sealed, not release-ready.</strong></div>
+          <div><span>Artifact Role</span><strong>HTML/PDF visual authority; manifest/checksum integrity layer; no public DOCX.</strong></div>
+        </div>
+        <div class="cover-notice">Public research candidate. Not final, not sealed, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized.</div>
+      </div>
+    </section>
+    <section class="important-notice" aria-label="Publication boundary">
+      <div class="notice-label">Publication Boundary</div>
+      <h2>Public Research Candidate Status</h2>
+      <p>Public research candidate. Not final, not sealed, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized. The prior AIIRWP v0.2 candidate remains rejected and withdrawn; it is historical traceability context only and is not current source truth or citation source.</p>
+    </section>
+    <section class="generated-toc" aria-label="Publication contents">
+  <div class="toc-note">HTML anchors are active in the public research candidate. PDF rendering uses the same professional artifact shell with browser header/footer disabled.</div>
+  <div class="toc-grid">
+    <div><h3>Front Matter</h3><ol><li><a href="#executive-thesis">Executive Thesis</a></li><li><a href="#reader-map">Reader Map</a></li><li><a href="#boundary-and-non-claim-note">Boundary and Non-Claim Note</a></li><li><a href="#relationship-to-wp1-and-wp2">Relationship to WP1 and WP2</a></li><li><a href="#how-to-read-this-paper">How to Read This Paper</a></li></ol></div><div><h3>Parts I-III</h3><ol><li><a href="#part-i-the-insurance-market-has-already-split-ai-risk">Part I: The Insurance Market Has Already Split AI Risk</a></li><li><a href="#chapter-1-the-new-insurance-question-what-exactly-is-being-transferred">Chapter 1: The New Insurance Question: What Exactly Is Being Transferred?</a></li><li><a href="#chapter-2-what-the-market-is-already-doing-cover-exclude-sublimit-or-leave-silent">Chapter 2: What the Market Is Already Doing: Cover, Exclude, Sublimit, or Leave Silent</a></li><li><a href="#chapter-3-why-llm-insurance-is-not-agentic-lifecycle-insurance">Chapter 3: Why LLM Insurance Is Not Agentic Lifecycle Insurance</a></li><li><a href="#part-ii-the-insurable-agentic-risk-object">Part II: The Insurable Agentic Risk Object</a></li><li><a href="#chapter-4-the-insurable-agentic-risk-object">Chapter 4: The Insurable Agentic Risk Object</a></li><li><a href="#chapter-5-agentic-risk-transfer-and-responsibility-continuity">Chapter 5: Agentic Risk Transfer and Responsibility Continuity</a></li><li><a href="#chapter-6-underwriting-evidence-model-for-agentic-ai">Chapter 6: Underwriting Evidence Model for Agentic AI</a></li><li><a href="#chapter-7-claim-evidence-pack-for-agentic-incidents">Chapter 7: Claim Evidence Pack for Agentic Incidents</a></li><li><a href="#chapter-8-uninsurable-or-hard-to-insure-agentic-risk-patterns">Chapter 8: Uninsurable or Hard-to-Insure Agentic Risk Patterns</a></li><li><a href="#part-iii-from-lifecycle-governance-and-auditability-to-insurability-reasoning">Part III: From Lifecycle Governance and Auditability to Insurability Reasoning</a></li><li><a href="#chapter-9-from-wp1-mros-to-insurability-objects">Chapter 9: From WP1 MROs to Insurability Objects</a></li><li><a href="#chapter-10-from-wp2-audit-evidence-chain-to-claim-reconstruction">Chapter 10: From WP2 Audit Evidence Chain to Claim Reconstruction</a></li><li><a href="#chapter-11-insurance-lines-and-agentic-risk-ambiguity">Chapter 11: Insurance Lines and Agentic Risk Ambiguity</a></li><li><a href="#chapter-12-aggregation-reinsurance-and-concentration-risk-in-agentic-ai">Chapter 12: Aggregation, Reinsurance, and Concentration Risk in Agentic AI</a></li><li><a href="#chapter-13-privacy-evidence-minimization-and-insurance-review">Chapter 13: Privacy, Evidence Minimization, and Insurance Review</a></li><li><a href="#chapter-14-underwriting-evidence-architecture">Chapter 14: Underwriting Evidence Architecture</a></li></ol></div><div><h3>Parts IV-VI</h3><ol><li><a href="#part-iv-underwriting-facing-architecture-for-agentic-ai-risk">Part IV: Underwriting-Facing Architecture for Agentic AI Risk</a></li><li><a href="#chapter-15-agentic-exposure-inventory-and-risk-segmentation">Chapter 15: Agentic Exposure Inventory and Risk Segmentation</a></li><li><a href="#chapter-16-premium-and-exposure-variables-without-pricing-guidance">Chapter 16: Premium and Exposure Variables Without Pricing Guidance</a></li><li><a href="#chapter-17-renewal-change-and-substitution-evidence">Chapter 17: Renewal, Change, and Substitution Evidence</a></li><li><a href="#chapter-18-reviewer-facing-evidence-requests-without-creating-a-standard">Chapter 18: Reviewer-Facing Evidence Requests Without Creating a Standard</a></li><li><a href="#part-v-claims-disputes-and-post-loss-responsibility-evidence">Part V: Claims, Disputes, and Post-Loss Responsibility Evidence</a></li><li><a href="#chapter-19-claim-reconstruction-after-agentic-ai-incidents">Chapter 19: Claim Reconstruction After Agentic AI Incidents</a></li><li><a href="#chapter-20-dispute-responsibility-and-evidence-gaps">Chapter 20: Dispute, Responsibility, and Evidence Gaps</a></li><li><a href="#chapter-21-coverage-boundary-analysis-without-coverage-opinion">Chapter 21: Coverage Boundary Analysis Without Coverage Opinion</a></li><li><a href="#chapter-22-post-loss-remediation-reauthorization-and-residual-risk">Chapter 22: Post-Loss Remediation, Reauthorization, and Residual Risk</a></li><li><a href="#chapter-23-claims-to-renewal-feedback-loop">Chapter 23: Claims-to-Renewal Feedback Loop</a></li><li><a href="#part-vi-final-analytical-models-and-insurability-architecture">Part VI: Final Analytical Models and Insurability Architecture</a></li><li><a href="#chapter-24-agentic-insurability-object-model">Chapter 24: Agentic Insurability Object Model</a></li><li><a href="#chapter-25-agentic-insurability-reasoning-model">Chapter 25: Agentic Insurability Reasoning Model</a></li><li><a href="#chapter-26-what-enterprises-brokers-insurers-reinsurers-and-counsel-should-take-away">Chapter 26: What Enterprises, Brokers, Insurers, Reinsurers, and Counsel Should Take Away</a></li><li><a href="#chapter-27-residual-caveats-and-non-claim-discipline">Chapter 27: Residual Caveats and Non-Claim Discipline</a></li><li><a href="#chapter-28-conclusion-from-ai-risk-noise-to-agentic-risk-objects">Chapter 28: Conclusion: From AI Risk Noise to Agentic Risk Objects</a></li></ol></div><div><h3>Appendices</h3><ol><li><a href="#appendix-a---agentic-insurability-object-model-reference">Appendix A - Agentic Insurability Object Model Reference</a></li><li><a href="#appendix-b---non-scoring-agentic-insurability-reasoning-model">Appendix B - Non-Scoring Agentic Insurability Reasoning Model</a></li><li><a href="#appendix-c---underwriting-facing-evidence-request-structure">Appendix C - Underwriting-Facing Evidence Request Structure</a></li><li><a href="#appendix-d---claim-reconstruction-and-evidence-gap-register">Appendix D - Claim Reconstruction and Evidence Gap Register</a></li><li><a href="#appendix-e---coverage-boundary-question-map">Appendix E - Coverage Boundary Question Map</a></li><li><a href="#appendix-f---source-and-claim-boundary-notes">Appendix F - Source and Claim Boundary Notes</a></li><li><a href="#appendix-g---final-non-claim-language-register">Appendix G - Final Non-Claim Language Register</a></li><li><a href="#appendix-h---table-inventory-and-layout-risk-register">Appendix H - Table Inventory and Layout Risk Register</a></li></ol></div>
+  </div>
+</section>
+    <article class="whitepaper-body"><p><strong>Public Research Candidate Status:</strong> This public HTML artifact is the AIIRWP v1.0 public research candidate. It is not final, not sealed, not release-ready, not a public release announcement, and not a source Markdown publication. Public distribution is HTML/PDF plus manifest/checksum only; no public DOCX is authorized.</p>
 <p><strong>Rejected v0.2 Note:</strong> The prior AIIRWP v0.2 public candidate remains rejected and withdrawn. It is historical traceability context only and is not current source truth or citation source.</p>
 <h2 id="front-matter">Front Matter</h2>
 <h3 id="executive-thesis">Executive Thesis</h3>
@@ -91,7 +416,7 @@
 <p>WP2, the Agentic AI Auditability &#x26; Assurance White Paper, asks how agentic systems become auditable. It develops the Audit Evidence Chain and related auditability concepts. That matters because logs alone are not enough. A log can show that an API was called. It may not show whether the call was authorized, whether the output was accepted, whether a human reviewer understood the boundary, whether a vendor dependency changed, whether an exception was escalated, or whether remediation closed the risk. [9]</p>
 <p>WP3 translates those ideas into insurability reasoning, but only after starting with the insurance market. That sequence is deliberate. If the paper began with governance objects, it would risk sounding like it is declaring insurance categories by theory. It does not. The market reality comes first: some AI risks are covered, some bounded, some silent, some cyber-linked, some warranty-like, some aggregation-sensitive, and some not yet cleanly named. Only after that reality is visible does WP1/WP2 vocabulary become useful.</p>
 <p>The relationship can be summarized this way:</p>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Layer</th>
@@ -163,7 +488,7 @@
 <p>The second principle is that evidence must be separated from conclusion. Logs, traces, prompts, outputs, API records, and cloud usage records may be useful. They do not by themselves determine coverage, causation, liability, or claim outcome. They are inputs into reconstruction. For an agentic workflow, useful evidence must connect what happened technically to who had authority, who reviewed or accepted the outcome, which dependency participated, what policy line is implicated, and what remediation closed or failed to close the event. NIST and CISA incident response materials support the importance of structured timelines, response coordination, containment, recovery, and remediation records, but they do not turn those records into claim approval. [10] [11]</p>
 <p>The third principle is that market signal is not market consensus. A product page, filing description, broker report, or industry research paper can show that a category is emerging or being bounded. It cannot be stretched into a universal statement that AI is covered, excluded, insurable, uninsurable, accepted, or rejected. The market is not making one decision about AI. It is sorting AI into narrower objects.</p>
 <p>That sorting changes enterprise preparation. If a company wants to discuss risk transfer for an agentic workflow, it should not begin with a slide listing model names. It should begin with the insurance transfer question stack:</p>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Question</th>
@@ -221,8 +546,8 @@
 <p>The third client is a company deploying generative AI into customer-facing and content-producing workflows. It asks whether general liability, professional liability, cyber, D&#x26;O, media/IP, or E&#x26;O policies will silently absorb the exposure. Verisk/ISO form-development activity and Aon market materials suggest that insurers and brokers are not treating these questions as settled. [1] [12] [13]</p>
 <p>Those are not one question. They are three different insurance conversations. The fact that each contains "AI" does not make them interchangeable.</p>
 <p>The following matrix is the evidence spine for Part I. It is intentionally framed as signal, not conclusion.</p>
-<h4 id="t-02-01---ai-insurance-split-market-signal-matrix">T-02-01 - AI Insurance Split-Market Signal Matrix</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-02-01---ai-insurance-split-market-signal-matrix">T-02-01 - AI Insurance Split-Market Signal Matrix</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Market signal</th>
@@ -403,8 +728,8 @@
 <p>Runtime traces are insufficient for a different reason. A trace can show sequence. It can show a prompt, output, function call, API response, tool invocation, latency, token use, or model endpoint. But a trace often does not show why the work was authorized, which human role had authority, whether the action was business-accepted, whether a vendor substitution changed behavior, which evidence was withheld for privacy, or which policy line is implicated. A trace is an ingredient. It is not the meal.</p>
 <p>Workflow completion is also insufficient. Enterprise software loves completed states: ticket closed, refund processed, email sent, pull request merged, alert resolved. Insurance review cares less about whether the workflow completed and more about whether the completed work can be reconstructed as a loss-relevant object. A workflow can complete successfully and still create the wrong legal, financial, professional, cyber, or customer consequence.</p>
 <p>The Insurable Agentic Risk Object therefore works as a bridge. It sits between market categories and technical systems. It does not replace a policy. It helps the policy conversation ask better questions.</p>
-<h4 id="t-04-01---insurance-object-shift">T-04-01 - Insurance Object Shift</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-04-01---insurance-object-shift">T-04-01 - Insurance Object Shift</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Traditional insurance object</th>
@@ -477,8 +802,8 @@
 </ol>
 <p>WP1's responsibility object and authority boundary concepts help name those states. WP2's audit evidence chain helps keep records from becoming disconnected artifacts. But again, these are analytical supports, not insurance standards. They help the risk reviewer ask whether continuity exists. They do not determine coverage, liability, claim outcome, or premium. [20] [21]</p>
 <p>The responsibility map should include humans, agents, tools, vendors, processors, projects, and remediation owners. It should also include the absence of a responsible role. An empty cell is not a formatting problem. It is a risk signal.</p>
-<h4 id="t-05-01---responsibility-continuity-map">T-05-01 - Responsibility Continuity Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-05-01---responsibility-continuity-map">T-05-01 - Responsibility Continuity Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Lifecycle transition</th>
@@ -568,8 +893,8 @@
 <p>Eighth is remediation closure. Underwriting discussion may care not only that incidents occurred, but whether they were contained, investigated, fixed, rechecked, reauthorized, and closed. NIST and CISA incident-response sources support the value of preparation, response, recovery, remediation, tracking, and continuous improvement records. [26] [27]</p>
 <p>Ninth is substitution conformance. If a model, tool, vendor, runtime, data source, or cloud dependency changes, the evidence should show whether the work remained within the same authority, evidence, privacy, and accepted-outcome boundaries. A silent substitution can make a previously reviewed workflow a different risk object.</p>
 <p>Logs and traces appear in several categories, but they are not the category. A trace without authority is sequence without permission. A log without role mapping is activity without responsibility. A runtime dashboard without accepted outcome is motion without business consequence. A tool-call record without remediation history is action without closure.</p>
-<h4 id="t-06-01---underwriting-evidence-request-model">T-06-01 - Underwriting Evidence Request Model</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-06-01---underwriting-evidence-request-model">T-06-01 - Underwriting Evidence Request Model</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Evidence category</th>
@@ -694,8 +1019,8 @@
 <p>Fourth: what external consequence occurred? A model output may have no loss by itself. The consequence may be account change, payment, customer message, professional deliverable, code deployment, privacy exposure, regulatory issue, service outage, publication, or other downstream effect.</p>
 <p>Fifth: what evidence links the sequence? The pack should connect prompts, outputs, logs, tool calls, approvals, vendor records, data snapshots, exception history, incident timeline, and remediation records. It should also identify missing evidence.</p>
 <p>Sixth: what privacy treatment applies? Claim evidence can include sensitive customer data, employee records, proprietary models, privileged communications, source code, security secrets, and vendor confidential information. A useful pack needs redaction, access controls, and source pointers, not uncontrolled data dumping.</p>
-<h4 id="t-07-01---claim-evidence-pack-components">T-07-01 - Claim Evidence Pack Components</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-07-01---claim-evidence-pack-components">T-07-01 - Claim Evidence Pack Components</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Component</th>
@@ -812,8 +1137,8 @@
 <p>The ninth pattern is privacy evidence hoarding or uncontrolled sensitive-data trace retention. Insurability reasoning needs evidence, but evidence maturity is not the same as keeping every prompt, customer detail, credential, secret, privileged communication, or employee record forever. A serious evidence model must handle redaction, minimization, access control, privilege, and source pointers.</p>
 <p>The tenth pattern is no dispute or remediation closure. The enterprise notices a failure, patches something, and moves on. Months later it cannot show who owned the fix, whether it was retested, whether residual risk was accepted, whether the workflow was reauthorized, or whether the customer impact was closed. The loss may be over operationally, but not reconstructable.</p>
 <p>These patterns often appear together. Fully opaque execution tends to create weak evidence chains. Weak evidence chains make human responsibility harder to show. Weak responsibility makes tool-action consequences harder to explain. Tool-action ambiguity makes claim reconstruction harder. Poor remediation closure makes renewal evidence weaker.</p>
-<h4 id="t-08-01---hard-to-insure-agentic-risk-patterns">T-08-01 - Hard-to-Insure Agentic Risk Patterns</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-08-01---hard-to-insure-agentic-risk-patterns">T-08-01 - Hard-to-Insure Agentic Risk Patterns</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Pattern</th>
@@ -927,8 +1252,8 @@
 <p>The fifteenth is vendor, model, and runtime substitution conformance. A change in model endpoint, vendor platform, tool connector, runtime policy, embedding store, or API behavior can make a previously reviewed work unit behave differently. The insurance concern is not simply that change occurred. It is whether authority, evidence, privacy, and accepted-outcome boundaries remained continuous.</p>
 <p>The sixteenth is incident, dispute, and remediation closure. A loss event does not end when a ticket is closed. Reviewers may need to know what was contained, what was fixed, who rechecked it, whether the workflow was reauthorized, what residual risk remained, and whether affected parties or business processes were closed out.</p>
 <p>NIST AI RMF and NAIC insurer-governance materials are useful context here because they show the broader movement toward governance, mapping, risk management, documentation, controls, validation, and third-party oversight. They do not turn MROs into insurance standards, and they do not prove coverage or underwriting acceptance. [29] [30]</p>
-<h4 id="t-09-01---mro-to-insurability-translation-map">T-09-01 - MRO-to-Insurability Translation Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-09-01---mro-to-insurability-translation-map">T-09-01 - MRO-to-Insurability Translation Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>MRO</th>
@@ -1075,8 +1400,8 @@
 <p>Exception becomes the early warning record. Thresholds, overrides, uncertainty, alerts, failed checks, near misses, and ignored warnings may explain why the event occurred or why it was not contained earlier.</p>
 <p>Remediation closure becomes the post-loss state. The record should show what was contained, fixed, retested, reauthorized, monitored, or left open. It should also show who accepted residual risk.</p>
 <p>Privacy treatment becomes part of evidence quality. A claim evidence chain that exposes unnecessary personal data, secrets, privileged materials, or vendor confidential information can create a second risk problem. Evidence must be reconstructable and controlled.</p>
-<h4 id="t-10-01---auditability-to-claim-reconstruction-crosswalk">T-10-01 - Auditability-to-Claim-Reconstruction Crosswalk</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-10-01---auditability-to-claim-reconstruction-crosswalk">T-10-01 - Auditability-to-Claim-Reconstruction Crosswalk</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>WP2 auditability concept</th>
@@ -1165,8 +1490,8 @@
 <p>Crime and fraud lines may be implicated by deepfake fraud, synthetic identity, invoice manipulation, AI-enabled social engineering, payment instruction abuse, or internal control bypass. The claim ambiguity may turn on voluntary transfer, social-engineering wording, employee involvement, authentication controls, and cyber overlap. Agentic evidence helps show communications, approvals, identity checks, payment paths, and tool actions. It does not decide policy response.</p>
 <p>Property and business interruption may appear when agentic systems affect operational continuity, cloud services, supply chain, code deployment, or physical systems. Beazley and cloud-related cyber examples show that AI/cloud services can enter product-specific cyber or business interruption contexts. Those examples should not be generalized beyond their terms.</p>
 <p>The same event can straddle several of these lines. That is why WP3 insists on the risk object. A line-of-business question cannot be answered if the enterprise cannot name the work unit, authority, tool action, accepted outcome, affected data, external consequence, dependency chain, incident timeline, remediation closure, and missing evidence.</p>
-<h4 id="t-11-01---insurance-line-ambiguity-map">T-11-01 - Insurance Line Ambiguity Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-11-01---insurance-line-ambiguity-map">T-11-01 - Insurance Line Ambiguity Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Potential insurance line</th>
@@ -1259,8 +1584,8 @@
 <p>A single evidence architecture can create reconstruction concentration. If logs are retained too briefly, vendor records are inaccessible, privacy redaction removes source pointers, or tool-action records are not joined to approvals, then many agentic incidents may become unreconstructable at once.</p>
 <p>Reinsurers care about aggregation because an apparently diversified book can contain hidden common dependencies. Enterprises should care for the same reason inside the firm. A risk leader may think ten workflows create ten separate exposures. In practice, they may create one concentrated dependency repeated ten times.</p>
 <p>Dependency mapping and substitution conformance make aggregation visible. They do not solve it automatically. A dependency map should identify shared models, runtime layers, cloud services, APIs, tool connectors, data sources, processors, subprocessors, prompt libraries, authentication services, and evidence repositories. Substitution records should show when those dependencies changed, which work units were affected, and whether authority, privacy, evidence, and accepted-outcome boundaries remained intact.</p>
-<h4 id="t-12-01---agentic-aggregation-risk-map">T-12-01 - Agentic Aggregation Risk Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-12-01---agentic-aggregation-risk-map">T-12-01 - Agentic Aggregation Risk Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Aggregation vector</th>
@@ -1356,8 +1681,8 @@
 <p>Privilege flags matter because incident response and legal review may create protected communications. WP3 does not define privilege. It simply observes that evidence packs should not flatten privileged and non-privileged records into one uncontrolled bundle.</p>
 <p>Third-party evidence creates a special problem. A vendor may hold model logs, runtime records, security events, cloud usage, monitoring data, or subprocessor details. The enterprise may need those records for reconstruction but may not have them by default. Processor and subprocessor mapping therefore belongs in the insurance evidence conversation. It is not only a privacy or procurement exercise.</p>
 <p>Privacy-preserving third-party validation may become useful when direct disclosure is too sensitive. A reviewer may need assurance that evidence exists and supports a fact without receiving raw data. That can mean selective disclosure, controlled review rooms, redacted extracts, attestations limited to existence and integrity, or source-pointer verification. This paper does not define a validation standard. It identifies the evidence problem.</p>
-<h4 id="t-13-01---insurance-evidence-vs-privacy-control-map">T-13-01 - Insurance Evidence vs Privacy Control Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-13-01---insurance-evidence-vs-privacy-control-map">T-13-01 - Insurance Evidence vs Privacy Control Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Evidence need</th>
@@ -1469,8 +1794,8 @@
 <p>Different users will use the architecture differently.</p>
 <p>A broker may use it to translate enterprise AI operations into risk-transfer language. A risk engineer may use it to understand exposures, controls, dependencies, and reconstruction gaps. An underwriter may use it to ask better questions, subject to that insurer's own appetite, forms, guidelines, and judgment. A reinsurer may use it to see dependency concentration and aggregation shapes. Counsel may use it to preserve boundaries between evidence, privilege, legal advice, and coverage review. Enterprise risk teams may use it to make internal risk ownership visible.</p>
 <p>None of those uses means the architecture is required, accepted, sufficient, or price-relevant. R1 source research supports the general proposition that AI risk review may need exposure inventory, authority scope, dependencies, and evidence readiness, drawing on Aon, NAIC, NIST AI RMF, Geneva Association, Swiss Re, QBE, WP1, and WP2. The exact use by any insurer remains external. [43] [44] [45]</p>
-<h4 id="t-14-01---underwriting-evidence-architecture-components">T-14-01 - Underwriting Evidence Architecture Components</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-14-01---underwriting-evidence-architecture-components">T-14-01 - Underwriting Evidence Architecture Components</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Component</th>
@@ -1574,8 +1899,8 @@
 <p>The tenth is cross-project reuse. A component reused across projects may create hidden exposure drift. The same agentic component can be low-risk in one context and high-impact in another.</p>
 <p>This inventory helps risk discussion because it separates exposure units before they are bundled into broad claims like "AI use," "GenAI," or "agent platform." It also connects back to R3B's Insurable Agentic Risk Object and R3C's insurance line ambiguity. The inventory tells the reviewer which object is being discussed and what kinds of line questions may arise.</p>
 <p>It still does not create insurability. A clean inventory can support discussion, but actual insurance outcomes depend on policy language, underwriting appetite, limits, exclusions, loss history, controls, insured profile, jurisdiction, and the facts of the event.</p>
-<h4 id="t-15-01---agentic-exposure-inventory-template">T-15-01 - Agentic Exposure Inventory Template</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-15-01---agentic-exposure-inventory-template">T-15-01 - Agentic Exposure Inventory Template</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Exposure dimension</th>
@@ -1679,8 +2004,8 @@
 <p>The eleventh is remediation maturity. Detection is only the beginning. The reviewer may ask how quickly the organization contained, fixed, retested, reauthorized, and closed the issue, and whether residual risk remained visible. NIST and CISA support structured incident and remediation records. They do not provide insurance pricing rules. [41] [42]</p>
 <p>The twelfth is cross-project reuse. A component reused across many contexts can spread exposure. A model or tool that was reviewed for one workflow may not be reviewable in another without reauthorization. Reuse matters because it changes object boundaries.</p>
 <p>These variables are still incomplete without policy language, line of coverage, insured profile, jurisdiction, market appetite, loss history, controls, exclusions, limits, sublimits, deductibles, retention, and the underwriter's own framework. A variable dictionary is therefore only a way to organize the conversation.</p>
-<h4 id="t-16-01---non-pricing-exposure-variables">T-16-01 - Non-Pricing Exposure Variables</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-16-01---non-pricing-exposure-variables">T-16-01 - Non-Pricing Exposure Variables</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Variable</th>
@@ -1796,8 +2121,8 @@
 <p>Unresolved evidence gaps should travel into renewal. If a vendor-held log was inaccessible, a retention period was too short, a prompt record was redacted without pointer, a human approval screen lacked context, or a tool action was not joined to authority, the gap should not disappear from the file.</p>
 <p>The useful frame is before execution, during execution, and after execution.</p>
 <p>Before execution, the enterprise defines work unit, authority, role, data, tool, dependency, and evidence expectations. During execution, it records action, confirmation, exception, and outcome. After execution, it records incident, remediation, substitution, closure, and renewal change. This dynamic lifecycle record is what keeps the reviewed object from going stale.</p>
-<h4 id="t-17-01---renewal-and-change-evidence-register">T-17-01 - Renewal and Change Evidence Register</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-17-01---renewal-and-change-evidence-register">T-17-01 - Renewal and Change Evidence Register</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Change category</th>
@@ -1899,8 +2224,8 @@
 <p>The ninth is a substitution and change register. Reviewers may ask what changed since the last review or deployment: models, tools, vendors, runtimes, permissions, data classes, customer impact, and human review boundaries.</p>
 <p>The tenth is a dependency map. This should show shared models, cloud services, APIs, identity providers, data processors, tool connectors, evidence systems, and vendors across work units. For reinsurers and portfolio-minded reviewers, dependency concentration can be as important as individual workflow design.</p>
 <p>The eleventh is a missing-evidence register. This is where the enterprise shows intellectual honesty. It should say what is missing, why, who controls it, whether it is recoverable, whether it is redacted, whether retention expired, and whether remediation is planned.</p>
-<h4 id="t-18-01---optional-reviewer-evidence-request-structure">T-18-01 - Optional Reviewer Evidence Request Structure</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-18-01---optional-reviewer-evidence-request-structure">T-18-01 - Optional Reviewer Evidence Request Structure</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Request area</th>
@@ -2019,8 +2344,8 @@
 <p>The ninth layer is exception record. Was there a warning, override, failed validation, repeated near miss, manual correction, vendor outage, permission change, abnormal consumption pattern, or threshold breach? In AI-linked cyber settings such as LLMjacking, QBE materials point to access, API usage, abnormal consumption, containment, and remediation evidence as concrete reconstruction inputs. That support remains cyber-evidence support, not a promise of policy response. [51]</p>
 <p>The tenth layer is remediation action and closure state. Was the workflow disabled, permission changed, account corrected, affected party notified, customer reimbursed, code rolled back, model endpoint reverted, prompt updated, human review strengthened, or vendor ticket resolved? Was the work unit retested and reauthorized? Was residual risk accepted? Closure is a lifecycle state, not a settlement.</p>
 <p>The final layer is missing evidence. Missing evidence should not be hidden inside narrative. It should be named. Vendor-held logs, expired retention, redacted records without source pointers, missing approval screens, overwritten prompts, unjoined payment records, unavailable cloud usage data, and unclear version history all shape what can and cannot be reconstructed.</p>
-<h4 id="t-19-01---agentic-claim-reconstruction-map">T-19-01 - Agentic Claim Reconstruction Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-19-01---agentic-claim-reconstruction-map">T-19-01 - Agentic Claim Reconstruction Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Reconstruction layer</th>
@@ -2134,8 +2459,8 @@
 <p>Those gaps are not just embarrassing documentation defects. They define the boundary of what the event can say.</p>
 <p>An evidence gap register should therefore include the missing item, why it is missing, who may control it, whether it is recoverable, whether the absence affects reconstruction, whether a privacy or privilege constraint applies, and whether future remediation is planned. The register should not be written as an accusation. It should be written as a map of uncertainty.</p>
 <p>NIST and CISA sources support the value of incident tracking, coordination, recovery, and remediation records. SEC cyber disclosure rules support governance and material incident disclosure context for public companies, but they do not turn an evidence gap into a securities, coverage, or liability conclusion. [49] [50] [52]</p>
-<h4 id="t-20-01---dispute-and-evidence-gap-register">T-20-01 - Dispute and Evidence Gap Register</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-20-01---dispute-and-evidence-gap-register">T-20-01 - Dispute and Evidence Gap Register</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Dispute type</th>
@@ -2236,8 +2561,8 @@
 <p>The seventh boundary is business interruption or property versus cloud/API/service interruption. A shared cloud, model, API, identity, data, or vendor dependency may affect operations. The evidence question is dependency map, service status, incident timeline, affected work units, restoration steps, and loss measurement. That evidence may help frame a boundary question, but it is not a business interruption determination.</p>
 <p>The eighth boundary is privacy or regulatory investigation versus operational event. A prompt, memory, log, tool payload, customer record, employee record, or evidence pack may contain personal or regulated data. The claim file may need source pointers and redaction controls, but privacy/legal conclusions remain outside this paper.</p>
 <p>Aon materials support the general reality that AI risk can touch cyber, E&#x26;O, professional liability, crime, D&#x26;O, governance, employment, and other enterprise risk lines. R1 silent-exposure research uses that market context to explain why line ambiguity matters. Neither source permits a universal coverage conclusion. [53] [56]</p>
-<h4 id="t-21-01---coverage-boundary-question-map">T-21-01 - Coverage Boundary Question Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-21-01---coverage-boundary-question-map">T-21-01 - Coverage Boundary Question Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Boundary question</th>
@@ -2339,8 +2664,8 @@
 <p>The eighth stage is human review boundary update. If the incident showed that the reviewer lacked context, saw only a summary, reviewed after action, reviewed too many items, or lacked authority to block, the remediation record should say what changed.</p>
 <p>The ninth stage is retest and reauthorization. A fix should not only be made. It should be tested against the relevant work-unit scenario and reauthorized by an accountable owner. Reauthorization is not regulatory approval or insurer approval. It is an internal lifecycle state.</p>
 <p>The tenth stage is residual-risk acceptance. Some risk remains after remediation. The question is whether the organization names it, owns it, monitors it, and carries it into renewal and future review.</p>
-<h4 id="t-22-01---post-loss-remediation-evidence-map">T-22-01 - Post-Loss Remediation Evidence Map</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-22-01---post-loss-remediation-evidence-map">T-22-01 - Post-Loss Remediation Evidence Map</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Remediation stage</th>
@@ -2455,8 +2780,8 @@
 <p>The eighth input is the renewal/change register. Part IV argued that agentic risk changes over time. Part V adds that incidents are change events. A serious incident should update workflow status, authority, tools, data classes, dependencies, human review, remediation closure, missing evidence, and residual risk.</p>
 <p>The ninth input is the reviewer-facing request package. The next time a broker, risk engineer, counsel, internal reviewer, or underwriter asks for evidence, the package should reflect what the organization learned. It should not be a static template that ignores observed failure.</p>
 <p>Different users will use this feedback differently. Enterprise risk teams use it to own the internal risk story. Engineering teams use it to improve controls and evidence capture. Counsel uses it to preserve legal boundaries. Brokers and risk engineers may use it to frame future conversations. Underwriters may ask their own questions under their own forms, appetite, and judgment. None of those uses converts the loop into a market-wide standard.</p>
-<h4 id="t-23-01---claims-to-renewal-feedback-loop">T-23-01 - Claims-to-Renewal Feedback Loop</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-23-01---claims-to-renewal-feedback-loop">T-23-01 - Claims-to-Renewal Feedback Loop</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Post-loss signal</th>
@@ -2565,8 +2890,8 @@
 <p>The tenth layer is exception, dispute, and remediation state. A serious incident should not end as a ticket note. The object needs exception history, dispute posture, remediation evidence, reauthorization or retirement, residual-risk note, and missing-evidence register.</p>
 <p>The final layer is renewal and change feedback. Agentic risk changes. The object should carry what has changed: new tools, new authority, changed model/vendor/runtime, changed data classes, changed human review, incidents, near misses, remediation, unresolved gaps, and dependency concentration. The feedback loop makes the object current enough for future review.</p>
 <p>This model differs from model governance because it is not centered on a model asset. It differs from cyber event logging because it is not centered only on access, credential, network, or resource-use traces. It differs from raw traces because it gives those traces responsibility semantics. It differs from an audit evidence chain because it is oriented toward insurability reasoning, not audit sufficiency. It differs from an underwriting checklist because it is not a required submission model. It differs from a claim file because it does not decide notice, coverage, causation, damages, settlement, or claim payment.</p>
-<h4 id="t-24-01---agentic-insurability-object-model">T-24-01 - Agentic Insurability Object Model</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-24-01---agentic-insurability-object-model">T-24-01 - Agentic Insurability Object Model</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Object layer</th>
@@ -2673,8 +2998,8 @@
 <p>The stages are intentionally non-numeric. A number would imply precision the sources do not support. A score would invite false use as a checklist, rating factor, certification threshold, or market signal. The model instead asks a sequence of questions: can the object be named, can authority be bounded, can responsibility survive handoff, can action be tied to consequence, can evidence be reconstructed, can privacy be preserved, can dependencies be seen, can remediation close, and can change feed the next review?</p>
 <p>WP1 and WP2 provide analytical foundations for this reasoning. WP1 helps describe lifecycle governance objects, authority, evidence partitioning, accepted outcome, substitution, and remediation closure. WP2 helps distinguish raw traces from evidence chains and auditability from sufficiency. Neither converts a reasoning state into insurance proof. [57]</p>
 <p>External market and governance sources explain why this matters. Public insurance sources show a split market; governance and incident sources show the need for documentation, controls, and reconstruction; aggregation sources show why dependency visibility matters. They do not endorse this model or turn it into a market standard. [58] [59] [60] [61]</p>
-<h4 id="t-25-01---non-scoring-insurability-reasoning-model">T-25-01 - Non-Scoring Insurability Reasoning Model</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-25-01---non-scoring-insurability-reasoning-model">T-25-01 - Non-Scoring Insurability Reasoning Model</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Reasoning state</th>
@@ -2742,8 +3067,8 @@
 <p>For boards, CROs, CIOs, CTOs, CCOs, and AI governance leaders, the takeaway is discipline. AI governance that cannot reconstruct lifecycle work is weak for insurance-facing review. A model inventory alone will not answer who acted, under what authority, through what tool, with what human role, producing what consequence, supported by what evidence, remediated by whom, and updated before the next review.</p>
 <p>For claims and incident-response teams, the takeaway is continuity. A technical timeline, incident ticket, vendor notice, security alert, or model trace may be necessary. None is sufficient alone. Claim reconstruction needs the bounded work unit and its responsibility semantics. Incident response sources support the importance of structured response, recovery, remediation, and tracking, but they do not decide insurance outcomes. [60]</p>
 <p>For implementation leaders, the takeaway is architecture. If agentic work is designed without authority boundaries, evidence pointers, privacy profiles, dependency records, accepted outcome states, exception paths, remediation closure, and change registers, the insurance-facing review problem is already being built into the system.</p>
-<h4 id="t-26-01---audience-takeaway-matrix">T-26-01 - Audience Takeaway Matrix</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-26-01---audience-takeaway-matrix">T-26-01 - Audience Takeaway Matrix</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Audience</th>
@@ -2854,8 +3179,8 @@
 <p>Insurer claim documentation and AI underwriting questionnaire sources remain useful possible strengthening sources if later found. Their absence does not block the body draft, but it should keep the paper modest about claims handling and underwriting evidence. The paper can say what evidence would make a risk more reviewable. It should not say what any insurer will require, accept, price, bind, renew, or pay.</p>
 <p>WP1 and WP2 are internal foundations, not external insurance facts. WP1 helps describe lifecycle governance objects. WP2 helps describe audit evidence chains. WP3 uses both to build insurability reasoning. It does not say WP1 or WP2 makes a system insurable, coverage-ready, underwriting-ready, claim-ready, certified, insurer accepted, or legally sufficient. [57]</p>
 <p>The model names also require discipline. Agentic Insurability Object Model and Agentic Insurability Reasoning Model are authored analytical constructs. They can organize questions. They cannot score, certify, approve, validate, bind, insure, price, settle, or rank.</p>
-<h4 id="t-27-01---final-non-claim-boundary-register">T-27-01 - Final Non-Claim Boundary Register</h4>
-<div class="table-scroll"><table>
+<h4 class="table-caption" id="t-27-01---final-non-claim-boundary-register">T-27-01 - Final Non-Claim Boundary Register</h4>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Restricted claim</th>
@@ -3031,7 +3356,7 @@
 <p>Appendix A provides a compact reference version of the Agentic Insurability Object Model introduced in Chapter 24 and supported by Chapters 4, 5, 6, 7, 9, 14, 19, 22, and 23. It is intended to help a reader see the loss-relevant agentic work object as a bounded analytical unit rather than as a general AI system, a raw log set, or a governance program.</p>
 <p>This appendix references body tables T-04-01, T-05-01, T-06-01, T-07-01, T-09-01, T-14-01, T-19-01, T-22-01, T-23-01, and T-24-01.</p>
 <h3 id="reference-object-layers">Reference Object Layers</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Object layer</th>
@@ -3144,7 +3469,7 @@
 </table></div>
 <h3 id="minimal-object-card">Minimal Object Card</h3>
 <p>An appendix-level object card may later summarize the object model in a shorter form:</p>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Card field</th>
@@ -3197,7 +3522,7 @@
 <p>Appendix B provides a compact reference version of the non-scoring Agentic Insurability Reasoning Model from Chapter 25. It supports Chapters 8, 10, 13, 14, 18, 21, 23, and 24 by describing reviewability states without ranking, scoring, certifying, or predicting an insurance outcome.</p>
 <p>This appendix references body tables T-08-01, T-10-01, T-13-01, T-14-01, T-18-01, T-21-01, T-23-01, T-24-01, and T-25-01.</p>
 <h3 id="non-scoring-reasoning-states">Non-Scoring Reasoning States</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Reasoning state</th>
@@ -3266,7 +3591,7 @@
 <p>Appendix C provides an optional analytical structure for evidence a reviewer might ask to see when discussing agentic AI risk. It supports Chapters 6, 14, 15, 16, 17, and 18 and references T-06-01, T-14-01, T-15-01, T-16-01, T-17-01, and T-18-01.</p>
 <p>This appendix is deliberately framed as an optional request structure, not as a checklist or condition for insurance.</p>
 <h3 id="optional-evidence-request-categories">Optional Evidence Request Categories</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -3363,7 +3688,7 @@
 <p>Appendix D provides a reference structure for organizing post-loss reconstruction and evidence gaps. It supports Chapters 7, 10, 19, 20, 22, and 23 and references T-07-01, T-10-01, T-19-01, T-20-01, T-22-01, and T-23-01.</p>
 <p>The register is designed to make evidence questions visible after an agentic AI incident. It does not decide legal liability, coverage, settlement, claim payment, or claim approval.</p>
 <h3 id="claim-reconstruction-fields">Claim Reconstruction Fields</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -3460,7 +3785,7 @@
 </tbody>
 </table></div>
 <h3 id="evidence-gap-register">Evidence Gap Register</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Evidence gap</th>
@@ -3527,7 +3852,7 @@
 <p>Appendix E maps recurring coverage-boundary questions that agentic AI incidents can raise. It supports Chapters 3, 7, 11, 19, 20, and 21 and references T-07-01, T-11-01, T-19-01, T-20-01, and T-21-01.</p>
 <p>The purpose is to preserve questions, not answer them. Policy wording, facts, jurisdiction, notice, exclusions, limits, sublimits, deductibles, causation, loss category, and claim handling remain external to this paper.</p>
 <h3 id="coverage-boundary-question-categories">Coverage-Boundary Question Categories</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -3603,7 +3928,7 @@
 <p>Appendix F consolidates source-use and claim-boundary notes for the appendices and the R3J revised body. It supports Front Matter and Chapters 1-28.</p>
 <p>The R3J revised body preserves source refs <code>[1]</code> through <code>[62]</code>. This appendix does not create new source IDs, add unsupported external factual claims, or use rejected v0.2 as source truth.</p>
 <h3 id="source-group-notes">Source Group Notes</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Source group</th>
@@ -3666,7 +3991,7 @@
 <p>Appendix G provides a consolidated non-claim language register for future QA and drafting control. It supports Front Matter and Chapters 6, 7, 16, 18, 19, 21, 24, 25, 27, and 28, and it references T-27-01.</p>
 <p>This appendix is a publication guardrail only. It is not legal advice.</p>
 <h3 id="restricted-claim-register">Restricted Claim Register</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Restricted claim</th>
@@ -3817,7 +4142,7 @@
 <p>Appendix H inventories body tables and flags future layout risk before any artifact planning. It supports Chapters 2 and 4-27 and references T-02-01 and T-04-01 through T-27-01.</p>
 <p>This appendix is a source-level layout-risk register. The public research candidate package exposes HTML, PDF, manifest, and checksum artifacts, while DOCX distribution and final/sealed status remain unauthorized.</p>
 <h3 id="table-inventory">Table Inventory</h3>
-<div class="table-scroll"><table>
+<div class="table-block table-scroll"><table>
 <thead>
 <tr>
 <th>Table ID</th>
@@ -4047,6 +4372,8 @@
 <p>Appendix H is a layout-risk register only. Public HTML, PDF, manifest, and checksum access remains bounded by public research candidate status; Appendix H does not create final PDF readiness, visual acceptance, DOCX distribution, Final Seal, sealed status, release-ready status, or public announcement authorization.</p>
 <h2 id="deferred-appendix-note">Deferred Appendix Note</h2>
 <p>Appendix I - Assembly and Revision Change Log is not included in this integrated draft. It remains optional and deferred because assembly/revision traceability already exists in governance packages and may be too process-heavy for the public white paper unless later authorized by the owner.</p>
-<p>This deferred note does not create Appendix I content, final/sealed status, release-ready status, public release announcement, DOCX distribution, or source Markdown publication.</p><div class="boundary-note"><strong>Boundary:</strong> This public research candidate is available with bounded HTML/PDF, manifest, and checksum access, but it does not authorize public release announcement, final/sealed status, release-ready status, DOCX distribution, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, or regulator approval.</div></article>
+<p>This deferred note does not create Appendix I content, final/sealed status, release-ready status, public release announcement, DOCX distribution, or source Markdown publication.</p><section class="important-notice closing-boundary" aria-label="Publication boundary"><strong>Boundary:</strong> This public research candidate is available with bounded HTML/PDF, manifest, and checksum access, but it does not authorize public release announcement, final/sealed status, release-ready status, DOCX distribution, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, or regulator approval.</section></article>
+    <footer class="html-footer">AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE - public research candidate artifact. Generated 2026-05-27T18:04:18.779Z. Final Seal and public announcement require separate authorization.</footer>
+  </main>
 </body>
 </html>
