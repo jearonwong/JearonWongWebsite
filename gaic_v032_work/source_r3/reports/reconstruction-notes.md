@@ -1,5 +1,40 @@
 # Reconstruction Notes
 
+## WP3-V1-R3T Notes (May 27, 2026)
+
+**Scope:** Create the WP3 / AIIRWP v1.0 artifact candidate generation planning package. Do not generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create publication-candidate Markdown, modify public route, restore public CTAs, create public staging, create a release package, perform source-strengthening research, or claim release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3S baseline `0c2328244b83485a5911e38ae3c25919550f6a0a` and confirmed `origin/main` matched before R3T work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3P integrated draft package, R3Q integrated draft QA package, R3R artifact planning package, R3S artifact planning QA package, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3t-artifact-candidate-generation-planning/`.
+5. Created README, candidate generation sequence plan, source-to-candidate file plan, HTML candidate generation plan, PDF candidate generation plan, manifest/checksum generation plan, wide-table generation readiness plan, generation boundary/nonclaim plan, generation validation command plan, route/public status sequencing plan, R3U QA instructions, generation planning decision, and R3U continuity notes.
+6. Recommended `R3U-ARTIFACT-CANDIDATE-GENERATION-PLANNING-QA`.
+7. Planned a future controlled publication-candidate Markdown source path before HTML/PDF generation, without creating that source.
+8. Planned future HTML/PDF/manifest/checksum generation gates without generating artifacts.
+9. Preserved public status as withdrawn / v1.0 rewrite in progress, public artifact none, public PDF none, public route noindex under-rewrite, and no public DOCX authorized.
+10. Created R3T preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No artifact was generated.
+- No publication-candidate Markdown was created.
+- No public HTML, PDF, DOCX, manifest, checksum, public staging, or release package was created.
+- No public AIIRWP route, CTA, sitemap, `llms.txt`, entity graph, or public artifact path was modified.
+- No files were created under `public/research`.
+- No source-strengthening research was performed.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3T is artifact candidate generation planning only.
+- WP3-V1-R3T does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3T keeps artifact generation blocked and hands off to R3U artifact candidate generation planning QA only.
+
+**WP3-V1-R3T Status:** WP3-V1-R3T ARTIFACT CANDIDATE GENERATION PLANNING COMPLETE / READY FOR R3U ARTIFACT CANDIDATE GENERATION PLANNING QA.
+
 ## WP3-V1-R3S Notes (May 27, 2026)
 
 **Scope:** Perform QA on the WP3 / AIIRWP v1.0 R3R artifact planning package. Do not generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, modify public route, restore public CTAs, create public staging, create a release package, perform source-strengthening research, or claim release status.
