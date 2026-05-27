@@ -1,7 +1,44 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3Y Artifact Candidate QA and Repair)
+**Last Updated:** May 27, 2026 (WP3-V1-R3Z Public Route Restoration Readiness)
+
+## WP3-V1-R3Z Public Route Restoration Readiness
+
+### Status: WP3-V1-R3Z PUBLIC ROUTE RESTORATION READINESS COMPLETE / READY FOR R3AA PUBLIC ROUTE RESTORATION EXECUTION
+
+R3Z performs public route restoration readiness and planning on the R3Y-accepted AIIRWP v1.0 internal artifact candidates. This is a concrete readiness wave with exact execution instructions for R3AA, not public route execution.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3Y commit `388a3d49372224b767b1b95e87eea158b99ad70b` before R3Z edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3Z edits.
+3. Inspected current WP3 public route/status implementation, WP1/WP2 public artifact route patterns, current metadata/SEO/GEO/JSON-LD conventions, robots, sitemap, `llms.txt`, entity graph, R3X internal artifact candidates, R3Y QA/repair reports, current-status registry, SOURCE MASTER, known issues, and reconstruction notes.
+4. Created the R3Z readiness package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3z-public-route-restoration-readiness/`.
+5. Audited the current WP3 route at `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/` and confirmed it remains a noindex withdrawn / v1.0 rewrite status page with no public artifact CTA.
+6. Confirmed the WP3 public artifact directory exists and remains empty.
+7. Planned exact future public placement for HTML, PDF, manifest, and checksum artifacts while keeping source Markdown non-public unless separately authorized.
+8. Planned public page content, boundary copy, metadata, JSON-LD, robots, sitemap, `llms.txt`, and entity graph updates for R3AA.
+9. Created exact R3AA implementation instructions, release gates, rollback/containment plan, execution prompt, and continuity notes.
+10. Returned verdict `ACCEPTED_FOR_PUBLIC_ROUTE_RESTORATION_EXECUTION_WITH_NOTES`.
+11. Recommended `WP3-V1-R3AA-PUBLIC-ROUTE-RESTORATION-EXECUTION`.
+
+Remaining known issues:
+
+- R3AA may execute public route restoration only if the owner accepts R3Z and authorization remains explicit.
+- Public route restoration has not occurred in R3Z.
+- Public artifact remains none; public PDF remains none; public route remains noindex under-rewrite.
+- Wide-table visual QA remains a gate during R3AA execution and verification, especially for `T-02-01`, `T-09-01`, `T-14-01`, `T-18-01`, `T-21-01`, and `T-27-01`.
+- Future source strengthening remains available for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Public announcement, final/sealed status, release-ready status, public release status, and DOCX remain unauthorized.
+
+Boundary discipline:
+
+- R3Z is route restoration readiness and planning only.
+- R3Z does not copy files into `public/research`, modify public route files, restore public CTAs, change noindex/index, update robots/sitemap/`llms.txt`/entity graph, create public staging, create DOCX, claim current public candidate status, claim final/sealed status, claim release-ready status, claim public release, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3Z Status:** WP3-V1-R3Z PUBLIC ROUTE RESTORATION READINESS COMPLETE / READY FOR R3AA PUBLIC ROUTE RESTORATION EXECUTION
 
 ## WP3-V1-R3Y Artifact Candidate QA and Repair
 

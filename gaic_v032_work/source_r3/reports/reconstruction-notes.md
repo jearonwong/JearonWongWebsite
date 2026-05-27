@@ -1,5 +1,42 @@
 # Reconstruction Notes
 
+## WP3-V1-R3Z Notes (May 27, 2026)
+
+**Scope:** Assess and plan public route restoration for WP3 / AIIRWP v1.0 based on the R3Y-accepted internal artifact candidates. This wave may inspect public route implementation, WP1/WP2 route patterns, metadata/SEO/GEO/JSON-LD conventions, robots, sitemap, `llms.txt`, entity graph, artifact placement, release gates, and rollback controls. Do not copy candidate files into `public/research`, modify public route files, restore public CTA, change noindex/index, update robots/sitemap/`llms.txt`/entity graph, create public staging, create DOCX, claim public release, claim public candidate status as current state, or claim final/sealed/release-ready status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3Y baseline `388a3d49372224b767b1b95e87eea158b99ad70b` and confirmed `origin/main` matched before R3Z work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the current WP3 public route, research index, WP1/WP2 public route patterns, `astro.config.mjs`, `public/robots.txt`, `public/llms.txt`, entity graph JSON, R3X artifact candidate package, R3Y QA and repair package, current-status registry, SOURCE MASTER, known issues, and reconstruction notes.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3z-public-route-restoration-readiness/`.
+5. Created README, public route readiness verdict, current public route audit, public artifact placement plan, public page content and boundary plan, SEO/GEO/JSON-LD metadata plan, route restoration implementation plan, public release gate plan, rollback and containment plan, R3AA execution prompt, and R3AA continuity notes.
+6. Confirmed current WP3 public route remains a noindex withdrawn / v1.0 rewrite status page.
+7. Confirmed the WP3 public artifact directory remains empty and no current public HTML/PDF/manifest/checksum is promoted.
+8. Confirmed R3Z verdict `ACCEPTED_FOR_PUBLIC_ROUTE_RESTORATION_EXECUTION_WITH_NOTES`.
+9. Recommended `WP3-V1-R3AA-PUBLIC-ROUTE-RESTORATION-EXECUTION`.
+10. Created R3Z preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No candidate artifact was copied into `public/research`.
+- No public AIIRWP route, CTA, sitemap, robots file, `llms.txt`, entity graph, or public artifact path was modified.
+- No noindex/index change was made.
+- No public staging was created.
+- No DOCX was created.
+- No public announcement or social posting was created.
+- R3X/R3Y internal artifact candidate package was used as readiness source truth only.
+- Rejected v0.2 was not used as source truth or citation source.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3Z is public route restoration readiness and planning only.
+- WP3-V1-R3Z does not claim public release, public staging, current public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3Z hands off to R3AA public route restoration execution if owner authorization remains explicit. Public route restoration is not performed in R3Z.
+
+**WP3-V1-R3Z Status:** WP3-V1-R3Z PUBLIC ROUTE RESTORATION READINESS COMPLETE / READY FOR R3AA PUBLIC ROUTE RESTORATION EXECUTION.
+
 ## WP3-V1-R3Y Notes (May 27, 2026)
 
 **Scope:** Perform QA and repair on the WP3 / AIIRWP v1.0 internal artifact candidates created in R3X. This wave may QA and repair internal Markdown/HTML/PDF candidates, regenerate internal HTML/PDF if feasible, refresh manifest/checksum, create QA reports, and update governance/status files. Do not modify public route, copy files into `public/research`, restore public CTA, create public staging, change noindex/index, create DOCX, claim public release, claim public candidate status, claim final/sealed/release-ready status, or claim insurance/legal/scoring/certification status.
