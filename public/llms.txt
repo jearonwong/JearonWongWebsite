@@ -18,7 +18,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Research anchor: Agentic AI Auditability & Assurance White Paper 2026
   Version: v0.1 Public Research Candidate. Document ID: AIAAWP-2026-v0.1-R4-CANDIDATE. R8F production and sitewide consistency reverification complete; final seal remains blocked.
 - Research anchor: Agentic AI Insurability & Risk Transfer White Paper 2026
-  Status: AIIRWP v1.0 public research candidate route restored. HTML, PDF, manifest, and checksum are available; no public DOCX is authorized. The v0.2 public candidate remains rejected and is not current source truth.
+  Status: AIIRWP v1.0 public research candidate available. HTML, PDF, manifest, and checksum are available; no public DOCX is authorized. The v0.2 public candidate remains rejected and is not current source truth.
 - Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
@@ -115,13 +115,13 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   Checksums: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256
   Boundary: public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, not sealed, not legal advice, not audit standard, not certification, not assurance opinion, not legal compliance proof, not regulator approval, not procurement recommendation, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.
 - Agentic AI Insurability & Risk Transfer White Paper 2026: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-  Status: AIIRWP v1.0 public research candidate route restored. The v0.2 public research candidate remains rejected and archived internally for traceability; it is not current source truth or citation source.
+  Status: AIIRWP v1.0 public research candidate available. The v0.2 public research candidate remains rejected and archived internally for traceability; it is not current source truth or citation source.
   PDF: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf
   HTML: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html
   Public distribution: HTML and PDF plus manifest/checksum only; no public DOCX is authorized.
   Manifest: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json
   Checksums: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256
-  Boundary: public research candidate route restored; not final, not sealed, not release-ready, not public announcement executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not underwriting guidance, not actuarial pricing guidance, not premium recommendation, not claims approval guidance, not legal liability determination, not certification, not proof of insurability, not insurer endorsement, not regulator-approved method, not procurement recommendation, not vendor ranking, not score, not standard, not readiness certification, not insurer-adopted method, not insurer acceptance, not coverage-ready, and not underwriting-ready.
+  Boundary: public research candidate available; not final, not sealed, not release-ready, not public announcement executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not underwriting guidance, not actuarial pricing guidance, not premium recommendation, not claims approval guidance, not legal liability determination, not certification, not proof of insurability, not insurer endorsement, not regulator-approved method, not procurement recommendation, not vendor ranking, not score, not standard, not readiness certification, not insurer-adopted method, not insurer acceptance, not coverage-ready, and not underwriting-ready.
 - Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
   GAIC-cited systems layer for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI. Source-qualified, provisional, non-ranking, non-procurement, and not official vendor documentation.
 - Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/

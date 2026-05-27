@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-wp3-v1-r3aa-aiirwp-public-route-restored",
+  "version": "2026-05-wp3-v1-r3ab-whitepaper-publication-aligned",
   "generated_at": "2026-05-27",
-  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, AIIRWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, author-release execution, or sealed artifact status. AIIRWP v1.0 public research candidate route is restored with HTML, PDF, manifest, and checksum; AIIRWP v0.2 remains rejected and is not current source truth.",
+  "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, AIIRWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, author-release execution, or sealed artifact status. AIIRWP v1.0 is available as a public research candidate with HTML, PDF, manifest, and checksum; AIIRWP v0.2 remains rejected and is not current source truth.",
   "nodes": [
     {
       "id": "jearon-wong",
@@ -234,7 +234,7 @@
       "type": "CreativeWorkSeries",
       "canonical_url": "https://www.jearonwong.com/research/",
       "source_authority": "owned-canonical",
-      "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets. AIIRWP v1.0 public research candidate route is restored; AIIRWP v0.2 remains rejected.",
+      "description": "White paper and guide series using the GAIC publication standard for lifecycle governance research assets. AIIRWP v1.0 is available as a public research candidate; AIIRWP v0.2 remains rejected.",
       "boundary": "Series grouping only; not certification, legal advice, regulator approval, final release, or sealed artifact status."
     },
     {
@@ -315,8 +315,8 @@
       "type": "TechnicalReport",
       "canonical_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
       "source_authority": "authored-analysis / public-research-candidate",
-      "description": "AIIRWP v1.0 public research candidate route restored with public HTML, PDF, manifest, and checksum artifacts. The withdrawn AIIRWP v0.2 public candidate remains rejected and is not current source truth or citation source.",
-      "boundary": "Public research candidate route restored; not final, not sealed, not release-ready, not public announcement executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not underwriting guidance, not certification, not proof of insurability, not insurer acceptance, not coverage-ready, not underwriting-ready, not claim-ready, not score, not standard, and not regulator approval.",
+      "description": "AIIRWP v1.0 public research candidate available with public HTML, PDF, manifest, and checksum artifacts. The withdrawn AIIRWP v0.2 public candidate remains rejected and is not current source truth or citation source.",
+      "boundary": "Public research candidate available; not final, not sealed, not release-ready, not public announcement executed, not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not underwriting guidance, not certification, not proof of insurability, not insurer acceptance, not coverage-ready, not underwriting-ready, not claim-ready, not score, not standard, and not regulator approval.",
       "artifacts": {
         "html": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         "pdf": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
@@ -730,7 +730,7 @@
       "target": "aiirwp-white-paper-2026",
       "evidence_status": "public-research-candidate",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-      "boundary": "Authorship relation for AIIRWP v1.0 public research candidate route; no external adoption, indexing, final seal, author-release execution, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, or public announcement claim."
+      "boundary": "Authorship relation for AIIRWP v1.0 public research candidate; no external adoption, indexing, final seal, author-release execution, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, or public announcement claim."
     },
     {
       "source": "aiirwp-white-paper-2026",
@@ -738,7 +738,7 @@
       "target": "agentic-lifecycle-governance-industry-series",
       "evidence_status": "public-research-candidate",
       "evidence_url": "https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-      "boundary": "Series relationship only; AIIRWP v1.0 route is restored as a public research candidate and AIIRWP v0.2 remains rejected."
+      "boundary": "Series relationship only; AIIRWP v1.0 is available as a public research candidate and AIIRWP v0.2 remains rejected."
     },
     {
       "source": "aiirwp-white-paper-2026",

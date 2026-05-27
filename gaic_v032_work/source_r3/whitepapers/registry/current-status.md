@@ -22,8 +22,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP3 / AIIRWP
 
-- Status: public research candidate route restored; post-restoration QA pending.
-- Current v1 wave: WP3-V1-R3AA PUBLIC ROUTE RESTORATION EXECUTION COMPLETE / READY FOR R3AB PUBLIC ROUTE POST-RESTORATION QA.
+- Status: public research candidate available; publication system alignment repair complete; post-restoration QA pending.
+- Current v1 wave: WP3-V1-R3AB PUBLICATION SYSTEM ALIGNMENT REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifacts: HTML/PDF/manifest/checksum under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
 - Current public PDF: `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf`.
@@ -80,6 +80,10 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3z-public-route-restoration-readiness/`
 - Current v1 public route restoration execution package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3aa-public-route-restoration-execution/`
+- Current v1 publication system alignment repair package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-publication-system-alignment-repair/`
+- Current white paper publication standard:
+  - `gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
 - R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
@@ -125,6 +129,13 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3AA restores the WP3 route page as a bounded public research candidate artifact hub, updates the research index, sitemap custom page, robots stale-path containment, `llms.txt`, entity graph, and sitewide AIIRWP public-status wording.
 - R3AA regenerates the public PDF from the normalized public HTML using the existing Chrome headless print pattern; the PDF remains 117 A4 pages.
 - R3AA does not create DOCX, copy source Markdown to the public route, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
+- R3AB repairs the cross-whitepaper publication system after R3AA technical route restoration.
+- R3AB creates `WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`, a WP1/WP2/WP3 alignment audit, and an HTML/PDF style-gap report.
+- R3AB creates shared publication data and a shared white paper route component, aligns WP1/WP2/WP3 public route pages to one page pattern, and aligns the research index card pattern.
+- R3AB normalizes WP3 public-facing language from route-restoration process framing to public research candidate availability, regenerates the WP3 public PDF from the repaired public HTML, and refreshes the WP3 public manifest/checksum records.
+- R3AB verdict: `ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`.
+- R3AB recommends `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+- R3AB does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 
 ## WP4
 
@@ -132,4 +143,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3AA restores the public research candidate route and exposes HTML/PDF/manifest/checksum artifacts, but it does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts, and R3AB aligns the WP1/WP2/WP3 publication system. This does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.

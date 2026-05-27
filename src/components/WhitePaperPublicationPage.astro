@@ -1,0 +1,656 @@
+---
+import SiteHeader from "./SiteHeader.astro";
+import { absoluteUrl } from "../data/schema";
+import type { WhitePaperPublication } from "../data/whitepaperPublications";
+
+interface Props {
+  paper: WhitePaperPublication;
+}
+
+const { paper } = Astro.props;
+const primaryArtifacts = paper.artifacts.slice(0, 2);
+const integrityArtifacts = paper.artifacts.slice(2);
+const additionalIntegrityLinks = "additionalIntegrityLinks" in paper ? paper.additionalIntegrityLinks : [];
+const versionNote = "versionNote" in paper ? paper.versionNote : undefined;
+const statusPanelRows = [
+  { label: "Public status", value: paper.publicStatus },
+  { label: "Version", value: paper.versionLabel },
+  { label: "Document ID", value: paper.documentId },
+  { label: "Artifact role", value: paper.artifactRole },
+  { label: "Artifacts", value: "HTML, PDF, manifest, checksum. No public DOCX." },
+  { label: "Boundary", value: paper.releaseState }
+];
+---
+
+<div class="zone-a registry-grid wp-publication-hero-shell">
+  <SiteHeader />
+  <section class="shell wp-publication-hero">
+    <div class="wp-publication-hero__copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/research/">Research</a>
+      </nav>
+      <div class="registry-annotation status-line">
+        <span class="registry-key">STATUS</span>: <span class="registry-value">{paper.statusLabel}</span>
+      </div>
+      <h1>{paper.title}</h1>
+      <p class="release-subtitle">{paper.subtitle}</p>
+      <p class="release-thesis">{paper.oneLinePositioning}</p>
+      <p class="release-abstract">{paper.abstract}</p>
+      <div class="artifact-actions" aria-label={`${paper.title} primary actions`}>
+        {primaryArtifacts.map((artifact, index) => (
+          <a class={index === 0 ? "button button-primary" : "button button-outline"} href={artifact.href}>
+            {artifact.label}
+          </a>
+        ))}
+        <a class="button button-outline" href="#cite">Cite this paper</a>
+      </div>
+    </div>
+
+    <aside class="release-meta-panel" aria-label={`${paper.title} publication status`}>
+      {statusPanelRows.map((row) => (
+        <div class="meta-line">
+          <span>{row.label}</span>
+          <strong>{row.value}</strong>
+        </div>
+      ))}
+    </aside>
+  </section>
+</div>
+
+<div class="zone-b page-body page-body--standard">
+  <article class="shell release-stack">
+    <section class="release-section release-grid" aria-labelledby={`${paper.id}-overview-title`}>
+      <div>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">OVERVIEW</span>
+        </div>
+        <h2 id={`${paper.id}-overview-title`}>Research object and scope.</h2>
+        <p class="section-lead">{paper.overview}</p>
+      </div>
+      <div class="status-ledger" aria-label={`${paper.title} status fields`}>
+        {statusPanelRows.slice(0, 4).map((row) => (
+          <div>
+            <span>{row.label}</span>
+            <strong>{row.value}</strong>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="release-section release-grid" aria-labelledby={`${paper.id}-matters-title`}>
+      <div>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">WHY_IT_MATTERS</span>
+        </div>
+        <h2 id={`${paper.id}-matters-title`}>Why this paper matters.</h2>
+        <p class="section-lead">{paper.whyItMatters}</p>
+      </div>
+      <div class="concept-ledger">
+        {paper.keyConcepts.map((concept, index) => (
+          <a href={concept.href}>
+            <strong>{String(index + 1).padStart(2, "0")}</strong>
+            <span>{concept.label}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="release-section" aria-labelledby={`${paper.id}-artifact-title`}>
+      <div class="section-heading-row">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">ARTIFACT_ACCESS</span>
+          </div>
+          <h2 id={`${paper.id}-artifact-title`}>Read, download, and verify.</h2>
+        </div>
+        <a href={paper.artifacts[3]?.href ?? paper.artifacts[2]?.href} class="section-side-link">Integrity files</a>
+      </div>
+      <p class="section-lead">{paper.artifactNote}</p>
+      <div class="artifact-grid">
+        {paper.artifacts.map((artifact) => (
+          <a href={artifact.href} class="artifact-card">
+            <span class="artifact-kind">{artifact.kind}</span>
+            <strong>{artifact.label}</strong>
+            <span>{artifact.description}</span>
+          </a>
+        ))}
+      </div>
+      {additionalIntegrityLinks.length > 0 && (
+        <div class="secondary-link-row" aria-label={`${paper.title} additional integrity links`}>
+          {additionalIntegrityLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <section id="cite" class="release-section release-grid" aria-labelledby={`${paper.id}-citation-title`}>
+      <div>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">CITATION</span>
+        </div>
+        <h2 id={`${paper.id}-citation-title`}>Citation and identity.</h2>
+        <p class="citation-block">{paper.citationText}</p>
+        <dl class="identity-ledger" aria-label={`${paper.title} citation identity`}>
+          <div><dt>Title</dt><dd>{paper.title}</dd></div>
+          <div><dt>Subtitle</dt><dd>{paper.subtitle}</dd></div>
+          <div><dt>Author</dt><dd>Jearon Wong</dd></div>
+          <div><dt>Version</dt><dd>{paper.versionLabel}</dd></div>
+          <div><dt>Document ID</dt><dd>{paper.documentId}</dd></div>
+          <div><dt>Publication month</dt><dd>{paper.publicationMonth}</dd></div>
+          <div><dt>Canonical URL</dt><dd><a href={absoluteUrl(paper.canonicalPath)}>{absoluteUrl(paper.canonicalPath)}</a></dd></div>
+          {paper.artifacts.map((artifact) => (
+            <div><dt>{artifact.kind}</dt><dd><a href={absoluteUrl(artifact.href)}>{absoluteUrl(artifact.href)}</a></dd></div>
+          ))}
+        </dl>
+      </div>
+      <div class="boundary-panel">
+        <strong>Boundary note</strong>
+        <p>
+          {paper.publicStatus}. {paper.releaseState}
+        </p>
+        <ul>
+          {paper.boundaryNotes.map((note) => <li>{note}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="release-section" aria-labelledby={`${paper.id}-integrity-title`}>
+      <div class="section-heading-row">
+        <div>
+          <div class="registry-annotation section-tag">
+            <span class="registry-key">EVIDENCE_INTEGRITY</span>
+          </div>
+          <h2 id={`${paper.id}-integrity-title`}>Manifest and checksum record.</h2>
+        </div>
+        <a href={paper.artifacts.find((artifact) => artifact.kind === "JSON")?.href} class="section-side-link">Open manifest</a>
+      </div>
+      <p class="section-lead">{paper.evidenceIntegrity}</p>
+      <div class="integrity-grid">
+        <div class="commit-ledger">
+          {paper.integrityRows.map((row) => (
+            <div><span>{row.label}</span><strong>{row.value}</strong></div>
+          ))}
+        </div>
+        <div class="checksum-table" aria-label={`${paper.title} SHA256 checksums`}>
+          {paper.artifacts.map((artifact) => (
+            <div class="checksum-row">
+              <span>{artifact.kind} / {artifact.label}</span>
+              <code>{artifact.sha256}</code>
+            </div>
+          ))}
+        </div>
+      </div>
+      {integrityArtifacts.length > 0 && (
+        <div class="manifest-note">
+          <strong>Integrity presentation</strong>
+          <span>Manifest and checksum links are public verification aids, not publication seal or certification claims.</span>
+        </div>
+      )}
+    </section>
+
+    <section class="release-section release-grid" aria-labelledby={`${paper.id}-boundary-title`}>
+      <div>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">BOUNDARY_NOTES</span>
+        </div>
+        <h2 id={`${paper.id}-boundary-title`}>What this paper does not claim.</h2>
+        <p class="section-lead">
+          Boundary language is part of the publication system. It keeps the artifact useful without turning research framing into external authority, advice, endorsement, certification, or final/sealed status.
+        </p>
+      </div>
+      <ul class="non-goal-list">
+        {paper.boundaryNotes.map((note) => <li>{note}</li>)}
+      </ul>
+    </section>
+
+    <section class="release-section release-grid" aria-labelledby={`${paper.id}-related-title`}>
+      <div>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">RELATED_RESEARCH</span>
+        </div>
+        <h2 id={`${paper.id}-related-title`}>Same publication system, adjacent research.</h2>
+        <p class="section-lead">
+          These white papers share the same public artifact pattern: title and abstract, status panel, HTML/PDF access, citation identity, manifest/checksum integrity, and explicit boundary notes.
+        </p>
+      </div>
+      <div class="series-ledger">
+        {paper.relatedResearch.map((item, index) => (
+          <a href={item.href}>
+            <strong>{String(index + 1).padStart(2, "0")}</strong>
+            <span>{item.label}</span>
+            <em>{item.body}</em>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {versionNote && (
+      <section class="release-section notice-section" aria-labelledby={`${paper.id}-version-note-title`}>
+        <div class="registry-annotation section-tag">
+          <span class="registry-key">VERSION_NOTE</span>
+        </div>
+        <h2 id={`${paper.id}-version-note-title`}>Withdrawn candidate note.</h2>
+        <p class="section-lead">{versionNote}</p>
+      </section>
+    )}
+  </article>
+</div>
+
+<style>
+  .wp-publication-hero-shell {
+    min-height: 92svh;
+    border-bottom: 1px solid var(--border-registry);
+  }
+
+  .wp-publication-hero {
+    min-height: 92svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding-top: clamp(7rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 6vw, 6rem);
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-registry-muted);
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent-proof);
+  }
+
+  .status-line {
+    margin-bottom: 1.1rem;
+    color: var(--accent-proof);
+  }
+
+  .wp-publication-hero h1 {
+    max-width: 13.5ch;
+    margin: 0;
+    color: var(--text-registry-primary);
+    font-size: clamp(2.9rem, 7vw, 6.2rem);
+    line-height: 0.96;
+    letter-spacing: 0;
+  }
+
+  .release-subtitle {
+    max-width: 46rem;
+    margin: 1.25rem 0 0;
+    color: var(--accent-proof);
+    font-family: var(--font-mono);
+    font-size: clamp(0.82rem, 1.1vw, 0.96rem);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .release-thesis,
+  .release-abstract {
+    max-width: 58rem;
+    margin: 1.25rem 0 0;
+    color: rgba(241, 245, 249, 0.82);
+    font-size: clamp(1.05rem, 1.45vw, 1.2rem);
+    line-height: 1.72;
+  }
+
+  .release-abstract {
+    margin-top: 0.85rem;
+    color: rgba(241, 245, 249, 0.68);
+    font-size: 1rem;
+  }
+
+  .artifact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .release-meta-panel,
+  .release-section {
+    border: 1px solid var(--current-border);
+    border-radius: var(--radius-module);
+  }
+
+  .release-meta-panel {
+    display: grid;
+    gap: 0;
+    background: rgba(26, 26, 26, 0.84);
+    backdrop-filter: blur(10px);
+  }
+
+  .meta-line {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-registry);
+  }
+
+  .meta-line:last-child {
+    border-bottom: 0;
+  }
+
+  .meta-line span,
+  .status-ledger span,
+  .commit-ledger span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--current-muted);
+    text-transform: uppercase;
+  }
+
+  .meta-line strong,
+  .status-ledger strong,
+  .commit-ledger strong {
+    color: var(--current-text);
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  .release-stack {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .release-section {
+    display: grid;
+    gap: 1.35rem;
+    padding: var(--registry-panel-padding);
+    background: var(--current-surface);
+  }
+
+  .release-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
+    gap: clamp(1.75rem, 4vw, 3.2rem);
+    align-items: start;
+  }
+
+  .section-tag {
+    margin-bottom: 0.9rem;
+  }
+
+  .release-section h2 {
+    max-width: 18ch;
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+    line-height: 1.04;
+    letter-spacing: 0;
+  }
+
+  .section-lead {
+    max-width: 68ch;
+    margin: 1rem 0 0;
+    color: var(--current-muted);
+    font-size: 1.02rem;
+    line-height: 1.72;
+  }
+
+  .section-heading-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .section-side-link,
+  .secondary-link-row a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-signal);
+    text-decoration: none;
+  }
+
+  .section-side-link:hover,
+  .secondary-link-row a:hover {
+    color: var(--current-text);
+  }
+
+  .artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--current-line);
+    background: var(--current-line);
+  }
+
+  .artifact-card {
+    display: grid;
+    gap: 0.55rem;
+    min-height: 9rem;
+    padding: 1rem;
+    background: var(--current-surface);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .artifact-card:hover {
+    color: var(--accent-signal);
+  }
+
+  .artifact-kind,
+  .concept-ledger strong,
+  .series-ledger strong,
+  .series-ledger em {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+  }
+
+  .artifact-card strong {
+    color: var(--current-text);
+    font-size: 1.04rem;
+  }
+
+  .artifact-card span:last-child {
+    color: var(--current-muted);
+    line-height: 1.5;
+  }
+
+  .secondary-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .status-ledger,
+  .concept-ledger,
+  .series-ledger,
+  .identity-ledger,
+  .commit-ledger,
+  .checksum-table {
+    display: grid;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .status-ledger div,
+  .commit-ledger div,
+  .checksum-row {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .concept-ledger a,
+  .series-ledger a {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: var(--current-text);
+    text-decoration: none;
+  }
+
+  .concept-ledger a {
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+  }
+
+  .concept-ledger a:hover,
+  .series-ledger a:hover {
+    color: var(--accent-signal);
+  }
+
+  .series-ledger span {
+    font-weight: 800;
+  }
+
+  .series-ledger em {
+    color: var(--current-muted);
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .citation-block {
+    max-width: 66ch;
+    margin: 1rem 0 0;
+    color: var(--current-text);
+    font-size: 1.02rem;
+    line-height: 1.72;
+  }
+
+  .identity-ledger {
+    margin: 1.5rem 0 0;
+  }
+
+  .identity-ledger div {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.28fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .identity-ledger dt {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+  }
+
+  .identity-ledger dd {
+    margin: 0;
+    color: var(--current-text);
+    line-height: 1.5;
+  }
+
+  .identity-ledger a {
+    color: var(--accent-signal);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .boundary-panel,
+  .manifest-note {
+    padding: 1.25rem;
+    border-left: 3px solid var(--accent-caution);
+    background: rgba(245, 158, 11, 0.08);
+  }
+
+  .boundary-panel strong,
+  .manifest-note strong {
+    display: block;
+    color: var(--current-text);
+    margin-bottom: 0.65rem;
+  }
+
+  .boundary-panel p,
+  .boundary-panel li,
+  .manifest-note span {
+    color: var(--current-muted);
+    line-height: 1.65;
+  }
+
+  .boundary-panel ul {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  .integrity-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .checksum-row code {
+    color: var(--current-text);
+    font-size: 0.76rem;
+    overflow-wrap: anywhere;
+  }
+
+  .non-goal-list {
+    columns: 2;
+    gap: 2rem;
+    margin: 0;
+    color: var(--current-muted);
+    line-height: 1.7;
+  }
+
+  .notice-section {
+    border-left: 3px solid var(--accent-caution);
+  }
+
+  @media (max-width: 980px) {
+    .wp-publication-hero,
+    .release-grid,
+    .integrity-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .wp-publication-hero-shell,
+    .wp-publication-hero {
+      min-height: auto;
+    }
+
+    .artifact-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .artifact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .identity-ledger div {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+
+    .non-goal-list {
+      columns: 1;
+    }
+
+    .section-heading-row {
+      display: grid;
+    }
+  }
+</style>

@@ -2115,7 +2115,7 @@ export const projects: ProjectEntry[] = [
       {
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
         label: "AIIRWP v1.0 public research candidate",
-        description: "Public research candidate route restored with HTML/PDF artifacts; v0.2 remains rejected; not insurance advice or an underwriting requirement."
+        description: "Public research candidate available with HTML/PDF artifacts; v0.2 remains rejected; not insurance advice or an underwriting requirement."
       },
       {
         href: "/concepts/agentic-lifecycle-governance/",
