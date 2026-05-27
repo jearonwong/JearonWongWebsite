@@ -1,5 +1,44 @@
 # Reconstruction Notes
 
+## WP3-V1-R3Y Notes (May 27, 2026)
+
+**Scope:** Perform QA and repair on the WP3 / AIIRWP v1.0 internal artifact candidates created in R3X. This wave may QA and repair internal Markdown/HTML/PDF candidates, regenerate internal HTML/PDF if feasible, refresh manifest/checksum, create QA reports, and update governance/status files. Do not modify public route, copy files into `public/research`, restore public CTA, create public staging, change noindex/index, create DOCX, claim public release, claim public candidate status, claim final/sealed/release-ready status, or claim insurance/legal/scoring/certification status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3X baseline `84b364ae6eb90fb804d1f9babff6bf934ef7eaae` and confirmed `origin/main` matched before R3Y work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the R3X internal artifact candidate package, R3X reports, current-status registry, SOURCE MASTER, known issues, reconstruction notes, and local PDF tooling.
+4. QA'd the Markdown candidate source for frontmatter/status, Chapters 1-28, Appendix A-H, Appendix I deferred note, source refs `[1]` through `[62]`, table IDs, rejected-v0.2 exclusion, no-DOCX status, and non-claim boundary language.
+5. QA'd the internal HTML candidate for internal banner/status language, structure preservation, source refs, table IDs, table overflow containment, and no public route/staging/CTA changes.
+6. QA'd the internal PDF candidate with `pdfinfo` and `pdftotext`; confirmed 117 A4 pages and complete text markers, then identified Chrome default local file URL/date/page header-footer text.
+7. Regenerated the internal PDF candidate from the existing internal HTML candidate using Chrome headless with `--no-pdf-header-footer`, removing default header/footer text while preserving 117 A4 pages and successful text extraction.
+8. Updated the internal artifact manifest and checksum file after PDF repair.
+9. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3y-artifact-candidate-qa-and-repair/` with README, verdict, Markdown/HTML/PDF QA reports, manifest/checksum QA, wide-table layout QA, boundary QA, public-route regression QA, repair change log, and R3Z continuity notes.
+10. Created R3Y preflight, boundary QA, build/validation report, and final QA report.
+11. Recommended `R3Z-PUBLIC-ROUTE-RESTORATION-PLANNING`.
+
+**Artifact discipline:**
+
+- Markdown candidate source was not changed.
+- Internal HTML candidate was not changed.
+- Internal PDF candidate was repaired/regenerated internally.
+- Manifest and checksum files were updated internally.
+- No DOCX was created.
+- No public AIIRWP route, CTA, sitemap, `llms.txt`, entity graph, or public artifact path was modified.
+- No files were created under `public/research`.
+- The R3P integrated draft was not edited.
+- Rejected v0.2 was not used as source truth or citation source.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3Y performs internal artifact candidate QA and repair only.
+- WP3-V1-R3Y does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3Y hands off to R3Z public route restoration planning only; public route restoration remains unauthorized.
+
+**WP3-V1-R3Y Status:** WP3-V1-R3Y ARTIFACT CANDIDATE QA AND REPAIR COMPLETE / READY FOR R3Z PUBLIC ROUTE RESTORATION PLANNING.
+
 ## WP3-V1-R3X Notes (May 27, 2026)
 
 **Scope:** Create the WP3 / AIIRWP v1.0 internal artifact candidate package from the accepted R3P integrated internal draft. This wave may create the controlled publication-candidate Markdown source, internal HTML/PDF candidates, manifest, checksum file, artifact QA reports, and governance/status updates. Do not modify public route, restore public CTA, create public staging, change noindex/index, create DOCX, claim public release, claim public candidate status, claim final/sealed/release-ready status, or claim insurance/legal/scoring/certification status.

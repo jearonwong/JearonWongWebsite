@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3X ARTIFACT CANDIDATE CREATION COMPLETE / READY FOR R3Y ARTIFACT CANDIDATE QA AND REPAIR.
+- Current v1 wave: WP3-V1-R3Y ARTIFACT CANDIDATE QA AND REPAIR COMPLETE / READY FOR R3Z PUBLIC ROUTE RESTORATION PLANNING.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -74,6 +74,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3w-candidate-source-preparation-planning-qa/`
 - Current v1 internal artifact candidate package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/`
+- Current v1 artifact candidate QA and repair package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3y-artifact-candidate-qa-and-repair/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
 - R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
@@ -104,6 +106,11 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3X creates an internal artifact candidate package from the R3P integrated internal draft.
 - R3X creates a controlled publication-candidate Markdown source, internal HTML candidate, internal PDF candidate, manifest, checksum file, artifact QA reports, and R3Y continuity notes under the internal v1 artifact workspace.
 - R3X does not create DOCX, create public staging, restore public CTA, modify the public route, change noindex/index, copy files into `public/research`, claim public candidate status, claim final/sealed status, claim release-ready status, or claim public release.
+- R3Y performs internal artifact candidate QA and repair on the R3X candidate package.
+- R3Y confirms the Markdown candidate source and internal HTML candidate preserve required structure, source refs, table IDs, non-claim boundaries, and internal-only status.
+- R3Y repairs the internal PDF candidate by regenerating it from the existing internal HTML candidate with Chrome headless no-pdf-header-footer output, removing Chrome default local file URL/date/page header-footer text while preserving 117 A4 pages and text extraction.
+- R3Y updates the internal manifest and checksum file after repair, creates QA and repair reports, and recommends `R3Z-PUBLIC-ROUTE-RESTORATION-PLANNING`.
+- R3Y does not create DOCX, create public staging, restore public CTA, modify the public route, change noindex/index, copy files into `public/research`, claim public candidate status, claim final/sealed status, claim release-ready status, or claim public release.
 
 ## WP4
 
@@ -111,4 +118,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3X artifact candidate creation completion creates internal artifact candidates only and does not authorize public artifact restoration, public route restoration, public candidate status, final/sealed status, release-ready status, public release, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, or regulator approval.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3Y artifact candidate QA and repair completion keeps artifact candidates internal only and authorizes public route restoration planning only; it does not authorize public artifact restoration, public route restoration, public candidate status, final/sealed status, release-ready status, public release, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, or regulator approval.

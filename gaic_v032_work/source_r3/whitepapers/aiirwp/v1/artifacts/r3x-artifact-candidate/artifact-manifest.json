@@ -7,6 +7,9 @@
   "pdf_candidate_path": "gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-internal-candidate.pdf",
   "pdf_deferred_note": null,
   "generated_at": "2026-05-27T14:20:59.764Z",
+  "last_qa_repair_wave": "WP3-V1-R3Y-ARTIFACT-CANDIDATE-QA-AND-REPAIR-01",
+  "last_qa_repaired_at": "2026-05-27T14:45:34Z",
+  "last_qa_repair_scope": "Internal PDF candidate regenerated from existing internal HTML candidate with Chrome headless no-pdf-header-footer print option; Markdown and HTML candidates unchanged.",
   "public_status": "internal-only",
   "route_status": "no-public-route-change",
   "no_docx_status": "public DOCX unauthorized; no DOCX created",
@@ -19,7 +22,7 @@
   "checksums": {
     "markdown_candidate_source": "08724a77dc3ffdf91a98aafa5afec8b2c82a75361bd1910dd4d811703a3c6343",
     "html_candidate": "429df4e916a33433e4f5d36407bd94eb588161049dd81c65eac797a33dd0b0e3",
-    "pdf_candidate": "6ee05f6eed5ef5195f657d793235b927b3d97f996297cc6eb0a811478833bdc7",
+    "pdf_candidate": "d9eb41fb9fc75217773b88aaf4207c69da0a26c20bdc68cc32cbc802247ddb92",
     "artifact_manifest": "recorded in sha256sums.txt"
   }
 }

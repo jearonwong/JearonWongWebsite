@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3X Artifact Candidate Creation)
+**Last Updated:** May 27, 2026 (WP3-V1-R3Y Artifact Candidate QA and Repair)
+
+## WP3-V1-R3Y Artifact Candidate QA and Repair
+
+### Status: WP3-V1-R3Y ARTIFACT CANDIDATE QA AND REPAIR COMPLETE / READY FOR R3Z PUBLIC ROUTE RESTORATION PLANNING
+
+R3Y performs bundled QA and repair on the AIIRWP v1.0 internal artifact candidates created in R3X. This is a high-ROI execution wave, not a planning-only wave.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3X commit `84b364ae6eb90fb804d1f9babff6bf934ef7eaae` before R3Y edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3Y edits.
+3. Inspected the R3X artifact package, R3X reports, current status, source master, known issues, reconstruction notes, and local PDF tooling.
+4. QA'd the controlled Markdown candidate source for frontmatter/status, Chapters 1-28, Appendix A-H, Appendix I deferred note, source refs `[1]` through `[62]`, table IDs, rejected-v0.2 exclusion, no-DOCX status, and non-claim boundary language.
+5. QA'd the internal HTML candidate for visible internal status/non-claim banner, structure preservation, source refs, table IDs, table overflow containment, and no public route/staging/CTA changes.
+6. QA'd the internal PDF candidate with `pdfinfo` and `pdftotext`; confirmed 117 A4 pages, title, Chapters 1-28, Appendix A-H, Appendix I deferred note, source refs, and table IDs.
+7. Repaired the internal PDF candidate by regenerating it from the existing internal HTML candidate with Chrome headless `--no-pdf-header-footer`, removing Chrome default local file URL/date/page header-footer text.
+8. Updated `artifact-manifest.json` and `sha256sums.txt` after PDF repair.
+9. Created the R3Y QA and repair package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3y-artifact-candidate-qa-and-repair/`.
+10. Created R3Y preflight, boundary QA, build/validation report, and final QA report.
+11. Recommended `R3Z-PUBLIC-ROUTE-RESTORATION-PLANNING` as the next wave.
+
+Remaining known issues:
+
+- R3Z may plan public route restoration, but public route restoration itself remains unauthorized until a later explicit execution wave.
+- Wide-table visual QA remains a gate before any public route restoration execution, especially for `T-02-01`, `T-09-01`, `T-14-01`, `T-18-01`, `T-21-01`, and `T-27-01`.
+- Future source strengthening remains available for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. Public artifact: none. Public PDF: none. Public route: noindex under-rewrite. Artifact candidates are internal only.
+
+Boundary discipline:
+
+- R3Y performs internal artifact candidate QA and repair only.
+- R3Y does not create DOCX, copy files into `public/research`, create public files, restore public CTAs, modify the public route, change noindex/index, create public staging, create a public release package, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3Y Status:** WP3-V1-R3Y ARTIFACT CANDIDATE QA AND REPAIR COMPLETE / READY FOR R3Z PUBLIC ROUTE RESTORATION PLANNING
 
 ## WP3-V1-R3X Artifact Candidate Creation
 
