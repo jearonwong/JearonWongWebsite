@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3R Notes (May 27, 2026)
+
+**Scope:** Create the internal artifact planning package for WP3 / AIIRWP v1.0 based on the R3P integrated internal draft and R3Q integrated draft QA. Do not generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, modify public route, restore public CTAs, create public staging, perform source-strengthening research, or claim release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3Q baseline `dbaf98063c37ca3f8bafdefda84e28c7941ba5f3` and confirmed `origin/main` matched before R3R work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3P integrated draft package, R3Q integrated draft QA package, R3Q reports, VI guidance, old artifact planning references only for pattern awareness, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3r-artifact-planning/`.
+5. Created README, artifact master plan, format-specific planning, wide-table/layout artifact plan, public route/status plan, artifact boundary/nonclaim plan, source/citation/manifest plan, artifact generation gate plan, R3S QA instructions, artifact planning decision, and R3S continuity notes.
+6. Recommended `R3S-ARTIFACT-PLANNING-QA`.
+7. Planned future artifact classes without creating them: internal integrated Markdown source, public HTML research page, public PDF, artifact manifest, checksum file, and optional downloadable Markdown if later authorized.
+8. Preserved public status as withdrawn / v1.0 rewrite in progress, public artifact none, public PDF none, public route noindex under-rewrite, and no public DOCX authorized.
+9. Carried forward table/layout risks for `T-02-01`, `T-09-01`, `T-14-01`, `T-18-01`, `T-21-01`, and `T-27-01`.
+10. Created R3R preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No artifact was generated.
+- No public HTML, PDF, DOCX, manifest, checksum, public staging, or release package was created.
+- No public AIIRWP route, CTA, sitemap, `llms.txt`, entity graph, or public artifact path was modified.
+- No files were created under `public/research`.
+- No source-strengthening research was performed.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3R is artifact planning only.
+- WP3-V1-R3R does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3R keeps artifact generation blocked and hands off to R3S artifact planning QA.
+
+**WP3-V1-R3R Status:** WP3-V1-R3R ARTIFACT PLANNING COMPLETE / READY FOR R3S ARTIFACT PLANNING QA.
+
 ## WP3-V1-R3Q Notes (May 27, 2026)
 
 **Scope:** Perform QA on the WP3 / AIIRWP v1.0 R3P internal integrated full draft. Do not revise the integrated draft, revise R3J or R3M source files, perform source-strengthening research, generate artifacts, create public files, or claim release status.

@@ -1,7 +1,43 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3Q Integrated Draft QA)
+**Last Updated:** May 27, 2026 (WP3-V1-R3R Artifact Planning)
+
+## WP3-V1-R3R Artifact Planning
+
+### Status: WP3-V1-R3R ARTIFACT PLANNING COMPLETE / READY FOR R3S ARTIFACT PLANNING QA
+
+R3R creates the AIIRWP v1.0 internal artifact planning package. It plans future artifact architecture and gates without generating artifacts or changing public status.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3Q commit `dbaf98063c37ca3f8bafdefda84e28c7941ba5f3` before R3R edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3R edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3P integrated draft package, R3Q integrated draft QA package, R3Q reports, VI guidance, and rejected v0.2 boundary context.
+4. Created the R3R artifact planning package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3r-artifact-planning/`.
+5. Planned candidate future artifacts without creating them: internal integrated Markdown source, public HTML research page, public PDF, artifact manifest, checksum file, and optional downloadable Markdown if later authorized.
+6. Preserved the DOCX prohibition and deferred public route restoration, public CTA restoration, public staging, public candidate status, final/sealed status, release-ready status, and public release.
+7. Planned Markdown, HTML, PDF, DOCX, wide-table, public route, status, source/citation, manifest, checksum, and generation-gate handling.
+8. Carried forward the wide-table risk list for `T-02-01`, `T-09-01`, `T-14-01`, `T-18-01`, `T-21-01`, and `T-27-01`.
+9. Preserved source refs `[1]` through `[62]`, excluded rejected v0.2 from source truth, and carried forward source gaps as strengthening opportunities unless later judged blockers.
+10. Recommended `R3S-ARTIFACT-PLANNING-QA` as the next wave and confirmed artifact generation remains blocked.
+
+Remaining known issues:
+
+- R3S should QA artifact planning before any artifact planning repair, source strengthening, artifact candidate generation planning, or blocked decision.
+- Future artifact generation remains blocked until a later explicitly authorized wave.
+- Public route restoration remains blocked until artifact generation QA, manifest/checksum QA, metadata QA, boundary QA, and owner authorization pass.
+- Wide-table treatment remains a future planning/implementation risk, not solved in R3R.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3R is artifact planning only.
+- R3R does not generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public files, restore public CTAs, modify the public route, create public staging, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3R Status:** WP3-V1-R3R ARTIFACT PLANNING COMPLETE / READY FOR R3S ARTIFACT PLANNING QA
 
 ## WP3-V1-R3Q Integrated Draft QA
 
