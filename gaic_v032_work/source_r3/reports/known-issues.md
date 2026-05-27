@@ -5364,3 +5364,35 @@ Boundary discipline:
 - WP3-V1-R3H does not modify the public route, restore public artifact CTAs, create HTML/PDF/DOCX artifacts, create a public manifest/checksum, create public staging, claim public release, claim public candidate status, claim final/sealed status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim endorsement outside insurance-form context, claim legal proof, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, create a score/standard/readiness certification, claim external adoption, claim indexing/SEO-GEO or answer-engine recognition, or implement WP4.
 
 **WP3-V1-R3H Status:** ✓ WP3-V1-R3H FULL-BODY ASSEMBLY DRAFT COMPLETE / READY FOR R3I FULL-BODY EDITORIAL QA
+
+## WP3-V1-R3AA Known Issues
+
+### Public Route Restoration Executed
+
+WP3-V1-R3AA restored the AIIRWP v1.0 public research candidate route and public artifact availability.
+
+Resolved in this wave:
+
+- Created public HTML, PDF, manifest, and checksum artifacts under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+- Regenerated the public PDF from normalized public HTML; the PDF remains 117 A4 pages.
+- Restored the WP3 route page as a bounded public research candidate artifact hub.
+- Updated the research index, sitemap custom page, robots stale v0.1/v0.2 containment, `llms.txt`, entity graph, and sitewide AIIRWP public-status wording.
+- Created the R3AA publication execution package and R3AA reports.
+- Updated current status and registry governance to record public route restoration.
+
+Remaining known issues:
+
+- R3AB should perform public route post-restoration QA on live route behavior, artifact links, metadata, sitemap output, `llms.txt`, entity graph, manifest/checksum, and boundary language.
+- Final Seal remains separate and unauthorized.
+- Public announcement / social posting remains separate and unauthorized.
+- Public source Markdown remains unauthorized.
+- Public DOCX remains unauthorized.
+- Exact exclusion and sublimit primary wording, insurer claim documentation, and AI underwriting questionnaire sources remain future source-strengthening opportunities, not R3AA blockers.
+- Pre-existing unrelated `public/social/*` files remain outside the R3AA commit.
+
+Boundary discipline:
+
+- WP3-V1-R3AA restores public route and artifact availability only.
+- WP3-V1-R3AA does not create DOCX, copy source Markdown to the public route, create public announcement or social copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, claim regulator approval, provide insurance advice, provide legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, or provide claims approval guidance.
+
+**WP3-V1-R3AA Status:** WP3-V1-R3AA PUBLIC ROUTE RESTORATION EXECUTION COMPLETE / READY FOR R3AB PUBLIC ROUTE POST-RESTORATION QA.

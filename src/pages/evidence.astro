@@ -11,13 +11,13 @@ const gaicAssetBase = "/research/global-ai-compliance-white-paper-2026";
 const aiaawpAssetBase = "/research/agentic-ai-auditability-assurance-white-paper-2026";
 const aiirwpAssetBase = "/research/agentic-ai-insurability-risk-transfer-white-paper-2026";
 const pageDescription =
-  "Evidence Registry and Citation Kit for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, AIIRWP v1.0 rewrite status, Agentic Lifecycle Governance, and related source surfaces.";
+  "Evidence Registry and Citation Kit for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, the AIIRWP v1.0 public research candidate, Agentic Lifecycle Governance, and related source surfaces.";
 const citationText =
   "Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026.";
 const aiaawpCitationText =
   "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026.";
 const aiirwpCitationText =
-  "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Withdrawn public candidate AIIRWP-2026-v0.2-PUBLIC-CANDIDATE, May 2026; not current source truth.";
+  "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Technical Report AIIRWP-2026-v1.0-R3AA-PUBLIC-ROUTE, May 2026.";
 const evidenceItems = [
   {
     group: "Identity",
@@ -57,6 +57,12 @@ const evidenceItems = [
   },
   {
     group: "Research",
+    label: "AIIRWP responsive HTML full text",
+    href: `${aiirwpAssetBase}/agentic-ai-insurability-risk-transfer-white-paper-2026.html`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Research",
     label: "GAIC PDF",
     href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.pdf`,
     status: "authored-analysis"
@@ -65,6 +71,12 @@ const evidenceItems = [
     group: "Research",
     label: "AIAAWP PDF",
     href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Research",
+    label: "AIIRWP PDF",
+    href: `${aiirwpAssetBase}/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf`,
     status: "public-research-candidate"
   },
   {
@@ -77,6 +89,12 @@ const evidenceItems = [
     group: "Integrity",
     label: "AIAAWP checksums",
     href: `${aiaawpAssetBase}/checksums.sha256`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Integrity",
+    label: "AIIRWP checksums",
+    href: `${aiirwpAssetBase}/checksums.sha256`,
     status: "public-research-candidate"
   },
   {
@@ -95,6 +113,12 @@ const evidenceItems = [
     group: "Integrity",
     label: "AIAAWP manifest",
     href: `${aiaawpAssetBase}/manifest.json`,
+    status: "public-research-candidate"
+  },
+  {
+    group: "Integrity",
+    label: "AIIRWP manifest",
+    href: `${aiirwpAssetBase}/manifest.json`,
     status: "public-research-candidate"
   },
   {
@@ -204,11 +228,15 @@ const technicalArtifacts = [
   { label: "GAIC responsive HTML", href: `${gaicAssetBase}/global-ai-compliance-white-paper-2026.html` },
   { label: "AIAAWP PDF", href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.pdf` },
   { label: "AIAAWP responsive HTML", href: `${aiaawpAssetBase}/agentic-ai-auditability-assurance-white-paper-2026.html` },
+  { label: "AIIRWP PDF", href: `${aiirwpAssetBase}/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf` },
+  { label: "AIIRWP responsive HTML", href: `${aiirwpAssetBase}/agentic-ai-insurability-risk-transfer-white-paper-2026.html` },
   { label: "Checksums", href: `${gaicAssetBase}/checksums.sha256` },
   { label: "AIAAWP checksums", href: `${aiaawpAssetBase}/checksums.sha256` },
+  { label: "AIIRWP checksums", href: `${aiirwpAssetBase}/checksums.sha256` },
   { label: "GAIC current manifest", href: `${gaicAssetBase}/manifest.json` },
   { label: "Publication candidate manifest", href: `${gaicAssetBase}/publication-candidate-manifest.json` },
   { label: "AIAAWP manifest", href: `${aiaawpAssetBase}/manifest.json` },
+  { label: "AIIRWP manifest", href: `${aiirwpAssetBase}/manifest.json` },
   { label: "Public PDF metadata re-seal manifest", href: `${gaicAssetBase}/public-pdf-metadata-reseal-manifest.json` },
   { label: "Entity graph JSON", href: entityGraphPath }
 ];
@@ -283,7 +311,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     "Jearon Wong evidence registry",
     "MPLP citation",
     "Global AI Compliance White Paper 2026 citation",
-    "AIIRWP v1.0 rewrite status",
+    "AIIRWP v1.0 public research candidate",
     "Agentic Lifecycle Governance evidence",
     "AI agent governance citation kit"
   ]}
@@ -294,7 +322,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Evidence Registry / Citation Kit"
     objectType="PAGE_ROLE"
     objectValue="EVIDENCE SHELF"
-    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, AIIRWP v1.0 rewrite status, Agentic Lifecycle Governance, and related source surfaces."
+    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, the AIIRWP v1.0 public research candidate, Agentic Lifecycle Governance, and related source surfaces."
   />
 
   <div class="zone-b page-body page-body--standard">
@@ -315,7 +343,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <a href="/projects/mplp/">MPLP</a>
           <a href="/research/global-ai-compliance-white-paper-2026/">GAIC 2026</a>
           <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/">AIAAWP 2026</a>
-          <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/">AIIRWP v1.0 rewrite status</a>
+          <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/">AIIRWP v1.0 public research candidate</a>
           <a href="/concepts/map/">Concepts Map</a>
           <a href={entityGraphPath}>Entity graph JSON</a>
         </div>

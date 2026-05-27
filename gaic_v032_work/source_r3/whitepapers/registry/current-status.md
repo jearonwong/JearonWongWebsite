@@ -22,12 +22,12 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP3 / AIIRWP
 
-- Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3Z PUBLIC ROUTE RESTORATION READINESS COMPLETE / READY FOR R3AA PUBLIC ROUTE RESTORATION EXECUTION.
+- Status: public research candidate route restored; post-restoration QA pending.
+- Current v1 wave: WP3-V1-R3AA PUBLIC ROUTE RESTORATION EXECUTION COMPLETE / READY FOR R3AB PUBLIC ROUTE POST-RESTORATION QA.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
-- Current public artifact: none.
-- Current public PDF: none.
-- Public route: noindex under-rewrite status page.
+- Current public artifacts: HTML/PDF/manifest/checksum under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+- Current public PDF: `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf`.
+- Public route: restored at `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
 - Active workspace: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/`.
 - Current v1 research package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/research/r1-source-research/`.
 - Current v1 outline package: `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/outline/r2-source-grounded-outline/`.
@@ -78,6 +78,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3y-artifact-candidate-qa-and-repair/`
 - Current v1 public route restoration readiness package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3z-public-route-restoration-readiness/`
+- Current v1 public route restoration execution package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3aa-public-route-restoration-execution/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
 - R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
@@ -118,6 +120,11 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3Z verdict: `ACCEPTED_FOR_PUBLIC_ROUTE_RESTORATION_EXECUTION_WITH_NOTES`.
 - R3Z recommends `WP3-V1-R3AA-PUBLIC-ROUTE-RESTORATION-EXECUTION`.
 - R3Z does not copy files into `public/research`, modify the public route, restore public CTA, change noindex/index, update robots/sitemap/`llms.txt`/entity graph, create public staging, create DOCX, claim public candidate as current status, claim final/sealed status, claim release-ready status, claim public release, claim insurer acceptance, claim coverage readiness, claim underwriting readiness, claim claim readiness, claim certification, claim score/standard/readiness certification, or claim regulator approval.
+- R3AA executes public route restoration from the R3Y-accepted internal artifact candidate package.
+- R3AA creates public HTML, PDF, manifest, and checksum artifacts under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
+- R3AA restores the WP3 route page as a bounded public research candidate artifact hub, updates the research index, sitemap custom page, robots stale-path containment, `llms.txt`, entity graph, and sitewide AIIRWP public-status wording.
+- R3AA regenerates the public PDF from the normalized public HTML using the existing Chrome headless print pattern; the PDF remains 117 A4 pages.
+- R3AA does not create DOCX, copy source Markdown to the public route, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 
 ## WP4
 
@@ -125,4 +132,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3Z public route restoration readiness completion keeps public artifact status as none, public PDF as none, and the public route as noindex under-rewrite until a later execution wave; it authorizes R3AA public route restoration execution planning handoff only. R3Z does not authorize public artifact restoration in this wave, public route restoration in this wave, public candidate status as current status, final/sealed status, release-ready status, public release, public announcement, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, or regulator approval.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3AA restores the public research candidate route and exposes HTML/PDF/manifest/checksum artifacts, but it does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.

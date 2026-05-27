@@ -234,13 +234,13 @@ export const definitions: DefinitionEntry[] = [
       "Not insurance advice, a coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, certification, or a guarantee that any system is insurable.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
       { label: "Agentic Insurability Objects", href: "#agentic-insurability-objects" },
-      { label: "Agentic Insurability Readiness Model", href: "#agentic-insurability-readiness-model" },
+      { label: "Agentic Insurability Reasoning Model", href: "#agentic-insurability-reasoning-model" },
       { label: "Evidence Chain", href: "#evidence-chain" }
     ]
   },
@@ -254,7 +254,7 @@ export const definitions: DefinitionEntry[] = [
       "Not insurer product requirements, policy terms, legal liability objects, certification criteria, or a mandatory implementation schema.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -265,16 +265,16 @@ export const definitions: DefinitionEntry[] = [
     ]
   },
   {
-    slug: "agentic-insurability-readiness-model",
-    term: "Agentic Insurability Readiness Model (AIRM)",
+    slug: "agentic-insurability-reasoning-model",
+    term: "Agentic Insurability Reasoning Model (AIRM)",
     section: "governance",
     definition:
-      "AIRM is the Agentic Insurability Readiness Model from AIIRWP, describing L0-L5 readiness vocabulary for evidence visibility, claims review, underwriting discussion, and dispute readiness.",
+      "AIRM is the Agentic Insurability Reasoning Model from AIIRWP, a non-scoring vocabulary for evidence visibility, claims review, underwriting discussion, and dispute readiness.",
     distinction:
       "Not an actuarial score, insurer acceptance, coverage guarantee, underwriting standard, claims approval guide, certification, vendor score, or procurement benchmark.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -294,7 +294,7 @@ export const definitions: DefinitionEntry[] = [
       "Not a liability determination, coverage opinion, insured-status opinion, or conclusion that a policy applies.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -314,7 +314,7 @@ export const definitions: DefinitionEntry[] = [
       "Not the insured party, not a legal subject, not a standalone coverage trigger, and not a claim that a system is insurable.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -334,14 +334,14 @@ export const definitions: DefinitionEntry[] = [
       "Not claims approval guidance, a payment guarantee, legal causation proof, settlement advice, or an insurer-required form.",
     evidence: [
       {
-        label: "AIIRWP v1.0 rewrite status",
+        label: "AIIRWP v1.0 public research candidate",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
     related: [
       { label: "Evidence Chain", href: "#evidence-chain" },
       { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
-      { label: "Agentic Insurability Readiness Model", href: "#agentic-insurability-readiness-model" }
+      { label: "Agentic Insurability Reasoning Model", href: "#agentic-insurability-reasoning-model" }
     ]
   },
   {

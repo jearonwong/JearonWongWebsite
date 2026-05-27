@@ -32,7 +32,7 @@ export const siteEntityTerms = [
   "AARM",
   "Agentic AI Insurability",
   "Agentic Insurability Objects",
-  "Agentic Insurability Readiness Model",
+  "Agentic Insurability Reasoning Model",
   "Insured Legal Subject",
   "Agentic Risk Object",
   "Claim Evidence Chain",
@@ -131,7 +131,7 @@ export function createPersonJsonLd() {
       },
       {
         "@type": "TechArticle",
-        name: "Agentic AI Insurability & Risk Transfer White Paper 2026 — Under v1.0 Rewrite",
+        name: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         url: absoluteUrl("/research/agentic-ai-insurability-risk-transfer-white-paper-2026/")
       },
       {

@@ -6103,3 +6103,36 @@ The earlier R6B verification record in commit `4d85d862280fe2917f226ec805602cc94
 - R3N confirms Appendix A remains authored analytical model, Appendix B remains non-scoring, Appendix C remains optional analytical structure, Appendix D remains reconstruction-only, Appendix E remains coverage-boundary question framing, Appendix F remains source/caveat discipline, Appendix G remains non-claim guardrail, Appendix H remains layout-risk planning only, and Appendix I remains deferred.
 
 **WP3-V1-R3N Status:** WP3-V1-R3N APPENDIX QA COMPLETE / READY FOR R3O FULL-DRAFT INTEGRATION PLANNING.
+
+## WP3-V1-R3AA Notes (May 27, 2026)
+
+**Scope:** Public route restoration execution for the WP3 / AIIRWP v1.0 public research candidate.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3Z baseline `a459470570b1b84cc89a566abf606efa78491bf9` and confirmed `origin/main` matched before R3AA work.
+2. Confirmed pre-existing unrelated untracked files under `public/social/*`; these remained outside R3AA scope.
+3. Inspected the R3Z readiness package, R3X/R3Y internal artifact candidates, current WP3 route, research index, robots, sitemap config, `llms.txt`, entity graph, current status, registry, SOURCE MASTER, known issues, and reconstruction notes.
+4. Copied the accepted internal HTML/PDF candidate into the WP3 public research artifact directory and normalized the public HTML status shell for public route restoration.
+5. Regenerated the public PDF from normalized public HTML with the existing Chrome headless no-header/footer print pattern. The PDF is 117 A4 pages.
+6. Created public `manifest.json` and `checksums.sha256`.
+7. Restored the WP3 public route page as a public research candidate artifact hub with HTML/PDF/manifest/checksum links, citation metadata, JSON-LD, rejected v0.2 exclusion, no-DOCX note, and visible non-claim boundary.
+8. Updated the research index, sitemap custom page, robots stale v0.1/v0.2 containment, `llms.txt`, entity graph, and sitewide AIIRWP references.
+9. Created the R3AA execution package under `whitepapers/aiirwp/v1/publication/r3aa-public-route-restoration-execution/`.
+10. Created R3AA reports under `gaic_v032_work/source_r3/reports/`.
+11. Updated SOURCE MASTER, known issues, reconstruction notes, current-status registry, and whitepaper series registry.
+
+**Artifact discipline:**
+
+- Public HTML, PDF, manifest, and checksum were created.
+- No DOCX was created.
+- Source Markdown was not copied to the public route.
+- No social/public announcement copy was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3AA restores public route and artifact availability only.
+- WP3-V1-R3AA does not claim public announcement, Final Seal, final/sealed status, release-ready status, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, certification, score, standard, readiness certification, regulator approval, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, or claims approval guidance.
+
+**WP3-V1-R3AA Status:** WP3-V1-R3AA PUBLIC ROUTE RESTORATION EXECUTION COMPLETE / READY FOR R3AB PUBLIC ROUTE POST-RESTORATION QA.

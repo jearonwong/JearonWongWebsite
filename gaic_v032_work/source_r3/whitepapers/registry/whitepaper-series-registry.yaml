@@ -36,26 +36,26 @@ whitepapers:
   wp3_aiirwp:
     title: Agentic AI Insurability & Risk Transfer White Paper 2026
     short_name: AIIRWP
-    public_status: withdrawn; v1.0 rewrite in progress
+    public_status: public research candidate route restored; post-restoration QA pending
     rejected_version: v0.2
     rejected_document_id: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE
     canonical_v1_workspace_path: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/
     public_route: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-    html_artifact: null
-    pdf_artifact: null
-    manifest: null
-    checksum: null
-    page_count: null
-    current_source: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/source/
-    current_artifact: null
-    public_status_pointer: withdrawn; noindex route; no active artifact CTA
+    html_artifact: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html
+    pdf_artifact: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf
+    manifest: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json
+    checksum: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256
+    page_count: 117
+    current_source: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-publication-candidate-source.md
+    current_artifact: public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
+    public_status_pointer: public research candidate route restored; HTML/PDF/manifest/checksum available; post-restoration QA pending
     archive: gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/
     do_not_use:
       - public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html
       - public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.pdf
       - gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/
-    no_current_public_artifact: true
-    no_current_public_pdf: true
+    no_current_public_artifact: false
+    no_current_public_pdf: false
     no_public_docx: true
   wp4_enterprise_implementation:
     title: Enterprise Implementation White Paper

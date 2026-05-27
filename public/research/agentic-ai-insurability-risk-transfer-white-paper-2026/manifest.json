@@ -1,0 +1,52 @@
+{
+  "wave_id": "WP3-V1-R3AA-PUBLIC-ROUTE-RESTORATION-EXECUTION",
+  "source_basis": "R3Y-accepted internal artifact candidate package under gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/; public HTML status shell normalized in R3AA and public PDF regenerated from the normalized public HTML.",
+  "source_basis_commit": "a459470570b1b84cc89a566abf606efa78491bf9",
+  "public_html_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
+  "public_pdf_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
+  "public_manifest_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
+  "public_checksum_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
+  "generated_at": "2026-05-27T16:07:29.609Z",
+  "public_status": "public-research-candidate-route-restored",
+  "route_status": "public-route-restored",
+  "no_docx_status": "public DOCX unauthorized",
+  "rejected_v0_2_exclusion": true,
+  "source_refs_range": "[1]-[62]",
+  "table_id_range": "T-02-01, T-04-01 through T-27-01",
+  "appendix_status": "Appendix A-H included; Appendix I deferred",
+  "boundary_status": [
+    "not legal advice",
+    "not insurance advice",
+    "not coverage opinion",
+    "not underwriting guidance",
+    "not certification",
+    "not final",
+    "not sealed",
+    "not release-ready"
+  ],
+  "artifacts": [
+    {
+      "role": "HTML",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
+      "media_type": "text/html",
+      "sha256": "c942f23613dd7c896745e9d6e6ebde4ecbe9f7f2a95d27eb80f8c841ade0eeae",
+      "bytes": 356871
+    },
+    {
+      "role": "PDF",
+      "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
+      "media_type": "application/pdf",
+      "sha256": "cfd5b1984aa111e0280a5f71774e3ee19bb9bec37410d58488ab29504f93c5e9",
+      "bytes": 2224913,
+      "page_count": 117
+    }
+  ],
+  "checksums": {
+    "public_html": "c942f23613dd7c896745e9d6e6ebde4ecbe9f7f2a95d27eb80f8c841ade0eeae",
+    "public_pdf": "cfd5b1984aa111e0280a5f71774e3ee19bb9bec37410d58488ab29504f93c5e9",
+    "public_manifest": "recorded in checksums.sha256 after manifest serialization"
+  },
+  "source_markdown_publication": "not authorized; source Markdown not copied to public route",
+  "public_distribution_note": "Public distribution exposes HTML, PDF, manifest, and checksum only. No public DOCX is authorized.",
+  "next_phase": "R3AB public route post-restoration QA; final seal and public announcement require separate authorization."
+}

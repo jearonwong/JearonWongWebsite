@@ -65,7 +65,7 @@ export const siteSemanticBaseline = {
     "AARM",
     "Agentic AI Insurability",
     "Agentic Insurability Objects",
-    "Agentic Insurability Readiness Model",
+    "Agentic Insurability Reasoning Model",
     "Insured Legal Subject",
     "Agentic Risk Object",
     "Claim Evidence Chain",
@@ -2114,8 +2114,8 @@ export const projects: ProjectEntry[] = [
       },
       {
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-        label: "AIIRWP v1.0 rewrite status",
-        description: "Withdrawn v0.2 candidate; AIIRWP v1.0 rewrite in progress; not insurance advice or an underwriting requirement."
+        label: "AIIRWP v1.0 public research candidate",
+        description: "Public research candidate route restored with HTML/PDF artifacts; v0.2 remains rejected; not insurance advice or an underwriting requirement."
       },
       {
         href: "/concepts/agentic-lifecycle-governance/",
@@ -2427,7 +2427,7 @@ const commonGaicPlaybookLinks: PlaybookLink[] = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
   { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
   { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
-  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "AIIRWP v1.0 rewrite status" },
+  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "AIIRWP v1.0 public research candidate" },
   { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
   { href: "/concepts/rccs-m/", label: "RCCS-M" },
   { href: "/concepts/alcs/", label: "ALCS" }
