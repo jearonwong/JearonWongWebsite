@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3O Full Draft Integration Planning)
+**Last Updated:** May 27, 2026 (WP3-V1-R3P Full Draft Integration Draft)
+
+## WP3-V1-R3P Full Draft Integration Draft
+
+### Status: WP3-V1-R3P FULL-DRAFT INTEGRATION DRAFT COMPLETE / READY FOR R3Q INTEGRATED DRAFT QA
+
+R3P creates the first AIIRWP v1.0 internal integrated Markdown draft by combining the accepted R3J revised body with R3M Appendix A-H. It keeps Appendix I deferred and does not edit the R3J or R3M source files in place.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3O commit `676a9364d3aeedbe129978c28ba4a9c3c42d105c` before R3P edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3P edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3M appendix drafting package, R3N appendix QA package, R3O integration planning package, and rejected v0.2 boundary context.
+4. Created the R3P full draft integration package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/integration/r3p-full-draft-integration-draft/`.
+5. Created `AIIRWP-v1.0-R3P-full-draft-internal-integrated.md` as one internal integrated Markdown draft.
+6. Integrated R3J body first, preserving Front Matter, Part I through Part VI, Chapters 1-28, Chapter 28 prose conclusion, table IDs, and source refs.
+7. Integrated Appendix A-H after Chapter 28.
+8. Added an Appendix I deferred note and did not draft Appendix I.
+9. Chose not to add new body-to-appendix cross-references in R3P; cross-reference refinement remains available to R3Q/R3R if QA requests it.
+10. Confirmed no R3J source body in-place edit, no R3M appendix source in-place edit, no source-strengthening research, and no artifact generation.
+
+Remaining known issues:
+
+- R3Q should QA the integrated draft before integration repair, source strengthening, artifact planning, or another internal revision wave.
+- R3Q should decide whether minimal body-to-appendix cross-references are needed later.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- Wide table layout risks remain future artifact-planning issues and are not solved in R3P.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3P is internal integrated Markdown drafting only.
+- R3P does not edit source drafts in place, perform source-strengthening research, generate artifacts, create public files, restore public CTAs, modify the public route, create public staging, create a manifest/checksum/PDF/HTML/DOCX, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3P Status:** WP3-V1-R3P FULL-DRAFT INTEGRATION DRAFT COMPLETE / READY FOR R3Q INTEGRATED DRAFT QA
 
 ## WP3-V1-R3O Full Draft Integration Planning
 
