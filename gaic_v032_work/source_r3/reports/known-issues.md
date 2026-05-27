@@ -1,7 +1,45 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 27, 2026 (WP3-V1-R3V Candidate Source Preparation Planning)
+**Last Updated:** May 27, 2026 (WP3-V1-R3W Candidate Source Preparation Planning QA)
+
+## WP3-V1-R3W Candidate Source Preparation Planning QA
+
+### Status: WP3-V1-R3W CANDIDATE SOURCE PREPARATION PLANNING QA COMPLETE / READY FOR R3X CANDIDATE SOURCE CREATION PLANNING
+
+R3W performs QA on the AIIRWP v1.0 R3V candidate source preparation planning package. It confirms the package is stable enough for candidate source creation planning, while candidate source creation and artifact generation remain blocked.
+
+Resolved in this wave:
+
+1. Confirmed local `HEAD` and `origin/main` at accepted R3V commit `c78d9354d5ded358abb88eebbe20252a87e05bd9` before R3W edits.
+2. Confirmed the worktree contained only pre-existing untracked `public/social/*` files before R3W edits.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3P integrated draft package, R3U artifact candidate generation planning QA package, R3V candidate source preparation planning package, R3V reports, and rejected v0.2 boundary context.
+4. Created the R3W candidate source preparation planning QA package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3w-candidate-source-preparation-planning-qa/`.
+5. Returned verdict `ACCEPTED_FOR_CANDIDATE_SOURCE_CREATION_PLANNING_WITH_NOTES`.
+6. Confirmed R3V stayed preparation-planning-only and created no publication-candidate Markdown, candidate source path, artifacts, HTML, PDF, DOCX, manifest, checksum, public research files, public route changes, CTA restoration, public staging, or release package.
+7. Confirmed the future candidate source path/naming rules, frontmatter/status fields, preservation scans, boundary controls, source/citation plan, table/layout readiness plan, and creation stop gates are adequate for the next planning wave.
+8. Confirmed source refs `[1]` through `[62]`, Chapters 1-28, Appendix A-H, Appendix I deferred note, body table IDs, rejected-v0.2 exclusion, and no-DOCX status remain future candidate source constraints.
+9. Recommended `R3X-CANDIDATE-SOURCE-CREATION-PLANNING` as the next wave.
+10. Confirmed candidate source creation and artifact generation remain blocked.
+
+Remaining known issues:
+
+- R3X should plan candidate source creation only, not create the source unless separately authorized later.
+- Candidate source creation remains blocked until a later explicitly authorized wave.
+- Future artifact generation remains blocked until a later explicitly authorized wave.
+- Publication-candidate Markdown creation remains blocked until separately authorized.
+- Public route restoration remains blocked until artifact candidate QA, manifest/checksum QA, metadata QA, boundary QA, and owner authorization pass.
+- Wide-table treatment remains a pre-generation gate.
+- Source strengthening remains a later opportunity for exact exclusion/sublimit primary wording, insurer claim documentation, and AI underwriting questionnaires.
+- WP3 remains withdrawn / v1.0 rewrite in progress publicly. No public artifact exists.
+
+Boundary discipline:
+
+- R3W is candidate source preparation planning QA only.
+- R3W does not create publication-candidate Markdown, create the candidate source path, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public files, restore public CTAs, modify the public route, create public staging, create a release package, claim publication, claim final/sealed status, claim public candidate status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, set an underwriting standard, provide actuarial pricing guidance, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim insurer-adopted method, claim endorsement, claim external adoption, claim indexing/SEO-GEO outcome, claim answer-engine recognition, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3W Status:** WP3-V1-R3W CANDIDATE SOURCE PREPARATION PLANNING QA COMPLETE / READY FOR R3X CANDIDATE SOURCE CREATION PLANNING
 
 ## WP3-V1-R3V Candidate Source Preparation Planning
 

@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3V CANDIDATE SOURCE PREPARATION PLANNING COMPLETE / READY FOR R3W CANDIDATE SOURCE PREPARATION PLANNING QA.
+- Current v1 wave: WP3-V1-R3W CANDIDATE SOURCE PREPARATION PLANNING QA COMPLETE / READY FOR R3X CANDIDATE SOURCE CREATION PLANNING.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -70,6 +70,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3u-artifact-candidate-generation-planning-qa/`
 - Current v1 candidate source preparation planning package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3v-candidate-source-preparation-planning/`
+- Current v1 candidate source preparation planning QA package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3w-candidate-source-preparation-planning-qa/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
 - R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
@@ -93,6 +95,10 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3V creates a candidate source preparation planning package only.
 - R3V recommends `R3W-CANDIDATE-SOURCE-PREPARATION-PLANNING-QA`.
 - R3V does not create publication-candidate Markdown, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public staging, restore public CTA, modify the public route, claim public candidate, final/sealed status, release-ready status, or public release.
+- R3W reviews the R3V candidate source preparation planning package without creating publication-candidate Markdown, copying/transforming/renaming/forking the R3P integrated draft, creating artifacts, creating public files, or changing public status.
+- R3W verdict: `ACCEPTED_FOR_CANDIDATE_SOURCE_CREATION_PLANNING_WITH_NOTES`.
+- R3W recommends `R3X-CANDIDATE-SOURCE-CREATION-PLANNING` as planning only.
+- R3W does not create publication-candidate Markdown, create the candidate source path, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public staging, restore public CTA, modify the public route, claim public candidate, final/sealed status, release-ready status, or public release.
 
 ## WP4
 
@@ -100,4 +106,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3V candidate source preparation planning completion authorizes candidate source preparation planning QA only and does not authorize public artifact restoration, artifact generation, publication-candidate Markdown creation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3W candidate source preparation planning QA completion authorizes candidate source creation planning only and does not authorize public artifact restoration, artifact generation, publication-candidate Markdown creation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.

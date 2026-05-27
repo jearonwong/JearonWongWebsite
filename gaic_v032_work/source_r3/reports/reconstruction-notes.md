@@ -1,5 +1,42 @@
 # Reconstruction Notes
 
+## WP3-V1-R3W Notes (May 27, 2026)
+
+**Scope:** Perform QA on the WP3 / AIIRWP v1.0 R3V candidate source preparation planning package. Do not create publication-candidate Markdown, create the candidate source path, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, modify public route, restore public CTAs, create public staging, create a release package, perform source-strengthening research, or claim release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3V baseline `c78d9354d5ded358abb88eebbe20252a87e05bd9` and confirmed `origin/main` matched before R3W work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3P integrated draft package, R3U artifact candidate generation planning QA package, R3V candidate source preparation planning package, R3V reports, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3w-candidate-source-preparation-planning-qa/`.
+5. Created README, candidate source planning QA verdict, planning-only boundary QA, path/naming plan QA, frontmatter/status plan QA, preservation scan plan QA, boundary/nonclaim plan QA, source/citation plan QA, table/layout readiness plan QA, creation stop gates QA, R3X decision recommendation, and R3X continuity notes.
+6. Returned verdict `ACCEPTED_FOR_CANDIDATE_SOURCE_CREATION_PLANNING_WITH_NOTES`.
+7. Recommended `R3X-CANDIDATE-SOURCE-CREATION-PLANNING`.
+8. Confirmed R3V stayed preparation-planning-only and created no publication-candidate Markdown, candidate source path, artifacts, HTML, PDF, DOCX, manifest, checksum, route change, public CTA, public staging, or release package.
+9. Confirmed the placeholder path/naming/status/frontmatter/scans/gates are adequate for candidate source creation planning.
+10. Created R3W preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No artifact was generated.
+- No publication-candidate Markdown was created.
+- No candidate source path was created.
+- The R3P integrated draft was not copied, transformed, renamed, forked, or edited.
+- No public HTML, PDF, DOCX, manifest, checksum, public staging, or release package was created.
+- No public AIIRWP route, CTA, sitemap, `llms.txt`, entity graph, or public artifact path was modified.
+- No files were created under `public/research`.
+- No source-strengthening research was performed.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3W is candidate source preparation planning QA only.
+- WP3-V1-R3W does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3W keeps candidate source creation and artifact generation blocked and hands off to R3X candidate source creation planning only.
+
+**WP3-V1-R3W Status:** WP3-V1-R3W CANDIDATE SOURCE PREPARATION PLANNING QA COMPLETE / READY FOR R3X CANDIDATE SOURCE CREATION PLANNING.
+
 ## WP3-V1-R3V Notes (May 27, 2026)
 
 **Scope:** Create the WP3 / AIIRWP v1.0 candidate source preparation planning package. Do not create publication-candidate Markdown, copy/transform/rename/fork the R3P integrated draft, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, modify public route, restore public CTAs, create public staging, create a release package, perform source-strengthening research, or claim release status.
