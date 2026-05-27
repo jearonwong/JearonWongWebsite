@@ -23,7 +23,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 ## WP3 / AIIRWP
 
 - Status: withdrawn; v1.0 rewrite in progress.
-- Current v1 wave: WP3-V1-R3T ARTIFACT CANDIDATE GENERATION PLANNING COMPLETE / READY FOR R3U ARTIFACT CANDIDATE GENERATION PLANNING QA.
+- Current v1 wave: WP3-V1-R3U ARTIFACT CANDIDATE GENERATION PLANNING QA COMPLETE / READY FOR R3V CANDIDATE SOURCE PREPARATION PLANNING.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifact: none.
 - Current public PDF: none.
@@ -66,6 +66,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3s-artifact-planning-qa/`
 - Current v1 artifact candidate generation planning package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3t-artifact-candidate-generation-planning/`
+- Current v1 artifact candidate generation planning QA package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/qa/r3u-artifact-candidate-generation-planning-qa/`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
 - Do not use the rejected v0.2 body as current source truth or citation source.
 - R3Q reviews the R3P integrated internal full draft without revising it, without revising the R3J body source, without revising the R3M appendix source, without source-strengthening research, and without artifact generation.
@@ -82,6 +84,10 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3T creates an artifact candidate generation planning package only.
 - R3T recommends `R3U-ARTIFACT-CANDIDATE-GENERATION-PLANNING-QA`.
 - R3T does not create publication-candidate Markdown, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public staging, restore public CTA, modify the public route, claim public candidate, final/sealed status, release-ready status, or public release.
+- R3U reviews the R3T artifact candidate generation planning package without creating artifacts, publication-candidate Markdown, public files, or changing public status.
+- R3U verdict: `ACCEPTED_FOR_CANDIDATE_SOURCE_PREPARATION_PLANNING_WITH_NOTES`.
+- R3U recommends `R3V-CANDIDATE-SOURCE-PREPARATION-PLANNING` as planning only.
+- R3U does not create publication-candidate Markdown, generate artifacts, create HTML/PDF/DOCX, create manifest/checksum, create public staging, restore public CTA, modify the public route, claim public candidate, final/sealed status, release-ready status, or public release.
 
 ## WP4
 
@@ -89,4 +95,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3T artifact candidate generation planning completion authorizes artifact candidate generation planning QA only and does not authorize public artifact restoration, artifact generation, publication-candidate Markdown creation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 R3U artifact candidate generation planning QA completion authorizes candidate source preparation planning only and does not authorize public artifact restoration, artifact generation, publication-candidate Markdown creation, public route restoration, public candidate status, final/sealed status, release-ready status, or public release.
