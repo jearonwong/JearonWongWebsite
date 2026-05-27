@@ -1,5 +1,42 @@
 # Reconstruction Notes
 
+## WP3-V1-R3O Notes (May 27, 2026)
+
+**Scope:** Full draft integration planning for WP3 / AIIRWP v1.0 after accepted R3J revised body, R3M appendix draft, and R3N appendix QA. Do not assemble the integrated draft, revise the R3J body, revise the R3M appendix draft, add body-to-appendix references, perform source-strengthening research, generate artifacts, create public files, or claim release status.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at accepted R3N baseline `d07915c1f7c55924dce4c3a8b927f94c39110440` and confirmed `origin/main` matched before R3O work.
+2. Confirmed the only pre-existing untracked files were under `public/social/*`; these remained outside scope.
+3. Inspected the canonical registry, current-status registry, WP3 v1 README, writing rules, body quality gate, R3J revision package, R3K QA package, R3L appendix planning package, R3M appendix drafting package, R3N appendix QA package, and rejected v0.2 boundary context.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/integration/r3o-full-draft-integration-planning/`.
+5. Created R3O planning files: README, integration master plan, body-appendix cross-reference plan, integrated TOC plan, integration boundary/non-claim plan, integration source/citation plan, integration table/layout risk plan, R3P integration drafting instructions, integration planning decision, and R3P continuity notes.
+6. Recommended `R3P-FULL-DRAFT-INTEGRATION-DRAFT` because the R3J body and R3M Appendix A-H are ready for internal integration drafting and no planning repair or source-strengthening blocker was found.
+7. Planned a future single internal integrated Markdown draft with R3J body first, Appendix A-H after Chapter 28, and Appendix I deferred unless owner-authorized.
+8. Planned minimal safe body-to-appendix cross-reference wording and explicitly prohibited standard/checklist/certification/required-evidence/insurer-accepted/coverage-ready/underwriting-ready/claim-ready/score/rating/readiness/compliance-path wording.
+9. Planned preservation of Front Matter through Part VI, 28 chapters, Appendix A-H, table IDs `T-02-01` and `T-04-01` through `T-27-01`, source refs `[1]` through `[62]`, and WP3 withdrawn/noindex/no-artifact public status.
+10. Created R3O preflight, boundary QA, build/validation report, and final QA report.
+
+**Artifact discipline:**
+
+- No integrated full draft was assembled.
+- No R3J body revision was made.
+- No R3M appendix draft revision was made.
+- No body-to-appendix references were added.
+- No source-strengthening research was performed.
+- No public AIIRWP route or public artifact was changed.
+- No public HTML, PDF, manifest, checksum, sitemap, `llms.txt`, entity graph, or public CTA was created or restored.
+- No DOCX was created.
+- Pre-existing unrelated `public/social/*` files were not staged.
+
+**Boundary discipline:**
+
+- WP3-V1-R3O is full draft integration planning only.
+- WP3-V1-R3O does not claim public release, public staging, public candidate status, Final Seal, final/sealed status, release-ready status, author release execution, production verification, external adoption, indexing, SEO-GEO uplift, answer-engine recognition, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, insurer-adopted method, endorsement, legal proof, insurance advice, legal advice, coverage opinion, underwriting standard, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+- R3O keeps Appendix A-H as reference material only, Appendix I deferred, and R3P limited to internal integration drafting unless separately authorized later.
+
+**WP3-V1-R3O Status:** WP3-V1-R3O FULL-DRAFT INTEGRATION PLANNING COMPLETE / READY FOR R3P FULL-DRAFT INTEGRATION DRAFT.
+
 ## WP3-V1-R3H Full-Body Assembly Draft Notes (May 26, 2026)
 
 **Scope:** Assemble the first full internal Markdown body draft of AIIRWP v1.0 from accepted R3A-R3F source drafts. Do not generate public artifacts, create HTML/PDF/DOCX, modify the public route, restore public CTAs, create manifest/checksum files, draft full appendices, or claim publication/release status.
