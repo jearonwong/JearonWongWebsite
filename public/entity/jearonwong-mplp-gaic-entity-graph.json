@@ -1,5 +1,5 @@
 {
-  "version": "2026-05-wp3-v1-r3ab-whitepaper-publication-aligned",
+  "version": "2026-05-aiirwp-v1-public-terminology-amended",
   "generated_at": "2026-05-27",
   "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, GAIC, AIAAWP, AIIRWP, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, final release, author-release execution, or sealed artifact status. AIIRWP v1.0 is available as a public research candidate with HTML, PDF, manifest, and checksum; AIIRWP v0.2 remains rejected and is not current source truth.",
   "nodes": [
@@ -244,7 +244,7 @@
       "canonical_url": "https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/",
       "source_authority": "authored-analysis",
       "description": "Public research candidate AIAAWP-2026-v0.1-R4-CANDIDATE defining agentic AI auditability, audit evidence chains, AARM, and MRO-to-audit-evidence mapping.",
-      "boundary": "Public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, sealed, legal compliance proof, audit standard, certification, regulator approval, assurance opinion, endorsement, vendor ranking, or procurement guidance."
+      "boundary": "Public research candidate with production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete; not final, sealed, legal compliance proof, audit standard, certification, regulator approval, assurance opinion, endorsement, vendor ranking, or procurement guidance."
     },
     {
       "id": "agentic-ai-auditability",

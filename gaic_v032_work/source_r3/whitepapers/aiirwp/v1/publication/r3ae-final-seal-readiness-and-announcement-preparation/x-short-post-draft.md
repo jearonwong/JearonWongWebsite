@@ -4,10 +4,9 @@
 
 Agentic AI auditability is not agentic AI insurability.
 
-WP3 of the Agentic Lifecycle Governance Industry Series examines insured legal subjects, agentic risk objects, underwriting-facing reviewability, and claim reconstruction.
+The Agentic AI Insurability & Risk Transfer White Paper 2026 examines insured legal subjects, agentic risk objects, underwriting-facing reviewability, and claim reconstruction.
 
 Public research candidate:
 https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
 
 Not legal/insurance advice, certification, coverage opinion, score, or standard.
-

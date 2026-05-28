@@ -1485,8 +1485,8 @@ def patch_metadata(config: WhitepaperConfig, pdf_path: Path) -> None:
             "/Author": "Jearon Wong",
             "/Subject": config.subject,
             "/Keywords": config.keywords,
-            "/Producer": "Headless Chrome R8 A4 PDF Print Profile; PyPDF2 metadata pass",
-            "/Creator": "Whitepaper R8 PDF A4 Print Profile renderer",
+            "/Producer": "Headless Chrome whitepaper A4 PDF Print Profile; PyPDF2 metadata pass",
+            "/Creator": "Whitepaper A4 PDF Print Profile renderer",
         }
     )
     tmp = pdf_path.with_suffix(".pdf.tmp")

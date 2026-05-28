@@ -26,7 +26,7 @@ const documentId = "AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE";
 const version = "v1.0 Public Research Candidate";
 const generatedAt = new Date().toISOString();
 const boundaryLine =
-  "Public research candidate. Not final, not sealed, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized.";
+  "Public research candidate. Repository governance seal complete with public terminology amendment; public announcement held. Not a final public release, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized.";
 
 function sha256(filePath) {
   return createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
@@ -54,11 +54,84 @@ function extractArticle(source) {
 }
 
 function normalizeBody(body) {
-  return body
+  return repairPublicTerminology(body)
     .replaceAll('class="table-scroll"', 'class="table-block table-scroll"')
     .replaceAll("<blockquote>", '<blockquote class="professional-notice">')
     .replace(/<h4(?![^>]*\bclass=)\s+/g, '<h4 class="table-caption" ')
     .replace(/<div class="boundary-note">([\s\S]*?)<\/div>\s*$/u, '<section class="important-notice closing-boundary" aria-label="Publication boundary">$1</section>');
+}
+
+function repairPublicTerminology(body) {
+  const phraseReplacements = [
+    ["relationship-to-wp1-and-wp2", "relationship-to-the-compliance-and-auditability-white-papers"],
+    ["chapter-9-from-wp1-mros-to-insurability-objects", "chapter-9-from-lifecycle-governance-objects-to-insurability-objects"],
+    ["chapter-10-from-wp2-audit-evidence-chain-to-claim-reconstruction", "chapter-10-from-audit-evidence-chain-to-claim-reconstruction"],
+    ["Relationship to WP1 and WP2", "Relationship to the Compliance and Auditability White Papers"],
+    ["Chapter 9: From WP1 MROs to Insurability Objects", "Chapter 9: From Lifecycle Governance Objects to Insurability Objects"],
+    ["Chapter 10: From WP2 Audit Evidence Chain to Claim Reconstruction", "Chapter 10: From Audit Evidence Chain to Claim Reconstruction"],
+    ["WP1/WP2 mappings", "compliance and auditability white paper mappings"],
+    ["WP1/WP2 vocabulary", "compliance and auditability vocabulary"],
+    ["WP1/WP2 foundations", "Compliance and auditability foundations"],
+    ["WP1/WP2 are analytical foundations", "The compliance and auditability white papers are analytical foundations"],
+    ["WP1 and WP2 are internal foundations", "The compliance and auditability white papers are analytical foundations"],
+    ["WP1 and WP2 provide analytical foundations", "The compliance and auditability white papers provide analytical foundations"],
+    ["WP1 and WP2 will later help", "the compliance and auditability white papers will later help"],
+    ["WP1 and WP2 into WP3", "compliance and auditability concepts into risk-transfer analysis"],
+    ["WP1 and WP2 into insurability reasoning", "compliance and auditability concepts into insurability reasoning"],
+    ["WP1 and WP2 sources", "sources from the compliance and auditability white papers"],
+    ["WP1 and WP2 provide analytical vocabulary", "the compliance and auditability white papers provide analytical vocabulary"],
+    ["WP1, the Global AI Compliance White Paper", "The Global AI Compliance White Paper 2026"],
+    ["WP2, the Agentic AI Auditability &#x26; Assurance White Paper", "The Agentic AI Auditability &#x26; Assurance White Paper 2026"],
+    ["WP2, the Agentic AI Auditability &amp; Assurance White Paper", "The Agentic AI Auditability &amp; Assurance White Paper 2026"],
+    ["What it contributes to WP3", "What it contributes to this paper"],
+    ["WP3 proposed risk object", "Proposed risk object in this paper"],
+    ["For WP3, the implication", "For this paper, the implication"],
+    ["where WP3 lives", "where this paper focuses"],
+    ["the hinge of WP3", "the hinge of this paper"],
+    ["any WP3 vocabulary", "this paper's vocabulary"],
+    ["In WP3, those ideas", "In this paper, those ideas"],
+    ["WP3 uses that discipline", "This paper uses that discipline"],
+    ["WP3 uses both", "This paper uses both"],
+    ["WP3 because", "this paper because"],
+    ["the WP3 object", "the risk object proposed here"],
+    ["The WP2-to-WP3 translation has several layers.", "The translation from auditability evidence to risk-transfer analysis has several layers."],
+    ["R1 source research", "source research"],
+    ["no source in R1", "no cited source"],
+    ["R1 silent-exposure research", "source research on silent exposure"],
+    ["R1 already records", "the source research already records"],
+    ["R3B's Insurable Agentic Risk Object and R3C's insurance line ambiguity", "the earlier insurable agentic risk object and insurance line ambiguity analysis"],
+    ["R3D substitution conformance logic", "the substitution conformance logic"],
+    ["R3J revised body", "revised body"],
+    ["the R3J revised body", "the revised body"],
+    ["R3M appendix draft", "appendix draft"],
+    ["implemented in R3M", "implemented in this appendix draft"],
+    ["WP4 implementation", "future implementation"],
+    ["WP1 privacy MROs and WP2 selective-disclosure concepts", "privacy lifecycle concepts from the compliance white paper and selective-disclosure concepts from the auditability and assurance white paper"],
+    ["WP1's responsibility object and authority boundary concepts", "The compliance white paper's responsibility object and authority boundary concepts"],
+    ["WP2's audit evidence chain", "the auditability and assurance white paper's audit evidence chain"],
+    ["WP2's auditability concepts", "The auditability and assurance white paper's concepts"],
+    ["WP2's audit evidence vocabulary", "The auditability and assurance white paper's evidence vocabulary"],
+    ["WP1 supplies", "The compliance white paper supplies"],
+    ["WP2 supplies", "The auditability and assurance white paper supplies"],
+    ["WP1 contributes", "The compliance white paper contributes"],
+    ["WP2 contributes", "The auditability and assurance white paper contributes"],
+    ["WP1 gives", "The compliance white paper gives"],
+    ["WP2 gives", "The auditability and assurance white paper gives"],
+    ["WP1 helps", "The compliance white paper helps"],
+    ["WP2 helps", "The auditability and assurance white paper helps"],
+    ["WP1 provides", "The compliance white paper provides"],
+    ["WP2 provides", "The auditability and assurance white paper provides"],
+    ["WP1's", "the compliance white paper's"],
+    ["WP2's", "the auditability and assurance white paper's"],
+  ];
+  let repaired = body;
+  for (const [from, to] of phraseReplacements) {
+    repaired = repaired.replaceAll(from, to);
+  }
+  return repaired
+    .replace(/\bWP1\b/g, "the compliance white paper")
+    .replace(/\bWP2\b/g, "the auditability and assurance white paper")
+    .replace(/\bWP3\b/g, "this paper");
 }
 
 function buildToc(body) {
@@ -75,7 +148,7 @@ function buildToc(body) {
   ];
   return `<nav class="generated-toc" aria-label="Publication table of contents">
   <h2>Publication Contents</h2>
-  <p class="toc-note">HTML anchors are active in the public research candidate. PDF rendering uses the shared R8 A4 PDF Print Profile used by the accepted WP1/WP2 artifacts.</p>
+  <p class="toc-note">HTML anchors are active in the public research candidate. PDF rendering uses the shared whitepaper A4 print profile used by the accepted compliance and auditability white paper artifacts.</p>
   <div class="toc-grid">
     ${groups
       .map(
@@ -143,7 +216,7 @@ ${artifactStyle}
           <div><strong>Document ID</strong><span>${documentId}</span></div>
           <div><strong>Version</strong><span>${version}</span></div>
           <div><strong>Date</strong><span>May 2026</span></div>
-          <div><strong>Status</strong><span>Public research candidate; not final, not sealed, not release-ready</span></div>
+          <div><strong>Status</strong><span>Public research candidate; repository governance seal complete with public terminology amendment; public announcement held</span></div>
           <div><strong>Series</strong><span>Agentic Lifecycle Governance Industry Series</span></div>
           <div><strong>Visual Source of Truth</strong><span>HTML/PDF primary; manifest/checksum integrity</span></div>
         </div>
@@ -157,7 +230,7 @@ ${artifactStyle}
     </section>
     ${toc}
     ${structuredBody}
-    <footer class="html-footer">${documentId} - public research candidate. Generated ${generatedAt}. Final Seal, release-ready status, and public announcement require separate authorization. No public DOCX.</footer>
+    <footer class="html-footer">${documentId} - public research candidate. Generated ${generatedAt}. Repository governance seal complete with public terminology amendment; public announcement held. No public DOCX.</footer>
   </main>
 </body>
 </html>
@@ -180,15 +253,17 @@ function updateManifest(pageCount) {
   const htmlHash = sha256(htmlPath);
   const pdfHash = sha256(pdfPath);
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
-  manifest.wave_id = "WP3-V1-R3AC-HTML-PDF-RENDERING-PARITY-FORENSICS-AND-REPAIR";
+  manifest.wave_id = "AIIRWP-2026-v1.0-PUBLIC-TERMINOLOGY-AMENDMENT";
   manifest.generated_at = generatedAt;
   manifest.source_basis =
-    "R3Y-accepted internal artifact candidate package; R3AC rendering parity repair applies the accepted WP2 HTML artifact CSS/cover grammar and shared R8 A4 PDF Print Profile to the WP3 public HTML/PDF artifacts.";
+    "Current AIIRWP v1.0 public research-candidate artifact set with public terminology amendment applied to remove internal whitepaper shorthand from public-facing content.";
   manifest.artifact_style_standard =
-    "Unified whitepaper publication standard: WP2/R8 professional-shell HTML artifact grammar, shared R8 A4 PDF Print Profile, manifest/checksum integrity layer, no public DOCX.";
+    "Unified whitepaper publication standard: professional-shell HTML artifact grammar, shared whitepaper A4 PDF print profile, manifest/checksum integrity layer, no public DOCX.";
   manifest.canonical_rendering_baseline =
-    "WP2 AIAAWP public HTML artifact plus shared R8 PDF A4 Print Profile renderer; WP1 confirms the same R8 PDF metadata/print profile lineage.";
+    "Accepted auditability and compliance white paper artifact presentation, using the shared whitepaper A4 PDF print profile lineage.";
   manifest.public_status = "public-research-candidate";
+  manifest.seal_status = "FINAL_SEAL_COMPLETE_WITH_PUBLIC_TERMINOLOGY_AMENDMENT";
+  manifest.public_announcement_status = "HELD";
   manifest.route_status = "public-route-active";
   manifest.no_docx_status = "public DOCX unauthorized";
   manifest.boundary_status = [
@@ -197,8 +272,7 @@ function updateManifest(pageCount) {
     "not coverage opinion",
     "not underwriting guidance",
     "not certification",
-    "not final",
-    "not sealed",
+    "not final public release",
     "not release-ready",
   ];
   manifest.artifacts = [
@@ -226,9 +300,9 @@ function updateManifest(pageCount) {
   manifest.public_distribution_note =
     "Public distribution exposes HTML, PDF, manifest, and checksum only. No public DOCX or source Markdown is authorized.";
   manifest.next_phase =
-    "R3AD public route post-restoration QA; final seal and public announcement require separate authorization.";
+    "Public announcement remains held pending explicit owner authorization.";
   manifest.publication_system_alignment =
-    "R3AC rendering parity repair complete: WP3 HTML now uses the WP2 canonical artifact CSS/cover grammar and WP3 PDF is regenerated through the shared R8 A4 PDF Print Profile used by WP1/WP2.";
+    "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content.";
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   const finalManifestHash = sha256(manifestPath);
   fs.writeFileSync(

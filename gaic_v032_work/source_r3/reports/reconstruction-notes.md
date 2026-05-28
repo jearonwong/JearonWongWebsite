@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3AG Public Terminology Repair And Reseal Notes (May 28, 2026)
+
+**Scope:** Repair post-seal public-facing terminology in the WP3 / AIIRWP v1.0 public artifact set. Regenerate WP3 public HTML/PDF/manifest/checksum, update route hashes and metadata surfaces, create a post-seal amendment record, and keep public announcement held.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `39b70fe08db66dd21b93293a8b3b8bd847ce5ff0`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Scanned WP3 public HTML/manifest, public route data, `llms.txt`, entity graph, and owner-review announcement drafts for public-facing internal shorthand.
+4. Repaired `gaic_v032_work/source_r3/scripts/repair_wp3_r3ab_publication_style.mjs` so future WP3 artifact regeneration removes public-facing `WP1`, `WP2`, `WP3`, wave, and rendering shorthand.
+5. Repaired public PDF metadata emitted by `render_whitepaper_r8_a4_pdf.py` for new WP3 PDF output.
+6. Regenerated WP3 public HTML/PDF/manifest/checksum.
+7. Updated `src/data/whitepaperPublications.ts` hashes and public copy, `public/llms.txt`, `public/entity/jearonwong-mplp-gaic-entity-graph.json`, and the R3AE X short post draft.
+8. Created the R3AG package and reports.
+9. Updated SOURCE MASTER, known issues, reconstruction notes, current-status registry, and whitepaper-series registry.
+
+**Artifact discipline:**
+
+- WP3 public HTML/PDF/manifest/checksum changed by controlled regeneration.
+- WP3 PDF remains 138 A4 pages.
+- WP3 public artifact checksums validate.
+- R3AG did not create DOCX.
+- R3AG did not publish source Markdown.
+- R3AG did not create live social assets under `public/social/*`.
+- R3AG did not execute public announcement.
+
+**Boundary discipline:**
+
+- Seal status after R3AG: `FINAL_SEAL_COMPLETE_WITH_PUBLIC_TERMINOLOGY_AMENDMENT`.
+- Public announcement status: `HELD`.
+- R3AG does not claim certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, coverage opinion, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3AG Status:** WP3-V1-R3AG PUBLIC TERMINOLOGY REPAIR AND RESEAL COMPLETE / PUBLIC ANNOUNCEMENT HELD.
+
 ## WP3-V1-R3AF Final Seal Execution Only Notes (May 28, 2026)
 
 **Scope:** Execute WP3 / AIIRWP v1.0 repository governance Final Seal only after owner decision `APPROVE_FINAL_SEAL_EXECUTION` and `HOLD_PUBLIC_ANNOUNCEMENT`. Preserve public route and artifacts. Do not execute public announcement, create social post files, create DOCX, publish source Markdown, or claim certification, insurer acceptance, coverage-ready or underwriting-ready or claim-ready status, score/standard/readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.

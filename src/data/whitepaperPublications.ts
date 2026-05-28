@@ -91,7 +91,7 @@ export const whitepaperPublications = [
       }
     ],
     overview:
-      "WP1 establishes the series foundation: lifecycle responsibility objects, compliance coverage gaps, and the shift from model-only governance toward agentic lifecycle conformance.",
+      "The Global AI Compliance White Paper 2026 establishes the series foundation: lifecycle responsibility objects, compliance coverage gaps, and the shift from model-only governance toward agentic lifecycle conformance.",
     whyItMatters:
       "It gives the series its object layer: authority, evidence, accepted outcome, substitution, dispute, remediation, and closure become governable records rather than narrative afterthoughts.",
     artifactNote:
@@ -216,13 +216,13 @@ export const whitepaperPublications = [
       }
     ],
     overview:
-      "WP2 turns lifecycle responsibility into audit evidence: reconstructable authority, roles, tool actions, accepted outcomes, exceptions, remediation, and privacy-preserving disclosure.",
+      "The Agentic AI Auditability & Assurance White Paper 2026 turns lifecycle responsibility into audit evidence: reconstructable authority, roles, tool actions, accepted outcomes, exceptions, remediation, and privacy-preserving disclosure.",
     whyItMatters:
       "It distinguishes raw logs from audit evidence chains and keeps auditability as a bounded evidence discipline rather than an audit opinion, certification, or assurance conclusion.",
     artifactNote:
       "HTML and PDF are available. Manifest and checksum records are provided for integrity verification. No public DOCX is authorized.",
     evidenceIntegrity:
-      "The public artifacts were staged from the R5 internal candidate package and normalized for public route status without changing the internal source package.",
+      "The public artifacts are available through the public route with manifest and checksum integrity records while preserving the controlled source-truth boundary.",
     boundaryNotes: [
       "Not an audit standard.",
       "Not certification.",
@@ -311,7 +311,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "f95886154020538d77712fc341411a638c5c1317d5713e6c05a83fe8f8a76129"
+        sha256: "3923e9696c3b5e38da83030874f25b6c61e28bf6df40e7d513b22054f6a38e7f"
       },
       {
         kind: "PDF",
@@ -319,7 +319,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
         description: "Fixed-layout PDF artifact",
         mediaType: "application/pdf",
-        sha256: "c28eb086fc4d74a4b15aa019c7328c9cd31399b120ad2c8954423af96574091e"
+        sha256: "a16c8aa70c217534c7c5f62ec23e7d568c4c5861a3cdcee8ac4df12040d2bb9c"
       },
       {
         kind: "JSON",
@@ -327,7 +327,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "d8a5e8b442ae351f03163c39c9279b809bfde08bf84295bc48502c7bb852c531"
+        sha256: "9435db11b45d5e234507edfa481568943ec5d088b18f69cd5c58fdb75300df09"
       },
       {
         kind: "SHA256",
@@ -335,17 +335,17 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "b053af9c6a7d460e0693097f1be2b68ca6da8d626ad67c6d8584351460defc2b"
+        sha256: "9c68f6afcf49651d9f9ed24e7c7df10ef9d869b7a3c971d428117ab899a5dfe4"
       }
     ],
     overview:
-      "WP3 connects lifecycle governance and auditability evidence to risk-transfer reasoning while keeping insured legal subjects, agentic risk objects, evidence chains, and coverage questions separate.",
+      "This paper connects lifecycle governance and auditability evidence to risk-transfer reasoning while keeping insured legal subjects, agentic risk objects, evidence chains, and coverage questions separate.",
     whyItMatters:
       "It frames how agentic systems may become reviewable for risk-transfer discussion without treating reviewability as coverage, evidence as insurance, governance as claim approval, or auditability as insurability.",
     artifactNote:
       "HTML and PDF are available. Manifest and checksum records are provided for integrity verification. No public DOCX is authorized.",
     evidenceIntegrity:
-      "The public artifacts come from the R3Y-accepted internal candidate package and the R3AC rendering parity repair. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
+      "The public artifacts are the current public research-candidate HTML/PDF/manifest/checksum set with public terminology amended after the repository governance seal. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
     boundaryNotes: [
       "Not legal advice.",
       "Not insurance advice.",
@@ -368,8 +368,8 @@ export const whitepaperPublications = [
     ],
     integrityRows: [
       { label: "Source basis commit", value: "a459470570b1b84cc89a566abf606efa78491bf9" },
-      { label: "R3AA route commit", value: "f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9" },
-      { label: "Rendering baseline", value: "WP2 HTML artifact grammar plus shared R8 A4 PDF Print Profile" },
+      { label: "Public route", value: "Active" },
+      { label: "Rendering profile", value: "Shared whitepaper HTML/PDF publication profile" },
       { label: "Page count", value: "138" },
       { label: "Rejected v0.2", value: "Not current source truth or citation source." }
     ],

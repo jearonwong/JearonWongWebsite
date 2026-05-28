@@ -1,7 +1,38 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AF Final Seal Execution Only)
+**Last Updated:** May 28, 2026 (WP3-V1-R3AG Public Terminology Repair and Reseal)
+
+## WP3-V1-R3AG Public Terminology Repair And Reseal
+
+### Status: WP3-V1-R3AG PUBLIC TERMINOLOGY REPAIR AND RESEAL COMPLETE / PUBLIC ANNOUNCEMENT HELD
+
+R3AG performs a post-seal public terminology amendment after internal shorthand was found in the WP3 public artifact set.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `39b70fe08db66dd21b93293a8b3b8bd847ce5ff0`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Inspected R3AF, R3AE, R3AC, WP3 public route/artifacts, generation scripts, publication data, `llms.txt`, entity graph, manifest, and governance files.
+4. Repaired the repeatable WP3 artifact generation script to remove public-facing whitepaper shorthand and public-visible rendering/wave terminology from generated WP3 artifacts.
+5. Regenerated WP3 public HTML, PDF, manifest, and checksum files.
+6. Repaired WP3 route data hashes and public copy in `src/data/whitepaperPublications.ts`.
+7. Repaired `public/llms.txt`, entity graph version/boundary wording, and the R3AE X short post draft.
+8. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ag-public-terminology-repair-and-reseal/`.
+9. Created R3AG preflight, boundary QA, build/validation, and final QA reports.
+
+Remaining known issues:
+
+- Public announcement remains held and requires later explicit owner authorization for copy and channels.
+- Public source Markdown and public DOCX remain unauthorized.
+- Broad repository scans still find pre-existing prior-paper artifact-history terminology in WP1/WP2 maintenance records. These are outside the WP3 R3AG amended artifact set and should be considered for a future cross-series terminology hardening wave.
+
+Boundary discipline:
+
+- R3AG does not execute public announcement, create social post files, create DOCX, publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3AG Status:** WP3-V1-R3AG PUBLIC TERMINOLOGY REPAIR AND RESEAL COMPLETE / PUBLIC ANNOUNCEMENT HELD
 
 ## WP3-V1-R3AF Final Seal Execution Only
 
