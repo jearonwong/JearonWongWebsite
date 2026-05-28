@@ -6,7 +6,7 @@
 
 - `src/data/whitepaperPublications.ts` now carries current WP3 page count and artifact hashes.
 - `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json` now records R3AB style-system repair scope.
-- `gaic_v032_work/source_r3/whitepapers/registry/current-status.md` and `whitepaper-series-registry.yaml` record style-system repair status and 95-page PDF count.
+- `gaic_v032_work/source_r3/whitepapers/registry/current-status.md` and `whitepaper-series-registry.yaml` later supersede the R3AB 95-page intermediate count with the R3AC 138-page R8-profile PDF count.
 
 ## Unchanged / Preserved
 

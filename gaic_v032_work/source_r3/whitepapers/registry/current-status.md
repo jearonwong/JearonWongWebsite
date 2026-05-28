@@ -22,8 +22,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP3 / AIIRWP
 
-- Status: public research candidate available; whitepaper publication style system repair complete; post-restoration QA pending.
-- Current v1 wave: WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA.
+- Status: public research candidate available; HTML/PDF rendering parity repair complete; post-restoration QA pending.
+- Current v1 wave: WP3-V1-R3AC HTML/PDF RENDERING PARITY REPAIR COMPLETE / READY FOR R3AD PUBLIC ROUTE POST-RESTORATION QA.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifacts: HTML/PDF/manifest/checksum under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
 - Current public PDF: `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf`.
@@ -82,6 +82,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3aa-public-route-restoration-execution/`
 - Current v1 whitepaper publication style system repair package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`
+- Current v1 HTML/PDF rendering parity repair package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ac-html-pdf-rendering-parity-repair/`
 - Current white paper publication standard:
   - `gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
@@ -133,11 +135,14 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3AB creates `WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`, a WP1/WP2/WP3 alignment audit, and an HTML/PDF style-gap report.
 - R3AB creates shared publication data and a shared white paper route component, aligns WP1/WP2/WP3 public route pages to one page pattern, and aligns the research index card pattern.
 - R3AB locates and applies the governing VI v0.4 brief, Whitepaper Series Publication SOP v2, WP1/WP2 professional artifact shell, and prior WP3 R15C artifact repair evidence before style repair.
-- R3AB normalizes WP3 public-facing language from route-restoration process framing to public research candidate availability, applies the shared professional whitepaper artifact shell to WP3 public HTML, regenerates the WP3 public PDF with Chrome headless `--no-pdf-header-footer`, and refreshes the WP3 public manifest/checksum records.
-- R3AB current public PDF is 95 A4 pages after style-system repair; the page-count change from R3AA's 117-page technical route-restoration PDF is intentional and caused by the unified professional artifact shell and print profile, not content removal.
-- R3AB verdict: `ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`.
-- R3AB recommends `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+- R3AB normalizes WP3 public-facing language from route-restoration process framing to public research candidate availability and creates the first shared page/component baseline.
+- Owner acceptance corrected R3AB after visual review: technical build and route restoration passed, page alignment was partial, HTML artifact style alignment failed, PDF artifact style alignment failed, and release acceptance failed.
+- R3AC performs rendering parity forensics before repair, identifies WP2 public HTML artifact grammar plus the shared R8 A4 PDF Print Profile as the canonical baseline, repairs the WP3 HTML artifact to that baseline, regenerates the WP3 PDF through `render_whitepaper_r8_a4_pdf.py aiirwp`, and refreshes manifest/checksum records.
+- R3AC current public PDF is 138 A4 pages. The page count changes from the R3AA 117-page technical-route PDF and the R3AB 95-page intermediate PDF because R3AC uses the canonical R8 print profile and preserves content while restoring artifact-shell parity.
+- R3AC verdict: `ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`.
+- R3AC recommends `WP3-V1-R3AD-PUBLIC-ROUTE-POST-RESTORATION-QA`.
 - R3AB does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
+- R3AC does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 
 ## WP4
 
@@ -145,4 +150,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts, and R3AB repairs the WP1/WP2/WP3 whitepaper publication style system. This does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts, and R3AC repairs WP3 HTML/PDF rendering parity against the WP2/R8 canonical artifact baseline. This does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.

@@ -282,7 +282,7 @@ export const whitepaperPublications = [
       "HTML/PDF artifacts are available for public research-candidate review; not final, not sealed, not release-ready, and public announcement not executed.",
     artifactRole:
       "Public research candidate with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
-    pageCount: 95,
+    pageCount: 138,
     publicationMonth: "May 2026",
     datePublished: "2026-05-27",
     dateModified: "2026-05-28",
@@ -311,7 +311,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "3b824adefa629cab151f956344a9908329ecbd297b52573583d972e5f6de949f"
+        sha256: "f95886154020538d77712fc341411a638c5c1317d5713e6c05a83fe8f8a76129"
       },
       {
         kind: "PDF",
@@ -319,7 +319,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
         description: "Fixed-layout PDF artifact",
         mediaType: "application/pdf",
-        sha256: "e61ceee4e63474599b18953cc404cd5390ac691ea56c9699342d5147d15feef7"
+        sha256: "c28eb086fc4d74a4b15aa019c7328c9cd31399b120ad2c8954423af96574091e"
       },
       {
         kind: "JSON",
@@ -327,7 +327,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "cd6918e46da86dd26ff96bf14079dc7dc972c2313da7a386eeddc74a2e3e7733"
+        sha256: "d8a5e8b442ae351f03163c39c9279b809bfde08bf84295bc48502c7bb852c531"
       },
       {
         kind: "SHA256",
@@ -335,7 +335,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "2699742b4f081e14d4adc42d6379334bd04cf80147ba55a29b9ebfee1a95faac"
+        sha256: "b053af9c6a7d460e0693097f1be2b68ca6da8d626ad67c6d8584351460defc2b"
       }
     ],
     overview:
@@ -345,7 +345,7 @@ export const whitepaperPublications = [
     artifactNote:
       "HTML and PDF are available. Manifest and checksum records are provided for integrity verification. No public DOCX is authorized.",
     evidenceIntegrity:
-      "The public artifacts come from the R3Y-accepted internal candidate package. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
+      "The public artifacts come from the R3Y-accepted internal candidate package and the R3AC rendering parity repair. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
     boundaryNotes: [
       "Not legal advice.",
       "Not insurance advice.",
@@ -369,7 +369,8 @@ export const whitepaperPublications = [
     integrityRows: [
       { label: "Source basis commit", value: "a459470570b1b84cc89a566abf606efa78491bf9" },
       { label: "R3AA route commit", value: "f822d6be3a905fc1e4b78b7c75a92ffaa2166cc9" },
-      { label: "Page count", value: "95" },
+      { label: "Rendering baseline", value: "WP2 HTML artifact grammar plus shared R8 A4 PDF Print Profile" },
+      { label: "Page count", value: "138" },
       { label: "Rejected v0.2", value: "Not current source truth or citation source." }
     ],
     keyConcepts: [

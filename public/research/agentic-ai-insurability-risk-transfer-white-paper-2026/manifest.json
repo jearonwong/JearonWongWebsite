@@ -1,12 +1,12 @@
 {
-  "wave_id": "WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR",
-  "source_basis": "R3Y-accepted internal artifact candidate package; R3AB style-system repair applies the GAIC/WP2 professional whitepaper artifact shell and VI v0.4 publication standard to the WP3 public HTML/PDF artifacts.",
+  "wave_id": "WP3-V1-R3AC-HTML-PDF-RENDERING-PARITY-FORENSICS-AND-REPAIR",
+  "source_basis": "R3Y-accepted internal artifact candidate package; R3AC rendering parity repair applies the accepted WP2 HTML artifact CSS/cover grammar and shared R8 A4 PDF Print Profile to the WP3 public HTML/PDF artifacts.",
   "source_basis_commit": "a459470570b1b84cc89a566abf606efa78491bf9",
   "public_html_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
   "public_pdf_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
   "public_manifest_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
   "public_checksum_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
-  "generated_at": "2026-05-27T18:04:18.779Z",
+  "generated_at": "2026-05-28T03:05:34.473Z",
   "public_status": "public-research-candidate",
   "route_status": "public-route-active",
   "no_docx_status": "public DOCX unauthorized",
@@ -29,26 +29,27 @@
       "role": "HTML",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "3b824adefa629cab151f956344a9908329ecbd297b52573583d972e5f6de949f",
-      "bytes": 371101
+      "sha256": "f95886154020538d77712fc341411a638c5c1317d5713e6c05a83fe8f8a76129",
+      "bytes": 374675
     },
     {
       "role": "PDF",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "e61ceee4e63474599b18953cc404cd5390ac691ea56c9699342d5147d15feef7",
-      "bytes": 1397569,
-      "page_count": 95
+      "sha256": "c28eb086fc4d74a4b15aa019c7328c9cd31399b120ad2c8954423af96574091e",
+      "bytes": 1883616,
+      "page_count": 138
     }
   ],
   "checksums": {
-    "public_html": "3b824adefa629cab151f956344a9908329ecbd297b52573583d972e5f6de949f",
-    "public_pdf": "e61ceee4e63474599b18953cc404cd5390ac691ea56c9699342d5147d15feef7",
+    "public_html": "f95886154020538d77712fc341411a638c5c1317d5713e6c05a83fe8f8a76129",
+    "public_pdf": "c28eb086fc4d74a4b15aa019c7328c9cd31399b120ad2c8954423af96574091e",
     "public_manifest": "recorded in checksums.sha256 after manifest serialization; self-referential hash is externalized"
   },
   "source_markdown_publication": "not authorized; source Markdown not copied to public route",
   "public_distribution_note": "Public distribution exposes HTML, PDF, manifest, and checksum only. No public DOCX or source Markdown is authorized.",
-  "next_phase": "R3AC public route post-restoration QA; final seal and public announcement require separate authorization.",
-  "publication_system_alignment": "R3AB style-system repair complete: WP3 HTML/PDF now use the unified professional whitepaper artifact shell aligned with GAIC/WP2 visual grammar.",
-  "artifact_style_standard": "Unified whitepaper publication standard: Black Box / Evidence Ledger route pages, professional-shell HTML artifacts, A4 PDF visual authority, manifest/checksum integrity layer, no public DOCX."
+  "next_phase": "R3AD public route post-restoration QA; final seal and public announcement require separate authorization.",
+  "publication_system_alignment": "R3AC rendering parity repair complete: WP3 HTML now uses the WP2 canonical artifact CSS/cover grammar and WP3 PDF is regenerated through the shared R8 A4 PDF Print Profile used by WP1/WP2.",
+  "artifact_style_standard": "Unified whitepaper publication standard: WP2/R8 professional-shell HTML artifact grammar, shared R8 A4 PDF Print Profile, manifest/checksum integrity layer, no public DOCX.",
+  "canonical_rendering_baseline": "WP2 AIAAWP public HTML artifact plus shared R8 PDF A4 Print Profile renderer; WP1 confirms the same R8 PDF metadata/print profile lineage."
 }

@@ -2,7 +2,7 @@
 
 **Wave:** WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
 **Scope:** Public HTML and PDF artifacts for WP1, WP2, and WP3
-**Decision:** WP3 artifact-style repair completed; carry rendered visual sampling into R3AC.
+**Decision:** Superseded by R3AC. R3AB produced an intermediate repair, but owner review found HTML/PDF rendering parity still failed.
 
 ## Artifact Inventory
 
@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- |
 | WP1 GAIC | `public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html` | `public/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf` | 485 A4 pages | Mature GAIC publication artifact with historical metadata manifests. |
 | WP2 AIAAWP | `public/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html` | `public/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf` | 118 A4 pages | Public research candidate artifact from the WP2 publication pipeline. |
-| WP3 AIIRWP | `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html` | `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf` | 95 A4 pages | R3AB style-system repair artifact; professional-shell HTML/PDF regenerated from repaired public HTML. |
+| WP3 AIIRWP | `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html` | `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf` | 95 A4 pages at R3AB; 138 A4 pages after R3AC | R3AB intermediate repair superseded by R3AC WP2/R8 rendering parity repair. |
 
 ## R3AB Repairs
 
@@ -18,7 +18,7 @@
 - Regenerated WP3 PDF from the repaired professional-shell public HTML using the existing Chrome headless print pattern with no browser header/footer.
 - Refreshed WP3 public manifest and checksum file.
 - Updated shared publication data hashes for HTML, PDF, manifest, and checksum.
-- Recorded the intentional page-count change from the R3AA 117-page technical-route PDF to the R3AB 95-page style-system PDF.
+- Recorded an intermediate page-count change from the R3AA 117-page technical-route PDF to the R3AB 95-page style-system PDF. R3AC later supersedes this with a 138-page R8-profile PDF.
 
 ## Style Gap Assessment
 
@@ -26,7 +26,7 @@
 | --- | --- | --- | --- | --- |
 | Public route page | Shared R3AB page component | Shared R3AB page component | Shared R3AB page component | Aligned. |
 | HTML artifact status shell | GAIC publication-shell lineage | WP2 candidate-shell lineage | Professional-shell lineage applied | Repaired; visual QA still required. |
-| PDF page style | A4, mature long-form publication | A4, candidate publication | 95-page A4, regenerated from professional-shell HTML | Repaired; visual sampling should be checked in R3AC. |
+| PDF page style | A4, mature long-form publication | A4, candidate publication | 95-page intermediate artifact in R3AB; 138-page R8-profile artifact after R3AC | R3AB insufficient; R3AC repaired. |
 | Table handling | Mature GAIC wide-table repairs | Candidate pipeline table handling | Wide-table risk tracked from R3X/R3Y | R3AC should inspect wide tables before any final seal. |
 | Manifest/checksum | Public integrity files plus historical manifests | Public integrity files | Public integrity files refreshed in R3AB | Aligned enough for route QA. |
 

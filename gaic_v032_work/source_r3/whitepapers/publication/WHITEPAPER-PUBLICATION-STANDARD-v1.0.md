@@ -2,7 +2,7 @@
 
 **Status:** Active publication standard
 **Applies to:** WP1 GAIC, WP2 AIAAWP, WP3 AIIRWP, and future Agentic Lifecycle Governance white papers
-**Created by:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01; updated by WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
+**Created by:** WP3-V1-R3AB-PUBLICATION-SYSTEM-ALIGNMENT-REPAIR-01; updated by WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01 and WP3-V1-R3AC-HTML-PDF-RENDERING-PARITY-FORENSICS-AND-REPAIR-01
 **Boundary:** This standard governs publication structure and artifact presentation. It does not authorize final/sealed/release-ready status, public announcement, DOCX publication, certification, legal advice, insurance advice, insurer acceptance, score, standard, or regulator approval.
 
 ## 1. Purpose
@@ -254,17 +254,25 @@ No public page, artifact shell, manifest, checksum note, metadata surface, `llms
 - insurer-adopted method;
 - regulator approval.
 
-## 14. R3AB Implementation Baseline
+## 14. R3AB/R3AC Implementation Baseline
 
-R3AB creates the first shared implementation baseline:
+R3AB creates the first shared page-system implementation baseline:
 
 - shared white paper publication data in `src/data/whitepaperPublications.ts`;
 - shared publication page renderer in `src/components/WhitePaperPublicationPage.astro`;
 - WP1/WP2/WP3 public route wrappers using the shared renderer;
 - research index cards generated from the shared publication data;
 - WP3 public-facing status language normalized from route-restoration process language to public research candidate language;
-- WP3 public HTML/PDF/manifest/checksum refreshed after artifact shell language repair;
-- WP3 public HTML repaired to the same professional whitepaper artifact grammar used by the WP1/WP2 lineage: `cover-page`, `professional-shell`, `cover-frame`, `important-notice`, generated contents, `table-block table-scroll`, and explicit artifact navigation;
-- WP3 public PDF regenerated from the repaired professional-shell HTML using Chrome headless `--no-pdf-header-footer` and metadata patching, producing a 95-page A4 public research-candidate PDF.
+- intermediate WP3 public HTML/PDF/manifest/checksum refreshed after artifact shell language repair.
 
-R3AB does not authorize final/sealed/release-ready status, public announcement, source Markdown publication, or DOCX.
+Owner review corrected R3AB after rendered artifact inspection: technical build and route restoration passed, page alignment was partial, HTML artifact style alignment failed, PDF artifact style alignment failed, and release acceptance failed. R3AB is therefore historical intermediate repair evidence, not the current rendering acceptance gate.
+
+R3AC is the current artifact rendering baseline:
+
+- canonical HTML baseline: WP2 AIAAWP public HTML artifact grammar, because WP2 and WP3 are both Agentic Lifecycle Governance Industry Series public research candidates;
+- canonical PDF baseline: shared `gaic_v032_work/source_r3/scripts/render_whitepaper_r8_a4_pdf.py` R8 A4 PDF Print Profile, because WP1 and WP2 PDFs share Creator `Whitepaper R8 PDF A4 Print Profile renderer`, Producer `Headless Chrome R8 A4 PDF Print Profile; PyPDF2 metadata pass`, A4 page size, no browser default header/footer, and custom print header/footer identity;
+- WP3 public HTML repaired to the WP2 professional whitepaper artifact grammar: `cover-page`, `professional-shell`, `cover-frame`, `important-notice`, `generated-toc`, semantic section classes, and `table-block table-scroll`;
+- WP3 public PDF regenerated from the repaired HTML through `render_whitepaper_r8_a4_pdf.py aiirwp`, producing a 138-page A4 public research-candidate PDF with the R8 metadata/print lineage;
+- WP3 public manifest/checksum refreshed after HTML/PDF repair.
+
+R3AC does not authorize final/sealed/release-ready status, public announcement, source Markdown publication, or DOCX.

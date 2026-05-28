@@ -2,29 +2,31 @@
 
 ## Verdict
 
-`ACCEPTED_FOR_PUBLIC_ROUTE_POST_RESTORATION_QA_WITH_NOTES`
+`ARTIFACT_STYLE_REPAIR_REQUIRED_BEFORE_POST_RESTORATION_QA`
+
+This is the owner-corrected R3AB verdict. The original R3AB verdict was superseded because artifact rendering parity was not proven.
 
 ## Summary
 
-R3AB completes the whitepaper publication style-system repair:
+R3AB partially repairs the whitepaper publication style-system:
 
 - WP1/WP2/WP3 public route pages use one shared page structure.
 - The research index uses one shared white paper card pattern.
 - WP3 public-facing language is normalized to public research candidate availability.
-- WP3 public HTML/PDF/manifest/checksum are refreshed after professional-shell artifact-style repair.
-- WP3 public PDF is regenerated as a 95-page A4 artifact with Chrome browser header/footer suppressed and metadata patched.
+- WP3 public HTML/PDF/manifest/checksum are refreshed as an intermediate professional-shell artifact-style repair.
+- WP3 public PDF is regenerated as an intermediate 95-page A4 artifact with Chrome browser header/footer suppressed and metadata patched, but it does not yet use the shared R8 PDF profile.
 - The white paper publication standard is created and active.
 - R3AB governance package and continuity notes are created.
 
 ## Recommended Next Wave
 
-`WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`
+`WP3-V1-R3AC-HTML-PDF-RENDERING-PARITY-FORENSICS-AND-REPAIR`
 
 ## Carried Risks
 
-- R3AC must perform rendered browser QA across research index and all three public white paper pages.
-- R3AC must inspect WP3 artifact links, PDF page count, HTML/PDF readability, wide-table handling, metadata, JSON-LD, `llms.txt`, entity graph, manifest/checksum, and public boundary language.
-- R3AC should perform visual sampling of the repaired WP3 professional-shell HTML/PDF artifacts before any final seal or announcement planning.
+- R3AC must identify the canonical WP1/WP2 artifact baseline.
+- R3AC must compare WP3 HTML/PDF shell, CSS, page size, margins, header/footer policy, metadata, table rendering, and generation pipeline against that baseline.
+- R3AC must repair WP3 HTML/PDF and refresh manifest/checksum records before public route post-restoration QA.
 
 ## Boundary
 

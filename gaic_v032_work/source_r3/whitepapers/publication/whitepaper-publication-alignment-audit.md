@@ -2,7 +2,7 @@
 
 **Wave:** WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
 **Scope:** WP1 GAIC, WP2 AIAAWP, WP3 AIIRWP public white paper pages and public artifact presentation
-**Verdict:** Page-pattern alignment repaired; WP3 artifact-style repair completed; rendered artifact QA remains a tracked R3AC focus.
+**Verdict:** Page-pattern alignment partially repaired; WP3 artifact-style repair superseded by R3AC rendering parity repair.
 
 ## Summary
 
@@ -37,7 +37,7 @@ Before R3AB, WP1, WP2, and WP3 used materially different public page structures 
 - Rebuilt research index card pattern from the same publication data.
 - Normalized WP3 public-facing route language to "Public Research Candidate" and "public research candidate available".
 - Refreshed WP3 public HTML, PDF, manifest, checksum, and page data hashes after professional-shell artifact repair.
-- Regenerated WP3 public PDF as a 95-page A4 artifact after style-system repair.
+- Regenerated an intermediate WP3 public PDF as a 95-page A4 artifact after R3AB style-system repair; owner review later required R3AC rendering parity repair.
 
 ## Remaining Style Gap
 
@@ -45,9 +45,9 @@ The route pages now align as one publication system. The underlying long-form HT
 
 - WP1: mature GAIC publication system artifact, 485-page A4 PDF.
 - WP2: R8F public research candidate artifact, 118-page A4 PDF.
-- WP3: R3AB professional-shell AIIRWP artifact, 95-page A4 PDF.
+- WP3: R3AB intermediate professional-shell artifact, superseded by R3AC WP2/R8 rendering parity repair with a 138-page A4 PDF.
 
-This does not block public route post-restoration QA, but R3AC must visually sample the repaired WP3 HTML/PDF artifacts, especially wide tables and mobile table handling.
+R3AB alone does block public route post-restoration QA because artifact parity was not proven. R3AC is required to compare and repair the WP3 HTML/PDF artifacts before route post-restoration QA.
 
 ## Boundary
 

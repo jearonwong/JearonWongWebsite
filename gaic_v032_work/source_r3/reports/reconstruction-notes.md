@@ -1,5 +1,39 @@
 # Reconstruction Notes
 
+## WP3-V1-R3AC HTML/PDF Rendering Parity Repair Notes (May 28, 2026)
+
+**Scope:** Perform artifact rendering parity forensics across WP1/WP2/WP3, identify the canonical accepted HTML/PDF style baseline, repair WP3 public HTML/PDF artifacts to that baseline, regenerate public manifest/checksum records, and update governance. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `bbdc970d7d5191c0673ad53a8de66d74272b4a92`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Located WP1/WP2/WP3 public route pages, public HTML artifacts, public PDF artifacts, manifests, checksums, scripts, style sources, and publication standard documents.
+4. Determined the canonical WP3 baseline as WP2 public HTML artifact grammar plus the shared R8 A4 PDF Print Profile; WP1 confirms the same R8 PDF metadata/print lineage.
+5. Updated `gaic_v032_work/source_r3/scripts/render_whitepaper_r8_a4_pdf.py` with an `aiirwp` config so WP3 can be regenerated through the shared R8 renderer.
+6. Updated `gaic_v032_work/source_r3/scripts/repair_wp3_r3ab_publication_style.mjs` to reuse WP2 canonical CSS and cover grammar, remove the inconsistent R3AB sticky artifact nav, sectionize WP3 front matter/chapters/appendices, call the R8 renderer, and refresh manifest/checksum records.
+7. Repaired WP3 public HTML while preserving source refs `[1]-[62]`, body table IDs, Appendix A-H, Appendix I deferred note, public research candidate status, and non-claim boundary.
+8. Regenerated the WP3 public PDF as a 138-page A4 artifact with the same Creator and Producer metadata lineage as WP1/WP2.
+9. Created visual proof PNGs for WP1 first page, WP2 first page, WP3 repaired first pages, and a WP3 table sample page.
+10. Created the R3AC rendering parity package and R3AC reports.
+11. Updated SOURCE MASTER, known issues, reconstruction notes, current-status registry, whitepaper series registry, publication standard, and site publication data.
+12. Recommended `WP3-V1-R3AD-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+
+**Artifact discipline:**
+
+- Public WP3 HTML/PDF/manifest/checksum already existed from R3AA and were repaired/refreshed only for R3AC rendering parity.
+- WP1/WP2 public artifacts were not regenerated; they are the canonical baseline.
+- No public source Markdown was copied or published.
+- No DOCX was created.
+- No social announcement was created.
+- Rejected v0.2 remains rejected and is not current source truth.
+
+**Boundary discipline:**
+
+- WP3-V1-R3AC does not claim public announcement, final/sealed status, release-ready status, Final Seal, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, coverage opinion, underwriting guidance, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3AC Status:** WP3-V1-R3AC HTML/PDF RENDERING PARITY REPAIR COMPLETE / READY FOR R3AD PUBLIC ROUTE POST-RESTORATION QA.
+
 ## WP3-V1-R3AB Whitepaper Publication Style System Repair Notes (May 28, 2026)
 
 **Scope:** Repair the white paper publication style system after R3AA technical route restoration and the initial R3AB alignment pass. R3AB aligns WP1/WP2/WP3 public pages, research index cards, public-facing status language, artifact access presentation, citation/integrity/boundary blocks, HTML artifact style, PDF artifact style, and governance standardization. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.
@@ -18,10 +52,10 @@
 10. Located and inspected governing style sources before repair: `design/VI_System_Brief_v0.4_Registry.md`, `gaic_v032_work/source_r3/reports/whitepaper-series-publication-sop-v1.md`, WP1/WP2 public professional-shell artifacts, WP2 generation scripts, and prior WP3 R15C artifact proof/QA packages.
 11. Created `gaic_v032_work/source_r3/scripts/repair_wp3_r3ab_publication_style.mjs` to extract the current WP3 article body, apply the WP1/WP2 professional whitepaper artifact shell, regenerate PDF through Chrome headless no-header/footer output, patch PDF metadata, and refresh manifest/checksum records.
 12. Repaired WP3 public HTML into the professional-shell artifact grammar.
-13. Regenerated the WP3 public PDF as a 95-page A4 artifact; the page-count change from the R3AA 117-page technical-route PDF is intentional and results from the unified professional shell/print profile.
+13. Regenerated an intermediate WP3 public PDF as a 95-page A4 artifact; owner review later corrected this as insufficient rendering parity because it did not reuse the shared R8 PDF profile.
 14. Refreshed WP3 public manifest/checksum records and route-data hashes.
 15. Created the R3AB style-system package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ab-whitepaper-publication-style-system-repair/`.
-16. Recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`.
+16. Initially recommended `WP3-V1-R3AC-PUBLIC-ROUTE-POST-RESTORATION-QA`; owner review corrected the next wave to `WP3-V1-R3AC-HTML-PDF-RENDERING-PARITY-FORENSICS-AND-REPAIR`.
 
 **Artifact discipline:**
 
@@ -36,7 +70,7 @@
 
 - WP3-V1-R3AB does not claim public announcement, final/sealed status, release-ready status, Final Seal, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, coverage opinion, underwriting guidance, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
 
-**WP3-V1-R3AB Status:** WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR COMPLETE / READY FOR R3AC PUBLIC ROUTE POST-RESTORATION QA.
+**WP3-V1-R3AB Status:** WP3-V1-R3AB WHITEPAPER PUBLICATION STYLE SYSTEM REPAIR PARTIAL / R3AC RENDERING PARITY REPAIR REQUIRED.
 
 ## WP3-V1-R3Z Notes (May 27, 2026)
 

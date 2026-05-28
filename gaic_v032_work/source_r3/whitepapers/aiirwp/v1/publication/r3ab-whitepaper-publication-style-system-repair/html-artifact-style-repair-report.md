@@ -1,6 +1,7 @@
 # HTML Artifact Style Repair Report
 
 **Wave:** WP3-V1-R3AB-WHITEPAPER-PUBLICATION-STYLE-SYSTEM-REPAIR-01
+**Owner-corrected status:** intermediate repair superseded by R3AC rendering parity repair.
 
 ## WP3 HTML Repaired
 
@@ -16,3 +17,5 @@ Repairs applied:
 - Preserved source refs `[1]-[62]`, table IDs `T-02-01`, `T-04-01` through `T-27-01`, Appendix A-H, and Appendix I deferred note.
 
 New HTML SHA256: `3b824adefa629cab151f956344a9908329ecbd297b52573583d972e5f6de949f`.
+
+Current R3AC HTML SHA256: `f95886154020538d77712fc341411a638c5c1317d5713e6c05a83fe8f8a76129`.

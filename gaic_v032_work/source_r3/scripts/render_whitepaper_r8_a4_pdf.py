@@ -132,6 +132,19 @@ CONFIGS = {
         h1_pt=33,
         subtitle_pt=13,
     ),
+    "aiirwp": WhitepaperConfig(
+        key="aiirwp",
+        title="Agentic AI Insurability & Risk Transfer White Paper 2026",
+        short_title="AIIRWP 2026",
+        document_id="AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE",
+        subject="A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+        keywords="Agentic AI Insurability; AI Risk Transfer; Claim Evidence Chain; Lifecycle Evidence; Agentic Lifecycle Governance; Insured Legal Subject; Agentic Risk Object; Underwriting Reviewability",
+        html_path=REPO / "public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
+        pdf_path=REPO / "public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
+        tmp_name="aiirwp-r8-a4.html",
+        h1_pt=31,
+        subtitle_pt=13,
+    ),
 }
 
 
@@ -1483,8 +1496,8 @@ def patch_metadata(config: WhitepaperConfig, pdf_path: Path) -> None:
 
 
 def main(argv: list[str]) -> int:
-    parser = argparse.ArgumentParser(description="Render GAIC/AIAAWP public whitepaper PDFs from public HTML.")
-    parser.add_argument("keys", nargs="*", help="Whitepaper keys to render: gaic, aiaawp. Defaults to both.")
+    parser = argparse.ArgumentParser(description="Render public whitepaper PDFs from public HTML through the R8 A4 profile.")
+    parser.add_argument("keys", nargs="*", help="Whitepaper keys to render: gaic, aiaawp, aiirwp. Defaults to GAIC and AIAAWP.")
     parser.add_argument(
         "--output-dir",
         type=Path,
