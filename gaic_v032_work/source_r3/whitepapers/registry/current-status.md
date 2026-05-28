@@ -22,8 +22,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP3 / AIIRWP
 
-- Status: public research candidate available; public route post-restoration QA complete; Final Seal readiness and announcement preparation pending owner-controlled gate.
-- Current v1 wave: WP3-V1-R3AD PUBLIC ROUTE POST-RESTORATION QA COMPLETE / READY FOR R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION.
+- Status: public research candidate available; Final Seal readiness and announcement preparation complete; owner Final Seal review and optional announcement authorization pending.
+- Current v1 wave: WP3-V1-R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION COMPLETE / READY FOR R3AF OWNER FINAL SEAL REVIEW AND OPTIONAL ANNOUNCEMENT AUTHORIZATION.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifacts: HTML/PDF/manifest/checksum under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
 - Current public PDF: `/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf`.
@@ -86,6 +86,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ac-html-pdf-rendering-parity-repair/`
 - Current v1 public route post-restoration QA package:
   - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ad-public-route-post-restoration-qa/`
+- Current v1 Final Seal readiness and announcement preparation package:
+  - `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ae-final-seal-readiness-and-announcement-preparation/`
 - Current white paper publication standard:
   - `gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md`
 - Rejected candidate archive: `gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/`.
@@ -147,6 +149,11 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 - R3AD repairs stale WP3 key-concept deep links in `src/data/whitepaperPublications.ts` so public route links resolve to the R3AC HTML artifact's current heading IDs, and normalizes manifest/checksum CTA labels across WP1/WP2/WP3.
 - R3AD verdict: `ACCEPTED_FOR_FINAL_SEAL_READINESS_AND_ANNOUNCEMENT_PREPARATION_WITH_NOTES`.
 - R3AD recommends `WP3-V1-R3AE-FINAL-SEAL-READINESS-AND-ANNOUNCEMENT-PREPARATION`.
+- R3AE prepares the Final Seal readiness and announcement preparation package for owner review.
+- R3AE creates a Final Seal readiness checklist, owner go/no-go decision record, production deployment verification checklist, announcement preparation summary, LinkedIn/X/newsletter/website/outreach draft materials, citation/share copy, announcement boundary pack, post-release monitoring checklist, R3AF continuity notes, and R3AE reports.
+- R3AE verdict: `ACCEPTED_FOR_OWNER_FINAL_SEAL_REVIEW_WITH_NOTES`.
+- R3AE recommends `WP3-V1-R3AF-OWNER-FINAL-SEAL-REVIEW-AND-OPTIONAL-ANNOUNCEMENT-AUTHORIZATION`.
+- R3AE does not execute Final Seal, mark WP3 final/sealed/release-ready, post or execute public announcement, create DOCX, publish source Markdown, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 - R3AB does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 - R3AC does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
 - R3AD does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim certification, claim score/standard/readiness certification, or claim regulator approval.
@@ -157,4 +164,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts, R3AC repairs WP3 HTML/PDF rendering parity against the WP2/R8 canonical artifact baseline, and R3AD completes public route post-restoration QA. This does not authorize public announcement, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.
+No public DOCX is authorized. Final Seal requires separate authorization. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts, R3AC repairs WP3 HTML/PDF rendering parity against the WP2/R8 canonical artifact baseline, R3AD completes public route post-restoration QA, and R3AE prepares Final Seal readiness plus announcement draft materials for owner review. This does not authorize public announcement execution, source Markdown publication, final/sealed status, release-ready status, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, certification, score, standard, readiness certification, or regulator approval.

@@ -1,7 +1,43 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AD Public Route Post-Restoration QA)
+**Last Updated:** May 28, 2026 (WP3-V1-R3AE Final Seal Readiness and Announcement Preparation)
+
+## WP3-V1-R3AE Final Seal Readiness and Announcement Preparation
+
+### Status: WP3-V1-R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION COMPLETE / READY FOR R3AF OWNER FINAL SEAL REVIEW AND OPTIONAL ANNOUNCEMENT AUTHORIZATION
+
+R3AE prepares owner-reviewable Final Seal readiness and announcement materials after R3AD accepted public route post-restoration QA. R3AE is a readiness and preparation wave only.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `58bdd698ea7d3bddce38d6f7a764ad487ea73b43`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Inspected R3AD, R3AC, and R3AA publication packages; WP3 route/artifacts; shared publication data/component; research index; sitemap config; robots; `llms.txt`; entity graph; current-status registry; whitepaper-series registry; SOURCE MASTER; known issues; and reconstruction notes.
+4. Created the R3AE package under `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ae-final-seal-readiness-and-announcement-preparation/`.
+5. Created Final Seal readiness checklist and owner go/no-go decision record without pre-filling approval.
+6. Created production/deployment verification checklist for live route, artifact, metadata, preview, sitemap, robots, `llms.txt`, entity graph, screenshot, PDF, DOCX, and overclaim checks.
+7. Created LinkedIn, X short, X long-form/thread, newsletter, website/news note, citation/share copy, and outreach note drafts for owner review only.
+8. Created announcement boundary pack and post-release monitoring checklist.
+9. Created R3AE preflight, boundary QA, build/validation, and final QA reports.
+10. Returned verdict `ACCEPTED_FOR_OWNER_FINAL_SEAL_REVIEW_WITH_NOTES`.
+11. Recommended `WP3-V1-R3AF-OWNER-FINAL-SEAL-REVIEW-AND-OPTIONAL-ANNOUNCEMENT-AUTHORIZATION`.
+
+Remaining known issues:
+
+- Owner must explicitly decide whether to approve Final Seal execution, request repair, approve announcement preparation only, hold public announcement, or block further work.
+- Production deployment verification should be run after deployment or preview promotion before any owner-authorized announcement execution.
+- Announcement drafts remain drafts only and are not posted.
+- Public source Markdown and public DOCX remain unauthorized.
+- Exact exclusion and sublimit primary wording, insurer claim documentation, and AI underwriting questionnaire sources remain future source-strengthening opportunities, not R3AE blockers.
+
+Boundary discipline:
+
+- R3AE does not execute Final Seal, mark WP3 final/sealed/release-ready, execute public announcement, post to social channels, create DOCX, publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
+- All R3AE announcement drafts are marked `DRAFT - OWNER REVIEW REQUIRED - NOT POSTED`.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3AE Status:** WP3-V1-R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION COMPLETE / READY FOR R3AF OWNER FINAL SEAL REVIEW AND OPTIONAL ANNOUNCEMENT AUTHORIZATION
 
 ## WP3-V1-R3AD Public Route Post-Restoration QA
 
