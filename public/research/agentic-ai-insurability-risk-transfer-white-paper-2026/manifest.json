@@ -21,8 +21,8 @@
       "role": "HTML",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04",
-      "bytes": 376850
+      "sha256": "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d",
+      "bytes": 379126
     },
     {
       "role": "PDF",
@@ -34,7 +34,7 @@
     }
   ],
   "checksums": {
-    "public_html": "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04",
+    "public_html": "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d",
     "public_pdf": "db4866c7421928e65d4563bb25787d9b322d708c59937216da9d04b60991d178",
     "public_manifest": "recorded in checksums.sha256 after manifest serialization; self-referential hash is externalized"
   },
@@ -66,5 +66,7 @@
   "public_announcement_status": "HELD",
   "route_status": "public-route-active",
   "no_docx_status": "public DOCX unauthorized",
-  "publication_system_alignment": "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content."
+  "publication_system_alignment": "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content.",
+  "metadata_parity_status": "canonical and JSON-LD metadata parity repaired for P1 announcement-readiness; body content and PDF artifact unchanged",
+  "metadata_updated_at_utc": "2026-05-28T00:00:00Z"
 }

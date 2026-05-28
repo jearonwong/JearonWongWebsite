@@ -6,20 +6,23 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Current Series Publication Status
 
-- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT COMPLETE / READY FOR OPTIMIZATION PLANNING.
+- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / P1 ANNOUNCEMENT READINESS REPAIR COMPLETE.
 - Publication package: `gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/`.
 - Full-site audit package: `gaic_v032_work/source_r3/site_audits/full-site-style-ui-semantic-seo-geo-eeat-audit-2026/`.
+- P1 repair package: `gaic_v032_work/source_r3/site_optimizations/full-site-p1-announcement-readiness-repair-2026/`.
 - Public route pages: all three white papers are officially available on site as public research editions.
-- Public artifacts: HTML/PDF/manifest/checksum are available for all three white papers.
-- Public-facing internal shorthand: removed from current public-facing publication surfaces or classified as historical/internal governance context.
+- Public artifacts: HTML/PDF/manifest/checksum are available for all three white papers. The Agentic AI Insurability & Risk Transfer White Paper 2026 HTML artifact now has canonical and JSON-LD metadata parity, and its manifest/checksum records were refreshed.
+- Public-facing internal shorthand: removed from current public-facing publication surfaces or classified as document ID, historical, or internal governance context.
+- P1 announcement-readiness repairs: third whitepaper artifact metadata parity, public semantic status/naming hardening, historical GAIC integrity labeling, and research foundation/MPLP v2.0 next-phase positioning complete.
+- E-E-A-T scope: partial trust hardening only; full E-E-A-T optimization was not claimed.
 - Public announcement: not executed.
 - Public DOCX: not newly authorized.
 - Source Markdown: not public unless already explicitly historical/internal; no new public source Markdown publication in this wave.
 - Full-site audit verdict: `AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING`.
 - Full-site audit severity counts: P0 = 0, P1 = 4, P2 = 9, P3 = 6.
 - Whitepaper publication blockers from audit: none.
-- Announcement blockers from audit: P1 metadata/semantic/evidence-labeling/research-foundation narrative issues should be repaired or owner-accepted before social/newsletter outreach.
-- Next wave: optimization planning from audit findings. Do not publish the fourth white paper or practitioner guides yet. Do not execute social announcement without separate owner authorization.
+- Announcement blockers from audit: four P1 issues repaired in the P1 announcement-readiness repair package.
+- Next recommended wave: `FULL-SITE-EEAT-AUTHORITY-TRUST-SIGNAL-AUDIT-02` if the owner wants complete E-E-A-T / authority / trust signal work. Do not publish the fourth white paper or practitioner guides yet. Do not execute social announcement without separate owner authorization.
 
 ## WP1 / GAIC
 
@@ -196,4 +199,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. The first three white papers are officially available on site as public research editions with HTML/PDF/manifest/checksum artifacts. WP3 v1.0 remains repository-governance sealed with public terminology amendment. Public announcement remains held. This does not authorize source Markdown publication, public announcement execution, certification, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.
+No public DOCX is authorized. The first three white papers are officially available on site as public research editions with HTML/PDF/manifest/checksum artifacts. WP3 v1.0 remains repository-governance sealed with public terminology amendment and P1 metadata parity repair. Public announcement remains held. The fourth white paper and practitioner guides remain held pending MPLP v2.0 object-model consolidation. This does not authorize source Markdown publication, public announcement execution, certification, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.

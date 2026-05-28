@@ -1,7 +1,37 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (Full Site Style UI Semantic SEO GEO E-E-A-T Audit)
+**Last Updated:** May 28, 2026 (P1 Announcement-Readiness Repair)
+
+## Full Site P1 Announcement-Readiness Repair
+
+### Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / P1 ANNOUNCEMENT READINESS REPAIR COMPLETE
+
+This wave repaired the four P1 announcement-readiness findings from the full-site audit. It is a P1 announcement-readiness repair with partial E-E-A-T trust hardening only; it is not full E-E-A-T optimization.
+
+Resolved in this wave:
+
+1. Added canonical, citation metadata, and JSON-LD parity to the Agentic AI Insurability & Risk Transfer White Paper 2026 HTML artifact.
+2. Updated the affected public manifest, checksum file, and whitepaper publication data hashes.
+3. Repaired public semantic surfaces so the second and third whitepaper nodes use formal public names and Public Research Edition status rather than candidate/acronym-first language.
+4. Labeled historical Global AI Compliance White Paper 2026 publication-candidate integrity links as historical.
+5. Added bounded research foundation and MPLP v2.0 next-phase positioning to the homepage, research index, `llms.txt`, and entity graph.
+6. Created `gaic_v032_work/source_r3/site_optimizations/full-site-p1-announcement-readiness-repair-2026/`.
+7. Created P1 repair reports under `gaic_v032_work/source_r3/reports/`.
+
+Remaining known issues:
+
+- P2/P3 audit findings remain backlog and were intentionally not repaired in this wave.
+- Full E-E-A-T / authority / trust signal work remains separate and should use `FULL-SITE-EEAT-AUTHORITY-TRUST-SIGNAL-AUDIT-02` if the owner authorizes it.
+- Public announcement remains held and requires separate owner authorization.
+- The fourth whitepaper and practitioner guides remain held pending MPLP v2.0 object-model consolidation.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+Boundary discipline:
+
+- This wave does not execute social announcement, create or stage public social assets, create DOCX, publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, publish the fourth white paper, or publish practitioner guides.
+
+**P1 Repair Status:** P1_ANNOUNCEMENT_READINESS_REPAIR_COMPLETE
 
 ## Full Site Style UI Semantic SEO GEO E-E-A-T Audit
 

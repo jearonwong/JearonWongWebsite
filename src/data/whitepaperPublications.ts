@@ -311,7 +311,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04"
+        sha256: "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d"
       },
       {
         kind: "PDF",
@@ -327,7 +327,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "ef732af9257ba96bd2e1302db8e439bec4de376c1811a43f7c18b1558d5450db"
+        sha256: "54fd96475f652c2805059fbe6fb7fef4dfaa6a7106bcc571f3681df911565cd7"
       },
       {
         kind: "SHA256",
@@ -335,7 +335,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "00305f7b403d548828b5037ac9f149a30ab0a3abfd58f12ac8e6f0498a641f64"
+        sha256: "61d4867213410657d2028d45bb076efc33d1d3020d2ea2be0889453a8db7bf2d"
       }
     ],
     overview:

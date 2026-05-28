@@ -19,6 +19,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
   Version: v0.1 Public Research Edition. Document ID: AIAAWP-2026-v0.1. HTML, PDF, manifest, and checksum are available; no public DOCX is authorized.
 - Research anchor: Agentic AI Insurability & Risk Transfer White Paper 2026
   Status: Public Research Edition. HTML, PDF, manifest, and checksum are available; no public DOCX is authorized. The v0.2 public candidate remains rejected and is not current source truth.
+- Research foundation status: The first three public research editions establish the compliance, auditability, and insurability foundation for agentic lifecycle evidence. The next phase is MPLP v2.0 object-model consolidation. The enterprise implementation white paper and practitioner guides are intentionally held until the protocol object model is ready.
 - Core entity chain: Missing Regulatory Objects -> RCCS-M -> ALCS -> Agentic Lifecycle Governance.
 - Protocol path: MPLP / Multi-Agent Lifecycle Protocol.
 - Applied layer: Applied Agentic Governance Playbooks.
@@ -93,7 +94,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 - Evidence Registry / Citation Kit: https://www.jearonwong.com/evidence/
   Role: citation and evidence shelf for owned-canonical, authored-analysis, project, source-qualified mapping, and pending-external-evidence surfaces. External citations, backlinks, Search Console/Bing submission, and answer-engine citations remain pending unless separately recorded.
 - Machine-readable entity graph JSON: https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json
-  Role: public JSON artifact for the Jearon Wong / MPLP / GAIC / AIAAWP / AIIRWP entity graph. It contains no numeric weights, endorsement/adoption claims, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, official compatibility claims, vendor authority claims, production-verification claims, certification claims, or external approval claims.
+  Role: public JSON artifact for the Jearon Wong / MPLP / three-whitepaper entity graph. Document IDs remain available inside the artifact, but public descriptions lead with formal paper names. It contains no numeric weights, endorsement/adoption claims, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, official compatibility claims, vendor authority claims, production-verification claims, certification claims, or external approval claims.
 
 ## White Papers
 
@@ -103,7 +104,7 @@ This file is a concise content map for AI crawlers and readers. It does not guar
   HTML: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
   Public distribution: HTML and PDF only.
   Current manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/manifest.json
-  Historical seal manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
+  Historical publication-candidate seal manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
   Public PDF metadata manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json
   Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
 - Agentic AI Auditability & Assurance White Paper 2026: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/

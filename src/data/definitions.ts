@@ -147,10 +147,10 @@ export const definitions: DefinitionEntry[] = [
     definition:
       "An Audit Evidence Chain is a responsibility-linked evidence chain for agentic work that connects authority, role, tool action, evidence, outcome, exception, privacy treatment, and remediation closure.",
     distinction:
-      "Not raw logs, traces, screenshots, or observability alone. AIAAWP treats audit evidence chains as lifecycle evidence architecture, not as an audit standard or assurance opinion.",
+      "Not raw logs, traces, screenshots, or observability alone. The Agentic AI Auditability & Assurance White Paper 2026 treats audit evidence chains as lifecycle evidence architecture, not as an audit standard or assurance opinion.",
     evidence: [
       {
-        label: "AIAAWP: logs are not audit evidence chains",
+        label: "Agentic AI Auditability & Assurance White Paper 2026: logs are not audit evidence chains",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#4-why-logs-are-not-audit-evidence-chains"
       }
     ],
@@ -170,11 +170,11 @@ export const definitions: DefinitionEntry[] = [
       "Not certification, an audit standard, legal compliance proof, assurance opinion, or vendor ranking. It is the auditability and assurance white paper's public research edition framing.",
     evidence: [
       {
-        label: "AIAAWP 2026 white paper hub",
+        label: "Agentic AI Auditability & Assurance White Paper 2026 hub",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/"
       },
       {
-        label: "AIAAWP executive thesis",
+        label: "Agentic AI Auditability & Assurance White Paper 2026 executive thesis",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis"
       }
     ],
@@ -194,7 +194,7 @@ export const definitions: DefinitionEntry[] = [
       "Not a legal liability object, certification criterion, mandatory implementation schema, or audit-procedure template.",
     evidence: [
       {
-        label: "AIAAWP: Agentic Audit Object model",
+        label: "Agentic AI Auditability & Assurance White Paper 2026: Agentic Audit Object model",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#agentic-audit-object-overview"
       }
     ],
@@ -209,12 +209,12 @@ export const definitions: DefinitionEntry[] = [
     term: "Agentic Auditability Readiness Model (AARM)",
     section: "governance",
     definition:
-      "AARM is the Agentic Auditability Readiness Model from AIAAWP, describing L0-L5 readiness states for lifecycle evidence, audit evidence chains, and assurance-planning discussion.",
+      "AARM is the Agentic Auditability Readiness Model from the Agentic AI Auditability & Assurance White Paper 2026, describing L0-L5 readiness states for lifecycle evidence, audit evidence chains, and assurance-planning discussion.",
     distinction:
       "Not a score, benchmark, certification, assurance result, legal compliance proof, procurement tool, or vendor comparison.",
     evidence: [
       {
-        label: "AIAAWP: Agentic Auditability Readiness Model",
+        label: "Agentic AI Auditability & Assurance White Paper 2026: Agentic Auditability Readiness Model",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#13-agentic-auditability-readiness-model"
       }
     ],
@@ -249,7 +249,7 @@ export const definitions: DefinitionEntry[] = [
     term: "Agentic Insurability Objects (AIO)",
     section: "governance",
     definition:
-      "Agentic Insurability Objects are AIIRWP analytical objects that separate insured legal subject, agentic risk object, authority, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions.",
+      "Agentic Insurability Objects are analytical objects from the Agentic AI Insurability & Risk Transfer White Paper 2026 that separate insured legal subject, agentic risk object, authority, responsibility, evidence, loss reconstruction, dependency, aggregation, and dispute-readiness questions.",
     distinction:
       "Not insurer product requirements, policy terms, legal liability objects, certification criteria, or a mandatory implementation schema.",
     evidence: [
@@ -269,7 +269,7 @@ export const definitions: DefinitionEntry[] = [
     term: "Agentic Insurability Reasoning Model (AIRM)",
     section: "governance",
     definition:
-      "AIRM is the Agentic Insurability Reasoning Model from AIIRWP, a non-scoring vocabulary for evidence visibility, claims review, underwriting discussion, and dispute readiness.",
+      "AIRM is the Agentic Insurability Reasoning Model from the Agentic AI Insurability & Risk Transfer White Paper 2026, a non-scoring vocabulary for evidence visibility, claims review, underwriting discussion, and dispute readiness.",
     distinction:
       "Not an actuarial score, insurer acceptance, coverage guarantee, underwriting standard, claims approval guide, certification, vendor score, or procurement benchmark.",
     evidence: [
@@ -354,7 +354,7 @@ export const definitions: DefinitionEntry[] = [
       "Not task completion, autonomous execution, generic observability, or a claim that a system is audit-ready by default.",
     evidence: [
       {
-        label: "AIAAWP 2026 white paper hub",
+        label: "Agentic AI Auditability & Assurance White Paper 2026 hub",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/"
       },
       {

@@ -40,6 +40,8 @@ const researchBreadcrumbJsonLd = createBreadcrumbJsonLd(researchUrl, [
   { name: "Home", path: "/" },
   { name: "Research", path: canonicalPath }
 ]);
+const foundationNote =
+  "The first three public research editions establish the compliance, auditability, and insurability foundation for agentic lifecycle evidence. The next phase is MPLP v2.0 object-model consolidation. The enterprise implementation white paper and practitioner guides are intentionally held until the protocol object model is ready.";
 ---
 
 <BaseLayout
@@ -59,6 +61,12 @@ const researchBreadcrumbJsonLd = createBreadcrumbJsonLd(researchUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell research-ledger">
+      <div class="registry-chassis foundation-note" aria-label="Research foundation and next protocol phase">
+        <div class="registry-annotation">
+          <span class="registry-key">SERIES_POSITION</span>: <span class="registry-value">RESEARCH_FOUNDATION</span>
+        </div>
+        <p>{foundationNote}</p>
+      </div>
       {whitepaperPublications.map((paper) => (
         <article class="registry-chassis research-release">
           <div class="release-grid">
@@ -98,6 +106,19 @@ const researchBreadcrumbJsonLd = createBreadcrumbJsonLd(researchUrl, [
   .research-ledger {
     display: grid;
     gap: var(--space-5);
+  }
+
+  .foundation-note {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--accent-signal);
+  }
+
+  .foundation-note p {
+    max-width: 78ch;
+    margin: 0.9rem 0 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.66;
   }
 
   .research-release {

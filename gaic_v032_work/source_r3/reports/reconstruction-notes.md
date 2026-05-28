@@ -1,5 +1,48 @@
 # Reconstruction Notes
 
+## Full Site P1 Announcement-Readiness Repair Notes (May 28, 2026)
+
+**Scope:** Repair the four P1 announcement-readiness findings from the full-site audit: third whitepaper artifact metadata parity, public semantic terminology/status hardening, historical GAIC integrity labeling, and research foundation/MPLP v2.0 positioning. This wave is partial E-E-A-T trust hardening only, not full E-E-A-T optimization.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `e57fc2f639449ef413551c6f5071fa7ff85b6e90`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Added canonical, citation metadata, and JSON-LD to the Agentic AI Insurability & Risk Transfer White Paper 2026 HTML artifact without changing body prose or regenerating the PDF.
+4. Updated the affected WP3 public manifest, checksum file, and whitepaper publication data hashes.
+5. Repaired Concepts Map, Evidence Registry, About, Governance, Mapping, Definitions, Projects, Playbooks, `llms.txt`, and entity graph public semantic labels/statuses where they were acronym-first or candidate-like for the second and third whitepapers.
+6. Labeled the historical GAIC publication-candidate manifest as a historical integrity record in public evidence surfaces.
+7. Added concise research foundation and MPLP v2.0 object-model consolidation positioning to homepage, research index, `llms.txt`, and entity graph.
+8. Created the P1 repair package and reports.
+9. Ran typecheck, lint, build, JSON/YAML parse, checksum, JSON-LD parse, public artifact, link, sitemap, robots, `llms.txt`, entity graph, public terminology, no-DOCX, no-source-Markdown, no-fourth-whitepaper, no-guide-publication, no-social-announcement, and no-public/social-staging checks.
+
+**Validation findings:**
+
+- Verdict: `P1_ANNOUNCEMENT_READINESS_REPAIR_COMPLETE`.
+- `npm run typecheck`: pass, 0 errors, existing hints only.
+- `npm run lint`: pass.
+- `npm run build`: pass, 95 pages built.
+- WP3 checksum validation: pass.
+- JSON-LD parse: pass for all three route pages and all three HTML artifacts.
+- Exact `public-research-candidate` scan: zero scoped hits.
+
+**Artifact discipline:**
+
+- WP3 HTML artifact changed only in metadata/head.
+- WP3 PDF artifact was not regenerated and remains unchanged.
+- WP3 manifest/checksum were refreshed because the HTML hash changed.
+- No public DOCX was created.
+- No source Markdown was published.
+- No public/social files were staged.
+
+**Boundary discipline:**
+
+- Public announcement remains held.
+- Fourth whitepaper and practitioner guides remain held pending MPLP v2.0 object-model consolidation.
+- This wave does not claim full E-E-A-T optimization, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, legal advice, insurance advice, coverage opinion, underwriting standard, regulator approval, score, standard, readiness certification, vendor ranking, public DOCX, public source Markdown, or social announcement execution.
+
+**P1 Repair Status:** THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / P1 ANNOUNCEMENT READINESS REPAIR COMPLETE.
+
 ## Full Site Style UI Semantic SEO GEO E-E-A-T Audit Notes (May 28, 2026)
 
 **Scope:** Audit JearonWong.com after the three-whitepaper official site publication. Review full-site visual style, UI/UX, whitepaper publication consistency, semantic architecture, SEO, GEO, E-E-A-T, entity graph, JSON-LD, `llms.txt`, sitemap, robots, public terminology, mobile/first-fold behavior, route consistency, strategic content alignment, and claim-boundary hygiene. Do not optimize or modify public pages, metadata, components, styles, routes, artifacts, or social assets.
