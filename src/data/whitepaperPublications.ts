@@ -65,7 +65,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "JSON",
-        label: "View manifest",
+        label: "View Manifest",
         href: "/research/global-ai-compliance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
@@ -73,7 +73,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "SHA256",
-        label: "Verify checksums",
+        label: "Verify Checksums",
         href: "/research/global-ai-compliance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
@@ -200,7 +200,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "JSON",
-        label: "View manifest",
+        label: "View Manifest",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
@@ -208,7 +208,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "SHA256",
-        label: "Verify checksums",
+        label: "Verify Checksums",
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
@@ -323,7 +323,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "JSON",
-        label: "View manifest",
+        label: "View Manifest",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
@@ -331,7 +331,7 @@ export const whitepaperPublications = [
       },
       {
         kind: "SHA256",
-        label: "Verify checksums",
+        label: "Verify Checksums",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
@@ -375,10 +375,10 @@ export const whitepaperPublications = [
     ],
     keyConcepts: [
       { label: "Agentic AI Insurability", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#executive-thesis" },
-      { label: "Insured Legal Subject", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#1-the-ai-insurability-problem" },
-      { label: "Agentic Risk Object", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#2-insured-subject-versus-agentic-risk-object" },
-      { label: "Claim Evidence Chain", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#20-disputes-evidence-gaps-and-coverage-boundary-friction" },
-      { label: "Underwriting-facing reviewability", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#14-underwriting-evidence-architecture-for-agentic-ai" },
+      { label: "Insured Legal Subject", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#chapter-1-the-new-insurance-question-what-exactly-is-being-transferred" },
+      { label: "Agentic Risk Object", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#chapter-4-the-insurable-agentic-risk-object" },
+      { label: "Claim Evidence Chain", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#chapter-19-claim-reconstruction-after-agentic-ai-incidents" },
+      { label: "Underwriting-facing reviewability", href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html#chapter-14-underwriting-evidence-architecture" },
       { label: "Lifecycle Evidence", href: "/concepts/lifecycle-evidence/" },
       { label: "Authority Boundary", href: "/concepts/authority-boundary/" },
       { label: "Accepted Outcome", href: "/concepts/accepted-outcome/" }

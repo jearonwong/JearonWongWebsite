@@ -1,5 +1,37 @@
 # Reconstruction Notes
 
+## WP3-V1-R3AD Public Route Post-Restoration QA Notes (May 28, 2026)
+
+**Scope:** Perform public route post-restoration QA for WP3 / AIIRWP v1.0 after R3AC repaired HTML/PDF rendering parity. This wave may repair small route/link/metadata/manifest/checksum/style regressions if found. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `a4c99f8221a6eb16c968ee43b20aa5dc5540657d`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Inspected R3AA public route restoration execution, R3AB publication style system repair, R3AC HTML/PDF rendering parity repair, current WP3 public route, public artifacts, shared publication data, shared page component, research index, robots, sitemap config, `llms.txt`, entity graph, current-status registry, whitepaper-series registry, SOURCE MASTER, known issues, and reconstruction notes.
+4. Found stale WP3 key-concept deep links in `src/data/whitepaperPublications.ts` that still pointed to pre-R3AC HTML artifact anchors.
+5. Repaired those WP3 key-concept links to the R3AC artifact's current heading IDs.
+6. Normalized manifest/checksum CTA labels across WP1/WP2/WP3 to `View Manifest` and `Verify Checksums`.
+7. Validated WP3 public route page, public artifact integrity, HTML parity, PDF parity, WP1/WP2/WP3 publication consistency, metadata, JSON-LD, robots, sitemap, `llms.txt`, entity graph, and boundary language.
+8. Ran local browser smoke against `http://127.0.0.1:4323/` for the WP3 route, WP3 HTML artifact, and research index.
+9. Generated R3AD visual proof PNGs for WP3 route first fold, WP3 HTML artifact first fold, research index cards, WP3 PDF first page, WP3 PDF body page, and WP3 PDF table page.
+10. Created the R3AD public route post-restoration QA package and R3AD reports.
+11. Recommended `WP3-V1-R3AE-FINAL-SEAL-READINESS-AND-ANNOUNCEMENT-PREPARATION`.
+
+**Artifact discipline:**
+
+- R3AD did not change public WP3 HTML, PDF, manifest, or checksum bytes.
+- R3AD did not create DOCX.
+- R3AD did not publish source Markdown.
+- R3AD did not create social announcement copy.
+- Rejected v0.2 remains rejected and is not current source truth.
+
+**Boundary discipline:**
+
+- WP3-V1-R3AD does not claim public announcement, final/sealed status, release-ready status, Final Seal, certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, coverage opinion, underwriting guidance, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3AD Status:** WP3-V1-R3AD PUBLIC ROUTE POST-RESTORATION QA COMPLETE / READY FOR R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION.
+
 ## WP3-V1-R3AC HTML/PDF Rendering Parity Repair Notes (May 28, 2026)
 
 **Scope:** Perform artifact rendering parity forensics across WP1/WP2/WP3, identify the canonical accepted HTML/PDF style baseline, repair WP3 public HTML/PDF artifacts to that baseline, regenerate public manifest/checksum records, and update governance. Do not claim final/sealed/release-ready status, create DOCX, publish source Markdown, create social announcement, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, claim score/standard/readiness certification, or claim regulator approval.

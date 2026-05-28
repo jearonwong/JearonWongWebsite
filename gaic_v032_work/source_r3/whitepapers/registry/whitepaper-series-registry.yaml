@@ -36,7 +36,7 @@ whitepapers:
   wp3_aiirwp:
     title: Agentic AI Insurability & Risk Transfer White Paper 2026
     short_name: AIIRWP
-    public_status: public research candidate available; HTML/PDF rendering parity repair complete; post-restoration QA pending
+    public_status: public research candidate available; public route post-restoration QA complete; final seal readiness and announcement preparation pending owner-controlled gate
     rejected_version: v0.2
     rejected_document_id: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE
     canonical_v1_workspace_path: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/
@@ -48,9 +48,10 @@ whitepapers:
     page_count: 138
     current_source: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-publication-candidate-source.md
     current_artifact: public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-    public_status_pointer: public research candidate available; HTML/PDF/manifest/checksum available; HTML/PDF rendering parity repaired through WP2/R8 baseline; post-restoration QA pending
+    public_status_pointer: public research candidate available; HTML/PDF/manifest/checksum available; HTML/PDF rendering parity repaired through WP2/R8 baseline; public route post-restoration QA complete; final seal and public announcement not authorized
     publication_standard: gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md
     current_publication_repair_package: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ac-html-pdf-rendering-parity-repair/
+    current_publication_qa_package: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ad-public-route-post-restoration-qa/
     archive: gaic_v032_work/source_r3/archive/wp3-rejected-v0.2/
     do_not_use:
       - public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html

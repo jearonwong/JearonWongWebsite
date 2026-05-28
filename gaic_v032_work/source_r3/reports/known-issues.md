@@ -1,7 +1,42 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AC HTML/PDF Rendering Parity Repair)
+**Last Updated:** May 28, 2026 (WP3-V1-R3AD Public Route Post-Restoration QA)
+
+## WP3-V1-R3AD Public Route Post-Restoration QA
+
+### Status: WP3-V1-R3AD PUBLIC ROUTE POST-RESTORATION QA COMPLETE / READY FOR R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION
+
+R3AD completes public route post-restoration QA after R3AC's HTML/PDF rendering parity repair. It validates the WP3 public route, public artifacts, research index card, WP1/WP2/WP3 publication consistency, metadata, JSON-LD, sitemap, robots, `llms.txt`, entity graph, boundary language, browser smoke, and visual proof.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `a4c99f8221a6eb16c968ee43b20aa5dc5540657d`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Inspected R3AA, R3AB, and R3AC publication packages, current WP3 public route, public artifacts, shared publication data, shared route component, research index, metadata surfaces, registry, SOURCE MASTER, known issues, and reconstruction notes.
+4. Validated WP3 public route rendering, shared publication hero/status panel, CTA order, boundary note, citation section, integrity section, rejected v0.2 note, and no-DOCX posture.
+5. Repaired stale WP3 key-concept deep links in `src/data/whitepaperPublications.ts` so public route links resolve to R3AC artifact heading IDs.
+6. Normalized manifest/checksum CTA labels across WP1/WP2/WP3 to `View Manifest` and `Verify Checksums`.
+7. Validated public HTML/PDF/manifest/checksum integrity and confirmed no public source Markdown or DOCX exists.
+8. Validated WP3 HTML parity against the WP2 professional-shell baseline and PDF parity against the R8 A4 renderer profile.
+9. Validated metadata, JSON-LD, sitemap custom page, robots stale-path controls, `llms.txt`, entity graph, and boundary language.
+10. Ran local browser smoke for WP3 route, WP3 HTML artifact, and research index; generated R3AD visual proof PNGs.
+11. Returned verdict `ACCEPTED_FOR_FINAL_SEAL_READINESS_AND_ANNOUNCEMENT_PREPARATION_WITH_NOTES`.
+12. Recommended `WP3-V1-R3AE-FINAL-SEAL-READINESS-AND-ANNOUNCEMENT-PREPARATION`.
+
+Remaining known issues:
+
+- R3AE may prepare Final Seal readiness and announcement materials, but Final Seal and public announcement still require owner authorization.
+- Production deployment verification should be repeated after deployment or preview if R3AE moves toward release operations.
+- Exact exclusion and sublimit primary wording, insurer claim documentation, and AI underwriting questionnaire sources remain future source-strengthening opportunities, not R3AD blockers.
+- Public source Markdown and public DOCX remain unauthorized.
+
+Boundary discipline:
+
+- R3AD does not create DOCX, publish source Markdown, create social/public announcement copy, claim Final Seal, claim final/sealed status, claim release-ready status, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim certification, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3AD Status:** WP3-V1-R3AD PUBLIC ROUTE POST-RESTORATION QA COMPLETE / READY FOR R3AE FINAL SEAL READINESS AND ANNOUNCEMENT PREPARATION
 
 ## WP3-V1-R3AC HTML/PDF Rendering Parity Repair
 
