@@ -1,7 +1,40 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AE Final Seal Readiness and Announcement Preparation)
+**Last Updated:** May 28, 2026 (WP3-V1-R3AF Final Seal Execution Only)
+
+## WP3-V1-R3AF Final Seal Execution Only
+
+### Status: WP3-V1-R3AF FINAL SEAL EXECUTION COMPLETE / PUBLIC ANNOUNCEMENT HELD
+
+R3AF executes the owner-authorized repository governance Final Seal for the WP3 v1.0 public research candidate artifact set. Public announcement remains held.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `4b2401b9d9f1ec73afc4f9fd3e7b288592f2e4f4`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Inspected R3AE, R3AD, R3AC, current WP3 public route/artifacts, public manifest/checksum, SOURCE MASTER, current-status registry, whitepaper-series registry, known issues, and reconstruction notes.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3af-final-seal-execution/`.
+5. Created owner final seal decision record with `APPROVE_FINAL_SEAL_EXECUTION` and `HOLD_PUBLIC_ANNOUNCEMENT`.
+6. Created final seal record with seal status `FINAL_SEAL_COMPLETE`.
+7. Created final seal boundary record, artifact integrity final check, public route final check, metadata surface final check, announcement hold record, and R3AG continuity notes.
+8. Created R3AF preflight, boundary QA, build/validation, and final QA reports.
+9. Preserved public route and public HTML/PDF/manifest/checksum artifacts without byte changes.
+10. Recorded public announcement held.
+
+Remaining known issues:
+
+- Public announcement remains held and requires later explicit owner authorization for copy and channels.
+- Public source Markdown and public DOCX remain unauthorized.
+- Exact exclusion and sublimit primary wording, insurer claim documentation, and AI underwriting questionnaire sources remain future source-strengthening opportunities, not R3AF blockers.
+
+Boundary discipline:
+
+- R3AF Final Seal is repository governance seal only.
+- R3AF does not execute public announcement, create social post files, create DOCX, publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+**WP3-V1-R3AF Status:** WP3-V1-R3AF FINAL SEAL EXECUTION COMPLETE / PUBLIC ANNOUNCEMENT HELD
 
 ## WP3-V1-R3AE Final Seal Readiness and Announcement Preparation
 

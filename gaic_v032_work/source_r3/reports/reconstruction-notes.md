@@ -1,5 +1,37 @@
 # Reconstruction Notes
 
+## WP3-V1-R3AF Final Seal Execution Only Notes (May 28, 2026)
+
+**Scope:** Execute WP3 / AIIRWP v1.0 repository governance Final Seal only after owner decision `APPROVE_FINAL_SEAL_EXECUTION` and `HOLD_PUBLIC_ANNOUNCEMENT`. Preserve public route and artifacts. Do not execute public announcement, create social post files, create DOCX, publish source Markdown, or claim certification, insurer acceptance, coverage-ready or underwriting-ready or claim-ready status, score/standard/readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `4b2401b9d9f1ec73afc4f9fd3e7b288592f2e4f4`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Inspected R3AE Final Seal readiness package, R3AD public route post-restoration QA package, R3AC rendering parity package, current WP3 public route/artifacts, public manifest/checksum, SOURCE MASTER, current-status registry, whitepaper-series registry, known issues, and reconstruction notes.
+4. Created `gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3af-final-seal-execution/`.
+5. Created README, owner final seal decision record, final seal record, final seal boundary record, artifact integrity final check, public route final check, metadata surface final check, announcement hold record, and R3AG continuity notes.
+6. Created R3AF preflight, boundary QA, build/validation, and final QA reports.
+7. Verified public manifest parses and public checksum validation passes.
+8. Verified WP3 public PDF remains 138 A4 pages with R8 metadata.
+9. Updated SOURCE MASTER, known issues, reconstruction notes, current-status registry, and whitepaper-series registry.
+
+**Artifact discipline:**
+
+- R3AF did not change public WP3 HTML, PDF, manifest, or checksum bytes.
+- R3AF did not create DOCX.
+- R3AF did not publish source Markdown.
+- R3AF did not create live social assets under `public/social/*`.
+- R3AF did not execute public announcement.
+- Rejected v0.2 remains rejected and is not current source truth.
+
+**Boundary discipline:**
+
+- WP3-V1-R3AF Final Seal is repository governance seal only.
+- WP3-V1-R3AF does not claim certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, coverage opinion, actuarial pricing guidance, premium recommendation, claims approval guidance, public DOCX, or WP4 implementation.
+
+**WP3-V1-R3AF Status:** WP3-V1-R3AF FINAL SEAL EXECUTION COMPLETE / PUBLIC ANNOUNCEMENT HELD.
+
 ## WP3-V1-R3AE Final Seal Readiness and Announcement Preparation Notes (May 28, 2026)
 
 **Scope:** Prepare the WP3 / AIIRWP v1.0 Final Seal readiness and announcement preparation package after R3AD accepted public route post-restoration QA. This wave may prepare owner-review materials, announcement drafts, production verification checklists, post-release monitoring checklists, governance updates, and reports. Do not execute Final Seal, mark WP3 final/sealed/release-ready, execute public announcement, create DOCX, publish source Markdown, or claim certification, insurer acceptance, coverage-ready or underwriting-ready or claim-ready status, score/standard/readiness certification, or regulator approval.
