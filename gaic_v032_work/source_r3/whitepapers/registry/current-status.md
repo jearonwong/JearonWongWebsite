@@ -6,15 +6,20 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Current Series Publication Status
 
-- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT.
+- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT COMPLETE / READY FOR OPTIMIZATION PLANNING.
 - Publication package: `gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/`.
+- Full-site audit package: `gaic_v032_work/source_r3/site_audits/full-site-style-ui-semantic-seo-geo-eeat-audit-2026/`.
 - Public route pages: all three white papers are officially available on site as public research editions.
 - Public artifacts: HTML/PDF/manifest/checksum are available for all three white papers.
 - Public-facing internal shorthand: removed from current public-facing publication surfaces or classified as historical/internal governance context.
 - Public announcement: not executed.
 - Public DOCX: not newly authorized.
 - Source Markdown: not public unless already explicitly historical/internal; no new public source Markdown publication in this wave.
-- Next wave: full-site style, UI, semantic, SEO, GEO, and E-E-A-T audit only. No direct optimization in that audit wave.
+- Full-site audit verdict: `AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING`.
+- Full-site audit severity counts: P0 = 0, P1 = 4, P2 = 9, P3 = 6.
+- Whitepaper publication blockers from audit: none.
+- Announcement blockers from audit: P1 metadata/semantic/evidence-labeling/research-foundation narrative issues should be repaired or owner-accepted before social/newsletter outreach.
+- Next wave: optimization planning from audit findings. Do not publish the fourth white paper or practitioner guides yet. Do not execute social announcement without separate owner authorization.
 
 ## WP1 / GAIC
 

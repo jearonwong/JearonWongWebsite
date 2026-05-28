@@ -1,7 +1,39 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (Three Whitepaper Official Site Publication)
+**Last Updated:** May 28, 2026 (Full Site Style UI Semantic SEO GEO E-E-A-T Audit)
+
+## Full Site Style UI Semantic SEO GEO E-E-A-T Audit
+
+### Status: AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING
+
+The audit-only wave reviewed JearonWong.com after the three-whitepaper official site publication. It did not optimize, rewrite, refactor, redesign, change metadata, change routes, change public content, regenerate artifacts, publish social assets, or modify public-facing pages.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `0856e23774ad9da26be435743cedfaa5ee7fa9e5`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Created `gaic_v032_work/source_r3/site_audits/full-site-style-ui-semantic-seo-geo-eeat-audit-2026/`.
+4. Created full-site audit reports for route inventory, visual style, UI/UX, semantic architecture, SEO, GEO, E-E-A-T, whitepaper publication system, risk/claim boundary, technical hygiene, severity matrix, recommended optimization waves, and audit-only change control.
+5. Created full-site audit reports under `gaic_v032_work/source_r3/reports/`.
+6. Validated build, JSON/YAML parsing, whitepaper checksums, JSON-LD parsing, internal links, sitemap/robots/`llms.txt`/entity graph posture, and local browser smoke.
+7. Found no P0 issues and no whitepaper-publication blocker.
+
+Remaining known issues from the audit:
+
+- P1: The Agentic AI Insurability & Risk Transfer White Paper 2026 HTML artifact lacks canonical and JSON-LD parity with the first and second whitepaper HTML artifacts.
+- P1: Concepts Map public semantic relationships still use `public-research-candidate` statuses and public acronym nodes for the second and third whitepapers.
+- P1: Historical first-whitepaper `publication candidate` integrity records remain linked from public evidence/integrity surfaces and need clearer current-vs-historical labeling before broad outreach.
+- P1: The site should explicitly frame the first three whitepapers as the research foundation and MPLP v2.0 object-model consolidation as the next held protocol phase before social/newsletter announcement.
+- P2: Duplicate governance titles, short/long descriptions, GAIC artifact H1 hierarchy, artifact metadata parity, governance/mapping scan hierarchy, project-to-whitepaper semantic links, `llms.txt` summary structure, and footer visual consistency need polish.
+- P3: `public/research/.DS_Store`, existing Astro inline font-preload hints, large artifact crawl/performance watch, and pre-existing untracked `public/social/*` files remain technical hygiene backlog.
+
+Boundary discipline:
+
+- This audit does not change the official whitepaper publication status.
+- This audit does not execute social announcement, create or stage public social assets, create DOCX, publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, publish the fourth white paper, or publish practitioner guides.
+
+**Full Site Audit Status:** AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING
 
 ## Three Whitepaper Official Site Publication
 

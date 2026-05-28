@@ -1,5 +1,52 @@
 # Reconstruction Notes
 
+## Full Site Style UI Semantic SEO GEO E-E-A-T Audit Notes (May 28, 2026)
+
+**Scope:** Audit JearonWong.com after the three-whitepaper official site publication. Review full-site visual style, UI/UX, whitepaper publication consistency, semantic architecture, SEO, GEO, E-E-A-T, entity graph, JSON-LD, `llms.txt`, sitemap, robots, public terminology, mobile/first-fold behavior, route consistency, strategic content alignment, and claim-boundary hygiene. Do not optimize or modify public pages, metadata, components, styles, routes, artifacts, or social assets.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `0856e23774ad9da26be435743cedfaa5ee7fa9e5`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Inspected `src/pages`, `src/components`, `src/layouts`, `src/styles`, `src/data`, public whitepaper artifact directories, `astro.config.mjs`, `robots.txt`, `llms.txt`, entity graph, current governance files, and the official publication package.
+4. Ran route inventory and metadata scans over `dist`.
+5. Ran public-facing internal shorthand and forbidden-claim scans.
+6. Parsed all public whitepaper manifests, entity graph JSON, whitepaper series registry YAML, and 504 built JSON-LD blocks.
+7. Validated all three public whitepaper checksum files from repo root.
+8. Scanned PDF page count, A4 page size, and metadata for all three public PDFs.
+9. Ran local preview browser smoke for homepage, research index, third whitepaper route, third whitepaper HTML artifact, projects, and Concepts Map.
+10. Created the full-site audit package and reports.
+11. Updated known issues, reconstruction notes, and current-status registry with audit-only completion status.
+
+**Audit findings:**
+
+- Verdict: `AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING`.
+- P0: 0.
+- P1: 4.
+- P2: 9.
+- P3: 6.
+- Whitepaper publication blockers: none.
+- Announcement blockers: P1 metadata/semantic/evidence-labeling/research-foundation narrative issues should be repaired or owner-accepted before outreach.
+- SEO/GEO blockers: no hard indexability blocker; third whitepaper HTML artifact metadata parity is P1.
+- Boundary blockers: none; overclaim hits were contextual negative-control wording.
+
+**Artifact discipline:**
+
+- No public HTML/PDF artifacts were regenerated.
+- No manifests or checksums were regenerated.
+- No public DOCX was created.
+- No source Markdown was newly published.
+- No public pages, metadata, components, style files, `llms.txt`, entity graph, robots, sitemap config, or social assets were edited.
+
+**Boundary discipline:**
+
+- The three whitepapers remain official on-site public research editions.
+- Public announcement remains held.
+- Fourth whitepaper and practitioner guide public releases remain paused pending MPLP v2.0 object-model consolidation.
+- This audit does not claim certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, coverage opinion, public DOCX, or social announcement execution.
+
+**Full Site Audit Status:** AUDIT_COMPLETE_READY_FOR_OPTIMIZATION_PLANNING.
+
 ## Three Whitepaper Official Site Publication Notes (May 28, 2026)
 
 **Scope:** Officially publish the three existing white papers on site as public research editions. Align public route pages, public artifacts, metadata, manifest/checksum files, `llms.txt`, entity graph, sitemap/customPages, robots posture, and governance records. Do not execute social announcements, create DOCX, newly publish source Markdown, publish the fourth white paper, publish practitioner guides, or optimize the full site.
