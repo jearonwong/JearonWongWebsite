@@ -4,11 +4,9 @@
   "subtitle": "From Model Governance to Agentic Lifecycle Conformance",
   "author": "Jearon Wong",
   "series": "Agentic Lifecycle Governance Industry Series",
-  "status": "public_edition_live_r8f_reverified",
-  "publication_stage": "production_and_sitewide_consistency_reverified",
+  "status": "public_research_edition",
+  "publication_stage": "official_on_site_publication_complete",
   "page_count": 485,
-  "not_final": true,
-  "final_seal_authorized": false,
   "production_live_verified": true,
   "public_route": "/research/global-ai-compliance-white-paper-2026/",
   "canonical_artifact_base": "/research/global-ai-compliance-white-paper-2026/",
@@ -21,15 +19,15 @@
       "role": "HTML",
       "path": "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e",
-      "bytes": 1446222
+      "sha256": "4d24358d0f3a4b78f7239a8cffbda2c54bec17419d6c4e9992eccd49925bace4",
+      "bytes": 1446168
     },
     {
       "role": "PDF",
       "path": "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "e2525ad333ee110ee59ab2819717b4918ae844ef21d682a380d7384041fb9124",
-      "bytes": 6946939,
+      "sha256": "51fb9a1a9019bbca3b7eb8b8ef436451fdb5129806916491589f401cb90ca106",
+      "bytes": 6946237,
       "page_count": 485
     }
   ],
@@ -38,8 +36,9 @@
     "historical_publication_candidate_manifest": "/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json",
     "current_public_pdf_metadata_manifest": "/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json"
   },
-  "boundary": "Public edition with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete. Not final-sealed, not legal advice, not certification, not legal compliance proof, not regulator approval, not procurement guidance, and not vendor ranking.",
+  "boundary": "Public research edition with HTML/PDF artifacts, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring aligned for official on-site publication. Not legal advice, not certification, not legal compliance proof, not regulator approval, not procurement guidance, and not vendor ranking.",
   "public_distribution_note": "Public distribution exposes HTML and PDF only. Public DOCX remains offboarded.",
-  "updated_at_utc": "2026-05-20T04:20:00Z",
-  "next_phase": "Owner release execution and post-release evidence capture; final seal remains blocked until owner authorization."
+  "updated_at_utc": "2026-05-28T00:00:00Z",
+  "next_phase": "Full site style, UI, semantic, SEO, GEO, and E-E-A-T audit; public social announcement remains held pending separate owner authorization.",
+  "public_status": "public-research-edition"
 }

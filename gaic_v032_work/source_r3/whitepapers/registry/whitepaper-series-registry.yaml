@@ -3,12 +3,17 @@ series:
   registry_status: active
   hard_rule: Future Codex tasks must inspect this registry before whitepaper work.
   no_public_docx: true
+  current_status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT
+  current_publication_package: gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/
+  public_announcement_status: held
+  next_wave: FULL_SITE_STYLE_UI_SEMANTIC_SEO_GEO_EEAT_AUDIT
+  next_wave_mode: audit_only
 
 whitepapers:
   wp1_gaic:
     title: Global AI Compliance White Paper 2026
     short_name: GAIC
-    public_status: public edition live; production and sitewide consistency reverified
+    public_status: Public Research Edition officially available on site
     canonical_source_path: gaic_v032_work/source_r3/GAIC-2026-v0.3.2-FRC-R3-SOURCE-MASTER.md
     public_route: /research/global-ai-compliance-white-paper-2026/
     html_artifact: /research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
@@ -22,7 +27,7 @@ whitepapers:
   wp2_aiaawp:
     title: Agentic AI Auditability & Assurance White Paper 2026
     short_name: AIAAWP
-    public_status: public research candidate live; R8F production and sitewide consistency reverified
+    public_status: Public Research Edition officially available on site
     canonical_source_path: gaic_v032_work/source_r3/wp2_r4_publication_candidate/AIAAWP-2026-v0.1-R4-CANDIDATE.md
     public_route: /research/agentic-ai-auditability-assurance-white-paper-2026/
     html_artifact: /research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html
@@ -36,7 +41,7 @@ whitepapers:
   wp3_aiirwp:
     title: Agentic AI Insurability & Risk Transfer White Paper 2026
     short_name: AIIRWP
-    public_status: public research candidate artifact set sealed for repository governance with public terminology amendment; public announcement held
+    public_status: Public Research Edition officially available on site; repository governance seal complete with public terminology amendment; public announcement held
     rejected_version: v0.2
     rejected_document_id: AIIRWP-2026-v0.2-PUBLIC-CANDIDATE
     canonical_v1_workspace_path: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/
@@ -48,7 +53,7 @@ whitepapers:
     page_count: 138
     current_source: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/artifacts/r3x-artifact-candidate/AIIRWP-v1.0-publication-candidate-source.md
     current_artifact: public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-    public_status_pointer: public research candidate available; HTML/PDF/manifest/checksum available; public route post-restoration QA complete; repository governance final seal complete with public terminology amendment; public announcement held
+    public_status_pointer: public research edition officially available on site; HTML/PDF/manifest/checksum available; repository governance final seal complete with public terminology amendment; public announcement held
     publication_standard: gaic_v032_work/source_r3/whitepapers/publication/WHITEPAPER-PUBLICATION-STANDARD-v1.0.md
     current_publication_repair_package: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ac-html-pdf-rendering-parity-repair/
     current_publication_qa_package: gaic_v032_work/source_r3/whitepapers/aiirwp/v1/publication/r3ad-public-route-post-restoration-qa/

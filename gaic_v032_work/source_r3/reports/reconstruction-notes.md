@@ -1,5 +1,38 @@
 # Reconstruction Notes
 
+## Three Whitepaper Official Site Publication Notes (May 28, 2026)
+
+**Scope:** Officially publish the three existing white papers on site as public research editions. Align public route pages, public artifacts, metadata, manifest/checksum files, `llms.txt`, entity graph, sitemap/customPages, robots posture, and governance records. Do not execute social announcements, create DOCX, newly publish source Markdown, publish the fourth white paper, publish practitioner guides, or optimize the full site.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `ededcdf5fc6e148eac4a2930ebf49b61f33ea8d6`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Updated the shared public white paper component so public hero sequence labels use `WHITE PAPER SERIES` and `Paper 01/02/03` rather than internal whitepaper shorthand.
+4. Aligned `src/data/whitepaperPublications.ts` to `Public Research Edition` status language for all three papers.
+5. Repaired sitewide public references and the research index to use official paper names and bounded public research edition language.
+6. Repaired current public HTML artifacts where public candidate or deployment-verification language remained on public-facing surfaces.
+7. Regenerated public PDFs for all three white papers through the shared whitepaper A4 PDF renderer. Page counts remained 485, 118, and 138.
+8. Regenerated or refreshed public manifests, checksum files, and publication-data SHA256 values for all three public artifact sets.
+9. Updated `public/llms.txt` and `public/entity/jearonwong-mplp-gaic-entity-graph.json` to describe all three papers as public research editions with bounded artifact access.
+10. Created the official site publication package and reports.
+11. Updated SOURCE MASTER, known issues, reconstruction notes, current-status registry, and whitepaper-series registry.
+
+**Artifact discipline:**
+
+- Public HTML/PDF/manifest/checksum artifacts are available for all three white papers.
+- Public DOCX remains unauthorized.
+- No source Markdown was newly published to public routes.
+- Rejected or withdrawn versions remain excluded from current source truth.
+- No social assets under `public/social/*` were staged or created by this wave.
+
+**Boundary discipline:**
+
+- This wave authorizes official on-site publication only.
+- It does not execute public announcement, post to LinkedIn/X/newsletter, create outreach sends, claim certification, claim insurer acceptance, claim coverage-ready status, claim underwriting-ready status, claim claim-ready status, claim score, claim standard, claim readiness certification, claim regulator approval, provide legal advice, provide insurance advice, provide underwriting guidance, or provide a coverage opinion.
+
+**Whitepaper Series Official Publication Status:** THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT.
+
 ## WP3-V1-R3AG Public Terminology Repair And Reseal Notes (May 28, 2026)
 
 **Scope:** Repair post-seal public-facing terminology in the WP3 / AIIRWP v1.0 public artifact set. Regenerate WP3 public HTML/PDF/manifest/checksum, update route hashes and metadata surfaces, create a post-seal amendment record, and keep public announcement held.

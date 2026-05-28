@@ -1,7 +1,38 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (WP3-V1-R3AG Public Terminology Repair and Reseal)
+**Last Updated:** May 28, 2026 (Three Whitepaper Official Site Publication)
+
+## Three Whitepaper Official Site Publication
+
+### Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT
+
+The owner authorized official on-site publication of the three existing white papers. This wave publishes the three papers on JearonWong.com as public research editions and keeps social announcement execution out of scope.
+
+Resolved in this wave:
+
+1. Confirmed repo truth at starting HEAD `ededcdf5fc6e148eac4a2930ebf49b61f33ea8d6`.
+2. Confirmed pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+3. Aligned public route pages and research index status language to `Public Research Edition`.
+4. Repaired public-facing internal whitepaper shorthand and public candidate status language in current public routes and artifacts.
+5. Regenerated the first, second, and third public PDFs through the shared whitepaper A4 PDF renderer after HTML status repairs.
+6. Refreshed public manifests, checksums, and route data hashes for all three white papers.
+7. Updated `llms.txt`, entity graph, sitemap/customPages posture, robots stale-path posture, and governance records.
+8. Created `gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/`.
+9. Created official publication reports under `gaic_v032_work/source_r3/reports/`.
+
+Remaining known issues:
+
+- Public announcement remains held and requires separate owner authorization by channel and copy.
+- The fourth white paper and practitioner guide public releases remain paused.
+- The next wave should be a full-site style, UI, semantic, SEO, GEO, and E-E-A-T audit only; direct optimization should wait until after audit findings.
+- Historical GAIC artifact paths such as `publication-candidate-manifest.json` remain as integrity history rather than current public status language.
+
+Boundary discipline:
+
+- This wave does not execute social announcement, create or stage public social assets, create DOCX, newly publish source Markdown, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, or implement WP4.
+
+**Whitepaper Series Official Publication Status:** THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT
 
 ## WP3-V1-R3AG Public Terminology Repair And Reseal
 

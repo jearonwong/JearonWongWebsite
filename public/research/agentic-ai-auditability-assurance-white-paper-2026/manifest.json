@@ -1,59 +1,41 @@
 {
-  "document_id": "AIAAWP-2026-v0.1-R4-CANDIDATE",
+  "document_id": "AIAAWP-2026-v0.1",
   "title": "Agentic AI Auditability & Assurance White Paper 2026",
   "subtitle": "A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance",
   "author": "Jearon Wong",
   "series": "Agentic Lifecycle Governance Industry Series",
-  "status": "public_research_candidate_live_r8f_reverified",
-  "publication_stage": "production_and_sitewide_consistency_reverified",
+  "status": "public_research_edition",
+  "publication_stage": "official_on_site_publication_complete",
   "page_count": 118,
-  "deployment_verification_required": false,
-  "not_final": true,
-  "not_sealed": true,
   "production_live_verified": true,
   "public_route": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
   "canonical_artifact_base": "/research/agentic-ai-auditability-assurance-white-paper-2026/",
   "artifact_role_model": {
-    "html": "responsive web-reading visual authority",
-    "pdf": "fixed-layout visual authority"
-  },
-  "gaic_standard_reuse": {
-    "sop": "gaic_v032_work/source_r3/reports/whitepaper-series-publication-sop-v1.md",
-    "r5_source_status": "AIAAWP-R5 FINAL CANDIDATE QA COMPLETE / READY FOR AUTHOR RELEASE DECISION AND PUBLICATION STAGING",
-    "html_pdf_visual_authority": true,
-    "metadata_jsonld_aligned": true,
-    "manifest_checksum_pattern_aligned": true
+    "html": "responsive web-reading edition",
+    "pdf": "fixed-layout public PDF edition"
   },
   "artifacts": [
     {
       "role": "HTML",
       "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4",
-      "bytes": 271281
+      "sha256": "996a07049b0588ba3c53c44501fcbaf8a67d8c84375a42167037134fc1fa69c4",
+      "bytes": 270916
     },
     {
       "role": "PDF",
       "path": "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "62c9f8ed05d67a0187a9e51385b80b86e0af4411e783ae9523d8d9e412ca8d0e",
-      "bytes": 1395621
+      "sha256": "85cccf7c177d7f449d33d4d507cc4885828fe334c4715e338282197150423ac7",
+      "bytes": 1385576,
+      "page_count": 118
     }
   ],
   "checksums": "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
-  "boundary": "Public research candidate with R8F production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring reverification complete. Not final, not sealed, not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.",
-  "staging_normalization": {
-    "scope": "public-copy-only metadata/status normalization",
-    "internal_r5_artifacts_unchanged": true,
-    "reason": "Public route artifacts must not describe themselves as internal-only or noindex once staged under a public research path.",
-    "editable_derivative_public_distribution_removed": "Owner decision removed editable derivative files from public distribution; public site now exposes HTML and PDF only.",
-    "pdf_regenerated_from_public_html": "Public PDF regenerated from normalized public HTML after stale internal-only status text was detected in PDF text extraction.",
-    "r8c_pdf_profile_refresh": "Public PDF regenerated through the R8C PDF Wide Table Layout Gate while preserving HTML/PDF-only public distribution.",
-    "r8d_pdf_profile_refresh": "Public PDF regenerated through the R8D PDF Table Semantic Gate to preserve rubric/matrix comparison while keeping row-card layouts only for appropriate inventory or evidence tables.",
-    "r8e_pdf_profile_refresh": "Public PDF regenerated through the R8E-1 publication design implementation. AIAAWP representative tables remain portrait or split rubric because landscape is not materially needed; footer/copyright and semantic pagination controls are applied in PDF mode only.",
-    "r8e2_full_publication_quality_repair": "Public PDF regenerated through the R8E-2 full PDF publication quality repair after internal proof QA. Header/footer rules are consistent with GAIC, HTML remains the responsive web-reading edition, and public DOCX remains offboarded."
-  },
+  "boundary": "Public research edition with HTML/PDF artifacts, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring aligned for official on-site publication. Not legal advice, not an audit standard, not certification, not an assurance opinion, not legal compliance proof, not regulator approval, not procurement guidance, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.",
   "generated_at_utc": "2026-05-18T06:50:54Z",
-  "next_phase": "Owner release execution and post-release evidence capture; final seal remains blocked until owner authorization.",
-  "updated_at_utc": "2026-05-20T04:20:00Z"
+  "next_phase": "Full site style, UI, semantic, SEO, GEO, and E-E-A-T audit; public social announcement remains held pending separate owner authorization.",
+  "updated_at_utc": "2026-05-28T00:00:00Z",
+  "public_status": "public-research-edition",
+  "public_distribution_note": "Public distribution exposes HTML and PDF only. Public DOCX remains offboarded."
 }

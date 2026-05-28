@@ -15,13 +15,13 @@ export const whitepaperPublications = [
     assetBase: "/research/global-ai-compliance-white-paper-2026",
     documentId: "GACWP-2026-v0.3.2-FRC-R3",
     version: "v0.3.2",
-    versionLabel: "v0.3.2 Public Edition",
-    statusLabel: "PUBLIC_EDITION",
-    publicStatus: "Public Edition",
+    versionLabel: "v0.3.2 Public Research Edition",
+    statusLabel: "PUBLIC_RESEARCH_EDITION",
+    publicStatus: "Public Research Edition",
     releaseState:
-      "HTML/PDF artifacts are publicly available; not a certification, not a regulator-approved standard, and not a final/sealed standard.",
+      "HTML/PDF artifacts are publicly available as a public research edition; not legal advice, not certification, not a regulator-approved standard, and not procurement or vendor-ranking guidance.",
     artifactRole:
-      "Public edition with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
+      "Public research edition with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
     pageCount: 485,
     publicationMonth: "May 2026",
     datePublished: "2026-05-12",
@@ -53,7 +53,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
         description: "Responsive web-reading edition",
         mediaType: "text/html",
-        sha256: "3a60e753a0bbf7887fd23c09f3ffa59450ea22e6b704caf7bb4afcc4330d913e"
+        sha256: "4d24358d0f3a4b78f7239a8cffbda2c54bec17419d6c4e9992eccd49925bace4"
       },
       {
         kind: "PDF",
@@ -61,7 +61,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
         description: "Fixed-layout public PDF edition",
         mediaType: "application/pdf",
-        sha256: "e2525ad333ee110ee59ab2819717b4918ae844ef21d682a380d7384041fb9124"
+        sha256: "51fb9a1a9019bbca3b7eb8b8ef436451fdb5129806916491589f401cb90ca106"
       },
       {
         kind: "JSON",
@@ -69,7 +69,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "ceafde3a4afcd5ed58891723b850a2059fb62ef90aac566ba31e47c531797cca"
+        sha256: "5d9ef1611a422afab92c8c937b9309ea6932a6ac8e64a928ed63e538be3ecedf"
       },
       {
         kind: "SHA256",
@@ -77,7 +77,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "5fe9b35fab1721198599becb9d71bc31227a3a7d8a0b647b1b182bbf869c8d4a"
+        sha256: "2393ebd32ed9e4f00bc527a329dfd52a861b60801437571d68a8b9e148e3f7e7"
       }
     ],
     additionalIntegrityLinks: [
@@ -105,11 +105,11 @@ export const whitepaperPublications = [
       "Not a regulator-approved benchmark.",
       "Not procurement recommendation.",
       "Not vendor ranking.",
-      "Not a final/sealed standard."
+      "Not a standards-body publication."
     ],
     integrityRows: [
       { label: "Source commit", value: "943a36b65b79e4cf9ca68d75dacc3cbcfcb51a1e" },
-      { label: "Seal commit", value: "448afd6f7d9ebef56b3e8afcd3c97c2f22b5daea" },
+      { label: "Repository integrity commit", value: "448afd6f7d9ebef56b3e8afcd3c97c2f22b5daea" },
       { label: "Cleanup commit", value: "a9c5747efb36915470721c11855142f7c7fa9b25" },
       { label: "Page count", value: "485" }
     ],
@@ -146,24 +146,24 @@ export const whitepaperPublications = [
     oneLinePositioning:
       "A lifecycle evidence guide for auditability, assurance boundaries, and enterprise AI governance.",
     abstract:
-      "A public research candidate defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.",
+      "A public research edition defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.",
     canonicalPath: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
     assetBase: "/research/agentic-ai-auditability-assurance-white-paper-2026",
-    documentId: "AIAAWP-2026-v0.1-R4-CANDIDATE",
+    documentId: "AIAAWP-2026-v0.1",
     version: "v0.1",
-    versionLabel: "v0.1 Public Research Candidate",
-    statusLabel: "PUBLIC_RESEARCH_CANDIDATE",
-    publicStatus: "Public Research Candidate",
+    versionLabel: "v0.1 Public Research Edition",
+    statusLabel: "PUBLIC_RESEARCH_EDITION",
+    publicStatus: "Public Research Edition",
     releaseState:
-      "HTML/PDF artifacts are available for public research-candidate review; final seal remains blocked pending owner authorization.",
+      "HTML/PDF artifacts are publicly available as a public research edition; not legal advice, not an audit standard, not certification, not an assurance opinion, and not regulator or audit-body endorsement.",
     artifactRole:
-      "Public research candidate with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
+      "Public research edition with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
     pageCount: 118,
     publicationMonth: "May 2026",
     datePublished: "2026-05-18",
     dateModified: "2026-05-28",
     citationText:
-      "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1-R4-CANDIDATE, May 2026.",
+      "Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1, May 2026.",
     citationKeywords:
       "Agentic AI Auditability; AI Agent Auditability; Audit Evidence Chain; Agentic Audit Object; AARM; MRO; Agentic Lifecycle Governance; Enterprise AI Governance; Lifecycle Evidence",
     keywords: [
@@ -188,7 +188,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "4c728e7f1202afc69622c1fc60a2eb5ee1daaed6e319c2060f01e001c53a82e4"
+        sha256: "996a07049b0588ba3c53c44501fcbaf8a67d8c84375a42167037134fc1fa69c4"
       },
       {
         kind: "PDF",
@@ -196,7 +196,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
         description: "Fixed-layout PDF artifact",
         mediaType: "application/pdf",
-        sha256: "62c9f8ed05d67a0187a9e51385b80b86e0af4411e783ae9523d8d9e412ca8d0e"
+        sha256: "85cccf7c177d7f449d33d4d507cc4885828fe334c4715e338282197150423ac7"
       },
       {
         kind: "JSON",
@@ -204,7 +204,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "945ff67e88c283baf23f998726676db353f302e5416eff3814ae4d2c2f18834d"
+        sha256: "cadbf8e3429333e18ed54867f99af2b747f499c1ca92c3c3eca879d70b3bee15"
       },
       {
         kind: "SHA256",
@@ -212,7 +212,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "05359742b505f64cf176fc88ffd8c3391ca56afccc92f1d16ef7fa5848de83fe"
+        sha256: "9d84c3286a5683673ff8ebb20f5d02c2a73b1a1cd7298792e2f31cbedbeecce4"
       }
     ],
     overview:
@@ -231,13 +231,13 @@ export const whitepaperPublications = [
       "Not regulator approval.",
       "Not Big Four or audit-body endorsement.",
       "Not procurement recommendation or vendor ranking.",
-      "Not final or sealed."
+      "No public DOCX is authorized."
     ],
     integrityRows: [
-      { label: "R5A SOP commit", value: "5c05972fe57189bd4d6ae35948429767c9de0735" },
-      { label: "Document ID", value: "AIAAWP-2026-v0.1-R4-CANDIDATE" },
+      { label: "Source governance commit", value: "5c05972fe57189bd4d6ae35948429767c9de0735" },
+      { label: "Document ID", value: "AIAAWP-2026-v0.1" },
       { label: "Page count", value: "118" },
-      { label: "Next phase", value: "Owner release execution; final seal remains blocked." }
+      { label: "Publication status", value: "Official on-site public research edition." }
     ],
     keyConcepts: [
       { label: "Agentic AI Auditability", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html#executive-thesis" },
@@ -270,24 +270,24 @@ export const whitepaperPublications = [
     oneLinePositioning:
       "A lifecycle evidence guide for risk-transfer analysis, claim reconstruction, and underwriting-facing reviewability.",
     abstract:
-      "A public research candidate analyzing agentic AI insurability and risk transfer through lifecycle evidence, insured subject and risk object separation, underwriting reviewability, and claim reconstruction boundaries.",
+      "A public research edition analyzing agentic AI insurability and risk transfer through lifecycle evidence, insured subject and risk object separation, underwriting reviewability, and claim reconstruction boundaries.",
     canonicalPath: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
     assetBase: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026",
-    documentId: "AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE",
+    documentId: "AIIRWP-2026-v1.0",
     version: "v1.0",
-    versionLabel: "v1.0 Public Research Candidate",
-    statusLabel: "PUBLIC_RESEARCH_CANDIDATE",
-    publicStatus: "Public Research Candidate",
+    versionLabel: "v1.0 Public Research Edition",
+    statusLabel: "PUBLIC_RESEARCH_EDITION",
+    publicStatus: "Public Research Edition",
     releaseState:
-      "HTML/PDF artifacts are available for public research-candidate review; not final, not sealed, not release-ready, and public announcement not executed.",
+      "HTML/PDF artifacts are publicly available as a public research edition with repository governance seal complete; not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, and not insurer or regulator endorsement.",
     artifactRole:
-      "Public research candidate with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
+      "Public research edition with HTML and PDF artifacts. Manifest and checksum records are provided for integrity verification.",
     pageCount: 138,
     publicationMonth: "May 2026",
     datePublished: "2026-05-27",
     dateModified: "2026-05-28",
     citationText:
-      "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Technical Report AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE, May 2026.",
+      "Jearon Wong. Agentic AI Insurability & Risk Transfer White Paper 2026: A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer. Technical Report AIIRWP-2026-v1.0, May 2026.",
     citationKeywords:
       "Agentic AI Insurability; AI risk transfer; insured legal subject; agentic risk object; underwriting reviewability; claim evidence chain; lifecycle evidence; Agentic Lifecycle Governance; AI Agent Lifecycle",
     keywords: [
@@ -311,7 +311,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "3923e9696c3b5e38da83030874f25b6c61e28bf6df40e7d513b22054f6a38e7f"
+        sha256: "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04"
       },
       {
         kind: "PDF",
@@ -319,7 +319,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
         description: "Fixed-layout PDF artifact",
         mediaType: "application/pdf",
-        sha256: "a16c8aa70c217534c7c5f62ec23e7d568c4c5861a3cdcee8ac4df12040d2bb9c"
+        sha256: "db4866c7421928e65d4563bb25787d9b322d708c59937216da9d04b60991d178"
       },
       {
         kind: "JSON",
@@ -327,7 +327,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "9435db11b45d5e234507edfa481568943ec5d088b18f69cd5c58fdb75300df09"
+        sha256: "ef732af9257ba96bd2e1302db8e439bec4de376c1811a43f7c18b1558d5450db"
       },
       {
         kind: "SHA256",
@@ -335,7 +335,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "9c68f6afcf49651d9f9ed24e7c7df10ef9d869b7a3c971d428117ab899a5dfe4"
+        sha256: "00305f7b403d548828b5037ac9f149a30ab0a3abfd58f12ac8e6f0498a641f64"
       }
     ],
     overview:
@@ -345,7 +345,7 @@ export const whitepaperPublications = [
     artifactNote:
       "HTML and PDF are available. Manifest and checksum records are provided for integrity verification. No public DOCX is authorized.",
     evidenceIntegrity:
-      "The public artifacts are the current public research-candidate HTML/PDF/manifest/checksum set with public terminology amended after the repository governance seal. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
+      "The public artifacts are the current public research edition HTML/PDF/manifest/checksum set with public terminology amended after the repository governance seal. Rejected v0.2 remains historical context only and is not current source truth or citation source.",
     boundaryNotes: [
       "Not legal advice.",
       "Not insurance advice.",
@@ -362,15 +362,14 @@ export const whitepaperPublications = [
       "Not vendor ranking.",
       "Not a score.",
       "Not a standard.",
-      "Not final.",
-      "Not sealed.",
-      "Not release-ready."
+      "No public DOCX is authorized."
     ],
     integrityRows: [
       { label: "Source basis commit", value: "a459470570b1b84cc89a566abf606efa78491bf9" },
       { label: "Public route", value: "Active" },
       { label: "Rendering profile", value: "Shared whitepaper HTML/PDF publication profile" },
       { label: "Page count", value: "138" },
+      { label: "Repository governance seal", value: "Complete with public terminology amendment." },
       { label: "Rejected v0.2", value: "Not current source truth or citation source." }
     ],
     keyConcepts: [

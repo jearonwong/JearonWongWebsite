@@ -22,11 +22,11 @@ const checksumPath = path.join(publicDir, "checksums.sha256");
 
 const title = "Agentic AI Insurability & Risk Transfer White Paper 2026";
 const subtitle = "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer";
-const documentId = "AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE";
-const version = "v1.0 Public Research Candidate";
+const documentId = "AIIRWP-2026-v1.0";
+const version = "v1.0 Public Research Edition";
 const generatedAt = new Date().toISOString();
 const boundaryLine =
-  "Public research candidate. Repository governance seal complete with public terminology amendment; public announcement held. Not a final public release, not release-ready, not a public release announcement, not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized.";
+  "Public research edition. Repository governance seal complete with public terminology amendment. Not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard. No public DOCX is authorized.";
 
 function sha256(filePath) {
   return createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
@@ -111,6 +111,31 @@ function repairPublicTerminology(body) {
     ["WP2's audit evidence chain", "the auditability and assurance white paper's audit evidence chain"],
     ["WP2's auditability concepts", "The auditability and assurance white paper's concepts"],
     ["WP2's audit evidence vocabulary", "The auditability and assurance white paper's evidence vocabulary"],
+    ["AIIRWP-2026-v1.0-PUBLIC-RESEARCH-CANDIDATE", "AIIRWP-2026-v1.0"],
+    ["v1.0 Public Research Candidate", "v1.0 Public Research Edition"],
+    ["Public Research Candidate Status", "Public Research Edition Status"],
+    ["public research candidate", "public research edition"],
+    ["Public research candidate", "Public research edition"],
+    ["Public candidate", "Public edition"],
+    ["research-candidate access", "research-edition access"],
+    ["Final Seal or publication release", "Certification, external approval, or publication overclaim"],
+    ["Final Seal requires separate owner authorization.", "Certification or external approval is not claimed."],
+    ["This public research edition exposes bounded public HTML, PDF, manifest, and checksum artifacts. It does not execute a public announcement, Final Seal, final status, sealed status, release-ready status, DOCX distribution, or source Markdown publication.", "This public research edition exposes bounded public HTML, PDF, manifest, and checksum artifacts. It does not create certification, external approval, DOCX distribution, or source Markdown publication."],
+    ["This conclusion does not claim final status, public release announcement, Final Seal,", "This conclusion does not claim certification, external approval,"],
+    ["This public HTML artifact is the AIIRWP v1.0 public research edition. It is not final, not sealed, not release-ready, not a social announcement, and not a source Markdown publication. Public distribution is HTML/PDF plus manifest/checksum only; no public DOCX is authorized.", "This public HTML artifact is the AIIRWP v1.0 public research edition. Public distribution is HTML/PDF plus manifest/checksum only; no public DOCX or source Markdown publication is authorized. Social announcement remains a separate owner decision."],
+    ["Final Seal, external approval status, external approval status, or social announcement authorization", "certification, external approval, or social announcement authorization"],
+    ["external approval status, external approval status, social announcement", "certification, external approval, social announcement"],
+    ["external approval status, external approval status, DOCX distribution", "certification, external approval, DOCX distribution"],
+    ["Final/external approval status", "Certification or external approval"],
+    ["Not final/sealed", "No certification or external approval claim"],
+    ["final/sealed status", "external approval status"],
+    ["not release-ready; public announcement blocked", "not certification; social announcement not executed"],
+    ["public release announcement", "social announcement"],
+    ["public announcement authorization", "social announcement authorization"],
+    ["public announcement held", "social announcement held"],
+    ["release-ready status", "external approval status"],
+    ["sealed status", "external approval status"],
+    ["final status", "external approval status"],
     ["WP1 supplies", "The compliance white paper supplies"],
     ["WP2 supplies", "The auditability and assurance white paper supplies"],
     ["WP1 contributes", "The compliance white paper contributes"],
@@ -148,7 +173,7 @@ function buildToc(body) {
   ];
   return `<nav class="generated-toc" aria-label="Publication table of contents">
   <h2>Publication Contents</h2>
-  <p class="toc-note">HTML anchors are active in the public research candidate. PDF rendering uses the shared whitepaper A4 print profile used by the accepted compliance and auditability white paper artifacts.</p>
+  <p class="toc-note">HTML anchors are active in the public research edition. PDF rendering uses the shared whitepaper A4 print profile used by the compliance and auditability white paper artifacts.</p>
   <div class="toc-grid">
     ${groups
       .map(
@@ -193,7 +218,7 @@ function buildHtml(body) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <meta name="aiirwp-artifact-status" content="public-research-candidate">
+  <meta name="aiirwp-artifact-status" content="public-research-edition">
   <meta name="author" content="Jearon Wong">
   <meta name="description" content="${escapeHtml(subtitle)}">
   <title>${escapeHtml(title)} - ${documentId}</title>
@@ -216,7 +241,7 @@ ${artifactStyle}
           <div><strong>Document ID</strong><span>${documentId}</span></div>
           <div><strong>Version</strong><span>${version}</span></div>
           <div><strong>Date</strong><span>May 2026</span></div>
-          <div><strong>Status</strong><span>Public research candidate; repository governance seal complete with public terminology amendment; public announcement held</span></div>
+          <div><strong>Status</strong><span>Public research edition; repository governance seal complete with public terminology amendment</span></div>
           <div><strong>Series</strong><span>Agentic Lifecycle Governance Industry Series</span></div>
           <div><strong>Visual Source of Truth</strong><span>HTML/PDF primary; manifest/checksum integrity</span></div>
         </div>
@@ -225,12 +250,12 @@ ${artifactStyle}
     </section>
     <section class="important-notice" aria-label="Publication boundary">
       <div class="notice-label">Publication Boundary</div>
-      <h2>Public Research Candidate Status</h2>
+      <h2>Public Research Edition Status</h2>
       <p>${boundaryLine} The prior AIIRWP v0.2 candidate remains rejected and withdrawn; it is historical traceability context only and is not current source truth or citation source.</p>
     </section>
     ${toc}
     ${structuredBody}
-    <footer class="html-footer">${documentId} - public research candidate. Generated ${generatedAt}. Repository governance seal complete with public terminology amendment; public announcement held. No public DOCX.</footer>
+    <footer class="html-footer">${documentId} - public research edition. Generated ${generatedAt}. Repository governance seal complete with public terminology amendment. No public DOCX.</footer>
   </main>
 </body>
 </html>
@@ -256,12 +281,12 @@ function updateManifest(pageCount) {
   manifest.wave_id = "AIIRWP-2026-v1.0-PUBLIC-TERMINOLOGY-AMENDMENT";
   manifest.generated_at = generatedAt;
   manifest.source_basis =
-    "Current AIIRWP v1.0 public research-candidate artifact set with public terminology amendment applied to remove internal whitepaper shorthand from public-facing content.";
+    "Current AIIRWP v1.0 public research edition artifact set with public terminology amendment applied to remove internal whitepaper shorthand from public-facing content.";
   manifest.artifact_style_standard =
     "Unified whitepaper publication standard: professional-shell HTML artifact grammar, shared whitepaper A4 PDF print profile, manifest/checksum integrity layer, no public DOCX.";
   manifest.canonical_rendering_baseline =
     "Accepted auditability and compliance white paper artifact presentation, using the shared whitepaper A4 PDF print profile lineage.";
-  manifest.public_status = "public-research-candidate";
+  manifest.public_status = "public-research-edition";
   manifest.seal_status = "FINAL_SEAL_COMPLETE_WITH_PUBLIC_TERMINOLOGY_AMENDMENT";
   manifest.public_announcement_status = "HELD";
   manifest.route_status = "public-route-active";
@@ -272,8 +297,8 @@ function updateManifest(pageCount) {
     "not coverage opinion",
     "not underwriting guidance",
     "not certification",
-    "not final public release",
-    "not release-ready",
+    "not external approval",
+    "not public DOCX",
   ];
   manifest.artifacts = [
     {
@@ -300,7 +325,7 @@ function updateManifest(pageCount) {
   manifest.public_distribution_note =
     "Public distribution exposes HTML, PDF, manifest, and checksum only. No public DOCX or source Markdown is authorized.";
   manifest.next_phase =
-    "Public announcement remains held pending explicit owner authorization.";
+    "Official on-site publication complete; public announcement remains held pending explicit owner authorization.";
   manifest.publication_system_alignment =
     "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content.";
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);

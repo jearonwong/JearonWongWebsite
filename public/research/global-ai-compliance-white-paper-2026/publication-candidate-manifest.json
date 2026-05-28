@@ -8,13 +8,13 @@
   "sealed_from_phase": "1D-13F",
   "sealed_from_phase_status": "PHASE 1D-13F NECESSITY ARGUMENT AND PROTOCOL BOUNDARY COMPLETE / PUBLICATION CANDIDATE REVIEW READY",
   "page_count": 485,
-  "page_count_scope": "current public PDF after R8E-2 full publication-quality repair",
+  "page_count_scope": "current public PDF after full publication-quality repair",
   "sealed_candidate_page_count": 425,
   "current_public_pdf_page_count": 485,
   "current_public_pdf_sha256": "e2525ad333ee110ee59ab2819717b4918ae844ef21d682a380d7384041fb9124",
   "current_public_pdf_manifest": "/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json",
   "visual_authority": "HTML/PDF are the public visual authority.",
-  "public_distribution_note": "The public website exposes HTML and PDF only after the R8B owner decision.",
+  "public_distribution_note": "The public website exposes HTML and PDF only after the owner distribution decision.",
   "content_change_policy": "No white paper content, scores, methodology, RCCS-T/RCCS-M/ALCS framing, protocol/product boundary language, or interoperability boundary language was changed during sealing.",
   "artifacts": [
     {
@@ -44,7 +44,7 @@
     "publication_residue_status": "PASS"
   },
   "model_status": {
-    "rccs_t_rccs_m_alcs_model": "Preserved and publication-candidate ready.",
+    "rccs_t_rccs_m_alcs_model": "Preserved and public-review ready.",
     "chapter_7_methodology": "RCCS-T and RCCS-M use the same ten dimensions and weights with different scoring lenses; T-07-01A and T-07-02A preserved.",
     "appendix_e_adjustment_matrix": "T-E-11 RCCS-M Adjustment Matrix preserved.",
     "chapter_14_bridge": "RCCS-M evidence confidence bridge preserved.",

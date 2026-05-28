@@ -1,6 +1,6 @@
 {
   "manifest_type": "GAIC public distribution PDF full publication quality repair manifest",
-  "task_id": "WHITEPAPER-R8E-2-FULL-PDF-PUBLICATION-QUALITY-REPAIR",
+  "task_id": "GAIC-PUBLIC-PDF-FULL-PUBLICATION-QUALITY-REPAIR",
   "date": "2026-05-19",
   "document_id": "GACWP-2026-v0.3.2-FRC-R3",
   "sealed_candidate_pdf_sha256": "3e4ed39624661ecb29c6328635d0d97a5f6d638e09aa5eee3e2ae6cdc418b643",
@@ -33,8 +33,8 @@
     ],
     "result": "PASS"
   },
-  "content_change_statement": "Publication-quality PDF repair only. Visible layout and pagination changed intentionally to fix owner-rejected R8E-1 defects: Appendix D vertical single-character table rendering, over-compressed system-by-system analytical profiles, and inconsistent body header/footer treatment. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
-  "sealed_candidate_statement": "The historical publication-candidate PDF remains preserved at the recorded candidate hash. This R8E-2 update changes only the public distribution PDF.",
+  "content_change_statement": "Publication-quality PDF repair only. Visible layout and pagination changed intentionally to fix owner-rejected defects: Appendix D vertical single-character table rendering, over-compressed system-by-system analytical profiles, and inconsistent body header/footer treatment. White paper prose, scores, methodology, RCCS-T/RCCS-M/ALCS framing, public document identity, and boundary status were not changed.",
+  "sealed_candidate_statement": "The historical pre-publication PDF remains preserved at the recorded candidate hash. This update changes only the public distribution PDF.",
   "production_reverification_required": true,
   "commit": "c34c6be153de8e7dc949b25d933ab17dec5a9cc3"
 }

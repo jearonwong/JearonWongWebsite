@@ -1,56 +1,70 @@
 {
-  "wave_id": "AIIRWP-2026-v1.0-PUBLIC-TERMINOLOGY-AMENDMENT",
-  "source_basis": "Current AIIRWP v1.0 public research-candidate artifact set with public terminology amendment applied to remove internal whitepaper shorthand from public-facing content.",
   "source_basis_commit": "a459470570b1b84cc89a566abf606efa78491bf9",
   "public_html_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
   "public_pdf_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
   "public_manifest_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
   "public_checksum_path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
-  "generated_at": "2026-05-28T08:54:02.107Z",
-  "public_status": "public-research-candidate",
-  "route_status": "public-route-active",
-  "no_docx_status": "public DOCX unauthorized",
+  "generated_at": "2026-05-28T10:35:34.619Z",
+  "public_status": "public-research-edition",
   "rejected_v0_2_exclusion": true,
-  "source_refs_range": "[1]-[62]",
-  "table_id_range": "T-02-01, T-04-01 through T-27-01",
-  "appendix_status": "Appendix A-H included; Appendix I deferred",
   "boundary_status": [
     "not legal advice",
     "not insurance advice",
     "not coverage opinion",
     "not underwriting guidance",
     "not certification",
-    "not final public release",
-    "not release-ready"
+    "not external approval",
+    "not public DOCX"
   ],
   "artifacts": [
     {
       "role": "HTML",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "3923e9696c3b5e38da83030874f25b6c61e28bf6df40e7d513b22054f6a38e7f",
-      "bytes": 377306
+      "sha256": "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04",
+      "bytes": 376850
     },
     {
       "role": "PDF",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
       "media_type": "application/pdf",
-      "sha256": "a16c8aa70c217534c7c5f62ec23e7d568c4c5861a3cdcee8ac4df12040d2bb9c",
-      "bytes": 1888326,
+      "sha256": "db4866c7421928e65d4563bb25787d9b322d708c59937216da9d04b60991d178",
+      "bytes": 1868346,
       "page_count": 138
     }
   ],
   "checksums": {
-    "public_html": "3923e9696c3b5e38da83030874f25b6c61e28bf6df40e7d513b22054f6a38e7f",
-    "public_pdf": "a16c8aa70c217534c7c5f62ec23e7d568c4c5861a3cdcee8ac4df12040d2bb9c",
+    "public_html": "a55eb18227dc06d134091b4c1fbeb798bcb44823cfe0203a6a1636ec9ea6ca04",
+    "public_pdf": "db4866c7421928e65d4563bb25787d9b322d708c59937216da9d04b60991d178",
     "public_manifest": "recorded in checksums.sha256 after manifest serialization; self-referential hash is externalized"
   },
   "source_markdown_publication": "not authorized; source Markdown not copied to public route",
   "public_distribution_note": "Public distribution exposes HTML, PDF, manifest, and checksum only. No public DOCX or source Markdown is authorized.",
-  "next_phase": "Public announcement remains held pending explicit owner authorization.",
-  "publication_system_alignment": "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content.",
+  "next_phase": "Official on-site publication complete; public announcement remains held pending explicit owner authorization.",
+  "document_id": "AIIRWP-2026-v1.0",
+  "title": "Agentic AI Insurability & Risk Transfer White Paper 2026",
+  "subtitle": "A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer",
+  "author": "Jearon Wong",
+  "series": "Agentic Lifecycle Governance Industry Series",
+  "status": "public_research_edition",
+  "publication_stage": "official_on_site_publication_complete",
+  "page_count": 138,
+  "production_live_verified": true,
+  "public_route": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+  "canonical_artifact_base": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
+  "artifact_role_model": {
+    "html": "responsive web-reading edition",
+    "pdf": "fixed-layout public PDF edition"
+  },
+  "boundary": "Public research edition with repository governance seal complete and public terminology amendment applied. Not legal advice, not insurance advice, not a coverage opinion, not underwriting guidance, not certification, not proof of insurability, not insurer endorsement, not regulator-approved, not a score, and not a standard.",
+  "updated_at_utc": "2026-05-28T00:00:00Z",
+  "wave_id": "AIIRWP-2026-v1.0-PUBLIC-TERMINOLOGY-AMENDMENT",
+  "source_basis": "Current AIIRWP v1.0 public research edition artifact set with public terminology amendment applied to remove internal whitepaper shorthand from public-facing content.",
   "artifact_style_standard": "Unified whitepaper publication standard: professional-shell HTML artifact grammar, shared whitepaper A4 PDF print profile, manifest/checksum integrity layer, no public DOCX.",
   "canonical_rendering_baseline": "Accepted auditability and compliance white paper artifact presentation, using the shared whitepaper A4 PDF print profile lineage.",
   "seal_status": "FINAL_SEAL_COMPLETE_WITH_PUBLIC_TERMINOLOGY_AMENDMENT",
-  "public_announcement_status": "HELD"
+  "public_announcement_status": "HELD",
+  "route_status": "public-route-active",
+  "no_docx_status": "public DOCX unauthorized",
+  "publication_system_alignment": "Public terminology amendment complete: AIIRWP HTML/PDF keep the accepted whitepaper artifact style while removing internal whitepaper shorthand from public-facing content."
 }

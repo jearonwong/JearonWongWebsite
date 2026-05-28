@@ -4,9 +4,21 @@
 
 Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepaper work.
 
+## Current Series Publication Status
+
+- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT.
+- Publication package: `gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/`.
+- Public route pages: all three white papers are officially available on site as public research editions.
+- Public artifacts: HTML/PDF/manifest/checksum are available for all three white papers.
+- Public-facing internal shorthand: removed from current public-facing publication surfaces or classified as historical/internal governance context.
+- Public announcement: not executed.
+- Public DOCX: not newly authorized.
+- Source Markdown: not public unless already explicitly historical/internal; no new public source Markdown publication in this wave.
+- Next wave: full-site style, UI, semantic, SEO, GEO, and E-E-A-T audit only. No direct optimization in that audit wave.
+
 ## WP1 / GAIC
 
-- Status: public edition live; production and sitewide consistency reverified.
+- Status: Public Research Edition officially available on site.
 - Page count: 485.
 - Current source: `gaic_v032_work/source_r3/GAIC-2026-v0.3.2-FRC-R3-SOURCE-MASTER.md`.
 - Public route: `/research/global-ai-compliance-white-paper-2026/`.
@@ -14,7 +26,7 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP2 / AIAAWP
 
-- Status: public research candidate live; R8F production and sitewide consistency reverified.
+- Status: Public Research Edition officially available on site.
 - Page count: 118.
 - Current source: `gaic_v032_work/source_r3/wp2_r4_publication_candidate/AIAAWP-2026-v0.1-R4-CANDIDATE.md`.
 - Public route: `/research/agentic-ai-auditability-assurance-white-paper-2026/`.
@@ -22,7 +34,8 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## WP3 / AIIRWP
 
-- Status: public research candidate artifact set sealed for repository governance with public terminology amendment; public announcement held.
+- Status: Public Research Edition officially available on site; repository governance seal complete with public terminology amendment; public announcement held.
+- Current series wave: WHITEPAPER-SERIES-OFFICIAL-SITE-PUBLICATION-01 / THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / READY FOR FULL SITE STYLE UI SEMANTIC SEO GEO EEAT AUDIT.
 - Current v1 wave: WP3-V1-R3AG PUBLIC TERMINOLOGY REPAIR AND RESEAL COMPLETE / PUBLIC ANNOUNCEMENT HELD.
 - Rejected version: `AIIRWP-2026-v0.2-PUBLIC-CANDIDATE`.
 - Current public artifacts: HTML/PDF/manifest/checksum under `public/research/agentic-ai-insurability-risk-transfer-white-paper-2026/`.
@@ -178,4 +191,4 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Global Boundary
 
-No public DOCX is authorized. WP3 v1.0 is available as a public research candidate with HTML/PDF/manifest/checksum artifacts. R3AF completed the repository governance Final Seal, and R3AG completes a public terminology amendment and reseal for the amended public artifact set. Public announcement remains held. This does not authorize source Markdown publication, public announcement execution, certification, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.
+No public DOCX is authorized. The first three white papers are officially available on site as public research editions with HTML/PDF/manifest/checksum artifacts. WP3 v1.0 remains repository-governance sealed with public terminology amendment. Public announcement remains held. This does not authorize source Markdown publication, public announcement execution, certification, insurer acceptance, coverage readiness, underwriting readiness, claim readiness, score, standard, readiness certification, regulator approval, legal advice, insurance advice, underwriting guidance, or coverage opinion.

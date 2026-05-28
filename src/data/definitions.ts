@@ -167,7 +167,7 @@ export const definitions: DefinitionEntry[] = [
     definition:
       "Agentic AI Auditability is the ability to reconstruct, test, and evidence agentic lifecycle work across authority, responsibility, tools, outcomes, exceptions, privacy treatment, and closure.",
     distinction:
-      "Not certification, an audit standard, legal compliance proof, assurance opinion, or vendor ranking. It is the AIAAWP public research candidate's auditability framing.",
+      "Not certification, an audit standard, legal compliance proof, assurance opinion, or vendor ranking. It is the auditability and assurance white paper's public research edition framing.",
     evidence: [
       {
         label: "AIAAWP 2026 white paper hub",
@@ -234,7 +234,7 @@ export const definitions: DefinitionEntry[] = [
       "Not insurance advice, a coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, certification, or a guarantee that any system is insurable.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -254,7 +254,7 @@ export const definitions: DefinitionEntry[] = [
       "Not insurer product requirements, policy terms, legal liability objects, certification criteria, or a mandatory implementation schema.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -274,7 +274,7 @@ export const definitions: DefinitionEntry[] = [
       "Not an actuarial score, insurer acceptance, coverage guarantee, underwriting standard, claims approval guide, certification, vendor score, or procurement benchmark.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -294,7 +294,7 @@ export const definitions: DefinitionEntry[] = [
       "Not a liability determination, coverage opinion, insured-status opinion, or conclusion that a policy applies.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -314,7 +314,7 @@ export const definitions: DefinitionEntry[] = [
       "Not the insured party, not a legal subject, not a standalone coverage trigger, and not a claim that a system is insurable.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
@@ -334,7 +334,7 @@ export const definitions: DefinitionEntry[] = [
       "Not claims approval guidance, a payment guarantee, legal causation proof, settlement advice, or an insurer-required form.",
     evidence: [
       {
-        label: "AIIRWP v1.0 public research candidate",
+        label: "Agentic AI Insurability & Risk Transfer White Paper 2026",
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/"
       }
     ],
