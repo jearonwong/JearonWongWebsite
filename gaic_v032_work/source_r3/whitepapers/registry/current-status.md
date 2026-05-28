@@ -6,14 +6,16 @@ Future Codex tasks must inspect `whitepaper-series-registry.yaml` before whitepa
 
 ## Current Series Publication Status
 
-- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / P1 ANNOUNCEMENT READINESS REPAIR COMPLETE.
+- Status: THREE WHITEPAPER OFFICIAL SITE PUBLICATION COMPLETE / P1 ANNOUNCEMENT READINESS REPAIR COMPLETE / SITE TRUST INFRASTRUCTURE P1 REPAIR COMPLETE.
 - Publication package: `gaic_v032_work/source_r3/whitepapers/publication/official-site-publication-2026/`.
 - Full-site audit package: `gaic_v032_work/source_r3/site_audits/full-site-style-ui-semantic-seo-geo-eeat-audit-2026/`.
 - P1 repair package: `gaic_v032_work/source_r3/site_optimizations/full-site-p1-announcement-readiness-repair-2026/`.
+- Trust infrastructure repair package: `gaic_v032_work/source_r3/site_optimizations/site-trust-infrastructure-p1-repair-2026/`.
 - Public route pages: all three white papers are officially available on site as public research editions.
 - Public artifacts: HTML/PDF/manifest/checksum are available for all three white papers. The Agentic AI Insurability & Risk Transfer White Paper 2026 HTML artifact now has canonical and JSON-LD metadata parity, and its manifest/checksum records were refreshed.
 - Public-facing internal shorthand: removed from current public-facing publication surfaces or classified as document ID, historical, or internal governance context.
 - P1 announcement-readiness repairs: third whitepaper artifact metadata parity, public semantic status/naming hardening, historical GAIC integrity labeling, and research foundation/MPLP v2.0 next-phase positioning complete.
+- Site trust infrastructure P1 repair: Privacy Policy, Site Terms, footer trust links, homepage meta/date/schema signals, and Article/TechArticle schema audit complete.
 - E-E-A-T scope: partial trust hardening only; full E-E-A-T optimization was not claimed.
 - Public announcement: not executed.
 - Public DOCX: not newly authorized.

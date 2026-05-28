@@ -83,7 +83,9 @@ const researchSeriesItems = [
 const canonicalPath = "/";
 const homepageUrl = absoluteUrl(canonicalPath);
 const homepageDescription =
-  "Jearon Wong is the Protocol Architect for the Agent Era, defining AI Agent Lifecycle, Agentic Lifecycle Governance, MPLP, and AI agent governance for accountable AI agent work.";
+  "Jearon Wong, Protocol Architect for the Agent Era, defines AI Agent Lifecycle, Agentic Delivery, and MPLP for accountable AI agent work from intent to outcome.";
+const homepageDatePublished = "2026-04-23";
+const homepageDateModified = "2026-05-28";
 const homepageKeywords = [
   "Jearon Wong",
   "Protocol Architect for the Agent Era",
@@ -104,8 +106,16 @@ const homepageJsonLd = {
   name: siteConfig.title,
   headline: "Jearon Wong — Protocol Architect for the Agent Era",
   description: homepageDescription,
+  datePublished: homepageDatePublished,
+  dateModified: homepageDateModified,
   isPartOf: {
     "@id": `${siteConfig.siteUrl}#website`
+  },
+  author: {
+    "@id": `${siteConfig.siteUrl}#person`
+  },
+  publisher: {
+    "@id": `${siteConfig.siteUrl}#person`
   },
   about: siteEntityTerms.map((term) => ({
     "@type": "Thing",
@@ -179,6 +189,8 @@ const profilePageJsonLd = {
   url: homepageUrl,
   name: "Jearon Wong",
   description: homepageDescription,
+  datePublished: homepageDatePublished,
+  dateModified: homepageDateModified,
   mainEntity: {
     "@id": `${siteConfig.siteUrl}#person`
   }

@@ -1,7 +1,40 @@
 # Known Issues
 
 **Document:** GAIC-2026-v0.3.2-FRC-R3
-**Last Updated:** May 28, 2026 (P1 Announcement-Readiness Repair)
+**Last Updated:** May 28, 2026 (Site Trust Infrastructure P1 Repair)
+
+## Site Trust Infrastructure P1 Repair
+
+### Status: SITE TRUST INFRASTRUCTURE P1 REPAIR COMPLETE
+
+This wave repaired targeted machine-detectable trust infrastructure gaps without claiming full E-E-A-T optimization.
+
+Resolved in this wave:
+
+1. Created a restrained Privacy Policy page at `/privacy/`.
+2. Created a restrained Site Terms page at `/terms/`.
+3. Added footer trust links for Privacy Policy and Terms without expanding primary navigation.
+4. Trimmed the homepage meta description to 159 characters.
+5. Added homepage `datePublished` and `dateModified` JSON-LD signals.
+6. Confirmed Person remains the homepage primary entity and the existing WebSite schema remains aligned.
+7. Audited Article / TechArticle schema coverage for whitepaper and essay pages.
+8. Created `gaic_v032_work/source_r3/site_optimizations/site-trust-infrastructure-p1-repair-2026/`.
+9. Created trust infrastructure repair reports under `gaic_v032_work/source_r3/reports/`.
+
+Remaining known issues:
+
+- Full E-E-A-T / authority / trust signal work remains separate and should use `FULL-SITE-EEAT-AUTHORITY-TRUST-SIGNAL-AUDIT-02` if owner-authorized.
+- Off-site reputation, backlinks, third-party mentions, external profile consistency, author credential expansion, reviews/testimonials, Google Knowledge Graph verification, and AI search visibility measurement remain outside this repair.
+- P2/P3 audit findings remain backlog unless separately authorized.
+- Public announcement remains held and requires separate owner authorization.
+- The fourth whitepaper and practitioner guides remain held pending MPLP v2.0 object-model consolidation.
+- Pre-existing untracked `public/social/*` files remain outside scope and must not be staged.
+
+Boundary discipline:
+
+- This wave does not execute social announcement, create or stage public social assets, create DOCX, publish source Markdown, claim full E-E-A-T optimization, add fake credentials, add fake testimonials, add fake case studies, claim certification, claim insurer acceptance, claim coverage-ready or underwriting-ready or claim-ready status, provide insurance/legal advice, provide a coverage opinion, define an underwriting standard, provide actuarial pricing guidance, provide premium recommendations, provide claims approval guidance, claim score/standard/readiness certification, claim regulator approval, publish the fourth white paper, or publish practitioner guides.
+
+**Trust Infrastructure Repair Status:** SITE_TRUST_INFRASTRUCTURE_P1_REPAIR_COMPLETE
 
 ## Full Site P1 Announcement-Readiness Repair
 

@@ -1,5 +1,48 @@
 # Reconstruction Notes
 
+## Site Trust Infrastructure P1 Repair Notes (May 28, 2026)
+
+**Scope:** Targeted trust infrastructure repair after the three-whitepaper official site publication and P1 announcement-readiness repair. This wave adds Privacy Policy, Site Terms, footer trust links, homepage date/meta/schema signals, and Article/TechArticle schema audit. It is partial trust signal hardening only, not full E-E-A-T optimization.
+
+**Actions completed:**
+
+1. Confirmed repo truth on `main` at starting HEAD `d5f50dba4c741c72f9656322df57ae952f01f0a8`.
+2. Confirmed pre-existing untracked `public/social/*` files remained outside scope.
+3. Created `src/pages/privacy.astro` with conservative privacy language, last updated date, canonical metadata, WebPage JSON-LD, and breadcrumb JSON-LD.
+4. Created `src/pages/terms.astro` with site-material usage terms, citation expectations, research-publication boundaries, last updated date, WebPage JSON-LD, and breadcrumb JSON-LD.
+5. Added footer-only Privacy Policy and Terms links in `src/components/SiteFooter.astro`.
+6. Trimmed homepage meta description to 159 characters in `src/pages/index.astro`.
+7. Added homepage `datePublished` and `dateModified` signals to WebPage and ProfilePage JSON-LD.
+8. Confirmed existing whitepaper route pages retain TechArticle/Report JSON-LD and essay pages retain Article JSON-LD.
+9. Created the trust infrastructure repair package and reports.
+10. Ran typecheck, lint, build, JSON/YAML parse, checksum, JSON-LD parse, route, footer, homepage meta/date, boundary, no-DOCX, no-source-Markdown, no-fourth-whitepaper, no-guide-publication, no-social-announcement, and browser smoke checks.
+
+**Validation findings:**
+
+- Verdict: `SITE_TRUST_INFRASTRUCTURE_P1_REPAIR_COMPLETE`.
+- `npm run typecheck`: pass, 0 errors, existing hints only.
+- `npm run lint`: pass.
+- `npm run build`: pass, 97 pages built.
+- Checksum validation for all three whitepaper artifact sets: pass.
+- JSON-LD parse: pass for homepage, Privacy Policy, Terms, all three whitepaper routes, current essay pages, and all three whitepaper HTML artifacts.
+- Browser smoke: homepage, footer Terms click-through, Privacy Policy, and Terms routes render without console errors or warnings.
+
+**Artifact discipline:**
+
+- No whitepaper HTML/PDF/manifest/checksum artifacts were regenerated.
+- No public DOCX was created.
+- No new public source Markdown was published.
+- No public/social files were staged.
+
+**Boundary discipline:**
+
+- Full E-E-A-T optimization was not claimed.
+- Public announcement remains held.
+- Fourth whitepaper and practitioner guides remain held pending MPLP v2.0 object-model consolidation.
+- This wave does not claim certification, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, legal advice, insurance advice, coverage opinion, underwriting standard, regulator approval, score, standard, readiness certification, vendor ranking, public DOCX, public source Markdown, or social announcement execution.
+
+**Trust Infrastructure Repair Status:** SITE TRUST INFRASTRUCTURE P1 REPAIR COMPLETE.
+
 ## Full Site P1 Announcement-Readiness Repair Notes (May 28, 2026)
 
 **Scope:** Repair the four P1 announcement-readiness findings from the full-site audit: third whitepaper artifact metadata parity, public semantic terminology/status hardening, historical GAIC integrity labeling, and research foundation/MPLP v2.0 positioning. This wave is partial E-E-A-T trust hardening only, not full E-E-A-T optimization.

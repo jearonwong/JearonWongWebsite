@@ -1,5 +1,10 @@
 ---
 import { secondaryNav, siteConfig, socialLinks } from "../data/site";
+
+const trustLinks = [
+  { href: "/privacy/", label: "Privacy Policy" },
+  { href: "/terms/", label: "Terms" }
+];
 ---
 
 <footer class="shell site-footer">
@@ -14,6 +19,11 @@ import { secondaryNav, siteConfig, socialLinks } from "../data/site";
         <a href={link.href} target="_blank" rel="noopener noreferrer" class="social-pill">{link.platform}</a>
       ))}
     </div>
+    <nav aria-label="Site trust links" class="footer-trust">
+      {trustLinks.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
     <p class="footer-copy">&copy; {new Date().getFullYear()} All rights reserved.</p>
   </div>
   <nav aria-label="Secondary" class="secondary-nav">
@@ -80,6 +90,25 @@ import { secondaryNav, siteConfig, socialLinks } from "../data/site";
     line-height: 1.7;
     margin: 0;
     color: #94a3b8;
+  }
+  .footer-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin: 0 0 0.8rem;
+  }
+  .footer-trust a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-trust a:hover {
+    color: var(--accent-signal);
   }
   .secondary-nav {
     display: grid;

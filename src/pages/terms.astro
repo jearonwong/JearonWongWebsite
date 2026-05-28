@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+import { siteConfig } from "../data/site";
+
+const canonicalPath = "/terms/";
+const termsUrl = absoluteUrl(canonicalPath);
+const lastUpdatedIso = "2026-05-28";
+const lastUpdatedLabel = "May 28, 2026";
+const termsDescription =
+  "Site Terms for JearonWong.com, including use of research publications, citation expectations, and non-advisory boundaries.";
+const termsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${termsUrl}#webpage`,
+  url: termsUrl,
+  name: "Site Terms",
+  description: termsDescription,
+  datePublished: lastUpdatedIso,
+  dateModified: lastUpdatedIso,
+  isPartOf: {
+    "@id": `${siteConfig.siteUrl}#website`
+  },
+  mainEntity: {
+    "@id": `${siteConfig.siteUrl}#person`
+  }
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(termsUrl, [
+  { name: "Home", path: "/" },
+  { name: "Site Terms", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title="Site Terms"
+  description={termsDescription}
+  canonicalPath={canonicalPath}
+  jsonLd={[termsJsonLd, breadcrumbJsonLd]}
+>
+  <RegistryPageHero
+    title="Site Terms"
+    objectType="SITE_RECORD"
+    objectValue="TERMS"
+    lead="A concise use boundary for public research publications, essays, project records, and site materials on JearonWong.com."
+  />
+
+  <div class="zone-b page-body page-body--standard">
+    <section class="shell shell--reading page-stack page-stack--tight">
+      <article class="registry-chassis terms-block">
+        <div class="registry-annotation">
+          <span class="registry-key">LAST_UPDATED</span>: <span class="registry-value">{lastUpdatedLabel}</span>
+        </div>
+        <div class="terms-copy">
+          <h2>Use Of Site Materials</h2>
+          <p>
+            JearonWong.com publishes research papers, essays, concept records, project pages, and related
+            public materials. You may read, link to, quote, and cite these materials with appropriate
+            attribution and context.
+          </p>
+          <p>
+            Do not present excerpts, artifacts, diagrams, hashes, manifests, or citations in a way that
+            implies certification, endorsement, legal approval, insurer acceptance, regulator approval, or
+            an official standard.
+          </p>
+        </div>
+      </article>
+
+      <article class="registry-chassis terms-block">
+        <div class="terms-copy">
+          <h2>Research Publication Boundary</h2>
+          <p>
+            The white papers and related artifacts are informational public research publications. They are
+            not legal advice, insurance advice, underwriting guidance, audit standards, assurance opinions,
+            certification criteria, coverage opinions, investment advice, or procurement recommendations.
+          </p>
+          <p>
+            Reading, downloading, citing, or sharing a material from this site does not grant certification,
+            conformance status, approval, endorsement, coverage status, audit status, or advisory status.
+          </p>
+        </div>
+      </article>
+
+      <article class="registry-chassis terms-block">
+        <div class="terms-copy">
+          <h2>Copyright, Attribution, And Integrity</h2>
+          <p>
+            Unless a specific page states otherwise, site materials are authored by Jearon Wong. Preserve
+            title, author, source URL, version or document identifier, and date context when citing research
+            papers or integrity records.
+          </p>
+          <p>
+            Manifest and checksum records are provided to support artifact integrity verification. They do
+            not convert a research publication into a certification, standard, compliance proof, or advice.
+          </p>
+        </div>
+      </article>
+
+      <article class="registry-chassis terms-block">
+        <div class="terms-copy">
+          <h2>Site Changes</h2>
+          <p>
+            The site, routes, metadata, research artifacts, and project records may change over time. Current
+            public editions, historical integrity records, and withdrawn or held work should be read according
+            to their visible status language.
+          </p>
+          <p>
+            These terms may be updated as the site evolves. Material changes should be reflected by the last
+            updated date on this page.
+          </p>
+        </div>
+      </article>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .terms-block {
+    padding: var(--registry-reading-panel-padding);
+  }
+
+  .terms-copy {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  .terms-copy h2 {
+    margin: 0;
+    color: var(--current-text);
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+    letter-spacing: 0;
+  }
+
+  .terms-copy p {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+</style>
