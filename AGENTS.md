@@ -4,7 +4,7 @@ This repository is part of the Coregentis MPLP / Cognitive OS / SoloCrew / Valid
 
 ## Repository Layer
 
-JearonWong.com owns articles, essays, white papers, brand narrative, publication pages, and social distribution assets. Public writing may be sharper thought leadership and claim conceptual positioning, but it must not overstate certification, legal compliance, regulator approval, vendor ranking, official-standard status, or unsupported endorsement.
+JearonWong.com owns articles, essays, white papers, brand narrative, publication pages, metadata, and social distribution assets. Public writing may be sharper thought leadership and claim conceptual positioning. Named critique is allowed only when fact-backed and not a personal attack. Essays, white papers, visible copy, metadata, and social metadata must preserve the boundary between opinion, protocol, evidence, and product, and must not drift into unsupported certification, legal-compliance, regulator-approval, vendor-ranking, official-standard, or endorsement claims.
 
 ## Repo Truth First
 
@@ -27,9 +27,10 @@ Reuse existing assets before creating new files. Prefer updating an existing rul
 ## Hard Boundaries
 
 - Preserve protocol, runtime, product, validation, and publication boundaries.
-- Do not modify release tags, release seals, package versions, publish plans, public website copy, schemas/v2 protocol objects, core package implementation logic, product source code, Validation Lab runtime/evidence logic, or public legal/compliance claims unless the owner explicitly approves that scope.
-- Do not run `npm publish`, `npm deprecate`, PyPI upload, PyPI yank/delete, `git tag`, release seal creation, package version bump, or protocol schema primitive intake without owner approval.
-- Do not make public legal, compliance, certification, regulator-approval, vendor-ranking, or official-standard claims without owner approval.
+- Normal task-authorized changes may modify files within the explicitly scoped repository layer, including low-risk code or docs that the current task asks for.
+- Owner approval is required for high-risk or irreversible changes, including release mutation, registry mutation, public legal/compliance claims, package version changes, schema primitive intake, provider-send behavior, auth/payment/data-deletion flows, runtime authority changes, and merge/tag/seal actions.
+- Do not run `npm publish`, `npm deprecate`, npm dist-tag mutation, PyPI upload, PyPI yank/delete, `git tag`, release seal creation, package version bump, or protocol schema primitive intake without an explicit owner-approved wave.
+- Do not make public certification, regulator-approval, vendor-ranking, official-standard, or legal-compliance proof claims without owner approval.
 
 ## MPLP Schema v2 Discipline
 
@@ -54,6 +55,8 @@ v1.0 module references to v2 objects must be pointer-only. Do not inline v2 obje
 ## Standard Subagent Lanes
 
 Use `.codex/agents/*.toml` reviewers only when the parent task explicitly requests them. Relevant lanes include `package_surface_auditor`, `release_governance_reviewer`, `protocol_schema_reviewer`, `product_boundary_reviewer`, `runtime_binding_reviewer`, and `publication_claim_reviewer`.
+
+Default lane policy: use no subagent for trivial docs typos, one subagent for isolated repo-specific review, and multiple subagents for release, schema, runtime, publication, or cross-repo tasks. JearonWong.com defaults to `publication_claim_reviewer`, with `product_boundary_reviewer` as the secondary lane when the task touches product positioning, evidence claims, essays, white papers, or social metadata.
 
 Subagents run review lanes only unless edits are explicitly authorized. They inherit sandbox and approval boundaries, must not publish, upload, tag, seal, bump versions, mutate registries, intake schema primitives, merge PRs, or change public claims, and must return P0/P1/P2 findings to the parent with files inspected and commands run.
 
