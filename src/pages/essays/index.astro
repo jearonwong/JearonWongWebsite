@@ -24,6 +24,9 @@ const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
 const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
+const auditabilityEssays = ["from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai"]
+  .map((slug) => essaysBySlug.get(slug))
+  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
 const canonicalPath = "/essays/";
 const essaysUrl = absoluteUrl(canonicalPath);
 const essaysKeywords = [
@@ -194,6 +197,38 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
                   {essay.data.flagship && (
                     <div class="registry-annotation log-flagship">
                       <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+                    </div>
+                  )}
+                  <div class="registry-annotation">
+                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                  </div>
+                </div>
+                <div class="log-content">
+                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
+                  <p class="log-desc">{essay.data.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="essay-section">
+          <div class="registry-section-heading">
+            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">AUDITABILITY / ASSURANCE RESEARCH</span>
+            </div>
+            <h2>Auditability / Assurance Research</h2>
+          </div>
+          <div class="registry-log">
+            {auditabilityEssays.map((essay) => (
+              <article class="log-entry is-research">
+                <div class="log-metadata">
+                  <div class="registry-annotation log-research">
+                    <span class="registry-key">ROLE</span>: <span class="registry-value">RESEARCH EDITION</span>
+                  </div>
+                  {essay.data.series && (
+                    <div class="registry-annotation">
+                      <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
                     </div>
                   )}
                   <div class="registry-annotation">
@@ -382,6 +417,9 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   .log-entry.is-series {
     border-left: 2px solid var(--accent-proof);
   }
+  .log-entry.is-research {
+    border-left: 2px solid var(--accent-signal);
+  }
   .log-metadata {
     display: flex;
     flex-direction: column;
@@ -392,6 +430,9 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   }
   .log-series {
     color: var(--accent-proof);
+  }
+  .log-research {
+    color: var(--accent-signal);
   }
   .log-title {
     font-size: 1.72rem;

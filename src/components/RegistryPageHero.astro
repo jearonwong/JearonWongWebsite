@@ -25,7 +25,12 @@ const {
   class: className = ""
 } = Astro.props;
 
-const displayTitleLines = titleLines?.length ? titleLines : null;
+const displayTitleLines = titleLines?.length
+  ? titleLines.map((line, index) => ({
+      line,
+      isFraming: index === 0 && titleLines.length > 1 && line.trim().endsWith(":")
+    }))
+  : null;
 const displayLeadLines = leadLines?.length ? leadLines : null;
 ---
 
@@ -39,7 +44,14 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     )}
     <h1 class:list={["registry-page-hero__title", displayTitleLines && "has-title-lines"]}>
       {displayTitleLines ? (
-        displayTitleLines.map((line) => <span class="registry-page-hero__title-line">{line}</span>)
+        displayTitleLines.map(({ line, isFraming }) => (
+          <span
+            class:list={["registry-page-hero__title-line", isFraming && "registry-page-hero__title-line--framing"]}
+            data-title-role={isFraming ? "framing" : "main"}
+          >
+            {line}
+          </span>
+        ))
       ) : (
         title
       )}
@@ -70,10 +82,10 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
   }
 
   .registry-page-hero__title {
-    font-size: clamp(2.35rem, 4.15vw, 3.7rem);
-    font-weight: 760;
-    letter-spacing: -0.018em;
-    line-height: 1.08;
+    font-size: var(--type-registry-hero-title-size);
+    font-weight: var(--type-registry-hero-title-weight);
+    letter-spacing: var(--type-registry-hero-title-letter-spacing);
+    line-height: var(--type-registry-hero-title-line-height);
     margin: 0 0 1.45rem;
     max-width: min(100%, 17em);
     text-wrap: balance;
@@ -84,13 +96,26 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     display: block;
   }
 
+  .registry-page-hero__title .registry-page-hero__title-line[data-title-role="framing"] {
+    margin-bottom: 0.32em;
+    font-size: var(--type-registry-hero-title-framing-size) !important;
+    font-weight: var(--type-registry-hero-title-framing-weight) !important;
+    letter-spacing: 0 !important;
+    line-height: var(--type-registry-hero-title-framing-line-height) !important;
+    color: rgba(241, 245, 249, 0.82);
+    max-width: min(100%, 24em);
+  }
+
   .registry-page-hero__subtitle {
+    max-width: min(100%, var(--lead-measure));
     margin: 0 0 0.9rem;
     font-family: var(--font-display);
     font-size: clamp(1rem, 2.2vw, 1.3rem);
     font-weight: 640;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
+    line-height: 1.35;
     color: var(--current-text);
+    overflow-wrap: anywhere;
   }
 
   .registry-page-hero__lead {
@@ -101,6 +126,7 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     border-left: 2px solid rgba(59, 130, 246, 0.32);
     padding-left: var(--registry-compact-padding);
     line-height: 1.62;
+    overflow-wrap: anywhere;
   }
 
   .registry-page-hero__lead-line {
@@ -118,13 +144,20 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     }
 
     .registry-page-hero__title {
-      font-size: clamp(1.85rem, 7.4vw, 2.35rem);
-      line-height: 1.1;
+      font-size: var(--type-registry-hero-title-size-mobile);
+      line-height: var(--type-registry-hero-title-line-height-mobile);
       margin-bottom: 1.15rem;
       max-width: 100%;
     }
 
+    .registry-page-hero__title .registry-page-hero__title-line[data-title-role="framing"] {
+      font-size: var(--type-registry-hero-title-framing-size-mobile) !important;
+      line-height: var(--type-registry-hero-title-framing-line-height-mobile) !important;
+      max-width: 100%;
+    }
+
     .registry-page-hero__subtitle {
+      max-width: 100%;
       margin-bottom: 0.75rem;
       font-size: clamp(0.95rem, 4vw, 1.12rem);
     }

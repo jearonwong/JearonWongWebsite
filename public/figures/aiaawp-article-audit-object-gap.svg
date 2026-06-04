@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">The Audit Object Gap</title>
+  <desc id="desc">Two-panel diagram comparing model-centric AI governance with the additional lifecycle audit objects introduced by Agentic AI.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.panel{fill:rgba(255,255,255,.032);stroke:rgba(241,245,249,.15);stroke-width:1.2}.panel-blue{fill:rgba(59,130,246,.075);stroke:rgba(59,130,246,.48);stroke-width:1.6}.panel-cyan{fill:rgba(34,211,238,.07);stroke:rgba(34,211,238,.5);stroke-width:1.6}.gap{fill:rgba(17,17,17,.72);stroke:rgba(241,245,249,.18);stroke-width:1.2}.kicker{fill:#22d3ee;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.head{fill:#f8fafc;font:760 30px "Outfit",Inter,sans-serif}.sub{fill:#94a3b8;font:560 19px Inter,sans-serif}.item{fill:#cbd5e1;font:620 24px Inter,sans-serif}.note{fill:#94a3b8;font:600 18px Inter,sans-serif}.mono{fill:#60a5fa;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.gaptext{fill:#f8fafc;font:850 22px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="14" markerHeight="10" refX="13" refY="5" orient="auto">
+      <path d="M0,0 L14,5 L0,10 Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="640" class="bg"/>
+  <rect width="1600" height="640" fill="url(#grid)"/>
+  <rect x="52" y="48" width="1496" height="544" class="outer"/>
+
+  <g transform="translate(82 88)">
+    <rect width="620" height="430" rx="2" class="panel-blue"/>
+    <text x="34" y="54" class="kicker">TRADITIONAL AI GOVERNANCE</text>
+    <text x="34" y="100" class="head">Audit object: model and environment</text>
+    <text x="34" y="154" class="item">Model documentation and cards</text>
+    <text x="34" y="207" class="item">Dataset governance and lineage</text>
+    <text x="34" y="260" class="item">Output quality and bias review</text>
+    <text x="34" y="313" class="item">Control environment assessment</text>
+    <text x="34" y="366" class="item">Policy attestation and monitoring</text>
+    <text x="34" y="406" class="note">Necessary, but not sufficient for agentic work.</text>
+  </g>
+
+  <g transform="translate(735 88)">
+    <rect width="130" height="430" rx="2" class="gap"/>
+    <path d="M28 214H102" stroke="#22d3ee" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="65" y="162" class="gaptext" text-anchor="middle">AUDIT</text>
+    <text x="65" y="196" class="gaptext" text-anchor="middle">OBJECT</text>
+    <text x="65" y="280" class="gaptext" text-anchor="middle">GAP</text>
+    <text x="65" y="326" class="mono" text-anchor="middle">OUTPUT</text>
+    <text x="65" y="352" class="mono" text-anchor="middle">≠ WORK</text>
+  </g>
+
+  <g transform="translate(898 88)">
+    <rect width="620" height="430" rx="2" class="panel-cyan"/>
+    <text x="34" y="54" class="kicker">AGENTIC AI INTRODUCES</text>
+    <text x="34" y="100" class="head">Additional lifecycle audit objects</text>
+    <text x="34" y="154" class="item">Delegated authority chains</text>
+    <text x="34" y="207" class="item">Multi-agent handoff and task transfer</text>
+    <text x="34" y="260" class="item">Tool-action evidence records</text>
+    <text x="34" y="313" class="item">Accepted outcome states</text>
+    <text x="34" y="366" class="item">Exception and remediation closure</text>
+    <text x="34" y="406" class="note">Not captured by model-centric governance alone.</text>
+  </g>
+
+  <text x="82" y="562" class="footer">BOUNDARY: CONCEPTUAL AUDITABILITY FRAMEWORK · NOT CERTIFICATION · NOT ASSURANCE OPINION</text>
+</svg>

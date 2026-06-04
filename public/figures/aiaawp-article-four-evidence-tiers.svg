@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">From Logs to Responsibility-Linked Evidence Chains</title>
+  <desc id="desc">Four tiers of evidential value: logs, observability, audit evidence, and responsibility-linked evidence chains.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.tier{fill:rgba(255,255,255,.03);stroke:rgba(241,245,249,.14);stroke-width:1.2}.tier-blue{fill:rgba(59,130,246,.07);stroke:rgba(59,130,246,.42);stroke-width:1.4}.tier-cyan{fill:rgba(34,211,238,.075);stroke:rgba(34,211,238,.52);stroke-width:1.6}.label{fill:#22d3ee;font:850 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.head{fill:#f8fafc;font:760 30px "Outfit",Inter,sans-serif}.body{fill:#cbd5e1;font:540 22px Inter,sans-serif}.marker{fill:#60a5fa;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.45px}.axis{fill:#94a3b8;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="620" class="bg"/>
+  <rect width="1600" height="620" fill="url(#grid)"/>
+  <rect x="52" y="48" width="1496" height="524" class="outer"/>
+
+  <g transform="translate(82 84)">
+    <rect x="0" y="360" width="1010" height="86" rx="2" class="tier"/>
+    <rect x="0" y="244" width="1160" height="86" rx="2" class="tier-blue"/>
+    <rect x="0" y="128" width="1310" height="86" rx="2" class="tier-blue"/>
+    <rect x="0" y="12" width="1436" height="86" rx="2" class="tier-cyan"/>
+
+    <text x="34" y="397" class="label">TIER 1</text>
+    <text x="176" y="396" class="head">Logs</text>
+    <text x="176" y="426" class="body">Timestamps, events, service calls, state transitions.</text>
+    <text x="1160" y="397" class="marker">MOST ENTERPRISES TODAY</text>
+
+    <text x="34" y="281" class="label">TIER 2</text>
+    <text x="176" y="280" class="head">Observability</text>
+    <text x="176" y="310" class="body">Traces, metrics, dependencies, and system behavior.</text>
+
+    <text x="34" y="165" class="label">TIER 3</text>
+    <text x="176" y="164" class="head">Audit Evidence</text>
+    <text x="176" y="194" class="body">Relevant, reliable, sufficient for a review objective.</text>
+
+    <text x="34" y="49" class="label">TIER 4</text>
+    <text x="176" y="48" class="head">Responsibility-Linked Evidence Chains</text>
+    <text x="176" y="78" class="body">Authority, role, tool action, outcome, exception, and closure.</text>
+    <text x="1160" y="49" class="marker">REQUIRED FOR AGENTIC AUDIT</text>
+  </g>
+
+  <g transform="translate(1168 548)">
+    <path d="M0 0H338" stroke="#22d3ee" stroke-width="3"/>
+    <text x="338" y="-10" text-anchor="end" class="axis">INCREASING EVIDENTIAL VALUE</text>
+  </g>
+  <text x="82" y="548" class="footer">CORE DISTINCTION: OBSERVABLE DOES NOT MEAN AUDITABLE</text>
+</svg>

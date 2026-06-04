@@ -279,6 +279,20 @@ const articleJsonLd = {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem 1.35rem;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .article-hero-meta .registry-annotation {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+    row-gap: 0.25rem;
+    overflow-wrap: anywhere;
+  }
+  .article-hero-meta .registry-value {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
   .article-back-link {
     text-decoration: none;
@@ -755,10 +769,11 @@ const articleJsonLd = {
     margin: 0;
     color: inherit;
     font-family: var(--font-display);
-    font-size: clamp(1.85rem, 4.2vw, 3.25rem);
-    font-weight: 850;
-    line-height: 1.05;
-    letter-spacing: 0;
+    font-size: var(--type-registry-hero-title-size);
+    font-weight: var(--type-registry-hero-title-weight);
+    line-height: var(--type-registry-hero-title-line-height);
+    letter-spacing: var(--type-registry-hero-title-letter-spacing);
+    max-width: min(100%, 17em);
   }
   .article-content :global(.essay-concept-anchor__support) {
     max-width: 38rem;
@@ -1223,6 +1238,10 @@ const articleJsonLd = {
     .article-content :global(.essay-framework-ledger),
     .article-content :global(.essay-closing-ledger) {
       margin: 2.2rem 0;
+    }
+    .article-content :global(.essay-concept-anchor__statement) {
+      font-size: var(--type-registry-hero-title-size-mobile);
+      line-height: var(--type-registry-hero-title-line-height-mobile);
     }
     .article-content :global(.essay-mechanism-strip__grid) {
       grid-template-columns: 1fr;

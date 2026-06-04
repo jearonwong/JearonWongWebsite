@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic Auditability Readiness Model</title>
+  <desc id="desc">A six-level AARM ladder from L0 Unobservable through L5 Assurance-Ready, marked as a readiness vocabulary rather than a score, certification, or assurance opinion.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.row{fill:rgba(255,255,255,.03);stroke:rgba(241,245,249,.14);stroke-width:1.2}.row-blue{fill:rgba(59,130,246,.07);stroke:rgba(59,130,246,.42);stroke-width:1.4}.row-cyan{fill:rgba(34,211,238,.075);stroke:rgba(34,211,238,.52);stroke-width:1.6}.level{fill:#22d3ee;font:850 19px "JetBrains Mono",Menlo,monospace;letter-spacing:.55px}.head{fill:#f8fafc;font:760 24px "Outfit",Inter,sans-serif}.body{fill:#cbd5e1;font:520 20px Inter,sans-serif}.note{fill:#60a5fa;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.45px}.rail{stroke:rgba(34,211,238,.42);stroke-width:4}.dot{fill:#111111;stroke:#22d3ee;stroke-width:4}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.muted{fill:#94a3b8;font:520 18px Inter,sans-serif}
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="760" class="bg"/>
+  <rect width="1600" height="760" fill="url(#grid)"/>
+  <rect x="52" y="48" width="1496" height="664" class="outer"/>
+  <line x1="156" y1="116" x2="156" y2="595" class="rail"/>
+
+  <g transform="translate(220 84)"><rect width="1180" height="74" rx="2" class="row-cyan"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L5</text><text x="112" y="31" class="head">Assurance-Ready</text><text x="112" y="58" class="body">Evidence structure can support structured third-party assurance planning.</text><text x="928" y="31" class="note">PLANNING POSSIBLE</text></g>
+  <g transform="translate(220 174)"><rect width="1180" height="74" rx="2" class="row-cyan"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L4</text><text x="112" y="31" class="head">Auditability-Ready</text><text x="112" y="58" class="body">Full Audit Evidence Chain reconstructable across authority, role, tool, outcome, exception, closure.</text><text x="928" y="31" class="note">REVIEWABLE CHAIN</text></g>
+  <g transform="translate(220 264)"><rect width="1180" height="74" rx="2" class="row-blue"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L3</text><text x="112" y="31" class="head">Evidence-Structured</text><text x="112" y="58" class="body">Work units are identifiable and partial responsibility links connect events to roles.</text></g>
+  <g transform="translate(220 354)"><rect width="1180" height="74" rx="2" class="row-blue"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L2</text><text x="112" y="31" class="head">Trace-Linked</text><text x="112" y="58" class="body">Distributed traces connect services, tool calls, dependencies, and timing.</text></g>
+  <g transform="translate(220 444)"><rect width="1180" height="74" rx="2" class="row"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L1</text><text x="112" y="31" class="head">Log-Visible</text><text x="112" y="58" class="body">Technical logs exist, but responsibility is not reconstructable.</text><text x="928" y="31" class="note">COMMON BASELINE</text></g>
+  <g transform="translate(220 534)"><rect width="1180" height="74" rx="2" class="row"/><circle cx="-64" cy="37" r="14" class="dot"/><text x="28" y="31" class="level">L0</text><text x="112" y="31" class="head">Unobservable</text><text x="112" y="58" class="body">No structured capture of agentic work.</text></g>
+
+  <text x="82" y="662" class="footer">BOUNDARY: AARM IS READINESS VOCABULARY · NOT SCORE · NOT CERTIFICATION · NOT ASSURANCE OPINION</text>
+  <text x="82" y="690" class="muted">L5 means assurance planning may be possible. It does not mean assurance has been issued.</text>
+</svg>
