@@ -48,6 +48,7 @@ The article is publishable as research commentary on AIAAWP-2026-v0.1. It must n
 | Article publication constraints were not encoded as repo-level agent instructions | Added repo-level agent contract, publication skill, and mandatory baseline document | `AGENTS.md`, `Agent.md`, `.agents/skills/article-publication-governance/SKILL.md`, `docs/governance/ARTICLE_PUBLICATION_GOVERNANCE_BASELINE.md` |
 | Formal article title needed stronger category-defining language | Renamed the English-only title, canonical slug, share metadata, OG source, and OG PNG to "From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI"; retained the old slug as a noindex legacy route | Essay frontmatter, `/essays/` index, `public/llms.txt`, OG assets |
 | Article title hierarchy needed to make "The Auditability Era of Agentic AI" the main title while preserving "From Static Logs to Dynamic Evidence Chains:" as the smaller framing line | Added explicit `data-title-role` markers to `RegistryPageHero`, introduced shared framing-title tokens, verified desktop/mobile computed font sizes, and regenerated the OG image with the same hierarchy | `src/components/RegistryPageHero.astro`, `src/styles/global.css`, `public/social/og-static-logs-dynamic-evidence-chains.svg`, `/tmp/jw-aiaawp-title-hierarchy-check/article-title-desktop.png`, `/tmp/jw-aiaawp-title-hierarchy-check/article-title-mobile.png` |
+| Body opening paragraph was missing after the hero | Restored the original opening lead before the central thesis block so the body begins with the generation-to-execution framing before the thesis and five-claim ledger | `src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md`, `src/pages/essays/[slug].astro` |
 | New "dynamic evidence chains" title needed explicit body grounding | Added an English paragraph defining dynamic evidence chains as lifecycle evidence through changing roles, authority, tool invocation, delegation, exceptions, acceptance, and dispute states | Essay body |
 | Closing needed a sharper audit judgment before professional invitation | Added the judgment: "The next audit failure in agentic AI will not be caused by the absence of logs. It will be caused by mistaking logs for evidence." | Essay body |
 
@@ -123,6 +124,7 @@ canonical: https://www.jearonwong.com/essays/from-static-logs-to-dynamic-evidenc
 | Title hierarchy | Chrome/CDP computed style | PASS; desktop framing line `35.28px` vs main title `59.2px`; mobile framing line `20.28px` vs main title `29.6px`; colon preserved in the framing line |
 | OG title hierarchy | SVG source inspection, PNG regeneration, visual inspection, `sips` dimension check | PASS; framing line reads `From Static Logs to Dynamic Evidence Chains:` and main title reads `The Auditability Era of Agentic AI` |
 | Post-build live route check | `curl` and Chrome/CDP against `127.0.0.1:4323` | PASS; `/essays/`, canonical article route, and both legacy routes return 200; `/essays/` has 9 log entries |
+| Restored body opening lead | `curl`, Chrome/CDP DOM, and desktop/mobile screenshots | PASS; original lead paragraph appears before `CENTRAL THESIS / AIAAWP-2026-v0.1` and before the thesis card |
 | Figure count | Chrome/CDP DOM | PASS; five `.article-figure img` nodes |
 | Figure image load | Chrome/CDP after scrolling and lazy-load wait | PASS; all five SVGs loaded with expected natural dimensions |
 | Desktop overflow | Chrome/CDP, 1440x1000 | PASS; `scrollWidth - clientWidth = 0` |
@@ -140,6 +142,8 @@ Browser plugin note: in-app browser attachment failed during this audit session 
 |---|---|
 | `/essays/` visible article entry | `/tmp/jw-aiaawp-title-hierarchy-check/essays-index-auditability-entry-visible.png` |
 | Article after `/essays/` click | `/tmp/jw-aiaawp-title-hierarchy-check/article-after-index-click.png` |
+| Restored opening lead, desktop | `/tmp/jw-aiaawp-opening-lead-desktop.png` |
+| Restored opening lead, mobile body start | `/tmp/jw-aiaawp-opening-lead-mobile-lead.png` |
 | Desktop article title hierarchy | `/tmp/jw-aiaawp-title-hierarchy-check/article-title-desktop.png` |
 | Mobile article title hierarchy | `/tmp/jw-aiaawp-title-hierarchy-check/article-title-mobile.png` |
 | Figure lazy-load end state | `/tmp/jw-aiaawp-title-rename-check/article-figures-end.png` |

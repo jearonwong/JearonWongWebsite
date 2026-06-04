@@ -76,6 +76,8 @@ relatedProjects:
   - MPLP
 ---
 
+<p class="essay-opening-lead">AI systems are no longer just generating content — they are executing work. The audit framework needed to govern that work does not yet fully exist. This article proposes where to begin.</p>
+
 <aside class="essay-concept-anchor essay-concept-anchor--thesis" aria-label="Central thesis">
   <p class="essay-concept-anchor__label">CENTRAL THESIS / AIAAWP-2026-v0.1</p>
   <p class="essay-concept-anchor__statement">Static logs cannot audit dynamic agents.</p>
