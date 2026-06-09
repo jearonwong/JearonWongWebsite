@@ -21,7 +21,10 @@ const columnCoverHeight = spotlightEssay?.data.shareImage || spotlightEssay?.dat
 const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
-const protocolEssays = ["mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"]
+const protocolEssays = [
+  "governed-by-design-protocol-native-multi-agent-operating-system",
+  "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
+]
   .map((slug) => essaysBySlug.get(slug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
 const auditabilityEssays = ["from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai"]

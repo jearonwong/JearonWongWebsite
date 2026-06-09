@@ -33,7 +33,7 @@ Execution is not Delivery.
 
 AI agents will not become real infrastructure until execution becomes accountable delivery.
 
-AI agent governance, multi-agent accountability, and production AI agent delivery require more than execution frameworks. AI Agent Lifecycle names the missing governance layer. Agentic Delivery defines the standard. MPLP is the protocol path.
+AI agent governance, multi-agent accountability, and production AI agent delivery require more than execution frameworks. AI Agent Lifecycle names the missing governance layer. Agentic Delivery defines the site's category standard for accountable delivery; it is not an official, regulator-approved, adopted professional, or certification standard. MPLP is the protocol path.
 
 AI Agent Lifecycle defines the accountable lifecycle of agent work from intent to accepted outcome.
 
@@ -237,6 +237,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 - AI Agent Lifecycle: It Was Not Designed. It Grew.: https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/
 - The Industry Misdefined Multi-Agent AI: https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/
+- Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI: https://www.jearonwong.com/essays/governed-by-design-protocol-native-multi-agent-operating-system/
+  Protocol/governance position essay. It argues that the native MAS OS generation needs Intent versioning, Drift Detection, HITL Confirmation Boundaries, portable Evidence chains, Agent Handoff semantics, and Outcome Governance at the protocol layer. It frames TCP/IP, SWIFT, and HTTP as architectural analogies only; it does not claim MPLP has official-standard status, regulator approval, certification, legal compliance proof, underwriting conclusion, vendor endorsement, or broad third-party adoption.
 - MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?: https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
 - The Agentic AI Inflection Point: Project Delivery: https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/
 - Agent Orchestration Is Not Delivery: https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/
