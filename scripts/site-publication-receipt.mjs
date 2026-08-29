@@ -23,7 +23,7 @@ const receipt = {
     "public/llms.txt managed publication registry",
     "public/entity/jearonwong-mplp-gaic-entity-graph.json generated publication registry"
   ],
-  verificationCommands: ["npm run audit:impact", "npm run publication:plan", "npm run publication:verify", "npm run assets:media:check", "npm run audit:all", "npm run audit:routes", "npm run typecheck", "npm run build", "git diff --check"],
+  verificationCommands: ["npm run publication:release -- --check", "npm run publication:release -- --ci", "npm run publication:release -- --vercel", "npm run audit:impact", "npm run publication:plan", "npm run publication:verify", "npm run assets:media:check", "npm run audit:all", "npm run audit:routes", "npm run typecheck", "npm run build", "git diff --check"],
   releaseBoundary: "Readiness evidence only. No deployment, external publication, registry mutation, or social distribution is authorized by this receipt."
 };
 const serialized = `${JSON.stringify(receipt, null, 2)}\n`;

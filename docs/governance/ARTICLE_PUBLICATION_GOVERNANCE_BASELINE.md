@@ -235,16 +235,22 @@ The selected Skill files are execution instructions, not public article content.
 
 The normal sequence is `W0 -> W1 -> W2 -> W3 + W4 -> W5 -> W6`. `W3` and `W4` can proceed in parallel only after `W2` has fixed the canonical title, thesis, and terminology. `W5` starts after the public surfaces are known; `W6` is the only workflow that can issue a publication verdict.
 
-The executable publication controls are:
+The executable publication entrypoint and its diagnostic controls are:
 
 ```sh
+npm run publication:release   # single local write-and-verify entrypoint
+npm run publication:release -- --check  # local no-write gate
+npm run publication:release -- --ci     # CI gate; sync then require a clean generated surface
+npm run publication:release -- --vercel # Vercel build-time gate; no repository writes
 npm run publication:plan       # read-only impact plan
 npm run publication:sync       # deterministic manifest and llms.txt projection
 npm run publication:verify     # generated-surface drift check
 npm run publication:closeout   # verification receipt written to dist/
 ```
 
-`governance/site-publication-control-record.json` stores author-approved routing, semantic mode, navigation exposure, and publication decisions. `public/generated/publication-manifest.json` and the marked publication block in `public/llms.txt` are generated surfaces; manual edits fail `publication:verify`. The synchronizer does not rewrite article bodies, white-paper artifacts, authored figures, entity-graph authority decisions, or external publication state. CI may prepare and verify these surfaces, but deployment, registry mutation, and social distribution remain separate owner-authorized actions.
+`npm run publication:release` is the only supported repository entrypoint for preparing or validating a publication wave. It runs `publication:plan`, optionally runs `publication:sync`, then runs `publication:verify`, `audit:all`, the media gate, a static-preview route matrix, mandatory desktop/mobile browser checks, and `publication:closeout`. The underlying commands remain available for diagnostics and troubleshooting; they are not a separate publication path. CI calls the same entrypoint with `--ci` after installing Chromium, and `vercel.json` calls it with `--vercel` before Vercel can emit a deployment build.
+
+`governance/site-publication-control-record.json` stores author-approved routing, semantic mode, navigation exposure, and publication decisions. `public/generated/publication-manifest.json` and the marked publication block in `public/llms.txt` are generated surfaces; manual edits fail `publication:verify`. The synchronizer does not rewrite article bodies, white-paper artifacts, authored figures, entity-graph authority decisions, or external publication state. W0-W2 writing and approval remain explicit human checkpoints; authored figures and external social distribution remain manual-review or owner-authorized surfaces. The Vercel build gate blocks a deployment build when repository checks fail, while the post-deploy verifier confirms the live URL and commit after deployment.
 
 Every workflow uses the same control record. It can remain a working note or be attached to the publication audit; it is not a reason to create a new governance document for each article.
 
@@ -275,4 +281,4 @@ reopen_condition: source, thesis, claim class, or canonical terminology changes
 
 SEO and GEO are discoverability disciplines, not authority substitutes. A well-formed page can be easier for a crawler or answer engine to understand; it cannot guarantee indexing, ranking, quotation, or subscription. The same evidence and boundary rules apply to social cards, `llms.txt`, JSON-LD, and related pages.
 
-The repository enforces the repeatable parts of this workflow through `npm run audit:all`. In addition to build, publication, and IA checks, the closeout now runs `audit:editorial`, which checks the controlled audience fields, the first four homepage Lifecycle reading entries and their link to the full essays ledger, the AI Agent Governance bridge/canonical hierarchy, flagship `llms.txt` summaries, and rendered title/description length. These checks preserve author-led historical arguments while preventing routing and machine-readable surface drift. The same closeout runs in `.github/workflows/site-governance.yml` for pushes to `main` and pull requests; CI is a verification gate, not publication or release authorization.
+The repository enforces the repeatable parts of this workflow through `npm run publication:release`. In addition to build, publication, and IA checks, the closeout now runs `audit:editorial`, which checks the controlled audience fields, the first four homepage Lifecycle reading entries and their link to the full essays ledger, the AI Agent Governance bridge/canonical hierarchy, flagship `llms.txt` summaries, and rendered title/description length. These checks preserve author-led historical arguments while preventing routing and machine-readable surface drift. The same single entrypoint runs in `.github/workflows/site-governance.yml` for pushes to `main` and pull requests, and in the Vercel build command; CI and Vercel are verification/build gates, not external publication or release authorization.

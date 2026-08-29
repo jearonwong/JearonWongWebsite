@@ -18,9 +18,15 @@ on:
       - "governance/**"
       - "scripts/**"
       - "docs/governance/**"
+      - "design/**"
+      - ".agents/skills/**"
+      - ".codex/skills/**"
+      - "AGENTS.md"
+      - "README.md"
       - "package.json"
       - "package-lock.json"
       - "astro.config.mjs"
+      - "vercel.json"
   pull_request:
     paths:
       - "src/**"
@@ -28,9 +34,15 @@ on:
       - "governance/**"
       - "scripts/**"
       - "docs/governance/**"
+      - "design/**"
+      - ".agents/skills/**"
+      - ".codex/skills/**"
+      - "AGENTS.md"
+      - "README.md"
       - "package.json"
       - "package-lock.json"
       - "astro.config.mjs"
+      - "vercel.json"
 
 permissions:
   contents: read
@@ -43,7 +55,7 @@ jobs:
   audit:
     name: Build and audit the Research Ledger
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -59,44 +71,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Resolve publication impact plan
-        run: npm run publication:plan > /tmp/site-publication-plan.json
+      - name: Install Chromium for dynamic browser checks
+        run: npx playwright install --no-shell chromium
 
-      - name: Classify changed surfaces
-        run: npm run audit:impact > /tmp/site-change-impact.json
-
-      - name: Verify deterministic publication synchronization
-        run: |
-          npm run publication:sync
-          git diff --exit-code -- public/generated/publication-manifest.json public/generated/publication-impact.json public/generated/media-manifest.json public/llms.txt public/entity/jearonwong-mplp-gaic-entity-graph.json public/social public/figures
-
-      - name: Run governed closeout
-        run: npm run audit:all
-
-      - name: Verify public media visual system
-        run: npm run assets:media:check
-
-      - name: Start static preview for route matrix
-        run: |
-          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/site-preview.log 2>&1 &
-          PREVIEW_PID=$!
-          echo "$PREVIEW_PID" > /tmp/site-preview.pid
-          for attempt in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:4321/ > /dev/null; then exit 0; fi
-            sleep 1
-          done
-          cat /tmp/site-preview.log
-          exit 1
-
-      - name: Verify rendered route matrix
-        run: npm run audit:routes -- --base http://127.0.0.1:4321
-
-      - name: Stop static preview
-        if: always()
-        run: if test -f /tmp/site-preview.pid; then kill "$(cat /tmp/site-preview.pid)" || true; fi
-
-      - name: Write publication receipt
-        run: npm run publication:closeout
+      - name: Run the single governed publication entrypoint
+        env:
+          PUBLICATION_EVIDENCE_DIR: /tmp
+          PUBLICATION_PREVIEW_PORT: 4321
+        run: npm run publication:release -- --ci
 
       - name: Upload publication evidence
         uses: actions/upload-artifact@v4
@@ -107,6 +89,7 @@ jobs:
             /tmp/site-change-impact.json
             /tmp/site-preview.log
             dist/publication-receipt.json
+            dist/browser-quality/**
           if-no-files-found: error
 
   production-verify:
@@ -120,7 +103,7 @@ jobs:
       }}
     needs: audit
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Check out source
         uses: actions/checkout@v4

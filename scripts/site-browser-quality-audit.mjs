@@ -44,11 +44,19 @@ async function dynamicAudit() {
   let playwright;
   try {
     playwright = await import("playwright");
-  } catch {
-    warn("Playwright is not installed; static built-route checks were used");
+  } catch (error) {
+    fail(`Playwright is required for dynamic browser checks: ${error instanceof Error ? error.message : String(error)}`);
     return;
   }
-  const browser = await playwright.chromium.launch({ headless: true });
+  let browser;
+  try {
+    // Use the full Chromium channel so CI does not depend on the optional
+    // headless-shell download, which is larger and less consistently cached.
+    browser = await playwright.chromium.launch({ channel: "chromium", headless: true });
+  } catch (error) {
+    fail(`Playwright Chromium could not launch: ${error instanceof Error ? error.message : String(error)}`);
+    return;
+  }
   const screenshotDir = path.join(root, "dist", "browser-quality");
   fs.mkdirSync(screenshotDir, { recursive: true });
   for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: "mobile", width: 390, height: 844 }]) {

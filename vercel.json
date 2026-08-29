@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npm run publication:release -- --vercel",
   "headers": [
     {
       "source": "/(.*)",

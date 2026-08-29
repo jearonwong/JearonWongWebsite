@@ -37,7 +37,7 @@ const output = {
   mode: requestedSource ? "single-source" : "site-wide",
   records,
   publishedCount: buildManifest().records.length,
-  next: ["npm run publication:sync", "npm run publication:verify", "npm run audit:all"]
+  next: ["npm run publication:release -- --check", "npm run publication:release -- --ci", "npm run publication:release -- --vercel"]
 };
 console.log(JSON.stringify(output, null, 2));
 if (records.some((record) => record.blockers.length > 0)) process.exitCode = 2;
