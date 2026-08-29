@@ -1,5 +1,6 @@
 /* global Buffer, console, process */
 import { readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -84,6 +85,21 @@ const records = [
     index: "07 / PROJECTS",
   },
 ];
+
+const sourceDigest = (svg) => createHash("sha256").update(`${svg}\n`, "utf8").digest("hex");
+
+const renderSourceXmp = (digest) => `<?xpacket begin="" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description rdf:about="" xmlns:jw="https://www.jearonwong.com/ns/asset/1.0/" jw:source-sha256="${digest}"/>
+  </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>`;
+
+function readSourceDigest(metadata) {
+  const xmp = metadata.xmpAsString ?? metadata.xmp?.toString("utf8") ?? "";
+  return xmp.match(/jw:source-sha256="([a-f0-9]{64})"/)?.[1];
+}
 
 const escapeXml = (value) =>
   value
@@ -179,9 +195,9 @@ const selectedRecords = requestedFiles.length > 0
 
 for (const record of selectedRecords) {
   const svg = renderSvg(record);
+  const digest = sourceDigest(svg);
   const svgPath = path.join(outputDirectory, `${record.file}.svg`);
   const pngPath = path.join(outputDirectory, `${record.file}.png`);
-  const expectedPng = await sharp(Buffer.from(svg)).png({ compressionLevel: 9, adaptiveFiltering: true }).toBuffer();
 
   if (checkOnly) {
     let currentSvg;
@@ -192,15 +208,24 @@ for (const record of selectedRecords) {
       throw new Error(`${record.file} generated pair is missing; run npm run assets:og`);
     }
     if (currentSvg !== `${svg}\n`) throw new Error(`${record.file}.svg is stale; run npm run assets:og`);
-    if (!currentPng.equals(expectedPng)) throw new Error(`${record.file}.png is stale; run npm run assets:og`);
+    const metadata = await sharp(currentPng).metadata();
+    if (metadata.width !== 1200 || metadata.height !== 630) {
+      throw new Error(`${record.file}.png must be 1200x630, received ${metadata.width}x${metadata.height}`);
+    }
+    if (readSourceDigest(metadata) !== digest) {
+      throw new Error(`${record.file}.png source fingerprint is stale; run npm run assets:og`);
+    }
   } else {
+    const expectedPng = await sharp(Buffer.from(svg))
+      .withXmp(renderSourceXmp(digest))
+      .png({ compressionLevel: 9, adaptiveFiltering: true })
+      .toBuffer();
     await writeFile(svgPath, `${svg}\n`, "utf8");
     await writeFile(pngPath, expectedPng);
-  }
-
-  const metadata = await sharp(expectedPng).metadata();
-  if (metadata.width !== 1200 || metadata.height !== 630) {
-    throw new Error(`${record.file}.png must be 1200x630, received ${metadata.width}x${metadata.height}`);
+    const metadata = await sharp(expectedPng).metadata();
+    if (metadata.width !== 1200 || metadata.height !== 630) {
+      throw new Error(`${record.file}.png must be 1200x630, received ${metadata.width}x${metadata.height}`);
+    }
   }
 }
 
