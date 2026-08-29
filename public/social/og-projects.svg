@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-palette="neutral-structure-functional-blue" data-route="/projects/">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="site-og" data-palette="neutral-structure-functional-blue" data-asset-kind="site-og" data-route="/projects/">
   <title id="title">Jearon Wong projects</title>
   <desc id="desc">Protocol Path and Proof Path.</desc>
   <defs>
@@ -6,9 +6,10 @@
       <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
     <style>
-      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 96px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
+      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 78px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
       .mono { fill: #96a0aa; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: 0; word-spacing: 0.018em; }
       .mono-bright { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0; word-spacing: 0.018em; }
+      .route { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0; word-spacing: 0; }
       .summary { fill: #20252b; font-family: Inter, sans-serif; font-size: 25px; font-weight: 520; letter-spacing: 0; word-spacing: 0.01em; }
       .paper-meta { fill: #66707a; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 13px; font-weight: 600; letter-spacing: 0; word-spacing: 0.02em; }
     </style>
@@ -25,7 +26,7 @@
   <text x="72" y="142" class="mono">PAGE_ROLE</text>
   <text x="171" y="142" class="mono">:</text>
   <text x="193" y="142" class="mono-bright">PROJECT LEDGER</text>
-  <text x="72" y="300" class="display">Projects</text>
+  <text x="72" y="290" class="display">Projects</text>
 
   <line x1="844" y1="142" x2="844" y2="394" stroke="#ffffff" stroke-opacity="0.18"/>
   <text x="880" y="176" class="mono">AUTHOR</text>
@@ -33,11 +34,11 @@
   <text x="880" y="260" class="mono">SYSTEM</text>
   <text x="880" y="288" class="mono-bright">RESEARCH LEDGER</text>
   <text x="880" y="344" class="mono">CANONICAL ROUTE</text>
-  <text x="880" y="372" class="mono-bright">/projects/</text>
+  <text x="880" y="372" class="route">/projects/</text>
 
   <line x1="72" y1="454" x2="1128" y2="454" stroke="#111418" stroke-opacity="0.22"/>
   <text x="72" y="516" class="summary">Protocol Path and Proof Path.</text>
   <line x1="72" y1="596" x2="1128" y2="596" stroke="#111418" stroke-opacity="0.16"/>
   <text x="72" y="619" class="paper-meta">PROTOCOL ARCHITECT FOR THE AGENT ERA</text>
-  <text x="1128" y="619" text-anchor="end" class="paper-meta">07 / PROJECTS</text>
+  <text x="1128" y="619" text-anchor="end" class="paper-meta">08 / PROJECTS</text>
 </svg>

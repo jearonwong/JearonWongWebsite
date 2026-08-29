@@ -18,10 +18,12 @@ const receipt = {
   generatedSurfaces: [
     "public/generated/publication-manifest.json",
     "public/generated/publication-impact.json",
+    "public/generated/media-manifest.json",
+    "public/social essay/page OG pairs",
     "public/llms.txt managed publication registry",
     "public/entity/jearonwong-mplp-gaic-entity-graph.json generated publication registry"
   ],
-  verificationCommands: ["npm run audit:impact", "npm run publication:plan", "npm run publication:verify", "npm run audit:all", "npm run audit:routes", "npm run typecheck", "npm run build", "git diff --check"],
+  verificationCommands: ["npm run audit:impact", "npm run publication:plan", "npm run publication:verify", "npm run assets:media:check", "npm run audit:all", "npm run audit:routes", "npm run typecheck", "npm run build", "git diff --check"],
   releaseBoundary: "Readiness evidence only. No deployment, external publication, registry mutation, or social distribution is authorized by this receipt."
 };
 const serialized = `${JSON.stringify(receipt, null, 2)}\n`;

@@ -8,6 +8,11 @@ export interface DefinitionEntry {
   distinction: string;
   evidence: { label: string; href: string }[];
   related: { label: string; href: string }[];
+  beginner?: string;
+  practitioner?: string;
+  lifecycleStage?: string;
+  source?: string;
+  citation?: string;
 }
 
 export const definitions: DefinitionEntry[] = [

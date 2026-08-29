@@ -72,6 +72,11 @@ const homepageJsonLd = {
   hasPart: [
     {
       "@type": "CollectionPage",
+      name: "Start here: Jearon Wong's research ledger orientation",
+      url: absoluteUrl("/start-here/")
+    },
+    {
+      "@type": "CollectionPage",
       name: "Concepts for AI Agent Lifecycle",
       url: absoluteUrl("/concepts/")
     },
@@ -311,8 +316,18 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       <section class="ledger-section" id="start-here">
         <div class="ledger-section__heading">
           <h2>Start here</h2>
-          <span class="ledger-section__count">3 routes + 1 sequence</span>
+          <span class="ledger-section__count">Orientation + 3 routes</span>
         </div>
+        <article class="ledger-feature ledger-feature--orientation">
+          <div>
+            <h3><a href={homepageActions.startHere.href}>{homepageActions.startHere.label}</a></h3>
+            <p>Use one short route to understand the category, then choose the field, protocol, evidence, or argument record you need.</p>
+          </div>
+          <div class="ledger-feature__meta">
+            <div class="ledger-meta-row"><span>Route</span><span>/start-here/</span></div>
+            <div class="ledger-meta-row"><span>Order</span><span>Field {"->"} Protocol {"->"} Evidence {"->"} Argument</span></div>
+          </div>
+        </article>
         {homepageContent.readerRoutes.slice(0, 3).map((route) => (
           <article class="ledger-record">
             <span class="ledger-record__kind">{route.eyebrow}</span>

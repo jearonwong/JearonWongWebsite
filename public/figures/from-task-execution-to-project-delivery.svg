@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">Figure 1 — From Task Execution to Agentic Project Delivery</title>
   <desc id="desc">A comparison between execution-focused agent systems and lifecycle-focused agent systems.</desc>
   <defs>
     <style>
       .bg { fill: #f8fafc; }
-      .grid { stroke: #dbeafe; stroke-width: 1; opacity: 0.65; }
+      .grid { stroke: #e7ebef; stroke-width: 1; opacity: 0.65; }
       .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
-      .panel-strong { fill: #eff6ff; stroke: #3b82f6; stroke-width: 2; }
-      .label { fill: #2563eb; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
+      .panel-strong { fill: #f3f5f7; stroke: #8a96a3; stroke-width: 2; }
+      .label { fill: #8a96a3; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
       .title { fill: #0f172a; font: 800 34px "Outfit", Inter, sans-serif; }
       .text { fill: #334155; font: 600 21px "Inter", sans-serif; }
       .muted { fill: #64748b; font: 500 17px "Inter", sans-serif; }
-      .brand { fill: #2563eb; font: 700 16px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; }
+      .brand { fill: #8a96a3; font: 700 16px "JetBrains Mono", Menlo, monospace; letter-spacing: 1px; }
       .brand-muted { fill: #64748b; font: 600 14px "Inter", sans-serif; }
       .arrow { stroke: #64748b; stroke-width: 2.5; marker-end: url(#arrowhead); }
-      .accent { stroke: #22d3ee; stroke-width: 3; marker-end: url(#arrowheadAccent); }
+      .accent { stroke: #d7dee7; stroke-width: 3; marker-end: url(#arrowheadAccent); }
     </style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" class="grid"/>
@@ -23,7 +23,7 @@
       <path d="M 0 0 L 10 4 L 0 8 z" fill="#64748b"/>
     </marker>
     <marker id="arrowheadAccent" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M 0 0 L 10 4 L 0 8 z" fill="#22d3ee"/>
+      <path d="M 0 0 L 10 4 L 0 8 z" fill="#d7dee7"/>
     </marker>
   </defs>
   <rect width="1280" height="720" class="bg"/>

@@ -1,52 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Agent Orchestration Is Not Delivery</title>
-  <desc id="desc">Open graph image for the third Define The AI Agent Lifecycle essay by Jearon Wong.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="essay-og" data-palette="neutral-structure-functional-blue" data-asset-kind="essay-og" data-route="/essays/agent-orchestration-is-not-delivery/">
+  <title id="title">Agent Orchestration Is Not Delivery — Define The AI Agent Lifecycle</title>
+  <desc id="desc">Orchestration coordinates execution. Delivery requires lifecycle responsibility consensus.</desc>
   <defs>
-    <style>
-      .bg { fill: #111111; }
-      .grid-line { stroke: rgba(241,245,249,0.055); stroke-width: 1; }
-      .frame { fill: rgba(255,255,255,0.02); stroke: rgba(241,245,249,0.13); stroke-width: 1.2; }
-      .frame-strong { fill: rgba(34,211,238,0.055); stroke: rgba(34,211,238,0.42); stroke-width: 1.4; }
-      .label { fill: #22d3ee; font-family: "JetBrains Mono", Menlo, monospace; font-size: 17px; font-weight: 700; letter-spacing: 1.4px; }
-      .label-muted { fill: #94a3b8; font-family: "JetBrains Mono", Menlo, monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
-      .title { fill: #f8fafc; font-family: "Outfit", Inter, sans-serif; font-size: 61px; font-weight: 800; letter-spacing: -0.7px; }
-      .subtitle { fill: #cbd5e1; font-family: Inter, sans-serif; font-size: 26px; font-weight: 600; }
-      .small { fill: #94a3b8; font-family: Inter, sans-serif; font-size: 17px; font-weight: 500; }
-      .mono { fill: #e2e8f0; font-family: "JetBrains Mono", Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.7px; }
-      .line { stroke: rgba(148,163,184,0.42); stroke-width: 2; fill: none; }
-      .line-strong { stroke: rgba(34,211,238,0.9); stroke-width: 2.5; fill: none; }
-    </style>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" class="grid-line"/>
+    <pattern id="dark-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
+    <style>
+      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 64px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
+      .mono { fill: #96a0aa; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: 0; word-spacing: 0.018em; }
+      .mono-bright { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0; word-spacing: 0.018em; }
+      .route { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0; word-spacing: 0; }
+      .summary { fill: #20252b; font-family: Inter, sans-serif; font-size: 25px; font-weight: 520; letter-spacing: 0; word-spacing: 0.01em; }
+      .paper-meta { fill: #66707a; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 13px; font-weight: 600; letter-spacing: 0; word-spacing: 0.02em; }
+    </style>
   </defs>
 
-  <rect width="1200" height="630" class="bg"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="rgba(241,245,249,0.13)" stroke-width="1"/>
-  <rect x="72" y="72" width="1056" height="486" fill="none" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+  <rect width="1200" height="454" fill="#15191e"/>
+  <rect width="1200" height="454" fill="url(#dark-grid)"/>
+  <rect y="454" width="1200" height="176" fill="#f7f8fa"/>
 
-  <text x="96" y="122" class="label">DEFINE THE AI AGENT LIFECYCLE / ESSAY 03</text>
-  <text x="96" y="220" class="title">Agent Orchestration</text>
-  <text x="96" y="286" class="title">Is Not Delivery</text>
-  <text x="96" y="356" class="subtitle">The orchestrator is not the router of agents.</text>
-  <text x="96" y="396" class="subtitle" fill="#22d3ee">Lifecycle Responsibility Consensus.</text>
+  <text x="72" y="56" class="mono-bright">JEARON WONG</text>
+  <text x="202" y="56" class="mono">/ RESEARCH LEDGER</text>
+  <line x1="72" y1="88" x2="1128" y2="88" stroke="#ffffff" stroke-opacity="0.16"/>
 
-  <g transform="translate(760 162)">
-    <rect width="292" height="112" rx="2" class="frame"/>
-    <text x="22" y="38" class="label-muted">ORCHESTRATION ONLY</text>
-    <text x="22" y="75" class="mono">Execution coordination</text>
-    <text x="22" y="99" class="small">Routes agents, not responsibility</text>
-    <path d="M54 140 H238" class="line"/>
-    <text x="90" y="161" class="label-muted">!= DELIVERY</text>
+  <text x="72" y="142" class="mono">PAGE_ROLE</text>
+  <text x="171" y="142" class="mono">:</text>
+  <text x="193" y="142" class="mono-bright">ESSAY / LIFECYCLE</text>
+  <text x="72" y="240" class="display">Agent Orchestration</text>
+    <text x="72" y="310" class="display">Is Not Delivery</text>
 
-    <rect y="188" width="292" height="160" rx="2" class="frame-strong"/>
-    <text x="22" y="226" class="label">DELIVERY-GRADE</text>
-    <text x="22" y="262" class="mono">Bidirectional mapping</text>
-    <text x="22" y="286" class="mono">Role Graph governance</text>
-    <text x="22" y="310" class="mono">Evidence + accepted outcome</text>
-    <path d="M22 334 H270" class="line-strong"/>
-  </g>
+  <line x1="844" y1="142" x2="844" y2="394" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="880" y="176" class="mono">AUTHOR</text>
+  <text x="880" y="204" class="mono-bright">JEARON WONG</text>
+  <text x="880" y="260" class="mono">SYSTEM</text>
+  <text x="880" y="288" class="mono-bright">RESEARCH LEDGER</text>
+  <text x="880" y="344" class="mono">CANONICAL ROUTE</text>
+  <text x="880" y="372" class="route">/essays/agent-orchest</text>
+  <text x="880" y="394" class="route">ration-is-not-deliver...</text>
 
-  <text x="96" y="532" class="label-muted">JEARON WONG / PROTOCOL ARCHITECT FOR THE AGENT ERA</text>
+  <line x1="72" y1="454" x2="1128" y2="454" stroke="#111418" stroke-opacity="0.22"/>
+  <text x="72" y="516" class="summary">Orchestration coordinates execution. Delivery requires lifecycle</text>
+    <text x="72" y="550" class="summary">responsibility consensus.</text>
+  <line x1="72" y1="596" x2="1128" y2="596" stroke="#111418" stroke-opacity="0.16"/>
+  <text x="72" y="619" class="paper-meta">PROTOCOL ARCHITECT FOR THE AGENT ERA</text>
+  <text x="1128" y="619" text-anchor="end" class="paper-meta">ESSAY / LIFECYCLE</text>
 </svg>

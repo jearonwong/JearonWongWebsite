@@ -3,6 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import sharp from "sharp";
+import { loadEssays } from "./site-publication-utils.mjs";
 
 const outputDirectory = path.resolve("public/social");
 
@@ -20,7 +21,16 @@ const colors = {
   ruleLight: "#111418",
 };
 
-const records = [
+const siteRecords = [
+  {
+    file: "og-start-here",
+    role: "ORIENTATION HUB",
+    title: ["Start here"],
+    accessibleTitle: "Start here: Jearon Wong's research ledger",
+    summary: ["A short orientation to the field, protocol, proof, and evidence paths."],
+    route: "/start-here/",
+    index: "01 / ORIENTATION",
+  },
   {
     file: "jearonwong-og",
     role: "PUBLIC HEADQUARTERS",
@@ -28,7 +38,7 @@ const records = [
     accessibleTitle: "Jearon Wong home",
     summary: ["Execution is not Delivery.", "Research, essays, projects, and evidence in one reading order."],
     route: "/",
-    index: "01 / SITE",
+    index: "02 / SITE",
   },
   {
     file: "og-about",
@@ -37,7 +47,7 @@ const records = [
     accessibleTitle: "About Jearon Wong",
     summary: ["Protocol Architect for the Agent Era."],
     route: "/about/",
-    index: "02 / IDENTITY",
+    index: "03 / IDENTITY",
   },
   {
     file: "og-ai-agent-governance",
@@ -46,7 +56,7 @@ const records = [
     accessibleTitle: "AI Agent Governance",
     summary: ["Lifecycle accountability for AI agents, multi-agent systems,", "and accountable work."],
     route: "/ai-agent-governance/",
-    index: "03 / GOVERNANCE",
+    index: "04 / GOVERNANCE",
   },
   {
     file: "og-concepts",
@@ -55,7 +65,7 @@ const records = [
     accessibleTitle: "Concepts reference layer",
     summary: ["The vocabulary behind Agentic Delivery."],
     route: "/concepts/",
-    index: "04 / REFERENCE",
+    index: "05 / REFERENCE",
   },
   {
     file: "og-essays",
@@ -64,7 +74,7 @@ const records = [
     accessibleTitle: "Essays by Jearon Wong",
     summary: ["Arguments for accountable agent work."],
     route: "/essays/",
-    index: "05 / ESSAYS",
+    index: "06 / ESSAYS",
   },
   {
     file: "og-lifecycle",
@@ -73,7 +83,7 @@ const records = [
     accessibleTitle: "The AI Agent Lifecycle",
     summary: ["Execution is not Delivery."],
     route: "/lifecycle/",
-    index: "06 / LIFECYCLE",
+    index: "07 / LIFECYCLE",
   },
   {
     file: "og-projects",
@@ -82,9 +92,59 @@ const records = [
     accessibleTitle: "Jearon Wong projects",
     summary: ["Protocol Path and Proof Path."],
     route: "/projects/",
-    index: "07 / PROJECTS",
+    index: "08 / PROJECTS",
   },
 ];
+
+const normalizeText = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+const wrapText = (value, maxCharacters, maxLines = 3) => {
+  const text = normalizeText(value);
+  if (!text) return [];
+  const words = text.split(" ");
+  const lines = [];
+  let line = "";
+  for (const word of words) {
+    if (word.length > maxCharacters && !line) {
+      for (let offset = 0; offset < word.length; offset += maxCharacters) lines.push(word.slice(offset, offset + maxCharacters));
+      continue;
+    }
+    const candidate = line ? `${line} ${word}` : word;
+    if (candidate.length <= maxCharacters) line = candidate;
+    else {
+      if (line) lines.push(line);
+      line = word;
+    }
+  }
+  if (line) lines.push(line);
+  if (lines.length <= maxLines) return lines;
+  const clipped = lines.slice(0, maxLines);
+  clipped[maxLines - 1] = `${clipped[maxLines - 1].replace(/[.,:;!?-]?$/, "")}...`;
+  return clipped;
+};
+
+const essayRecords = loadEssays()
+  .filter(({ data }) => data.status === "published" && typeof data.shareImage === "string")
+  .map(({ slug, data }) => {
+    const imageFile = data.shareImage.replace(/^\/social\//, "").replace(/\.png$/i, "");
+    const track = normalizeText(data.editorialTrack || data.track || "general").toUpperCase();
+    const title = normalizeText(data.shareTitle || data.title);
+    const summary = normalizeText(data.shareSubtitle || data.shareDescription || data.description);
+    return {
+      file: imageFile,
+      role: `ESSAY / ${track}`,
+      title: wrapText(title, 20, 3),
+      accessibleTitle: data.shareImageAlt || data.title,
+      summary: wrapText(summary, 72, 2),
+      route: data.canonicalRoute || `/essays/${slug}/`,
+      index: `ESSAY / ${track}`,
+      assetKind: "essay-og"
+    };
+  });
+
+const records = [
+  ...siteRecords.map((record) => ({ ...record, assetKind: "site-og" })),
+  ...essayRecords
+].filter((record, index, all) => all.findIndex((candidate) => candidate.file === record.file) === index);
 
 const sourceDigest = (svg) => createHash("sha256").update(`${svg}\n`, "utf8").digest("hex");
 
@@ -110,12 +170,13 @@ const escapeXml = (value) =>
     .replaceAll("'", "&apos;");
 
 function renderSvg(record) {
-  const titleSize = record.title.length > 1 ? 78 : 96;
-  const titleStart = record.title.length > 1 ? 244 : 300;
-  const titleLines = record.title
+  const titleSize = record.title.length >= 3 ? 53 : record.title.length === 2 ? 64 : 78;
+  const titleLineHeight = record.title.length >= 3 ? 60 : record.title.length === 2 ? 70 : 82;
+  const titleStart = record.title.length >= 3 ? 220 : record.title.length === 2 ? 240 : 290;
+  const titleLines = (record.title.length > 0 ? record.title : ["Untitled publication"])
     .map(
       (line, index) =>
-        `<text x="72" y="${titleStart + index * 82}" class="display">${escapeXml(line)}</text>`,
+        `<text x="72" y="${titleStart + index * titleLineHeight}" class="display">${escapeXml(line)}</text>`,
     )
     .join("\n    ");
   const summaryLines = record.summary
@@ -124,8 +185,11 @@ function renderSvg(record) {
         `<text x="72" y="${516 + index * 34}" class="summary">${escapeXml(line)}</text>`,
     )
     .join("\n    ");
+  const routeLines = wrapText(record.route, 21, 2)
+    .map((line, index) => `<text x="880" y="${372 + index * 22}" class="route">${escapeXml(line)}</text>`)
+    .join("\n  ");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-palette="neutral-structure-functional-blue" data-route="${escapeXml(record.route)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="${escapeXml(record.assetKind)}" data-palette="neutral-structure-functional-blue" data-asset-kind="${escapeXml(record.assetKind)}" data-route="${escapeXml(record.route)}">
   <title id="title">${escapeXml(record.accessibleTitle ?? `${record.title.join(" ")} - Jearon Wong`)}</title>
   <desc id="desc">${escapeXml(record.summary.join(" "))}</desc>
   <defs>
@@ -136,6 +200,7 @@ function renderSvg(record) {
       .display { fill: ${colors.registryText}; font-family: Outfit, Inter, sans-serif; font-size: ${titleSize}px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
       .mono { fill: ${colors.registryMuted}; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: 0; word-spacing: 0.018em; }
       .mono-bright { fill: ${colors.registryText}; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0; word-spacing: 0.018em; }
+      .route { fill: ${colors.registryText}; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0; word-spacing: 0; }
       .summary { fill: ${colors.paperText}; font-family: Inter, sans-serif; font-size: 25px; font-weight: 520; letter-spacing: 0; word-spacing: 0.01em; }
       .paper-meta { fill: ${colors.paperMeta}; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 13px; font-weight: 600; letter-spacing: 0; word-spacing: 0.02em; }
     </style>
@@ -160,7 +225,7 @@ function renderSvg(record) {
   <text x="880" y="260" class="mono">SYSTEM</text>
   <text x="880" y="288" class="mono-bright">RESEARCH LEDGER</text>
   <text x="880" y="344" class="mono">CANONICAL ROUTE</text>
-  <text x="880" y="372" class="mono-bright">${escapeXml(record.route)}</text>
+  ${routeLines}
 
   <line x1="72" y1="454" x2="1128" y2="454" stroke="${colors.ruleLight}" stroke-opacity="0.22"/>
   ${summaryLines}

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">The Agentic Audit Object</title>
   <desc id="desc">Component map showing the lifecycle work unit and eight evidence components required for reconstructable agentic work.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.hub{fill:rgba(34,211,238,.105);stroke:rgba(34,211,238,.62);stroke-width:2}.node{fill:rgba(255,255,255,.032);stroke:rgba(241,245,249,.16);stroke-width:1.2}.node-blue{fill:rgba(59,130,246,.07);stroke:rgba(59,130,246,.44);stroke-width:1.4}.node-cyan{fill:rgba(34,211,238,.065);stroke:rgba(34,211,238,.45);stroke-width:1.4}.label{fill:#22d3ee;font:850 16px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.head{fill:#f8fafc;font:760 22px "Outfit",Inter,sans-serif}.body{fill:#94a3b8;font:520 17px Inter,sans-serif}.hubkey{fill:#22d3ee;font:850 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.65px}.hubtitle{fill:#f8fafc;font:760 34px "Outfit",Inter,sans-serif}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
+      .bg{fill:#f7f8fa}.outer{fill:none;stroke:rgba(15,23,42,.16);stroke-width:1.2}.hub{fill:rgba(100,116,139,.105);stroke:rgba(100,116,139,.62);stroke-width:2}.node{fill:rgba(15,23,42,.032);stroke:rgba(15,23,42,.16);stroke-width:1.2}.node-secondary{fill:rgba(100,116,139,.07);stroke:rgba(100,116,139,.44);stroke-width:1.4}.node-emphasis{fill:rgba(100,116,139,.065);stroke:rgba(100,116,139,.45);stroke-width:1.4}.label{fill:#5b6673;font:850 16px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.head{fill:#111827;font:760 22px "Outfit",Inter,sans-serif}.body{fill:#64748b;font:520 17px Inter,sans-serif}.hubkey{fill:#5b6673;font:850 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.65px}.hubtitle{fill:#111827;font:760 34px "Outfit",Inter,sans-serif}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
     </style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,.05)" stroke-width="1"/>
     </pattern>
   </defs>
   <rect width="1600" height="760" class="bg"/>
@@ -20,13 +20,13 @@
     <text x="190" y="124" text-anchor="middle" class="body">The reconstructable unit of agentic work</text>
   </g>
 
-  <g transform="translate(82 154)"><rect width="456" height="106" rx="2" class="node-blue"/><text x="26" y="34" class="label">01</text><text x="82" y="34" class="head">Authority Boundary</text><text x="82" y="68" class="body">Scope, conditions, expiry</text></g>
-  <g transform="translate(82 296)"><rect width="456" height="106" rx="2" class="node-blue"/><text x="26" y="34" class="label">02</text><text x="82" y="34" class="head">Human Role Responsibility</text><text x="82" y="68" class="body">Intent, approval, acceptance</text></g>
-  <g transform="translate(82 438)"><rect width="456" height="106" rx="2" class="node-blue"/><text x="26" y="34" class="label">03</text><text x="82" y="34" class="head">Agent Role Responsibility</text><text x="82" y="68" class="body">Execution, constraints, obligations</text></g>
+  <g transform="translate(82 154)"><rect width="456" height="106" rx="2" class="node-secondary"/><text x="26" y="34" class="label">01</text><text x="82" y="34" class="head">Authority Boundary</text><text x="82" y="68" class="body">Scope, conditions, expiry</text></g>
+  <g transform="translate(82 296)"><rect width="456" height="106" rx="2" class="node-secondary"/><text x="26" y="34" class="label">02</text><text x="82" y="34" class="head">Human Role Responsibility</text><text x="82" y="68" class="body">Intent, approval, acceptance</text></g>
+  <g transform="translate(82 438)"><rect width="456" height="106" rx="2" class="node-secondary"/><text x="26" y="34" class="label">03</text><text x="82" y="34" class="head">Agent Role Responsibility</text><text x="82" y="68" class="body">Execution, constraints, obligations</text></g>
 
-  <g transform="translate(1062 154)"><rect width="456" height="106" rx="2" class="node-cyan"/><text x="26" y="34" class="label">04</text><text x="82" y="34" class="head">Tool-Action Evidence</text><text x="82" y="68" class="body">Target, reversibility, rollback</text></g>
-  <g transform="translate(1062 296)"><rect width="456" height="106" rx="2" class="node-cyan"/><text x="26" y="34" class="label">05</text><text x="82" y="34" class="head">Evidence Pointer</text><text x="82" y="68" class="body">Hash, redaction, retention</text></g>
-  <g transform="translate(1062 438)"><rect width="456" height="106" rx="2" class="node-cyan"/><text x="26" y="34" class="label">06</text><text x="82" y="34" class="head">Accepted Outcome State</text><text x="82" y="68" class="body">Produced, accepted, disputed</text></g>
+  <g transform="translate(1062 154)"><rect width="456" height="106" rx="2" class="node-emphasis"/><text x="26" y="34" class="label">04</text><text x="82" y="34" class="head">Tool-Action Evidence</text><text x="82" y="68" class="body">Target, reversibility, rollback</text></g>
+  <g transform="translate(1062 296)"><rect width="456" height="106" rx="2" class="node-emphasis"/><text x="26" y="34" class="label">05</text><text x="82" y="34" class="head">Evidence Pointer</text><text x="82" y="68" class="body">Hash, redaction, retention</text></g>
+  <g transform="translate(1062 438)"><rect width="456" height="106" rx="2" class="node-emphasis"/><text x="26" y="34" class="label">06</text><text x="82" y="34" class="head">Accepted Outcome State</text><text x="82" y="68" class="body">Produced, accepted, disputed</text></g>
 
   <g transform="translate(544 92)"><rect width="512" height="86" rx="2" class="node"/><text x="24" y="34" class="label">07</text><text x="80" y="34" class="head">Exception and Remediation Closure</text><text x="80" y="62" class="body">Deviation, correction, re-review, closure</text></g>
   <g transform="translate(544 574)"><rect width="512" height="86" rx="2" class="node"/><text x="24" y="34" class="label">08</text><text x="80" y="34" class="head">Privacy and Selective Disclosure</text><text x="80" y="62" class="body">Minimization, disclosure profile, review access</text></g>

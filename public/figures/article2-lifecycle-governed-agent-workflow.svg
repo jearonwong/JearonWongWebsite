@@ -1,27 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">Lifecycle-Governed Agent Workflow</title>
   <desc id="desc">A structural diagram showing human work models translated through Lifecycle Role Decomposition and Agent Lifecycle Protocol into lifecycle-governed agent workflow and accountable delivery.</desc>
   <defs>
     <style>
-      .bg { fill: #111111; }
-      .grid { stroke: rgba(241,245,249,0.05); stroke-width: 1; }
-      .outer { fill: none; stroke: rgba(241,245,249,0.16); stroke-width: 1.2; }
-      .panel { fill: rgba(255,255,255,0.026); stroke: rgba(241,245,249,0.16); stroke-width: 1.5; }
-      .protocol { fill: rgba(34,211,238,0.06); stroke: rgba(34,211,238,0.62); stroke-width: 2; }
-      .output { fill: rgba(59,130,246,0.055); stroke: rgba(59,130,246,0.48); stroke-width: 1.7; }
-      .line { stroke: rgba(34,211,238,0.9); stroke-width: 3; fill: none; }
-      .kicker { fill: #22d3ee; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; }
+      .bg { fill: #f7f8fa; }
+      .grid { stroke: rgba(15,23,42,0.05); stroke-width: 1; }
+      .outer { fill: none; stroke: rgba(15,23,42,0.16); stroke-width: 1.2; }
+      .panel { fill: rgba(15,23,42,0.026); stroke: rgba(15,23,42,0.16); stroke-width: 1.5; }
+      .protocol { fill: rgba(100,116,139,0.06); stroke: rgba(100,116,139,0.62); stroke-width: 2; }
+      .output { fill: rgba(100,116,139,0.055); stroke: rgba(100,116,139,0.48); stroke-width: 1.7; }
+      .line { stroke: rgba(100,116,139,0.9); stroke-width: 3; fill: none; }
+      .kicker { fill: #5b6673; font: 700 20px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.5px; }
       .label { fill: #64748b; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
-      .label-hot { fill: #22d3ee; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
-      .title { fill: #f1f5f9; font: 820 58px "Outfit", Inter, sans-serif; letter-spacing: 0; }
-      .title-hot { fill: #22d3ee; font: 820 48px "Outfit", Inter, sans-serif; letter-spacing: 0; }
-      .panel-title { fill: #f1f5f9; font: 800 36px "Outfit", Inter, sans-serif; letter-spacing: 0; }
-      .panel-sub { fill: #f1f5f9; font: 600 22px Inter, sans-serif; letter-spacing: 0; }
-      .node { fill: rgba(255,255,255,0.07); stroke: rgba(241,245,249,0.22); stroke-width: 1.2; }
-      .node-blue { fill: rgba(59,130,246,0.13); stroke: rgba(59,130,246,0.52); stroke-width: 1.2; }
-      .node-cyan { fill: rgba(34,211,238,0.12); stroke: rgba(34,211,238,0.55); stroke-width: 1.2; }
-      .mono { fill: #f1f5f9; font: 760 23px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.3px; }
-      .text { fill: #f1f5f9; font: 740 25px Inter, sans-serif; letter-spacing: 0; }
+      .label-emphasis { fill: #5b6673; font: 700 18px "JetBrains Mono", Menlo, monospace; letter-spacing: 1.2px; }
+      .title { fill: #111827; font: 820 58px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .title-emphasis { fill: #5b6673; font: 820 48px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-title { fill: #111827; font: 800 36px "Outfit", Inter, sans-serif; letter-spacing: 0; }
+      .panel-sub { fill: #111827; font: 600 22px Inter, sans-serif; letter-spacing: 0; }
+      .node { fill: rgba(15,23,42,0.07); stroke: rgba(15,23,42,0.22); stroke-width: 1.2; }
+      .node-secondary { fill: rgba(100,116,139,0.13); stroke: rgba(100,116,139,0.52); stroke-width: 1.2; }
+      .node-emphasis { fill: rgba(100,116,139,0.12); stroke: rgba(100,116,139,0.55); stroke-width: 1.2; }
+      .mono { fill: #111827; font: 760 23px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.3px; }
+      .text { fill: #111827; font: 740 25px Inter, sans-serif; letter-spacing: 0; }
       .small { fill: #64748b; font: 560 20px Inter, sans-serif; letter-spacing: 0; }
       .footer { fill: #64748b; font: 700 17px "JetBrains Mono", Menlo, monospace; letter-spacing: 0.8px; }
     </style>
@@ -29,7 +29,7 @@
       <path d="M 40 0 L 0 0 0 40" class="grid" fill="none"/>
     </pattern>
     <marker id="arrowHot" markerWidth="14" markerHeight="11" refX="13" refY="5.5" orient="auto">
-      <path d="M0,0 L14,5.5 L0,11 Z" fill="#22d3ee"/>
+      <path d="M0,0 L14,5.5 L0,11 Z" fill="#5b6673"/>
     </marker>
   </defs>
 
@@ -39,7 +39,7 @@
 
   <text x="82" y="104" class="kicker">LIFECYCLE-GOVERNED AGENT WORKFLOW</text>
   <text x="82" y="172" class="title">Human work models in.</text>
-  <text x="82" y="226" class="title-hot">Lifecycle-governed workflows out.</text>
+  <text x="82" y="226" class="title-emphasis">Lifecycle-governed workflows out.</text>
 
   <g transform="translate(82 296)">
     <rect width="366" height="430" rx="2" class="panel"/>
@@ -60,23 +60,23 @@
 
   <g transform="translate(560 266)">
     <rect width="480" height="492" rx="2" class="protocol"/>
-    <text x="36" y="60" class="label-hot">TRANSLATION LAYER</text>
+    <text x="36" y="60" class="label-emphasis">TRANSLATION LAYER</text>
     <text x="36" y="112" class="panel-title">Lifecycle Role</text>
     <text x="36" y="154" class="panel-title">Decomposition</text>
     <text x="36" y="190" class="panel-sub">Agent Lifecycle Protocol interprets</text>
     <text x="36" y="220" class="panel-sub">roles into governed boundaries.</text>
 
-    <rect x="36" y="258" width="180" height="58" rx="2" class="node-cyan"/>
+    <rect x="36" y="258" width="180" height="58" rx="2" class="node-emphasis"/>
     <text x="72" y="295" class="mono">Context</text>
-    <rect x="264" y="258" width="180" height="58" rx="2" class="node-blue"/>
+    <rect x="264" y="258" width="180" height="58" rx="2" class="node-secondary"/>
     <text x="322" y="295" class="mono">Role</text>
-    <rect x="36" y="336" width="180" height="58" rx="2" class="node-blue"/>
+    <rect x="36" y="336" width="180" height="58" rx="2" class="node-secondary"/>
     <text x="86" y="373" class="mono">Plan</text>
-    <rect x="264" y="336" width="180" height="58" rx="2" class="node-cyan"/>
+    <rect x="264" y="336" width="180" height="58" rx="2" class="node-emphasis"/>
     <text x="304" y="373" class="mono">Confirm</text>
-    <rect x="36" y="414" width="180" height="58" rx="2" class="node-blue"/>
+    <rect x="36" y="414" width="180" height="58" rx="2" class="node-secondary"/>
     <text x="82" y="451" class="mono">Trace</text>
-    <rect x="264" y="414" width="180" height="58" rx="2" class="node-cyan"/>
+    <rect x="264" y="414" width="180" height="58" rx="2" class="node-emphasis"/>
     <text x="302" y="451" class="mono">Delivery</text>
   </g>
 
@@ -90,11 +90,11 @@
     <text x="34" y="186" class="panel-sub">Generated workflow with</text>
     <text x="34" y="216" class="panel-sub">accountability structure.</text>
 
-    <rect x="34" y="224" width="298" height="54" rx="2" class="node-cyan"/>
+    <rect x="34" y="224" width="298" height="54" rx="2" class="node-emphasis"/>
     <text x="58" y="259" class="text">Confirm gates</text>
-    <rect x="34" y="294" width="298" height="54" rx="2" class="node-blue"/>
+    <rect x="34" y="294" width="298" height="54" rx="2" class="node-secondary"/>
     <text x="58" y="329" class="text">Trace obligations</text>
-    <rect x="34" y="364" width="298" height="54" rx="2" class="node-cyan"/>
+    <rect x="34" y="364" width="298" height="54" rx="2" class="node-emphasis"/>
     <text x="58" y="399" class="text">Accountable delivery</text>
   </g>
 

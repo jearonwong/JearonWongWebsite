@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840" role="img" aria-labelledby="tdo ddo">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840" role="img" aria-labelledby="tdo ddo" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="tdo">Execution Dispatch vs Delivery-grade Verifiable Objective</title>
   <desc id="ddo">Comparison table contrasting execution dispatch (action item) with delivery-grade verifiable objective across six dimensions: who executes, what to do, output focus, completion behavior, rollback definition, and task nature.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}
-      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
-      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
-      .ttl{fill:#f1f5f9;font:800 46px "Outfit",Inter,sans-serif}
+      .bg{fill:#f7f8fa}
+      .outer{fill:none;stroke:rgba(15,23,42,0.16);stroke-width:1.2}
+      .kicker{fill:#5b6673;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#111827;font:800 46px "Outfit",Inter,sans-serif}
       .th-l{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
-      .th-r{fill:#22d3ee;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .th-r{fill:#5b6673;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
       .td-l{fill:#64748b;font:400 20px Inter,sans-serif}
-      .td-r{fill:#f1f5f9;font:400 20px Inter,sans-serif}
-      .td-r-strong{fill:#22d3ee;font:700 20px Inter,sans-serif}
+      .td-r{fill:#111827;font:400 20px Inter,sans-serif}
+      .td-r-strong{fill:#5b6673;font:700 20px Inter,sans-serif}
       .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
     </style>
     <pattern id="gdo" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,0.05)" stroke-width="1"/>
     </pattern>
   </defs>
 
@@ -30,49 +30,49 @@
   <!-- Table: two equal cols. Col1=718 (x=82) Col2=718 (x=800). Total=1436 -->
   <!-- Header row: y=148, h=52 -->
   <rect x="82"  y="148" width="718" height="52" fill="rgba(100,116,139,0.1)" stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
-  <rect x="800" y="148" width="718" height="52" fill="rgba(34,211,238,0.1)"  stroke="rgba(34,211,238,0.35)" stroke-width="1"/>
+  <rect x="800" y="148" width="718" height="52" fill="rgba(100,116,139,0.1)"  stroke="rgba(100,116,139,0.35)" stroke-width="1"/>
   <text x="102" y="181" class="th-l">EXECUTION DISPATCH</text>
   <text x="820" y="181" class="th-r">DELIVERY-GRADE VERIFIABLE OBJECTIVE</text>
 
   <!-- 6 rows, h=98 each. y starts at 200 -->
   <!-- Row 1 -->
-  <rect x="82"  y="200" width="718" height="98" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="800" y="200" width="718" height="98" fill="rgba(34,211,238,0.03)"   stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="200" width="718" height="98" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="800" y="200" width="718" height="98" fill="rgba(100,116,139,0.03)"   stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <!-- single line centered in 98px: baseline ≈ y+57 -->
   <text x="102" y="257" class="td-l">Specifies who executes</text>
   <text x="820" y="257" class="td-r">Specifies which Role within which responsibility boundary</text>
 
   <!-- Row 2 -->
-  <rect x="82"  y="298" width="718" height="98" fill="rgba(255,255,255,0.02)"  stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="800" y="298" width="718" height="98" fill="rgba(34,211,238,0.04)"   stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="298" width="718" height="98" fill="rgba(15,23,42,0.02)"  stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="800" y="298" width="718" height="98" fill="rgba(100,116,139,0.04)"   stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="355" class="td-l">Describes what to do</text>
   <!-- two lines: line1 ≈ y+38, line2 ≈ y+64 -->
   <text x="820" y="336" class="td-r">Describes scope, constraints,</text>
   <text x="820" y="364" class="td-r">evidence requirements, acceptance conditions</text>
 
   <!-- Row 3 -->
-  <rect x="82"  y="396" width="718" height="98" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="800" y="396" width="718" height="98" fill="rgba(34,211,238,0.03)"   stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="396" width="718" height="98" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="800" y="396" width="718" height="98" fill="rgba(100,116,139,0.03)"   stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="453" class="td-l">Focused on output</text>
   <text x="820" y="453" class="td-r">Focused on whether output enters review/acceptance chain</text>
 
   <!-- Row 4 -->
-  <rect x="82"  y="494" width="718" height="98" fill="rgba(255,255,255,0.02)"  stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="800" y="494" width="718" height="98" fill="rgba(34,211,238,0.04)"   stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="494" width="718" height="98" fill="rgba(15,23,42,0.02)"  stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="800" y="494" width="718" height="98" fill="rgba(100,116,139,0.04)"   stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="551" class="td-l">Continues after completion</text>
   <text x="820" y="532" class="td-r">Enters evidence/review/acceptance</text>
   <text x="820" y="560" class="td-r">judgment after completion</text>
 
   <!-- Row 5 -->
-  <rect x="82"  y="592" width="718" height="98" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="800" y="592" width="718" height="98" fill="rgba(34,211,238,0.03)"   stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="592" width="718" height="98" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="800" y="592" width="718" height="98" fill="rgba(100,116,139,0.03)"   stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="649" class="td-l">No rollback definition</text>
   <text x="820" y="630" class="td-r">Explicitly defines rollback/compensation</text>
   <text x="820" y="658" class="td-r">condition on failure</text>
 
   <!-- Row 6 — highlight -->
   <rect x="82"  y="690" width="718" height="98" fill="rgba(100,116,139,0.06)" stroke="rgba(100,116,139,0.2)" stroke-width="1"/>
-  <rect x="800" y="690" width="718" height="98" fill="rgba(34,211,238,0.08)"  stroke="rgba(34,211,238,0.3)"  stroke-width="1.5"/>
+  <rect x="800" y="690" width="718" height="98" fill="rgba(100,116,139,0.08)"  stroke="rgba(100,116,139,0.3)"  stroke-width="1.5"/>
   <text x="102" y="747" class="td-l">Task is an action item</text>
   <text x="820" y="747" class="td-r-strong">Task is a lifecycle-bound verifiable objective</text>
 

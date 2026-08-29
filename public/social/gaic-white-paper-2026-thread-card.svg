@@ -1,0 +1,49 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Gaic White Paper 2026 Thread Card visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Gaic White Paper 2026 Thread Card</title>
+  <rect width="1600" height="900" fill="#0D1117"/>
+  <rect x="72" y="68" width="1456" height="764" rx="0" fill="#101820" stroke="#2C3A48" stroke-width="2"/>
+  <path d="M72 228H1528" stroke="#2C3A48" stroke-width="2"/>
+  <path d="M72 706H1528" stroke="#2C3A48" stroke-width="2"/>
+  <g opacity="0.3">
+    <path d="M181 68V832" stroke="#27323F"/>
+    <path d="M290 68V832" stroke="#27323F"/>
+    <path d="M399 68V832" stroke="#27323F"/>
+    <path d="M508 68V832" stroke="#27323F"/>
+    <path d="M617 68V832" stroke="#27323F"/>
+    <path d="M726 68V832" stroke="#27323F"/>
+    <path d="M835 68V832" stroke="#27323F"/>
+    <path d="M944 68V832" stroke="#27323F"/>
+    <path d="M1053 68V832" stroke="#27323F"/>
+    <path d="M1162 68V832" stroke="#27323F"/>
+    <path d="M1271 68V832" stroke="#27323F"/>
+    <path d="M1380 68V832" stroke="#27323F"/>
+  </g>
+  <rect x="112" y="108" width="314" height="64" fill="#16232E" stroke="#b8c2ce" stroke-width="2"/>
+  <text x="139" y="150" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="800" letter-spacing="3">RESEARCH RELEASE</text>
+  <text x="462" y="151" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="27" font-weight="600">Global AI Compliance White Paper 2026</text>
+  <g transform="translate(1162 282)">
+    <rect x="0" y="0" width="250" height="300" fill="#0D1117" stroke="#405368" stroke-width="2"/>
+    <rect x="34" y="36" width="182" height="228" stroke="#2C3A48" stroke-width="2"/>
+    <path d="M52 80H198" stroke="#b8c2ce" stroke-width="4"/>
+    <path d="M52 132H198" stroke="#94A3B8" stroke-width="4"/>
+    <path d="M52 184H164" stroke="#94A3B8" stroke-width="4"/>
+    <path d="M52 236H198" stroke="#94A3B8" stroke-width="4"/>
+    <circle cx="198" cy="80" r="15" fill="#b8c2ce"/>
+    <circle cx="198" cy="132" r="15" fill="#22C55E"/>
+    <circle cx="164" cy="184" r="15" fill="#F59E0B"/>
+    <circle cx="198" cy="236" r="15" fill="#A78BFA"/>
+  </g>
+  <text x="112" y="350" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="84" font-weight="850">The compliance unit</text>
+  <text x="112" y="444" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="84" font-weight="850">has changed.</text>
+  <rect x="114" y="500" width="466" height="10" fill="#b8c2ce"/>
+  <text x="112" y="586" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="39" font-weight="600">From model governance to</text>
+  <text x="112" y="637" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="39" font-weight="600">agentic lifecycle conformance.</text>
+  <text x="112" y="762" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="800">MRO</text>
+  <text x="193" y="762" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="700">RCCS-M</text>
+  <text x="331" y="762" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="700">ALCS</text>
+  <text x="434" y="762" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="700">Lifecycle Responsibility</text>
+  <text x="112" y="803" fill="#6F849A" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="600">jearonwong.com/research/global-ai-compliance-white-paper-2026</text>
+  <text x="1488" y="762" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="800" text-anchor="end">Jearon Wong</text>
+  <text x="1488" y="803" fill="#6F849A" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="700" text-anchor="end">Protocol Architect for the Agent Era</text>
+</svg>

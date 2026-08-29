@@ -4,6 +4,15 @@
   "boundary": "Owned-canonical and authored-analysis entity graph for Jearon Wong, MPLP, the three public white papers, and lifecycle governance surfaces. This artifact does not claim vendor endorsement, official compatibility, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, certification, regulator approval, external adoption, indexing, ranking, backlinks, answer-engine citation, external approval, or social announcement execution. The three white papers are available as public research editions with HTML, PDF, manifest, and checksum artifacts; AIIRWP v0.2 remains rejected and is not current source truth.",
   "nodes": [
     {
+      "id": "start-here",
+      "name": "Start here",
+      "type": "OrientationSurface",
+      "canonical_url": "https://www.jearonwong.com/start-here/",
+      "source_authority": "owned-canonical",
+      "description": "First-visit orientation surface connecting the AI Agent Lifecycle field definition, Agentic Delivery category, MPLP protocol path, project proof paths, evidence registry, and public arguments.",
+      "boundary": "Orientation surface only; it does not add protocol authority, adoption, certification, legal-compliance proof, insurance approval, regulator approval, or external endorsement."
+    },
+    {
       "id": "jearon-wong",
       "name": "Jearon Wong",
       "type": "Person",
@@ -11,6 +20,15 @@
       "source_authority": "owned-canonical",
       "description": "Protocol Architect for the Agent Era; creator of MPLP and author of the Global AI Compliance White Paper 2026, Agentic AI Auditability & Assurance White Paper 2026, and Agentic AI Insurability & Risk Transfer White Paper 2026.",
       "boundary": "Owned-canonical identity surface; no claim of regulator approval, vendor endorsement, external adoption, indexing, or answer-engine citation."
+    },
+    {
+      "id": "ai-agent-lifecycle",
+      "name": "AI Agent Lifecycle",
+      "type": "FieldDefinition",
+      "canonical_url": "https://www.jearonwong.com/lifecycle/",
+      "source_authority": "owned-canonical",
+      "description": "The accountable lifecycle of agent work from intent to accepted outcome.",
+      "boundary": "Author-defined field framing; not a certification, legal-compliance, regulator, or procurement standard."
     },
     {
       "id": "mplp",
@@ -411,6 +429,22 @@
     }
   ],
   "edges": [
+    {
+      "source": "jearon-wong",
+      "relation": "maintains",
+      "target": "start-here",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/start-here/",
+      "boundary": "Maintainer relation for an owned orientation surface; no external adoption or authority claim."
+    },
+    {
+      "source": "start-here",
+      "relation": "orients_to",
+      "target": "ai-agent-lifecycle",
+      "evidence_status": "owned-canonical",
+      "evidence_url": "https://www.jearonwong.com/start-here/",
+      "boundary": "Reader-orientation relation; the canonical lifecycle definition remains on the lifecycle route."
+    },
     {
       "source": "jearon-wong",
       "relation": "created",

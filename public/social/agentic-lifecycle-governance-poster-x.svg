@@ -1,0 +1,44 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Agentic Lifecycle Governance Poster X visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Agentic Lifecycle Governance Poster X</title>
+  <rect width="1600" height="900" fill="#f7f8fa"/>
+  <rect x="72" y="62" width="1456" height="776" fill="#f7f8fa" stroke="#1A1917" stroke-width="2"/>
+
+  <text x="114" y="118" fill="#B84B18" font-family="JetBrains Mono, Menlo, monospace" font-size="22" font-weight="500" letter-spacing="3.5">CONCEPT CORE · AI GOVERNANCE</text>
+  <line x1="114" y1="156" x2="1486" y2="156" stroke="#1A1917" stroke-width="2"/>
+
+  <text x="114" y="244" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="70" font-weight="400">Agentic Lifecycle Governance</text>
+  <text x="114" y="314" fill="#B84B18" font-family="Outfit, 'Outfit', serif" font-size="46" font-style="italic" font-weight="400">AI agent compliance is lifecycle responsibility compliance.</text>
+  <text x="114" y="376" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="30" font-weight="300">The compliance unit has shifted: model output → lifecycle of delegated work.</text>
+
+  <rect x="114" y="438" width="648" height="158" rx="4" fill="#f7f8fa" stroke="#CAC8BE" stroke-width="2"/>
+  <text x="150" y="488" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2">OLD UNIT</text>
+  <text x="150" y="552" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="48" font-weight="400">Model Output</text>
+
+  <path d="M790 517H882" stroke="#9C9A93" stroke-width="5"/>
+  <path d="M882 517L854 495V539L882 517Z" fill="#9C9A93"/>
+
+  <rect x="914" y="438" width="572" height="158" rx="4" fill="#edf1f4" stroke="#0D6650" stroke-width="2"/>
+  <text x="950" y="488" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2">NEW UNIT</text>
+  <text x="950" y="552" fill="#094F3C" font-family="Outfit, 'Outfit', serif" font-size="48" font-weight="400">Lifecycle Responsibility</text>
+
+  <text x="114" y="672" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2.5">THE FIVE OBJECTS THAT CHANGE THE SCORE</text>
+  <line x1="634" y1="666" x2="1486" y2="666" stroke="#E4E2DA" stroke-width="2"/>
+
+  <g font-family="Inter, Inter, sans-serif">
+    <rect x="114" y="704" width="248" height="68" rx="4" fill="#f1f3f5" stroke="#B84B18" stroke-width="1.5"/>
+    <text x="134" y="747" fill="#1A1917" font-size="25" font-weight="500">Authority</text>
+    <rect x="392" y="704" width="248" height="68" rx="4" fill="#edf1f4" stroke="#0D6650" stroke-width="1.5"/>
+    <text x="412" y="747" fill="#1A1917" font-size="25" font-weight="500">Transfer</text>
+    <rect x="670" y="704" width="248" height="68" rx="4" fill="#f3f4f6" stroke="#93560A" stroke-width="1.5"/>
+    <text x="690" y="747" fill="#1A1917" font-size="25" font-weight="500">Acceptance</text>
+    <rect x="948" y="704" width="248" height="68" rx="4" fill="#f0f2f5" stroke="#4E43A8" stroke-width="1.5"/>
+    <text x="968" y="747" fill="#1A1917" font-size="25" font-weight="500">Evidence</text>
+    <rect x="1226" y="704" width="260" height="68" rx="4" fill="#f1f3f5" stroke="#B84B18" stroke-width="1.5"/>
+    <text x="1246" y="747" fill="#1A1917" font-size="25" font-weight="500">Closure</text>
+  </g>
+
+  <line x1="114" y1="794" x2="1486" y2="794" stroke="#CAC8BE" stroke-width="1.5"/>
+  <text x="114" y="825" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500">Global AI Compliance White Paper 2026</text>
+  <text x="1486" y="825" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" text-anchor="end">Jearon Wong · May 2026</text>
+</svg>

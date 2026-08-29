@@ -2,6 +2,7 @@ import { pageRegistry, siteSemanticBaseline } from "./site";
 
 type RouteRole =
   | "public-headquarters"
+  | "orientation-hub"
   | "field-definition"
   | "publication-registry"
   | "publication-record"
@@ -14,6 +15,7 @@ type RouteRole =
   | "method-hub"
   | "method-record"
   | "mapping-record"
+  | "contact-endpoint"
   | "identity-sheet";
 
 type InformationArchitectureRule = {
@@ -38,6 +40,7 @@ type GovernanceSurface =
   | "src/data/taxonomy.ts"
   | "src/content/essays/"
   | "src/pages/index.astro"
+  | "src/pages/start-here.astro"
   | "src/pages/about.astro"
   | "src/pages/lifecycle.astro"
   | "src/pages/essays/index.astro"
@@ -49,6 +52,7 @@ type GovernanceSurface =
   | "src/pages/concepts/map/index.astro"
   | "src/pages/concepts/agentic-lifecycle-governance/index.astro"
   | "src/pages/definitions.astro"
+  | "src/pages/contact.astro"
   | "src/pages/evidence.astro"
   | "src/pages/governance/"
   | "src/pages/playbooks/"
@@ -65,6 +69,8 @@ type GovernanceSurface =
   | "src/styles/global.css"
   | "scripts/site-visual-system-audit.mjs"
   | "scripts/generate-site-og-assets.mjs"
+  | "scripts/migrate-site-media-visual-system.mjs"
+  | "scripts/site-media-visual-system-audit.mjs"
   | "scripts/site-package-surface-audit.mjs"
   | "scripts/site-publication-plan.mjs"
   | "scripts/site-publication-sync.mjs"
@@ -73,6 +79,7 @@ type GovernanceSurface =
   | ".github/workflows/site-governance.yml"
   | "public/llms.txt"
   | "public/entity/jearonwong-mplp-gaic-entity-graph.json"
+  | "public/generated/media-manifest.json"
   | "public/social/"
   | "public/figures/"
   | "public/research/";
@@ -255,7 +262,8 @@ export const publicationRouteRegistry = {
 } as const;
 
 export const informationArchitectureRegistry: InformationArchitectureRule[] = [
-  { id: "home", routePattern: "/", routeRole: "public-headquarters", canonicalParent: null, allowedChildren: ["/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"], maxDepth: 0, requiredInboundLinks: 0, requiredNextActions: ["/lifecycle/", "/projects/"] },
+  { id: "home", routePattern: "/", routeRole: "public-headquarters", canonicalParent: null, allowedChildren: ["/start-here/", "/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"], maxDepth: 0, requiredInboundLinks: 0, requiredNextActions: ["/start-here/", "/lifecycle/", "/projects/"] },
+  { id: "start-here", routePattern: "/start-here/", routeRole: "orientation-hub", canonicalParent: "/", allowedChildren: ["/lifecycle/", "/concepts/agentic-delivery/", "/projects/mplp/", "/projects/", "/evidence/", "/essays/", "/research/"], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["/lifecycle/", "/projects/", "/evidence/"] },
   { id: "lifecycle", routePattern: "/lifecycle/", routeRole: "field-definition", canonicalParent: "/", allowedChildren: ["/essays/", "/concepts/", "/definitions/", "/projects/"], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["/essays/", "/projects/"] },
   { id: "essays", routePattern: "/essays/", routeRole: "publication-registry", canonicalParent: "/", allowedChildren: ["/essays/<slug>/"], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["/essays/<slug>/"] },
   { id: "essay-record", routePattern: "/essays/<slug>/", routeRole: "publication-record", canonicalParent: "/essays/", allowedChildren: [], maxDepth: 3, requiredInboundLinks: 2, requiredNextActions: ["frontmatter.nextSteps[0]", "frontmatter.nextSteps[1]"] },
@@ -270,11 +278,12 @@ export const informationArchitectureRegistry: InformationArchitectureRule[] = [
   { id: "playbooks", routePattern: "/playbooks/", routeRole: "method-hub", canonicalParent: "/", allowedChildren: ["/playbooks/<slug>/"], maxDepth: 2, requiredInboundLinks: 1, requiredNextActions: ["/projects/", "/essays/"] },
   { id: "playbook-record", routePattern: "/playbooks/<slug>/", routeRole: "method-record", canonicalParent: "/playbooks/", allowedChildren: [], maxDepth: 3, requiredInboundLinks: 1, requiredNextActions: ["/playbooks/", "/governance/"] },
   { id: "ecosystem-mapping-record", routePattern: "/mapping/extended-ecosystem/<slug>/", routeRole: "mapping-record", canonicalParent: "/mapping/extended-ecosystem/", allowedChildren: [], maxDepth: 3, requiredInboundLinks: 1, requiredNextActions: ["/mapping/extended-ecosystem/", "/concepts/agentic-lifecycle-governance/"] },
-  { id: "about", routePattern: "/about/", routeRole: "identity-sheet", canonicalParent: "/", allowedChildren: [], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["/lifecycle/", "/contact/"] }
+  { id: "about", routePattern: "/about/", routeRole: "identity-sheet", canonicalParent: "/", allowedChildren: [], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["/lifecycle/", "/contact/"] },
+  { id: "contact", routePattern: "/contact/", routeRole: "contact-endpoint", canonicalParent: "/", allowedChildren: [], maxDepth: 1, requiredInboundLinks: 1, requiredNextActions: ["mailto: maintainer"] }
 ];
 
 export const navigationRegistry = {
-  primary: ["/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"],
+  primary: ["/start-here/", "/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"],
   exploreGroups: {
     reference: ["/concepts/", "/definitions/", "/evidence/"],
     methods: ["/governance/", "/playbooks/"],
@@ -306,7 +315,22 @@ export const siteAutomationRegistry = {
     writeCommand: "npm run assets:og",
     checkCommand: "npm run assets:og:check",
     source: "scripts/generate-site-og-assets.mjs",
-    scope: "Seven site-level Research Ledger OG SVG/PNG pairs only; authored artwork remains separate."
+    scope: "Eight site-level Research Ledger OG SVG/PNG pairs only; authored artwork remains separate."
+  },
+  productionVerification: {
+    command: "npm run verify:production",
+    localCommand: "npm run verify:production:local",
+    source: "scripts/site-production-verify.mjs",
+    triggers: ["deployment_status: success", "repository_dispatch: vercel-deployment-ready", "workflow_dispatch"],
+    requiredEnvironment: ["SITE_BASE_URL", "VERCEL_GIT_COMMIT_SHA or VERCEL_DEPLOYMENT_SHA"],
+    purpose: "Verify the deployed commit, canonical routes, machine-readable surfaces, and changed publication routes after Vercel deployment.",
+    releaseBoundary: "The verifier observes a deployment and writes a receipt. It does not deploy, publish externally, or approve semantic claims."
+  },
+  browserQuality: {
+    command: "npm run audit:browser",
+    source: "scripts/site-browser-quality-audit.mjs",
+    routes: ["/", "/start-here/", "/lifecycle/", "/projects/", "/projects/mplp/", "/research/", "/essays/", "/definitions/", "/concepts/map/", "/evidence/", "/about/", "/contact/"],
+    purpose: "Check representative desktop and mobile rendering for overflow, heading structure, and browser console failures."
   },
   packageSurface: {
     command: "npm run audit:package-surface",
@@ -317,6 +341,7 @@ export const siteAutomationRegistry = {
 } as const;
 
 export const journeyRegistry = [
+  { id: "first-time-reader", audience: "First-time reader", entry: "/", path: ["/start-here/", "/lifecycle/", "/projects/"], fallback: "/essays/", maxClicks: 3 },
   { id: "decision-maker", audience: "Decision-maker", entry: "/", path: ["/lifecycle/", "/projects/", "/evidence/"], fallback: "/research/", maxClicks: 3 },
   { id: "builder", audience: "Builder", entry: "/", path: ["/essays/", "/playbooks/", "/projects/"], fallback: "/lifecycle/", maxClicks: 3 },
   { id: "architect", audience: "Architect", entry: "/", path: ["/lifecycle/", "/concepts/", "/projects/mplp/", "/research/"], fallback: "/essays/", maxClicks: 4 },
@@ -351,6 +376,26 @@ export const semanticDerivedSotRegistry: SemanticDerivedSotRule[] = [
       "Verify no stale identity or thesis copy remains in crawler-facing files."
     ],
     forbiddenShortcut: "Treating homepage copy as a page-local change."
+  },
+  {
+    id: "orientation-hub-and-first-visit-path",
+    sourceOfTruth: ["siteSemanticBaseline", "pageRegistry.startHere", "startHereContent", "navigationRegistry", "journeyRegistry"],
+    derivedSurfaces: [
+      "src/pages/start-here.astro",
+      "src/pages/index.astro",
+      "src/components/SiteHeader.astro",
+      "src/components/SiteFooter.astro",
+      "public/llms.txt",
+      "public/entity/jearonwong-mplp-gaic-entity-graph.json",
+      "public/social/"
+    ],
+    reverseDependencySearches: ["Start here", "ORIENTATION HUB", "/start-here/"],
+    requiredEvidence: [
+      "Start here is reachable from the homepage and primary navigation.",
+      "The orientation route links the lifecycle, protocol, project, evidence, and essay records.",
+      "Machine-readable summaries and OG metadata use the same SOT wording and preserve protocol/product boundaries."
+    ],
+    forbiddenShortcut: "Adding a first-visit page without registering it in navigation, journeys, route depth, and derived public surfaces."
   },
   {
     id: "definition-and-concept-anchor-graph",
@@ -469,6 +514,7 @@ export const semanticImpactRules: GovernanceImpactRule[] = [
     inspect: [
       "src/data/site.ts",
       "src/pages/index.astro",
+      "src/pages/start-here.astro",
       "src/pages/about.astro",
       "src/layouts/BaseLayout.astro",
       "src/components/SiteHeader.astro",
@@ -568,7 +614,14 @@ export const semanticImpactRules: GovernanceImpactRule[] = [
       "src/components/ProjectProofCard.astro",
       "src/components/WhitePaperPublicationPage.astro",
       "scripts/site-visual-system-audit.mjs",
+      "scripts/generate-site-og-assets.mjs",
+      "scripts/migrate-site-media-visual-system.mjs",
+      "scripts/site-media-visual-system-audit.mjs",
+      "public/generated/media-manifest.json",
+      "public/social/",
+      "public/figures/",
       "src/pages/index.astro",
+      "src/pages/start-here.astro",
       "src/pages/lifecycle.astro",
       "src/pages/essays/index.astro",
       "src/pages/projects.astro",
@@ -577,9 +630,10 @@ export const semanticImpactRules: GovernanceImpactRule[] = [
     requiredEvidence: [
       "Show which shared token or component owns the changed visual behavior.",
       "Check desktop and mobile for representative public surfaces and the Research Ledger shell contract.",
-      "Do not claim visual consistency from code inspection alone."
+      "Do not claim visual consistency from code inspection alone.",
+      "Run the public media visual-system audit; generated OG cards must be B-system assets, while authored figures and publication artwork retain explicit manual-review status."
     ],
-    forbiddenShortcut: "Adding page-specific hero-like scales, colors, or card systems without binding them to shared tokens."
+    forbiddenShortcut: "Adding page-specific hero-like scales, colors, or card systems without binding them to shared tokens, or shipping media assets without a Research Ledger marker and audit record."
   },
   {
     id: "explore-content-change",
@@ -667,6 +721,10 @@ export const publicationSurfaceChecklist = {
     "public/entity/jearonwong-mplp-gaic-entity-graph.json",
     "representative browser visual checks",
     "scripts/generate-site-og-assets.mjs",
+    "scripts/migrate-site-media-visual-system.mjs",
+    "scripts/site-media-visual-system-audit.mjs",
+    "public/generated/media-manifest.json",
+    "npm run assets:media:check",
     "npm run assets:og:check",
     ".github/workflows/site-governance.yml"
   ],
@@ -678,8 +736,13 @@ export const publicationSurfaceChecklist = {
     "npm run publication:verify",
     "npm run publication:closeout",
     "npm run audit:all",
+    "npm run assets:media",
+    "npm run assets:media:check",
     "npm run assets:og:check",
-    "npm run audit:package-surface"
+    "npm run audit:package-surface",
+    "src/data/assetRegistry.ts",
+    "npm run audit:browser",
+    "npm run verify:production"
   ]
 } as const;
 

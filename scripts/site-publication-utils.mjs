@@ -17,9 +17,11 @@ export const llmsEndMarker = "<!-- END GENERATED PUBLICATION REGISTRY -->";
 const scalarKeys = new Set([
   "title", "description", "publishDate", "updatedAt", "status", "cluster", "projectProof",
   "publicationClass", "editorialTrack", "track", "canonicalRoute", "canonicalParent",
-  "primaryAudience", "distinctReaderQuestion", "indexability", "maxClickDepth", "featured", "flagship", "series", "seriesOrder"
+  "primaryAudience", "distinctReaderQuestion", "indexability", "maxClickDepth", "featured", "flagship", "series", "seriesOrder",
+  "subtitle", "shareTitle", "shareSubtitle", "shareDescription", "shareImage", "shareImageAlt", "ogImage", "ogImageAlt",
+  "summary", "evidenceLevel", "readingTimeMinutes"
 ]);
-const listKeys = new Set(["nextSteps", "secondaryAudiences", "sourceRefs", "tags", "relatedIdeas", "relatedProjects"]);
+const listKeys = new Set(["nextSteps", "secondaryAudiences", "sourceRefs", "tags", "relatedIdeas", "relatedProjects", "titleLines"]);
 
 function parseScalar(value) {
   const trimmed = value.trim();
@@ -166,7 +168,7 @@ export function resolveImpact(essay) {
   const sourceText = `${essay.data.title || ""} ${essay.data.description || ""} ${essay.data.tags || []}`;
   const coreSemantic = /MPLP|AI Agent Lifecycle|Agentic Delivery|Authority|Evidence|Outcome|Intent Drift/i.test(sourceText);
   return {
-    synchronize: ["publication manifest", "llms.txt managed publication registry"],
+    synchronize: ["publication manifest", "llms.txt managed publication registry", "essay/site OG assets", "public/generated/media-manifest.json"],
     buildDerived: ["essay canonical route", "essays index placement", "RSS", "sitemap", "JSON-LD", "OG/Twitter metadata"],
     updateFromSot: coreSemantic ? ["llms.txt", "entity graph", "related concept/project surfaces"] : [],
     verifyOnly: ["authored article body", "article SVG figures", "white-paper artifacts"],
@@ -264,7 +266,7 @@ export function buildImpactManifest(manifest) {
     generatedBy: "scripts/site-publication-sync.mjs",
     sourceOfTruth: ["src/content/essays/", "governance/site-publication-control-record.json", "src/data/siteGovernance.ts"],
     derivedSurfaces: {
-      synchronize: ["public/generated/publication-manifest.json", "public/generated/publication-impact.json", "public/llms.txt managed publication registry", "public/entity/jearonwong-mplp-gaic-entity-graph.json publication registry"],
+      synchronize: ["public/generated/publication-manifest.json", "public/generated/publication-impact.json", "public/generated/media-manifest.json", "public/llms.txt managed publication registry", "public/entity/jearonwong-mplp-gaic-entity-graph.json publication registry", "public/social essay/page OG pairs"],
       buildAndVerify: ["/essays/ index", "canonical essay routes", "RSS", "sitemap", "JSON-LD", "OG/Twitter metadata", "related content links"],
       manualReview: ["authored article body", "article SVG figures", "white-paper HTML/PDF artwork", "external social previews"]
     },

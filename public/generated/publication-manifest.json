@@ -54,7 +54,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -128,7 +130,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -202,7 +206,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -276,7 +282,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -351,7 +359,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -425,7 +435,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -499,7 +511,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -573,7 +587,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -646,7 +662,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -720,7 +738,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",
@@ -794,7 +814,9 @@
       "impact": {
         "synchronize": [
           "publication manifest",
-          "llms.txt managed publication registry"
+          "llms.txt managed publication registry",
+          "essay/site OG assets",
+          "public/generated/media-manifest.json"
         ],
         "buildDerived": [
           "essay canonical route",

@@ -1,4 +1,4 @@
-/* global console */
+/* global console, process */
 import fs from "node:fs";
 import {
   buildEntityPublicationRegistry,
@@ -13,6 +13,16 @@ import {
   renderLlmsBlock,
   replaceManagedLlmsBlock
 } from "./site-publication-utils.mjs";
+import { execFileSync } from "node:child_process";
+import path from "node:path";
+
+// Publication metadata and share assets are one deterministic projection. Run
+// the media writers here so a new essay cannot update llms/RSS while retaining
+// a stale OG or authored-artwork contract.
+const run = (script, args = []) => execFileSync(process.execPath, [path.join(process.cwd(), "scripts", script), ...args], { stdio: "inherit" });
+run("generate-site-og-assets.mjs");
+run("migrate-site-media-visual-system.mjs");
+run("site-media-visual-system-audit.mjs");
 
 const manifest = buildManifest();
 fs.mkdirSync(generatedDirectory, { recursive: true });

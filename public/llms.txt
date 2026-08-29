@@ -64,6 +64,8 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 ## Start Here
 
 - Homepage: https://www.jearonwong.com/
+- Start here orientation hub: https://www.jearonwong.com/start-here/
+  Role: first-visit route through the AI Agent Lifecycle field definition, Agentic Delivery category, MPLP protocol path, project proof paths, evidence registry, and public arguments.
 - Jearon Wong canonical profile: https://www.jearonwong.com/about/
 - AI Agent Lifecycle field definition: https://www.jearonwong.com/lifecycle/
 - Research: https://www.jearonwong.com/research/

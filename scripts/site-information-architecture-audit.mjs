@@ -239,7 +239,7 @@ if (!exists(dist)) {
   pass(`published essay IA contracts checked (${publishedCount} records)`);
 
   const homepage = routes.get("/") ?? "";
-  const expectedPrimary = ["/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"];
+  const expectedPrimary = ["/start-here/", "/lifecycle/", "/essays/", "/research/", "/projects/", "/about/"];
   for (const route of expectedPrimary) if (!homepage.includes(`href="${route}"`)) fail(`primary navigation route missing from home: ${route}`);
   const expectedExplore = ["/concepts/", "/definitions/", "/evidence/", "/governance/", "/playbooks/", "/theories/", "/mapping/extended-ecosystem/", "/newsletter/", "/contact/", "/rss.xml"];
   for (const route of expectedExplore) if (route !== "/rss.xml" && !homepage.includes(`href="${route}"`)) fail(`Explore route missing from home: ${route}`);
@@ -249,6 +249,7 @@ if (!exists(dist)) {
   // route graph: a page may be reachable through global navigation while its
   // main reading surface has lost the intended next action.
   const canonicalHubContracts = [
+    { route: "/start-here/", maxDepth: 1, required: ["/lifecycle/", "/projects/", "/evidence/"] },
     { route: "/lifecycle/", maxDepth: 1, required: ["/essays/", "/projects/mplp/"] },
     { route: "/essays/", maxDepth: 1, required: ["/lifecycle/"], requiredPrefixes: ["/essays/"] },
     { route: "/research/", maxDepth: 1, required: ["/evidence/", "/definitions/"], requiredPrefixes: ["/research/"] },
@@ -284,7 +285,7 @@ if (!exists(dist)) {
   if (!header.includes("isRouteActive")) fail("navigation active-state route matching is missing");
   pass("desktop/mobile navigation parity contract checked");
 
-  const coreRoutes = ["/lifecycle/", "/essays/", "/research/", "/projects/", "/concepts/", "/definitions/", "/evidence/", "/governance/", "/playbooks/"];
+  const coreRoutes = ["/start-here/", "/lifecycle/", "/essays/", "/research/", "/projects/", "/concepts/", "/definitions/", "/evidence/", "/governance/", "/playbooks/"];
   for (const route of coreRoutes) {
     const depth = distances.get(route);
     if (depth === undefined) fail(`core route is unreachable from home: ${route}`);

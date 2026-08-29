@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">The Audit Object Gap</title>
   <desc id="desc">Two-panel diagram comparing model-centric AI governance with the additional lifecycle audit objects introduced by Agentic AI.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.panel{fill:rgba(255,255,255,.032);stroke:rgba(241,245,249,.15);stroke-width:1.2}.panel-blue{fill:rgba(59,130,246,.075);stroke:rgba(59,130,246,.48);stroke-width:1.6}.panel-cyan{fill:rgba(34,211,238,.07);stroke:rgba(34,211,238,.5);stroke-width:1.6}.gap{fill:rgba(17,17,17,.72);stroke:rgba(241,245,249,.18);stroke-width:1.2}.kicker{fill:#22d3ee;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.head{fill:#f8fafc;font:760 30px "Outfit",Inter,sans-serif}.sub{fill:#94a3b8;font:560 19px Inter,sans-serif}.item{fill:#cbd5e1;font:620 24px Inter,sans-serif}.note{fill:#94a3b8;font:600 18px Inter,sans-serif}.mono{fill:#60a5fa;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.gaptext{fill:#f8fafc;font:850 22px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
+      .bg{fill:#f7f8fa}.outer{fill:none;stroke:rgba(15,23,42,.16);stroke-width:1.2}.panel{fill:rgba(15,23,42,.032);stroke:rgba(15,23,42,.15);stroke-width:1.2}.panel-secondary{fill:rgba(100,116,139,.075);stroke:rgba(100,116,139,.48);stroke-width:1.6}.panel-emphasis{fill:rgba(100,116,139,.07);stroke:rgba(100,116,139,.5);stroke-width:1.6}.gap{fill:rgba(15,23,42,0.06);stroke:rgba(15,23,42,.18);stroke-width:1.2}.kicker{fill:#5b6673;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.head{fill:#111827;font:760 30px "Outfit",Inter,sans-serif}.sub{fill:#64748b;font:560 19px Inter,sans-serif}.item{fill:#334155;font:620 24px Inter,sans-serif}.note{fill:#64748b;font:600 18px Inter,sans-serif}.mono{fill:#64748b;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}.gaptext{fill:#111827;font:850 22px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
     </style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,.05)" stroke-width="1"/>
     </pattern>
     <marker id="arrow" markerWidth="14" markerHeight="10" refX="13" refY="5" orient="auto">
-      <path d="M0,0 L14,5 L0,10 Z" fill="#22d3ee"/>
+      <path d="M0,0 L14,5 L0,10 Z" fill="#5b6673"/>
     </marker>
   </defs>
   <rect width="1600" height="640" class="bg"/>
@@ -17,7 +17,7 @@
   <rect x="52" y="48" width="1496" height="544" class="outer"/>
 
   <g transform="translate(82 88)">
-    <rect width="620" height="430" rx="2" class="panel-blue"/>
+    <rect width="620" height="430" rx="2" class="panel-secondary"/>
     <text x="34" y="54" class="kicker">TRADITIONAL AI GOVERNANCE</text>
     <text x="34" y="100" class="head">Audit object: model and environment</text>
     <text x="34" y="154" class="item">Model documentation and cards</text>
@@ -30,7 +30,7 @@
 
   <g transform="translate(735 88)">
     <rect width="130" height="430" rx="2" class="gap"/>
-    <path d="M28 214H102" stroke="#22d3ee" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M28 214H102" stroke="#5b6673" stroke-width="4" marker-end="url(#arrow)"/>
     <text x="65" y="162" class="gaptext" text-anchor="middle">AUDIT</text>
     <text x="65" y="196" class="gaptext" text-anchor="middle">OBJECT</text>
     <text x="65" y="280" class="gaptext" text-anchor="middle">GAP</text>
@@ -39,7 +39,7 @@
   </g>
 
   <g transform="translate(898 88)">
-    <rect width="620" height="430" rx="2" class="panel-cyan"/>
+    <rect width="620" height="430" rx="2" class="panel-emphasis"/>
     <text x="34" y="54" class="kicker">AGENTIC AI INTRODUCES</text>
     <text x="34" y="100" class="head">Additional lifecycle audit objects</text>
     <text x="34" y="154" class="item">Delegated authority chains</text>

@@ -16,6 +16,15 @@ export const whitepaperPublications = [
     technicalDepth: "Deep technical and governance reference",
     citationUse: "Use for definitions, object-model discussion, and lifecycle governance framing.",
     changeSummary: "Public research edition consolidating the MRO, RCCS-M, ALCS, and MPLP relationship.",
+    decisionSummary: {
+      researchQuestion: "What objects and lifecycle conditions are missing when governance stops at the model boundary?",
+      whyNow: "Agent systems now carry work across tools, roles, and changing context, so model-only controls leave the delivery boundary underspecified.",
+      coreContributions: ["Names lifecycle responsibility objects.", "Maps authority, evidence, acceptance, dispute, and remediation across agent work.", "Positions MPLP as one protocol path for making those semantics explicit."],
+      decisionMeaning: "Use this paper when deciding what must be represented before an agentic delivery claim can be reviewed.",
+      doesNotEstablish: "It does not establish legal compliance, certification, regulator approval, insurer acceptance, or a required implementation.",
+      whoShouldRead: "Architects, governance leads, and researchers mapping lifecycle responsibility.",
+      recommendedNextStep: { label: "Open the lifecycle definition", href: "/lifecycle/" }
+    },
     canonicalPath: "/research/global-ai-compliance-white-paper-2026/",
     assetBase: "/research/global-ai-compliance-white-paper-2026",
     documentId: "GACWP-2026-v0.3.2-FRC-R3",
@@ -157,6 +166,15 @@ export const whitepaperPublications = [
     technicalDepth: "Applied technical and assurance reference",
     citationUse: "Use for audit-object, evidence-chain, and assurance-boundary citations.",
     changeSummary: "First public research edition establishing the auditability and assurance companion to GAIC.",
+    decisionSummary: {
+      researchQuestion: "What makes agent work auditable beyond raw logs and traces?",
+      whyNow: "A visible output is not enough to reconstruct who acted, under what authority, against which intent, and why the outcome was accepted.",
+      coreContributions: ["Defines the agentic audit object.", "Separates logs from audit evidence chains.", "Provides an assurance-boundary vocabulary for lifecycle review."],
+      decisionMeaning: "Use this paper to scope an evidence review and identify which lifecycle records are still missing.",
+      doesNotEstablish: "It does not provide an audit opinion, assurance conclusion, certification, regulator approval, or legal-compliance proof.",
+      whoShouldRead: "Audit, assurance, security, and enterprise AI governance readers.",
+      recommendedNextStep: { label: "Inspect the evidence surface", href: "/evidence/" }
+    },
     canonicalPath: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
     assetBase: "/research/agentic-ai-auditability-assurance-white-paper-2026",
     documentId: "AIAAWP-2026-v0.1",
@@ -286,6 +304,15 @@ export const whitepaperPublications = [
     technicalDepth: "Applied technical and risk-transfer reference",
     citationUse: "Use for insured-subject, claim-evidence, and risk-transfer research framing.",
     changeSummary: "Public research edition separating risk-transfer reasoning from insurance advice or underwriting claims.",
+    decisionSummary: {
+      researchQuestion: "What evidence would make agentic risk reviewable for risk-transfer discussion without turning governance into coverage?",
+      whyNow: "Agentic incidents cross people, models, tools, and organizations, making the insured subject and the risk object difficult to reconstruct after the fact.",
+      coreContributions: ["Separates insured legal subject from agentic risk object.", "Connects lifecycle evidence to claim reconstruction.", "Keeps reviewability distinct from insurability or underwriting approval."],
+      decisionMeaning: "Use this paper to identify evidence requirements for a risk-transfer conversation, not to decide coverage.",
+      doesNotEstablish: "It does not provide insurance advice, coverage, underwriting guidance, pricing, claim approval, certification, or insurer endorsement.",
+      whoShouldRead: "Risk, insurance, governance, and architecture readers assessing evidence requirements.",
+      recommendedNextStep: { label: "Read the evidence companion", href: "/research/agentic-ai-auditability-assurance-white-paper-2026/" }
+    },
     canonicalPath: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
     assetBase: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026",
     documentId: "AIIRWP-2026-v1.0",

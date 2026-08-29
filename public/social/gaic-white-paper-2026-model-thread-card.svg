@@ -1,0 +1,69 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Gaic White Paper 2026 Model Thread Card visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Gaic White Paper 2026 Model Thread Card</title>
+  <rect width="1600" height="900" fill="#0D1117"/>
+  <rect x="64" y="54" width="1472" height="792" fill="#101820" stroke="#2C3A48" stroke-width="2"/>
+  <g opacity="0.22">
+    <path d="M64 174H1536" stroke="#27323F"/>
+    <path d="M64 294H1536" stroke="#27323F"/>
+    <path d="M64 414H1536" stroke="#27323F"/>
+    <path d="M64 534H1536" stroke="#27323F"/>
+    <path d="M64 654H1536" stroke="#27323F"/>
+    <path d="M64 774H1536" stroke="#27323F"/>
+    <path d="M224 54V846" stroke="#27323F"/>
+    <path d="M384 54V846" stroke="#27323F"/>
+    <path d="M544 54V846" stroke="#27323F"/>
+    <path d="M704 54V846" stroke="#27323F"/>
+    <path d="M864 54V846" stroke="#27323F"/>
+    <path d="M1024 54V846" stroke="#27323F"/>
+    <path d="M1184 54V846" stroke="#27323F"/>
+    <path d="M1344 54V846" stroke="#27323F"/>
+  </g>
+
+  <rect x="104" y="92" width="258" height="54" fill="#16232E" stroke="#b8c2ce" stroke-width="2"/>
+  <text x="130" y="128" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="800" letter-spacing="3">SCORING MODEL</text>
+  <text x="390" y="129" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="650">Global AI Compliance White Paper 2026</text>
+
+  <text x="104" y="228" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="66" font-weight="850">The same system can score</text>
+  <text x="104" y="298" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="66" font-weight="850">well on one layer and fail another.</text>
+  <rect x="106" y="332" width="640" height="8" fill="#b8c2ce"/>
+  <text x="104" y="382" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="600">RCCS-T measures traditional coverage. RCCS-M asks whether that coverage becomes lifecycle objects.</text>
+  <text x="104" y="420" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="28" font-weight="600">ALCS measures agentic lifecycle conformance.</text>
+
+  <g transform="translate(112 476)">
+    <rect x="0" y="0" width="398" height="210" fill="#0D1117" stroke="#405368" stroke-width="2"/>
+    <text x="32" y="54" fill="#CBD5E1" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="800">RCCS-T</text>
+    <text x="32" y="98" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="32" font-weight="850">Traditional Coverage</text>
+    <text x="32" y="143" fill="#9FB1C5" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="600">Policies, controls, risk workflows,</text>
+    <text x="32" y="176" fill="#9FB1C5" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="600">documentation, dashboards, logs.</text>
+  </g>
+
+  <path d="M538 581H638" stroke="#b8c2ce" stroke-width="6"/>
+  <path d="M638 581L612 560V602L638 581Z" fill="#b8c2ce"/>
+
+  <g transform="translate(666 476)">
+    <rect x="0" y="0" width="398" height="210" fill="#0D1117" stroke="#b8c2ce" stroke-width="2"/>
+    <text x="32" y="54" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="800">RCCS-M</text>
+    <text x="32" y="98" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="32" font-weight="850">MRO-Adjusted Layer</text>
+    <text x="32" y="143" fill="#9FB1C5" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="600">Can governance be represented as</text>
+    <text x="32" y="176" fill="#9FB1C5" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="600">inspectable lifecycle objects?</text>
+  </g>
+
+  <path d="M1092 581H1192" stroke="#86EFAC" stroke-width="6"/>
+  <path d="M1192 581L1166 560V602L1192 581Z" fill="#86EFAC"/>
+
+  <g transform="translate(1220 476)">
+    <rect x="0" y="0" width="268" height="210" fill="#0D1117" stroke="#86EFAC" stroke-width="2"/>
+    <text x="28" y="54" fill="#86EFAC" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="800">ALCS</text>
+    <text x="28" y="98" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="32" font-weight="850">Lifecycle</text>
+    <text x="28" y="137" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="32" font-weight="850">Conformance</text>
+    <text x="28" y="180" fill="#9FB1C5" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="600">Responsibility layer.</text>
+  </g>
+
+  <rect x="104" y="724" width="1392" height="62" fill="#16232E" stroke="#405368" stroke-width="2"/>
+  <text x="134" y="763" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="800">Key interpretation:</text>
+  <text x="378" y="763" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="650">High RCCS-T does not automatically imply high RCCS-M or ALCS.</text>
+
+  <text x="104" y="828" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="650">A diagnostic model for agentic lifecycle responsibility, not legal compliance proof or certification.</text>
+  <text x="1496" y="828" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="23" font-weight="800" text-anchor="end">Jearon Wong</text>
+</svg>

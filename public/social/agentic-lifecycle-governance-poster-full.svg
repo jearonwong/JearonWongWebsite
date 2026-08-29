@@ -1,0 +1,113 @@
+<svg width="1600" height="2600" viewBox="0 0 1600 2600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Agentic Lifecycle Governance Poster Full visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Agentic Lifecycle Governance Poster Full</title>
+  <rect width="1600" height="2600" fill="#f7f8fa"/>
+  <rect x="84" y="76" width="1432" height="2448" fill="#f7f8fa" stroke="#1A1917" stroke-width="2.4"/>
+
+  <text x="142" y="148" fill="#B84B18" font-family="JetBrains Mono, Menlo, monospace" font-size="24" font-weight="500" letter-spacing="4">CONCEPT CORE · AI GOVERNANCE</text>
+  <line x1="142" y1="198" x2="1458" y2="198" stroke="#1A1917" stroke-width="2.4"/>
+
+  <text x="142" y="298" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="84" font-weight="400">Agentic Lifecycle Governance</text>
+  <text x="142" y="372" fill="#B84B18" font-family="Outfit, 'Outfit', serif" font-size="50" font-style="italic" font-weight="400">Why AI agent compliance requires</text>
+  <text x="142" y="432" fill="#B84B18" font-family="Outfit, 'Outfit', serif" font-size="50" font-style="italic" font-weight="400">lifecycle responsibility objects</text>
+  <text x="142" y="502" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="29" font-weight="300">When AI systems act through agents, tools, delegated authority, handoffs, and memory,</text>
+  <text x="142" y="544" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="29" font-weight="300">the compliance unit shifts from model output to the lifecycle of delegated work.</text>
+  <text x="142" y="586" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="29" font-weight="300">That shift defines a new governance category: Agentic Lifecycle Governance.</text>
+
+  <rect x="142" y="644" width="1316" height="160" rx="4" fill="#1A1917"/>
+  <text x="188" y="696" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2.5">CATEGORY DEFINITION</text>
+  <text x="188" y="758" fill="#f7f8fa" font-family="Outfit, 'Outfit', serif" font-size="42" font-weight="400">AI agent compliance is <tspan fill="#F0A07A" font-style="italic">lifecycle responsibility compliance.</tspan></text>
+  <text x="188" y="790" fill="#CAC8BE" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="300">Execution is not compliance. Completion is not acceptance.</text>
+
+  <text x="142" y="884" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2.5">LAYER 1 · WHY THE GOVERNANCE UNIT CHANGES</text>
+  <line x1="650" y1="878" x2="1458" y2="878" stroke="#E4E2DA" stroke-width="2"/>
+  <rect x="142" y="920" width="630" height="290" rx="4" fill="#f7f8fa" stroke="#CAC8BE" stroke-width="2"/>
+  <text x="180" y="976" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="36" font-weight="400">What model governance answers</text>
+  <text x="180" y="1032" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">Model-centric governance addresses risk through</text>
+  <text x="180" y="1066" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">prediction and output: safety, accuracy, training</text>
+  <text x="180" y="1100" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">data, documented controls, performance and drift.</text>
+  <text x="180" y="1158" fill="#6B6A65" font-family="Inter, Inter, sans-serif" font-size="23" font-style="italic" font-weight="300">Question: Is this model safe to run?</text>
+
+  <rect x="828" y="920" width="630" height="290" rx="4" fill="#f7f8fa" stroke="#CAC8BE" stroke-width="2"/>
+  <text x="866" y="976" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="36" font-weight="400">What agentic systems require</text>
+  <text x="866" y="1032" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">Agentic systems create risk through action:</text>
+  <text x="866" y="1066" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">delegation, tool use, state change, handoff,</text>
+  <text x="866" y="1100" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="24" font-weight="300">memory write, and external consequence.</text>
+  <text x="866" y="1158" fill="#0D6650" font-family="Inter, Inter, sans-serif" font-size="23" font-style="italic" font-weight="400">Question: Can this work prove responsibility?</text>
+
+  <text x="142" y="1268" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2.5">THE COMPLIANCE UNIT SHIFT</text>
+  <line x1="510" y1="1262" x2="1458" y2="1262" stroke="#E4E2DA" stroke-width="2"/>
+  <rect x="142" y="1302" width="1316" height="330" rx="4" fill="#f7f8fa" stroke="#CAC8BE" stroke-width="2"/>
+  <rect x="142" y="1302" width="1316" height="54" fill="#F3F1EA"/>
+  <text x="172" y="1337" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="1.7">GOVERNANCE QUESTION</text>
+  <text x="652" y="1337" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="1.7">MODEL GOVERNANCE</text>
+  <text x="1020" y="1337" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="1.7">AGENTIC LIFECYCLE GOVERNANCE</text>
+  <line x1="612" y1="1302" x2="612" y2="1632" stroke="#E4E2DA" stroke-width="2"/>
+  <line x1="958" y1="1302" x2="958" y2="1632" stroke="#E4E2DA" stroke-width="2"/>
+  <g font-family="Inter, Inter, sans-serif" font-size="21" font-weight="300">
+    <line x1="142" y1="1400" x2="1458" y2="1400" stroke="#E4E2DA"/>
+    <line x1="142" y1="1444" x2="1458" y2="1444" stroke="#E4E2DA"/>
+    <line x1="142" y1="1488" x2="1458" y2="1488" stroke="#E4E2DA"/>
+    <line x1="142" y1="1532" x2="1458" y2="1532" stroke="#E4E2DA"/>
+    <line x1="142" y1="1576" x2="1458" y2="1576" stroke="#E4E2DA"/>
+    <text x="172" y="1384" fill="#1A1917" font-weight="500">Unit of compliance</text>
+    <text x="652" y="1384" fill="#6B6A65">Model output</text>
+    <text x="1020" y="1384" fill="#0D6650" font-weight="400">Lifecycle of delegated work</text>
+    <text x="172" y="1428" fill="#1A1917" font-weight="500">Who authorized this action?</text>
+    <text x="652" y="1428" fill="#6B6A65">Not addressed</text>
+    <text x="1020" y="1428" fill="#0D6650" font-weight="400">Delegated authority boundary</text>
+    <text x="172" y="1472" fill="#1A1917" font-weight="500">Which human is accountable?</text>
+    <text x="652" y="1472" fill="#6B6A65">Not addressed</text>
+    <text x="1020" y="1472" fill="#0D6650" font-weight="400">Human-role responsibility mapping</text>
+    <text x="172" y="1516" fill="#1A1917" font-weight="500">Accepted or only completed?</text>
+    <text x="652" y="1516" fill="#6B6A65">Not addressed</text>
+    <text x="1020" y="1516" fill="#0D6650" font-weight="400">Accepted outcome object</text>
+    <text x="172" y="1560" fill="#1A1917" font-weight="500">Can evidence be reconstructed?</text>
+    <text x="652" y="1560" fill="#6B6A65">Generic logs only</text>
+    <text x="1020" y="1560" fill="#0D6650" font-weight="400">MAS evidence partitioning</text>
+    <text x="172" y="1604" fill="#1A1917" font-weight="500">Is a dispute closed?</text>
+    <text x="652" y="1604" fill="#6B6A65">Workflow note</text>
+    <text x="1020" y="1604" fill="#0D6650" font-weight="400">Remediation closure object</text>
+  </g>
+
+  <text x="142" y="1714" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2.5">LAYER 2 · 16 MISSING REGULATORY OBJECTS</text>
+  <line x1="662" y1="1708" x2="1458" y2="1708" stroke="#E4E2DA" stroke-width="2"/>
+  <text x="142" y="1752" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="300">A Missing Regulatory Object is a governance construct whose absence can make a regulatory guarantee structurally unprovable.</text>
+  <text x="142" y="1784" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="300">In multi-agent systems, missing objects do not merely weaken proof; they can make proof impossible.</text>
+
+  <g font-family="Inter, Inter, sans-serif">
+    <rect x="142" y="1830" width="632" height="292" rx="4" fill="#f1f3f5" stroke="#CAC8BE" stroke-width="1.5"/>
+    <text x="172" y="1872" fill="#8C3610" font-size="22" font-weight="500">Cluster A — Responsibility &amp; Authority</text>
+    <text x="172" y="1904" fill="#6B6A65" font-size="18" font-weight="300">Without these: who authorized what cannot be proven.</text>
+    <text x="172" y="1944" fill="#3D3C39" font-size="17.5">MRO-01 Human Role to MAS Responsibility Mapping</text>
+    <text x="172" y="1972" fill="#3D3C39" font-size="17.5">MRO-02 Delegated Authority Boundary</text>
+    <text x="172" y="2000" fill="#3D3C39" font-size="17.5">MRO-03 Agent Role is not Human Role</text>
+    <text x="172" y="2028" fill="#3D3C39" font-size="17.5">MRO-04 Accepted Outcome Compliance</text>
+    <text x="172" y="2056" fill="#3D3C39" font-size="17.5">MRO-05 Tool-Action Liability Boundary</text>
+    <text x="172" y="2084" fill="#3D3C39" font-size="17.5">MRO-06 Responsibility Transfer Across Agents</text>
+    <text x="172" y="2112" fill="#3D3C39" font-size="17.5">MRO-07 Authority Drift</text>
+
+    <rect x="826" y="1830" width="632" height="292" rx="4" fill="#edf1f4" stroke="#CAC8BE" stroke-width="1.5"/>
+    <text x="856" y="1872" fill="#0D6650" font-size="22" font-weight="500">Cluster B — Evidence &amp; Privacy</text>
+    <text x="856" y="1904" fill="#6B6A65" font-size="18" font-weight="300">Without these: audit reconstruction is impossible per agent.</text>
+    <text x="856" y="1948" fill="#3D3C39" font-size="18">MRO-08 MAS Evidence Partitioning</text>
+    <text x="856" y="1978" fill="#3D3C39" font-size="18">MRO-09 Cross-Project Reuse Compliance</text>
+    <text x="856" y="2008" fill="#3D3C39" font-size="18">MRO-10 Privacy / GDPR Lifecycle Mapping</text>
+    <text x="856" y="2038" fill="#3D3C39" font-size="18">MRO-11 Privacy-Preserving Third-Party Validation</text>
+    <text x="856" y="2068" fill="#3D3C39" font-size="18">MRO-12 Evidence Minimization and Selective Disclosure</text>
+
+    <rect x="142" y="2152" width="632" height="170" rx="4" fill="#f3f4f6" stroke="#CAC8BE" stroke-width="1.5"/>
+    <text x="172" y="2194" fill="#93560A" font-size="22" font-weight="500">Cluster C — Data &amp; Substitution</text>
+    <text x="172" y="2230" fill="#3D3C39" font-size="19">MRO-13 Data Subject Rights vs Evidence Retention</text>
+    <text x="172" y="2262" fill="#3D3C39" font-size="19">MRO-14 Third-Party Processor / Subprocessor Chain</text>
+    <text x="172" y="2294" fill="#3D3C39" font-size="19">MRO-15 Vendor / Model / Runtime Substitution Conformance</text>
+
+    <rect x="826" y="2152" width="632" height="170" rx="4" fill="#f0f2f5" stroke="#CAC8BE" stroke-width="1.5"/>
+    <text x="856" y="2194" fill="#4E43A8" font-size="22" font-weight="500">Cluster D — Closure</text>
+    <text x="856" y="2230" fill="#6B6A65" font-size="18" font-weight="300">Without this: incidents cannot close with evidence and acceptance.</text>
+    <text x="856" y="2274" fill="#3D3C39" font-size="19">MRO-16 Incident, Dispute, and Remediation Closure</text>
+  </g>
+
+  <text x="142" y="2418" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="20" font-weight="500">RCCS-T → RCCS-M → ALCS · Full argument in Global AI Compliance White Paper 2026</text>
+  <text x="1458" y="2418" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="20" font-weight="500" text-anchor="end">Jearon Wong · May 2026</text>
+</svg>

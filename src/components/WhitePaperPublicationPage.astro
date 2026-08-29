@@ -108,6 +108,22 @@ const decisionRows = [
       </div>
     </section>
 
+    <section class="release-section decision-summary-section" aria-labelledby={`${paper.id}-decision-summary-title`}>
+      <div>
+        <div class="registry-annotation section-tag"><span class="registry-key">DECISION_SUMMARY</span></div>
+        <h2 id={`${paper.id}-decision-summary-title`}>What a reader can decide from this paper.</h2>
+        <p class="section-lead">{paper.decisionSummary.researchQuestion}</p>
+      </div>
+      <div class="decision-summary-ledger">
+        <div><span>Why now</span><p>{paper.decisionSummary.whyNow}</p></div>
+        <div><span>Core contributions</span><ul>{paper.decisionSummary.coreContributions.map((item) => <li>{item}</li>)}</ul></div>
+        <div><span>Decision meaning</span><p>{paper.decisionSummary.decisionMeaning}</p></div>
+        <div><span>Does not establish</span><p>{paper.decisionSummary.doesNotEstablish}</p></div>
+        <div><span>Who should read</span><p>{paper.decisionSummary.whoShouldRead}</p></div>
+        <a class="decision-summary-next" href={paper.decisionSummary.recommendedNextStep.href}>{paper.decisionSummary.recommendedNextStep.label} <span aria-hidden="true">{"->"}</span></a>
+      </div>
+    </section>
+
     <section class="release-section release-grid" aria-labelledby={`${paper.id}-matters-title`}>
       <div>
         <div class="registry-annotation section-tag">
@@ -762,9 +778,60 @@ const decisionRows = [
     border-left: 3px solid var(--color-rule);
   }
 
+  .decision-summary-section {
+    grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
+  }
+
+  .decision-summary-ledger {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .decision-summary-ledger > div,
+  .decision-summary-next {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+
+  .decision-summary-ledger > div > span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--color-meta);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .decision-summary-ledger p,
+  .decision-summary-ledger li {
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+  }
+
+  .decision-summary-ledger ul {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding-left: 1.15rem;
+  }
+
+  .decision-summary-next {
+    color: var(--color-action);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   @media (max-width: 980px) {
     .wp-publication-hero,
     .release-grid,
+    .decision-summary-section,
     .integrity-grid {
       grid-template-columns: 1fr;
     }

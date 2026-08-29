@@ -1,94 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">The MPLP Lifecycle Answer</title>
   <desc id="desc">MPLP lifecycle chain from Intent to Context, Plan, Authority, Agent Role, Tool Action, Evidence, Confirm, Accepted Outcome, and Remediation.</desc>
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#f1f5f9" stroke-opacity=".055" stroke-width="1"/>
+      <path d="M40 0H0V40" fill="none" stroke="#111827" stroke-opacity=".055" stroke-width="1"/>
     </pattern>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#3b82f6"/>
+      <path d="M0,0 L10,5 L0,10 Z" fill="#6b7785"/>
     </marker>
   </defs>
-  <rect width="1200" height="760" fill="#111111"/>
+  <rect width="1200" height="760" fill="#f7f8fa"/>
   <rect width="1200" height="760" fill="url(#grid)"/>
-  <rect x="44" y="44" width="1112" height="672" fill="none" stroke="#f1f5f9" stroke-opacity=".16" stroke-width="1.2"/>
-  <rect x="68" y="68" width="1064" height="624" fill="none" stroke="#3b82f6" stroke-opacity=".34" stroke-width="1"/>
+  <rect x="44" y="44" width="1112" height="672" fill="none" stroke="#111827" stroke-opacity=".16" stroke-width="1.2"/>
+  <rect x="68" y="68" width="1064" height="624" fill="none" stroke="#6b7785" stroke-opacity=".34" stroke-width="1"/>
 
-  <text x="92" y="116" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="15" font-weight="800" letter-spacing="1.1">FIGURE 1 / LIFECYCLE GOVERNANCE CHAIN</text>
-  <text x="92" y="174" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="48" font-weight="850">The MPLP Lifecycle Answer</text>
-  <text x="92" y="212" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="20" font-weight="600">A governed path from human intent to accepted outcome and closure.</text>
+  <text x="92" y="116" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="15" font-weight="800" letter-spacing="1.1">FIGURE 1 / LIFECYCLE GOVERNANCE CHAIN</text>
+  <text x="92" y="174" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="48" font-weight="850">The MPLP Lifecycle Answer</text>
+  <text x="92" y="212" fill="#334155" font-family="Inter, sans-serif" font-size="20" font-weight="600">A governed path from human intent to accepted outcome and closure.</text>
 
   <g transform="translate(92 274)">
     <g>
-      <rect x="0" y="0" width="210" height="92" rx="2" fill="#0d282c" stroke="#22d3ee" stroke-opacity=".62" stroke-width="1.4"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">01</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Intent</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Objective and acceptance</text>
+      <rect x="0" y="0" width="210" height="92" rx="2" fill="#eef1f4" stroke="#5b6673" stroke-opacity=".62" stroke-width="1.4"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">01</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Intent</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Objective and acceptance</text>
     </g>
-    <line x1="224" y1="46" x2="254" y2="46" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="224" y1="46" x2="254" y2="46" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(270 0)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">02</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Context</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Meaning and state</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">02</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Context</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Meaning and state</text>
     </g>
-    <line x1="494" y1="46" x2="524" y2="46" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="494" y1="46" x2="524" y2="46" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(540 0)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">03</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Plan</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Executable route</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">03</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Plan</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Executable route</text>
     </g>
-    <line x1="764" y1="46" x2="794" y2="46" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="764" y1="46" x2="794" y2="46" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(810 0)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">04</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Authority</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Delegated boundary</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">04</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Authority</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Delegated boundary</text>
     </g>
 
-    <path d="M1020 92V132H105V160" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M1020 92V132H105V160" fill="none" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(0 172)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">05</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Agent Role</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Responsibility boundary</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">05</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Agent Role</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Responsibility boundary</text>
     </g>
-    <line x1="224" y1="218" x2="254" y2="218" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="224" y1="218" x2="254" y2="218" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(270 172)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">06</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Tool Action</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">External consequence</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">06</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Tool Action</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">External consequence</text>
     </g>
-    <line x1="494" y1="218" x2="524" y2="218" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="494" y1="218" x2="524" y2="218" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(540 172)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">07</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Evidence</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Reconstructable proof</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">07</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Evidence</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Reconstructable proof</text>
     </g>
-    <line x1="764" y1="218" x2="794" y2="218" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="764" y1="218" x2="794" y2="218" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(810 172)">
-      <rect width="210" height="92" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="18" y="28" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">08</text>
-      <text x="18" y="58" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Confirm</text>
-      <text x="18" y="80" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Human revalidation</text>
+      <rect width="210" height="92" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="18" y="28" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">08</text>
+      <text x="18" y="58" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Confirm</text>
+      <text x="18" y="80" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Human revalidation</text>
     </g>
 
-    <path d="M1020 264V304H120V332" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M1020 264V304H120V332" fill="none" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(0 344)">
-      <rect width="480" height="96" rx="2" fill="#0d282c" stroke="#22d3ee" stroke-opacity=".62" stroke-width="1.4"/>
-      <text x="20" y="32" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">09</text>
-      <text x="76" y="36" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Accepted Outcome</text>
-      <text x="76" y="66" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Where execution becomes accountable delivery.</text>
+      <rect width="480" height="96" rx="2" fill="#eef1f4" stroke="#5b6673" stroke-opacity=".62" stroke-width="1.4"/>
+      <text x="20" y="32" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">09</text>
+      <text x="76" y="36" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Accepted Outcome</text>
+      <text x="76" y="66" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Where execution becomes accountable delivery.</text>
     </g>
-    <line x1="494" y1="392" x2="524" y2="392" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="494" y1="392" x2="524" y2="392" stroke="#6b7785" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
     <g transform="translate(540 344)">
-      <rect width="480" height="96" rx="2" fill="#191919" stroke="#f1f5f9" stroke-opacity=".18" stroke-width="1.2"/>
-      <text x="20" y="32" fill="#22d3ee" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">10</text>
-      <text x="76" y="36" fill="#f8fafc" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Remediation</text>
-      <text x="76" y="66" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="14" font-weight="560">Closure for dispute, failure, rollback, or correction.</text>
+      <rect width="480" height="96" rx="2" fill="#f3f5f7" stroke="#111827" stroke-opacity=".18" stroke-width="1.2"/>
+      <text x="20" y="32" fill="#5b6673" font-family="JetBrains Mono, Menlo, monospace" font-size="13" font-weight="800">10</text>
+      <text x="76" y="36" fill="#111827" font-family="Outfit, Inter, sans-serif" font-size="22" font-weight="800">Remediation</text>
+      <text x="76" y="66" fill="#334155" font-family="Inter, sans-serif" font-size="14" font-weight="560">Closure for dispute, failure, rollback, or correction.</text>
     </g>
   </g>
 </svg>

@@ -1,0 +1,2063 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/site-media-visual-system-audit.mjs",
+  "sourceOfTruth": [
+    "src/styles/global.css",
+    "src/styles/prototypes.css",
+    "src/content/essays/",
+    "public/social/",
+    "public/figures/"
+  ],
+  "visualSystem": "research-ledger-b",
+  "policy": {
+    "structuralPalette": "neutral",
+    "functionalBlue": "UI links, selection, focus and active states only",
+    "semanticExceptions": "Authored diagrams and publication artwork require independent review",
+    "fonts": [
+      "Outfit",
+      "Inter",
+      "JetBrains Mono"
+    ]
+  },
+  "records": [
+    {
+      "path": "/android-chrome-192x192.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "sha256": "5604d8c646840ed9fb4ebc7c8f15f48599b25e89c93f4c7f19c5b2cc1054d8f6",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/android-chrome-512x512.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sha256": "5dc7c475ba2a9296ef59c786eeb8133183c1c490a9273fd9c6af88e37d0730ed",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 180,
+        "height": 180
+      },
+      "sha256": "a8a3f05885b122b33fc3252b7e7c242b4b75168873dbaad842ee721c12b447e7",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/essays/intent-drift/minimum-defense-loop.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1000,
+        "height": 1480
+      },
+      "sha256": "5a35ba1511ed57e6bab62b8c64aec8df7772ab5a4da35b0c60f4dadf56b874a7",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/defining-intent-drift-in-agentic-workflows.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/essays/intent-drift/three-layers-of-intent-drift.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1000,
+        "height": 1180
+      },
+      "sha256": "6298d81c01369298e8e87bb9df36c33fb157e4fdb55cbe88b514fbb369b97a8a",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/defining-intent-drift-in-agentic-workflows.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/essays/intent-drift/three-mechanisms.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1000,
+        "height": 1320
+      },
+      "sha256": "2536f66d701e75253e5d847044007ebc7e66802c5489b68f0632a354ffa02934",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/defining-intent-drift-in-agentic-workflows.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/essays/mplp-lifecycle-answer/mplp-lifecycle-answer.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1200,
+        "height": 760
+      },
+      "sha256": "947359bd3c6cf132556a563c9b4e58ec4795dbf91cbd23aadebc2ad5e2e78c79",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/favicon-16x16.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "sha256": "15a590b439f3d3a7e5e07af958b2596c95dd95a94267edb4ddff587964157277",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/favicon-32x32.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "sha256": "259a1c395a84c4cecd2b57ef82ebca520beace68c40cd789cacb12743dbd846f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/ai-agent-lifecycle-01-cover.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "d7a66a430a656351a17351d35b3a51b81f23b74504c412a8f26c9fdfe0a68b67",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md",
+        "src/data/site.ts"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/ai-agent-lifecycle-01-growth-chain.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "sha256": "ecbc93cc21a8cdb5edb0b18537a22d697a7a9f360b13a093cbb00ce5a07b0034",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/aiaawp-article-aarm-levels.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 760
+      },
+      "sha256": "710099381e1f9e8833ae426df20a366dde7000f282e2b5ebc04d38f0cea73824",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/aiaawp-article-agentic-audit-object.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 760
+      },
+      "sha256": "719f2b78feb8581c931a2d4de52e79527e3902aa1833efd8d7c61f2a097ed2c3",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/aiaawp-article-audit-object-gap.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 640
+      },
+      "sha256": "31097b13404e9bfc4acaed9e5419abbfc75edff0687ccc30d370da81ad4bcbae",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/aiaawp-article-four-evidence-tiers.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 620
+      },
+      "sha256": "f9d60031f0ded6deaf5617fadbb8eea75fdd7efb428ef74ba6c478d30445315c",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/aiaawp-article-lifecycle-walkthrough.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 560
+      },
+      "sha256": "4311e3c28626729b782ed68b29553d89cbda6bf06e62b60c9d2e8a0f9027d426",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/article2-lifecycle-governed-agent-workflow-mobile.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 900,
+        "height": 1320
+      },
+      "sha256": "e77fe4172deb989afe527f2b1de830e4940a9c1902eed43b540e805ab87f2e91",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/article2-lifecycle-governed-agent-workflow.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "8e92c1cf27320c5b880585ad0fe6ca80f9f8a9f90bf27216709c035622dd2f3f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article2-lifecycle-governed-agent-workflow.svg"
+    },
+    {
+      "path": "/figures/article2-lifecycle-governed-agent-workflow.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "2502dfadc8a48394acaf60c3b487d85e8f0eb9bbb05bb891d9a8d403bef579b9",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": "/figures/article2-lifecycle-governed-agent-workflow.png"
+    },
+    {
+      "path": "/figures/article2-mas-redefinition-diagram-mobile.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 900,
+        "height": 1200
+      },
+      "sha256": "6ae8fd9e5d1958f25a5673fd0ecfaa236aeeb50421a74983ae835282f195c930",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/article2-mas-redefinition-diagram.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "16ce657e703a391d568d63e5c7d421a19a865c7f31bc58ea7fb29d2879e56b34",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article2-mas-redefinition-diagram.svg"
+    },
+    {
+      "path": "/figures/article2-mas-redefinition-diagram.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "182a357bfc8c219ab7b5e0ea2174d866e442cafd3ae8d6627dd538b7c91401ae",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": "/figures/article2-mas-redefinition-diagram.png"
+    },
+    {
+      "path": "/figures/article3-bidirectional-responsibility-mapping.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "c7fed6530929492ecbbc4d8c2fdd3f1e51d8fb7737e975f91dd923658f60850c",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-bidirectional-responsibility-mapping.svg"
+    },
+    {
+      "path": "/figures/article3-bidirectional-responsibility-mapping.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "130f7ffe347840174bfe88a0e77bc8e3417b463539bebe7ebd18e2ff61e2230d",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-bidirectional-responsibility-mapping.png"
+    },
+    {
+      "path": "/figures/article3-cover.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "29f4d2ec357c0102529114141b7db71730040f1d34e8c1f3d62c043dd2a7e48f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-cover.svg"
+    },
+    {
+      "path": "/figures/article3-cover.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "19ffe1e16d7a96282335869c0d4bf946775e34406f6fb78556ec79b0515350e6",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-cover.png"
+    },
+    {
+      "path": "/figures/article3-dynamic-role-graph.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "5a6e68bca8d80514328dc75d52569a92078f2e6aae82406cf3a659ee25a39a04",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-dynamic-role-graph.svg"
+    },
+    {
+      "path": "/figures/article3-dynamic-role-graph.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "0b3ff4ac700a1c15198fe26e65c54b35fc74852751d54312b715d25d353f9b65",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-dynamic-role-graph.png"
+    },
+    {
+      "path": "/figures/article3-human-role-hitl.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "d96784d4936f911fe1c816c7f335f47ff8511e80de47ef23cb0dcc0a8f4a82dd",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-human-role-hitl.svg"
+    },
+    {
+      "path": "/figures/article3-human-role-hitl.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "f9d5424089ccbbbd7dfc8d6fe18aaba55d918875ffce0c1026c166bcbffb66db",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-human-role-hitl.png"
+    },
+    {
+      "path": "/figures/article3-multi-plane-semantic-state.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "ec0b55856fd3d1cb81d16da32c724b791316eb99e50dff5ba3591fa63f2762a0",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-multi-plane-semantic-state.svg"
+    },
+    {
+      "path": "/figures/article3-multi-plane-semantic-state.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "60c74382c530c5b573e996eb70c97f8e866512b8714fa3abc19768fa028c61f9",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-multi-plane-semantic-state.png"
+    },
+    {
+      "path": "/figures/article3-orchestrator-consensus-layer.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "93da7d24019357a816480cc57290521e21e21674f807b0dd5d3906e3680ddafd",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-orchestrator-consensus-layer.svg"
+    },
+    {
+      "path": "/figures/article3-orchestrator-consensus-layer.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "33fb8614e9d30b1efb1e4c23e770fbb3708c1550f9b9d2806ad2c318157369ff",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-orchestrator-consensus-layer.png"
+    },
+    {
+      "path": "/figures/article3-table-consensus-layer.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 720
+      },
+      "sha256": "2825339353122226a07e7f08730365ddb00a0972feb42488d0f103edd589b301",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-table-consensus-layer.svg"
+    },
+    {
+      "path": "/figures/article3-table-consensus-layer.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 720
+      },
+      "sha256": "be5bd03b3e1570e21aeedf9ccff562d4f63ed2bed16fee2adbd53a2f6319d13d",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-table-consensus-layer.png"
+    },
+    {
+      "path": "/figures/article3-table-dispatch-vs-objective.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 840
+      },
+      "sha256": "92205bdef6470e8c0a45f45d1502ae8d9bc83ec1d43db59d04e6a81b76c815a3",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-table-dispatch-vs-objective.svg"
+    },
+    {
+      "path": "/figures/article3-table-dispatch-vs-objective.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 840
+      },
+      "sha256": "b53308892537fbaf15a2c2b303c03e679990f056f61ba96db9656ff69b6dc449",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-table-dispatch-vs-objective.png"
+    },
+    {
+      "path": "/figures/article3-table-role-fields.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "001f6430898a3669f74a192cd41a2a8da3b2d25f12abf1a8f02697227cce2bc1",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-table-role-fields.svg"
+    },
+    {
+      "path": "/figures/article3-table-role-fields.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "aef5fde234c7f3d4603c366f979a5041f78fcaacf160d17d2ac2994cd2fdb42a",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-table-role-fields.png"
+    },
+    {
+      "path": "/figures/article3-table-vendor-comparison.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 1340
+      },
+      "sha256": "01cf9ce159903073dfb3175a2c39d67d6ca26c0732a37f5217a2d39ec238992e",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/figures/article3-table-vendor-comparison.svg"
+    },
+    {
+      "path": "/figures/article3-table-vendor-comparison.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 1340
+      },
+      "sha256": "6e94def580ebeef8d0f417e3e9e427bfbaee39ec0de379a8e1d88055e0f79fb7",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/figures/article3-table-vendor-comparison.png"
+    },
+    {
+      "path": "/figures/from-model-governance-to-agentic-lifecycle-conformance-mobile.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 390,
+        "height": 1840
+      },
+      "sha256": "fb7ae3966768c6d26d43bbc697a9dc0e06382226c471a162549fd6989a124298",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/from-model-governance-to-agentic-lifecycle-conformance.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1000,
+        "height": 1720
+      },
+      "sha256": "cfe00d25c933f31c8d5243e4756806635a78f4cce1f3480a4ca002c70c2da621",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/from-task-execution-to-project-delivery.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "sha256": "a82a90b6a3459fe75c845af16ebd04adb33418a61e43df7088deaf3cc2a6b6ca",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/figures/from-task-execution-to-project-delivery.svg"
+    },
+    {
+      "path": "/figures/from-task-execution-to-project-delivery.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "sha256": "00798266b538994c5bc0d60eca9d32394e86b164086891dd80ae76029e99b712",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/figures/from-task-execution-to-project-delivery.png"
+    },
+    {
+      "path": "/figures/governed-by-design-mas-os-stack.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 940
+      },
+      "sha256": "714b055a993144d9512262f0187a354b61355552c5404efd79194cf9aa3fb5b7",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/governed-by-design-protocol-native-multi-agent-operating-system.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/figures/the-agentic-delivery-test-checklist.png",
+      "format": "png",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "sha256": "a418c6db93120ed3fa345639a540d53a908bf710aacb3d7ca1f5812010f00fbf",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/figures/the-agentic-delivery-test-checklist.svg"
+    },
+    {
+      "path": "/figures/the-agentic-delivery-test-checklist.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "sha256": "7466c749c1d8f86c82242c99828bea6aefbd83ec067a3ec66271e68c0a3f1476",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/figures/the-agentic-delivery-test-checklist.png"
+    },
+    {
+      "path": "/figures/when-an-agent-says-done-lifecycle-evidence.svg",
+      "format": "svg",
+      "category": "article-figure",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "4e019dd73e3b9f47ea02dcee62ae45e8e289cb14de10b980f773097b03ab28de",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [
+        "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md"
+      ],
+      "sourcePair": null
+    },
+    {
+      "path": "/icon.svg",
+      "format": "svg",
+      "category": "brand-mark",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sha256": "76a11178c0e48abb44f3b29074bdfd2a829b6a4f03cb17e9b7616d8731bd1912",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/maskable-icon-192x192.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      },
+      "sha256": "add9aebbed4aed012e1387ebf1a4f34659925f0fc266e5b6446834e8f0176636",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/maskable-icon-512x512.png",
+      "format": "png",
+      "category": "system-icon",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sha256": "376fbc6bbcd705ace64466e7700a3dbda22c19e515f1af2213a51826dbe387ff",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social-card.svg",
+      "format": "svg",
+      "category": "brand-mark",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "5bd90b0df4dd6812c9411a00d7e5d16f59ef7680537d793e7bacd2b13375a4b4",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": false,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social/agentic-delivery-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "ef1a00b60528b8de176ac167e05fecc74f968f844902fd9d40893d69d6b37673",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/social/agentic-delivery-og.svg"
+    },
+    {
+      "path": "/social/agentic-delivery-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "51426ae9a738fed0ee6aeee9aa1dcd81f26810f7f011b40ce344162d57388925",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/agentic-ai-inflection-point-project-delivery.md"
+      ],
+      "sourcePair": "/social/agentic-delivery-og.png"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-full.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 2600
+      },
+      "sha256": "37b347762d8b2c524030aa82705cebe6014211ecc1d8ea3b0241ba29595654b4",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-full.svg"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-full.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 2600
+      },
+      "sha256": "4926feab4d42e1de887d6402912984b99516172f0d90be2c14087195cdd4b56e",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-full.png"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-medium.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1400,
+        "height": 1800
+      },
+      "sha256": "18aabfdbae7ed78ce88bd1f924edfd9195a7dbde9d5de8f6a485ec10c361cd91",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-medium.svg"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-medium.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1400,
+        "height": 1800
+      },
+      "sha256": "473fa54284e3ec85820646841bac3217c0757afea50a8910ffca7b99812b38c8",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-medium.png"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-x.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "ead98c844ce916a4eeeb77ad95c7cbd5f0018127672aad61d6c90ede6ce940d3",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-x.svg"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster-x.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "ae86c71e6046393b134c67b88e89c6eb057a299d727a48151bbb4646775778df",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster-x.png"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1200,
+        "height": 1600
+      },
+      "sha256": "f9e480e4ee74d69bbafa778c7a32cbda6201b11111150632821e671dfe353d87",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster.svg"
+    },
+    {
+      "path": "/social/agentic-lifecycle-governance-poster.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1200,
+        "height": 1600
+      },
+      "sha256": "11b6ba64bdba33362faa35c3c5bab1c5394210bbd7351d7bf764a63cb557d03d",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/agentic-lifecycle-governance-poster.png"
+    },
+    {
+      "path": "/social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "d9bce8c21a35c0200c2a7171ee933e9d1eca3265168a9b3c684e0318828b407d",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md"
+      ],
+      "sourcePair": "/social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.svg"
+    },
+    {
+      "path": "/social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "6a73e48317c68cb60ed769628f1fddf75c9a8b0a95bbf8cc51851421e273213c",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md"
+      ],
+      "sourcePair": "/social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.png"
+    },
+    {
+      "path": "/social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "2ac2a0b81c1f1293dfe5c2a0f76a586994ab7d38425d68219d7ee754ccb8f2c1",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.svg"
+    },
+    {
+      "path": "/social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "1afd8cff49c46212fc1eb9c68447a60cd29cfd23f64348d1240d4c3b4e61828f",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png"
+    },
+    {
+      "path": "/social/from-model-governance-to-agentic-lifecycle-conformance-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "f85d4065eea037c47d61deceb2f1a3be4a069980a359067153e2ebc512d6a45f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md"
+      ],
+      "sourcePair": "/social/from-model-governance-to-agentic-lifecycle-conformance-og.svg"
+    },
+    {
+      "path": "/social/from-model-governance-to-agentic-lifecycle-conformance-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "9a48c807dc740b405eff0981dfdcb71581cbde8f4f143336de051da0cb28644f",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md"
+      ],
+      "sourcePair": "/social/from-model-governance-to-agentic-lifecycle-conformance-og.png"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-model-thread-card.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "852b9e781289a37316780a541af05abf29917d61face0893b869e7bc88e86010",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-model-thread-card.svg"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-model-thread-card.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "54096cc109875a1671f6512bfb13d6edf5c7fec7c9187e082eaf425fafbcc558",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-model-thread-card.png"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-mro-thread-card.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "f3a46e552d3e0ffa8a95ef86d53ba64f9786c5d263f847163677493043874b23",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-mro-thread-card.svg"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-mro-thread-card.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "e9d909a88ca21411b5eb3066b1f66464ccb37bae124b3a94e6179bd713263232",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-mro-thread-card.png"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-scorecard-thread-card.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "3af3b12a3fb46422b07afce1433c6ac66dc9087dd41da388ba96780468738983",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-scorecard-thread-card.svg"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-scorecard-thread-card.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "e9e6d17930f51918d5e5478bcefe4a69c61817859fc39427773cc8efa9f359a2",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-scorecard-thread-card.png"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-thread-card.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "7ed5b717dcbbbc6d4c81743296b66ecf1683852f76f9e869fa0c3759149db2e0",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-thread-card.svg"
+    },
+    {
+      "path": "/social/gaic-white-paper-2026-thread-card.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "sha256": "35e1d5bb64780cf5efdfae76c9a03f07c9094b81d428c11bf5721272864b8607",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/gaic-white-paper-2026-thread-card.png"
+    },
+    {
+      "path": "/social/governed-by-design-mas-os-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "0520aa4a1b2d57b7238f9ee2b900d2fc7d5622e64b5026daef121b8309bd58d6",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/governed-by-design-protocol-native-multi-agent-operating-system.md"
+      ],
+      "sourcePair": "/social/governed-by-design-mas-os-og.svg"
+    },
+    {
+      "path": "/social/governed-by-design-mas-os-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "5a0d937d72005e490516c45a8a4cadd69a4011e84496f3154c05e222937f8bc6",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/governed-by-design-protocol-native-multi-agent-operating-system.md"
+      ],
+      "sourcePair": "/social/governed-by-design-mas-os-og.png"
+    },
+    {
+      "path": "/social/intent-drift-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "8cd4bc517a0f539f1c54a4fc475df66a8e81631da00c15d29e21466ff886b035",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/defining-intent-drift-in-agentic-workflows.md"
+      ],
+      "sourcePair": "/social/intent-drift-og.svg"
+    },
+    {
+      "path": "/social/intent-drift-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "bfcb12d85d809813162ebe84ba26b360d4387bc3b8ecd73da3c04fe13591c58e",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/defining-intent-drift-in-agentic-workflows.md"
+      ],
+      "sourcePair": "/social/intent-drift-og.png"
+    },
+    {
+      "path": "/social/jearonwong-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "8b5c25ea713ac9bab4a968e842731d972ab7a5b9a8d8f81d9173a8b90a005541",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/data/site.ts",
+        "src/pages/concepts/agentic-lifecycle-governance/index.astro",
+        "src/pages/evidence.astro",
+        "src/pages/index.astro",
+        "src/pages/mapping/extended-ecosystem/[slug].astro",
+        "src/pages/mapping/extended-ecosystem/index.astro",
+        "src/pages/playbooks/[slug].astro",
+        "src/pages/playbooks/index.astro",
+        "src/pages/research/agentic-ai-auditability-assurance-white-paper-2026/index.astro",
+        "src/pages/research/agentic-ai-insurability-risk-transfer-white-paper-2026/index.astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/index.astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/systems/index.astro",
+        "src/pages/research/index.astro"
+      ],
+      "sourcePair": "/social/jearonwong-og.svg"
+    },
+    {
+      "path": "/social/jearonwong-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "274291e6daaec75e01aa94e5ca960dd8472e9ccb3201012c265e35e3dcfb54d5",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/data/site.ts",
+        "src/pages/concepts/agentic-lifecycle-governance/index.astro",
+        "src/pages/evidence.astro",
+        "src/pages/index.astro",
+        "src/pages/mapping/extended-ecosystem/[slug].astro",
+        "src/pages/mapping/extended-ecosystem/index.astro",
+        "src/pages/playbooks/[slug].astro",
+        "src/pages/playbooks/index.astro",
+        "src/pages/research/agentic-ai-auditability-assurance-white-paper-2026/index.astro",
+        "src/pages/research/agentic-ai-insurability-risk-transfer-white-paper-2026/index.astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/index.astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/systems/[slug].astro",
+        "src/pages/research/global-ai-compliance-white-paper-2026/systems/index.astro",
+        "src/pages/research/index.astro"
+      ],
+      "sourcePair": "/social/jearonwong-og.png"
+    },
+    {
+      "path": "/social/mcp-a2a-lifecycle-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "7ecb472007bf6a26ab0efecfabb5c610bbd31564fbb5f52820e03a535fadb22d",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md"
+      ],
+      "sourcePair": "/social/mcp-a2a-lifecycle-og.svg"
+    },
+    {
+      "path": "/social/mcp-a2a-lifecycle-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "49ad432efb3f7a7b8c36de16c78eb5d07b1440769a1a32dd90b200a0182345ef",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md"
+      ],
+      "sourcePair": "/social/mcp-a2a-lifecycle-og.png"
+    },
+    {
+      "path": "/social/mplp-lifecycle-answer-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "9391f2a44e1eb508c25cb5d001aee4dfc22968e39dafdf1d6317318c185a0401",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer.md"
+      ],
+      "sourcePair": "/social/mplp-lifecycle-answer-og.svg"
+    },
+    {
+      "path": "/social/mplp-lifecycle-answer-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "3593e10fb41d6cac2d831fa70ffe886716bcb8edd56c1bec6102cd83f3397ae0",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer.md"
+      ],
+      "sourcePair": "/social/mplp-lifecycle-answer-og.png"
+    },
+    {
+      "path": "/social/og-about.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "67ad573b2d0e3c15c8f178e79b561a8f03cdf46a0851ce263d5fc21af7da87c7",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/about.astro"
+      ],
+      "sourcePair": "/social/og-about.svg"
+    },
+    {
+      "path": "/social/og-about.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "4c7c926965d4bb9f6b245be31249313d7bbdae5cb152e64f9677782e74e94d3e",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/about.astro"
+      ],
+      "sourcePair": "/social/og-about.png"
+    },
+    {
+      "path": "/social/og-agent-orchestration-is-not-delivery.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "9529299ae33e81778a56cd24b8de2ac716aeab96c951e6af7585d90205964a9b",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/social/og-agent-orchestration-is-not-delivery.svg"
+    },
+    {
+      "path": "/social/og-agent-orchestration-is-not-delivery.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "60d8d6af4e5b58a684fad009c7bcc8c31cc1ef6da21ceb2268e19a373cbe1d13",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/agent-orchestration-is-not-delivery.md"
+      ],
+      "sourcePair": "/social/og-agent-orchestration-is-not-delivery.png"
+    },
+    {
+      "path": "/social/og-ai-agent-governance.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "eb3ececcf4170a521aeefd466f8c906fe80f923b32d9d1158723b01783bc26a9",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/ai-agent-governance.astro",
+        "src/pages/governance/[slug].astro",
+        "src/pages/governance/index.astro"
+      ],
+      "sourcePair": "/social/og-ai-agent-governance.svg"
+    },
+    {
+      "path": "/social/og-ai-agent-governance.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "6c2bc0bb460a89cb94a0d8b0e15f391ae5d70c6796646bb0d501e9c963e95219",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/ai-agent-governance.astro",
+        "src/pages/governance/[slug].astro",
+        "src/pages/governance/index.astro"
+      ],
+      "sourcePair": "/social/og-ai-agent-governance.png"
+    },
+    {
+      "path": "/social/og-concepts.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "74c9afae377135e3c8790a1b3ae551f1860980face9900bdc2123a889aa17b66",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/concepts/[slug].astro",
+        "src/pages/concepts/index.astro",
+        "src/pages/concepts/map/index.astro"
+      ],
+      "sourcePair": "/social/og-concepts.svg"
+    },
+    {
+      "path": "/social/og-concepts.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "fd3fe47a4065d8829c2f1a6b47598cfd59262c3c6c693fa800d28a0945b95678",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/concepts/[slug].astro",
+        "src/pages/concepts/index.astro",
+        "src/pages/concepts/map/index.astro"
+      ],
+      "sourcePair": "/social/og-concepts.png"
+    },
+    {
+      "path": "/social/og-essays.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "81a392b53b814a2ae54ed522f209ec067a76e620c3838c2745bd233e3b5ab472",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/essays/index.astro"
+      ],
+      "sourcePair": "/social/og-essays.svg"
+    },
+    {
+      "path": "/social/og-essays.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "71060fd724ea018053ee6d89dee30f6a97655ba03e0144138c2c190a3f1cec43",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/essays/index.astro"
+      ],
+      "sourcePair": "/social/og-essays.png"
+    },
+    {
+      "path": "/social/og-lifecycle.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "726fe25b0060bd9ae9e3739153c2c6ded6b6d844fd1c56e7f2f52f9c26dd71ad",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/lifecycle.astro"
+      ],
+      "sourcePair": "/social/og-lifecycle.svg"
+    },
+    {
+      "path": "/social/og-lifecycle.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "945abef4fc03ab9d89e96e234a3d2c2e36f410cd5e82fccf286ab42a7c3dbd0c",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/lifecycle.astro"
+      ],
+      "sourcePair": "/social/og-lifecycle.png"
+    },
+    {
+      "path": "/social/og-projects.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "496337f4927dc3a9bc41ebadf212254d540886364d095b6e632ff9e864aefb5f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/projects.astro",
+        "src/pages/projects/[slug].astro"
+      ],
+      "sourcePair": "/social/og-projects.svg"
+    },
+    {
+      "path": "/social/og-projects.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "4c59d22d0e06e5536905914d124d493e77f36a09f3876cf47dabfcd55f96dba1",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/projects.astro",
+        "src/pages/projects/[slug].astro"
+      ],
+      "sourcePair": "/social/og-projects.png"
+    },
+    {
+      "path": "/social/og-start-here.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "5ce3e51a42a8f241cc7f8844ffe6b23c575952669cd10b338bfa71866cdc83d6",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/start-here.astro"
+      ],
+      "sourcePair": "/social/og-start-here.svg"
+    },
+    {
+      "path": "/social/og-start-here.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "61200a79e27d42ebc6782e97df77c0ddd3c2f17d5bb4e7f3804d74fe0dff67f6",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/pages/start-here.astro"
+      ],
+      "sourcePair": "/social/og-start-here.png"
+    },
+    {
+      "path": "/social/og-static-logs-dynamic-evidence-chains.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "c88f5413c4c740d0248a9b86d6d8f032aaca9c3a80668e960758a3a4e1033973",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": "/social/og-static-logs-dynamic-evidence-chains.svg"
+    },
+    {
+      "path": "/social/og-static-logs-dynamic-evidence-chains.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "8d64df6cb3170562c69f2b9ffca4a971df9212c5bc62a79159000d9c475c3ae2",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md"
+      ],
+      "sourcePair": "/social/og-static-logs-dynamic-evidence-chains.png"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v2.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "b5a265271acdc661296196c7c5b3064b9feb82281bcab2a8c33bb4ab7ee02cd1",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v2.svg"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v2.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "50bd4194e1ed5f48b9eff0978f7873ddd4ab979ae5ecb1bc4b3d15b2000f947b",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v2.png"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v3-thumb.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "sha256": "b7bb0a85daa52676ff5e2d109aa6bd627dd64b15f50a8412d42253bfa3eb32ab",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v3.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "cca43910687ff78b35f202f5c7484a49616959a07e71b18c9ded16f1bb074bf8",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v3.svg"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v3.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "dc051aa0f84200a4a997e01a0fc6d383ecb31d7d5169f109571255b99b38aa58",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v3.png"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v4-thumb.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "sha256": "a2c6e479bf8fc3ccdda83613ede752be54cba7ecbcd490c01dfb7780de59d17b",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v4.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "4e0a52014cfea38dfa559a4a48e50d9bee1737fc8b8ab1245196ca6c4bc1eeb6",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v4.svg"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v4.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "c560e84ee6e300dd9728946338e6ed156d442ce05a377decb15243d549565d77",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v4.png"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v5.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "7d930ccc609e35866ca953c56195da0e3506c72c1079eaa5002b58fb964c0bed",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v6-thumb.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "sha256": "f1c9bef8de3a561336ba9e14c3028914b57d7541cc01aeda5a024a4693badd83",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": null
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v6.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "dadad1a1d579a4093904d754c51ac8e5608e77d6796927079aec4b99dc74bc2a",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v6.svg"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover-v6.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "a8c603452c8f8299cb8e03e086c82d43f174971dd9e4ce442d774f5efb12e9bd",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover-v6.png"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover.png",
+      "format": "png",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "60cc92b6ccf4b301ef7ee722a31e5649793901375d884e4724c9c7be8a42491f",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover.svg"
+    },
+    {
+      "path": "/social/spotify-gaic-white-paper-2026-cover.svg",
+      "format": "svg",
+      "category": "publication-artwork",
+      "dimensions": {
+        "width": 3000,
+        "height": 3000
+      },
+      "sha256": "bd151e2fb95dad52e9dd04f77f4136b9d30f7758770b5a7a2eb3b6239b29c36f",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-semantic-exceptions",
+      "manualReview": true,
+      "usedBy": [],
+      "sourcePair": "/social/spotify-gaic-white-paper-2026-cover.png"
+    },
+    {
+      "path": "/social/the-industry-misdefined-multi-agent-ai-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "ff7f325c526ef5497eca092394dbc44be5b157580e9686f3846f255a4025dff5",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": "/social/the-industry-misdefined-multi-agent-ai-og.svg"
+    },
+    {
+      "path": "/social/the-industry-misdefined-multi-agent-ai-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "3f35903bd770249889fc6b2851dd87d1b98400c7afde84554e36e69a521831b7",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/the-industry-misdefined-multi-agent-ai.md"
+      ],
+      "sourcePair": "/social/the-industry-misdefined-multi-agent-ai-og.png"
+    },
+    {
+      "path": "/social/when-an-agent-says-done-og.png",
+      "format": "png",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "6d6b378c7ab2e0d7bcc368c5c5b6e8829caa7ad2e4a2e38c292a7f637a8fa979",
+      "visualSystem": null,
+      "paletteMode": "raster-derived",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md"
+      ],
+      "sourcePair": "/social/when-an-agent-says-done-og.svg"
+    },
+    {
+      "path": "/social/when-an-agent-says-done-og.svg",
+      "format": "svg",
+      "category": "social-og",
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      },
+      "sha256": "de386c0d1b11d0b92f719f57d67a0a034973a774173cb68bcffa8a442b528c95",
+      "visualSystem": "research-ledger-b",
+      "paletteMode": "neutral-structure-functional-blue",
+      "manualReview": false,
+      "usedBy": [
+        "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md"
+      ],
+      "sourcePair": "/social/when-an-agent-says-done-og.png"
+    }
+  ]
+}

@@ -1,51 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">When an Agent Says Done, Who Accepts the Outcome?</title>
-  <desc id="desc">Jearon Wong essay title with a lifecycle chain from Intent to Authority, Evidence, and Accepted Outcome.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="essay-og" data-palette="neutral-structure-functional-blue" data-asset-kind="essay-og" data-route="/essays/when-an-agent-says-done-who-accepts-the-outcome/">
+  <title id="title">When an Agent Says Done, Who Accepts the Outcome? - Jearon Wong</title>
+  <desc id="desc">Execution can complete. Delivery still needs an accepting role.</desc>
   <defs>
-    <style>
-      .bg { fill: #111111; }
-      .grid { stroke: rgba(241,245,249,0.05); stroke-width: 1; }
-      .outer { fill: none; stroke: rgba(241,245,249,0.16); stroke-width: 1.2; }
-      .kicker { fill: #22d3ee; font-family: "JetBrains Mono", Menlo, monospace; font-size: 16px; font-weight: 700; letter-spacing: 1.35px; }
-      .title { fill: #f1f5f9; font-family: "Outfit", Inter, Arial, sans-serif; font-size: 48px; font-weight: 800; }
-      .title-hot { fill: #22d3ee; font-family: "Outfit", Inter, Arial, sans-serif; font-size: 48px; font-weight: 800; }
-      .subtitle { fill: #cbd5e1; font-family: Inter, Arial, sans-serif; font-size: 19px; font-weight: 560; }
-      .node { fill: rgba(34,211,238,0.1); stroke: rgba(34,211,238,0.62); stroke-width: 1.2; }
-      .node-blue { fill: rgba(59,130,246,0.13); stroke: rgba(59,130,246,0.58); stroke-width: 1.2; }
-      .mono { fill: #f1f5f9; font-family: "JetBrains Mono", Menlo, monospace; font-size: 16px; font-weight: 760; }
-      .line { stroke: #22d3ee; stroke-width: 2.6; }
-      .quote { fill: #f1f5f9; font-family: Inter, Arial, sans-serif; font-size: 22px; font-weight: 760; }
-      .footer { fill: #64748b; font-family: "JetBrains Mono", Menlo, monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.7px; }
-    </style>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" class="grid" fill="none"/>
+    <pattern id="dark-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L10,4 L0,8 Z" fill="#22d3ee"/>
-    </marker>
+    <style>
+      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 64px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
+      .mono { fill: #96a0aa; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: 0; word-spacing: 0.018em; }
+      .mono-bright { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0; word-spacing: 0.018em; }
+      .route { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0; word-spacing: 0; }
+      .summary { fill: #20252b; font-family: Inter, sans-serif; font-size: 25px; font-weight: 520; letter-spacing: 0; word-spacing: 0.01em; }
+      .paper-meta { fill: #66707a; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 13px; font-weight: 600; letter-spacing: 0; word-spacing: 0.02em; }
+    </style>
   </defs>
 
-  <rect width="1200" height="630" class="bg"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect x="32" y="32" width="1136" height="566" class="outer"/>
-  <text x="62" y="78" class="kicker">JEARON WONG / AI AGENT LIFECYCLE</text>
-  <text x="62" y="150" class="title">When an Agent Says "Done,"</text>
-  <text x="62" y="207" class="title-hot">Who Accepts the Outcome?</text>
-  <text x="62" y="247" class="subtitle">Execution can complete. Delivery still needs an accepting role.</text>
+  <rect width="1200" height="454" fill="#15191e"/>
+  <rect width="1200" height="454" fill="url(#dark-grid)"/>
+  <rect y="454" width="1200" height="176" fill="#f7f8fa"/>
 
-  <rect x="62" y="318" width="180" height="58" rx="2" class="node"/>
-  <text x="115" y="354" class="mono">INTENT</text>
-  <line x1="242" y1="347" x2="278" y2="347" class="line" marker-end="url(#arrow)"/>
-  <rect x="280" y="318" width="180" height="58" rx="2" class="node-blue"/>
-  <text x="321" y="354" class="mono">AUTHORITY</text>
-  <line x1="460" y1="347" x2="496" y2="347" class="line" marker-end="url(#arrow)"/>
-  <rect x="498" y="318" width="180" height="58" rx="2" class="node"/>
-  <text x="554" y="354" class="mono">EVIDENCE</text>
-  <line x1="678" y1="347" x2="714" y2="347" class="line" marker-end="url(#arrow)"/>
-  <rect x="716" y="318" width="250" height="58" rx="2" class="node"/>
-  <text x="754" y="354" class="mono">ACCEPTED OUTCOME</text>
+  <text x="72" y="56" class="mono-bright">JEARON WONG</text>
+  <text x="202" y="56" class="mono">/ RESEARCH LEDGER</text>
+  <line x1="72" y1="88" x2="1128" y2="88" stroke="#ffffff" stroke-opacity="0.16"/>
 
-  <text x="62" y="468" class="quote">"A receipt is evidence, not authority."</text>
-  <text x="62" y="548" class="footer">WHEN AN AGENT SAYS DONE / ESSAY 01 / MPLP</text>
-  <text x="918" y="548" class="footer">JEARONWONG.COM</text>
+  <text x="72" y="142" class="mono">PAGE_ROLE</text>
+  <text x="171" y="142" class="mono">:</text>
+  <text x="193" y="142" class="mono-bright">ESSAY / LIFECYCLE</text>
+  <text x="72" y="240" class="display">When an Agent Says</text>
+    <text x="72" y="310" class="display">Done</text>
+
+  <line x1="844" y1="142" x2="844" y2="394" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="880" y="176" class="mono">AUTHOR</text>
+  <text x="880" y="204" class="mono-bright">JEARON WONG</text>
+  <text x="880" y="260" class="mono">SYSTEM</text>
+  <text x="880" y="288" class="mono-bright">RESEARCH LEDGER</text>
+  <text x="880" y="344" class="mono">CANONICAL ROUTE</text>
+  <text x="880" y="372" class="route">/essays/when-an-agent</text>
+  <text x="880" y="394" class="route">-says-done-who-accept...</text>
+
+  <line x1="72" y1="454" x2="1128" y2="454" stroke="#111418" stroke-opacity="0.22"/>
+  <text x="72" y="516" class="summary">Execution can complete. Delivery still needs an accepting role.</text>
+  <line x1="72" y1="596" x2="1128" y2="596" stroke="#111418" stroke-opacity="0.16"/>
+  <text x="72" y="619" class="paper-meta">PROTOCOL ARCHITECT FOR THE AGENT ERA</text>
+  <text x="1128" y="619" text-anchor="end" class="paper-meta">ESSAY / LIFECYCLE</text>
 </svg>

@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="tc1 dc1">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="tc1 dc1" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="tc1">Three Perspectives: Consensus Layer</title>
   <desc id="dc1">Table showing the three orchestration perspectives — Coordination, Authority/Risk, Evidence/Acceptance — with their responsibilities and core questions.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}
-      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
-      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
-      .ttl{fill:#f1f5f9;font:800 46px "Outfit",Inter,sans-serif}
-      .th{fill:#22d3ee;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
-      .td-key{fill:#f1f5f9;font:700 22px Inter,sans-serif}
+      .bg{fill:#f7f8fa}
+      .outer{fill:none;stroke:rgba(15,23,42,0.16);stroke-width:1.2}
+      .kicker{fill:#5b6673;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#111827;font:800 46px "Outfit",Inter,sans-serif}
+      .th{fill:#5b6673;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .td-key{fill:#111827;font:700 22px Inter,sans-serif}
       .td-red{fill:#f87171;font:700 22px Inter,sans-serif}
-      .td-blue{fill:#60a5fa;font:700 22px Inter,sans-serif}
-      .td{fill:#94a3b8;font:400 20px Inter,sans-serif}
+      .td-blue{fill:#64748b;font:700 22px Inter,sans-serif}
+      .td{fill:#64748b;font:400 20px Inter,sans-serif}
       .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
     </style>
     <pattern id="gtc" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,0.05)" stroke-width="1"/>
     </pattern>
   </defs>
 
@@ -29,17 +29,17 @@
 
   <!-- Table: x=82, total w=1436. Col1=300 (perspective) Col2=740 (responsibility) Col3=396 (core question) -->
   <!-- Header row: y=148, h=52 -->
-  <rect x="82"   y="148" width="300" height="52" fill="rgba(34,211,238,0.1)"  stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
-  <rect x="382"  y="148" width="740" height="52" fill="rgba(34,211,238,0.1)"  stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
-  <rect x="1122" y="148" width="396" height="52" fill="rgba(34,211,238,0.1)"  stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <rect x="82"   y="148" width="300" height="52" fill="rgba(100,116,139,0.1)"  stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
+  <rect x="382"  y="148" width="740" height="52" fill="rgba(100,116,139,0.1)"  stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
+  <rect x="1122" y="148" width="396" height="52" fill="rgba(100,116,139,0.1)"  stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
   <text x="102"  y="181" class="th">PERSPECTIVE</text>
   <text x="402"  y="181" class="th">RESPONSIBILITY</text>
   <text x="1142" y="181" class="th">CORE QUESTION</text>
 
   <!-- Row 1: Coordination view — y=200, h=140 -->
-  <rect x="82"   y="200" width="300" height="140" fill="rgba(34,211,238,0.05)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="382"  y="200" width="740" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="1122" y="200" width="396" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
+  <rect x="82"   y="200" width="300" height="140" fill="rgba(100,116,139,0.05)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="382"  y="200" width="740" height="140" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="1122" y="200" width="396" height="140" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
   <!-- single line centered in 140px: baseline ≈ y+73 -->
   <text x="102"  y="273" class="td-key">Coordination view</text>
   <!-- two lines in 140px: line1 ≈ y+62, line2 ≈ y+90 -->
@@ -49,9 +49,9 @@
   <text x="1142" y="290" class="td">be done, and by whom</text>
 
   <!-- Row 2: Authority/Risk view — y=340, h=140 -->
-  <rect x="82"   y="340" width="300" height="140" fill="rgba(239,68,68,0.06)"   stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="382"  y="340" width="740" height="140" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="1122" y="340" width="396" height="140" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
+  <rect x="82"   y="340" width="300" height="140" fill="rgba(239,68,68,0.06)"   stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="382"  y="340" width="740" height="140" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="1122" y="340" width="396" height="140" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
   <text x="102"  y="413" class="td-red">Authority / Risk view</text>
   <text x="402"  y="402" class="td">Authorization, boundary check,</text>
   <text x="402"  y="430" class="td">confirmation need, risk boundary trigger</text>
@@ -59,9 +59,9 @@
   <text x="1142" y="430" class="td">where is the risk</text>
 
   <!-- Row 3: Evidence/Acceptance view — y=480, h=140 -->
-  <rect x="82"   y="480" width="300" height="140" fill="rgba(59,130,246,0.06)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="382"  y="480" width="740" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
-  <rect x="1122" y="480" width="396" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.08)" stroke-width="1"/>
+  <rect x="82"   y="480" width="300" height="140" fill="rgba(100,116,139,0.06)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="382"  y="480" width="740" height="140" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+  <rect x="1122" y="480" width="396" height="140" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
   <text x="102"  y="542" class="td-blue">Evidence /</text>
   <text x="102"  y="570" class="td-blue">Acceptance view</text>
   <text x="402"  y="542" class="td">Evidence sufficiency, result reviewability,</text>

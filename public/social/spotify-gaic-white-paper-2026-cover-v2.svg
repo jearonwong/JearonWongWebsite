@@ -1,0 +1,97 @@
+<svg width="3000" height="3000" viewBox="0 0 3000 3000" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Spotify Gaic White Paper 2026 Cover V2 visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Spotify Gaic White Paper 2026 Cover V2</title>
+  <defs>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 760) rotate(40) scale(980 980)">
+      <stop offset="0" stop-color="#2FD9FF" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#2FD9FF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#2FD9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2510 1820) rotate(45) scale(920 920)">
+      <stop offset="0" stop-color="#FF7B5C" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#FF7B5C" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FF7B5C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bgBase" x1="0" y1="0" x2="3000" y2="3000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#070B11"/>
+      <stop offset="0.45" stop-color="#0B1118"/>
+      <stop offset="1" stop-color="#121924"/>
+    </linearGradient>
+    <linearGradient id="panelLeft" x1="0" y1="0" x2="1750" y2="3000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1017"/>
+      <stop offset="1" stop-color="#0E1621"/>
+    </linearGradient>
+    <linearGradient id="panelRight" x1="1600" y1="0" x2="3000" y2="3000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101927"/>
+      <stop offset="1" stop-color="#0A0F16"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="1680" y1="0" x2="1680" y2="3000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2FD9FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#2FD9FF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#2FD9FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="180" height="180" patternUnits="userSpaceOnUse">
+      <path d="M180 0H0V180" fill="none" stroke="#263547" stroke-width="1.2" opacity="0.3"/>
+      <path d="M0 90H180M90 0V180" fill="none" stroke="#1A2432" stroke-width="1" opacity="0.22"/>
+    </pattern>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="3000" height="3000" fill="url(#bgBase)"/>
+  <rect width="3000" height="3000" fill="url(#grid)" opacity="0.22"/>
+  <rect width="3000" height="3000" fill="url(#glowA)"/>
+  <rect width="3000" height="3000" fill="url(#glowB)"/>
+
+  <path d="M0 0H1850L1370 3000H0Z" fill="url(#panelLeft)"/>
+  <path d="M1620 0H3000V3000H2210L1230 980Z" fill="url(#panelRight)"/>
+  <path d="M0 1040L3000 260" stroke="#1A2534" stroke-width="12" opacity="0.55"/>
+  <path d="M0 2000L3000 1170" stroke="#FF7B5C" stroke-width="8" opacity="0.12"/>
+  <path d="M0 2460L3000 1560" stroke="#2FD9FF" stroke-width="7" opacity="0.12"/>
+  <path d="M1670 0L1310 3000" stroke="url(#accentLine)" stroke-width="14" opacity="0.95"/>
+
+  <g transform="translate(2080 1540)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="640" fill="none" stroke="#273548" stroke-width="28" opacity="0.95"/>
+    <circle cx="0" cy="0" r="640" fill="none" stroke="#2FD9FF" stroke-width="36" stroke-dasharray="680 2500" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="0" cy="0" r="640" fill="none" stroke="#8CF26A" stroke-width="36" stroke-dasharray="680 2500" stroke-dashoffset="-820" stroke-linecap="round" opacity="0.88"/>
+    <circle cx="0" cy="0" r="640" fill="none" stroke="#F8BE57" stroke-width="36" stroke-dasharray="680 2500" stroke-dashoffset="-1640" stroke-linecap="round" opacity="0.82"/>
+    <circle cx="0" cy="0" r="640" fill="none" stroke="#FF7B5C" stroke-width="36" stroke-dasharray="680 2500" stroke-dashoffset="-2460" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="0" cy="0" r="360" fill="none" stroke="#304052" stroke-width="18" stroke-dasharray="70 46" opacity="0.9"/>
+    <circle cx="0" cy="0" r="212" fill="none" stroke="#EAF3FA" stroke-width="12" opacity="0.45"/>
+    <path d="M0 -640V-360" stroke="#2FD9FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M640 0H360" stroke="#8CF26A" stroke-width="14" stroke-linecap="round"/>
+    <path d="M0 640V360" stroke="#FF7B5C" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-640 0H-360" stroke="#F8BE57" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="0" cy="-640" r="26" fill="#2FD9FF"/>
+    <circle cx="640" cy="0" r="26" fill="#8CF26A"/>
+    <circle cx="0" cy="640" r="26" fill="#FF7B5C"/>
+    <circle cx="-640" cy="0" r="26" fill="#F8BE57"/>
+    <rect x="-152" y="-152" width="304" height="304" rx="32" fill="#0B1119" stroke="#F5FAFF" stroke-width="10"/>
+    <path d="M-102 -62H102" stroke="#2FD9FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-102 0H102" stroke="#EAF3FA" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-102 62H102" stroke="#FF7B5C" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="-118" cy="-62" r="12" fill="#2FD9FF"/>
+    <circle cx="-118" cy="0" r="12" fill="#EAF3FA"/>
+    <circle cx="-118" cy="62" r="12" fill="#FF7B5C"/>
+    <circle cx="118" cy="-62" r="12" fill="#2FD9FF"/>
+    <circle cx="118" cy="0" r="12" fill="#EAF3FA"/>
+    <circle cx="118" cy="62" r="12" fill="#FF7B5C"/>
+  </g>
+
+  <g font-family="Outfit, Inter, Helvetica, sans-serif" font-weight="900">
+    <text x="170" y="790" fill="#2FD9FF" font-size="252">GLOBAL AI</text>
+    <text x="170" y="1155" fill="#F5FAFF" font-size="336">COMPLIANCE</text>
+    <text x="170" y="1500" fill="#FF7B5C" font-size="246">WHITE PAPER</text>
+    <text x="170" y="1855" fill="#8CF26A" font-size="296">2026</text>
+  </g>
+
+  <path d="M170 1932H1080" stroke="#F8BE57" stroke-width="10" opacity="0.8"/>
+  <text x="170" y="2034" fill="#C5D2E0" font-family="Inter, Helvetica, sans-serif" font-size="50" font-weight="700">AGENTIC LIFECYCLE CONFORMANCE</text>
+  <text x="170" y="2824" fill="#F5FAFF" font-family="Inter, Helvetica, sans-serif" font-size="44" font-weight="800">JEARON WONG</text>
+  <text x="170" y="2878" fill="#93A8BC" font-family="Inter, Helvetica, sans-serif" font-size="28" font-weight="700">PROTOCOL DESIGN FOR THE AGENT ERA</text>
+</svg>

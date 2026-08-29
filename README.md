@@ -4,7 +4,7 @@ Static-first Astro site for publishing the Research Ledger: lifecycle definition
 
 ## What ships
 
-- Primary navigation: Lifecycle, Essays, Research, Projects, About, and Explore
+- Primary navigation: Start here, Lifecycle, Essays, Research, Projects, About, and Explore
 - Current essays with frontmatter-backed content collections
 - Projects framed as protocol, runtime, delivery, and evidence paths rather than a generic portfolio
 - Discovery assets: sitemap, robots, RSS, canonical metadata, JSON-LD, `llms.txt`, and entity graph records
@@ -18,10 +18,12 @@ npm run build
 npm run typecheck
 npm run lint
 npm run assets:og:check
+npm run audit:browser
+npm run verify:production:local
 npm run audit:all
 ```
 
-`npm run audit:all` is the publication closeout gate. It runs typechecking, linting, the static build, publication-surface checks, information-architecture checks, editorial metadata checks, content-similarity checks, the package-surface leak check, and the Research Ledger visual-system checks.
+`npm run audit:all` is the publication closeout gate. It runs typechecking, linting, the static build, publication-surface checks, information-architecture checks, editorial metadata checks, content-similarity checks, asset-registry and browser-quality checks, the package-surface leak check, and the Research Ledger visual-system checks.
 
 ## Architecture
 
@@ -40,3 +42,6 @@ npm run audit:all
 - `.github/workflows/site-governance.yml` runs the same closeout gate on pushes and pull requests
 - `npm run audit:impact` classifies changed publication, semantic, route, visual, artifact, and workflow surfaces
 - `npm run audit:routes` checks every sitemap route against a local static preview for HTTP 200, canonical, and H1 contracts
+- `npm run verify:production` checks a Vercel deployment after it is live. It requires `SITE_BASE_URL` and deployed commit evidence; it does not deploy or publish.
+- The governance workflow accepts Vercel's `deployment_status` success event for automatic post-deploy verification, plus a `vercel-deployment-ready` repository dispatch (URL and commit payload) and `workflow_dispatch` as explicit fallbacks.
+- `npm run audit:browser` checks built routes statically and uses Playwright for desktop/mobile overflow and console checks when Playwright is installed.

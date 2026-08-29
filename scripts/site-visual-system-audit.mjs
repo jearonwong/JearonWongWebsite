@@ -417,6 +417,9 @@ const semanticEvidenceBandPath = path.join(root, "src", "components", "SemanticE
 const readingFlowDiagramPath = path.join(root, "src", "components", "ReadingFlowDiagram.astro");
 const gaicSourceTracePath = path.join(root, "src", "components", "GAICSourceTrace.astro");
 const essaysIndexPath = path.join(root, "src", "pages", "essays", "index.astro");
+const portraitPath = path.join(root, "src", "components", "PortraitAnchor.astro");
+const siteDataPath = path.join(root, "src", "data", "site.ts");
+const portraitWidths = [320, 480, 640];
 const globalCss = exists(globalCssPath) ? read(globalCssPath) : "";
 const requiredLedgerColorTokens = [
   ["--color-action", /--color-action\s*:\s*#2563eb\s*;/],
@@ -536,6 +539,7 @@ if (colorContractFailureCount === 0 && sourceViolations.length === 0) {
 // Generic site OGs derive directly from the site shell and are governed here.
 // Article figures, campaign artwork, and research publication assets remain manual-review surfaces.
 const governedSiteOgNames = [
+  "og-start-here",
   "jearonwong-og",
   "og-about",
   "og-ai-agent-governance",
@@ -545,6 +549,7 @@ const governedSiteOgNames = [
   "og-projects",
 ];
 const governedSiteOgRoutes = {
+  "og-start-here": "/start-here/",
   "jearonwong-og": "/",
   "og-about": "/about/",
   "og-ai-agent-governance": "/ai-agent-governance/",
@@ -608,6 +613,8 @@ if (!exists(dist)) {
 } else {
   const header = exists(headerPath) ? read(headerPath) : "";
   const baseLayout = exists(baseLayoutPath) ? read(baseLayoutPath) : "";
+  const portraitSource = exists(portraitPath) ? read(portraitPath) : "";
+  const siteDataSource = exists(siteDataPath) ? read(siteDataPath) : "";
   const registryHero = exists(registryHeroPath) ? read(registryHeroPath) : "";
   const homepageSource = exists(homepagePath) ? read(homepagePath) : "";
   const conceptCoreSource = exists(conceptCorePath) ? read(conceptCorePath) : "";
@@ -697,6 +704,38 @@ if (!exists(dist)) {
   }
   if (!/body:has\(\.site-ledger-shell\) \.page-content/.test(globalCss)) fail("desktop content offset contract is missing from global.css");
   pass("Research Ledger global token and responsive shell contract checked");
+
+  if (!/@font-face\s*\{[\s\S]*?font-family:\s*["']Inter Variable["'][\s\S]*?inter-latin-wght-normal\.woff2/.test(globalCss)
+    || !/@font-face\s*\{[\s\S]*?font-family:\s*["']Outfit Variable["'][\s\S]*?outfit-latin-wght-normal\.woff2/.test(globalCss)
+    || !/@font-face\s*\{[\s\S]*?font-family:\s*["']JetBrains Mono Variable["'][\s\S]*?jetbrains-mono-latin-wght-normal\.woff2/.test(globalCss)) {
+    fail("global.css must define the three self-hosted Latin variable font faces");
+  }
+  if (/fonts\.googleapis\.com|fonts\.gstatic\.com/.test(`${baseLayout}\n${globalCss}`)) {
+    fail("site typography must not add render-blocking Google Fonts requests");
+  }
+  pass("self-hosted Latin typography and non-blocking font request contract checked");
+
+  if (!exists(portraitPath)) {
+    fail("PortraitAnchor component is missing");
+  } else {
+    if (!/srcset=\{avatarWebpSrcset\}/.test(portraitSource) || !/srcset=\{avatarJpgSrcset\}/.test(portraitSource)) {
+      fail("PortraitAnchor must provide responsive WebP and JPEG srcset attributes");
+    }
+    if (!/sizes=\{avatarSizes\}/.test(portraitSource) || !/fetchpriority="high"/.test(portraitSource)) {
+      fail("PortraitAnchor must declare sizes and high fetch priority for the first-viewport portrait");
+    }
+    for (const width of portraitWidths) {
+      for (const extension of ["webp", "jpg"]) {
+        const file = path.join(root, "public", "images", `jearon-wong-avatar-${width}.${extension}`);
+        if (!exists(file)) fail(`Portrait responsive asset is missing: public/images/jearon-wong-avatar-${width}.${extension}`);
+      }
+    }
+  }
+  pass("Portrait responsive asset and markup contract checked");
+  if (!/image:\s*"\/images\/jearon-wong-avatar-640\.jpg"/.test(siteDataSource)) {
+    fail("siteConfig author image must use the optimized 640px portrait asset");
+  }
+  pass("author entity image source contract checked");
 
   for (const marker of ["prototype-nav", "site-ledger-nav", "secondaryNavGroups", "isRouteActive", "drawerSecondaryNavGroups", "site-nav__drawer"]) {
     if (!header.includes(marker)) fail(`SiteHeader missing Research Ledger/navigation marker: ${marker}`);

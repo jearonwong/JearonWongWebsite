@@ -2,22 +2,31 @@
 // Portrait Anchor Component
 import { siteConfig } from "../data/site";
 
-const avatarWebp = "/images/jearon-wong-avatar.webp";
-const avatarJpg = "/images/jearon-wong-avatar.jpg";
+const avatarJpg = "/images/jearon-wong-avatar-640.jpg";
+const avatarWebpSrcset = [320, 480, 640]
+  .map((width) => `/images/jearon-wong-avatar-${width}.webp ${width}w`)
+  .join(", ");
+const avatarJpgSrcset = [320, 480, 640]
+  .map((width) => `/images/jearon-wong-avatar-${width}.jpg ${width}w`)
+  .join(", ");
+const avatarSizes = "(max-width: 680px) 128px, (max-width: 1080px) 232px, 296px";
 const avatarAlt = `${siteConfig.author.name} portrait`;
 ---
 
 <div class="portrait-anchor">
   <div class="portrait-panel">
     <picture class="portrait-picture">
-      <source srcset={avatarWebp} type="image/webp" />
+      <source srcset={avatarWebpSrcset} sizes={avatarSizes} type="image/webp" />
       <img
         src={avatarJpg}
+        srcset={avatarJpgSrcset}
+        sizes={avatarSizes}
         alt={avatarAlt}
         class="portrait-image"
-        width="1200"
-        height="1200"
+        width="640"
+        height="640"
         loading="eager"
+        fetchpriority="high"
         decoding="async"
       />
     </picture>

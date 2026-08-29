@@ -1,0 +1,69 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Agentic Lifecycle Governance Poster visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Agentic Lifecycle Governance Poster</title>
+  <rect width="1200" height="1600" fill="#f7f8fa"/>
+  <rect x="70" y="66" width="1060" height="1468" fill="#f7f8fa" stroke="#1A1917" stroke-width="2"/>
+
+  <text x="110" y="126" fill="#B84B18" font-family="JetBrains Mono, Menlo, monospace" font-size="20" font-weight="500" letter-spacing="3">CONCEPT CORE · AI GOVERNANCE</text>
+  <line x1="110" y1="164" x2="1090" y2="164" stroke="#1A1917" stroke-width="2"/>
+
+  <text x="110" y="242" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="70" font-weight="400">Agentic Lifecycle</text>
+  <text x="110" y="318" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="70" font-weight="400">Governance</text>
+  <text x="110" y="388" fill="#B84B18" font-family="Outfit, 'Outfit', serif" font-size="50" font-style="italic" font-weight="400">Why AI agent compliance requires</text>
+  <text x="110" y="444" fill="#B84B18" font-family="Outfit, 'Outfit', serif" font-size="50" font-style="italic" font-weight="400">lifecycle responsibility objects</text>
+
+  <text x="110" y="516" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="27" font-weight="300">When AI systems act through agents, tools, handoffs, and memory,</text>
+  <text x="110" y="557" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="27" font-weight="300">the compliance unit shifts from model output to delegated work.</text>
+
+  <rect x="110" y="620" width="980" height="178" rx="4" fill="#1A1917"/>
+  <text x="146" y="674" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="2">CATEGORY DEFINITION</text>
+  <text x="146" y="730" fill="#f7f8fa" font-family="Outfit, 'Outfit', serif" font-size="39" font-weight="400">AI agent compliance is</text>
+  <text x="146" y="781" fill="#F0A07A" font-family="Outfit, 'Outfit', serif" font-size="39" font-style="italic" font-weight="400">lifecycle responsibility compliance.</text>
+
+  <text x="110" y="872" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="2">THE COMPLIANCE UNIT SHIFT</text>
+  <line x1="430" y1="866" x2="1090" y2="866" stroke="#E4E2DA" stroke-width="2"/>
+
+  <rect x="110" y="910" width="455" height="238" rx="4" fill="#f7f8fa" stroke="#CAC8BE" stroke-width="2"/>
+  <text x="144" y="964" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2">OLD UNIT</text>
+  <text x="144" y="1028" fill="#1A1917" font-family="Outfit, 'Outfit', serif" font-size="42" font-weight="400">Model Output</text>
+  <text x="144" y="1090" fill="#6B6A65" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="300">Safety, accuracy, policies,</text>
+  <text x="144" y="1128" fill="#6B6A65" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="300">dashboards, monitoring.</text>
+
+  <path d="M596 1029H688" stroke="#9C9A93" stroke-width="5"/>
+  <path d="M688 1029L660 1007V1051L688 1029Z" fill="#9C9A93"/>
+
+  <rect x="720" y="910" width="370" height="250" rx="4" fill="#edf1f4" stroke="#0D6650" stroke-width="2"/>
+  <text x="754" y="964" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" letter-spacing="2">NEW UNIT</text>
+  <text x="754" y="1028" fill="#094F3C" font-family="Outfit, 'Outfit', serif" font-size="42" font-weight="400">Lifecycle of</text>
+  <text x="754" y="1078" fill="#094F3C" font-family="Outfit, 'Outfit', serif" font-size="42" font-weight="400">Delegated Work</text>
+  <text x="754" y="1140" fill="#3D3C39" font-family="Inter, Inter, sans-serif" font-size="22" font-weight="300">Authority · Evidence · Closure</text>
+
+  <text x="110" y="1228" fill="#9C9A93" font-family="JetBrains Mono, Menlo, monospace" font-size="17" font-weight="500" letter-spacing="2">FIVE OBJECTS THAT CHANGE THE SCORE</text>
+  <line x1="568" y1="1222" x2="1090" y2="1222" stroke="#E4E2DA" stroke-width="2"/>
+
+  <g font-family="Inter, Inter, sans-serif">
+    <rect x="110" y="1264" width="300" height="82" rx="4" fill="#f1f3f5" stroke="#B84B18" stroke-width="1.5"/>
+    <text x="132" y="1297" fill="#8C3610" font-size="17" font-family="JetBrains Mono, Menlo, monospace">MRO-02</text>
+    <text x="132" y="1330" fill="#1A1917" font-size="25" font-weight="500">Authority Boundary</text>
+
+    <rect x="450" y="1264" width="300" height="82" rx="4" fill="#edf1f4" stroke="#0D6650" stroke-width="1.5"/>
+    <text x="472" y="1297" fill="#0D6650" font-size="17" font-family="JetBrains Mono, Menlo, monospace">MRO-06</text>
+    <text x="472" y="1330" fill="#1A1917" font-size="25" font-weight="500">Responsibility Transfer</text>
+
+    <rect x="790" y="1264" width="300" height="82" rx="4" fill="#f3f4f6" stroke="#93560A" stroke-width="1.5"/>
+    <text x="812" y="1297" fill="#93560A" font-size="17" font-family="JetBrains Mono, Menlo, monospace">MRO-04</text>
+    <text x="812" y="1330" fill="#1A1917" font-size="25" font-weight="500">Accepted Outcome</text>
+
+    <rect x="280" y="1372" width="300" height="82" rx="4" fill="#f0f2f5" stroke="#4E43A8" stroke-width="1.5"/>
+    <text x="302" y="1405" fill="#4E43A8" font-size="17" font-family="JetBrains Mono, Menlo, monospace">MRO-08</text>
+    <text x="302" y="1438" fill="#1A1917" font-size="25" font-weight="500">Evidence Partitioning</text>
+
+    <rect x="620" y="1372" width="300" height="82" rx="4" fill="#f1f3f5" stroke="#B84B18" stroke-width="1.5"/>
+    <text x="642" y="1405" fill="#8C3610" font-size="17" font-family="JetBrains Mono, Menlo, monospace">MRO-16</text>
+    <text x="642" y="1438" fill="#1A1917" font-size="25" font-weight="500">Remediation Closure</text>
+  </g>
+
+  <line x1="110" y1="1482" x2="1090" y2="1482" stroke="#CAC8BE" stroke-width="1.5"/>
+  <text x="110" y="1520" fill="#0D6650" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500">Global AI Compliance White Paper 2026</text>
+  <text x="1090" y="1520" fill="#6B6A65" font-family="JetBrains Mono, Menlo, monospace" font-size="18" font-weight="500" text-anchor="end">Jearon Wong · May 2026</text>
+</svg>

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">From Logs to Responsibility-Linked Evidence Chains</title>
   <desc id="desc">Four tiers of evidential value: logs, observability, audit evidence, and responsibility-linked evidence chains.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}.outer{fill:none;stroke:rgba(241,245,249,.16);stroke-width:1.2}.tier{fill:rgba(255,255,255,.03);stroke:rgba(241,245,249,.14);stroke-width:1.2}.tier-blue{fill:rgba(59,130,246,.07);stroke:rgba(59,130,246,.42);stroke-width:1.4}.tier-cyan{fill:rgba(34,211,238,.075);stroke:rgba(34,211,238,.52);stroke-width:1.6}.label{fill:#22d3ee;font:850 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.head{fill:#f8fafc;font:760 30px "Outfit",Inter,sans-serif}.body{fill:#cbd5e1;font:540 22px Inter,sans-serif}.marker{fill:#60a5fa;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.45px}.axis{fill:#94a3b8;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
+      .bg{fill:#f7f8fa}.outer{fill:none;stroke:rgba(15,23,42,.16);stroke-width:1.2}.tier{fill:rgba(15,23,42,.03);stroke:rgba(15,23,42,.14);stroke-width:1.2}.tier-blue{fill:rgba(100,116,139,.07);stroke:rgba(100,116,139,.42);stroke-width:1.4}.tier-cyan{fill:rgba(100,116,139,.075);stroke:rgba(100,116,139,.52);stroke-width:1.6}.label{fill:#5b6673;font:850 18px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.head{fill:#111827;font:760 30px "Outfit",Inter,sans-serif}.body{fill:#334155;font:540 22px Inter,sans-serif}.marker{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.45px}.axis{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.7px}.footer{fill:#64748b;font:800 15px "JetBrains Mono",Menlo,monospace;letter-spacing:.6px}
     </style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,.05)" stroke-width="1"/>
     </pattern>
   </defs>
   <rect width="1600" height="620" class="bg"/>
@@ -39,7 +39,7 @@
   </g>
 
   <g transform="translate(1168 548)">
-    <path d="M0 0H338" stroke="#22d3ee" stroke-width="3"/>
+    <path d="M0 0H338" stroke="#5b6673" stroke-width="3"/>
     <text x="338" y="-10" text-anchor="end" class="axis">INCREASING EVIDENTIAL VALUE</text>
   </g>
   <text x="82" y="548" class="footer">CORE DISTINCTION: OBSERVABLE DOES NOT MEAN AUDITABLE</text>

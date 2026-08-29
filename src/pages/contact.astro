@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
-import { pageRegistry, socialLinks, siteConfig } from "../data/site";
+import { contactContent, pageRegistry, socialLinks, siteConfig } from "../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
 const canonicalPath = "/contact/";
@@ -35,7 +35,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
   canonicalPath={canonicalPath}
   jsonLd={[contactPageJsonLd, contactBreadcrumbJsonLd]}
 >
-  <RegistryPageHero
+      <RegistryPageHero
     title={pageRegistry.contact.title}
     objectType={pageRegistry.contact.objectType}
     objectValue={pageRegistry.contact.objectValue}
@@ -44,6 +44,26 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell shell--narrow page-stack page-stack--tight">
+      <p class="contact-intro">{contactContent.intro}</p>
+
+      <section class="contact-routes" aria-label="Conversation routes">
+        {contactContent.routes.map((route, index) => (
+          <article class="registry-chassis contact-route" id={route.key === "IMAGE_PUBLICATION_LICENSING" ? "image-licensing" : route.key.toLowerCase()}>
+            <div class="contact-route__header">
+              <span class="contact-route__index">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <div class="registry-annotation"><span class="registry-key">{route.key}</span></div>
+                <h2>{route.title}</h2>
+              </div>
+            </div>
+            <p>{route.body}</p>
+            <dl class="contact-route__detail">
+              <div><dt>Bring</dt><dd>{route.ask}</dd></div>
+              <div><dt>Likely first output</dt><dd>{route.outcome}</dd></div>
+            </dl>
+          </article>
+        ))}
+      </section>
 
       <!-- Primary: Email -->
       <article class="registry-chassis contact-block">
@@ -53,7 +73,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
         <a href={`mailto:${siteConfig.author.email}`} class="email-cta" data-analytics-event="contact_open">
           {siteConfig.author.email}
         </a>
-        <p class="contact-note">For direct conversations about Protocol Engineering, agent governance, proof systems, or collaboration.</p>
+        <p class="contact-note">Use the route above to give the message enough context. Direct contact does not imply a commitment, endorsement, licensing grant, or delivery agreement.</p>
       </article>
 
       <!-- Social channels -->
@@ -76,6 +96,72 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
 </BaseLayout>
 
 <style>
+  .contact-intro {
+    max-width: 62ch;
+    margin: 0 0 2rem;
+    color: var(--current-muted);
+    font-size: 1.02rem;
+    line-height: 1.68;
+  }
+  .contact-routes {
+    display: grid;
+    gap: 1px;
+    margin-bottom: 2.5rem;
+    background: var(--current-line);
+  }
+  .contact-route {
+    padding: var(--registry-panel-padding);
+    background: var(--current-surface);
+  }
+  .contact-route__header {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.9rem;
+    align-items: start;
+  }
+  .contact-route__index {
+    padding-top: 0.2rem;
+    color: var(--color-meta);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+  .contact-route h2 {
+    margin: 0.55rem 0 0;
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    line-height: 1.22;
+    letter-spacing: 0;
+    word-spacing: 0;
+  }
+  .contact-route > p {
+    max-width: 64ch;
+    margin: 1rem 0 0 3.4rem;
+    color: var(--current-muted);
+    line-height: 1.62;
+  }
+  .contact-route__detail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 0 3.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .contact-route__detail div { min-width: 0; }
+  .contact-route__detail dt {
+    color: var(--color-meta);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .contact-route__detail dd {
+    margin: 0.35rem 0 0;
+    color: var(--current-muted);
+    font-size: 0.88rem;
+    line-height: 1.52;
+  }
   .contact-block {
     padding: var(--registry-panel-padding);
   }
@@ -136,6 +222,10 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
     color: var(--current-muted);
   }
   @media (max-width: 768px) {
+    .contact-route { padding: var(--registry-card-padding); }
+    .contact-route > p,
+    .contact-route__detail { margin-left: 0; }
+    .contact-route__detail { grid-template-columns: 1fr; }
     .contact-block {
       padding: var(--registry-card-padding);
     }

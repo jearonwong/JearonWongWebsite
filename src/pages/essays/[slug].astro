@@ -17,6 +17,8 @@ export async function getStaticPaths() {
 
 const { essay } = Astro.props;
 const canonicalSlug = essay.id;
+const imageLicenseUrl = new URL(siteConfig.imageRights.licensePath, siteConfig.siteUrl).toString();
+const acquireImageLicenseUrl = new URL(siteConfig.imageRights.acquireLicensePath, siteConfig.siteUrl).toString();
 const { Content, headings } = await render(essay);
 const articleHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const publishedEssays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
@@ -55,7 +57,9 @@ const articleImages = (essay.data.images ?? []).map((image) => {
     copyrightHolder: {
       "@id": `${siteConfig.siteUrl}#person`
     },
-    copyrightNotice: `© ${siteConfig.author.name}`
+    copyrightNotice: `Copyright ${siteConfig.author.name}. All rights reserved.`,
+    license: imageLicenseUrl,
+    acquireLicensePage: acquireImageLicenseUrl
   };
 });
 const primaryArticleImage = articleImages[0];
@@ -675,8 +679,8 @@ const articleJsonLd = {
     background: var(--current-surface);
   }
   .article-content :global(.article-figure--diagram img) {
-    border-color: rgba(17, 17, 17, 0.16);
-    background: var(--bg-monolith);
+    border-color: var(--color-rule);
+    background: var(--surface-paper);
   }
   .article-content :global(.article-figure figcaption) {
     margin-top: 0.85rem;
@@ -1109,7 +1113,7 @@ const articleJsonLd = {
     border-top: 1px solid rgba(241, 245, 249, 0.11);
   }
   .article-content :global(.article-figure--intent-drift img) {
-    background: var(--bg-monolith);
+    background: var(--surface-paper);
   }
   .article-content :global(.protocol-example-card),
   .article-content :global(.lifecycle-event-card) {
@@ -2313,13 +2317,26 @@ const articleJsonLd = {
 
 <script is:inline>
   const articleProgress = document.querySelector("[data-article-progress]");
+  let scrollableHeight = 1;
+  let measureFrame = 0;
   const updateArticleProgress = () => {
     if (!articleProgress) return;
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    const progress = Math.min(1, Math.max(0, window.scrollY / scrollableHeight));
     articleProgress.style.transform = `scaleX(${progress})`;
     articleProgress.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
   };
+  const measureScrollHeight = () => {
+    measureFrame = 0;
+    scrollableHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    updateArticleProgress();
+  };
+  const scheduleMeasure = () => {
+    if (measureFrame) return;
+    measureFrame = window.requestAnimationFrame(measureScrollHeight);
+  };
   updateArticleProgress();
   window.addEventListener("scroll", updateArticleProgress, { passive: true });
+  window.addEventListener("resize", scheduleMeasure, { passive: true });
+  if ("ResizeObserver" in window) new ResizeObserver(scheduleMeasure).observe(document.documentElement);
+  scheduleMeasure();
 </script>

@@ -1,0 +1,96 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Gaic White Paper 2026 Scorecard Thread Card visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Gaic White Paper 2026 Scorecard Thread Card</title>
+  <rect width="1600" height="900" fill="#0D1117"/>
+  <rect x="64" y="54" width="1472" height="792" fill="#101820" stroke="#2C3A48" stroke-width="2"/>
+  <g opacity="0.22">
+    <path d="M64 174H1536" stroke="#27323F"/>
+    <path d="M64 294H1536" stroke="#27323F"/>
+    <path d="M64 414H1536" stroke="#27323F"/>
+    <path d="M64 534H1536" stroke="#27323F"/>
+    <path d="M64 654H1536" stroke="#27323F"/>
+    <path d="M64 774H1536" stroke="#27323F"/>
+    <path d="M224 54V846" stroke="#27323F"/>
+    <path d="M384 54V846" stroke="#27323F"/>
+    <path d="M544 54V846" stroke="#27323F"/>
+    <path d="M704 54V846" stroke="#27323F"/>
+    <path d="M864 54V846" stroke="#27323F"/>
+    <path d="M1024 54V846" stroke="#27323F"/>
+    <path d="M1184 54V846" stroke="#27323F"/>
+    <path d="M1344 54V846" stroke="#27323F"/>
+  </g>
+
+  <rect x="104" y="92" width="252" height="54" fill="#16232E" stroke="#b8c2ce" stroke-width="2"/>
+  <text x="130" y="128" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="800" letter-spacing="3">SCORECARD</text>
+  <text x="384" y="129" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="650">Global AI Compliance White Paper 2026</text>
+
+  <text x="104" y="220" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="62" font-weight="850">8 AI systems evaluated.</text>
+  <text x="104" y="286" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="62" font-weight="850">The gap is lifecycle governance.</text>
+  <rect x="106" y="318" width="610" height="8" fill="#b8c2ce"/>
+  <text x="104" y="366" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="27" font-weight="600">RCCS-T measures traditional governance coverage. RCCS-M and ALCS expose the agentic lifecycle layer.</text>
+
+  <rect x="104" y="414" width="1392" height="330" fill="#0D1117" stroke="#405368" stroke-width="2"/>
+  <rect x="104" y="414" width="1392" height="46" fill="#16232E"/>
+  <text x="128" y="444" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="800">SYSTEM</text>
+  <text x="612" y="444" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="800">RCCS-T</text>
+  <text x="796" y="444" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="800">RCCS-M</text>
+  <text x="986" y="444" fill="#86EFAC" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="800">ALCS</text>
+  <text x="1166" y="444" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="19" font-weight="800">READING</text>
+
+  <g font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">
+    <path d="M104 500H1496M104 540H1496M104 580H1496M104 620H1496M104 660H1496M104 700H1496M104 740H1496" stroke="#263646"/>
+    <path d="M572 414V744M758 414V744M944 414V744M1126 414V744" stroke="#263646"/>
+
+    <text x="128" y="488" fill="#F8FAFC">MPLP</text>
+    <text x="636" y="488" fill="#CBD5E1">57</text>
+    <text x="822" y="488" fill="#b8c2ce">88</text>
+    <text x="1008" y="488" fill="#86EFAC">84</text>
+    <text x="1166" y="488" fill="#CBD5E1">Lifecycle-object alignment</text>
+
+    <text x="128" y="528" fill="#F8FAFC">IBM watsonx.governance</text>
+    <text x="636" y="528" fill="#CBD5E1">82</text>
+    <text x="822" y="528" fill="#b8c2ce">60</text>
+    <text x="1008" y="528" fill="#86EFAC">58</text>
+    <text x="1166" y="528" fill="#CBD5E1">Traditional governance strength</text>
+
+    <text x="128" y="568" fill="#F8FAFC">Microsoft Azure AI Foundry</text>
+    <text x="636" y="568" fill="#CBD5E1">80</text>
+    <text x="822" y="568" fill="#b8c2ce">64</text>
+    <text x="1008" y="568" fill="#86EFAC">62</text>
+    <text x="1166" y="568" fill="#CBD5E1">Platform controls, lifecycle gap</text>
+
+    <text x="128" y="608" fill="#F8FAFC">AWS Bedrock + AgentCore</text>
+    <text x="636" y="608" fill="#CBD5E1">78</text>
+    <text x="822" y="608" fill="#b8c2ce">62</text>
+    <text x="1008" y="608" fill="#86EFAC">60</text>
+    <text x="1166" y="608" fill="#CBD5E1">Guardrails != responsibility</text>
+
+    <text x="128" y="648" fill="#F8FAFC">Google Vertex AI + ADK</text>
+    <text x="636" y="648" fill="#CBD5E1">79</text>
+    <text x="822" y="648" fill="#b8c2ce">63</text>
+    <text x="1008" y="648" fill="#86EFAC">61</text>
+    <text x="1166" y="648" fill="#CBD5E1">Safety controls != lifecycle proof</text>
+
+    <text x="128" y="688" fill="#F8FAFC">LangGraph + LangSmith</text>
+    <text x="636" y="688" fill="#CBD5E1">60</text>
+    <text x="822" y="688" fill="#b8c2ce">78</text>
+    <text x="1008" y="688" fill="#86EFAC">80</text>
+    <text x="1166" y="688" fill="#CBD5E1">Orchestration/evidence adjacency</text>
+
+    <text x="128" y="728" fill="#F8FAFC">OpenAI Agents SDK</text>
+    <text x="636" y="728" fill="#CBD5E1">58</text>
+    <text x="822" y="728" fill="#b8c2ce">66</text>
+    <text x="1008" y="728" fill="#86EFAC">64</text>
+    <text x="1166" y="728" fill="#CBD5E1">Execution needs governance</text>
+  </g>
+
+  <rect x="104" y="744" width="1392" height="40" fill="#0D1117" stroke="#263646" stroke-width="0"/>
+  <text x="128" y="770" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">CrewAI</text>
+  <text x="636" y="770" fill="#CBD5E1" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">48</text>
+  <text x="822" y="770" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">61</text>
+  <text x="1008" y="770" fill="#86EFAC" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">63</text>
+  <text x="1166" y="770" fill="#CBD5E1" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">Roles are not accountability</text>
+
+  <text x="104" y="818" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="20" font-weight="650">Provisional analytical profiles. Not legal compliance proof, certification, or procurement advice.</text>
+  <text x="1496" y="818" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="23" font-weight="800" text-anchor="end">Jearon Wong</text>
+</svg>

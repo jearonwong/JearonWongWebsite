@@ -1,0 +1,62 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="publication-artwork" data-palette="neutral-structure-semantic-exceptions">
+  <desc id="desc">Gaic White Paper 2026 Mro Thread Card visual asset from the Jearon Wong Research Ledger.</desc>
+  <title id="title">Gaic White Paper 2026 Mro Thread Card</title>
+  <rect width="1600" height="900" fill="#0D1117"/>
+  <rect x="64" y="54" width="1472" height="792" fill="#101820" stroke="#2C3A48" stroke-width="2"/>
+  <g opacity="0.22">
+    <path d="M64 174H1536" stroke="#27323F"/>
+    <path d="M64 294H1536" stroke="#27323F"/>
+    <path d="M64 414H1536" stroke="#27323F"/>
+    <path d="M64 534H1536" stroke="#27323F"/>
+    <path d="M64 654H1536" stroke="#27323F"/>
+    <path d="M64 774H1536" stroke="#27323F"/>
+    <path d="M224 54V846" stroke="#27323F"/>
+    <path d="M384 54V846" stroke="#27323F"/>
+    <path d="M544 54V846" stroke="#27323F"/>
+    <path d="M704 54V846" stroke="#27323F"/>
+    <path d="M864 54V846" stroke="#27323F"/>
+    <path d="M1024 54V846" stroke="#27323F"/>
+    <path d="M1184 54V846" stroke="#27323F"/>
+    <path d="M1344 54V846" stroke="#27323F"/>
+  </g>
+
+  <rect x="104" y="92" width="236" height="54" fill="#16232E" stroke="#b8c2ce" stroke-width="2"/>
+  <text x="130" y="128" fill="#b8c2ce" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="800" letter-spacing="3">MRO OBJECTS</text>
+  <text x="370" y="129" fill="#B8C7D9" font-family="Inter, Inter, sans-serif" font-size="25" font-weight="650">Global AI Compliance White Paper 2026</text>
+
+  <text x="104" y="224" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="64" font-weight="850">The missing layer is not policy.</text>
+  <text x="104" y="294" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="64" font-weight="850">It is lifecycle responsibility objects.</text>
+  <rect x="106" y="328" width="676" height="8" fill="#b8c2ce"/>
+  <text x="104" y="384" fill="#C9D7E6" font-family="Inter, Inter, sans-serif" font-size="29" font-weight="600">The paper defines 16 Missing Regulatory Objects. These five create the largest score gaps today.</text>
+
+  <g font-family="Inter, Inter, sans-serif">
+    <rect x="104" y="450" width="422" height="130" fill="#0D1117" stroke="#b8c2ce" stroke-width="2"/>
+    <text x="132" y="492" fill="#b8c2ce" font-size="22" font-weight="850">MRO-02</text>
+    <text x="132" y="536" fill="#F8FAFC" font-size="31" font-weight="850">Authority Boundary</text>
+    <text x="132" y="568" fill="#9FB1C5" font-size="20" font-weight="600">Who had authority to act?</text>
+
+    <rect x="590" y="450" width="422" height="130" fill="#0D1117" stroke="#86EFAC" stroke-width="2"/>
+    <text x="618" y="492" fill="#86EFAC" font-size="22" font-weight="850">MRO-06</text>
+    <text x="618" y="536" fill="#F8FAFC" font-size="31" font-weight="850">Responsibility Transfer</text>
+    <text x="618" y="568" fill="#9FB1C5" font-size="20" font-weight="600">Where did responsibility move?</text>
+
+    <rect x="1074" y="450" width="422" height="130" fill="#0D1117" stroke="#F59E0B" stroke-width="2"/>
+    <text x="1102" y="492" fill="#FBBF24" font-size="22" font-weight="850">MRO-04</text>
+    <text x="1102" y="536" fill="#F8FAFC" font-size="31" font-weight="850">Accepted Outcome</text>
+    <text x="1102" y="568" fill="#9FB1C5" font-size="20" font-weight="600">Who accepted the final state?</text>
+
+    <rect x="286" y="626" width="422" height="130" fill="#0D1117" stroke="#A78BFA" stroke-width="2"/>
+    <text x="314" y="668" fill="#C4B5FD" font-size="22" font-weight="850">MRO-08</text>
+    <text x="314" y="712" fill="#F8FAFC" font-size="31" font-weight="850">Evidence Partitioning</text>
+    <text x="314" y="744" fill="#9FB1C5" font-size="20" font-weight="600">Which evidence belongs where?</text>
+
+    <rect x="892" y="626" width="422" height="130" fill="#0D1117" stroke="#F472B6" stroke-width="2"/>
+    <text x="920" y="668" fill="#F9A8D4" font-size="22" font-weight="850">MRO-16</text>
+    <text x="920" y="712" fill="#F8FAFC" font-size="31" font-weight="850">Remediation Closure</text>
+    <text x="920" y="744" fill="#9FB1C5" font-size="20" font-weight="600">How was the dispute closed?</text>
+  </g>
+
+  <rect x="104" y="794" width="1392" height="1" fill="#405368"/>
+  <text x="104" y="828" fill="#8EA3B8" font-family="Inter, Inter, sans-serif" font-size="21" font-weight="650">Full paper includes 16 MRO object cards, audit questions, rubrics, and system mappings.</text>
+  <text x="1496" y="828" fill="#F8FAFC" font-family="Inter, Inter, sans-serif" font-size="23" font-weight="800" text-anchor="end">Jearon Wong</text>
+</svg>

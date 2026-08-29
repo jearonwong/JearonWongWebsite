@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="trf drf">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="trf drf" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="trf">Role Definition: Seven Required Fields</title>
   <desc id="drf">Table listing the seven required fields for every Agent Role definition: activation condition, deactivation condition, responsibility boundary, authority scope, evidence obligation, confirmation relationship, and acceptance impact.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}
-      .outer{fill:none;stroke:rgba(241,245,249,0.16);stroke-width:1.2}
-      .kicker{fill:#22d3ee;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
-      .ttl{fill:#f1f5f9;font:800 46px "Outfit",Inter,sans-serif}
-      .th{fill:#22d3ee;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
-      .td-key{fill:#f1f5f9;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:0.3px}
-      .td{fill:#94a3b8;font:400 20px Inter,sans-serif}
+      .bg{fill:#f7f8fa}
+      .outer{fill:none;stroke:rgba(15,23,42,0.16);stroke-width:1.2}
+      .kicker{fill:#5b6673;font:700 19px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .ttl{fill:#111827;font:800 46px "Outfit",Inter,sans-serif}
+      .th{fill:#5b6673;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .td-key{fill:#111827;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:0.3px}
+      .td{fill:#64748b;font:400 20px Inter,sans-serif}
       .footer{fill:#64748b;font:700 16px "JetBrains Mono",Menlo,monospace;letter-spacing:0.8px}
     </style>
     <pattern id="grf" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(241,245,249,0.05)" stroke-width="1"/>
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(15,23,42,0.05)" stroke-width="1"/>
     </pattern>
   </defs>
 
@@ -27,52 +27,52 @@
 
   <!-- Table: x=82, total w=1436. Col1=380 (field) Col2=1056 (meaning) -->
   <!-- Header row: y=148, h=52 -->
-  <rect x="82"  y="148" width="380"  height="52" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
-  <rect x="462" y="148" width="1056" height="52" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <rect x="82"  y="148" width="380"  height="52" fill="rgba(100,116,139,0.1)" stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
+  <rect x="462" y="148" width="1056" height="52" fill="rgba(100,116,139,0.1)" stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
   <text x="102" y="181" class="th">FIELD</text>
   <text x="482" y="181" class="th">MEANING</text>
 
   <!-- 7 rows, h=84 each. y starts at 200 -->
   <!-- Row 1: Activation condition -->
-  <rect x="82"  y="200" width="380"  height="84" fill="rgba(34,211,238,0.04)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="200" width="1056" height="84" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="200" width="380"  height="84" fill="rgba(100,116,139,0.04)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="200" width="1056" height="84" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <!-- single line centered in 84px: baseline ≈ y+50 -->
   <text x="102" y="250" class="td-key">Activation condition</text>
   <text x="482" y="250" class="td">Under what circumstances should this Role be activated</text>
 
   <!-- Row 2: Deactivation condition -->
-  <rect x="82"  y="284" width="380"  height="84" fill="rgba(255,255,255,0.02)"  stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="284" width="1056" height="84" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="284" width="380"  height="84" fill="rgba(15,23,42,0.02)"  stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="284" width="1056" height="84" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="334" class="td-key">Deactivation condition</text>
   <text x="482" y="334" class="td">Under what circumstances should this Role be suspended or deactivated</text>
 
   <!-- Row 3: Responsibility boundary -->
-  <rect x="82"  y="368" width="380"  height="84" fill="rgba(34,211,238,0.04)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="368" width="1056" height="84" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="368" width="380"  height="84" fill="rgba(100,116,139,0.04)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="368" width="1056" height="84" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="418" class="td-key">Responsibility boundary</text>
   <text x="482" y="418" class="td">What this Role is responsible for, and what it is not</text>
 
   <!-- Row 4: Authority scope -->
-  <rect x="82"  y="452" width="380"  height="84" fill="rgba(255,255,255,0.02)"  stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="452" width="1056" height="84" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="452" width="380"  height="84" fill="rgba(15,23,42,0.02)"  stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="452" width="1056" height="84" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="502" class="td-key">Authority scope</text>
   <text x="482" y="502" class="td">What this Role is authorized to do, what is prohibited</text>
 
   <!-- Row 5: Evidence obligation -->
-  <rect x="82"  y="536" width="380"  height="84" fill="rgba(34,211,238,0.04)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="536" width="1056" height="84" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="536" width="380"  height="84" fill="rgba(100,116,139,0.04)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="536" width="1056" height="84" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="586" class="td-key">Evidence obligation</text>
   <text x="482" y="586" class="td">What evidence this Role must produce before handing off a task</text>
 
   <!-- Row 6: Confirmation relationship -->
-  <rect x="82"  y="620" width="380"  height="84" fill="rgba(255,255,255,0.02)"  stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="620" width="1056" height="84" fill="rgba(255,255,255,0.015)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="620" width="380"  height="84" fill="rgba(15,23,42,0.02)"  stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="620" width="1056" height="84" fill="rgba(15,23,42,0.015)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="670" class="td-key">Confirmation relationship</text>
   <text x="482" y="670" class="td">Which human role needs to confirm certain operations of this Role</text>
 
   <!-- Row 7: Acceptance impact -->
-  <rect x="82"  y="704" width="380"  height="84" fill="rgba(34,211,238,0.04)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
-  <rect x="462" y="704" width="1056" height="84" fill="rgba(255,255,255,0.02)" stroke="rgba(241,245,249,0.07)" stroke-width="1"/>
+  <rect x="82"  y="704" width="380"  height="84" fill="rgba(100,116,139,0.04)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
+  <rect x="462" y="704" width="1056" height="84" fill="rgba(15,23,42,0.02)" stroke="rgba(15,23,42,0.07)" stroke-width="1"/>
   <text x="102" y="754" class="td-key">Acceptance impact</text>
   <text x="482" y="754" class="td">How this Role's output affects downstream acceptance judgment</text>
 

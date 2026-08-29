@@ -31,6 +31,61 @@ const pngDimensions = (file) => {
 };
 const sha256 = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
 const normalizeRelativePath = (value) => String(value).replaceAll("\\", "/").replace(/^\/+/, "");
+const schemaDatePattern = /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:?\d{2})?)?$/;
+
+function collectJsonLd(html, relative) {
+  const entries = [];
+  for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const parsed = JSON.parse(match[1]);
+      entries.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch (error) {
+      fail(`JSON-LD is not valid JSON: ${relative} (${error.message})`);
+    }
+  }
+  return entries;
+}
+
+function inspectSchemaDates(entries, relative) {
+  for (const entry of entries) {
+    if (!entry || typeof entry !== "object") continue;
+    for (const key of ["datePublished", "dateModified"]) {
+      if (!(key in entry)) continue;
+      const value = entry[key];
+      if (typeof value !== "string" || !schemaDatePattern.test(value) || Number.isNaN(Date.parse(value))) {
+        fail(`JSON-LD ${key} must be a complete ISO 8601 date or datetime: ${relative} (${String(value)})`);
+      }
+    }
+    if (typeof entry.datePublished === "string" && typeof entry.dateModified === "string"
+      && schemaDatePattern.test(entry.datePublished) && schemaDatePattern.test(entry.dateModified)
+      && Date.parse(entry.dateModified) < Date.parse(entry.datePublished)) {
+      fail(`JSON-LD dateModified predates datePublished: ${relative}`);
+    }
+  }
+}
+
+function inspectImageRights(entries, relative) {
+  const imageObjects = [];
+  const visit = (value) => {
+    if (!value || typeof value !== "object") return;
+    if (Array.isArray(value)) {
+      value.forEach(visit);
+      return;
+    }
+    const types = Array.isArray(value["@type"]) ? value["@type"] : [value["@type"]];
+    if (types.includes("ImageObject")) imageObjects.push(value);
+    Object.values(value).forEach(visit);
+  };
+  entries.forEach(visit);
+  for (const imageObject of imageObjects) {
+    if (typeof imageObject.license !== "string" || !imageObject.license.startsWith("https://www.jearonwong.com/terms/")) {
+      fail(`ImageObject license must point to the site image-rights terms: ${relative}`);
+    }
+    if (typeof imageObject.acquireLicensePage !== "string" || !imageObject.acquireLicensePage.startsWith("https://www.jearonwong.com/contact/")) {
+      fail(`ImageObject acquireLicensePage must point to the site licensing contact: ${relative}`);
+    }
+  }
+}
 
 function inspectArtifactIntegrity(manifestPath, builtHtmlPath) {
   const relativeManifest = path.relative(root, manifestPath).split(path.sep).join("/");
@@ -166,6 +221,23 @@ function inspectHeadingOutline(html) {
 if (!exists(dist)) {
   fail("dist/ is missing; run npm run build first");
 } else {
+  const builtHtmlFiles = [];
+  const collectHtml = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const file = path.join(directory, entry.name);
+      if (entry.isDirectory()) collectHtml(file);
+      else if (entry.name.endsWith(".html")) builtHtmlFiles.push(file);
+    }
+  };
+  collectHtml(dist);
+  for (const file of builtHtmlFiles) {
+    const relative = path.relative(dist, file).split(path.sep).join("/");
+    const entries = collectJsonLd(read(file), relative);
+    inspectSchemaDates(entries, relative);
+    inspectImageRights(entries, relative);
+  }
+  pass(`all built JSON-LD date and image-rights contracts checked (${builtHtmlFiles.length} HTML files)`);
+
   const essayFiles = fs.readdirSync(essaysDir).filter((file) => file.endsWith(".md"));
   const astroConfigText = exists(astroConfig) ? read(astroConfig) : "";
   for (const file of essayFiles) {
@@ -192,9 +264,13 @@ if (!exists(dist)) {
       if (!astroConfigText.includes(`/essays/${legacySlug}/`)) fail(`legacy slug missing explicit redirect: ${legacySlug}`);
     }
     if (status === "published" && exists(route)) {
-      const h1Count = (read(route).match(/<h1\b/gi) ?? []).length;
+      const routeHtml = read(route);
+      const h1Count = (routeHtml.match(/<h1\b/gi) ?? []).length;
       if (h1Count !== 1) fail(`essay must have one h1: ${slug} (${h1Count})`);
-      if (!/dateModified/.test(read(route))) fail(`published essay missing dateModified JSON-LD: ${slug}`);
+      if (!/dateModified/.test(routeHtml)) fail(`published essay missing dateModified JSON-LD: ${slug}`);
+      const jsonLd = collectJsonLd(routeHtml, `essays/${slug}/index.html`);
+      inspectSchemaDates(jsonLd, `essays/${slug}/index.html`);
+      inspectImageRights(jsonLd, `essays/${slug}/index.html`);
     }
   }
   pass("essay publication status and h1 contracts checked");
@@ -249,6 +325,8 @@ if (!exists(dist)) {
       continue;
     }
     const html = read(file);
+    const whitePaperJsonLd = collectJsonLd(html, relative);
+    inspectSchemaDates(whitePaperJsonLd, relative);
     const manifest = path.join(root, "public", relative.replace(/\/[^/]+\.html$/, "/manifest.json"));
     const manifestData = exists(manifest) ? JSON.parse(read(manifest)) : null;
     if (manifestData) {

@@ -131,8 +131,13 @@ export const siteConfig = {
     name: "Jearon Wong",
     role: "Protocol Architect for the Agent Era", // Secondary role descriptor
     bio: "Writing and building at the intersection of protocol architecture, lifecycle governance, and accountable delivery.",
-    image: "/images/jearon-wong-avatar.jpg",
+    image: "/images/jearon-wong-avatar-640.jpg",
     email: "contact@jearonwong.com"
+  },
+  imageRights: {
+    licensePath: "/terms/#image-rights",
+    acquireLicensePath: "/contact/#image-licensing",
+    notice: "All rights reserved unless a specific image states otherwise. Contact Jearon Wong for reuse permission."
   }
 };
 
@@ -574,7 +579,11 @@ export const contentRouteRoles = {
   },
   contact: {
     question: "How can someone reach the maintainer?",
-    job: "Provide a quiet endpoint for direct conversations."
+    job: "Provide a quiet endpoint for direct conversations, with enough context to route a serious inquiry."
+  },
+  startHere: {
+    question: "Where should a first-time reader begin?",
+    job: "Orient a new reader through the field definition, protocol path, proof path, and evidence layer in one short route."
   }
 };
 
@@ -685,9 +694,77 @@ export const homepageActions = {
     label: "Read the first Lifecycle essay"
   },
   startHere: {
-    href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
-    label: "Start with the flagship essay"
+    href: "/start-here/",
+    label: "Start here"
   }
+};
+
+export const startHereContent = {
+  hero: {
+    title: "Start here.",
+    subtitle: "A short orientation to Jearon Wong's research ledger.",
+    lead: "The site follows one question: how does agent work move from human intent to an accepted outcome with responsibility and evidence still attached?"
+  },
+  operationalProblem: {
+    title: "The operational problem",
+    body: "An agent can execute a task and still leave the work without a durable account of intent, authority, review, or acceptance. Execution is not Delivery."
+  },
+  missingLifecycle: {
+    title: "The missing lifecycle",
+    body: "AI Agent Lifecycle defines the accountable lifecycle of agent work from intent to accepted outcome. Agentic Delivery names the layer between agent execution and accountable outcomes."
+  },
+  layers: [
+    { label: "AI Agent Lifecycle", detail: "The field definition: the unit of accountability.", href: "/lifecycle/" },
+    { label: "Agentic Delivery", detail: "The category for carrying intent through to an accepted outcome.", href: "/concepts/agentic-delivery/" },
+    { label: "MPLP", detail: "The open, vendor-neutral lifecycle protocol path that makes the work explicit and auditable.", href: "/projects/mplp/" }
+  ],
+  systemMap: [
+    { label: "MPLP", role: "Protocol path", href: "/projects/mplp/" },
+    { label: "Cognitive OS", role: "Runtime path", href: "/projects/cognitive-os/" },
+    { label: "SoloCrew", role: "Delivery path", href: "/projects/solocrew/" },
+    { label: "Validation Lab", role: "Evidence path", href: "/projects/validation-lab/" }
+  ],
+  paths: [
+    { label: "Field", detail: "Read the category definition first.", href: "/lifecycle/" },
+    { label: "Protocol", detail: "Inspect how lifecycle responsibility is represented.", href: "/projects/mplp/" },
+    { label: "Evidence", detail: "Follow the records and artifacts that make a claim inspectable.", href: "/evidence/" },
+    { label: "Argument", detail: "Read the essays that explain why the distinction matters.", href: "/essays/" }
+  ],
+  boundary: "This site presents authored field analysis, public research, protocol work, runtime and delivery projects, and evidence surfaces. It does not claim that MPLP is a complete Agent OS, that it automatically detects every Intent Drift, or that it provides certification, legal-compliance proof, insurance approval, or regulatory approval."
+};
+
+export const contactContent = {
+  intro: "Choose the conversation by its object. A useful first message names the question, the relevant artifact, and the kind of response you need.",
+  routes: [
+    {
+      key: "PROTOCOL_ARCHITECTURE",
+      title: "Protocol and architecture discussion",
+      body: "For questions about AI Agent Lifecycle, Agentic Delivery, MPLP, protocol boundaries, and the relationship between protocol, runtime, delivery, and evidence.",
+      ask: "Include the route, definition, or architecture question you want to examine.",
+      outcome: "A scoped technical exchange or a pointer to the relevant public record."
+    },
+    {
+      key: "RESEARCH_COLLABORATION",
+      title: "Research collaboration",
+      body: "For source discussion, adjacent research, critique, or collaboration around lifecycle governance, auditability, and accountable agent work.",
+      ask: "Include your source, research question, and the boundary of the proposed collaboration.",
+      outcome: "A source-qualified conversation about whether the work belongs in the research ledger."
+    },
+    {
+      key: "BRIEFING_SPEAKING",
+      title: "Briefing or speaking",
+      body: "For a focused briefing on the field definition, protocol path, project evidence, or the practical questions around agentic delivery.",
+      ask: "Include audience, format, timing, and the decision the briefing should support.",
+      outcome: "A scoped briefing proposal, subject to fit and availability."
+    },
+    {
+      key: "IMAGE_PUBLICATION_LICENSING",
+      title: "Image and publication licensing",
+      body: "For permission to reuse site figures, diagrams, essays, or other authored publication assets.",
+      ask: "Include the exact asset URL, intended use, territory, duration, and attribution context.",
+      outcome: "A permissions conversation; no reuse is implied until confirmed in writing."
+    }
+  ]
 };
 
 export const homepageContent = {
@@ -1997,6 +2074,7 @@ export function getConceptBySlug(slug: string) {
 }
 
 export const primaryNav = [
+  { href: "/start-here/", label: "Start here" },
   { href: "/lifecycle/", label: "Lifecycle" },
   { href: "/essays/", label: "Essays" },
   { href: "/research/", label: "Research" },
@@ -2055,6 +2133,12 @@ export const secondaryNavGroups = [
 ] as const;
 
 export const pageRegistry = {
+  startHere: {
+    title: "Start here",
+    objectType: "PAGE_ROLE",
+    objectValue: "ORIENTATION HUB",
+    lead: "A short orientation to the field definition, protocol path, proof path, and evidence layer behind Jearon Wong's research ledger."
+  },
   about: {
     title: "Jearon Wong",
     subtitle: "Protocol Architect for the Agent Era",
@@ -2109,7 +2193,7 @@ export const pageRegistry = {
     title: "Contact",
     objectType: "PAGE_ROLE",
     objectValue: "QUIET ENDPOINT",
-    lead: "For direct conversations about Protocol Engineering, agent governance, proof systems, or collaboration."
+    lead: "Four quiet routes for protocol and architecture discussion, research collaboration, briefings, and image or publication licensing."
   },
   newsletter: {
     title: "Newsletter",

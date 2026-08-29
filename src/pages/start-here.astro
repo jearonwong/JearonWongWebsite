@@ -1,0 +1,180 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../components/ReadingFlowDiagram.astro";
+import SemanticEvidenceBand from "../components/SemanticEvidenceBand.astro";
+import { pageRegistry, siteConfig, siteSemanticBaseline, startHereContent } from "../data/site";
+import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
+
+const canonicalPath = "/start-here/";
+const pageUrl = absoluteUrl(canonicalPath);
+const pageDescription = pageRegistry.startHere.lead;
+const contentRouteAnswer = "Start with the category, then choose the record type you need: field, protocol, evidence, or argument.";
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "CollectionPage"],
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: pageRegistry.startHere.title,
+  description: pageDescription,
+  isPartOf: { "@id": `${siteConfig.siteUrl}#website` },
+  about: ["AI Agent Lifecycle", "Agentic Delivery", "MPLP"],
+  author: { "@id": `${siteConfig.siteUrl}#person` },
+  hasPart: startHereContent.layers.map((layer) => ({ "@type": "WebPage", name: layer.label, url: absoluteUrl(layer.href) }))
+};
+const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
+  { name: "Home", path: "/" },
+  { name: "Start here", path: canonicalPath }
+]);
+---
+
+<BaseLayout
+  title={pageRegistry.startHere.title}
+  description={pageDescription}
+  canonicalPath={canonicalPath}
+  shareTitle="Start here — Jearon Wong's research ledger"
+  shareDescription={pageDescription}
+  ogImagePath="/social/og-start-here.png"
+  ogImageAlt="Start here: an orientation to Jearon Wong's research ledger"
+  jsonLd={[pageJsonLd, breadcrumbJsonLd]}
+>
+  <RegistryPageHero
+    title={startHereContent.hero.title}
+    subtitle={startHereContent.hero.subtitle}
+    objectType={pageRegistry.startHere.objectType}
+    objectValue={pageRegistry.startHere.objectValue}
+    lead={startHereContent.hero.lead}
+  />
+
+  <div class="zone-b page-body start-here-body">
+    <div class="shell start-here-shell">
+      <ReadingGuide
+        role="ORIENTATION_HUB"
+        answer={contentRouteAnswer}
+        startHref="#lifecycle-chain"
+        startLabel="Read the three-layer chain"
+        nextLinks={[{ href: "/lifecycle/", label: "Open the field definition" }, { href: "/projects/", label: "Inspect the proof path" }]}
+        sections={["Operational problem", "Three-layer chain", "System map", "Choose a path", "Boundary"]}
+      />
+
+      <SemanticEvidenceBand
+        definition={siteSemanticBaseline.fieldDefinitionStatement}
+        boundary={startHereContent.boundary}
+        evidence="The lifecycle page, protocol project, research ledger, and evidence surface are the canonical records behind this orientation route."
+        citation="Use the linked canonical records when citing a definition, protocol role, research claim, or evidence artifact."
+        updated={siteConfig.homepageLastModified}
+        sourceLevel="AUTHORED_ORIENTATION"
+      />
+
+      <section class="orientation-section registry-chassis" id="operational-problem">
+        <div class="registry-annotation section-tag"><span class="registry-key">01_OPERATIONAL_PROBLEM</span></div>
+        <h2>{startHereContent.operationalProblem.title}</h2>
+        <p>{startHereContent.operationalProblem.body}</p>
+      </section>
+
+      <section class="orientation-section" id="lifecycle-chain">
+        <div class="registry-annotation section-tag"><span class="registry-key">02_THREE_LAYER_CHAIN</span></div>
+        <div class="section-heading-row">
+          <div>
+            <h2>{startHereContent.missingLifecycle.title}</h2>
+            <p>{startHereContent.missingLifecycle.body}</p>
+          </div>
+        </div>
+        <ol class="orientation-chain">
+          {startHereContent.layers.map((layer, index) => (
+            <li>
+              <span class="orientation-chain__index">{String(index + 1).padStart(2, "0")}</span>
+              <a href={layer.href}><strong>{layer.label}</strong></a>
+              <span>{layer.detail}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <ReadingFlowDiagram
+        variant="projects"
+        title="One reading order, four proof roles."
+        description="Start with the field, inspect the protocol and runtime paths, then follow delivery and evidence records."
+      />
+
+      <section class="orientation-section" id="system-map">
+        <div class="registry-annotation section-tag"><span class="registry-key">03_SYSTEM_MAP</span></div>
+        <div class="section-heading-row">
+          <div>
+            <h2>How the named projects relate.</h2>
+            <p>The projects are distinct proof paths around one category. The project roles do not redefine MPLP protocol authority.</p>
+          </div>
+        </div>
+        <div class="system-map">
+          {startHereContent.systemMap.map((item, index) => (
+            <a href={item.href} class="system-map__row">
+              <span class="system-map__index">{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item.label}</strong>
+              <span>{item.role}</span>
+              <span aria-hidden="true">{"->"}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="orientation-section" id="choose-a-path">
+        <div class="registry-annotation section-tag"><span class="registry-key">04_CHOOSE_A_PATH</span></div>
+        <div class="path-grid">
+          {startHereContent.paths.map((path, index) => (
+            <a href={path.href} class="path-record">
+              <span class="path-record__index">{String(index + 1).padStart(2, "0")}</span>
+              <strong>{path.label}</strong>
+              <span>{path.detail}</span>
+              <span class="path-record__link">Open record {"->"}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="orientation-section orientation-boundary registry-chassis" id="boundary">
+        <div class="registry-annotation section-tag"><span class="registry-key">05_BOUNDARY</span></div>
+        <h2>Read the scope before the claims.</h2>
+        <p>{startHereContent.boundary}</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .start-here-body { padding: var(--space-page-y) 0; }
+  .start-here-shell { display: grid; gap: 2.5rem; min-width: 0; }
+  .orientation-section { min-width: 0; padding: clamp(1.4rem, 2.8vw, 2.25rem) 0; border-top: 1px solid var(--color-rule); }
+  .orientation-section.registry-chassis { padding: var(--registry-panel-padding); }
+  .section-tag { margin-bottom: 0.9rem; }
+  .orientation-section h2 { margin: 0; color: var(--prototype-ink, #111418); font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.25rem); line-height: var(--type-section-title-line-height); letter-spacing: var(--type-section-title-letter-spacing); word-spacing: var(--type-section-title-word-spacing); text-wrap: balance; }
+  .orientation-section p { max-width: 68ch; margin: 0.8rem 0 0; color: var(--color-meta); font-size: 1rem; line-height: 1.68; }
+  .orientation-chain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 1.6rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); }
+  .orientation-chain li { display: grid; align-content: start; gap: 0.45rem; min-width: 0; min-height: 8.75rem; padding: 1rem; }
+  .orientation-chain li + li { border-left: 1px solid var(--color-rule); }
+  .orientation-chain__index, .system-map__index, .path-record__index { color: var(--color-meta); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em; }
+  .orientation-chain strong { color: var(--prototype-ink, #111418); font-family: var(--font-display); font-size: 1.2rem; line-height: 1.2; }
+  .orientation-chain a { text-decoration: none; }
+  .orientation-chain a:hover strong, .orientation-chain a:focus-visible strong { color: var(--color-action); }
+  .orientation-chain li > span:last-child { color: var(--color-meta); font-size: 0.84rem; line-height: 1.5; }
+  .system-map { border-top: 1px solid var(--color-rule); }
+  .system-map__row { display: grid; grid-template-columns: 3rem minmax(0, 1fr) minmax(130px, 0.6fr) auto; gap: 1rem; align-items: baseline; min-width: 0; padding: 0.95rem 0; border-bottom: 1px solid var(--color-rule); color: var(--prototype-ink, #111418); text-decoration: none; }
+  .system-map__row:hover, .system-map__row:focus-visible { color: var(--color-action); }
+  .system-map__row strong { font-family: var(--font-display); font-size: 1.18rem; }
+  .system-map__row > span:nth-child(3) { color: var(--color-meta); font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .path-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); }
+  .path-record { display: grid; align-content: start; gap: 0.55rem; min-width: 0; min-height: 10rem; padding: 1rem; color: var(--prototype-ink, #111418); text-decoration: none; }
+  .path-record + .path-record { border-left: 1px solid var(--color-rule); }
+  .path-record:hover, .path-record:focus-visible { color: var(--color-action); }
+  .path-record strong { font-family: var(--font-display); font-size: 1.2rem; }
+  .path-record > span:not(.path-record__index):not(.path-record__link) { color: var(--color-meta); font-size: 0.84rem; line-height: 1.5; }
+  .path-record__link { margin-top: auto; color: var(--color-action); font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .orientation-boundary p { max-width: 78ch; }
+  @media (max-width: 760px) {
+    .orientation-chain, .path-grid { grid-template-columns: 1fr; }
+    .orientation-chain li + li, .path-record + .path-record { border-left: 0; border-top: 1px solid var(--color-rule); }
+    .system-map__row { grid-template-columns: 2rem minmax(0, 1fr) auto; gap: 0.7rem; }
+    .system-map__row > span:nth-child(3) { grid-column: 2 / -1; }
+    .system-map__row > span:last-child { grid-column: 3; grid-row: 1; }
+  }
+</style>

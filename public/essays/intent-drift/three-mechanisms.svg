@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc" data-visual-system="research-ledger-b" data-media-category="article-figure" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <title id="title">Intent Drift, Delta Intent, and Drift Detection</title>
   <desc id="desc">Three mechanisms for defending against Intent Drift: Intent Drift as failure mode, Delta Intent as comparison object, and Drift Detection as runtime observation.</desc>
   <defs>
     <style>
-      .bg{fill:#111111}
-      .grid-line{stroke:rgba(241,245,249,0.055);stroke-width:1}
-      .frame{fill:none;stroke:rgba(241,245,249,0.15);stroke-width:1.2}
-      .panel{fill:rgba(255,255,255,0.035);stroke:rgba(241,245,249,0.16);stroke-width:1.4}
-      .panel-a{fill:rgba(34,211,238,0.065);stroke:rgba(34,211,238,0.58);stroke-width:1.8}
-      .panel-b{fill:rgba(59,130,246,0.075);stroke:rgba(59,130,246,0.54);stroke-width:1.8}
-      .connect{stroke:rgba(34,211,238,0.42);stroke-width:2;fill:none}
-      .kicker{fill:#22d3ee;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
-      .title{fill:#f1f5f9;font:820 50px "Outfit",Inter,sans-serif}
-      .subtitle{fill:#94a3b8;font:560 24px Inter,sans-serif}
-      .key{fill:#22d3ee;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
-      .name{fill:#f1f5f9;font:820 42px "Outfit",Inter,sans-serif}
-      .role{fill:#cbd5e1;font:760 25px Inter,sans-serif}
-      .question{fill:#94a3b8;font:560 25px Inter,sans-serif}
+      .bg{fill:#f7f8fa}
+      .grid-line{stroke:rgba(15,23,42,0.055);stroke-width:1}
+      .frame{fill:none;stroke:rgba(15,23,42,0.15);stroke-width:1.2}
+      .panel{fill:rgba(15,23,42,0.035);stroke:rgba(15,23,42,0.16);stroke-width:1.4}
+      .panel-a{fill:rgba(100,116,139,0.065);stroke:rgba(100,116,139,0.58);stroke-width:1.8}
+      .panel-b{fill:rgba(100,116,139,0.075);stroke:rgba(100,116,139,0.54);stroke-width:1.8}
+      .connect{stroke:rgba(100,116,139,0.42);stroke-width:2;fill:none}
+      .kicker{fill:#5b6673;font:700 20px "JetBrains Mono",Menlo,monospace;letter-spacing:1.4px}
+      .title{fill:#111827;font:820 50px "Outfit",Inter,sans-serif}
+      .subtitle{fill:#64748b;font:560 24px Inter,sans-serif}
+      .key{fill:#5b6673;font:800 18px "JetBrains Mono",Menlo,monospace;letter-spacing:1px}
+      .name{fill:#111827;font:820 42px "Outfit",Inter,sans-serif}
+      .role{fill:#334155;font:760 25px Inter,sans-serif}
+      .question{fill:#64748b;font:560 25px Inter,sans-serif}
       .note{fill:#64748b;font:700 17px "JetBrains Mono",Menlo,monospace;letter-spacing:.8px}
     </style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0L0 0 0 40" fill="none" class="grid-line"/>
     </pattern>
     <marker id="arrow" markerWidth="14" markerHeight="11" refX="13" refY="5.5" orient="auto">
-      <path d="M0,0 L14,5.5 L0,11 Z" fill="#22d3ee" opacity=".85"/>
+      <path d="M0,0 L14,5.5 L0,11 Z" fill="#5b6673" opacity=".85"/>
     </marker>
   </defs>
 

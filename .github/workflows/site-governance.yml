@@ -1,6 +1,15 @@
 name: Site Governance
 
 on:
+  workflow_dispatch:
+    inputs:
+      expected_commit:
+        description: "Expected Vercel deployment commit SHA"
+        required: false
+        type: string
+  repository_dispatch:
+    types: [vercel-deployment-ready]
+  deployment_status:
   push:
     branches: [main]
     paths:
@@ -59,10 +68,13 @@ jobs:
       - name: Verify deterministic publication synchronization
         run: |
           npm run publication:sync
-          git diff --exit-code -- public/generated/publication-manifest.json public/generated/publication-impact.json public/llms.txt public/entity/jearonwong-mplp-gaic-entity-graph.json
+          git diff --exit-code -- public/generated/publication-manifest.json public/generated/publication-impact.json public/generated/media-manifest.json public/llms.txt public/entity/jearonwong-mplp-gaic-entity-graph.json public/social public/figures
 
       - name: Run governed closeout
         run: npm run audit:all
+
+      - name: Verify public media visual system
+        run: npm run assets:media:check
 
       - name: Start static preview for route matrix
         run: |
@@ -95,4 +107,46 @@ jobs:
             /tmp/site-change-impact.json
             /tmp/site-preview.log
             dist/publication-receipt.json
+          if-no-files-found: error
+
+  production-verify:
+    name: Verify Vercel production deployment
+    if: >-
+      ${{
+        (github.event_name == 'workflow_dispatch' && vars.SITE_BASE_URL != '') ||
+        (github.event_name == 'repository_dispatch' && github.event.client_payload.url != '') ||
+        (github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' &&
+          (github.event.deployment_status.environment_url != '' || github.event.deployment_status.target_url != ''))
+      }}
+    needs: audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify deployed routes and commit
+        env:
+          SITE_BASE_URL: ${{ github.event.client_payload.url || github.event.deployment_status.environment_url || github.event.deployment_status.target_url || vars.SITE_BASE_URL }}
+          EXPECTED_DEPLOY_COMMIT: ${{ github.event.client_payload.commit || github.event.deployment.sha || inputs.expected_commit || github.sha }}
+          VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+        run: npm run verify:production
+
+      - name: Upload production receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-production-receipt
+          path: dist/production-receipt.json
           if-no-files-found: error
