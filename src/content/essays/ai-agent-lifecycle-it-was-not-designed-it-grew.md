@@ -5,12 +5,33 @@ titleLines:
   - "It Was Not Designed. It Grew."
 subtitle: "From prompt failure to intent drift, I was pushed by real engineering problems toward this definition."
 description: "The first essay in Define The AI Agent Lifecycle. A personal engineering origin story of how prompt failure, context drift, intent drift, and multi-agent coordination exposed the need for AI Agent Lifecycle."
-shareTitle: "AI Agent Lifecycle: It Was Not Designed. It Grew."
+shareTitle: "AI Agent Lifecycle: It Grew"
 shareSubtitle: "From prompt failure to intent drift, I was pushed by real engineering problems toward this definition."
 shareDescription: "From prompt failure to intent drift, Jearon Wong explains how AI Agent Lifecycle grew out of real engineering practice."
 shareImage: /social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.png
 shareImageAlt: "AI Agent Lifecycle: It Was Not Designed. It Grew. — Define The AI Agent Lifecycle"
 publishDate: 2026-04-29
+updatedAt: 2026-04-29
+track: lifecycle
+contentRole: essay
+publicationClass: thought
+editorialTrack: lifecycle
+canonicalRoute: /essays/ai-agent-lifecycle-it-was-not-designed-it-grew/
+canonicalParent: /essays/
+primaryAudience: Builder
+secondaryAudiences:
+  - Architect
+distinctReaderQuestion: "Which engineering failures forced AI Agent Lifecycle to become an explicit field?"
+sourceRefs:
+  - Authored origin essay
+  - MPLP development experience
+indexability: index
+nextSteps:
+  - /lifecycle/
+  - /essays/the-industry-misdefined-multi-agent-ai/
+maxClickDepth: 3
+readingTimeMinutes: 11
+evidenceLevel: ORIGIN ESSAY
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -25,7 +46,6 @@ tags:
   - AI Agent Lifecycle
   - Agentic Delivery
   - Intent Drift
-  - Lifecycle
   - Multi-Agent Systems
 ogImage: /social/ai-agent-lifecycle-it-was-not-designed-it-grew-og.png
 images:

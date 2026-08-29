@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PrototypeNav from "../../../components/PrototypeNav.astro";
+import "../../../styles/prototypes.css";
+import { homepageContent, siteSemanticBaseline, siteThesis } from "../../../data/site";
+---
+
+<BaseLayout
+  title="Quiet Thesis Prototype"
+  description="An author-first UI prototype for Jearon Wong's personal research site."
+  canonicalPath="/prototypes/quiet-thesis/"
+  noindex={true}
+  showSiteHeader={false}
+>
+  <div class="prototype-page prototype-quiet">
+    <PrototypeNav active="quiet" />
+    <div class="prototype-shell">
+      <header class="quiet-hero">
+        <div>
+          <span class="prototype-label">A / Quiet Thesis</span>
+          <h1>{homepageContent.hero.title}</h1>
+          <p class="quiet-hero__lead">{homepageContent.hero.subclaim}</p>
+          <div class="prototype-button-row" style="margin-top: 2.2rem;">
+            <a class="prototype-button prototype-button--solid" href="/lifecycle/">Open the field definition</a>
+            <a class="prototype-button prototype-button--ghost" href="/projects/">Inspect the proof path</a>
+          </div>
+        </div>
+        <aside class="quiet-hero__meta" aria-label="Author and proof path">
+          <h2>{homepageContent.hero.authorAnchor}</h2>
+          <p>{homepageContent.hero.role}. {homepageContent.hero.body}</p>
+          <div class="quiet-stack">
+            {siteThesis.stackProof.map((item) => (
+              <div class="quiet-stack__row">
+                <span class="quiet-stack__label">{item.role}</span>
+                <span class="quiet-stack__value">{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </header>
+
+      <section class="quiet-routes" aria-labelledby="quiet-routes-title">
+        <div class="quiet-routes__intro">
+          <h2 id="quiet-routes-title">Choose a way in.</h2>
+          <p>{siteSemanticBaseline.referencePathDefinition}</p>
+        </div>
+        <div class="quiet-route-list">
+          {homepageContent.readerRoutes.slice(0, 3).map((route) => (
+            <a class="quiet-route" href={route.href}>
+              <span class="quiet-route__index">{route.index}</span>
+              <span>
+                <span class="quiet-route__eyebrow">{route.eyebrow}</span>
+                <span class="quiet-route__title">{route.title}</span>
+              </span>
+              <span class="quiet-route__body">{route.body}</span>
+              <span class="quiet-route__arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

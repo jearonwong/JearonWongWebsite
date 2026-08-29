@@ -1,9 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../components/ReadingFlowDiagram.astro";
 import { appliedPlaybooks, contentRouteRoles, pageRegistry, siteConfig } from "../../data/site";
 
 const canonicalPath = "/playbooks/";
+const indexablePlaybooks = appliedPlaybooks.filter((playbook) => playbook.indexability === "index");
 const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
 const keywords = [
@@ -54,7 +57,7 @@ const itemListJsonLd = {
   "@type": "ItemList",
   "@id": `${pageUrl}#playbook-list`,
   name: "Applied Agentic Governance Playbooks",
-  itemListElement: appliedPlaybooks.map((playbook, index) => ({
+  itemListElement: indexablePlaybooks.map((playbook, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: playbook.title,
@@ -105,20 +108,24 @@ const breadcrumbJsonLd = {
       <a href="/research/global-ai-compliance-white-paper-2026/" class="registry-annotation playbooks-hero-link">
         <span class="registry-key">AUTHORITY_SOURCE</span>: <span class="registry-value">GAIC WHITE PAPER</span>
       </a>
-      <a href="/research/agentic-ai-auditability-assurance-white-paper-2026/" class="registry-annotation playbooks-hero-link">
-        <span class="registry-key">AUDITABILITY_SOURCE</span>: <span class="registry-value">PUBLIC RESEARCH EDITION</span>
-      </a>
-      <a href="/research/agentic-ai-insurability-risk-transfer-white-paper-2026/" class="registry-annotation playbooks-hero-link">
-        <span class="registry-key">INSURABILITY_SOURCE</span>: <span class="registry-value">PUBLIC RESEARCH EDITION</span>
-      </a>
-      <a href="/concepts/map/" class="registry-annotation playbooks-hero-link">
-        <span class="registry-key">ENTITY_MESH</span>: <span class="registry-value">CONCEPTS MAP</span>
-      </a>
     </div>
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell playbook-index-shell">
+      <ReadingGuide
+        role="APPLIED_GOVERNANCE"
+        answer={pageRegistry.playbooks.lead}
+        startHref={indexablePlaybooks[0] ? `/playbooks/${indexablePlaybooks[0].slug}/` : "/playbooks/"}
+        startLabel="Open the first playbook"
+        nextLinks={[{ href: "/governance/", label: "Open the governance crosswalk" }, { href: "/evidence/", label: "Check evidence boundaries" }]}
+        sections={["Question index", "Applied playbooks", "Source routes", "Boundary"]}
+      />
+      <ReadingFlowDiagram
+        variant="governance"
+        title="Choose a question, then follow the evidence."
+        description="Each playbook starts from a real agent-work question and routes through governance language, lifecycle objects, and bounded evidence."
+      />
       <section class="registry-chassis playbook-index-intro">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">ROUTE_QUESTION</span>: <span class="registry-value">{contentRouteRoles.playbooks.question}</span>
@@ -127,7 +134,7 @@ const breadcrumbJsonLd = {
         <p>
           These playbooks connect Agentic Lifecycle Governance, Missing Regulatory Objects, RCCS-M,
           ALCS, and MPLP to practical search intents: rollback, verification, auditability, coding agents,
-          human role responsibility, vendor-based agent workflows, Harness Engineering, prompt-vs-harness
+          human role responsibility, vendor and runtime substitution, Harness Engineering, prompt-vs-harness
           boundaries, agentic delivery architecture, and insurability / risk-transfer discussion.
           The auditability and assurance white paper supplies the auditability layer while the insurability and risk transfer white paper supplies the public research edition insurability layer; neither turns these playbooks into published implementation or
           underwriting guides.
@@ -146,7 +153,7 @@ const breadcrumbJsonLd = {
       </section>
 
       <section class="playbook-grid" aria-label="Applied agentic governance playbooks">
-        {appliedPlaybooks.map((playbook, index) => (
+        {indexablePlaybooks.map((playbook, index) => (
           <article class="registry-chassis playbook-card">
             <div class="registry-annotation" style="margin-bottom: 0.75rem;">
               <span class="registry-key">PLAYBOOK_{String(index + 1).padStart(2, "0")}</span>
@@ -186,7 +193,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbooks-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .playbook-index-shell {
@@ -200,7 +207,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-index-intro {
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .playbook-index-intro h2 {
@@ -208,8 +215,9 @@ const breadcrumbJsonLd = {
     margin: 0 0 0.9rem;
     color: var(--current-text);
     font-size: clamp(1.55rem, 2.4vw, 2.1rem);
-    line-height: 1.16;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .playbook-index-intro p,
@@ -229,7 +237,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-index-links a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.74rem;
     font-weight: 800;
@@ -259,8 +267,9 @@ const breadcrumbJsonLd = {
     margin: 0;
     color: var(--current-text);
     font-size: 1.25rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .playbook-card h2 a {
@@ -276,7 +285,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-card__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.74rem;
     font-weight: 800;
@@ -291,7 +300,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-boundary {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   @media (max-width: 840px) {

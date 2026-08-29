@@ -28,6 +28,28 @@ images:
     width: 1000
     height: 1480
 publishDate: 2026-05-21
+updatedAt: 2026-05-21
+track: lifecycle
+contentRole: essay
+publicationClass: technical
+editorialTrack: lifecycle
+canonicalRoute: /essays/defining-intent-drift-in-agentic-workflows/
+canonicalParent: /essays/
+primaryAudience: Builder
+secondaryAudiences:
+  - Architect
+  - Governance
+distinctReaderQuestion: "How can a team distinguish Intent Drift, Delta Intent, and Drift Detection during execution?"
+sourceRefs:
+  - Authored technical essay
+  - MPLP lifecycle concepts
+indexability: index
+nextSteps:
+  - /concepts/intent-drift/
+  - /projects/mplp/
+maxClickDepth: 3
+readingTimeMinutes: 14
+evidenceLevel: CONCEPT ESSAY
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -41,16 +63,11 @@ seriesOrder: 5
 status: published
 tags:
   - Intent Drift
-  - Delta Intent
-  - Drift Detection
   - AI Agent Lifecycle
-  - Agentic Delivery
   - Agentic Workflows
-  - Lifecycle Governance
-  - MPLP
-  - Multi-Agent Systems
-  - Accepted Outcome
   - Evidence Chain
+  - MPLP
+  - Accepted Outcome
 relatedIdeas:
   - ai-agent-lifecycle
   - agentic-delivery

@@ -2,8 +2,10 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
 import GAICSourceTrace from "../../components/GAICSourceTrace.astro";
 import SocialShare from "../../components/SocialShare.astro";
+import SemanticEvidenceBand from "../../components/SemanticEvidenceBand.astro";
 import { getGaicP1SourceTraceByRoute } from "../../data/gaicP1SourceTrace";
 import { concepts, getConceptBySlug, getProjectBySlug, pageRegistry, siteConfig } from "../../data/site";
 import { absoluteUrl } from "../../data/schema";
@@ -21,8 +23,8 @@ if (!concept) {
   throw new Error(`Unknown concept: ${slug}`);
 }
 
-const essays = await getCollection("essays");
-const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
+const essays = await getCollection("essays", ({ data }) => data.status === "published");
+const essaysBySlug = new Map(essays.map((essay) => [essay.id, essay]));
 const relatedEssays = concept.relatedEssays
   .map((essaySlug) => essaysBySlug.get(essaySlug))
   .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
@@ -166,8 +168,8 @@ const articleJsonLd = {
   jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd, definedTermJsonLd]}
   ogType="article"
   keywords={concept.keywords}
-  ogImagePath="/social/jearonwong-og.png"
-  ogImageAlt={`${concept.term} - ${siteConfig.author.name}`}
+  ogImagePath="/social/og-concepts.png"
+  ogImageAlt={`${concept.term} — ${siteConfig.author.name} concept record`}
 >
   <RegistryPageHero
     title={concept.term}
@@ -187,6 +189,22 @@ const articleJsonLd = {
 
   <div class="zone-b page-body page-body--standard">
     <article class="shell concept-detail-shell">
+      <ReadingGuide
+        role="DEFINED_TERM"
+        answer={concept.definition}
+        startHref="#definition-panel"
+        startLabel="Read the definition"
+        nextLinks={[{ href: "/concepts/", label: "Return to concepts" }, { href: "/lifecycle/", label: "Open the lifecycle field" }]}
+        sections={["Definition and boundary", "Source trace", "Related terms", "Related projects", "Related essays"]}
+      />
+      <SemanticEvidenceBand
+        definition={concept.definition}
+        boundary={concept.boundaryNote ?? concept.whatItIsNot ?? "Author-defined concept; not legal advice, certification, regulator approval, or an adopted standard."}
+        evidence={concept.evidenceRoute}
+        citation={gaicSourceTrace ? "Source trace: Global AI Compliance White Paper 2026 and linked anchors." : "Use the canonical concept URL and related project/essay links as the citation path."}
+        updated="2026-08-26"
+        sourceLevel={concept.gaicEntity ? "AUTHORED_ANALYSIS / SOURCE_TRACE" : "AUTHORED_ANALYSIS"}
+      />
       <aside class="registry-chassis concept-sidebar" aria-label={`${concept.term} reference`}>
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">TERM_RECORD</span>
@@ -222,7 +240,7 @@ const articleJsonLd = {
       </aside>
 
       <div class="concept-article">
-        <section class="registry-chassis definition-panel">
+        <section class="registry-chassis definition-panel" id="definition-panel">
           <div class="registry-annotation" style="margin-bottom: 1rem;">
             <span class="registry-key">CANONICAL_DEFINITION</span>
           </div>
@@ -388,7 +406,7 @@ const articleJsonLd = {
               <h2>Related essays</h2>
               <div class="relation-links">
                 {relatedEssays.map((essay) => (
-                  <a href={`/essays/${essay.slug}/`}>
+                  <a href={`/essays/${essay.id}/`}>
                     <strong>{essay.data.title}</strong>
                     <span>{essay.data.description}</span>
                   </a>
@@ -452,18 +470,36 @@ const articleJsonLd = {
   }
 
   .concept-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .concept-detail-shell {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 280px;
     gap: 3rem;
     align-items: start;
     max-width: 1080px;
   }
 
+  /* ReadingGuide and SemanticEvidenceBand are child components with their own
+     Astro scopes. Use :global so the shell, rather than auto-placement, owns
+     the reading order at desktop widths. */
+  .concept-detail-shell > :global(.reading-guide) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .concept-detail-shell > :global(.semantic-evidence-band) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    min-width: 0;
+  }
+
   .concept-sidebar {
+    grid-column: 2;
+    grid-row: 3;
     position: sticky;
     top: 7rem;
     padding: var(--registry-card-padding);
@@ -475,7 +511,7 @@ const articleJsonLd = {
     font-size: 1.35rem;
     font-weight: 760;
     line-height: 1.15;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--current-text);
   }
 
@@ -513,20 +549,22 @@ const articleJsonLd = {
   }
 
   .sidebar-links a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-size: 0.86rem;
     line-height: 1.35;
     text-decoration: none;
   }
 
   .concept-article {
+    grid-column: 1;
+    grid-row: 3;
     display: grid;
     gap: 2.5rem;
   }
 
   .definition-panel {
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .definition-panel p,
@@ -544,15 +582,16 @@ const articleJsonLd = {
 
   .canonical-role-panel {
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
 
   .canonical-role-panel h2 {
     margin: 0 0 0.9rem;
     color: var(--current-text);
     font-size: 1.35rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .compact-source-links {
@@ -568,8 +607,9 @@ const articleJsonLd = {
   .relation-panel h2 {
     margin: 0 0 0.9rem;
     font-size: 1.45rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -596,8 +636,9 @@ const articleJsonLd = {
     margin: 0 0 0.8rem;
     color: var(--current-text);
     font-size: 1rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .entity-cluster ul {
@@ -625,7 +666,7 @@ const articleJsonLd = {
     min-height: 2.1rem;
     padding: 0.35rem 0.6rem;
     border: 1px solid var(--current-line);
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -671,7 +712,7 @@ const articleJsonLd = {
   }
 
   .term-link-grid a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 800;
@@ -691,6 +732,14 @@ const articleJsonLd = {
     .relation-grid,
     .entity-cluster-grid {
       grid-template-columns: 1fr;
+    }
+
+    .concept-detail-shell > :global(.reading-guide),
+    .concept-detail-shell > :global(.semantic-evidence-band),
+    .concept-sidebar,
+    .concept-article {
+      grid-column: auto;
+      grid-row: auto;
     }
 
     .concept-sidebar {

@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+# These filenames belong to withdrawn AIIRWP candidates. Keep their historical
+# URLs out of crawler discovery; the v1.0 public research edition uses the
+# canonical slug-named HTML/PDF plus its manifest and checksum files.
 Disallow: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.html
 Disallow: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.1.pdf
 Disallow: /research/agentic-ai-insurability-risk-transfer-white-paper-2026/AIIRWP-2026-v0.2.html

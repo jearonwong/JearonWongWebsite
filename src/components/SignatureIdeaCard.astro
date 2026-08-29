@@ -61,7 +61,9 @@ const { name, description, prompt, essayPath, essayLabel, proofPath, proofLabel 
     font-size: 1.5rem;
     font-weight: 850;
     margin: 0 0 1rem 0;
-    letter-spacing: -0.03em;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    line-height: var(--type-card-title-line-height);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
   .pillar-desc {
@@ -98,12 +100,12 @@ const { name, description, prompt, essayPath, essayLabel, proofPath, proofLabel 
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
 
   .idea-link:hover {
-    color: var(--current-text);
+    color: var(--color-action);
   }
 
   @media (max-width: 768px) {
@@ -115,6 +117,9 @@ const { name, description, prompt, essayPath, essayLabel, proofPath, proofLabel 
     .pillar-title {
       font-size: 1.32rem;
       margin-bottom: 0.8rem;
+      line-height: var(--type-card-title-line-height-mobile);
+      letter-spacing: var(--type-card-title-letter-spacing);
+      word-spacing: var(--type-card-title-word-spacing);
     }
 
     .pillar-desc {

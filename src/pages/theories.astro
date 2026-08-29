@@ -1,8 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
 import SignatureIdeaCard from "../components/SignatureIdeaCard.astro";
-import { aiAgentLifecycleColumn, contentRouteRoles, homepageActions, pageRegistry, siteConfig, theoryClusters } from "../data/site";
+import {
+  aiAgentLifecycleColumn,
+  contentRouteRoles,
+  homepageActions,
+  pageRegistry,
+  siteConfig,
+  theoryClusterAliases,
+  theoryClusters
+} from "../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
 const canonicalPath = "/theories/";
@@ -44,10 +53,16 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
   { name: "Home", path: "/" },
   { name: "Ideas", path: canonicalPath }
 ]);
+const theoryAliasEntries = Object.entries(theoryClusterAliases).map(([alias, canonicalSlug]) => {
+  if (!theoryClusters.some((cluster) => cluster.slug === canonicalSlug)) {
+    throw new Error(`Theory alias ${alias} points to unknown cluster ${canonicalSlug}`);
+  }
+  return { alias, canonicalSlug };
+});
 ---
 
 <BaseLayout
-  title="Ideas"
+  title={pageRegistry.ideas.title}
   description={pageRegistry.ideas.lead}
   canonicalPath={canonicalPath}
   jsonLd={[ideasCollectionJsonLd, ideasItemListJsonLd, ideasBreadcrumbJsonLd]}
@@ -61,6 +76,14 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
+      <ReadingGuide
+        role="SUPPORTING_IDEA_MAP"
+        answer={pageRegistry.ideas.lead}
+        startHref="/lifecycle/"
+        startLabel="Start with the lifecycle theory"
+        nextLinks={[{ href: "/essays/", label: "Read the essay sequence" }, { href: "/concepts/", label: "Use the concepts reference" }]}
+        sections={["Idea map", "Signature ideas", "Theory clusters", "Route to proof"]}
+      />
       <div class="registry-chassis registry-panel--reading ideas-guidance">
         <div class="registry-annotation" style="margin-bottom: 0.9rem;">
           <span class="registry-key">START_HERE</span>: <span class="registry-value">IDEAS_TO_ESSAY_TO_PROOF</span>
@@ -79,7 +102,7 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
           <a href={aiAgentLifecycleColumn.href} class="ideas-guidance__link">Open the AI Agent Lifecycle entry</a>
           <a href="/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/" class="ideas-guidance__link">Read the origin essay</a>
           <a href={homepageActions.startHere.href} class="ideas-guidance__link">{homepageActions.startHere.label}</a>
-          <a href={homepageActions.proof.href} class="ideas-guidance__link">Then inspect the proof room</a>
+          <a href={homepageActions.proof.href} class="ideas-guidance__link">Then inspect the project ledger</a>
         </div>
         <div class="layer-preview" aria-label="AI Agent Lifecycle preview layers">
           {aiAgentLifecycleColumn.previewLayers.map((layer) => (
@@ -91,6 +114,9 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
       <div class="spec-stack">
         {theoryClusters.map((cluster) => (
           <div class="spec-panel-wrapper" id={cluster.slug}>
+            {theoryAliasEntries
+              .filter(({ canonicalSlug }) => canonicalSlug === cluster.slug)
+              .map(({ alias }) => <span id={alias} class="theory-alias-anchor" aria-hidden="true"></span>)}
             <SignatureIdeaCard {...cluster} />
           </div>
         ))}
@@ -139,7 +165,7 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
   }
 
   .ideas-guidance__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-size: 0.84rem;
     font-family: var(--font-mono);
     letter-spacing: 0.06em;
@@ -148,7 +174,7 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
   }
 
   .ideas-guidance__link:hover {
-    color: var(--current-text);
+    color: var(--color-action);
   }
 
   .layer-preview {
@@ -176,6 +202,14 @@ const ideasBreadcrumbJsonLd = createBreadcrumbJsonLd(theoriesUrl, [
   .spec-panel-wrapper {
     border-bottom: 1px solid var(--current-line);
     padding-bottom: 4rem;
+  }
+
+  .theory-alias-anchor {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
   .spec-panel-wrapper:last-child {
     border-bottom: none;

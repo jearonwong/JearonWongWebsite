@@ -1,6 +1,6 @@
 import { siteConfig, siteSemanticBaseline, socialLinks } from "./site";
 
-export const siteEntityTerms = [
+export const siteEntityTermsExtended = [
   "AI Agent Lifecycle",
   "Agentic Lifecycle Governance",
   "Agentic Delivery",
@@ -96,6 +96,24 @@ export const siteEntityTerms = [
   "protocol engineering",
   "production-grade AI agents",
   "multi-agent systems"
+];
+
+export const siteEntityTerms = [
+  "AI Agent Lifecycle",
+  "Agentic Lifecycle Governance",
+  "Agentic Delivery",
+  "MPLP",
+  "Multi-Agent Lifecycle Protocol",
+  "Authority Boundary",
+  "Accepted Outcome",
+  "Evidence Chain",
+  "Intent Drift",
+  "Delta Intent",
+  "AI Agent Governance",
+  "Harness Engineering",
+  "Cognitive OS",
+  "SoloCrew",
+  "Validation Lab"
 ];
 
 export function absoluteUrl(path = "/") {

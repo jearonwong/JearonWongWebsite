@@ -44,6 +44,27 @@ images:
     width: 1600
     height: 900
 publishDate: 2026-05-04
+updatedAt: 2026-05-04
+track: lifecycle
+contentRole: essay
+publicationClass: thought
+editorialTrack: lifecycle
+canonicalRoute: /essays/agent-orchestration-is-not-delivery/
+canonicalParent: /essays/
+primaryAudience: Architect
+secondaryAudiences:
+  - Builder
+distinctReaderQuestion: "What must an orchestrator preserve for execution to become accepted delivery?"
+sourceRefs:
+  - Authored field essay
+  - MPLP protocol position
+indexability: index
+nextSteps:
+  - /lifecycle/
+  - /projects/mplp/
+maxClickDepth: 3
+readingTimeMinutes: 12
+evidenceLevel: FIELD ESSAY
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -56,14 +77,10 @@ seriesOrder: 3
 status: published
 tags:
   - AI Agent Lifecycle
-  - Agent Orchestration
-  - Lifecycle Responsibility Consensus
+  - Agentic Workflows
+  - Accepted Outcome
+  - Agent Accountability
   - Agentic Delivery
-  - Lifecycle Governance
-  - Delivery Standard
-  - AI Agent Governance
-  - Bidirectional Responsibility Mapping
-  - Semantic Consensus
 relatedIdeas:
   - ai-agent-lifecycle
   - agentic-delivery

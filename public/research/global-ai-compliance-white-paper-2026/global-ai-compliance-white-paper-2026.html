@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Global AI Compliance White Paper 2026 - GACWP-2026-v0.3.2-FRC-R3</title>
 <meta name="description" content="Responsive public HTML web-reading edition of Jearon Wong's Global AI Compliance White Paper 2026, defining Missing Regulatory Objects, RCCS-M, ALCS, and agentic lifecycle responsibility.">
+<meta name="author" content="Jearon Wong">
 <meta name="citation_title" content="Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance">
 <meta name="citation_author" content="Wong, Jearon">
 <meta name="citation_publication_date" content="2026/05">
 <meta name="citation_technical_report_number" content="GACWP-2026-v0.3.2-FRC-R3">
+<meta name="citation_series" content="Agentic Lifecycle Governance Industry Series">
+<meta name="document_version" content="v0.3.2">
+<meta name="publication_status" content="public-research-edition">
 <meta name="citation_pdf_url" content="https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf">
 <meta name="citation_fulltext_html_url" content="https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html">
 <meta name="citation_language" content="en">
@@ -20,11 +24,17 @@
 <meta property="og:description" content="Responsive public HTML web-reading edition of Jearon Wong's Global AI Compliance White Paper 2026, defining Missing Regulatory Objects, RCCS-M, ALCS, and agentic lifecycle responsibility.">
 <meta property="og:url" content="https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html">
 <meta property="og:site_name" content="Jearon Wong - Protocol Architect for the Agent Era">
+<meta property="og:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+<meta property="og:image:alt" content="Global AI Compliance White Paper 2026 - Jearon Wong">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@jearonwong">
 <meta name="twitter:creator" content="@jearonwong">
 <meta name="twitter:title" content="Global AI Compliance White Paper 2026">
 <meta name="twitter:description" content="Responsive public HTML web-reading edition of Jearon Wong's Global AI Compliance White Paper 2026, defining Missing Regulatory Objects, RCCS-M, ALCS, and agentic lifecycle responsibility.">
+<meta name="twitter:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+<meta name="twitter:image:alt" content="Global AI Compliance White Paper 2026 - Jearon Wong">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -596,6 +606,11 @@ blockquote {
 .table-block {
   margin: 1rem 0 1.25rem;
   break-inside: auto;
+}
+.table-block[data-scroll-region="table"]:focus-visible,
+.heatmap-card[data-scroll-region="table"]:focus-visible {
+  outline: 2px solid var(--registry);
+  outline-offset: 3px;
 }
 .table-caption {
   font-weight: 800;
@@ -1689,7 +1704,7 @@ th, td {
 </nav>
 
 <section class="problem-overview front-extra">
-  <h1 id="problem-this-white-paper-solves">Problem This White Paper Solves</h1>
+  <h2 id="problem-this-white-paper-solves">Problem This White Paper Solves</h2>
   <div class="callout thesis">The central problem is that model governance is necessary but insufficient once AI systems act through agents, tools, handoffs, memory, projects, vendors, and accepted outcomes.</div>
   <p>Traditional AI governance is usually organized around the model: model risk, model documentation, model monitoring, model security, and model transparency. Agentic systems shift the compliance object. The governance question is no longer only whether a model is evaluated; it is whether the lifecycle of delegated work can prove who authorized an action, what authority was granted, which agent or tool acted, what evidence was preserved, who accepted the outcome, and how disputes or remediation close.</p>
   <p>This white paper frames that missing layer as AI Agent Lifecycle Governance. Enterprise failures emerge when lifecycle responsibility objects are absent: delegated authority boundaries are implicit, human oversight is not mapped to machine roles, evidence chains cannot reconstruct agent work, privacy rights conflict with retention, and vendor or runtime substitution changes governance semantics without conformance review.</p>
@@ -1705,7 +1720,7 @@ th, td {
 
 
 <section class="how-to-read front-extra">
-  <h1 id="how-to-read-this-paper">How to Read This Paper</h1>
+  <h2 id="how-to-read-this-paper">How to Read This Paper</h2>
   <div class="reader-grid">
     <div><strong>Executives</strong><span>Read Chapters 1-3, 15, 17, and 18 for the business risk, failure patterns, adoption path, and conclusion.</span></div>
     <div><strong>Compliance / Legal Teams</strong><span>Read Chapters 4-10 and Appendices C, I, J, and K for regulatory mapping, scoring boundaries, source posture, and governance records.</span></div>
@@ -1734,7 +1749,7 @@ th, td {
 <p><strong>AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.</strong></p>
 <hr class="section-rule">
 <h2 id="document-control-and-positioning">Document Control and Positioning</h2>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-FM-01: Document Control and Positioning</strong></div>
 <table>
 <thead><tr>
@@ -1814,7 +1829,7 @@ th, td {
 <li>Which current frameworks, platforms, and protocols have primitives that can be mapped to those requirements, and where do their mappings stop?</li>
 </ol>
 <h3 id="scope-boundaries">Scope Boundaries</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-FM-02: Publication Scope Boundaries</strong></div>
 <table>
 <thead><tr>
@@ -1854,7 +1869,7 @@ th, td {
 <p>The author is the creator of <strong>MPLP - Multi-Agent Lifecycle Protocol</strong>. MPLP is one of the systems discussed in this paper. This creates an inherent conflict of interest. The conflict does not invalidate the analysis, but it must be disclosed clearly because this paper argues for a lifecycle protocol layer and then maps MPLP to that layer.</p>
 <h3 id="boundary-controls">Boundary Controls</h3>
 <p>The controls used to limit over-claiming are as follows:</p>
-<div class="table-block table-boundary">
+<div class="table-block table-boundary" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-FM-03: Conflict of Interest Boundary Controls</strong></div>
 <table>
 <thead><tr>
@@ -1901,7 +1916,7 @@ th, td {
 <h2 id="citation-and-evidence-basis">Citation and Evidence Basis</h2>
 <p>This paper uses a five-level evidence hierarchy to ensure that claims are grounded in verifiable sources rather than marketing language or conceptual speculation.</p>
 <h3 id="evidence-levels">Evidence Levels</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-FM-04: Evidence Levels</strong></div>
 <table>
 <thead><tr>
@@ -1955,7 +1970,7 @@ th, td {
 <blockquote>GACWP-2026-v0.3.2-FRC-R3</blockquote>
 <hr class="section-rule">
 <h2 id="version-history">Version History</h2>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-FM-05: Version History</strong></div>
 <table>
 <thead><tr>
@@ -2175,7 +2190,7 @@ th, td {
 <div class="callout boundary"><strong>Non-legal technical governance analysis. Not legal advice. MPLP is discussed with explicit conflict-of-interest disclosure.</strong></div>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/01-scope-methodology.md">
-<h1 id="chapter-1-scope-methodology-and-non-legal-boundary">Chapter 1: Scope, Methodology, and Non-Legal Boundary</h1>
+<h2 id="chapter-1-scope-methodology-and-non-legal-boundary">Chapter 1: Scope, Methodology, and Non-Legal Boundary</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>The paper defines a non-legal governance analysis for agentic lifecycle conformance.</span></div>
 <div><strong>Method / Lens</strong><span>Scope, evidence levels, document-control tables, and non-claim boundaries.</span></div>
@@ -2203,7 +2218,7 @@ th, td {
 </ul>
 <h2 id="1-3-scope-boundary">1.3 Scope Boundary</h2>
 <p>The scope includes internationally comparable legal frameworks, voluntary governance frameworks, management standards, web provenance standards, public cloud AI platforms, agent orchestration frameworks, developer SDKs, and protocol-level approaches. The analysis deliberately avoids jurisdiction-specific political content controls and focuses instead on lifecycle responsibility, auditability, privacy, evidence, and enterprise deployment readiness.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-01-01: In Scope / Out of Scope</strong></div>
 <table>
 <thead><tr>
@@ -2257,7 +2272,7 @@ th, td {
 <p>The paper avoids pretending that regulatory texts already contain every engineering primitive needed for MAS. It also avoids the opposite error of claiming that existing regulation is irrelevant. The correct position is that existing regulation establishes the direction of travel, while agentic systems require additional engineering object models to implement that direction faithfully.</p>
 <h2 id="1-5-evidence-basis">1.5 Evidence Basis</h2>
 <p>This hierarchy is necessary because the AI governance market has rapidly overloaded terms such as trace, guardrail, oversight, agent governance, evidence, approval, and evaluation. A trace in an observability product, a log in a cloud service, a review step in an SDK, and an evidence chain in a lifecycle protocol may all sound similar, but they have different compliance strength. This paper therefore treats terminology as insufficient unless it is tied to an object, a rule, an evidence source, and an enforcement or verification mechanism.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-01-02: Evidence Basis Levels (detailed)</strong></div>
 <table>
 <thead><tr>
@@ -2311,7 +2326,7 @@ th, td {
 <li>Scoring claims are separated into traditional regulatory coverage, MRO-adjusted regulatory coverage, and lifecycle conformance evidence levels</li>
 <li>The paper distinguishes a conceptual object model from real-world legal compliance</li>
 </ul>
-<div class="table-block table-boundary">
+<div class="table-block table-boundary" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th><strong>Boundary</strong></th>
@@ -2349,7 +2364,7 @@ th, td {
 <p>This boundary discipline strengthens the paper. The argument does not need to claim that MPLP is the only path. It only needs to show that agentic AI compliance requires lifecycle responsibility objects and that MPLP is one coherent way to express such objects.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/02-missing-layer.md">
-<h1 id="chapter-2-the-missing-layer-ai-agent-lifecycle-governance">Chapter 2: The Missing Layer: AI Agent Lifecycle Governance</h1>
+<h2 id="chapter-2-the-missing-layer-ai-agent-lifecycle-governance">Chapter 2: The Missing Layer: AI Agent Lifecycle Governance</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Model governance is necessary but insufficient for agentic systems.</span></div>
 <div><strong>Method / Lens</strong><span>Lifecycle stack analysis and missing-layer framing.</span></div>
@@ -2385,7 +2400,7 @@ th, td {
 </figure>
 <h2 id="2-2-why-existing-terms-are-insufficient">2.2 Why Existing Terms Are Insufficient</h2>
 <p>The table below shows how existing governance layers answer different questions and produce different artifacts. Each layer is necessary, but none alone addresses lifecycle responsibility for agentic work.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-02-01: Governance Layer Comparison</strong></div>
 <table>
 <thead><tr>
@@ -2442,7 +2457,7 @@ th, td {
 <p>The enterprise implication is severe. If agentic workflows cannot prove lifecycle responsibility, they will remain difficult to audit, insure, delegate, reuse, and scale. This is the reason that AI Agent Lifecycle Governance is not a philosophical category. It is an operational prerequisite for agentic AI becoming trusted enterprise infrastructure.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/03-agentic-ai-breaks-model-compliance.md">
-<h1 id="chapter-3-why-agentic-ai-breaks-model-centric-compliance">Chapter 3: Why Agentic AI Breaks Model-Centric Compliance</h1>
+<h2 id="chapter-3-why-agentic-ai-breaks-model-centric-compliance">Chapter 3: Why Agentic AI Breaks Model-Centric Compliance</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Agentic systems break model-centric controls by acting through tools, roles, memory, and handoffs.</span></div>
 <div><strong>Method / Lens</strong><span>Agentic workflow analysis and lifecycle failure modes.</span></div>
@@ -2459,7 +2474,7 @@ th, td {
 <p>This is why model governance must be treated as a foundation rather than the system boundary. Once a model is embedded inside a workflow, compliance must follow the work unit, not only the model artifact.</p>
 <h2 id="3-3-failure-mode-comparison">3.3 Failure Mode Comparison</h2>
 <p>The table below compares how failure modes manifest differently in model-centric systems versus agentic lifecycle systems.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-03-01: Failure Mode Comparison</strong></div>
 <table>
 <thead><tr>
@@ -2513,7 +2528,7 @@ th, td {
 <p>The next chapter therefore turns to the regulatory and standards baseline: what existing frameworks already require, and where agentic lifecycle objects are still needed.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/04-regulatory-standards-baseline.md">
-<h1 id="chapter-4-regulatory-and-standards-baseline">Chapter 4: Regulatory and Standards Baseline</h1>
+<h2 id="chapter-4-regulatory-and-standards-baseline">Chapter 4: Regulatory and Standards Baseline</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Existing laws and standards already imply lifecycle duties but do not fully name agentic responsibility objects.</span></div>
 <div><strong>Method / Lens</strong><span>Snapshot-bound regulatory and standards comparison.</span></div>
@@ -2529,7 +2544,7 @@ th, td {
 <p>This distinction is the bridge to the paper&#x27;s scoring model. Existing regulation supplies risk, accountability, transparency, oversight, privacy, record-keeping, and monitoring language. It does not consistently define the lifecycle responsibility objects needed by agentic and multi-agent systems. RCCS-T therefore measures traditional regulatory coverage, while later chapters introduce MROs and RCCS-M to ask whether that coverage can be expressed through lifecycle responsibility objects.</p>
 <h2 id="4-2-regulatory-frameworks-baseline-table">4.2 Regulatory Frameworks Baseline Table</h2>
 <p>The table below summarizes the frameworks analyzed in this chapter, their type, relevant requirements, and the agentic gap that remains.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-04-01: Regulatory Frameworks Baseline</strong></div>
 <table>
 <thead><tr>
@@ -2634,7 +2649,7 @@ th, td {
 <p><strong>How it connects to lifecycle objects:</strong> State-level accountability requirements point toward a need for lifecycle evidence that can connect risk management, notice, review, impact, and accountability to actual system behavior. This paper keeps the Colorado discussion snapshot-bound and treats final legal-status verification as a publication QA item.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/05-regulatory-language-to-engineering-objects.md">
-<h1 id="chapter-5-from-regulatory-language-to-engineering-objects">Chapter 5: From Regulatory Language to Engineering Objects</h1>
+<h2 id="chapter-5-from-regulatory-language-to-engineering-objects">Chapter 5: From Regulatory Language to Engineering Objects</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Regulatory requirements become actionable only when mapped to lifecycle objects.</span></div>
 <div><strong>Method / Lens</strong><span>Object-derivation logic from governance language.</span></div>
@@ -2652,7 +2667,7 @@ th, td {
 <p>This chapter provides the bridge from regulatory language to the Missing Regulatory Objects that will be defined in Chapter 6.</p>
 <h2 id="5-2-regulatory-language-to-engineering-objects-mapping">5.2 Regulatory Language to Engineering Objects Mapping</h2>
 <p>The table below maps recurring regulatory language to the agentic engineering questions that must be answered, and the required lifecycle objects that make those answers testable.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-05-01: Regulatory Language to Engineering Objects Mapping</strong></div>
 <table>
 <thead><tr>
@@ -2768,7 +2783,7 @@ th, td {
 <p>The bridge from this chapter to Chapter 6 is direct: regulatory language establishes what must be proven; Missing Regulatory Objects define how to prove it in agentic workflows. In scoring terms, this is the bridge from RCCS-T to RCCS-M.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/06-missing-regulatory-objects.md">
-<h1 id="6-missing-regulatory-objects-for-agentic-and-mas-compliance">6. Missing Regulatory Objects for Agentic and MAS Compliance</h1>
+<h2 id="6-missing-regulatory-objects-for-agentic-and-mas-compliance">6. Missing Regulatory Objects for Agentic and MAS Compliance</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Sixteen MROs define the missing lifecycle responsibility layer.</span></div>
 <div><strong>Method / Lens</strong><span>Canonical MRO dictionary and object field model.</span></div>
@@ -2838,7 +2853,7 @@ th, td {
 </div>
 <p class="figure-note">Figure F-03 groups the Missing Regulatory Objects by lifecycle control surface. It is a topology for engineering interpretation, not a new legal taxonomy, certification path, or compliance proof.</p>
 </figure>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>ID</th>
@@ -2951,7 +2966,7 @@ th, td {
 <p>All sixteen MRO object cards share a common set of identity and evidence fields. This common field model avoids repeating generic fields across every object card and establishes a consistent structure for lifecycle governance objects.</p>
 <p>The following table defines the common fields that apply to all MROs:</p>
 <p><strong>Table T-06-01A:</strong> Common MRO Field Model</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Common Field</th>
@@ -3031,7 +3046,7 @@ th, td {
 <h3 id="judgment">Judgment</h3>
 <p>Human oversight without human-to-agent responsibility mapping is supervision theater.</p>
 <h3 id="object-card">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3082,7 +3097,7 @@ th, td {
 <h3 id="judgment-2">Judgment</h3>
 <p>IAM permission decides access. Delegated authority decides responsibility.</p>
 <h3 id="object-card-2">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3132,7 +3147,7 @@ th, td {
 <h3 id="judgment-3">Judgment</h3>
 <p>An agent role is a bounded responsibility surface, not a human job title.</p>
 <h3 id="object-card-3">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3182,7 +3197,7 @@ th, td {
 <h3 id="judgment-4">Judgment</h3>
 <p>Output is a system event. Accepted outcome is a governance state.</p>
 <h3 id="object-card-4">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3232,7 +3247,7 @@ th, td {
 <h3 id="judgment-5">Judgment</h3>
 <p>Tool use is where AI output becomes external consequence.</p>
 <h3 id="object-card-5">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3284,7 +3299,7 @@ th, td {
 <h3 id="judgment-6">Judgment</h3>
 <p>Handoff without explicit responsibility transfer is just routing.</p>
 <h3 id="object-card-6">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3335,7 +3350,7 @@ th, td {
 <h3 id="judgment-7">Judgment</h3>
 <p>The most dangerous agent failures are often unauthorized authority transitions.</p>
 <h3 id="object-card-7">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3386,7 +3401,7 @@ th, td {
 <h3 id="judgment-8">Judgment</h3>
 <p>In MAS, evidence must be partitioned, linked, and reconstructable.</p>
 <h3 id="object-card-8">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3437,7 +3452,7 @@ th, td {
 <h3 id="judgment-9">Judgment</h3>
 <p>Reuse without revalidation is the most common lifecycle governance failure.</p>
 <h3 id="object-card-9">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3489,7 +3504,7 @@ th, td {
 <h3 id="judgment-10">Judgment</h3>
 <p>Privacy compliance in MAS requires lifecycle data-flow mapping, not only model-level controls.</p>
 <h3 id="object-card-10">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3541,7 +3556,7 @@ th, td {
 <h3 id="judgment-11">Judgment</h3>
 <p>Third-party validation must not require full evidence disclosure.</p>
 <h3 id="object-card-11">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3593,7 +3608,7 @@ th, td {
 <h3 id="judgment-12">Judgment</h3>
 <p>Evidence retention must balance auditability with privacy minimization.</p>
 <h3 id="object-card-12">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3645,7 +3660,7 @@ th, td {
 <h3 id="judgment-13">Judgment</h3>
 <p>Data subject rights and evidence retention are in structural tension in agentic systems.</p>
 <h3 id="object-card-13">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3697,7 +3712,7 @@ th, td {
 <h3 id="judgment-14">Judgment</h3>
 <p>In MAS, the processor chain is dynamic and must be tracked at lifecycle granularity.</p>
 <h3 id="object-card-14">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3749,7 +3764,7 @@ th, td {
 <h3 id="judgment-15">Judgment</h3>
 <p>Vendor substitution without revalidation breaks lifecycle conformance.</p>
 <h3 id="object-card-15">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3801,7 +3816,7 @@ th, td {
 <h3 id="judgment-16">Judgment</h3>
 <p>Lifecycle governance is incomplete without incident closure and continuous improvement.</p>
 <h3 id="object-card-16">Object Card</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Field</th>
@@ -3858,7 +3873,7 @@ th, td {
 <p>This is an analytical model, not a legal formula, certification, regulator-approved scoring method, vendor ranking, or procurement recommendation. Its purpose is to make the transition visible: regulatory language names the governance expectation; MROs define the lifecycle responsibility object; RCCS-M evaluates whether the traditional regulatory surface can be expressed through that object layer.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/07-rccs-regulatory-compliance-coverage.md">
-<h1 id="chapter-7-regulatory-compliance-coverage-score-rccs">Chapter 7: Regulatory Compliance Coverage Score (RCCS)</h1>
+<h2 id="chapter-7-regulatory-compliance-coverage-score-rccs">Chapter 7: Regulatory Compliance Coverage Score (RCCS)</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>RCCS measures traditional regulatory coverage separately from lifecycle conformance.</span></div>
 <div><strong>Method / Lens</strong><span>RCCS dimensions, rubrics, and evidence multipliers.</span></div>
@@ -3901,7 +3916,7 @@ th, td {
 <li><strong>Monitoring (10%)</strong> - Does the system support continuous monitoring and incident detection?</li>
 </ol>
 <p>The following table summarizes the ten dimensions, their regulatory sources, core questions, and weights. The table is the baseline for both RCCS-T and RCCS-M; section 7.4 explains the MRO adjustment test that changes the RCCS-M raw score.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-07-01: RCCS Dimensions Summary</strong></div>
 <table>
 <thead><tr>
@@ -3990,7 +4005,7 @@ th, td {
 <div class="table-caption"><strong>Table T-07-01A: RCCS-T Dimension to RCCS-M MRO Adjustment Test</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4><span class="badge rccs">RCCS-01</span> Risk Management</h4>
+<h3><span class="badge rccs">RCCS-01</span> Risk Management</h3>
 <dl>
 <div><dt>Traditional RCCS-T Test</dt><dd>Does the system identify, assess, mitigate, and monitor AI risks?</dd></div>
 <div><dt>RCCS-M Adjustment Question</dt><dd>Are risks linked to lifecycle authority, evidence, mitigation, monitoring, and closure objects?</dd></div>
@@ -4097,7 +4112,7 @@ th, td {
 <div class="table-caption"><strong>Table T-07-02A: RCCS-T vs RCCS-M 0-5 Scoring Lens</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4>0</h4>
+<h3>0</h3>
 <dl>
 <div><dt>RCCS-T Meaning</dt><dd>No visible traditional coverage</dd></div>
 <div><dt>RCCS-M Meaning</dt><dd>No lifecycle object expression</dd></div>
@@ -4187,7 +4202,7 @@ th, td {
 <p>Weights are fixed for this version of the white paper. Future versions may adjust weights based on regulatory evolution or stakeholder feedback.</p>
 <p>RCCS-T and RCCS-M should not be averaged invisibly. The preferred publication-facing display is the three-profile view: RCCS-T, RCCS-M, and ALCS. Optional composite views are defined in Chapter 9 and remain secondary.</p>
 <p>The following table illustrates the calculation formula.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-07-02: RCCS Dimension Score Calculation Formula</strong></div>
 <table>
 <thead><tr>
@@ -4985,7 +5000,7 @@ th, td {
 <p>RCCS-T provides a baseline for evaluating whether systems provide the governance primitives that regulation increasingly requires. However, traditional coverage alone is insufficient for agentic systems. A system may score well on RCCS-T while lacking the lifecycle objects required to prove that agentic work moved from intent to accepted outcome under controlled authority, evidence, privacy, and remediation constraints. RCCS-M makes that missing adjustment explicit. Chapter 8 introduces the Agentic Lifecycle Conformance Score (ALCS), which measures a different layer: whether lifecycle responsibility conformance is mature across the object set. RCCS-T, RCCS-M, and ALCS together provide a three-profile assessment of system governance capability.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/08-alcs-agentic-lifecycle-conformance.md">
-<h1 id="chapter-8-agentic-lifecycle-conformance-score-alcs">Chapter 8: Agentic Lifecycle Conformance Score (ALCS)</h1>
+<h2 id="chapter-8-agentic-lifecycle-conformance-score-alcs">Chapter 8: Agentic Lifecycle Conformance Score (ALCS)</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>ALCS measures lifecycle conformance surfaces that RCCS alone does not capture.</span></div>
 <div><strong>Method / Lens</strong><span>ALCS dimensions mapped to MROs.</span></div>
@@ -5028,7 +5043,7 @@ th, td {
 <li><strong>Vendor/Model/Runtime Substitution Conformance (5%)</strong> - Does the system enforce conformance revalidation when vendors are substituted?</li>
 </ol>
 <p>The following table summarizes the fifteen dimensions, their MRO mappings, core questions, and weights.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-08-01: ALCS Dimensions Summary</strong></div>
 <table>
 <thead><tr>
@@ -5136,7 +5151,7 @@ th, td {
 <p>Each ALCS dimension maps to one or more Missing Regulatory Objects. The mapping shows how ALCS dimensions operationalize MRO requirements into measurable system capabilities. ALCS dimensions are not merely restatements of MROs. They are evaluation criteria that translate MRO requirements into system features that can be scored, compared, and improved.</p>
 <p>The mapping is primarily one-to-one: each ALCS dimension corresponds to a single primary MRO. However, some dimensions have secondary MRO relationships because lifecycle responsibility objects are interconnected. For example, Human-Role-to-MAS Responsibility Mapping (<span class="badge alcs">ALCS-01</span>) primarily maps to <span class="badge mro">MRO-01</span> but also relates to <span class="badge mro">MRO-03</span> (Agent Role vs Human Role) and <span class="badge mro">MRO-06</span> (Responsibility Transfer) because responsibility mapping, role distinction, and transfer semantics are interdependent.</p>
 <p>The following table provides detailed ALCS-to-MRO mapping, including primary MRO, secondary MROs, lifecycle phase, and core object required.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-08-02: ALCS-to-MRO Mapping</strong></div>
 <table>
 <thead><tr>
@@ -5260,7 +5275,7 @@ th, td {
 <p><span class="badge mro">MRO-16</span> (Incident, Dispute, and Remediation Closure) is not directly mapped to a single ALCS dimension. Instead, it is treated as a cross-cutting lifecycle capability that is evaluated through multiple dimensions and scoring logic across RCCS-T, RCCS-M, and ALCS.</p>
 <p>ALCS directly operationalizes fifteen dimension-level MROs (<span class="badge mro">MRO-01</span> through <span class="badge mro">MRO-15</span>). <span class="badge mro">MRO-16</span> is cross-cutting rather than omitted. It is evaluated through contestability, monitoring, accepted outcome, evidence partitioning, evidence minimization, and remediation-related scoring logic. This prevents incident, dispute, and remediation closure from being treated as a narrow isolated dimension and instead recognizes it as a lifecycle-wide capability.</p>
 <p>The following table shows how <span class="badge mro">MRO-16</span> is evaluated across multiple dimensions:</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-08-02A: <span class="badge mro">MRO-16</span> Evaluation Path</strong></div>
 <table>
 <thead><tr>
@@ -6359,7 +6374,7 @@ th, td {
 <p>ALCS complements RCCS-T and RCCS-M by measuring a different layer. RCCS-T evaluates traditional regulatory compliance coverage. RCCS-M evaluates whether that coverage can be expressed through Missing Regulatory Objects. ALCS evaluates agentic lifecycle conformance: whether a system provides mature lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries. A system can have strong RCCS-T and weaker ALCS, meaning it provides strong regulatory compliance coverage while lacking deeper lifecycle responsibility semantics for multi-agent work. A system can also have stronger RCCS-M and ALCS because it defines lifecycle responsibility semantics while lacking productized governance-platform coverage. Chapter 9 explains why the three-profile view is primary and any composite calculation is secondary.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/09-composite-scoring-method.md">
-<h1 id="chapter-9-composite-scoring-method-and-evidence-confidence">Chapter 9: Composite Scoring Method and Evidence Confidence</h1>
+<h2 id="chapter-9-composite-scoring-method-and-evidence-confidence">Chapter 9: Composite Scoring Method and Evidence Confidence</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>RCCS-T, RCCS-M, and ALCS can be combined analytically, but evidence confidence changes interpretation.</span></div>
 <div><strong>Method / Lens</strong><span>Canonical multipliers and composite formula.</span></div>
@@ -6414,7 +6429,7 @@ th, td {
 </ul>
 <p>RCCS-T, RCCS-M, and ALCS are expressed on a 0-100 scale after evidence adjustment. Optional composite views are also expressed on a 0-100 scale.</p>
 <p>The following table illustrates the composite score calculation with an example.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-09-01: Composite Score Calculation Example</strong></div>
 <table>
 <thead><tr>
@@ -6513,7 +6528,7 @@ th, td {
 <li><strong><span class="badge evidence">L5</span>: Author inference, conceptual analysis, strategic interpretation</strong> - Disclosed inference</li>
 </ul>
 <p>The evidence multiplier translates evidence levels into scoring adjustments:</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-09-02: Evidence Multiplier Values</strong></div>
 <table>
 <thead><tr>
@@ -6563,7 +6578,7 @@ th, td {
 <p>RCCS-T, RCCS-M, and ALCS measure different layers. RCCS-T measures traditional regulatory compliance coverage: whether a system provides the governance primitives that existing regulation requires. RCCS-M measures whether those obligations can be expressed through Missing Regulatory Objects. ALCS measures agentic lifecycle conformance: whether the system provides mature lifecycle objects that make agentic responsibility auditable, provable, and transferable across agents, humans, tools, projects, vendors, and organizational boundaries.</p>
 <p>Interpreting the three profiles requires reading score deltas rather than collapsing the profiles into a single ordering. High RCCS-T with lower RCCS-M or ALCS means conventional governance coverage is more visible than lifecycle responsibility object coverage. Lower RCCS-T with higher RCCS-M and ALCS means protocol or framework semantics may express lifecycle responsibility strongly while productized governance-platform coverage remains limited. This distinction is especially important for comparing enterprise governance platforms with lifecycle protocol paths.</p>
 <p>The 70% boundary used in this matrix is an analytical interpretation band for comparing capability profiles. It is not a legal compliance threshold, deployment readiness threshold, procurement threshold, or certification cutoff.</p>
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-09-03: RCCS-T / RCCS-M / ALCS Interpretation Matrix</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 2</div>
@@ -6682,7 +6697,7 @@ th, td {
 <p>The scoring method is an analytical framework, not a legal compliance score. High RCCS-T, RCCS-M, ALCS, or optional composite scores do not mean legal compliance. Low scores do not mean non-compliance. The method measures system capability, not organizational practice. It is context-independent, but compliance is context-dependent. Organizations must not rely on scores as proof of legal compliance. The following chapters use RCCS-T, RCCS-M, and ALCS as analytical lenses for comparative field analysis and detailed qualitative system mappings.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/10-enterprise-control-crosswalk.md">
-<h1 id="10-enterprise-adoption-procurement-and-control-crosswalk">10. Enterprise Adoption, Procurement, and Control Crosswalk</h1>
+<h2 id="10-enterprise-adoption-procurement-and-control-crosswalk">10. Enterprise Adoption, Procurement, and Control Crosswalk</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Lifecycle objects can be translated into enterprise controls and procurement questions.</span></div>
 <div><strong>Method / Lens</strong><span>Control crosswalk and enterprise adoption mapping.</span></div>
@@ -6724,7 +6739,7 @@ th, td {
 <h2 id="10-2-enterprise-adoption-procurement-and-control-crosswalk">10.2 Enterprise Adoption, Procurement, and Control Crosswalk</h2>
 <p>The following tables map enterprise control topics to agentic lifecycle objects. The crosswalk does not replace internal control frameworks. It shows where agentic lifecycle objects can provide evidence for enterprise control questions.</p>
 <h3 id="table-t-10-01a-enterprise-control-crosswalk-control-questions">Table T-10-01A: Enterprise Control Crosswalk — Control Questions</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Enterprise Control Topic</th>
@@ -6795,7 +6810,7 @@ th, td {
 </tbody></table>
 </div>
 <h3 id="table-t-10-01b-enterprise-control-crosswalk-mro-dimension-evidence-mapping">Table T-10-01B: Enterprise Control Crosswalk — MRO/Dimension/Evidence Mapping</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Enterprise Control Topic</th>
@@ -6906,7 +6921,7 @@ th, td {
 <p>Model risk in agentic systems is not only a model-performance concern. It is a lifecycle-conformance concern. A model version change may alter planning behavior, which may alter delegation patterns, which may alter authority transitions, which may alter tool selection, which may alter evidence interpretation, which may alter accepted outcome states. Each of these transitions is a potential lifecycle risk.</p>
 <h3 id="model-risk-management-table">Model Risk Management Table</h3>
 <p>The following table maps model risk concerns to agentic lifecycle impacts, relevant MROs, and control evidence.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-10-02: Model Risk Management in Agentic Systems</strong></div>
 <table>
 <thead><tr>
@@ -6994,7 +7009,7 @@ th, td {
 </ul>
 <h3 id="10-4-2-cybersecurity-control-mapping">10.4.2 Cybersecurity Control Mapping</h3>
 <p>The following table maps cybersecurity control domains to agentic attack surfaces, lifecycle governance objects, MRO dimensions, and evidence outputs.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-10-03: Cybersecurity Control Mapping</strong></div>
 <table>
 <thead><tr>
@@ -7075,7 +7090,7 @@ th, td {
 <p>The key question for board reporting is: Can the board receive lifecycle status as a structured, auditable, reproducible report? Without lifecycle governance, board reporting on agentic AI becomes anecdotal, inconsistent, and non-auditable. With lifecycle governance, board reporting can be structured around RCCS coverage, ALCS conformance, open disputes, remediation closure rates, and privacy incident summaries.</p>
 <h3 id="10-5-2-board-level-reporting-elements">10.5.2 Board-Level Reporting Elements</h3>
 <p>The following table defines board-level reporting elements for agentic AI, mapped to lifecycle object sources, reporting frequency, escalation triggers, and regulatory drivers.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-10-04: Board Reporting Elements for Agentic AI</strong></div>
 <table>
 <thead><tr>
@@ -7152,7 +7167,7 @@ th, td {
 </ul>
 <h3 id="10-6-2-procurement-scorecard-table">10.6.2 Procurement Scorecard Table</h3>
 <p>The following table defines procurement scorecard criteria for agentic AI systems, mapped to lifecycle objects, acceptable evidence, risk if absent, and regulatory references.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-10-05: Agentic AI Procurement Scorecard</strong></div>
 <table>
 <thead><tr>
@@ -7234,7 +7249,7 @@ th, td {
 <p>Lifecycle monitoring is not a replacement for traditional observability. It is a complementary layer that monitors governance continuity alongside execution performance. A system may perform well on execution metrics while experiencing lifecycle drift, responsibility gaps, evidence chain breaks, or dispute backlogs.</p>
 <h3 id="10-7-2-monitoring-indicators-table">10.7.2 Monitoring Indicators Table</h3>
 <p>The following table defines lifecycle monitoring indicators, mapped to lifecycle objects, alert conditions, MRO dimensions, and remediation paths.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-10-06: Lifecycle Monitoring Indicators</strong></div>
 <table>
 <thead><tr>
@@ -7342,7 +7357,7 @@ th, td {
 <p>Chapter 16 will establish the boundary to companion papers and provide the bridge from this white paper to evidence-based validation, assurance frameworks, and insurability considerations.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/11-comparative-field.md">
-<h1 id="11-comparative-field-and-system-positioning">11. Comparative Field and System Positioning</h1>
+<h2 id="11-comparative-field-and-system-positioning">11. Comparative Field and System Positioning</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Current systems expose different lifecycle strengths and gaps by category.</span></div>
 <div><strong>Method / Lens</strong><span>Qualitative positioning across protocol, platform, SDK, and orchestration categories.</span></div>
@@ -7420,7 +7435,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="11-3-comparative-field-positioning-matrix">11.3 Comparative Field Positioning Matrix</h2>
 <p>The following table provides high-level positioning for each system or category. It identifies the primary strength of each system, its likely RCCS-T posture (traditional regulatory compliance coverage), its likely RCCS-M posture (MRO-adjusted regulatory coverage), its likely ALCS posture (agentic lifecycle conformance), and the main lifecycle gap that Chapter 12 will examine.</p>
-<div class="table-block table-system-profile table-compact">
+<div class="table-block table-system-profile table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-11-01: Comparative Field Positioning Matrix</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 2</div>
@@ -7592,7 +7607,7 @@ th, td {
 
 </figure>
 <hr class="section-rule">
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-11-02: Comparison Boundary Table</strong></div>
 <table>
 <thead><tr>
@@ -7646,7 +7661,7 @@ th, td {
 <p>This table clarifies the boundaries of the comparison. It ensures that readers understand what the comparison evaluates and what it does not evaluate. It prevents scope confusion and establishes clear expectations about what the white paper claims and what it does not claim.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/12-detailed-system-mappings.md">
-<h1 id="chapter-12-detailed-system-mappings">Chapter 12: Detailed System Mappings</h1>
+<h2 id="chapter-12-detailed-system-mappings">Chapter 12: Detailed System Mappings</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>System mappings show uneven visible coverage across RCCS-T/RCCS-M/ALCS/MRO surfaces.</span></div>
 <div><strong>Method / Lens</strong><span>Source-qualified mapping across eight evaluated systems.</span></div>
@@ -7768,7 +7783,7 @@ th, td {
 </ul>
 <h3 id="evidence-basis">Evidence Basis</h3>
 <p>Uses citation placeholders and evidence levels. Includes a mini-table:</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -7787,7 +7802,7 @@ th, td {
 </div>
 <h3 id="rccs-t-rccs-m-mapping-summary">RCCS-T / RCCS-M Mapping Summary</h3>
 <p>Compact table:</p>
-<div class="table-block table-system-profile">
+<div class="table-block table-system-profile" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>RCCS Layer / Dimension</th>
@@ -7806,7 +7821,7 @@ th, td {
 </div>
 <h3 id="alcs-mapping-summary">ALCS Mapping Summary</h3>
 <p>Compact table grouping ALCS dimensions into five areas:</p>
-<div class="table-block table-system-profile">
+<div class="table-block table-system-profile" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>ALCS Area</th>
@@ -7872,7 +7887,7 @@ th, td {
 <li>Validation Lab is a non-certifying evidence adjudication example. Detailed treatment belongs to Chapter 14.</li>
 </ul>
 <h3 id="evidence-basis-2">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -8092,7 +8107,7 @@ th, td {
 <li>Model governance and AI governance are not identical to agentic lifecycle governance.</li>
 </ul>
 <h3 id="evidence-basis-3">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -8295,7 +8310,7 @@ th, td {
 <li>Responsible AI tooling and cloud platform features are not identical to lifecycle responsibility objects.</li>
 </ul>
 <h3 id="evidence-basis-4">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -8499,7 +8514,7 @@ th, td {
 <li>Guardrails and tool permission are not identical to delegated authority boundary.</li>
 </ul>
 <h3 id="evidence-basis-5">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -8705,7 +8720,7 @@ th, td {
 <li>ADK agent development primitives are not identical to human-role-to-MAS responsibility mapping.</li>
 </ul>
 <h3 id="evidence-basis-6">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -8911,7 +8926,7 @@ th, td {
 <li>Observability traces are not identical to MAS evidence partitioning.</li>
 </ul>
 <h3 id="evidence-basis-7">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -9117,7 +9132,7 @@ th, td {
 <li>Developer primitives are not identical to enterprise lifecycle governance objects.</li>
 </ul>
 <h3 id="evidence-basis-8">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -9323,7 +9338,7 @@ th, td {
 <li>Role-based orchestration is not identical to human-role-to-MAS responsibility mapping.</li>
 </ul>
 <h3 id="evidence-basis-9">Evidence Basis</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Evidence Area</th>
@@ -9595,7 +9610,7 @@ th, td {
 <hr class="section-rule">
 </section>
 <section class="evaluation-results chapter" id="evaluation-results-rccs-t-rccs-m-alcs-provisional-analytical-profiles">
-<h1>Evaluation Results: RCCS-T / RCCS-M / ALCS Provisional Analytical Profiles</h1>
+<h2>Evaluation Results: RCCS-T / RCCS-M / ALCS Provisional Analytical Profiles</h2>
 <div class="chapter-finding-panel evaluation-finding"><div><strong>Main Result</strong><span>Traditional regulatory coverage and agentic lifecycle regulatory coverage are not the same. RCCS-T captures familiar governance surfaces; RCCS-M shows whether those obligations can be expressed through MRO-style lifecycle responsibility objects.</span></div><div><strong>Method</strong><span>Scores use the 0-100 provisional analytical scale, source-qualified evidence labels, and bounded RCCS-T/RCCS-M/ALCS interpretation.</span></div><div><strong>Boundary</strong><span>Scores are not vendor rankings, procurement recommendations, certifications, regulatory approval signals, or legal compliance proof.</span></div></div>
 <h2>How to Read the Scores</h2>
 <p>Each system receives three profile signals. <strong>RCCS-T</strong> measures traditional regulatory and governance coverage such as risk management, data governance, documentation, records, transparency, human oversight, security, accountability, contestability, and monitoring. <strong>RCCS-M</strong> measures whether those obligations are expressible through Missing Regulatory Objects required for agentic lifecycle responsibility compliance. <strong>ALCS</strong> measures lifecycle responsibility conformance. Ranges show uncertainty where source support is mixed, access-limited, or partly inferential.</p>
@@ -9603,7 +9618,7 @@ th, td {
 <div class="callout thesis"><strong>Key finding:</strong> cloud and enterprise governance platforms often show stronger RCCS-T, while MPLP shows stronger RCCS-M and ALCS because it is organized around protocol-level lifecycle responsibility semantics rather than product dashboard coverage.</div>
 <div class="callout boundary">Reading rule: compare patterns, not rank order. System sequence follows the existing source mapping order and must not be read as a leaderboard.</div>
 <h2>RCCS-T / RCCS-M / ALCS Score Overview</h2>
-<div class="score-overview-table table-block table-scorecard">
+<div class="score-overview-table table-block table-scorecard" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption">RCCS-T / RCCS-M / ALCS Provisional Analytical Score Overview</div>
 <div class="layout-note">Fixed non-ranked source order. RCCS-T is traditional governance coverage; RCCS-M is MRO-adjusted agentic regulatory coverage; ALCS is lifecycle conformance.</div>
 <table>
@@ -9756,7 +9771,7 @@ th, td {
 <p class="chart-boundary">Positions are not vendor rankings, procurement recommendations, certification claims, or legal compliance proof.</p>
 </figure>
 <h2>Dimension-Level Coverage Patterns</h2>
-<div class="heatmap-card" id="system-dimension-heatmap">
+<div class="heatmap-card" id="system-dimension-heatmap" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="heatmap-title">System x Dimension Posture Heatmap</div>
 <div class="heatmap-note">Values are qualitative, source-qualified posture labels. They are not final scores or rankings.</div>
 <table class="heatmap-table">
@@ -9979,7 +9994,7 @@ th, td {
 <p>RCCS-M is a proposed forward-looking analytical model for MRO-adjusted agentic regulatory coverage. It does not replace current law, establish a regulator-approved benchmark, certify systems, prove legal compliance, identify a best system, or recommend procurement. MPLP's RCCS-M/ALCS posture remains an author analytical mapping where official MPLP materials do not directly state GAIC MRO/ALCS claims.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/13-mplp-deep-mapping.md">
-<h1 id="13-mplp-deep-mapping-boundary-and-non-claim-discipline">13. MPLP Deep Mapping, Boundary, and Non-Claim Discipline</h1>
+<h2 id="13-mplp-deep-mapping-boundary-and-non-claim-discipline">13. MPLP Deep Mapping, Boundary, and Non-Claim Discipline</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>MPLP has strong semantic fit for lifecycle responsibility objects but remains one protocol path.</span></div>
 <div><strong>Method / Lens</strong><span>MPLP-to-MRO/RCCS-T/RCCS-M/ALCS mapping and conflict-of-interest discipline.</span></div>
@@ -10006,7 +10021,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="13-3-what-mplp-is-and-is-not">13.3 What MPLP Is and Is Not</h2>
 <div class="callout boundary">MPLP is a lifecycle protocol path for expressing agentic responsibility objects. It is not a certification program, regulator, legal authority, cloud platform, procurement recommendation, or exclusive compliance method.</div>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-13-01: MPLP Boundary Statement</strong></div>
 <table>
 <thead><tr>
@@ -10075,7 +10090,7 @@ th, td {
 <div class="table-caption"><strong>Table T-13-02: MPLP Mapping to the Sixteen Missing Regulatory Objects</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4><span class="badge mro">MRO-01</span>: Human Role to MAS Responsibility Mapping</h4>
+<h3><span class="badge mro">MRO-01</span>: Human Role to MAS Responsibility Mapping</h3>
 <dl>
 <div><dt>MPLP Mapping Strength</dt><dd>Strong</dd></div>
 <div><dt>Protocol-Level Relevance</dt><dd>Role / Context / Confirm / Trace semantics support human-to-agent responsibility mapping</dd></div>
@@ -10212,7 +10227,7 @@ th, td {
 <div class="table-caption"><strong>Table T-13-03: MPLP Mapping to RCCS-T and RCCS-M Dimensions</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4>RCCS-T overall product-platform coverage</h4>
+<h3>RCCS-T overall product-platform coverage</h3>
 <dl>
 <div><dt>Mapping Strength</dt><dd>Partial to Moderate</dd></div>
 <div><dt>Why MPLP May Help</dt><dd>Protocol semantics may support governance evidence, but MPLP is not a productized governance dashboard or cloud compliance platform</dd></div>
@@ -10316,7 +10331,7 @@ th, td {
 <div class="table-caption"><strong>Table T-13-04: MPLP Mapping to ALCS Dimensions</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4><span class="badge alcs">ALCS-01</span>: Human-Role-to-MAS Responsibility Mapping</h4>
+<h3><span class="badge alcs">ALCS-01</span>: Human-Role-to-MAS Responsibility Mapping</h3>
 <dl>
 <div><dt>Mapping Strength</dt><dd>Strong</dd></div>
 <div><dt>Protocol-Level Fit</dt><dd>Role / Context / Confirm semantics directly express human-to-agent responsibility mapping</dd></div>
@@ -10439,7 +10454,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="13-8-implementation-adoption-and-evidence-limits">13.8 Implementation, Adoption, and Evidence Limits</h2>
 <p>MPLP can define lifecycle governance semantics, but the paper must not treat protocol design as equivalent to real-world conformance. The following table distinguishes protocol semantics from operational evidence.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-13-05: Protocol Semantics vs Operational Evidence</strong></div>
 <table>
 <thead><tr>
@@ -10497,7 +10512,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="13-9-mplp-non-claim-discipline">13.9 MPLP Non-Claim Discipline</h2>
 <p>The following table explicitly restates forbidden claims to prevent overclaim.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-13-06: MPLP Non-Claim Discipline</strong></div>
 <table>
 <thead><tr>
@@ -10560,7 +10575,7 @@ th, td {
 <p>The bridge from protocol semantics (Chapter 13) to validation patterns (Chapter 14) is the recognition that protocol-level fit must be validated through evidence, not assumed through design. MPLP&#x27;s strong RCCS-M and ALCS mapping creates validation opportunities, but validation itself requires independent evidence, not protocol authority. The roadmap from this paper therefore runs from MRO necessity and RCCS-M/ALCS adequacy modeling to MPLP technical specification, Cognitive OS runtime mapping, and Validation Lab-style evidence/conformance evaluation.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/14-evidence-validation-placeholder.md">
-<h1 id="14-evidence-based-validation-pattern-for-ai-agent-lifecycle-governance">14. Evidence-Based Validation Pattern for AI Agent Lifecycle Governance</h1>
+<h2 id="14-evidence-based-validation-pattern-for-ai-agent-lifecycle-governance">14. Evidence-Based Validation Pattern for AI Agent Lifecycle Governance</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Evidence-based validation can review lifecycle objects without becoming certification.</span></div>
 <div><strong>Method / Lens</strong><span>Validation pattern flow and non-certifying Validation Lab public-methodology example.</span></div>
@@ -10607,7 +10622,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="14-2-methodology-components-mapping">14.2 Methodology Components Mapping</h2>
 <p>The evidence-based validation pattern consists of eight core components. Each component maps to specific Missing Regulatory Objects and ALCS dimensions.</p>
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-14-01: Evidence-Based Validation Pattern Components</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 1</div>
@@ -10682,7 +10697,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="14-3-what-this-pattern-does-not-prove">14.3 What This Pattern Does Not Prove</h2>
 <p>The evidence-based validation pattern validates lifecycle responsibility object conformance. It does not validate legal compliance, regulatory approval, business logic correctness, model accuracy, or operational effectiveness.</p>
-<div class="table-block table-boundary">
+<div class="table-block table-boundary" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-14-02: Evidence-Based Validation Pattern Boundary</strong></div>
 <table>
 <thead><tr>
@@ -10735,7 +10750,7 @@ th, td {
 <p><strong>Validation Lab boundary statement:</strong></p>
 <p>Validation Lab adjudicates lifecycle responsibility evidence against predefined rulesets. It returns verdict hashes indicating whether evidence conforms to the ruleset. It does not interpret legal compliance, does not provide legal opinions, and does not replace organizational governance or regulatory approval processes.</p>
 <p>Validation Lab is referenced in this white paper because it provides a concrete example of privacy-preserving third-party validation. The author&#x27;s relationship to Validation Lab creates an explicit conflict of interest already disclosed in the front matter. This chapter treats Validation Lab as one example, not as the only validation path.</p>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-14-03: Validation Lab Boundary Statement</strong></div>
 <table>
 <thead><tr>
@@ -10789,7 +10804,7 @@ th, td {
 <div class="table-caption"><strong>Table T-14-04: Evidence-Based Validation Pattern Mapping to MROs and ALCS</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4><span class="badge mro">MRO-08</span>: MAS Evidence Partitioning</h4>
+<h3><span class="badge mro">MRO-08</span>: MAS Evidence Partitioning</h3>
 <dl>
 <div><dt>Mapping Strength</dt><dd>Strong</dd></div>
 <div><dt>How the Pattern Supports</dt><dd>Evidence Pack and Hash Manifest support partitioned evidence chains</dd></div>
@@ -10886,7 +10901,7 @@ th, td {
 <p>Chapter 15 will examine these failure modes and their enterprise impact. The goal is not to claim that lifecycle governance eliminates all risk. The goal is to demonstrate that lifecycle governance gaps create predictable failure patterns that enterprises must address.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/15-failure-scenarios-placeholder.md">
-<h1 id="15-enterprise-failure-scenarios">15. Enterprise Failure Scenarios</h1>
+<h2 id="15-enterprise-failure-scenarios">15. Enterprise Failure Scenarios</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Enterprise failures become predictable when lifecycle responsibility objects are missing.</span></div>
 <div><strong>Method / Lens</strong><span>Illustrative hypothetical failure chains mapped to MRO/ALCS categories.</span></div>
@@ -10951,7 +10966,7 @@ th, td {
 <p class="chart-boundary">The chart is not an incident probability model, empirical risk frequency claim, legal conclusion, or vendor/system assessment.</p>
 </figure>
 <p>Enterprise failure scenarios fall into four categories based on where the lifecycle governance gap occurs.</p>
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-15-01: Failure Mode Categories</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 1</div>
@@ -10998,7 +11013,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="15-2-lifecycle-governance-gap-enterprise-failure-mapping">15.2 Lifecycle Governance Gap -&gt; Enterprise Failure Mapping</h2>
 <p>The following table maps missing or weak lifecycle objects to enterprise failures, required investigation evidence, and likely consequences.</p>
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-15-02: Lifecycle Governance Gap to Failure Mapping</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 1</div>
@@ -11328,7 +11343,7 @@ th, td {
 <hr class="section-rule">
 <h2 id="15-4-remediation-and-prevention-patterns">15.4 Remediation and Prevention Patterns</h2>
 <p>The following table summarizes remediation and prevention patterns for the eight failure scenarios.</p>
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-15-03: Failure Scenario Summary</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 1</div>
@@ -11400,7 +11415,7 @@ th, td {
 </tbody></table>
 </div>
 <hr class="section-rule">
-<div class="table-block table-matrix table-compact">
+<div class="table-block table-matrix table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-15-04: Prevention and Remediation Patterns</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 1</div>
@@ -11488,7 +11503,7 @@ th, td {
 <p>The goal is not to claim that lifecycle governance eliminates all risk. The goal is to provide a practical path for enterprises to address the lifecycle governance gap.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/16-companion-paper-boundary.md">
-<h1 id="16-boundary-to-companion-papers-evidence-assurance-and-insurability">16. Boundary to Companion Papers: Evidence, Assurance, and Insurability</h1>
+<h2 id="16-boundary-to-companion-papers-evidence-assurance-and-insurability">16. Boundary to Companion Papers: Evidence, Assurance, and Insurability</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Evidence, assurance, and insurability require separate treatment beyond this paper.</span></div>
 <div><strong>Method / Lens</strong><span>Boundary map for planned companion scope.</span></div>
@@ -11616,7 +11631,7 @@ th, td {
 <h2 id="16-4-companion-paper-boundary-matrix">16.4 Companion Paper Boundary Matrix</h2>
 <p>The following tables clarify which topics are covered in the main white paper and which are reserved for the Evidence &amp; Assurance and Insurability companion papers.</p>
 <h3 id="table-t-16-01a-main-paper-vs-evidence-assurance-boundary">Table T-16-01A: Main Paper vs Evidence &amp; Assurance Boundary</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Topic</th>
@@ -11687,7 +11702,7 @@ th, td {
 </tbody></table>
 </div>
 <h3 id="table-t-16-01b-main-paper-vs-insurability-boundary">Table T-16-01B: Main Paper vs Insurability Boundary</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Topic</th>
@@ -11786,7 +11801,7 @@ th, td {
 <li><strong>Validation Lab is a non-certifying evidence adjudication example, not a certification authority.</strong> Validation Lab does not certify compliance. It does not issue legal opinions. It does not replace audit or regulatory judgment. It is an example of privacy-preserving third-party validation, not a required compliance mechanism.</li>
 </ul>
 <h3 id="table-t-16-02-claim-boundaries">Table T-16-02: Claim Boundaries</h3>
-<div class="table-block table-matrix">
+<div class="table-block table-matrix" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Claim Area</th>
@@ -11887,7 +11902,7 @@ th, td {
 <hr class="section-rule">
 </section>
 <section class="source-section chapter body-mode" data-source="sections/17-adoption-roadmap-placeholder.md">
-<h1 id="17-adoption-roadmap-for-ai-agent-lifecycle-governance">17. Adoption Roadmap for AI Agent Lifecycle Governance</h1>
+<h2 id="17-adoption-roadmap-for-ai-agent-lifecycle-governance">17. Adoption Roadmap for AI Agent Lifecycle Governance</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>Enterprises can adopt lifecycle governance in staged increments from inventory to scale.</span></div>
 <div><strong>Method / Lens</strong><span>Stage 0-to-7 roadmap and control maturity logic.</span></div>
@@ -11938,7 +11953,7 @@ th, td {
 <div class="table-caption"><strong>Table T-17-01: Adoption Maturity Levels</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Level 0: Unaware</h4>
+<h3>Level 0: Unaware</h3>
 <dl>
 <div><dt>Enterprise State</dt><dd>Agentic AI systems deployed; no lifecycle governance awareness; model governance assumed sufficient</dd></div>
 <div><dt>Lifecycle Governance Capability</dt><dd>No lifecycle responsibility objects; no authority boundaries; no accepted outcome compliance; no evidence partitioning</dd></div>
@@ -11991,7 +12006,7 @@ th, td {
 <div class="table-caption"><strong>Table T-17-02: Pilot Project Selection Criteria</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Bounded scope</h4>
+<h3>Bounded scope</h3>
 <dl>
 <div><dt>Why It Matters</dt><dd>Pilot should be large enough to demonstrate lifecycle governance value but small enough to manage risk</dd></div>
 <div><dt>Good Pilot Signal</dt><dd>Single business process; single regulated context; single customer segment; clear authority boundaries</dd></div>
@@ -12055,7 +12070,7 @@ th, td {
 <div class="table-caption"><strong>Table T-17-03: Existing Enterprise Control Integration</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Internal Audit</h4>
+<h3>Internal Audit</h3>
 <dl>
 <div><dt>Lifecycle Governance Extension</dt><dd>Extend audit scope to include lifecycle responsibility objects; add evidence partitioning and selective disclosure capability</dd></div>
 <div><dt>Relevant Object</dt><dd><span class="badge mro">MRO-08</span>: MAS Evidence Partitioning; <span class="badge mro">MRO-11</span>: Privacy-Preserving Third-Party Validation; <span class="badge mro">MRO-12</span>: Evidence Minimization and Selective Disclosure</dd></div>
@@ -12161,7 +12176,7 @@ th, td {
 <div class="table-caption"><strong>Table T-17-04: Adoption Roadmap by Stage</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Stage 0: Inventory</h4>
+<h3>Stage 0: Inventory</h3>
 <dl>
 <div><dt>Goal</dt><dd>Inventory agentic behavior and identify lifecycle governance gaps</dd></div>
 <div><dt>Key Actions</dt><dd>Identify where agents make decisions, use tools, or hand off work; assess whether model governance covers lifecycle responsibility; identify failure scenarios from Chapter 15 that apply</dd></div>
@@ -12241,7 +12256,7 @@ th, td {
 <div class="table-caption"><strong>Table T-17-05: RCCS-T / RCCS-M / ALCS Use in Adoption</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Gap analysis</h4>
+<h3>Gap analysis</h3>
 <dl>
 <div><dt>RCCS-T Role</dt><dd>Identifies traditional regulatory compliance coverage gaps (e.g., <span class="badge rccs">RCCS-04</span> Record-Keeping, <span class="badge rccs">RCCS-06</span> Human Oversight)</dd></div>
 <div><dt>RCCS-M Role</dt><dd>Identifies where regulatory obligations are not yet expressible through MROs</dd></div>
@@ -12329,7 +12344,7 @@ th, td {
 <p>Chapter 18 will conclude the white paper with a restatement of the core thesis, a summary of contributions, a statement of boundaries, and a call to action.</p>
 </section>
 <section class="source-section chapter body-mode" data-source="sections/18-conclusion-placeholder.md">
-<h1 id="18-conclusion">18. Conclusion</h1>
+<h2 id="18-conclusion">18. Conclusion</h2>
 <div class="chapter-finding-panel">
 <div><strong>Main Result</strong><span>The core conclusion is that AI agent compliance is lifecycle responsibility compliance.</span></div>
 <div><strong>Method / Lens</strong><span>Contribution summary, non-claims table, and call to action.</span></div>
@@ -12368,7 +12383,7 @@ th, td {
 <div class="table-caption"><strong>Table T-18-01: White Paper Contribution Summary</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>AI Agent Lifecycle Governance (Chapter 2)</h4>
+<h3>AI Agent Lifecycle Governance (Chapter 2)</h3>
 <dl>
 <div><dt>Purpose</dt><dd>Define the missing layer between model governance and enterprise trust</dd></div>
 <div><dt>Practical Use</dt><dd>Enterprises can use this framework to identify lifecycle governance gaps and design lifecycle responsibility objects</dd></div>
@@ -12440,7 +12455,7 @@ th, td {
 <div class="table-caption"><strong>Table T-18-02: Non-Claims and Boundaries</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Legal Compliance</h4>
+<h3>Legal Compliance</h3>
 <dl>
 <div><dt>This Paper Says</dt><dd>Lifecycle governance addresses lifecycle responsibility objects that support regulatory compliance coverage; RCCS-T/RCCS-M/ALCS measure coverage and conformance gaps</dd></div>
 <div><dt>This Paper Does Not Say</dt><dd>This paper proves legal compliance; high RCCS-T/RCCS-M/ALCS scores guarantee legal compliance; this paper provides legal advice; this paper interprets specific regulations for specific jurisdictions</dd></div>
@@ -12536,7 +12551,7 @@ th, td {
 <p><strong>AI Agent / MAS compliance is not only model compliance. It is lifecycle responsibility compliance.</strong></p>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-a-placeholder.md">
-<h1 id="appendix-a-machine-readable-object-templates" class="appendix-heading">Appendix A — Machine-Readable Object Templates</h1>
+<h2 id="appendix-a-machine-readable-object-templates" class="appendix-heading">Appendix A — Machine-Readable Object Templates</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="a-0-template-boundary">A.0 Template Boundary</h2>
@@ -12582,7 +12597,7 @@ closure_reason: reason for closure (if status is &quot;closed&quot;)</code></pre
 <hr class="section-rule">
 <h2 id="a-2-mro-template-index">A.2 MRO Template Index</h2>
 <p>The following table indexes the sixteen MRO templates and their object-specific fields.</p>
-<div class="table-block table-mro-card">
+<div class="table-block table-mro-card" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-A-01: Appendix A Template Index</strong></div>
 <table>
 <thead><tr>
@@ -13156,7 +13171,7 @@ customer_impact_assessment: &quot;low_impact_2_customers_notified&quot;</code></
 </figure>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-b-placeholder.md">
-<h1 id="appendix-b-scorecard-template" class="appendix-heading">Appendix B — Scorecard Template</h1>
+<h2 id="appendix-b-scorecard-template" class="appendix-heading">Appendix B — Scorecard Template</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="b-0-scorecard-boundary">B.0 Scorecard Boundary</h2>
@@ -13188,7 +13203,7 @@ customer_impact_assessment: &quot;low_impact_2_customers_notified&quot;</code></
 <div class="table-caption"><strong>Table T-B-01: RCCS-T / RCCS-M / ALCS Dimension Scorecard Template</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Example System</h4>
+<h3>Example System</h3>
 <dl>
 <div><dt>Profile / Lens</dt><dd>RCCS-T</dd></div>
 <div><dt>Dimension</dt><dd><span class="badge rccs">RCCS-04</span>: Record-Keeping</dd></div>
@@ -13292,7 +13307,7 @@ boundary_note: &quot;Score measures capability, not organizational practice; doe
 <div class="table-caption"><strong>Table T-B-02: Three-Profile Analytical Score Worksheet</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Example System A</h4>
+<h3>Example System A</h3>
 <dl>
 <div><dt>RCCS-T 0-100</dt><dd>65.0</dd></div>
 <div><dt>RCCS-M 0-100</dt><dd>72.0</dd></div>
@@ -13346,7 +13361,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <div class="table-caption"><strong>Table T-B-03: Score Delta Record</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4><span class="badge rccs">RCCS-04</span>: Record-Keeping</h4>
+<h3><span class="badge rccs">RCCS-04</span>: Record-Keeping</h3>
 <dl>
 <div><dt>Previous Adjusted Score 0-100</dt><dd>54.4</dd></div>
 <div><dt>Updated Adjusted Score 0-100</dt><dd>68.0</dd></div>
@@ -13393,7 +13408,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <div class="table-caption"><strong>Table T-B-04: Negative Control Checklist</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>&quot;System provides human oversight&quot;</h4>
+<h3>&quot;System provides human oversight&quot;</h3>
 <dl>
 <div><dt>Adjacent Capability</dt><dd>System has approval button in UI</dd></div>
 <div><dt>Why It Does Not Count</dt><dd>Approval button ≠ human-role-to-MAS responsibility mapping; no role assignment records; no acceptance records; no escalation workflow</dd></div>
@@ -13447,7 +13462,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 </ul>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-c-placeholder.md">
-<h1 id="appendix-c-references-and-source-notes" class="appendix-heading">Appendix C — References and Source Notes</h1>
+<h2 id="appendix-c-references-and-source-notes" class="appendix-heading">Appendix C — References and Source Notes</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="c-0-source-boundary">C.0 Source Boundary</h2>
@@ -13468,7 +13483,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <hr class="section-rule">
 <h2 id="c-1-evidence-level-policy">C.1 Evidence Level Policy</h2>
 <p>The following table defines evidence levels and their permitted use.</p>
-<div class="table-block table-source-register">
+<div class="table-block table-source-register" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-C-01: Evidence Level Policy</strong></div>
 <table>
 <thead><tr>
@@ -13535,7 +13550,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <h2 id="c-2-required-source-groups">C.2 Required Source Groups</h2>
 <p>The white paper uses five source groups: <span class="badge evidence">L1</span> Binding Legal/Regulatory Sources, <span class="badge evidence">L1</span> Formal Standards, <span class="badge evidence">L2</span> Official Product Documentation, <span class="badge evidence">L3</span> Third-Party Reports, and <span class="badge evidence">L5</span> Author Inference.</p>
 <h3 id="l1-binding-legal-regulatory-sources">L1: Binding Legal/Regulatory Sources</h3>
-<div class="table-block table-appendix-dense table-compact">
+<div class="table-block table-appendix-dense table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Source ID</th>
@@ -13569,7 +13584,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 </tbody></table>
 </div>
 <h3 id="l1-formal-standards">L1: Formal Standards</h3>
-<div class="table-block table-appendix-dense table-compact">
+<div class="table-block table-appendix-dense table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Source ID</th>
@@ -13617,7 +13632,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 </tbody></table>
 </div>
 <h3 id="l2-official-product-documentation-claim-level-reviewed">L2: Official Product Documentation (Claim-Level Reviewed)</h3>
-<div class="table-block table-appendix-dense table-compact">
+<div class="table-block table-appendix-dense table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Source ID</th>
@@ -13756,7 +13771,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 </tbody></table>
 </div>
 <h3 id="l5-author-inference">L5: Author Inference</h3>
-<div class="table-block table-appendix-dense table-compact">
+<div class="table-block table-appendix-dense table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <table>
 <thead><tr>
 <th>Source ID</th>
@@ -13820,7 +13835,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <hr class="section-rule">
 <h2 id="c-3-source-register">C.3 Source Register</h2>
 <p>The following table provides the complete source register for the white paper.</p>
-<div class="table-block table-source-register table-compact">
+<div class="table-block table-source-register table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-C-02: Source Register</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 2</div>
@@ -14209,7 +14224,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <hr class="section-rule">
 <h2 id="c-4-citation-closure-ledger">C.4 Citation Closure Ledger</h2>
 <p>The following table lists Phase 1D-11 source closure results after claim-level source review.</p>
-<div class="table-block table-source-register">
+<div class="table-block table-source-register" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-C-03: Citation Revalidation Queue</strong></div>
 <table>
 <thead><tr>
@@ -14315,7 +14330,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 </ol>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-d-placeholder.md">
-<h1 id="appendix-d-expanded-cross-system-mro-mapping" class="appendix-heading">Appendix D — Expanded Cross-System MRO Mapping</h1>
+<h2 id="appendix-d-expanded-cross-system-mro-mapping" class="appendix-heading">Appendix D — Expanded Cross-System MRO Mapping</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="d-0-mapping-boundary">D.0 Mapping Boundary</h2>
@@ -14371,7 +14386,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <hr class="section-rule">
 <h2 id="d-2-expanded-cross-system-mro-mapping">D.2 Expanded Cross-System MRO Mapping</h2>
 <p><strong>Note:</strong> This table is very wide (10 columns) and requires landscape layout. Phase 1C layout audit documented the risk; Phase 1D rendering QA remains required.</p>
-<div class="table-block table-system-profile table-compact">
+<div class="table-block table-system-profile table-compact" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table">
 <div class="table-caption"><strong>Table T-D-01: Expanded Cross-System MRO Mapping</strong></div>
 <div class="layout-note">Wide source table split into consecutive column groups; all source rows and columns are preserved.</div>
 <div class="continuation-label">Continuation 1 of 3</div>
@@ -14721,7 +14736,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <p><strong>Phase 1D wide-table evaluation:</strong> Table T-D-01 is very wide (10 columns) and may require splitting, rotation, or alternative layout for readability in PDF format.</p>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-e-placeholder.md">
-<h1 id="appendix-e-rccs-t-detailed-rubrics-and-rccs-m-adjustment-matrix" class="appendix-heading">Appendix E — RCCS-T Detailed Rubrics and RCCS-M Adjustment Matrix</h1>
+<h2 id="appendix-e-rccs-t-detailed-rubrics-and-rccs-m-adjustment-matrix" class="appendix-heading">Appendix E — RCCS-T Detailed Rubrics and RCCS-M Adjustment Matrix</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="e-0-rccs-t-rccs-m-rubric-boundary">E.0 RCCS-T / RCCS-M Rubric Boundary</h2>
@@ -15359,7 +15374,7 @@ Agentic Composite = (RCCS-M × 0.40) + (ALCS × 0.60)</code></pre>
 <div class="table-caption"><strong>Table T-E-11: RCCS-M Adjustment Matrix</strong></div>
 <div class="layout-note">Methodology matrix rendered as semantic row cards to preserve long evidence and boundary text; all source rows are retained.</div>
 <article class="system-profile-row-card matrix-row-card">
-<h4><span class="badge rccs">RCCS-01</span> Risk Management</h4>
+<h3><span class="badge rccs">RCCS-01</span> Risk Management</h3>
 <dl>
 <div><dt>RCCS-M Adjustment Question</dt><dd>Are risks linked to lifecycle authority, evidence, mitigation, monitoring, and incident/dispute/remediation closure objects?</dd></div>
 <div><dt>Related MROs</dt><dd><span class="badge mro">MRO-02</span>, <span class="badge mro">MRO-07</span>, <span class="badge mro">MRO-08</span>, <span class="badge mro">MRO-16</span></dd></div>
@@ -15568,7 +15583,7 @@ Dimension Score: (4/5) × 100 × 0.85 = 68.0</code></pre>
 </ul>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-f-placeholder.md">
-<h1 id="appendix-f-alcs-detailed-scoring-rubrics" class="appendix-heading">Appendix F — ALCS Detailed Scoring Rubrics</h1>
+<h2 id="appendix-f-alcs-detailed-scoring-rubrics" class="appendix-heading">Appendix F — ALCS Detailed Scoring Rubrics</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="f-0-alcs-rubric-boundary">F.0 ALCS Rubric Boundary</h2>
@@ -16656,7 +16671,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 </figure>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-g-placeholder.md">
-<h1 id="appendix-g-expanded-system-by-system-assessment" class="appendix-heading">Appendix G — Expanded System-by-System Assessment</h1>
+<h2 id="appendix-g-expanded-system-by-system-assessment" class="appendix-heading">Appendix G — Expanded System-by-System Assessment</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="g-0-assessment-boundary-and-provisional-status">G.0 Assessment Boundary and Provisional Status</h2>
@@ -18783,7 +18798,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-G-09: Cross-System Pattern Summary</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4><strong>RCCS Coverage</strong></h4>
+<h3><strong>RCCS Coverage</strong></h3>
 <dl>
 <div><dt>Observed Pattern</dt><dd>Enterprise cloud platforms show stronger RCCS provisional posture due to integrated monitoring, logging, security, and governance controls</dd></div>
 <div><dt>Systems with More Visible Posture</dt><dd>Microsoft Azure AI Foundry, AWS Bedrock, Google Vertex AI, IBM watsonx.governance</dd></div>
@@ -18917,7 +18932,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <p>Validation Lab is mentioned in Chapter 14 as a non-certifying evidence adjudication example. It is not assessed in Appendix G as it is not positioned as a required, exclusive, or certified validation path. Organizations may use Validation Lab, alternative validation approaches, or implementer-built validation solutions based on their requirements.</p>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-h-placeholder.md">
-<h1 id="appendix-h-enterprise-procurement-scorecard" class="appendix-heading">Appendix H — Enterprise Procurement Scorecard</h1>
+<h2 id="appendix-h-enterprise-procurement-scorecard" class="appendix-heading">Appendix H — Enterprise Procurement Scorecard</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="h-0-procurement-boundary">H.0 Procurement Boundary</h2>
@@ -18944,7 +18959,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-H-01: Enterprise Procurement Scorecard</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Governance scope</h4>
+<h3>Governance scope</h3>
 <dl>
 <div><dt>Procurement Question</dt><dd>What agentic workflows, tools, models, and runtime components are covered by the governance controls?</dd></div>
 <div><dt>Related RCCS-T/RCCS-M/ALCS</dt><dd><span class="badge rccs">RCCS-03</span>, <span class="badge alcs">ALCS-15</span></dd></div>
@@ -19065,7 +19080,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-H-02: Vendor Evidence Request Template</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>System boundary</h4>
+<h3>System boundary</h3>
 <dl>
 <div><dt>Requested Artifact</dt><dd>Product scope statement and deployment architecture</dd></div>
 <div><dt>Minimum Acceptable Evidence</dt><dd>Official documentation or implementation description</dd></div>
@@ -19143,7 +19158,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-H-03: Procurement Red Flag Checklist</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Governance evidence covers only model output</h4>
+<h3>Governance evidence covers only model output</h3>
 <dl>
 <div><dt>Why It Matters</dt><dd>Agentic failures can arise from planning, delegation, tool use, or handoff</dd></div>
 <div><dt>Related Lifecycle Risk</dt><dd>Model-centric review misses lifecycle responsibility gaps</dd></div>
@@ -19221,7 +19236,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-H-04: Buyer Interpretation Boundary</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>RFI/RFP design</h4>
+<h3>RFI/RFP design</h3>
 <dl>
 <div><dt>What This Scorecard Supports</dt><dd>Structured governance questions and evidence requests</dd></div>
 <div><dt>What It Does Not Support</dt><dd>Automatic vendor filtering or vendor ordering</dd></div>
@@ -19272,7 +19287,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <p>Procurement decisions remain enterprise decisions. This appendix helps buyers ask better questions; it does not replace accountable human judgment.</p>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-i-placeholder.md">
-<h1 id="appendix-i-source-audit-and-revalidation-register" class="appendix-heading">Appendix I — Source Audit and Revalidation Register</h1>
+<h2 id="appendix-i-source-audit-and-revalidation-register" class="appendix-heading">Appendix I — Source Audit and Revalidation Register</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="i-0-source-audit-boundary">I.0 Source Audit Boundary</h2>
@@ -19296,7 +19311,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-I-01: Source Audit Register</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>EU-AI-ACT</h4>
+<h3>EU-AI-ACT</h3>
 <dl>
 <div><dt>Source Name</dt><dd>EU AI Act articles referenced in baseline chapters</dd></div>
 <div><dt>Source Class</dt><dd>Legal / regulatory text</dd></div>
@@ -19535,7 +19550,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-I-02: URL Verification Queue</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>MPLP-DOCS</h4>
+<h3>MPLP-DOCS</h3>
 <dl>
 <div><dt>URL / Source Pointer</dt><dd><code>https://docs.mplp.io/docs/introduction/mplp-v1.0-protocol-overview</code></dd></div>
 <div><dt>Used In</dt><dd>Chapters 12, 13, Appendix G</dd></div>
@@ -19662,7 +19677,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-I-03: Evidence Level Reclassification Rules</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4><span class="badge evidence">L5</span> author inference</h4>
+<h3><span class="badge evidence">L5</span> author inference</h3>
 <dl>
 <div><dt>Trigger for Reclassification</dt><dd>Official product documentation directly supports the claim</dd></div>
 <div><dt>New Level</dt><dd><span class="badge evidence">L2</span></dd></div>
@@ -19731,7 +19746,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-I-04: Source Coverage Matrix Validation Checklist</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Legal baseline claims</h4>
+<h3>Legal baseline claims</h3>
 <dl>
 <div><dt>Expected Source Type</dt><dd><span class="badge evidence">L1</span> legal / regulatory text</dd></div>
 <div><dt>Current Status</dt><dd>Referenced in baseline chapters</dd></div>
@@ -19806,7 +19821,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <p>The source coverage matrix has been updated through Phase 1D-11 as a coverage and closure ledger. Appendix G remains revalidated provisional, not final, and no score is a vendor ranking, procurement recommendation, certification, or legal compliance proof.</p>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-j-placeholder.md">
-<h1 id="appendix-j-v0-3-2-gap-closure-coverage-matrix" class="appendix-heading">Appendix J — v0.3.2 Gap Closure Coverage Matrix</h1>
+<h2 id="appendix-j-v0-3-2-gap-closure-coverage-matrix" class="appendix-heading">Appendix J — v0.3.2 Gap Closure Coverage Matrix</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="j-0-gap-closure-boundary">J.0 Gap Closure Boundary</h2>
@@ -19837,7 +19852,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-J-01: v0.3.2 Gap Closure Coverage Matrix</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>G-J-01</h4>
+<h3>G-J-01</h3>
 <dl>
 <div><dt>Gap Description</dt><dd>R2 PDF reconstruction introduced layout and extraction instability</dd></div>
 <div><dt>Origin Phase</dt><dd>R2 carryover</dd></div>
@@ -19993,7 +20008,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-J-02: Phase 1C Items and Current Disposition</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Chapter 14/15 ALCS numbering consistency</h4>
+<h3>Chapter 14/15 ALCS numbering consistency</h3>
 <dl>
 <div><dt>Reason Deferred</dt><dd>Phase 1C taxonomy pass found naming and scenario mapping drift</dd></div>
 <div><dt>Required Action</dt><dd>Corrected active-source ALCS/MRO references</dd></div>
@@ -20107,7 +20122,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-J-03: Phase 1D Layout / Publication Items</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>PDF generation</h4>
+<h3>PDF generation</h3>
 <dl>
 <div><dt>Publication Risk</dt><dd>Formatting may drift from Markdown source</dd></div>
 <div><dt>Required QA</dt><dd>Generate PDF from reviewed source</dd></div>
@@ -20167,7 +20182,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="callout warning">Phase 1D-11 citation/source closure has been completed for high-risk blockers. Remaining work is public research edition maintenance and proofing, with explicit non-blocking limitations preserved.</div>
 </section>
 <section class="source-section appendix appendix-mode" data-source="appendices/appendix-k-placeholder.md">
-<h1 id="appendix-k-editorial-remediation-record" class="appendix-heading">Appendix K — Editorial Remediation Record</h1>
+<h2 id="appendix-k-editorial-remediation-record" class="appendix-heading">Appendix K — Editorial Remediation Record</h2>
 <p><strong>Version:</strong> v0.3.2-FRC-R3</p>
 <hr class="section-rule">
 <h2 id="k-0-editorial-remediation-boundary">K.0 Editorial Remediation Boundary</h2>
@@ -20199,7 +20214,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-K-01: Editorial Remediation Record</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>R-K-01</h4>
+<h3>R-K-01</h3>
 <dl>
 <div><dt>Phase</dt><dd>Phase 1A</dd></div>
 <div><dt>Issue</dt><dd>R2 extraction and layout instability</dd></div>
@@ -20365,7 +20380,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-K-02: Boundary Hardening Record</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>RCCS-T/RCCS-M/ALCS non-legal-score boundary</h4>
+<h3>RCCS-T/RCCS-M/ALCS non-legal-score boundary</h3>
 <dl>
 <div><dt>Risk</dt><dd>Readers may treat analytical scores as legal determinations</dd></div>
 <div><dt>Remediation Applied</dt><dd>Repeated boundary language across chapters and appendices; RCCS-M marked as author analytical and forward-looking</dd></div>
@@ -20443,7 +20458,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 <div class="table-caption"><strong>Table T-K-03: Remaining Publication QA Actions</strong></div>
 <div class="layout-note">System mapping rendered as profile cards to preserve long evidence and boundary text; all source rows are retained without rank ordering.</div>
 <article class="system-profile-row-card">
-<h4>Source-bound product/protocol claim proofing</h4>
+<h3>Source-bound product/protocol claim proofing</h3>
 <dl>
 <div><dt>Reason</dt><dd>Phase 1D-11 closed high-risk blockers, but final human proofing should preserve narrowed wording</dd></div>
 <div><dt>Target Phase</dt><dd>Publication-candidate review</dd></div>
@@ -20490,7 +20505,7 @@ Agentic Composite: 0.40 × 72.0 + 0.60 × 55.0 = 28.8 + 33.0 = 61.8</code></pre>
 </div>
 </section>
 <section class="references-section appendix" id="references-sources">
-<h1>References / Sources</h1>
+<h2>References / Sources</h2>
 <div class="callout boundary">This section is a publication-facing source register. It summarizes source classes, evidence levels, and citation status. It does not convert product documentation into audit proof, legal compliance proof, certification, regulatory approval, procurement recommendation, or vendor endorsement.</div>
 <h2>How to Read Evidence Labels</h2>
 <div class="source-summary-grid">

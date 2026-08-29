@@ -2,15 +2,17 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../components/ReadingFlowDiagram.astro";
 import { aiAgentLifecycleColumn, pageRegistry, siteConfig } from "../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
-const essays = (await getCollection("essays")).sort(
+const essays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
   (left, right) =>
     Number(right.data.flagship) - Number(left.data.flagship) ||
     right.data.publishDate.getTime() - left.data.publishDate.getTime()
 );
-const essaysBySlug = new Map(essays.map((essay) => [essay.slug, essay]));
+const essaysBySlug = new Map(essays.map((essay) => [essay.id, essay]));
 const lifecycleEssays = essays.filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle);
 const firstColumnEssay = essaysBySlug.get(aiAgentLifecycleColumn.firstPublishedEssay.slug);
 const spotlightEssay = lifecycleEssays[0] ?? firstColumnEssay;
@@ -18,18 +20,28 @@ const columnCover = spotlightEssay?.data.shareImage ?? spotlightEssay?.data.ogIm
 const columnCoverAlt = spotlightEssay?.data.shareImageAlt ?? spotlightEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 const columnCoverWidth = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 1200 : spotlightEssay?.data.images?.[0]?.width ?? 1200;
 const columnCoverHeight = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 630 : spotlightEssay?.data.images?.[0]?.height ?? 630;
-const foundationEssays = ["agentic-ai-inflection-point-project-delivery"]
-  .map((slug) => essaysBySlug.get(slug))
-  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
-const protocolEssays = [
-  "governed-by-design-protocol-native-multi-agent-operating-system",
-  "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle"
-]
-  .map((slug) => essaysBySlug.get(slug))
-  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
-const auditabilityEssays = ["from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai"]
-  .map((slug) => essaysBySlug.get(slug))
-  .filter((essay): essay is NonNullable<typeof essay> => Boolean(essay));
+const getEssayTrack = (essay: (typeof essays)[number]) => {
+  if (essay.data.series === aiAgentLifecycleColumn.seriesTitle) return "lifecycle";
+  if (essay.data.editorialTrack) return essay.data.editorialTrack;
+  if (essay.data.track) return essay.data.track;
+  if (essay.data.cluster === "reliable-ai-agent-work-delivery") return "foundation";
+  if (essay.data.cluster === "protocol-engineering" || essay.data.tags.some((tag) => /MPLP|governance|protocol/i.test(tag))) return "protocol";
+  if (essay.data.series === "AIAAWP 2026" || essay.data.tags.some((tag) => /audit|assurance|evidence/i.test(tag))) return "research";
+  return "general";
+};
+const essayGroups = [
+  { key: "foundation", label: "Foundation Essays", sequence: "FOUNDATION ESSAYS", role: "AGENTIC DELIVERY THESIS" },
+  { key: "protocol", label: "Protocol / Governance Essays", sequence: "PROTOCOL / GOVERNANCE ESSAYS", role: "PROTOCOL AND GOVERNANCE ARGUMENT" },
+  { key: "research", label: "Auditability / Assurance Research", sequence: "AUDITABILITY / ASSURANCE RESEARCH", role: "RESEARCH EDITION" },
+  { key: "general", label: "Other Essays", sequence: "OTHER ESSAYS", role: "FIELD NOTE" }
+].map((group) => ({ ...group, essays: essays.filter((essay) => getEssayTrack(essay) === group.key) }));
+const publicationClassFilters = [
+  { key: "thought", label: "Thought" },
+  { key: "technical", label: "Technical" },
+  { key: "field-note", label: "Field Notes" },
+  { key: "research-commentary", label: "Research Commentary" }
+];
+const topicFilters = ["AI Agent Lifecycle", "Agentic Delivery", "Lifecycle Governance", "Auditability", "Intent Drift", "MPLP"];
 const canonicalPath = "/essays/";
 const essaysUrl = absoluteUrl(canonicalPath);
 const essaysKeywords = [
@@ -64,7 +76,7 @@ const essaysItemListJsonLd = {
     "@type": "ListItem",
     position: index + 1,
     name: essay.data.title,
-    url: absoluteUrl(`/essays/${essay.slug}/`)
+    url: absoluteUrl(`/essays/${essay.id}/`)
   }))
 };
 const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
@@ -91,13 +103,26 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
+      <ReadingGuide
+        role="PUBLIC_ARGUMENTS"
+        answer={pageRegistry.essays.lead}
+        startHref={spotlightEssay ? `/essays/${spotlightEssay.id}/` : "/lifecycle/"}
+        startLabel="Read the featured argument"
+        nextLinks={[{ href: "/lifecycle/", label: "Open the lifecycle field" }, { href: "/concepts/", label: "Use the concepts reference" }]}
+        sections={["Featured column", "Lifecycle sequence", "Foundation essays", "Protocol and governance", "Research commentary"]}
+      />
+      <ReadingFlowDiagram
+        variant="lifecycle"
+        title="Read the essays as an argument sequence."
+        description="The ledger moves from the lifecycle problem to protocol, governance, and evidence instead of presenting every essay as an isolated post."
+      />
       <div class="registry-chassis lifecycle-spotlight">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">COLUMN</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
         </div>
         <div class="lifecycle-spotlight-grid">
           {spotlightEssay && (
-            <a href={`/essays/${spotlightEssay.slug}/`} class="spotlight-cover" aria-label={`Read ${spotlightEssay.data.title}`}>
+            <a href={`/essays/${spotlightEssay.id}/`} class="spotlight-cover" aria-label={`Read ${spotlightEssay.data.title}`}>
               <img
                 src={columnCover}
                 alt={columnCoverAlt}
@@ -114,7 +139,7 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
             {spotlightEssay && (
               <div class="current-essay">
                 <span class="current-essay-label">Latest published column essay</span>
-                <h3><a href={`/essays/${spotlightEssay.slug}/`}>{spotlightEssay.data.title}</a></h3>
+                <h3><a href={`/essays/${spotlightEssay.id}/`}>{spotlightEssay.data.title}</a></h3>
                 <p>{spotlightEssay.data.description}</p>
               </div>
             )}
@@ -123,15 +148,28 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
             <p>{aiAgentLifecycleColumn.nextEssayDirection}</p>
             <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open Lifecycle mainline</a>
             <a href="/concepts/" class="spotlight-link">Concepts reference</a>
-            {firstColumnEssay && <a href={`/essays/${firstColumnEssay.slug}/`} class="spotlight-link">Read essay 01</a>}
-            {spotlightEssay && spotlightEssay.slug !== firstColumnEssay?.slug && (
-              <a href={`/essays/${spotlightEssay.slug}/`} class="spotlight-link">Read latest essay</a>
+            {firstColumnEssay && <a href={`/essays/${firstColumnEssay.id}/`} class="spotlight-link">Read essay 01</a>}
+            {spotlightEssay && spotlightEssay.id !== firstColumnEssay?.id && (
+              <a href={`/essays/${spotlightEssay.id}/`} class="spotlight-link">Read latest essay</a>
             )}
           </div>
         </div>
       </div>
 
       <div class="essay-sections">
+        <div class="essay-filter-bar" data-essay-filters aria-label="Filter essays">
+          <span class="registry-annotation filter-label"><span class="registry-key">FILTER</span>: <span class="registry-value">READING PATH</span></span>
+          <button type="button" class="essay-filter is-active" data-essay-filter="all">All</button>
+          {essayGroups.filter((group) => group.essays.length > 0).map((group) => (
+            <button type="button" class="essay-filter" data-essay-filter={`track:${group.key}`}>{group.label}</button>
+          ))}
+          {topicFilters.map((topic) => (
+            <button type="button" class="essay-filter" data-essay-filter={`tag:${topic.toLowerCase()}`}>{topic}</button>
+          ))}
+          {publicationClassFilters.map((publicationClass) => (
+            <button type="button" class="essay-filter" data-essay-filter={`class:${publicationClass.key}`}>{publicationClass.label}</button>
+          ))}
+        </div>
         <section class="essay-section">
           <div class="registry-section-heading">
             <div class="registry-annotation" style="margin-bottom: 0.65rem;">
@@ -139,123 +177,134 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
             </div>
             <h2>Define The AI Agent Lifecycle</h2>
           </div>
-          <div class="registry-log">
+          <div class="essay-ledger">
             {lifecycleEssays.map((essay) => (
-              <article class="log-entry is-series">
-                <div class="log-metadata">
-                  <div class="registry-annotation log-series">
+                <article class="essay-record is-series" data-essay-entry data-track={getEssayTrack(essay)} data-class={essay.data.publicationClass} data-tags={(essay.data.tags ?? []).join("|").toLowerCase()}>
+                <div class="essay-record__metadata">
+                  <div class="registry-annotation">
+                    <span class="registry-key">CLASS</span>: <span class="registry-value">{essay.data.publicationClass.toUpperCase()}</span>
+                  </div>
+                  <div class="registry-annotation essay-record__series">
                     <span class="registry-key">SERIES</span>: <span class="registry-value">#{essay.data.seriesOrder ?? 1}</span>
                   </div>
                   <div class="registry-annotation">
                     <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
                   </div>
                 </div>
-                <div class="log-content">
-                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-                  <p class="log-desc">{essay.data.description}</p>
+                <div class="essay-record__content">
+                  <h3 class="essay-record__title"><a href={`/essays/${essay.id}/`}>{essay.data.title}</a></h3>
+                  <p class="essay-record__description">{essay.data.description}</p>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section class="essay-section">
-          <div class="registry-section-heading">
-            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
-              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">FOUNDATION ESSAYS</span>
+        {essayGroups.map((group) => group.essays.length > 0 && (
+          <section class="essay-section">
+            <div class="registry-section-heading">
+              <div class="registry-annotation" style="margin-bottom: 0.65rem;">
+                <span class="registry-key">SEQUENCE</span>: <span class="registry-value">{group.sequence}</span>
+              </div>
+              <h2>{group.label}</h2>
             </div>
-            <h2>Foundation Essays</h2>
-          </div>
-          <div class="registry-log">
-            {foundationEssays.map((essay) => (
-              <article class="log-entry">
-                <div class="log-metadata">
-                  <div class="registry-annotation">
-                    <span class="registry-key">ROLE</span>: <span class="registry-value">AGENTIC DELIVERY THESIS</span>
-                  </div>
-                  <div class="registry-annotation">
-                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
-                  </div>
-                </div>
-                <div class="log-content">
-                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-                  <p class="log-desc">{essay.data.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section class="essay-section">
-          <div class="registry-section-heading">
-            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
-              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">PROTOCOL / GOVERNANCE ESSAYS</span>
-            </div>
-            <h2>Protocol / Governance Essays</h2>
-          </div>
-          <div class="registry-log">
-            {protocolEssays.map((essay) => (
-              <article class:list={["log-entry", essay.data.flagship && "is-flagship"]}>
-                <div class="log-metadata">
-                  {essay.data.flagship && (
-                    <div class="registry-annotation log-flagship">
-                      <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
-                    </div>
-                  )}
-                  <div class="registry-annotation">
-                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
-                  </div>
-                </div>
-                <div class="log-content">
-                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-                  <p class="log-desc">{essay.data.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section class="essay-section">
-          <div class="registry-section-heading">
-            <div class="registry-annotation" style="margin-bottom: 0.65rem;">
-              <span class="registry-key">SEQUENCE</span>: <span class="registry-value">AUDITABILITY / ASSURANCE RESEARCH</span>
-            </div>
-            <h2>Auditability / Assurance Research</h2>
-          </div>
-          <div class="registry-log">
-            {auditabilityEssays.map((essay) => (
-              <article class="log-entry is-research">
-                <div class="log-metadata">
-                  <div class="registry-annotation log-research">
-                    <span class="registry-key">ROLE</span>: <span class="registry-value">RESEARCH EDITION</span>
-                  </div>
-                  {essay.data.series && (
+            <div class="essay-ledger">
+              {group.essays.map((essay) => (
+                <article class:list={["essay-record", essay.data.flagship && "is-flagship", group.key === "research" && "is-research"]} data-essay-entry data-track={group.key} data-class={essay.data.publicationClass} data-tags={(essay.data.tags ?? []).join("|").toLowerCase()}>
+                  <div class="essay-record__metadata">
                     <div class="registry-annotation">
-                      <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
+                      <span class="registry-key">CLASS</span>: <span class="registry-value">{essay.data.publicationClass.toUpperCase()}</span>
                     </div>
-                  )}
-                  <div class="registry-annotation">
-                    <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                    {essay.data.flagship && (
+                      <div class="registry-annotation essay-record__flagship">
+                        <span class="registry-key">START_HERE</span>: <span class="registry-value">FLAGSHIP ESSAY</span>
+                      </div>
+                    )}
+                    <div class="registry-annotation">
+                      <span class="registry-key">ROLE</span>: <span class="registry-value">{essay.data.evidenceLevel ?? group.role}</span>
+                    </div>
+                    {essay.data.series && (
+                      <div class="registry-annotation">
+                        <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
+                      </div>
+                    )}
+                    <div class="registry-annotation">
+                      <span class="registry-key">ENTRY_DATE</span>: <span class="registry-value">{essay.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
+                    </div>
                   </div>
-                </div>
-                <div class="log-content">
-                  <h3 class="log-title"><a href={`/essays/${essay.slug}/`}>{essay.data.title}</a></h3>
-                  <p class="log-desc">{essay.data.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+                  <div class="essay-record__content">
+                    <h3 class="essay-record__title"><a href={`/essays/${essay.id}/`} data-analytics-event="essay_open">{essay.data.title}</a></h3>
+                    <p class="essay-record__description">{essay.data.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </section>
   </div>
 </BaseLayout>
 
+<script is:inline>
+  const filterButtons = document.querySelectorAll("[data-essay-filter]");
+  const essayEntries = document.querySelectorAll("[data-essay-entry]");
+  const essaySections = document.querySelectorAll(".essay-section");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-essay-filter") ?? "all";
+      filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+      essayEntries.forEach((entry) => {
+        const track = entry.getAttribute("data-track") ?? "";
+        const publicationClass = entry.getAttribute("data-class") ?? "";
+        const tags = entry.getAttribute("data-tags") ?? "";
+        const [kind, value] = filter.split(":");
+        const matches = filter === "all" || (kind === "track" && track === value) || (kind === "class" && publicationClass === value) || (kind === "tag" && tags.includes(value));
+        entry.toggleAttribute("hidden", !matches);
+      });
+      essaySections.forEach((section) => {
+        section.toggleAttribute("hidden", !section.querySelector("[data-essay-entry]:not([hidden])"));
+      });
+    });
+  });
+</script>
+
 <style>
   .lifecycle-spotlight {
     margin-bottom: var(--space-4);
     padding: var(--registry-panel-padding);
-    border-left: 2px solid var(--accent-proof);
+    border-left: 2px solid var(--color-rule);
+  }
+  .essay-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--space-5);
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--current-line);
+    border-bottom: 1px solid var(--current-line);
+  }
+  .filter-label {
+    margin-right: 0.35rem;
+  }
+  .essay-filter {
+    border: 1px solid var(--current-line);
+    border-radius: 2px;
+    padding: 0.45rem 0.65rem;
+    background: transparent;
+    color: var(--current-muted);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .essay-filter:hover,
+  .essay-filter.is-active {
+    border-color: var(--color-action);
+    color: var(--color-action);
+    background: var(--color-action-soft);
   }
   .lifecycle-spotlight-grid {
     display: grid;
@@ -279,8 +328,9 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   .spotlight-title {
     margin: 0 0 0.7rem;
     font-size: 1.8rem;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
     color: var(--current-text);
   }
   .spotlight-copy,
@@ -314,20 +364,21 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
   .current-essay h3 {
     margin: 0 0 0.55rem;
     font-size: 1.2rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .current-essay h3 a {
     color: var(--current-text);
     text-decoration: none;
   }
   .current-essay h3 a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
   .current-essay p {
     margin: 0;
@@ -350,7 +401,7 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     text-decoration: none;
   }
   .foundation-strip a:hover strong {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
   .foundation-strip strong {
     font-size: 0.95rem;
@@ -369,7 +420,7 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
   .spotlight-link:hover {
@@ -392,66 +443,65 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   .registry-section-heading h2 {
     margin: 0;
     font-size: 1.35rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
-  .registry-log {
+  .essay-ledger {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--current-line);
   }
-  .log-entry {
+  .essay-record {
     display: grid;
     grid-template-columns: 280px 1fr;
     padding: var(--registry-panel-padding);
     border-bottom: 1px solid var(--current-line);
     transition: background-color 0.25s ease;
   }
-  .log-entry:last-child {
+  .essay-record:last-child {
     border-bottom: none;
   }
-  .log-entry:hover {
-    background-color: rgba(59, 130, 246, 0.03);
+  .essay-record:hover {
+    background-color: color-mix(in srgb, var(--current-surface) 94%, var(--color-rule-soft));
   }
-  .log-entry.is-flagship {
-    border-left: 2px solid var(--accent-signal);
+  .essay-record.is-flagship {
+    border-left: 2px solid var(--color-rule);
   }
-  .log-entry.is-series {
-    border-left: 2px solid var(--accent-proof);
+  .essay-record.is-series {
+    border-left: 2px solid var(--color-rule);
   }
-  .log-entry.is-research {
-    border-left: 2px solid var(--accent-signal);
+  .essay-record.is-research {
+    border-left: 2px solid var(--color-rule);
   }
-  .log-metadata {
+  .essay-record__metadata {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
   }
-  .log-flagship {
-    color: var(--accent-signal);
+  .essay-record__flagship {
+    color: var(--color-meta);
   }
-  .log-series {
-    color: var(--accent-proof);
+  .essay-record__series {
+    color: var(--color-meta);
   }
-  .log-research {
-    color: var(--accent-signal);
-  }
-  .log-title {
+  .essay-record__title {
     font-size: 1.72rem;
     font-weight: 800;
     margin-bottom: 0.85rem;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    line-height: var(--type-card-title-line-height);
+    word-spacing: var(--type-card-title-word-spacing);
   }
-  .log-title a {
+  .essay-record__title a {
     color: var(--current-text);
     text-decoration: none;
   }
-  .log-title a:hover {
-    color: var(--accent-signal);
+  .essay-record__title a:hover {
+    color: var(--color-action);
   }
-  .log-desc {
+  .essay-record__description {
     font-size: 1rem;
     line-height: 1.65;
     color: var(--current-muted);
@@ -468,22 +518,28 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     }
     .spotlight-title {
       font-size: 1.45rem;
+      line-height: var(--type-section-title-line-height-mobile);
+      letter-spacing: var(--type-section-title-letter-spacing);
+      word-spacing: var(--type-section-title-word-spacing);
     }
     .foundation-strip {
       grid-template-columns: 1fr;
     }
-    .log-entry {
+    .essay-record {
       grid-template-columns: 1fr;
       gap: var(--space-3);
       padding: var(--registry-card-padding);
     }
-    .log-metadata {
+    .essay-record__metadata {
       gap: 0.65rem;
     }
-    .log-title {
+    .essay-record__title {
       font-size: 1.4rem;
+      line-height: var(--type-card-title-line-height-mobile);
+      letter-spacing: var(--type-card-title-letter-spacing);
+      word-spacing: var(--type-card-title-word-spacing);
     }
-    .log-desc {
+    .essay-record__description {
       font-size: 0.95rem;
     }
   }

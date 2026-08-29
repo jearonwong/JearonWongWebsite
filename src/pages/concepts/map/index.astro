@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../../components/ReadingFlowDiagram.astro";
 import { siteConfig } from "../../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
 
@@ -843,10 +845,10 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Concepts Map / Entity Mesh"
     objectType="GEO_NAVIGATION"
     objectValue="VISIBLE_ENTITY_MESH"
-    lead="A visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, the auditability and assurance white paper, the insurability and risk transfer white paper, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, deterministic delivery, agent architecture governance, regulatory and enterprise governance mappings, applied playbooks, and extended ecosystem mappings."
+    lead="A visible semantic navigation surface for the concepts, research sources, project paths, and evidence records used across this site."
   >
     <div class="map-hero-links">
-      {primaryLinks.map((link) => (
+      {primaryLinks.slice(0, 2).map((link) => (
         <a href={link.href} class="registry-annotation map-hero-link">
           <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
         </a>
@@ -855,7 +857,20 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
-    <main class="shell map-shell">
+    <div class="shell map-shell">
+      <ReadingGuide
+        role="ENTITY_RELATIONSHIPS"
+        answer="The map connects canonical concepts, research sources, project paths, and evidence surfaces into one navigable reference layer."
+        startHref="#semantic-chain-title"
+        startLabel="Start with the semantic chain"
+        nextLinks={[{ href: "/concepts/", label: "Use the concept index" }, { href: "/evidence/", label: "Open the evidence registry" }]}
+        sections={["Canonical chain", "Layer index", "Entity relationships", "Relation groups", "Boundary"]}
+      />
+      <ReadingFlowDiagram
+        variant="concepts"
+        title="The map is a relationship surface, not a glossary dump."
+        description="Read the entity mesh from identity and category through canonical concepts, projects, and evidence links."
+      />
       <section class="map-opening registry-chassis" aria-labelledby="map-opening-title">
         <div>
           <div class="registry-annotation">
@@ -873,6 +888,10 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
             <a href={link.href}>{link.label}</a>
           ))}
         </div>
+        <label class="map-search" for="map-search-input">
+          <span class="registry-key">FILTER_MESH</span>
+          <input id="map-search-input" type="search" placeholder="Filter visible nodes and relations" autocomplete="off" data-map-search />
+        </label>
       </section>
 
       <section class="semantic-chain registry-chassis" aria-labelledby="semantic-chain-title">
@@ -899,7 +918,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
         </div>
         <div class="layer-card-grid">
           {extractableLayerGroups.map((group) => (
-            <article id={group.name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")} class="layer-card">
+            <article id={group.name.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")} class="layer-card" data-map-entry>
               <h3>{group.name}</h3>
               <p>{group.description}</p>
               <div class="layer-card__links">
@@ -923,7 +942,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
         </div>
         <div class="relationship-table">
           {explicitEntityRelationships.map((edge) => (
-            <a href={edge.href} class="relationship-row">
+            <a href={edge.href} class="relationship-row" data-map-entry>
               <span>{edge.source}</span>
               <strong>{edge.relation}</strong>
               <span>{edge.target}</span>
@@ -942,7 +961,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           <p>Routed nodes link to their canonical pages. The text list below is the accessibility equivalent of the visual map.</p>
         </div>
 
-        <div class="mesh-flow" aria-hidden="true">
+        <div class="mesh-flow" aria-hidden="true" inert>
           <div class="mesh-row mesh-row--identity">
             <a href="/about/" class="mesh-node">Jearon Wong</a>
             <span class="mesh-arrow">-&gt;</span>
@@ -1023,7 +1042,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
         <ol class="map-text-equivalent" aria-label="Text equivalent of entity mesh">
           {mapNodes.map((node) => (
-            <li>
+            <li data-map-entry>
               <a href={node.href}>{node.label}</a>
               <span>{node.layer}</span>
               <p>{node.description}</p>
@@ -1068,7 +1087,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           procurement recommendation, or evidence of search ranking improvement.
         </p>
       </section>
-    </main>
+    </div>
   </div>
 </BaseLayout>
 
@@ -1085,7 +1104,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .map-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .map-shell {
@@ -1100,13 +1119,27 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .entity-map,
   .boundary-panel {
     padding: var(--registry-panel-padding);
+    min-width: 0;
+  }
+
+  .map-opening > *,
+  .semantic-chain > *,
+  .extractable-layers > *,
+  .explicit-relations > *,
+  .entity-map > *,
+  .boundary-panel > *,
+  .layer-card,
+  .layer-card__links,
+  .layer-card__links a {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .map-opening {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
     gap: clamp(1.5rem, 4vw, 3rem);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .map-opening h2,
@@ -1119,8 +1152,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: clamp(1.55rem, 2.8vw, 2.25rem);
-    line-height: 1.1;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .map-opening p,
@@ -1140,7 +1174,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .semantic-chain {
     display: grid;
     gap: 1.25rem;
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
 
   .semantic-chain ol {
@@ -1183,16 +1217,16 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .semantic-chain a:hover {
-    border-color: var(--accent-signal);
-    color: var(--accent-signal);
+    border-color: var(--color-action);
+    color: var(--color-action);
   }
 
   .extractable-layers {
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .explicit-relations {
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
 
   .relationship-table {
@@ -1221,7 +1255,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .relationship-row strong {
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -1247,7 +1281,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .layer-card p {
@@ -1265,9 +1301,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .layer-card__links a {
+    overflow-wrap: break-word;
+    word-break: break-word;
     padding: 0.36rem 0.48rem;
     border: 1px solid var(--current-border);
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.66rem;
     font-weight: 800;
@@ -1292,7 +1330,32 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .map-opening__links a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
+  }
+
+  .map-search {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .map-search input {
+    width: 100%;
+    min-height: 2.6rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--current-border);
+    border-radius: 0;
+    background: var(--surface-paper);
+    color: var(--current-text);
+    font: inherit;
+    font-size: 0.85rem;
+  }
+
+  .map-search input::placeholder {
+    color: var(--current-muted);
   }
 
   .entity-map {
@@ -1346,7 +1409,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .mesh-node:hover {
-    border-color: var(--accent-proof);
+    border-color: var(--color-action);
     color: #ffffff;
   }
 
@@ -1355,16 +1418,16 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .mesh-node--strong {
-    border-color: rgba(34, 211, 238, 0.48);
+    border-color: rgba(255, 255, 255, 0.28);
   }
 
   .mesh-node--authority {
-    border-color: rgba(245, 158, 11, 0.48);
+    border-color: rgba(255, 255, 255, 0.2);
     color: #f8fafc;
   }
 
   .mesh-node--protocol {
-    border-color: rgba(59, 130, 246, 0.54);
+    border-color: rgba(255, 255, 255, 0.22);
   }
 
   .mesh-arrow {
@@ -1402,11 +1465,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .map-text-equivalent a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .map-text-equivalent span {
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -1443,8 +1506,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: 1.25rem;
-    line-height: 1.18;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .relation-card p {
@@ -1481,14 +1545,15 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .boundary-panel {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   @media (max-width: 860px) {
     .map-opening,
     .relation-card-grid,
     .relationship-row,
-    .map-text-equivalent {
+    .map-text-equivalent,
+    .layer-card-grid {
       grid-template-columns: 1fr;
     }
 
@@ -1523,3 +1588,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     }
   }
 </style>
+
+<script is:inline>
+  const mapSearch = document.querySelector("[data-map-search]");
+  const mapEntries = [...document.querySelectorAll("[data-map-entry]")];
+  mapSearch?.addEventListener("input", (event) => {
+    const value = event.target.value.trim().toLowerCase();
+    mapEntries.forEach((entry) => {
+      entry.toggleAttribute("hidden", value.length > 0 && !entry.textContent.toLowerCase().includes(value));
+    });
+  });
+</script>

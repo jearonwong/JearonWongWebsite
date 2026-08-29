@@ -38,9 +38,24 @@ const { trace } = Astro.props;
 <style>
   .gaic-source-trace {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.9rem;
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
+    min-width: 0;
+  }
+
+  /* The source key is intentionally long; let the grid track shrink at phone widths. */
+  .gaic-source-trace > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .gaic-source-trace > .registry-annotation {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .gaic-source-trace h2 {
@@ -49,6 +64,7 @@ const { trace } = Astro.props;
     font-size: 1.35rem;
     line-height: 1.18;
     letter-spacing: 0;
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .gaic-source-trace p {
@@ -98,7 +114,7 @@ const { trace } = Astro.props;
   }
 
   .gaic-source-trace__related a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -109,7 +125,7 @@ const { trace } = Astro.props;
 
   .gaic-source-trace__anchors a:hover strong,
   .gaic-source-trace__related a:hover {
-    color: var(--current-text);
+    color: var(--color-action);
   }
 
   @media (max-width: 720px) {

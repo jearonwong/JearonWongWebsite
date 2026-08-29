@@ -1,0 +1,77 @@
+---
+interface Props {
+  definition: string;
+  boundary: string;
+  evidence: string;
+  citation: string;
+  updated: string;
+  sourceLevel?: string;
+}
+
+const { definition, boundary, evidence, citation, updated, sourceLevel = "AUTHORED_ANALYSIS" } = Astro.props;
+---
+
+<section class="semantic-evidence-band registry-chassis" aria-label="Semantic evidence summary">
+  <div class="registry-annotation semantic-evidence-label">
+    <span class="registry-key">SEMANTIC_RECORD</span>: <span class="registry-value">DEFINITION / BOUNDARY / EVIDENCE / CITATION</span>
+  </div>
+  <dl class="semantic-evidence-grid">
+    <div><dt>DEFINITION</dt><dd>{definition}</dd></div>
+    <div><dt>BOUNDARY</dt><dd>{boundary}</dd></div>
+    <div><dt>EVIDENCE</dt><dd>{evidence}</dd></div>
+    <div><dt>CITATION</dt><dd>{citation}</dd></div>
+    <div><dt>SOURCE_LEVEL</dt><dd>{sourceLevel}</dd></div>
+    <div><dt>UPDATED</dt><dd>{updated}</dd></div>
+  </dl>
+</section>
+
+<style>
+  .semantic-evidence-band {
+    display: grid;
+    min-width: 0;
+    gap: 1rem;
+    margin: var(--space-5) 0;
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--color-rule);
+  }
+  .semantic-evidence-label {
+    margin: 0;
+  }
+  .semantic-evidence-grid {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0;
+    background: var(--current-line);
+    border: 1px solid var(--current-line);
+  }
+  .semantic-evidence-grid > div {
+    display: grid;
+    min-width: 0;
+    gap: 0.45rem;
+    padding: 0.85rem;
+    background: var(--current-surface);
+  }
+  .semantic-evidence-grid dt {
+    min-width: 0;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    color: var(--color-meta);
+    overflow-wrap: break-word;
+  }
+  .semantic-evidence-grid dd {
+    min-width: 0;
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 760px) {
+    .semantic-evidence-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

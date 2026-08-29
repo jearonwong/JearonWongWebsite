@@ -10,6 +10,28 @@ shareDescription: The next inflection point in Agentic AI is not better executio
 shareImage: /social/agentic-delivery-og.png
 shareImageAlt: Agentic Delivery — A task can be executed. Real work must be delivered.
 publishDate: 2026-04-27
+updatedAt: 2026-04-27
+track: foundation
+contentRole: essay
+publicationClass: thought
+editorialTrack: foundation
+canonicalRoute: /essays/agentic-ai-inflection-point-project-delivery/
+canonicalParent: /essays/
+primaryAudience: Builder
+secondaryAudiences:
+  - Decision-maker
+distinctReaderQuestion: "Why does agentic work need a delivery lifecycle instead of faster task execution?"
+sourceRefs:
+  - Authored foundation essay
+  - MPLP project framing
+indexability: index
+nextSteps:
+  - /lifecycle/
+  - /projects/
+maxClickDepth: 3
+status: published
+readingTimeMinutes: 10
+evidenceLevel: FOUNDATION THESIS
 cluster: reliable-ai-agent-work-delivery
 projectProof: MPLP
 featured: true
@@ -40,6 +62,12 @@ relatedProjects:
   - SoloCrew
   - Cognitive OS
   - Validation Lab
+tags:
+  - AI Agent Lifecycle
+  - Agentic Delivery
+  - Deterministic Delivery
+  - Accepted Outcome
+  - Evidence Chain
 ---
 
 *A task can be executed. Real work must be delivered.*

@@ -1,156 +1,249 @@
 ---
-import { secondaryNav, siteConfig, socialLinks } from "../data/site";
+import { primaryNav, secondaryNavGroups, siteConfig, siteSemanticBaseline, socialLinks } from "../data/site";
 
 const trustLinks = [
   { href: "/privacy/", label: "Privacy Policy" },
   { href: "/terms/", label: "Terms" }
 ];
+
+const footerRouteGroups = [
+  { key: "mainline", label: "Mainline", items: primaryNav },
+  ...secondaryNavGroups
+];
 ---
 
-<footer class="shell site-footer">
-  <div class="footer-core">
-    <div class="registry-annotation" style="margin-bottom: 0.6rem;">
-      <span class="registry-key">SITE_STATE</span>: <span class="registry-value">PUBLIC_HEADQUARTERS</span>
+<footer class="site-footer-shell zone-b">
+  <div class="shell site-footer">
+    <div class="footer-intro">
+      <div class="footer-kicker" aria-label="Site state">
+        <span>RESEARCH LEDGER</span>
+        <span aria-hidden="true">/</span>
+        <span>PUBLIC HEADQUARTERS</span>
+      </div>
+      <h2>{siteConfig.author.name}</h2>
+      <p class="footer-role">{siteConfig.author.role}</p>
+      <p class="footer-thesis">{siteSemanticBaseline.problemStatement}</p>
+      <div class="footer-social" aria-label="Social links">
+        {socialLinks.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">{link.platform}</a>
+        ))}
+      </div>
     </div>
-    <p class="footer-title">{siteConfig.author.name}</p>
-    <p class="footer-meta">{siteConfig.author.role}</p>
-    <div class="footer-social">
-      {socialLinks.map(link => (
-        <a href={link.href} target="_blank" rel="noopener noreferrer" class="social-pill">{link.platform}</a>
-      ))}
-    </div>
-    <nav aria-label="Site trust links" class="footer-trust">
-      {trustLinks.map((link) => (
-        <a href={link.href}>{link.label}</a>
+
+    <nav aria-label="Footer routes" class="footer-routes">
+      {footerRouteGroups.map((group) => (
+        <div class="footer-route-group">
+          <span class="footer-route-label">{group.label}</span>
+          <div class="footer-route-list">
+            {group.items.map((item) => (
+              <a href={item.href}>{item.label}</a>
+            ))}
+          </div>
+        </div>
       ))}
     </nav>
-    <p class="footer-copy">&copy; {new Date().getFullYear()} All rights reserved.</p>
+
+    <div class="footer-bottom">
+      <nav aria-label="Site trust links" class="footer-trust">
+        {trustLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+      <p class="footer-copy">&copy; {new Date().getFullYear()} Jearon Wong</p>
+    </div>
   </div>
-  <nav aria-label="Secondary" class="secondary-nav">
-    {secondaryNav.map((item) => (
-      <a href={item.href} class="footer-link">{item.label}</a>
-    ))}
-  </nav>
 </footer>
 
 <style>
+  .site-footer-shell {
+    --footer-ink: #111418;
+    --footer-muted: var(--color-meta);
+    --footer-line: var(--color-rule);
+    --footer-soft-line: var(--color-rule-soft);
+    margin-top: 0;
+    border-top: 1px solid var(--footer-line);
+    background: #f7f8fa;
+    color: var(--footer-ink);
+  }
+
   .site-footer {
-    padding: var(--space-page-y) 0;
     display: grid;
-    grid-template-columns: 1.1fr auto;
-    gap: 4rem;
-    align-items: start;
-    border-top: 1px solid var(--current-line);
-    margin-top: var(--space-8);
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.6fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    padding: 4.5rem 0 1.5rem;
   }
-  .footer-title {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.25rem;
-    margin: 0;
-    color: #0f172a;
-    letter-spacing: -0.02em;
+
+  .footer-intro {
+    align-self: start;
+    min-width: 0;
   }
-  .footer-meta {
+
+  .footer-kicker,
+  .footer-route-label,
+  .footer-social,
+  .footer-trust,
+  .footer-copy {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent-signal);
-    margin: 0.5rem 0 1.5rem;
+    font-size: 0.65rem;
+    letter-spacing: var(--type-meta-letter-spacing);
+    line-height: var(--type-meta-line-height);
+    word-spacing: var(--type-meta-word-spacing);
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.05em;
   }
+
+  .footer-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    color: var(--footer-muted);
+  }
+
+  .footer-intro h2 {
+    margin: 1.35rem 0 0.4rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    font-weight: 650;
+    letter-spacing: var(--type-section-title-letter-spacing);
+    line-height: var(--type-section-title-line-height);
+    word-spacing: var(--type-section-title-word-spacing);
+  }
+
+  .footer-role {
+    margin: 0;
+    color: var(--footer-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: var(--type-meta-letter-spacing);
+    line-height: var(--type-meta-line-height);
+    word-spacing: var(--type-meta-word-spacing);
+    text-transform: uppercase;
+  }
+
+  .footer-thesis {
+    max-width: 24ch;
+    margin: 2.25rem 0 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 560;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    line-height: var(--type-card-title-line-height);
+    word-spacing: var(--type-card-title-word-spacing);
+  }
+
   .footer-social {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: var(--space-3);
+    gap: 0.75rem 1.1rem;
   }
-  .social-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.35rem 0.75rem;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748b;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 2px;
+
+  .footer-social a,
+  .footer-route-list a,
+  .footer-trust a {
+    color: var(--footer-muted);
     text-decoration: none;
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition: color 160ms ease, border-color 160ms ease;
   }
-  .social-pill:hover {
-    border-color: var(--accent-signal);
-    color: var(--accent-signal);
+
+  .footer-social a {
+    border-bottom: 1px solid transparent;
   }
-  .footer-copy {
-    font-size: 0.8rem;
-    line-height: 1.7;
-    margin: 0;
-    color: #94a3b8;
+
+  .footer-social a:hover,
+  .footer-route-list a:hover,
+  .footer-trust a:hover {
+    color: var(--color-action);
   }
+
+  .footer-social a:hover {
+    border-color: currentColor;
+  }
+
+  .footer-routes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 2rem;
+    align-content: start;
+    padding-top: 0.2rem;
+    border-top: 1px solid var(--footer-line);
+  }
+
+  .footer-route-group {
+    min-width: 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--footer-soft-line);
+  }
+
+  .footer-route-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--footer-muted);
+  }
+
+  .footer-route-list {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .footer-route-list a {
+    font-family: var(--font-display);
+    font-size: 0.94rem;
+    font-weight: 540;
+    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    word-spacing: var(--type-card-title-word-spacing);
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--footer-line);
+  }
+
   .footer-trust {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1rem;
-    margin: 0 0 0.8rem;
   }
-  .footer-trust a {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 650;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #64748b;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .footer-trust a:hover {
-    color: var(--accent-signal);
-  }
-  .secondary-nav {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 0.85rem 1.5rem;
+
+  .footer-copy {
+    margin: 0;
+    color: var(--footer-muted);
     text-align: right;
   }
-  .footer-link {
-    font-size: 0.8rem;
-    font-family: var(--font-mono);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748b;
-    transition: color 0.2s ease;
+
+  @media (max-width: 900px) {
+    .site-footer {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    .footer-routes {
+      grid-column: 1;
+    }
   }
-  .footer-link:hover {
-    color: var(--accent-signal);
-  }
+
   @media (max-width: 640px) {
     .site-footer {
-      padding: 3.5rem 0 0;
-      grid-template-columns: 1fr;
-      align-items: start;
-      gap: 2rem;
+      width: min(calc(100vw - 2rem), 1240px);
+      padding-top: 3.5rem;
     }
-    .footer-title {
-      font-size: 1.1rem;
+
+    .footer-routes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem 1.25rem;
     }
-    .footer-meta {
-      margin: 0.45rem 0 1.15rem;
-      font-size: 0.7rem;
+
+    .footer-bottom {
+      display: grid;
+      gap: 0.75rem;
     }
+
     .footer-copy {
-      font-size: 0.75rem;
-    }
-    .secondary-nav {
       text-align: left;
-      gap: 0.7rem 1.1rem;
-    }
-    .footer-link {
-      font-size: 0.75rem;
     }
   }
 </style>

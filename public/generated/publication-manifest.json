@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/site-publication-sync.mjs",
+  "sourceOfTruth": [
+    "src/content/essays/",
+    "governance/site-publication-control-record.json"
+  ],
+  "records": [
+    {
+      "slug": "when-an-agent-says-done-who-accepts-the-outcome",
+      "title": "When an Agent Says \"Done,\" Who Accepts the Outcome?",
+      "description": "An Agent can complete its execution while the work remains unaccepted. A first-person field essay from building MPLP and its Development Runtime about Intent change, evidence, authority, and the lifecycle decision that turns execution into delivery.",
+      "route": "/essays/when-an-agent-says-done-who-accepts-the-outcome/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "field-note",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Builder",
+      "distinctReaderQuestion": "Who can accept an agent outcome when execution finishes but intent, authority, or evidence has changed?",
+      "sourceRefs": [
+        "MPLP Development Runtime field work",
+        "Authored field essay"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-08-25",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "AI Agent Lifecycle",
+        "Accepted Outcome",
+        "Agent Accountability",
+        "Agentic Delivery",
+        "Evidence Chain",
+        "Intent Drift"
+      ],
+      "source": "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md",
+      "bodySha256": "31af40c359c03c2597abb3037ba2ce6f3c5b34bd27dbd5d6f524ac12d6f63ea1",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-2026-08-25-when-agent-says-done",
+        "semanticMode": "historical",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "governed-by-design-protocol-native-multi-agent-operating-system",
+      "title": "Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI",
+      "description": "Agentic AI does not need another framework or dashboard. It needs a protocol-native lifecycle layer for intent, drift, confirmation boundaries, evidence chains, agent handoffs, and accepted outcomes across system boundaries.",
+      "route": "/essays/governed-by-design-protocol-native-multi-agent-operating-system/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "technical",
+      "editorialTrack": "protocol",
+      "primaryAudience": "Architect",
+      "distinctReaderQuestion": "Which lifecycle semantics belong at the protocol layer of a multi-agent operating system?",
+      "sourceRefs": [
+        "Authored protocol position essay",
+        "MPLP project framing"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/projects/mplp/",
+        "/concepts/protocol-engineering/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-06-09",
+      "status": "published",
+      "flagship": true,
+      "featured": true,
+      "tags": [
+        "MPLP",
+        "Cognitive OS",
+        "Multi-Agent Systems",
+        "Protocol Engineering",
+        "Lifecycle Governance"
+      ],
+      "source": "src/content/essays/governed-by-design-protocol-native-multi-agent-operating-system.md",
+      "bodySha256": "148ea27a6fef5e15305baeb2b162bc777e39f2408402ffc904c3ecde32f97135",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-governed-by-design-protocol-native-mas-os",
+        "semanticMode": "conceptual",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai",
+      "title": "From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI",
+      "description": "Jearon Wong argues that Agentic AI auditability requires a shift from static logs to dynamic, responsibility-linked lifecycle evidence chains.",
+      "route": "/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "research-commentary",
+      "editorialTrack": "research",
+      "primaryAudience": "Governance",
+      "distinctReaderQuestion": "What evidence structure lets a reviewer reconstruct responsibility beyond static agent logs?",
+      "sourceRefs": [
+        "Agentic AI Auditability & Assurance White Paper 2026",
+        "Authored research commentary"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/research/agentic-ai-auditability-assurance-white-paper-2026/",
+        "/definitions/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-06-04",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "Lifecycle Governance",
+        "Auditability",
+        "Evidence Chain",
+        "Accepted Outcome",
+        "Agentic Delivery"
+      ],
+      "source": "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md",
+      "bodySha256": "ee6e805d4c91a4637d9e4123c29a3f11b0394756833d45071077483a73b62e00",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-from-static-logs-to-dynamic-evidence-chains",
+        "semanticMode": "research-commentary",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer",
+      "title": "The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.",
+      "description": "The industry keeps debating AI agent governance as fragmentation, audit gaps, runtime drift, weak HITL accountability, and uninsurable agentic risk. MPLP defines the missing lifecycle governance layer behind them.",
+      "route": "/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "thought",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Governance",
+      "distinctReaderQuestion": "What single lifecycle layer connects fragmented agent governance debates to accountable outcomes?",
+      "sourceRefs": [
+        "Authored lifecycle position essay",
+        "MPLP protocol framing"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-05-24",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "Lifecycle Governance",
+        "MPLP",
+        "Auditability",
+        "Agentic Delivery",
+        "Multi-Agent Systems"
+      ],
+      "source": "src/content/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer.md",
+      "bodySha256": "99810e3746ac7ab9dca8987f2762c3b8a9b26fa971e4c64899dc2cdc9dad47a2",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-industry-debating-agent-governance",
+        "semanticMode": "conceptual",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "defining-intent-drift-in-agentic-workflows",
+      "title": "Defining Intent Drift in Agentic Workflows",
+      "description": "Agentic systems do not only fail when models hallucinate. They fail when intent degrades across human input, model interpretation, and long-running execution. This essay defines Intent Drift, Delta Intent, and Drift Detection as the minimum defense.",
+      "route": "/essays/defining-intent-drift-in-agentic-workflows/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "technical",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Builder",
+      "distinctReaderQuestion": "How can a team distinguish Intent Drift, Delta Intent, and Drift Detection during execution?",
+      "sourceRefs": [
+        "Authored technical essay",
+        "MPLP lifecycle concepts"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/concepts/intent-drift/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-05-21",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "Intent Drift",
+        "AI Agent Lifecycle",
+        "Agentic Workflows",
+        "Evidence Chain",
+        "MPLP",
+        "Accepted Outcome"
+      ],
+      "source": "src/content/essays/defining-intent-drift-in-agentic-workflows.md",
+      "bodySha256": "f52327be80d81c0bf59a3f5715a776f51359b3621c453b61d086fec376856888",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-defining-intent-drift-in-agentic-workflows",
+        "semanticMode": "conceptual",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "from-model-governance-to-agentic-lifecycle-conformance",
+      "title": "From Model Governance to Agentic Lifecycle Conformance",
+      "description": "Jearon Wong explains how studying EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, Singapore governance work, W3C provenance standards, and Colorado AI Act led from traditional compliance coverage to Missing Regulatory Objects, RCCS-M, and ALCS.",
+      "route": "/essays/from-model-governance-to-agentic-lifecycle-conformance/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "research-commentary",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Governance",
+      "distinctReaderQuestion": "Why is model governance insufficient for agentic lifecycle responsibility and conformance?",
+      "sourceRefs": [
+        "Global AI Compliance White Paper 2026",
+        "Authored research commentary"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/research/",
+        "/concepts/missing-regulatory-objects/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-05-13",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "Lifecycle Governance",
+        "Multi-Agent Systems",
+        "Evidence Chain",
+        "Accepted Outcome",
+        "MPLP"
+      ],
+      "source": "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md",
+      "bodySha256": "14d1036afd7eb3c378122d26e5cc8fdc15aee25556dbf4e88c32d8c782e8f150",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-from-model-governance-to-agentic-lifecycle-conformance",
+        "semanticMode": "research-commentary",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "agent-orchestration-is-not-delivery",
+      "title": "Agent Orchestration Is Not Delivery",
+      "description": "The third essay in the Define The AI Agent Lifecycle series. Jearon Wong argues that agent orchestration coordinates execution but does not define delivery: in the AI Agent Lifecycle, the orchestrator must become the consensus layer that turns human intent into verifiable responsibility and accepted project delivery.",
+      "route": "/essays/agent-orchestration-is-not-delivery/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "thought",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Architect",
+      "distinctReaderQuestion": "What must an orchestrator preserve for execution to become accepted delivery?",
+      "sourceRefs": [
+        "Authored field essay",
+        "MPLP protocol position"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-05-04",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "AI Agent Lifecycle",
+        "Agentic Workflows",
+        "Accepted Outcome",
+        "Agent Accountability",
+        "Agentic Delivery"
+      ],
+      "source": "src/content/essays/agent-orchestration-is-not-delivery.md",
+      "bodySha256": "0284069dc5cf2dc957de7fb45999b667f4d82e2fe8ca0b5657a7d4a4fa88f3b1",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-agent-orchestration-is-not-delivery",
+        "semanticMode": "historical",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "the-industry-misdefined-multi-agent-ai",
+      "title": "The Industry Misdefined Multi-Agent AI",
+      "description": "The second essay in Define The AI Agent Lifecycle. Jearon Wong argues that MAS should be defined by lifecycle responsibility separation, lifecycle-governed workflows, Agent Lifecycle Protocol, and accountable delivery.",
+      "route": "/essays/the-industry-misdefined-multi-agent-ai/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "thought",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Architect",
+      "distinctReaderQuestion": "How should multi-agent systems be defined by responsibility separation rather than agent count?",
+      "sourceRefs": [
+        "Authored lifecycle essay",
+        "MPLP project framing"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/essays/agent-orchestration-is-not-delivery/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-05-01",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "AI Agent Lifecycle",
+        "Multi-Agent Systems",
+        "Lifecycle Role Decomposition",
+        "Agentic Delivery",
+        "Agentic Workflows"
+      ],
+      "source": "src/content/essays/the-industry-misdefined-multi-agent-ai.md",
+      "bodySha256": "49799a7978598ace4f725a77a3a255558db9eda5b63f6feb3e9c755a019301cc",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-industry-misdefined-multi-agent-ai",
+        "semanticMode": "historical",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "title": "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+      "description": "The first essay in Define The AI Agent Lifecycle. A personal engineering origin story of how prompt failure, context drift, intent drift, and multi-agent coordination exposed the need for AI Agent Lifecycle.",
+      "route": "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "thought",
+      "editorialTrack": "lifecycle",
+      "primaryAudience": "Builder",
+      "distinctReaderQuestion": "Which engineering failures forced AI Agent Lifecycle to become an explicit field?",
+      "sourceRefs": [
+        "Authored origin essay",
+        "MPLP development experience"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/essays/the-industry-misdefined-multi-agent-ai/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-04-29",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "AI Agent Lifecycle",
+        "Agentic Delivery",
+        "Intent Drift",
+        "Multi-Agent Systems"
+      ],
+      "source": "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md",
+      "bodySha256": "c41346c9b78deb08cbe5beb7552ccd2682ff32fb449d758ef28f9714a15501a1",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-ai-agent-lifecycle-it-was-not-designed-it-grew",
+        "semanticMode": "historical",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "agentic-ai-inflection-point-project-delivery",
+      "title": "The Agentic AI Inflection Point: Project Delivery",
+      "description": "Agentic AI is moving from task execution to project delivery, where real work must be carried from human intent to accepted outcome.",
+      "route": "/essays/agentic-ai-inflection-point-project-delivery/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "thought",
+      "editorialTrack": "foundation",
+      "primaryAudience": "Builder",
+      "distinctReaderQuestion": "Why does agentic work need a delivery lifecycle instead of faster task execution?",
+      "sourceRefs": [
+        "Authored foundation essay",
+        "MPLP project framing"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/projects/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-04-27",
+      "status": "published",
+      "flagship": false,
+      "featured": true,
+      "tags": [
+        "AI Agent Lifecycle",
+        "Agentic Delivery",
+        "Deterministic Delivery",
+        "Accepted Outcome",
+        "Evidence Chain"
+      ],
+      "source": "src/content/essays/agentic-ai-inflection-point-project-delivery.md",
+      "bodySha256": "f6fdd19896249213df5c48a30aecb725dbc673ce9c1b842b483661c2e42bcd64",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-agentic-ai-inflection-point-project-delivery",
+        "semanticMode": "conceptual",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "title": "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+      "description": "Production AI agents need a vendor-neutral lifecycle governance layer above tool access and agent coordination.",
+      "route": "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
+      "canonicalParent": "/essays/",
+      "publicationClass": "technical",
+      "editorialTrack": "protocol",
+      "primaryAudience": "Architect",
+      "distinctReaderQuestion": "What lifecycle responsibility remains after MCP handles tools and A2A handles agent coordination?",
+      "sourceRefs": [
+        "Authored protocol position essay",
+        "MPLP lifecycle framing"
+      ],
+      "indexability": "index",
+      "nextSteps": [
+        "/lifecycle/",
+        "/projects/mplp/"
+      ],
+      "maxClickDepth": 3,
+      "publishDate": "2026-04-26",
+      "status": "published",
+      "flagship": true,
+      "featured": true,
+      "tags": [
+        "Protocol Engineering",
+        "Agentic Workflows",
+        "AI Agent Lifecycle",
+        "Authority Boundary",
+        "MPLP"
+      ],
+      "source": "src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md",
+      "bodySha256": "6eb9f68494b451a17ad19c634d2cffd950d77f0c343bc293f16a41fc4765e013",
+      "controlMode": "governed",
+      "control": {
+        "waveId": "essay-control-mcp-a2a-lifecycle-governance",
+        "semanticMode": "conceptual",
+        "navigationExposure": "essays-index",
+        "ownerApproval": {
+          "positioning": "approved",
+          "navigation": "approved",
+          "publication": "approved"
+        }
+      },
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    }
+  ]
+}

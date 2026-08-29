@@ -11,8 +11,29 @@ shareDescription: "Logs show activity. Evidence chains reconstruct responsibilit
 shareImage: /social/og-static-logs-dynamic-evidence-chains.png
 shareImageAlt: "From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI — Jearon Wong"
 publishDate: 2026-06-04
+updatedAt: 2026-08-26
 cluster: lifecycle-governance
 projectProof: Validation Lab
+track: research
+contentRole: essay
+publicationClass: research-commentary
+editorialTrack: research
+canonicalRoute: /essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/
+canonicalParent: /essays/
+primaryAudience: Governance
+secondaryAudiences:
+  - Decision-maker
+distinctReaderQuestion: "What evidence structure lets a reviewer reconstruct responsibility beyond static agent logs?"
+sourceRefs:
+  - Agentic AI Auditability & Assurance White Paper 2026
+  - Authored research commentary
+indexability: index
+nextSteps:
+  - /research/agentic-ai-auditability-assurance-white-paper-2026/
+  - /definitions/
+maxClickDepth: 3
+readingTimeMinutes: 14
+evidenceLevel: RESEARCH ADAPTATION
 featured: true
 summary: "Logs show activity. Evidence chains reconstruct responsibility."
 summaryLines:
@@ -21,16 +42,11 @@ summaryLines:
 series: "AIAAWP 2026"
 status: published
 tags:
-  - Agentic AI
-  - AI Agents
-  - AI Auditability
-  - AI Governance
-  - Audit Evidence Chain
-  - Agentic Audit Object
-  - AARM
-  - Enterprise AI Governance
-  - Agentic Lifecycle Governance
-  - Insurability
+  - Lifecycle Governance
+  - Auditability
+  - Evidence Chain
+  - Accepted Outcome
+  - Agentic Delivery
 ogImage: /social/og-static-logs-dynamic-evidence-chains.png
 images:
   - url: /figures/aiaawp-article-audit-object-gap.svg

@@ -1,0 +1,152 @@
+---
+interface LinkItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  role: string;
+  answer: string;
+  startHref: string;
+  startLabel: string;
+  nextLinks?: LinkItem[];
+  sections?: string[];
+}
+
+const { role, answer, startHref, startLabel, nextLinks = [], sections = [] } = Astro.props;
+---
+
+<section class="reading-guide" aria-labelledby="reading-guide-title">
+  <div class="reading-guide__label">
+    <span class="registry-key">READING_ORDER</span>: <span class="registry-value">{role}</span>
+  </div>
+  <div class="reading-guide__grid">
+    <div>
+      <h2 id="reading-guide-title">Start with one question.</h2>
+      <p>{answer}</p>
+    </div>
+    <div class="reading-guide__actions">
+      <a class="reading-guide__primary" href={startHref}>{startLabel}<span aria-hidden="true"> ↗</span></a>
+      {nextLinks.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+    </div>
+  </div>
+  {sections.length > 0 && (
+    <ol class="reading-guide__sections" aria-label="Sections on this page">
+      {sections.map((section, index) => <li><span>{String(index + 1).padStart(2, "0")}</span>{section}</li>)}
+    </ol>
+  )}
+</section>
+
+<style>
+  .reading-guide {
+    min-width: 0;
+    padding: clamp(1.35rem, 2.5vw, 2rem) 0;
+    border-top: 1px solid var(--color-rule);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .reading-guide__label {
+    margin-bottom: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: var(--type-meta, 0.7rem);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .reading-guide__grid {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .reading-guide h2 {
+    margin: 0;
+    color: var(--prototype-ink, #111418);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    line-height: var(--type-section-title-line-height);
+    word-spacing: var(--type-section-title-word-spacing);
+    overflow-wrap: break-word;
+  }
+
+  .reading-guide p {
+    min-width: 0;
+    max-width: 58ch;
+    margin: 0.75rem 0 0;
+    color: var(--color-meta);
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+  }
+
+  .reading-guide__actions {
+    display: grid;
+    min-width: 0;
+    gap: 0.55rem;
+    padding-left: 1.1rem;
+    border-left: 1px solid var(--color-rule);
+  }
+
+  .reading-guide__actions a {
+    color: var(--prototype-ink, #111418);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+  }
+
+  .reading-guide__actions a:hover,
+  .reading-guide__actions a:focus-visible {
+    color: var(--color-action);
+  }
+
+  .reading-guide__actions .reading-guide__primary {
+    color: var(--color-action);
+    font-weight: 700;
+  }
+
+  .reading-guide__sections {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.65rem 1rem;
+    margin: 1.5rem 0 0;
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--color-rule-soft);
+    list-style: none;
+  }
+
+  .reading-guide__sections li {
+    display: flex;
+    gap: 0.55rem;
+    color: var(--color-meta);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .reading-guide__sections span {
+    flex: 0 0 auto;
+    color: var(--color-meta);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+  }
+
+  @media (max-width: 720px) {
+    .reading-guide__grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .reading-guide__actions { padding-left: 0; border-left: 0; padding-top: 1rem; border-top: 1px solid var(--color-rule-soft); }
+    .reading-guide__sections { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 420px) {
+    .reading-guide__sections { grid-template-columns: 1fr; }
+  }
+</style>

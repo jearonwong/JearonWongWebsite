@@ -21,8 +21,8 @@
       "role": "HTML",
       "path": "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
       "media_type": "text/html",
-      "sha256": "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d",
-      "bytes": 379126
+      "sha256": "bb1f248e97d9d195cc3a0ae1e8c21e4614168be66e2b7495c103c57f91af6a22",
+      "bytes": 384212
     },
     {
       "role": "PDF",
@@ -34,7 +34,7 @@
     }
   ],
   "checksums": {
-    "public_html": "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d",
+    "public_html": "bb1f248e97d9d195cc3a0ae1e8c21e4614168be66e2b7495c103c57f91af6a22",
     "public_pdf": "db4866c7421928e65d4563bb25787d9b322d708c59937216da9d04b60991d178",
     "public_manifest": "recorded in checksums.sha256 after manifest serialization; self-referential hash is externalized"
   },

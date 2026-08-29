@@ -1,0 +1,141 @@
+---
+type Variant = "lifecycle" | "projects" | "research" | "evidence" | "governance" | "concepts";
+
+interface Props {
+  variant: Variant;
+  title: string;
+  description: string;
+}
+
+const { variant, title, description } = Astro.props;
+
+const flows: Record<Variant, { label: string; detail: string }[]> = {
+  lifecycle: [
+    { label: "Intent", detail: "What is being asked" },
+    { label: "Activation", detail: "Context and authority" },
+    { label: "Process", detail: "Plan, execute, verify" },
+    { label: "Project", detail: "State and responsibility" },
+    { label: "Accepted outcome", detail: "Review, evidence, recovery" }
+  ],
+  projects: [
+    { label: "Protocol path", detail: "MPLP lifecycle semantics" },
+    { label: "Runtime path", detail: "State and execution substrate" },
+    { label: "Proof path", detail: "Applied delivery records" },
+    { label: "Evidence surface", detail: "Adjudication and citation" }
+  ],
+  research: [
+    { label: "Research question", detail: "The claim under examination" },
+    { label: "Publication record", detail: "Edition, status, identity" },
+    { label: "Public artifacts", detail: "HTML, PDF, manifest" },
+    { label: "Citation path", detail: "Checksum and source boundary" }
+  ],
+  evidence: [
+    { label: "Source", detail: "Owned or authored surface" },
+    { label: "Definition", detail: "Stable semantic anchor" },
+    { label: "Project record", detail: "Role and implementation state" },
+    { label: "Review packet", detail: "Evidence, limits, decision" }
+  ],
+  governance: [
+    { label: "External baseline", detail: "Context and requirements" },
+    { label: "Control language", detail: "Internal interpretation" },
+    { label: "Lifecycle object", detail: "Responsibility and authority" },
+    { label: "Evidence", detail: "Trace, review, acceptance" }
+  ],
+  concepts: [
+    { label: "Identity", detail: "Author and site anchor" },
+    { label: "Category", detail: "AI Agent Lifecycle" },
+    { label: "Concepts", detail: "Definitions and relations" },
+    { label: "Projects", detail: "Protocol and proof paths" },
+    { label: "Evidence", detail: "Citations and artifacts" }
+  ]
+};
+
+const steps = flows[variant];
+---
+
+<figure class:list={["reading-flow", `reading-flow--${variant}`, "registry-chassis"]} aria-labelledby={`flow-title-${variant}`}>
+  <div class="reading-flow__head">
+    <div class="registry-annotation"><span class="registry-key">VISUAL_MODEL</span>: <span class="registry-value">{variant.toUpperCase()}</span></div>
+    <h2 id={`flow-title-${variant}`}>{title}</h2>
+    <p>{description}</p>
+  </div>
+  <ol class="reading-flow__steps">
+    {steps.map((step, index) => (
+      <li class="reading-flow__step">
+        <span class="reading-flow__index">{String(index + 1).padStart(2, "0")}</span>
+        <strong>{step.label}</strong>
+        <span>{step.detail}</span>
+      </li>
+    ))}
+  </ol>
+  <figcaption>Read left to right on wide screens and top to bottom on small screens. Explanatory sequence for this page.</figcaption>
+</figure>
+
+<style>
+  .reading-flow {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: clamp(1.35rem, 2.6vw, 2rem);
+    background: #fff;
+    border-top: 2px solid var(--color-rule);
+  }
+
+  .reading-flow__head { max-width: 62ch; min-width: 0; }
+  .reading-flow__head h2 { margin: 0.75rem 0 0; color: var(--prototype-ink, #111418); font-size: clamp(1.45rem, 2.7vw, 2.2rem); line-height: var(--type-section-title-line-height); letter-spacing: var(--type-section-title-letter-spacing); word-spacing: var(--type-section-title-word-spacing); }
+  .reading-flow__head p { margin: 0.65rem 0 0; color: var(--color-meta); font-size: 0.96rem; line-height: 1.6; overflow-wrap: break-word; }
+
+  .reading-flow__steps {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(var(--flow-columns, 5), minmax(0, 1fr));
+    gap: 0;
+    margin: 1.6rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .reading-flow--projects .reading-flow__steps,
+  .reading-flow--research .reading-flow__steps,
+  .reading-flow--evidence .reading-flow__steps,
+  .reading-flow--governance .reading-flow__steps { --flow-columns: 4; }
+  .reading-flow--concepts .reading-flow__steps { --flow-columns: 5; }
+
+  .reading-flow__step {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 0.28rem;
+    min-height: 6.5rem;
+    min-width: 0;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid var(--color-rule);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .reading-flow__step + .reading-flow__step { border-left: 1px solid var(--color-rule); }
+  /* Anchor the connector to the next cell's left edge. A negative left
+     offset keeps the arrow centered on the rule without expanding the
+     previous cell's scrollable width. */
+  .reading-flow__step + .reading-flow__step::before { content: "→"; position: absolute; top: 2.2rem; left: 0; transform: translateX(-50%); z-index: 1; padding: 0 0.15rem; color: var(--color-meta); background: #fff; font-family: var(--font-mono); font-size: 0.88rem; }
+  .reading-flow__index { color: var(--color-meta); font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; }
+  .reading-flow__step strong { color: var(--prototype-ink, #111418); font-family: var(--font-display); font-size: 1rem; line-height: 1.2; }
+  .reading-flow__step strong,
+  .reading-flow__step > span:last-child { overflow-wrap: break-word; }
+  .reading-flow__step > span:last-child { color: var(--color-meta); font-size: 0.78rem; line-height: 1.45; }
+  .reading-flow figcaption { margin-top: 0.9rem; color: var(--color-meta); font-family: var(--font-mono); font-size: 0.66rem; line-height: 1.5; overflow-wrap: break-word; }
+
+  @media (max-width: 760px) {
+    .reading-flow__steps { grid-template-columns: 1fr 1fr; }
+    .reading-flow__step + .reading-flow__step { border-left: 0; }
+    .reading-flow__step:nth-child(even) { border-left: 1px solid var(--color-rule); }
+    .reading-flow__step + .reading-flow__step::before { display: none; }
+  }
+
+  @media (max-width: 460px) {
+    .reading-flow__steps { grid-template-columns: 1fr; }
+    .reading-flow__step:nth-child(even) { border-left: 0; }
+    .reading-flow__step + .reading-flow__step { border-top: 0; }
+  }
+</style>

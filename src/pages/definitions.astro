@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../components/ReadingFlowDiagram.astro";
 import SocialShare from "../components/SocialShare.astro";
 import {
   definitions,
@@ -97,6 +99,20 @@ const breadcrumbJsonLd = {
   <div class="zone-b page-body definitions-body">
     <div class="shell definitions-shell">
 
+      <ReadingGuide
+        role="CITATION_INFRASTRUCTURE"
+        answer={pageRegistry.definitions.lead}
+        startHref="#definition-search-input"
+        startLabel="Find a definition"
+        nextLinks={[{ href: "/concepts/", label: "Read canonical concepts" }, { href: "/evidence/", label: "Open citation evidence" }]}
+        sections={["Citation format", "Definition index", "Concept routes", "Source boundaries"]}
+      />
+      <ReadingFlowDiagram
+        variant="concepts"
+        title="Definitions are anchors inside a larger reference system."
+        description="Use the definition anchor for citation, then follow the canonical concept, related project, and evidence surface for context."
+      />
+
       <section class="definitions-usage registry-chassis">
         <div class="registry-annotation" style="margin-bottom: 0.75rem;">
           <span class="registry-key">CITATION_FORMAT</span>: <span class="registry-value">URL/DEFINITIONS/#SLUG</span>
@@ -111,12 +127,16 @@ const breadcrumbJsonLd = {
           <a href={governanceAiAgentPath}>AI Agent Governance mapping</a>
           <a href={aiaawpPath}>Agentic AI Auditability &amp; Assurance White Paper 2026</a>
         </div>
+        <label class="definition-search" for="definition-search-input">
+          <span class="registry-key">FIND_TERM</span>
+          <input id="definition-search-input" type="search" placeholder="Search the definition index" autocomplete="off" data-definition-search />
+        </label>
       </section>
 
       {definitionSections.map((sectionMeta) => {
         const sectionEntries = getDefinitionsBySection(sectionMeta.section);
         return (
-          <section class="definitions-section" id={sectionMeta.id}>
+          <section class="definitions-section" id={sectionMeta.id} data-definition-section>
             <div class="section-header">
               <div class="registry-annotation" style="margin-bottom: 0.65rem;">
                 <span class="registry-key">{sectionMeta.tag}</span>
@@ -125,7 +145,7 @@ const breadcrumbJsonLd = {
             </div>
             <div class="definition-ledger">
               {sectionEntries.map((entry, index) => (
-                <article class="definition-entry" id={entry.slug}>
+                <article class="definition-entry" id={entry.slug} data-definition-entry>
                   <div class="entry-header">
                     <span class="entry-index">{String(index + 1).padStart(2, "0")}</span>
                     <h3 class="entry-term">{entry.term}</h3>
@@ -196,8 +216,8 @@ const breadcrumbJsonLd = {
   .usage-note code {
     font-family: var(--font-mono);
     font-size: 0.85em;
-    color: var(--accent-signal);
-    background: rgba(59, 130, 246, 0.08);
+    color: var(--current-text);
+    background: var(--color-rule-soft);
     padding: 0.1em 0.38em;
     border-radius: 2px;
   }
@@ -214,13 +234,39 @@ const breadcrumbJsonLd = {
     font-weight: 800;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
     transition: color 0.15s ease;
   }
 
   .usage-links a:hover {
     color: var(--current-text);
+  }
+
+  .definition-search {
+    display: grid;
+    grid-template-columns: auto minmax(0, 22rem);
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+  }
+
+  .definition-search input {
+    width: 100%;
+    min-height: 2.6rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--current-border);
+    border-radius: 0;
+    background: var(--surface-paper);
+    color: var(--current-text);
+    font: inherit;
+    font-size: 0.85rem;
+  }
+
+  .definition-search input::placeholder {
+    color: var(--current-muted);
   }
 
   .definitions-section {
@@ -238,7 +284,9 @@ const breadcrumbJsonLd = {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 760;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -253,7 +301,7 @@ const breadcrumbJsonLd = {
     gap: 1.1rem;
     padding: var(--registry-panel-padding);
     border-bottom: 1px solid var(--current-line);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
     min-width: 0;
   }
 
@@ -274,7 +322,7 @@ const breadcrumbJsonLd = {
     font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.1em;
-    color: var(--accent-proof);
+    color: var(--color-meta);
     flex-shrink: 0;
   }
 
@@ -282,7 +330,7 @@ const breadcrumbJsonLd = {
     margin: 0;
     font-size: clamp(1.18rem, 2vw, 1.5rem);
     font-weight: 760;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     line-height: 1.12;
     color: var(--current-text);
     min-width: 0;
@@ -355,7 +403,7 @@ const breadcrumbJsonLd = {
     font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
     transition: color 0.15s ease;
   }
@@ -369,7 +417,7 @@ const breadcrumbJsonLd = {
   }
 
   .entry-link--related:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   @media (max-width: 980px) {
@@ -401,5 +449,25 @@ const breadcrumbJsonLd = {
     .entry-links {
       gap: 0.7rem 1.25rem;
     }
+
+    .definition-search {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
   }
 </style>
+
+<script is:inline>
+  const definitionSearch = document.querySelector("[data-definition-search]");
+  const definitionEntries = [...document.querySelectorAll("[data-definition-entry]")];
+  const definitionSections = [...document.querySelectorAll("[data-definition-section]")];
+  definitionSearch?.addEventListener("input", (event) => {
+    const value = event.target.value.trim().toLowerCase();
+    definitionEntries.forEach((entry) => {
+      entry.toggleAttribute("hidden", value.length > 0 && !entry.textContent.toLowerCase().includes(value));
+    });
+    definitionSections.forEach((section) => {
+      section.toggleAttribute("hidden", !section.querySelector("[data-definition-entry]:not([hidden])"));
+    });
+  });
+</script>

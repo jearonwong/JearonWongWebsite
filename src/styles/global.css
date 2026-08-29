@@ -1,5 +1,5 @@
 :root {
-  /* Architectural Registry v0.4: Monolithic & Precise */
+  /* Research Ledger: dark orientation, light reading surface. */
   --bg-monolith: #111111;
   --surface-registry: #1a1a1a;
   --border-registry: rgba(255, 255, 255, 0.08);
@@ -7,14 +7,21 @@
   
   /* Text: High contrast & disciplined */
   --text-registry-primary: #f1f5f9;
-  --text-registry-muted: #64748b;
+  --text-registry-muted: #b8c2ce;
+  --text-page-primary: #101216;
+  --text-page-muted: #525866;
   
-  /* Signal Accents: Functional, not decorative */
-  --accent-signal: #3b82f6; /* Registry Blue */
-  --accent-proof: #22d3ee;  /* Evidence Cyan */
-  --accent-caution: #f59e0b; /* System Amber */
-  --accent-electric: var(--accent-signal);
-  --accent-kinetic: var(--accent-proof);
+  /* Blue is reserved for interaction. Ledger structure stays neutral. */
+  --color-action: #2563eb;
+  --color-action-dark: #93c5fd;
+  --color-action-soft: rgba(37, 99, 235, 0.08);
+  --color-paper: #ffffff;
+  --color-surface: #f7f8fa;
+  --color-rule: rgba(17, 20, 24, 0.16);
+  --color-rule-soft: rgba(17, 20, 24, 0.08);
+  --color-rule-dark: rgba(255, 255, 255, 0.12);
+  --color-meta: #525866;
+  --color-meta-dark: #b8c2ce;
   
   /* Typography: Technical Precision */
   --font-display: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -23,22 +30,75 @@
   --type-registry-hero-title-size: clamp(2.35rem, 4.15vw, 3.7rem);
   --type-registry-hero-title-size-mobile: clamp(1.85rem, 7.4vw, 2.35rem);
   --type-registry-hero-title-weight: 760;
-  --type-registry-hero-title-line-height: 1.08;
-  --type-registry-hero-title-line-height-mobile: 1.1;
-  --type-registry-hero-title-letter-spacing: -0.018em;
+  --type-registry-hero-title-line-height: 1.16;
+  --type-registry-hero-title-line-height-mobile: 1.2;
+  --type-registry-hero-title-letter-spacing: 0;
+  --type-registry-hero-title-word-spacing: 0.012em;
   --type-registry-hero-title-framing-size: clamp(1.35rem, 2.45vw, 2.25rem);
   --type-registry-hero-title-framing-size-mobile: clamp(1.05rem, 5.2vw, 1.45rem);
   --type-registry-hero-title-framing-weight: 700;
-  --type-registry-hero-title-framing-line-height: 1.18;
-  --type-registry-hero-title-framing-line-height-mobile: 1.25;
+  --type-registry-hero-title-framing-line-height: 1.22;
+  --type-registry-hero-title-framing-line-height-mobile: 1.28;
+
+  /* Research Ledger reading scale: two hero speeds, one body measure. */
+  --type-hero-display: clamp(3.6rem, 7vw, 6.5rem);
+  --type-hero-entry: clamp(3.1rem, 5.6vw, 5.2rem);
+  --type-hero-display-mobile: clamp(3rem, 12vw, 4.4rem);
+  --type-hero-entry-mobile: clamp(2.7rem, 11vw, 3.9rem);
+  /* HUD display rhythm: keep large English titles open enough to read when they wrap. */
+  --type-hero-display-line-height: 1.16;
+  --type-hero-entry-line-height: 1.16;
+  --type-hero-display-line-height-mobile: 1.2;
+  --type-hero-entry-line-height-mobile: 1.2;
+  --type-hero-display-letter-spacing: 0;
+  --type-hero-entry-letter-spacing: 0;
+  --type-hero-display-letter-spacing-mobile: 0;
+  --type-hero-entry-letter-spacing-mobile: 0;
+  --type-hero-display-word-spacing: 0.015em;
+  --type-hero-entry-word-spacing: 0.015em;
+  --type-hero-display-word-spacing-mobile: 0.012em;
+  --type-hero-entry-word-spacing-mobile: 0.012em;
+  --type-section-title: clamp(1.65rem, 2.7vw, 2.45rem);
+  --type-section-title-line-height: 1.16;
+  --type-section-title-line-height-mobile: 1.2;
+  --type-section-title-letter-spacing: 0;
+  --type-section-title-word-spacing: 0.008em;
+  /* Secondary headings keep a clear hierarchy without compressed word shapes. */
+  --type-card-title-line-height: 1.24;
+  --type-card-title-line-height-mobile: 1.28;
+  --type-card-title-letter-spacing: 0;
+  --type-card-title-word-spacing: 0.006em;
+  --type-nav-line-height: 1.45;
+  --type-nav-letter-spacing: 0.055em;
+  --type-nav-word-spacing: 0.018em;
+  --type-body: 1rem;
+  --type-body-line-height: 1.72;
+  --type-body-letter-spacing: 0;
+  --type-body-word-spacing: 0.01em;
+  --type-meta: 0.7rem;
+  --type-meta-line-height: 1.5;
+  --type-meta-letter-spacing: 0.055em;
+  --type-meta-word-spacing: 0.02em;
+  --type-control-line-height: 1.45;
+  --type-control-letter-spacing: 0.045em;
+  --type-control-word-spacing: 0.012em;
+  /* HUD metadata keeps labels legible while reserving the wider track for values. */
+  --hud-meta-columns: minmax(6.5rem, 0.55fr) minmax(0, 1.45fr);
+  --measure-reading: 66ch;
 
   /* Architectural Geometry: Hardened */
   --radius-registry: 0px; /* Rigidity first */
   --radius-module: 2px;
   --inner-shell: 1160px;
+  --signal-rail-width: clamp(18rem, 23vw, 21rem);
+  --surface-page: #f8fafc;
+  --surface-paper: #ffffff;
+  --border-page: rgba(16, 18, 22, 0.1);
+  --line-page: rgba(16, 18, 22, 0.055);
   
   /* Effects: Reduced for restraint */
   --shadow-registry: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-page-module: 0 18px 50px rgba(15, 23, 42, 0.065);
 
   /* Spacing Contract: 8px-based rhythm */
   --space-1: 0.5rem;
@@ -74,6 +134,8 @@
 
 html {
   min-width: 320px;
+  width: 100%;
+  max-width: 100%;
   background: var(--bg-monolith);
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -81,7 +143,9 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100dvh;
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -102,7 +166,8 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
-  overflow-wrap: anywhere;
+  /* Preserve whole words whenever the measure allows it; break long tokens only as a fallback. */
+  overflow-wrap: break-word;
 }
 
 p,
@@ -110,10 +175,16 @@ li,
 dd,
 dt,
 blockquote,
-figcaption,
+figcaption {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
 code,
 pre {
+  /* Long hashes and identifiers may need to break inside narrow ledgers. */
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Accessibility: Skip Link */
@@ -121,7 +192,7 @@ pre {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--accent-signal);
+  background: var(--color-action);
   color: white;
   padding: 8px 16px;
   text-decoration: none;
@@ -138,13 +209,13 @@ pre {
 
 /* Accessibility: Focus Indicators */
 *:focus-visible {
-  outline: 2px solid var(--accent-signal);
+  outline: 2px solid var(--color-action);
   outline-offset: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline-color: var(--accent-signal);
+  outline-color: var(--color-action);
 }
 
 /* Zone Adaptation: Monolith First */
@@ -154,23 +225,41 @@ button:focus-visible {
   --current-bg: var(--bg-monolith);
   --current-surface: var(--surface-registry);
   --current-border: var(--border-registry);
-  --current-muted: var(--text-registry-muted);
+  --current-muted: var(--color-meta-dark);
   --current-line: var(--line-registry);
   --current-text: var(--text-registry-primary);
   --zone-a-text: var(--text-registry-primary);
   --zone-a-border: var(--border-registry);
-  --zone-a-muted: var(--text-registry-muted);
+  --zone-a-muted: var(--color-meta-dark);
+  --color-meta: var(--color-meta-dark);
+  --color-action: var(--color-action-dark);
 }
 
 .zone-b {
-  background-color: #fefefe;
-  color: #111111;
-  --current-bg: #fefefe;
-  --current-surface: #ffffff;
-  --current-border: rgba(17, 17, 17, 0.08);
-  --current-muted: #666666;
-  --current-line: rgba(17, 17, 17, 0.04);
-  --current-text: #111111;
+  background-color: var(--surface-page);
+  color: var(--text-page-primary);
+  --current-bg: var(--surface-page);
+  --current-surface: var(--surface-paper);
+  --current-border: var(--border-page);
+  --current-muted: var(--text-page-muted);
+  --current-line: var(--line-page);
+  --current-text: var(--text-page-primary);
+}
+
+/* The global header is a dark orientation band, outside the main content landmark. */
+.site-chrome {
+  background: var(--bg-monolith);
+  color: var(--text-registry-primary);
+  --color-meta: var(--color-meta-dark);
+  --color-action: var(--color-action-dark);
+}
+
+.site-chrome .site-nav-shell {
+  width: 100%;
+}
+
+body.has-mobile-navigation {
+  overflow: hidden;
 }
 
 /* Registry Grid Overlay */
@@ -188,6 +277,77 @@ button:focus-visible {
   position: relative;
   z-index: 1;
   min-width: 0;
+}
+
+/* Split Signal shell: the rail owns identity; the page owns the current signal. */
+@media (min-width: 901px) {
+  body:has(.site-monitor-container) .page-content {
+    padding-left: var(--signal-rail-width);
+  }
+
+  body:has(.site-monitor-container) .shell {
+    width: min(calc(100vw - var(--signal-rail-width) - 3rem), var(--inner-shell));
+  }
+
+  body:has(.site-monitor-container) .site-footer-shell {
+    padding-left: var(--signal-rail-width);
+  }
+
+  body:has(.site-monitor-container) .registry-page-hero {
+    min-height: min(620px, 78dvh);
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  body:has(.site-monitor-container) .page-content {
+    padding-left: 0;
+  }
+
+  body:has(.site-monitor-container) .site-footer-shell {
+    padding-left: 0;
+  }
+}
+
+/* Research Ledger site shell: formal pages inherit the accepted B prototype tokens. */
+.site-ledger-shell {
+  --prototype-ink: #111418;
+  --prototype-muted: var(--color-meta);
+  --prototype-line: var(--color-rule);
+  --prototype-soft-line: var(--color-rule-soft);
+  min-height: 100dvh;
+  background: #f7f8fa;
+  color: var(--prototype-ink);
+}
+
+.site-ledger-shell a { color: inherit; }
+.site-ledger-shell .zone-a,
+.site-ledger-shell .registry-page-hero,
+.site-ledger-shell .wp-publication-hero-shell,
+.site-ledger-shell .concept-core-hero-shell,
+.site-ledger-shell .hero-wrapper {
+  background-color: #15191e;
+  color: #f4f7fb;
+}
+
+.site-ledger-shell .zone-b,
+.site-ledger-shell .page-body,
+.site-ledger-shell .reader-routes-band,
+.site-ledger-shell .site-footer-shell {
+  background: #f7f8fa;
+  color: var(--prototype-ink);
+}
+
+.site-ledger-shell .site-footer-shell { display: block; padding-left: 0; }
+
+@media (min-width: 901px) {
+  body:has(.site-ledger-shell) .page-content { padding-left: 0; }
+  body:has(.site-ledger-shell) .shell { width: min(calc(100vw - 3rem), 1240px); }
+}
+
+@media (max-width: 900px) {
+  body:has(.site-ledger-shell) .page-content { padding-left: 0; }
 }
 
 .shell--narrow {
@@ -225,6 +385,12 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .button {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
   .shell {
     width: min(calc(100vw - 2rem), var(--inner-shell));
   }
@@ -258,8 +424,45 @@ button:focus-visible {
   border-radius: 0; /* Sharp corners */
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.16s ease;
   letter-spacing: 0.01em;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button-primary {
+  background-color: var(--current-text);
+  border-color: var(--current-text);
+  color: var(--current-bg);
+}
+
+.button-primary:hover {
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+  color: #ffffff;
+}
+
+.button-outline {
+  background-color: transparent;
+  border-color: var(--current-border);
+  color: var(--current-text);
+}
+
+.button-outline:hover {
+  border-color: var(--color-action);
+  color: var(--color-action);
 }
 
 .zone-a .button-primary {
@@ -267,7 +470,9 @@ button:focus-visible {
   color: #000;
 }
 .zone-a .button-primary:hover {
-  background-color: white;
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+  color: #ffffff;
 }
 
 .zone-a .button-outline {
@@ -286,6 +491,7 @@ button:focus-visible {
   border-radius: var(--radius-module);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--registry-module-shadow, none);
 }
 
 .registry-panel--reading {
@@ -310,17 +516,19 @@ button:focus-visible {
 
 .registry-annotation {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--type-meta);
   text-transform: uppercase;
   color: var(--current-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: var(--type-meta-letter-spacing);
+  word-spacing: var(--type-meta-word-spacing);
+  line-height: var(--type-meta-line-height);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .registry-key {
-  color: var(--accent-signal);
+  color: var(--color-meta);
   font-weight: 700;
 }
 
@@ -328,11 +536,32 @@ button:focus-visible {
   color: var(--current-text);
 }
 
+/* Registry keys are readable metadata, not fixed-width labels. Keep long
+   identifiers from widening cards and grids on the narrowest screens. */
+@media (max-width: 420px) {
+  .registry-annotation {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .registry-annotation > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
+
 .proof-signal-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--accent-proof);
+  background-color: var(--color-meta);
   display: inline-block;
 }
 
@@ -342,11 +571,12 @@ button:focus-visible {
   border: 1px solid var(--current-border);
   border-radius: var(--radius-registry);
   padding: var(--registry-panel-padding);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .structural-panel:hover {
-  border-color: var(--accent-signal);
+  border-color: var(--color-rule);
+  background-color: var(--current-surface);
 }
 
 /* Text & Identity Primitives */
@@ -366,4 +596,180 @@ button:focus-visible {
   line-height: 1.75;
   color: var(--current-muted);
   max-width: var(--lead-measure);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* B-direction body surfaces: records and evidence remain open, ruled, and square. */
+.site-ledger-shell .registry-chassis,
+.site-ledger-shell .structural-panel {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-ledger-shell .registry-chassis {
+  background: #fff;
+  border: 0;
+  border-top: 1px solid var(--prototype-line);
+  border-bottom: 1px solid var(--prototype-line);
+}
+
+.site-ledger-shell .registry-chassis + .registry-chassis { margin-top: 0; }
+
+.site-ledger-shell .registry-chassis h2,
+.site-ledger-shell .registry-chassis h3,
+.site-ledger-shell .registry-chassis h4 {
+  font-family: var(--font-display);
+  line-height: var(--type-section-title-line-height);
+  letter-spacing: var(--type-section-title-letter-spacing);
+  word-spacing: var(--type-section-title-word-spacing);
+}
+
+.site-ledger-shell .page-body p,
+.site-ledger-shell .page-body li,
+.site-ledger-shell .page-body dd {
+  font-size: var(--type-body);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  word-spacing: var(--type-body-word-spacing);
+}
+
+.site-ledger-shell .page-body h2 {
+  font-size: var(--type-section-title);
+  line-height: var(--type-section-title-line-height);
+  letter-spacing: var(--type-section-title-letter-spacing);
+  word-spacing: var(--type-section-title-word-spacing);
+}
+
+.site-ledger-shell .page-body h3,
+.site-ledger-shell .page-body h4 {
+  line-height: var(--type-section-title-line-height);
+  letter-spacing: var(--type-section-title-letter-spacing);
+  word-spacing: var(--type-section-title-word-spacing);
+}
+
+.site-ledger-shell .card-grid,
+.site-ledger-shell .governance-card-grid,
+.site-ledger-shell .layer-card-grid,
+.site-ledger-shell .relation-card-grid {
+  gap: 0;
+}
+
+.site-ledger-shell .card-grid > *,
+.site-ledger-shell .governance-card-grid > *,
+.site-ledger-shell .layer-card-grid > *,
+.site-ledger-shell .relation-card-grid > * {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-ledger-shell .semantic-evidence-band {
+  border-left: 2px solid var(--color-rule);
+}
+
+/* B / Research Ledger completion for canonical special routes. */
+.site-ledger-shell .registry-grid {
+  background-image: none;
+}
+
+.site-ledger-shell .concept-core-hero-shell,
+.site-ledger-shell .wp-publication-hero-shell {
+  min-height: auto;
+  background: #15191e;
+  color: #f4f7fb;
+  border-bottom: 1px solid rgba(244, 247, 251, 0.17);
+}
+
+.site-ledger-shell .concept-core-hero,
+.site-ledger-shell .wp-publication-hero {
+  width: min(calc(100vw - 3rem), 1240px);
+  min-height: auto;
+  margin: 0 auto;
+  padding: 6rem 0 7rem;
+}
+
+.site-ledger-shell .concept-core-hero,
+.site-ledger-shell .wp-publication-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+  grid-template-areas:
+    "heading heading"
+    "support rail";
+  gap: 4rem;
+}
+
+.site-ledger-shell .concept-core-hero h1,
+.site-ledger-shell .wp-publication-hero h1 {
+  width: 100%;
+  max-width: none;
+  color: #f4f7fb;
+  font-family: var(--font-display);
+  font-size: var(--type-hero-display);
+  font-weight: 720;
+  letter-spacing: var(--type-hero-display-letter-spacing);
+  line-height: var(--type-hero-display-line-height);
+  word-spacing: var(--type-hero-display-word-spacing);
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+}
+
+.site-ledger-shell .concept-core-ledger,
+.site-ledger-shell .wp-publication-hero .release-meta-panel {
+  grid-area: rail;
+  align-self: start;
+  border: 0 !important;
+  border-left: 1px solid rgba(244, 247, 251, 0.26) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 0 0 1.5rem !important;
+  backdrop-filter: none !important;
+}
+
+.site-ledger-shell .release-meta-panel,
+.site-ledger-shell .release-section {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .site-ledger-shell .concept-core-hero,
+  .site-ledger-shell .wp-publication-hero {
+    width: calc(100vw - 2rem);
+    padding: 4.5rem 0 4rem;
+  }
+
+  .site-ledger-shell .concept-core-hero,
+  .site-ledger-shell .wp-publication-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "support"
+      "rail";
+    gap: 3rem;
+  }
+
+  .site-ledger-shell .concept-core-hero h1,
+  .site-ledger-shell .wp-publication-hero h1 {
+    max-width: 100%;
+    font-size: var(--type-hero-display-mobile);
+    line-height: var(--type-hero-display-line-height-mobile);
+    letter-spacing: var(--type-hero-display-letter-spacing);
+    word-spacing: var(--type-hero-display-word-spacing);
+  }
+
+  .site-ledger-shell .concept-core-ledger,
+  .site-ledger-shell .wp-publication-hero .release-meta-panel {
+    border-left: 1px solid rgba(244, 247, 251, 0.26) !important;
+    padding-left: 1rem !important;
+  }
 }

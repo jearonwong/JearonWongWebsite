@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../components/ReadingFlowDiagram.astro";
 import { aiAgentLifecycleColumn, concepts, pageRegistry, siteConfig, siteSemanticBaseline } from "../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
@@ -202,6 +204,19 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell concepts-shell">
+      <ReadingGuide
+        role="REFERENCE_LAYER"
+        answer={pageRegistry.concepts.lead}
+        startHref="/concepts/agentic-lifecycle-governance/"
+        startLabel="Start with lifecycle governance"
+        nextLinks={[{ href: "/lifecycle/", label: "Read the field analysis" }, { href: "/concepts/map/", label: "Open the concept map" }]}
+        sections={["Canonical category", "Primary concept stack", "Entity mesh", "Engineering terms", "Supporting terms"]}
+      />
+      <ReadingFlowDiagram
+        variant="concepts"
+        title="Move from the category to the evidence surface."
+        description="Concepts are the reference layer connecting the author identity, lifecycle category, definitions, projects, and evidence."
+      />
       <section class="concept-opening">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">CONCEPT_MAP</span>: <span class="registry-value">REFERENCE_LAYER</span>
@@ -334,7 +349,7 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
   }
 
   .concepts-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .concepts-shell {
@@ -352,7 +367,7 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
     line-height: 1.48;
     color: var(--current-text);
     font-weight: 650;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
   }
 
   .concept-opening__copy {
@@ -364,7 +379,7 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
 
   .concept-path {
     padding: var(--registry-panel-padding);
-    border-left: 2px solid var(--accent-proof);
+    border-left: 2px solid var(--color-rule);
   }
 
   .concept-path__grid {
@@ -377,8 +392,9 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
   .concept-path h2 {
     margin: 0 0 0.8rem;
     font-size: 1.4rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -396,7 +412,7 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
 
   .concept-path__links a,
   .concept-card__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.76rem;
     font-weight: 800;
@@ -424,8 +440,9 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
   .registry-section-heading h2 {
     margin: 0;
     font-size: 1.35rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -451,15 +468,16 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
   }
 
   .concept-card--primary {
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .concept-card h3,
   .supporting-term-card h3 {
     margin: 0;
     font-size: 1.35rem;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .concept-card h3 a,
@@ -494,6 +512,9 @@ const engineeringPracticeConcepts = concepts.filter((concept) => engineeringPrac
 
   .supporting-term-card h3 {
     font-size: 1.05rem;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .supporting-term-card p {

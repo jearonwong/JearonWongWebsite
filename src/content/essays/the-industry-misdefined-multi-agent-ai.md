@@ -11,6 +11,27 @@ shareDescription: "Real MAS is lifecycle-governed responsibility separation: Age
 shareImage: /social/the-industry-misdefined-multi-agent-ai-og.png
 shareImageAlt: "The Industry Misdefined Multi-Agent AI — More agents do not make MAS"
 publishDate: 2026-05-01
+updatedAt: 2026-05-01
+track: lifecycle
+contentRole: essay
+publicationClass: thought
+editorialTrack: lifecycle
+canonicalRoute: /essays/the-industry-misdefined-multi-agent-ai/
+canonicalParent: /essays/
+primaryAudience: Architect
+secondaryAudiences:
+  - Builder
+distinctReaderQuestion: "How should multi-agent systems be defined by responsibility separation rather than agent count?"
+sourceRefs:
+  - Authored lifecycle essay
+  - MPLP project framing
+indexability: index
+nextSteps:
+  - /essays/agent-orchestration-is-not-delivery/
+  - /projects/mplp/
+maxClickDepth: 3
+readingTimeMinutes: 12
+evidenceLevel: LIFECYCLE ESSAY
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -25,9 +46,8 @@ tags:
   - AI Agent Lifecycle
   - Multi-Agent Systems
   - Lifecycle Role Decomposition
-  - Lifecycle Governance
-  - Agent Workflow
   - Agentic Delivery
+  - Agentic Workflows
 ogImage: /social/the-industry-misdefined-multi-agent-ai-og.png
 images:
   - url: /figures/article2-mas-redefinition-diagram.svg

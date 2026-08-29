@@ -20,16 +20,67 @@ Before implementation, inspect repository truth:
 
 Reuse existing assets before creating new files. Prefer updating an existing rule, skill, script, audit, or governance record over creating a duplicate document.
 
+## Dialogue And Execution Harness
+
+For every non-trivial conversation, Codex must first route the dialogue before routing the repository task. Use `.agents/skills/dialogue-execution-harness-governance/SKILL.md` when the request involves strategy, architecture judgment, product/protocol/public OSS boundaries, Codex prompt generation, Codex result review, correction, high-risk release/projection/migration/copyright work, or dynamic governance selection.
+
+The default dialogue method is:
+
+1. Classify the current conversation stage.
+2. Give independent assistant judgment instead of only restating the user.
+3. Use dialectical reasoning for important decisions and converge to a decision.
+4. Provide a Codex prompt or action plan only when the task is ready for execution.
+
+For repo work, this dialogue harness is layer 1. Layer 2 is the task-specific governance baseline selected from `.agents/skills/*/SKILL.md`, including repo truth, cross-repo boundary guard, site semantic/brand governance, publication surface governance, article publication governance, release gate discipline, schema intake discipline, and docs minimalism as applicable.
+
+Do not treat a prompt, chat instruction, green gate, merged PR, clean worktree, or evidence artifact as authorization for a different mutation category. Release, registry, version, tag, seal, merge, projection, migration, copyright, public legal/compliance claim, and external publication actions require their own owner authorization when the relevant governance baseline says so.
+
 ## Required Entry Points For Article Publication
 
 Before any non-trivial site, article, whitepaper, visual, or publishing change:
 
 1. Read this file.
-2. Read `.agents/skills/article-publication-governance/SKILL.md` when the task involves publishing, revising, auditing, or routing an essay/article.
-3. Read `docs/governance/ARTICLE_PUBLICATION_GOVERNANCE_BASELINE.md` before declaring a publication ready.
-4. Inspect the current route, content collection, and relevant page renderer before editing.
+2. Read `.agents/skills/dialogue-execution-harness-governance/SKILL.md` when the task needs strategic judgment, governance routing, prompt generation, result review, correction, or high-risk boundary classification.
+3. Read `.agents/skills/site-semantic-brand-governance/SKILL.md` when the task changes homepage positioning, site identity, core terms, page anchors, metadata, navigation, `llms.txt`, or cross-page visual identity.
+4. Read `.agents/skills/site-publication-surface-governance/SKILL.md` when the task involves publishing, revising, routing, auditing, or distributing essays, white papers, research artifacts, OG/social assets, RSS/sitemap-facing content, or publication audit records.
+5. Read `.agents/skills/article-publication-governance/SKILL.md` when the task involves publishing, revising, auditing, or routing an essay/article.
+6. Read `docs/governance/ARTICLE_PUBLICATION_GOVERNANCE_BASELINE.md` before declaring a publication ready.
+7. Inspect the current route, content collection, SOT data file, and relevant page renderer before editing.
 
 Do not rely only on prior chat context. Repo truth wins.
+
+## Semantic And Brand Governance
+
+The site has an internal semantic and brand governance center at `src/data/siteGovernance.ts`. This file is not a public content surface. It tells Codex how to discover linked pages, metadata, machine-readable files, and assets before changing site identity, homepage positioning, core definitions, page roles, or publication surfaces.
+
+Before changing any sitewide theme, personal positioning, homepage thesis, core concept wording, navigation label, page anchor, visible metadata, JSON-LD, OG/Twitter copy, `public/llms.txt`, or entity graph wording, Codex must:
+
+1. Classify the mutation using `src/data/siteGovernance.ts`.
+2. Report the semantic impact surface and derived-SOT impact surface before editing.
+3. Identify the primary source of truth.
+4. Use `semanticDerivedSotRegistry` to discover reverse dependencies, including special concept pages, concepts map, evidence page, `llms.txt`, and entity graph JSON.
+5. Update linked surfaces from the SOT instead of inventing parallel wording.
+6. Verify that stale wording does not remain in visible copy, metadata, machine-readable surfaces, or public asset copy.
+
+Changing only the local page requested by the user is insufficient when the SOT or impact rules show that other surfaces depend on the same semantic anchor.
+
+If a needed wording does not exist in the SOT, stop and report the missing SOT. Do not patch the gap with fresh local phrasing unless the user explicitly authorizes a SOT change.
+
+## Sitewide Source-Of-Truth Order
+
+For semantic and brand work, use this order:
+
+1. Current owner instruction.
+2. `src/data/siteGovernance.ts` impact rules.
+3. `src/data/siteGovernance.ts` `semanticDerivedSotRegistry`.
+4. `src/data/site.ts` `siteSemanticBaseline`, `siteConfig`, `siteThesis`, and `pageRegistry`.
+5. `src/data/definitions.ts`.
+6. `src/data/whitepaperPublications.ts` for research and white paper artifacts.
+7. `src/content/essays/*` frontmatter and body for essay-specific facts.
+8. `public/llms.txt` and `public/entity/*.json` as machine-readable public summaries, not as sources for new claims.
+9. Existing page renderers and shared components.
+
+`public/llms.txt`, `public/entity/*.json`, OG/social copy, JSON-LD, page descriptions, and visible page summaries must not introduce claims that are absent from the upstream SOT.
 
 ## Codex Skill Discovery
 
@@ -85,14 +136,13 @@ For research commentary:
 
 ## Site Identity
 
-The site uses the Architectural Registry / public-headquarters visual language:
+The site uses the Research Ledger visual language:
 
-- `zone-a` dark registry surfaces for page heroes and authority bands.
-- `zone-b` light content surfaces for article bodies and registries.
+- Dark research banners carry the top navigation and page orientation; light bodies carry the reading ledger.
+- Ruled records, a sticky section rail, and restrained metadata replace card-heavy dashboard composition.
 - Registry annotations use `KEY : VALUE` with `var(--font-mono)`.
-- Core typography lives in `src/styles/global.css`.
-- Page-level hero titles use the shared `--type-registry-hero-title-*` tokens.
-- Do not introduce page-specific hero-like type scales, font weights, or figure headings without tying them to shared tokens.
+- Core typography lives in `src/styles/global.css` and `src/styles/prototypes.css`: Outfit for display, Inter for body, and JetBrains Mono for labels.
+- Page-level hero titles and ledger records must reuse the shared B-direction tokens; do not introduce page-specific hero scales, rounded cards, gradients, or competing navigation systems.
 
 If an in-article emphasis block, diagram title, or SVG heading visually behaves like a title, it must use the same display family and compatible weight/line-height rhythm as the site hero title system. Visual similarity is not enough; the source must show the shared token or an explicitly documented equivalent.
 
@@ -134,6 +184,20 @@ An essay publication is incomplete unless all required surfaces are aligned:
 - Audit record under `docs/audits/` for significant publication waves.
 
 If `/essays/` renders empty entries or the article route returns 404, publication is blocked.
+
+White paper and research publication work is incomplete unless all required surfaces are aligned:
+
+- `src/data/whitepaperPublications.ts` record.
+- `/research/` visible listing.
+- White paper canonical route.
+- Public HTML/PDF/manifest/checksum artifact references.
+- Citation identity, document ID, version, publication status, and boundary notes.
+- Related concepts, definitions, article adaptations, and project references when the paper changes their semantics.
+- OG/social metadata and assets when used for public distribution.
+- `public/llms.txt`.
+- Audit record under `docs/audits/` for significant publication waves.
+
+White paper publication copy must use the white paper record or the public artifact as SOT. Do not rewrite or summarize from memory when the artifact record already contains the needed title, version, boundary, citation, or checksum facts.
 
 ## Build And Cache Governance
 

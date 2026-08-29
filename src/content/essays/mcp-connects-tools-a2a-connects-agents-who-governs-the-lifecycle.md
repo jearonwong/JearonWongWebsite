@@ -11,6 +11,29 @@ shareDescription: Tool access and agent coordination solve real problems. Produc
 shareImage: /social/mcp-a2a-lifecycle-og.png
 shareImageAlt: MCP connects tools. A2A connects agents. Who governs the lifecycle?
 publishDate: 2026-04-26
+updatedAt: 2026-04-26
+track: protocol
+contentRole: essay
+publicationClass: technical
+editorialTrack: protocol
+canonicalRoute: /essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
+canonicalParent: /essays/
+primaryAudience: Architect
+secondaryAudiences:
+  - Builder
+  - Governance
+distinctReaderQuestion: "What lifecycle responsibility remains after MCP handles tools and A2A handles agent coordination?"
+sourceRefs:
+  - Authored protocol position essay
+  - MPLP lifecycle framing
+indexability: index
+nextSteps:
+  - /lifecycle/
+  - /projects/mplp/
+maxClickDepth: 3
+status: published
+readingTimeMinutes: 13
+evidenceLevel: FLAGSHIP POSITION
 cluster: agent-governance
 projectProof: MPLP
 featured: true
@@ -32,6 +55,12 @@ relatedProjects:
   - SoloCrew
   - Validation Lab
   - Cognitive OS
+tags:
+  - Protocol Engineering
+  - Agentic Workflows
+  - AI Agent Lifecycle
+  - Authority Boundary
+  - MPLP
 ---
 
 **Why production AI agents need a vendor-neutral lifecycle governance layer**

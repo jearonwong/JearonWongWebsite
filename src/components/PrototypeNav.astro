@@ -1,0 +1,27 @@
+---
+interface Props {
+  active?: "quiet" | "ledger" | "signal" | "index";
+}
+
+const { active = "index" } = Astro.props;
+const links = [
+  { key: "quiet", href: "/prototypes/quiet-thesis/", label: "A / Quiet Thesis" },
+  { key: "ledger", href: "/prototypes/research-ledger/", label: "B / Research Ledger" },
+  { key: "signal", href: "/prototypes/split-signal/", label: "C / Split Signal" }
+] as const;
+---
+
+<nav class="prototype-nav" aria-label="UI prototype options">
+  <a class="prototype-nav__brand" href="/prototypes/" aria-label="Prototype index">JW / UI STUDY</a>
+  <div class="prototype-nav__links">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class:list={["prototype-nav__link", active === link.key && "is-active"]}
+        aria-current={active === link.key ? "page" : undefined}
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</nav>

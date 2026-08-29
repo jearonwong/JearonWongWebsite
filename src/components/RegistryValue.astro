@@ -1,0 +1,18 @@
+---
+interface Props {
+  value: string;
+  class?: string;
+}
+
+const { value, class: className = "" } = Astro.props;
+const parts = value.split(/([/_])/g);
+---
+
+<span class={className} aria-label={value}>
+  {parts.map((part) => (
+    <>
+      {part}
+      {(part === "/" || part === "_") && <wbr />}
+    </>
+  ))}
+</span>

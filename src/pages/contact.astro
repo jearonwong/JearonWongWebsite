@@ -50,7 +50,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
         <div class="registry-annotation" style="margin-bottom: 1.25rem;">
           <span class="registry-key">PRIMARY_CHANNEL</span>
         </div>
-        <a href={`mailto:${siteConfig.author.email}`} class="email-cta">
+        <a href={`mailto:${siteConfig.author.email}`} class="email-cta" data-analytics-event="contact_open">
           {siteConfig.author.email}
         </a>
         <p class="contact-note">For direct conversations about Protocol Engineering, agent governance, proof systems, or collaboration.</p>
@@ -63,7 +63,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
         </div>
         <div class="channel-grid">
           {socialLinks.map(link => (
-            <a href={link.href} target="_blank" rel="noopener noreferrer" class="channel-row">
+            <a href={link.href} target="_blank" rel="noopener noreferrer" class="channel-row" data-analytics-event="outbound_source_click">
               <span class="channel-key">{link.platform.toUpperCase()}</span>
               <span class="channel-value">{link.label}</span>
             </a>
@@ -84,16 +84,16 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
     font-family: var(--font-mono);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
     letter-spacing: 0.02em;
     padding: 0.8rem 1.5rem;
-    border: 1px solid var(--accent-signal);
+    border: 1px solid var(--color-action);
     border-radius: 2px;
     transition: background 0.2s ease, color 0.2s ease;
   }
   .email-cta:hover {
-    background: var(--accent-signal);
+    background: var(--color-action);
     color: white;
   }
   .contact-note {
@@ -120,7 +120,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
     border-top: 1px solid var(--current-line);
   }
   .channel-row:hover {
-    background: rgba(59, 130, 246, 0.03);
+    background: var(--color-action-soft);
   }
   .channel-key {
     font-family: var(--font-mono);
@@ -128,7 +128,7 @@ const contactBreadcrumbJsonLd = createBreadcrumbJsonLd(contactUrl, [
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
   .channel-value {
     font-family: var(--font-mono);

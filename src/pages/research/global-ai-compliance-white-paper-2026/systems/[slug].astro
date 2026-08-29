@@ -135,10 +135,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
 <BaseLayout
   title={`${system.name} | GAIC-Cited System Mapping`}
+  metadataTitle={`${system.name} Mapping`}
   description={metaDescription}
-  shareTitle={`${system.name} in GAIC 2026`}
+  shareTitle={`${system.name} Mapping`}
   shareDescription={metaDescription}
-  twitterTitle={`${system.name} in GAIC 2026`}
+  twitterTitle={`${system.name} Mapping`}
   twitterDescription={metaDescription}
   canonicalPath={canonicalPath}
   ogType="article"
@@ -274,7 +275,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .system-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .system-detail-shell {
@@ -299,8 +300,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     font-family: var(--font-display);
     font-size: 1.25rem;
     font-weight: 760;
-    line-height: 1.18;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .sidebar-group {
@@ -312,7 +314,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .sidebar-label {
     margin: 0;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -358,7 +360,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .boundary-note {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   .boundary-note h2,
@@ -367,8 +369,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: clamp(1.4rem, 2.4vw, 2rem);
-    line-height: 1.12;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .boundary-note p,
@@ -387,7 +390,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .source-caveat {
     padding: 1rem 1.1rem;
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
     background: var(--current-surface);
     color: var(--current-text) !important;
   }
@@ -422,7 +425,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .term-link-grid a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   @media (max-width: 900px) {

@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../components/ReadingFlowDiagram.astro";
 import {
   governanceIndexPath,
-  governanceMappings,
+  indexableGovernanceMappings,
   regulatoryGovernanceBoundary
 } from "../../data/governanceMappings";
 import { contentRouteRoles, pageRegistry, siteConfig } from "../../data/site";
@@ -63,18 +65,18 @@ const categoryOrder = [
 ];
 const groupedMappings = categoryOrder.map((category) => ({
   category,
-  items: governanceMappings.filter((mapping) => mapping.category === category)
+  items: indexableGovernanceMappings.filter((mapping) => mapping.category === category)
 })).filter((group) => group.items.length > 0);
 const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "@id": `${pageUrl}#governance-mapping-list`,
   name: "Regulatory and Enterprise Governance Semantic Layer",
-  itemListElement: governanceMappings.map((mapping, index) => ({
+  itemListElement: indexableGovernanceMappings.map((mapping, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: mapping.title,
-    url: absoluteUrl(`${canonicalPath}${mapping.slug}/`)
+    url: absoluteUrl(mapping.canonicalRoute)
   }))
 };
 const pageJsonLd = {
@@ -109,8 +111,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
 <BaseLayout
   title="AI Agent Governance and Lifecycle Responsibility"
+  metadataTitle="AI Agent Governance Mappings"
   description={metaDescription}
-  shareTitle="AI Agent Governance and Lifecycle Responsibility"
+  shareTitle="AI Agent Governance Mappings"
   shareDescription={metaDescription}
   twitterTitle="AI Agent Governance"
   twitterDescription={metaDescription}
@@ -127,7 +130,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     lead="Regulatory and enterprise governance mappings for agentic and multi-agent systems."
   >
     <div class="governance-hero-links">
-      {primaryLinks.map((link) => (
+      {primaryLinks.slice(0, 2).map((link) => (
         <a href={link.href} class="registry-annotation governance-hero-link">
           <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
         </a>
@@ -136,7 +139,20 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
-    <main class="shell governance-shell">
+    <div class="shell governance-shell">
+      <ReadingGuide
+        role="GOVERNANCE_CROSSWALK"
+        answer={pageRegistry.governance.lead}
+        startHref="/concepts/agentic-lifecycle-governance/"
+        startLabel="Start with lifecycle governance"
+        nextLinks={[{ href: "/research/global-ai-compliance-white-paper-2026/", label: "Read the source edition" }, { href: "/playbooks/", label: "Open applied playbooks" }]}
+        sections={["Crosswalk entry", "Boundary", "Mapping routes", "Evidence and responsibility"]}
+      />
+      <ReadingFlowDiagram
+        variant="governance"
+        title="Translate a baseline into lifecycle responsibility."
+        description={regulatoryGovernanceBoundary}
+      />
       <section class="registry-chassis governance-intro" aria-labelledby="governance-intro-title">
         <div>
           <div class="registry-annotation">
@@ -185,19 +201,19 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
                     <span>{mapping.category}</span>
                     <span>Source-qualified</span>
                   </div>
-                  <h4><a href={`${canonicalPath}${mapping.slug}/`}>{mapping.title}</a></h4>
+                  <h4><a href={mapping.canonicalRoute}>{mapping.title}</a></h4>
                   <p>{mapping.seoDescription}</p>
                   <div class="governance-card__objects">
                     {mapping.relatedObjects.slice(0, 4).map((object) => <span>{object}</span>)}
                   </div>
-                  <a href={`${canonicalPath}${mapping.slug}/`} class="governance-card__link">Open governance mapping</a>
+                  <a href={mapping.canonicalRoute} class="governance-card__link">Open governance mapping</a>
                 </article>
               ))}
             </div>
           </section>
         ))}
       </section>
-    </main>
+    </div>
   </div>
 </BaseLayout>
 
@@ -214,7 +230,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .governance-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .governance-shell {
@@ -232,7 +248,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
     gap: 2rem;
     align-items: start;
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .governance-intro h2,
@@ -241,8 +257,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0 0 0.9rem;
     color: var(--current-text);
     font-size: clamp(1.45rem, 2.2vw, 2rem);
-    line-height: 1.16;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .governance-intro p,
@@ -262,7 +279,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .governance-intro__links a,
   .governance-card__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.74rem;
     font-weight: 800;
@@ -278,7 +295,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .governance-boundary {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   .governance-groups {
@@ -298,6 +315,8 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.08em;
+    line-height: var(--type-meta-line-height);
+    word-spacing: var(--type-meta-word-spacing);
     text-transform: uppercase;
   }
 
@@ -330,8 +349,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: 1.25rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .governance-card h4 a {

@@ -1,35 +1,30 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
 import SocialShare from "../../components/SocialShare.astro";
-import { getProjectByName, getProjectGraphPosition, getTheoryClusterName, siteConfig } from "../../data/site";
+import { getProjectByName, getProjectPathPosition, getTheoryClusterName, getTheoryClusterSlug, siteConfig } from "../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
 
 export async function getStaticPaths() {
-  const essays = await getCollection("essays");
+  const essays = await getCollection("essays", ({ data }) => data.status === "published");
 
-  return essays.flatMap((essay) => {
-    const canonicalSlug = essay.slug;
-    const legacySlugs = essay.data.legacySlugs ?? [];
-
-    return [
-      {
-        params: { slug: canonicalSlug },
-        props: { essay, canonicalSlug, isLegacy: false }
-      },
-      ...legacySlugs.map((legacySlug) => ({
-        params: { slug: legacySlug },
-        props: { essay, canonicalSlug, isLegacy: true }
-      }))
-    ];
-  });
+  return essays.map((essay) => ({
+    params: { slug: essay.id },
+    props: { essay }
+  }));
 }
 
 const { essay } = Astro.props;
-const canonicalSlug = Astro.props.canonicalSlug ?? essay.slug;
-const isLegacy = Astro.props.isLegacy ?? false;
-const { Content } = await essay.render();
+const canonicalSlug = essay.id;
+const { Content, headings } = await render(essay);
+const articleHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const publishedEssays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
+  (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
+);
+const essaySequenceIndex = publishedEssays.findIndex((entry) => entry.id === canonicalSlug);
+const newerEssay = essaySequenceIndex > 0 ? publishedEssays[essaySequenceIndex - 1] : null;
+const olderEssay = essaySequenceIndex >= 0 ? publishedEssays[essaySequenceIndex + 1] : null;
 const ideaName = getTheoryClusterName(essay.data.cluster);
 const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
   Array<NonNullable<ReturnType<typeof getProjectByName>>>
@@ -39,7 +34,7 @@ const relatedProjects = (essay.data.relatedProjects ?? []).reduce<
   return acc;
 }, []);
 const proofProject = getProjectByName(essay.data.projectProof);
-const primaryProofNext = proofProject ? getProjectGraphPosition(proofProject.slug).next : null;
+const primaryProofNext = proofProject ? getProjectPathPosition(proofProject.slug).next : null;
 const articleImages = (essay.data.images ?? []).map((image) => {
   const imageUrl = new URL(image.url, siteConfig.siteUrl).toString();
   const thumbnailUrl = image.thumbnailUrl ? new URL(image.thumbnailUrl, siteConfig.siteUrl).toString() : undefined;
@@ -69,10 +64,30 @@ const essayShareDescription = essay.data.shareDescription ?? essay.data.descript
 const essayShareImage = essay.data.shareImage ?? siteConfig.socialImagePath;
 const essayShareImageAlt = essay.data.shareImageAlt ?? `${essay.data.title} — ${siteConfig.author.name}`;
 const essayUrl = new URL(`/essays/${canonicalSlug}/`, siteConfig.siteUrl).toString();
+const essayTrack = essay.data.editorialTrack ?? essay.data.track ?? "general";
+const essayAudiences = [essay.data.primaryAudience, ...essay.data.secondaryAudiences].filter(
+  (audience): audience is NonNullable<typeof essay.data.primaryAudience> => Boolean(audience)
+);
+const nextStepRoutes = essay.data.nextSteps.slice(0, 2);
+const routeLabels: Record<string, string> = {
+  "/lifecycle/": "Open the Lifecycle field definition",
+  "/essays/": "Return to the essay registry",
+  "/research/": "Open the research ledger",
+  "/definitions/": "Open citation definitions",
+  "/evidence/": "Inspect the evidence shelf",
+  "/projects/": "Inspect the proof path",
+  "/projects/mplp/": "Inspect the MPLP protocol path",
+  "/concepts/intent-drift/": "Open the Intent Drift concept",
+  "/concepts/missing-regulatory-objects/": "Open Missing Regulatory Objects",
+  "/concepts/protocol-engineering/": "Open Protocol Engineering"
+};
+const nextStepLabel = (route: string) => routeLabels[route] ?? `Open ${route.replace(/^\//, "").replaceAll("/", " ").trim()}`;
 const essayKeywords = Array.from(new Set([
   ...essay.data.tags,
   ideaName,
   essay.data.projectProof,
+  essay.data.publicationClass,
+  essayTrack,
   "AI Agent Lifecycle",
   "Agentic Delivery",
   "AI agent governance"
@@ -80,6 +95,8 @@ const essayKeywords = Array.from(new Set([
 const essayBreadcrumbJsonLd = createBreadcrumbJsonLd(essayUrl, [
   { name: "Home", path: "/" },
   { name: "Essays", path: "/essays/" },
+  { name: essayTrack, path: "/essays/" },
+  ...(essay.data.series ? [{ name: essay.data.series, path: "/essays/" }] : []),
   { name: essay.data.title, path: `/essays/${canonicalSlug}/` }
 ]);
 const essayWebPageJsonLd = {
@@ -89,6 +106,7 @@ const essayWebPageJsonLd = {
   url: essayUrl,
   name: essay.data.title,
   description: essay.data.description,
+  dateModified: (essay.data.updatedAt ?? essay.data.publishDate).toISOString(),
   isPartOf: {
     "@id": `${siteConfig.siteUrl}#website`
   },
@@ -97,6 +115,10 @@ const essayWebPageJsonLd = {
   },
   mainEntity: {
     "@id": `${essayUrl}#article`
+  },
+  about: {
+    "@type": "Thing",
+    name: essay.data.publicationClass
   }
 };
 const articleJsonLd = {
@@ -106,7 +128,7 @@ const articleJsonLd = {
   headline: essay.data.title,
   description: essay.data.description,
   datePublished: essay.data.publishDate.toISOString(),
-  dateModified: essay.data.publishDate.toISOString(),
+  dateModified: (essay.data.updatedAt ?? essay.data.publishDate).toISOString(),
   author: {
     "@id": `${siteConfig.siteUrl}#person`
   },
@@ -121,6 +143,8 @@ const articleJsonLd = {
   thumbnailUrl: primaryArticleImage?.thumbnailUrl,
   associatedMedia: articleImages.length > 0 ? articleImages : undefined,
   keywords: essayKeywords,
+  articleSection: essayTrack,
+  audience: essay.data.primaryAudience,
   about: essayKeywords.map((keyword) => ({
     "@type": "Thing",
     name: keyword
@@ -137,7 +161,6 @@ const articleJsonLd = {
   title={essay.data.title}
   description={essay.data.description}
   canonicalPath={`/essays/${canonicalSlug}/`}
-  noindex={isLegacy}
   ogType="article"
   jsonLd={[essayWebPageJsonLd, articleJsonLd, essayBreadcrumbJsonLd]}
   keywords={essayKeywords}
@@ -150,12 +173,12 @@ const articleJsonLd = {
     title={essay.data.title}
     titleLines={essay.data.titleLines}
     subtitle={essay.data.subtitle}
-    objectType="ENTRY_TYPE"
-    objectValue={essay.data.flagship ? "FLAGSHIP THESIS" : "ESSAY RECORD"}
+      objectType="ENTRY_TYPE"
+      objectValue={essay.data.flagship ? "FLAGSHIP THESIS" : "ESSAY RECORD"}
     lead={essay.data.summary ?? essay.data.description}
     leadLines={essay.data.summaryLines}
   >
-    <div class="article-hero-meta">
+      <div class="article-hero-meta">
       <a href="/essays/" class="article-back-link registry-annotation">
         <span class="registry-key">BACK_TO</span>: <span class="registry-value">ESSAYS</span>
       </a>
@@ -166,6 +189,12 @@ const articleJsonLd = {
         <span class="registry-key">IDEA</span>: <span class="registry-value">{ideaName.toUpperCase()}</span>
       </div>
       <div class="registry-annotation">
+        <span class="registry-key">CLASS</span>: <span class="registry-value">{essay.data.publicationClass.toUpperCase()}</span>
+      </div>
+      <div class="registry-annotation">
+        <span class="registry-key">TRACK</span>: <span class="registry-value">{essayTrack.toUpperCase()}</span>
+      </div>
+      <div class="registry-annotation">
         <span class="registry-key">PROOF_PATH</span>: <span class="registry-value">{essay.data.projectProof.toUpperCase()}</span>
       </div>
       {essay.data.series && (
@@ -173,16 +202,21 @@ const articleJsonLd = {
           <span class="registry-key">SERIES</span>: <span class="registry-value">{essay.data.series.toUpperCase()}</span>
         </div>
       )}
-      {isLegacy && (
+      {essay.data.readingTimeMinutes && (
         <div class="registry-annotation">
-          <span class="registry-key">CANONICAL_PATH</span>: <span class="registry-value">{canonicalSlug.toUpperCase()}</span>
+          <span class="registry-key">READING_TIME</span>: <span class="registry-value">{essay.data.readingTimeMinutes} MIN</span>
+        </div>
+      )}
+      {essay.data.updatedAt && essay.data.updatedAt.getTime() !== essay.data.publishDate.getTime() && (
+        <div class="registry-annotation">
+          <span class="registry-key">UPDATED</span>: <span class="registry-value">{essay.data.updatedAt.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</span>
         </div>
       )}
     </div>
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
-    <article class="shell article-shell">
+    <article class="shell article-shell" data-analytics-read="essay">
       <div class="article-grid">
         <aside class="article-sidebar registry-chassis">
           <div class="registry-annotation" style="margin-bottom: 1rem;">
@@ -218,23 +252,69 @@ const articleJsonLd = {
               </span>
             </div>
           )}
+          {essayAudiences.length > 0 && (
+            <div class="sidebar-line">
+              <span class="registry-key">AUDIENCE</span>
+              <span class="registry-value">{essayAudiences.join(" / ")}</span>
+            </div>
+          )}
+          <div class="sidebar-line">
+            <span class="registry-key">CANONICAL_PARENT</span>
+            <a href={essay.data.canonicalParent} class="sidebar-link">{essay.data.canonicalParent}</a>
+          </div>
+          {articleHeadings.length > 0 && (
+            <details class="article-toc" open>
+              <summary class="registry-annotation">
+                <span class="registry-key">IN_THIS_ESSAY</span>
+              </summary>
+              <nav aria-label="Essay sections">
+                {articleHeadings.map((heading) => (
+                  <a class:list={[heading.depth === 3 && "article-toc-link--nested"]} href={`#${heading.slug}`}>
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </details>
+          )}
         </aside>
 
         <div class="article-content prose">
+          <div class="article-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-article-progress></div>
           <Content />
 
-          {(essay.data.relatedIdeas?.length > 0 || relatedProjects.length > 0) && (
+          {(nextStepRoutes.length > 0 || essay.data.relatedIdeas?.length > 0 || relatedProjects.length > 0) && (
             <section class="registry-chassis chain-block">
               <div class="registry-annotation" style="margin-bottom: 1rem;">
-                <span class="registry-key">NEXT_STEP</span>: <span class="registry-value">IDEAS_TO_PROOF_PATH</span>
+                <span class="registry-key">NEXT_STEP</span>: <span class="registry-value">{essay.data.primaryAudience ?? "READER"}_PATH</span>
               </div>
+
+              {nextStepRoutes.length > 0 && (
+                <div class="chain-group chain-group--required">
+                  <p class="chain-label">Continue from this record</p>
+                  <div class="chain-links">
+                    {nextStepRoutes.map((route) => (
+                      <a href={route} class="chain-link chain-link--primary">{nextStepLabel(route)}</a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {(newerEssay || olderEssay) && (
+                <div class="chain-group">
+                  <p class="chain-label">Publication sequence</p>
+                  <div class="chain-links">
+                    {newerEssay && <a href={`/essays/${newerEssay.id}/`} class="chain-link">Newer essay: {newerEssay.data.title}</a>}
+                    {olderEssay && <a href={`/essays/${olderEssay.id}/`} class="chain-link">Earlier essay: {olderEssay.data.title}</a>}
+                  </div>
+                </div>
+              )}
 
               {essay.data.relatedIdeas?.length > 0 && (
                 <div class="chain-group">
                   <p class="chain-label">Related ideas</p>
                   <div class="chain-links">
                     {essay.data.relatedIdeas.map((ideaSlug) => (
-                      <a href={`/theories/#${ideaSlug}`} class="chain-link">
+                      <a href={`/theories/#${getTheoryClusterSlug(ideaSlug)}`} class="chain-link">
                         {getTheoryClusterName(ideaSlug)}
                       </a>
                     ))}
@@ -276,29 +356,35 @@ const articleJsonLd = {
 <style>
   .article-hero-meta {
     margin-top: 2.15rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem 1.35rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1.35rem;
     max-width: 100%;
     min-width: 0;
   }
   .article-hero-meta .registry-annotation {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
     min-width: 0;
     max-width: 100%;
     row-gap: 0.25rem;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+  }
+  .article-hero-meta .article-back-link {
+    grid-column: 1 / -1;
   }
   .article-hero-meta .registry-value {
+    flex: 1 1 12rem;
     min-width: 0;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-back-link {
     text-decoration: none;
   }
   .article-back-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
   .chain-block {
     margin-top: var(--space-8);
@@ -327,9 +413,12 @@ const articleJsonLd = {
     color: var(--current-muted);
   }
   .chain-link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-size: 0.95rem;
     text-decoration: none;
+  }
+  .chain-link--primary {
+    font-weight: 750;
   }
   .chain-link:hover {
     color: var(--current-text);
@@ -349,6 +438,55 @@ const articleJsonLd = {
     position: sticky;
     top: 7rem;
   }
+  .article-toc {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .article-toc summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .article-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .article-toc summary::after {
+    content: "+";
+    float: right;
+    color: var(--color-action);
+  }
+  .article-toc[open] summary::after {
+    content: "-";
+  }
+  .article-toc nav {
+    display: grid;
+    gap: 0.42rem;
+    margin-top: 0.85rem;
+  }
+  .article-toc a {
+    color: var(--current-muted);
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+  .article-toc a:hover {
+    color: var(--color-action);
+  }
+  .article-toc-link--nested {
+    padding-left: 0.75rem;
+    font-size: 0.72rem;
+  }
+  .article-progress {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 3px;
+    margin: -1rem 0 2rem;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: var(--color-action);
+  }
   .sidebar-line + .sidebar-line {
     margin-top: 1rem;
     padding-top: 1rem;
@@ -359,7 +497,7 @@ const articleJsonLd = {
     gap: 0.35rem;
   }
   .sidebar-link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
   .sidebar-link:hover {
@@ -384,35 +522,33 @@ const articleJsonLd = {
     line-height: 1.75;
     color: var(--current-text);
     min-width: 0;
-    --article-panel-bg: var(--current-surface);
-    --article-panel-border: var(--current-border);
-    --article-panel-line: var(--current-line);
+    --article-panel-bg: var(--color-paper);
+    --article-panel-border: var(--color-rule);
+    --article-panel-line: var(--color-rule-soft);
     --article-soft-grid:
-      linear-gradient(rgba(17, 17, 17, 0.028) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(17, 17, 17, 0.022) 1px, transparent 1px),
-      var(--current-surface);
-    --article-signal-grid:
-      linear-gradient(rgba(59, 130, 246, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
-      rgba(59, 130, 246, 0.032);
-    --article-proof-grid:
-      linear-gradient(rgba(34, 211, 238, 0.065) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.045) 1px, transparent 1px),
-      rgba(34, 211, 238, 0.035);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
+    --article-evidence-grid:
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     --article-dark-grid:
-      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
       var(--bg-monolith);
     --article-dark-text: var(--text-registry-primary);
     --article-dark-muted: rgba(226, 232, 240, 0.68);
-    --article-dark-line: rgba(241, 245, 249, 0.1);
-    --article-dark-border: rgba(241, 245, 249, 0.13);
+    --article-dark-line: var(--color-rule-dark);
+    --article-dark-border: var(--color-rule-dark);
   }
   .article-content :global(h2) {
     font-size: 2rem;
     font-weight: 800;
     margin: 4rem 0 1.5rem 0;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
     border-bottom: 1px solid var(--current-line);
     padding-bottom: 0.5rem;
   }
@@ -420,6 +556,9 @@ const articleJsonLd = {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 2.5rem 0 1rem 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(p) {
     margin-bottom: 1.8rem;
@@ -428,7 +567,7 @@ const articleJsonLd = {
     max-width: min(100%, var(--lead-measure));
     margin: 0 0 2.4rem;
     padding-left: var(--registry-compact-padding);
-    border-left: 2px solid rgba(59, 130, 246, 0.38);
+    border-left: 2px solid var(--color-rule-soft);
     font-family: var(--font-display);
     font-size: clamp(1.18rem, 1.45vw, 1.35rem);
     font-weight: 640;
@@ -449,8 +588,8 @@ const articleJsonLd = {
     margin-bottom: 0.8rem;
   }
   .article-content :global(blockquote) {
-    border-left: 2px solid var(--accent-signal);
-    background-color: rgba(59, 130, 246, 0.03);
+    border-left: 2px solid var(--color-rule);
+    background-color: var(--color-surface);
     padding: var(--registry-card-padding);
     margin: 3rem 0;
     font-style: italic;
@@ -461,9 +600,9 @@ const articleJsonLd = {
     margin: 2.5rem 0;
     padding: 1.35rem 1.5rem;
     background:
-      linear-gradient(rgba(59, 130, 246, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.045) 1px, transparent 1px),
-      rgba(17, 17, 17, 0.96);
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
+      var(--bg-monolith);
     background-size: 32px 32px;
     color: var(--text-registry-primary);
     border: 1px solid rgba(17, 17, 17, 0.18);
@@ -490,7 +629,7 @@ const articleJsonLd = {
     border: 1px solid var(--current-border);
     font-size: 0.94rem;
     line-height: 1.55;
-    background: var(--current-surface);
+    background: var(--color-paper);
   }
   .article-content :global(th),
   .article-content :global(td) {
@@ -499,7 +638,7 @@ const articleJsonLd = {
     border: 1px solid var(--current-line);
     text-align: left;
     vertical-align: top;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-content :global(th) {
     background: rgba(17, 17, 17, 0.045);
@@ -550,7 +689,7 @@ const articleJsonLd = {
     width: 100%;
     margin: 2.5rem 0;
     border: 1px solid var(--current-border);
-    background: var(--current-surface);
+    background: var(--color-paper);
   }
   .article-content :global(.essay-ledger-table__row) {
     display: grid;
@@ -572,7 +711,7 @@ const articleJsonLd = {
     color: var(--current-muted);
     font-size: 0.94rem;
     line-height: 1.55;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-content :global(.essay-ledger-table__row > div:first-child) {
     border-left: 0;
@@ -593,7 +732,7 @@ const articleJsonLd = {
     background:
       linear-gradient(rgba(17, 17, 17, 0.026) 1px, transparent 1px),
       linear-gradient(90deg, rgba(17, 17, 17, 0.02) 1px, transparent 1px),
-      var(--current-surface);
+      var(--color-paper);
     background-size: 28px 28px;
   }
   .article-content :global(.score-snapshot-title) {
@@ -603,6 +742,8 @@ const articleJsonLd = {
     font-size: 0.78rem;
     font-weight: 800;
     line-height: 1.45;
+    letter-spacing: var(--type-meta-letter-spacing);
+    word-spacing: var(--type-meta-word-spacing);
     text-transform: uppercase;
   }
   .article-content :global(.score-snapshot-table) {
@@ -619,7 +760,7 @@ const articleJsonLd = {
   .article-content :global(.score-snapshot-table td) {
     min-width: 0;
     padding: 0.65rem 0.55rem;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-content :global(.score-snapshot-table thead th) {
     background: rgba(17, 17, 17, 0.055);
@@ -684,8 +825,8 @@ const articleJsonLd = {
     margin: 3rem 0;
     padding: 1.25rem;
     background:
-      linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
       var(--bg-monolith);
     background-size: 28px 28px;
     border: 1px solid rgba(17, 17, 17, 0.18);
@@ -699,11 +840,11 @@ const articleJsonLd = {
     padding: 1rem 1.15rem;
     background: rgba(255, 255, 255, 0.045);
     border: 1px solid rgba(255, 255, 255, 0.11);
-    border-left: 3px solid rgba(59, 130, 246, 0.8);
+    border-left: 3px solid var(--color-rule-dark);
   }
   .article-content :global(.protocol-layer--governance) {
-    border-left-color: var(--accent-proof);
-    background: rgba(34, 211, 238, 0.08);
+    border-left-color: var(--color-rule-dark);
+    background: var(--color-rule-dark);
   }
   .article-content :global(.protocol-layer__label) {
     font-family: var(--font-mono);
@@ -711,10 +852,10 @@ const articleJsonLd = {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.protocol-layer--governance .protocol-layer__label) {
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.protocol-layer strong) {
     font-size: 1rem;
@@ -745,8 +886,8 @@ const articleJsonLd = {
   .article-content :global(.concept-list div) {
     padding: 1.15rem 1.25rem;
     border: 1px solid var(--current-border);
-    border-left: 3px solid var(--accent-signal);
-    background: rgba(59, 130, 246, 0.025);
+    border-left: 3px solid var(--color-rule);
+    background: var(--color-surface);
   }
   .article-content :global(.concept-list dt) {
     margin: 0 0 0.45rem;
@@ -767,7 +908,7 @@ const articleJsonLd = {
     margin: 3rem 0;
     max-width: 100%;
     border: 1px solid rgba(17, 17, 17, 0.14);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     background:
       linear-gradient(rgba(17, 17, 17, 0.028) 1px, transparent 1px),
       linear-gradient(90deg, rgba(17, 17, 17, 0.022) 1px, transparent 1px),
@@ -778,10 +919,10 @@ const articleJsonLd = {
     padding: clamp(1.5rem, 3vw, 2.2rem);
   }
   .article-content :global(.essay-concept-anchor--thesis) {
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--article-dark-border);
     background:
-      linear-gradient(rgba(34, 211, 238, 0.09) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.07) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
       var(--bg-monolith);
     background-size: 32px 32px;
     color: var(--text-registry-primary);
@@ -795,10 +936,10 @@ const articleJsonLd = {
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
   .article-content :global(.essay-concept-anchor--thesis .essay-concept-anchor__label) {
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.essay-concept-anchor__statement) {
     margin: 0;
@@ -808,6 +949,7 @@ const articleJsonLd = {
     font-weight: var(--type-registry-hero-title-weight);
     line-height: var(--type-registry-hero-title-line-height);
     letter-spacing: var(--type-registry-hero-title-letter-spacing);
+    word-spacing: var(--type-registry-hero-title-word-spacing);
     max-width: min(100%, 17em);
   }
   .article-content :global(.essay-concept-anchor__support) {
@@ -829,12 +971,12 @@ const articleJsonLd = {
     min-width: 0;
     padding: 1rem;
     border: 1px solid rgba(17, 17, 17, 0.12);
-    background: var(--current-surface);
+    background: var(--color-paper);
   }
   .article-content :global(.essay-mechanism-strip__grid span) {
     display: block;
     margin-bottom: 0.55rem;
-    color: var(--accent-proof);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -854,11 +996,11 @@ const articleJsonLd = {
     line-height: 1.6;
   }
   .article-content :global(.essay-pull-quote) {
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--color-rule);
     background:
-      linear-gradient(rgba(34, 211, 238, 0.065) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.045) 1px, transparent 1px),
-      rgba(34, 211, 238, 0.035);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     background-size: 28px 28px;
     color: var(--current-text);
     font-style: normal;
@@ -888,11 +1030,11 @@ const articleJsonLd = {
     margin: 2.6rem 0;
     padding: 1.1rem;
     border: 1px solid rgba(17, 17, 17, 0.14);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
     background:
-      linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.045) 1px, transparent 1px),
-      rgba(59, 130, 246, 0.032);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     background-size: 28px 28px;
   }
   .article-content :global(.essay-pairwise-callout p) {
@@ -942,14 +1084,14 @@ const articleJsonLd = {
   }
   .article-content :global(.essay-framework-ledger) {
     padding: 0.2rem 1.15rem;
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--color-rule);
   }
   .article-content :global(.essay-closing-ledger) {
     padding: clamp(1.25rem, 2.4vw, 1.7rem);
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--color-rule);
     background:
-      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
       var(--bg-monolith);
     background-size: 30px 30px;
   }
@@ -974,7 +1116,7 @@ const articleJsonLd = {
     margin: 2.6rem 0;
     padding: 1.35rem 1.45rem;
     border: 1px solid rgba(17, 17, 17, 0.12);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     background:
       linear-gradient(rgba(17, 17, 17, 0.032) 1px, transparent 1px),
       linear-gradient(90deg, rgba(17, 17, 17, 0.026) 1px, transparent 1px),
@@ -982,14 +1124,14 @@ const articleJsonLd = {
     background-size: 28px 28px;
   }
   .article-content :global(.lifecycle-event-card) {
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--color-rule);
   }
   .article-content :global(.lifecycle-event-card--critical) {
-    border-left-color: var(--accent-signal);
+    border-left-color: var(--color-rule);
     background:
-      linear-gradient(rgba(59, 130, 246, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
-      rgba(59, 130, 246, 0.038);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     background-size: 28px 28px;
   }
   .article-content :global(.protocol-example-card__eyebrow),
@@ -1013,7 +1155,7 @@ const articleJsonLd = {
     font-size: 1rem;
     line-height: 1.35;
     color: var(--current-text);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-content :global(.protocol-object-grid),
   .article-content :global(.protocol-boundary-list),
@@ -1039,11 +1181,11 @@ const articleJsonLd = {
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.04em;
-    color: var(--accent-signal);
-    overflow-wrap: anywhere;
+    color: var(--color-meta);
+    overflow-wrap: break-word;
   }
   .article-content :global(.lifecycle-event-card dt) {
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
   .article-content :global(.protocol-object-grid dd),
   .article-content :global(.protocol-boundary-list dd),
@@ -1083,18 +1225,18 @@ const articleJsonLd = {
     min-height: 2.25rem;
     padding: 0.45rem 0.7rem;
     border: 1px solid rgba(17, 17, 17, 0.12);
-    background: var(--current-surface);
+    background: var(--color-paper);
     color: var(--current-text);
     font-family: var(--font-mono);
     font-size: 0.76rem;
     font-weight: 800;
     line-height: 1.25;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .article-content :global(.workflow-strip span + span)::before {
     content: "->";
     margin-right: 0.75rem;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
   .article-content :global(.workflow-strip--compact span) {
     font-size: 0.82rem;
@@ -1103,9 +1245,9 @@ const articleJsonLd = {
     margin: 2.25rem 0;
     padding: 1.1rem 1.35rem;
     border: 1px solid var(--article-panel-border);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
     border-radius: 0 var(--radius-module) var(--radius-module) 0;
-    background: var(--article-proof-grid);
+    background: var(--article-evidence-grid);
     background-size: 28px 28px;
   }
   .article-content :global(.callout p),
@@ -1118,13 +1260,13 @@ const articleJsonLd = {
     margin: 0;
   }
   .article-content :global(.callout strong) {
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
   .article-content :global(.proto-note) {
     margin: 2rem 0;
     padding: 1rem 1.25rem;
     border: 1px solid var(--article-panel-border);
-    border-top: 3px solid var(--accent-signal);
+    border-top: 3px solid var(--color-rule);
     border-radius: 0 0 var(--radius-module) var(--radius-module);
     background: var(--article-soft-grid);
     background-size: 28px 28px;
@@ -1155,14 +1297,14 @@ const articleJsonLd = {
     justify-content: center;
     padding: 1.1rem 1rem;
     background:
-      linear-gradient(rgba(59, 130, 246, 0.09) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
       var(--bg-monolith);
     background-size: 28px 28px;
   }
   .article-content :global(.dim-label .num) {
     margin-bottom: 0.4rem;
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
     font-family: var(--font-mono);
     font-size: 1.25rem;
     line-height: 1;
@@ -1184,6 +1326,8 @@ const articleJsonLd = {
     font-weight: 800;
     font-size: 0.98rem;
     line-height: 1.35;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(.dim-desc) {
     color: var(--current-muted);
@@ -1215,7 +1359,7 @@ const articleJsonLd = {
     text-transform: uppercase;
   }
   .article-content :global(.code-block.alt .code-block-label) {
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.code-block pre) {
     margin: 0;
@@ -1234,13 +1378,13 @@ const articleJsonLd = {
     font-size: inherit;
   }
   .article-content :global(.ck) {
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.cv) {
     color: var(--article-dark-text);
   }
   .article-content :global(.cs) {
-    color: var(--accent-signal);
+    color: var(--article-dark-muted);
   }
   .article-content :global(.cc) {
     color: rgba(226, 232, 240, 0.54);
@@ -1264,8 +1408,8 @@ const articleJsonLd = {
     padding: 0.2rem 0.5rem;
     border: 1px solid var(--article-panel-line);
     border-radius: var(--radius-module);
-    background: rgba(59, 130, 246, 0.045);
-    color: var(--accent-signal);
+    background: var(--color-surface);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.12em;
@@ -1274,6 +1418,9 @@ const articleJsonLd = {
   .article-content :global(.enables-card h3) {
     margin: 0 0 0.5rem;
     font-size: 1rem;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(.enables-card p) {
     margin-bottom: 0.9rem;
@@ -1289,7 +1436,7 @@ const articleJsonLd = {
     color: var(--current-text);
   }
   .article-content :global(.enables-card .diff strong) {
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
   .article-content :global(.object-groups) {
     display: grid;
@@ -1307,7 +1454,7 @@ const articleJsonLd = {
   .article-content :global(.group-label) {
     display: block;
     margin-bottom: 0.875rem;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.12em;
@@ -1348,7 +1495,7 @@ const articleJsonLd = {
   }
   .article-content :global(.scenario-sector) {
     margin-bottom: 0.4rem;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.14em;
@@ -1360,6 +1507,8 @@ const articleJsonLd = {
     font-size: 1.08rem;
     font-weight: 760;
     line-height: 1.35;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(.scenario-cols) {
     display: grid;
@@ -1373,7 +1522,7 @@ const articleJsonLd = {
     border-left: 1px solid var(--article-panel-line);
   }
   .article-content :global(.scenario-col.with-mplp) {
-    background: var(--article-proof-grid);
+    background: var(--article-evidence-grid);
     background-size: 28px 28px;
   }
   .article-content :global(.scenario-col-label) {
@@ -1386,7 +1535,7 @@ const articleJsonLd = {
     text-transform: uppercase;
   }
   .article-content :global(.with-mplp .scenario-col-label) {
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
   .article-content :global(.scenario-col p) {
     margin-bottom: 0.8em;
@@ -1411,13 +1560,13 @@ const articleJsonLd = {
     line-height: 1.6;
   }
   .article-content :global(.scenario-insight strong) {
-    color: var(--accent-proof);
+    color: var(--article-dark-text);
   }
   .article-content :global(.reg-box) {
     margin: 2.25rem 0;
     padding: 1.25rem 1.5rem;
     border: 1px solid var(--article-panel-border);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     border-radius: 0 var(--radius-module) var(--radius-module) 0;
     background: var(--article-soft-grid);
     background-size: 28px 28px;
@@ -1425,7 +1574,7 @@ const articleJsonLd = {
   .article-content :global(.reg-box-label) {
     display: block;
     margin-bottom: 0.75rem;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.14em;
@@ -1479,7 +1628,7 @@ const articleJsonLd = {
     background-size: 28px 28px;
   }
   .article-content :global(.imp-role span) {
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
     font-family: var(--font-mono);
     font-size: 0.62rem;
     letter-spacing: 0.1em;
@@ -1521,7 +1670,7 @@ const articleJsonLd = {
     border: 0;
     border-bottom: 2px solid var(--article-panel-border);
     background: transparent;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.1em;
@@ -1544,7 +1693,7 @@ const articleJsonLd = {
     color: var(--current-muted);
   }
   .article-content :global(.check) {
-    color: var(--accent-proof);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-weight: 800;
   }
@@ -1555,23 +1704,23 @@ const articleJsonLd = {
   .article-content :global(.partial) {
     display: inline-block;
     padding: 0.125rem 0.45rem;
-    border: 1px solid rgba(59, 130, 246, 0.22);
+    border: 1px solid var(--color-rule);
     border-radius: var(--radius-module);
-    background: rgba(59, 130, 246, 0.045);
-    color: var(--accent-signal);
+    background: var(--color-surface);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.62rem;
     line-height: 1.45;
     white-space: nowrap;
   }
   .article-content :global(.mplp-col) {
-    background: rgba(34, 211, 238, 0.035);
+    background: var(--color-surface);
   }
   .article-content :global(.thesis) {
     margin: 4rem 0 2.5rem;
     padding: 2.5rem;
     border: 1px solid var(--article-dark-border);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--article-dark-border);
     border-radius: var(--radius-module);
     background: var(--article-dark-grid);
     background-size: 30px 30px;
@@ -1579,7 +1728,7 @@ const articleJsonLd = {
   }
   .article-content :global(.thesis-label) {
     margin-bottom: 1.125rem;
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
     font-family: var(--font-mono);
     font-size: 0.56rem;
     letter-spacing: 0.18em;
@@ -1602,22 +1751,22 @@ const articleJsonLd = {
     margin: 2.6rem 0;
     padding: 1.15rem 1.25rem;
     border: 1px solid rgba(17, 17, 17, 0.14);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     background:
-      linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
-      rgba(59, 130, 246, 0.032);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     background-size: 28px 28px;
     color: var(--current-muted);
     font-size: 0.98rem;
     line-height: 1.62;
   }
   .article-content :global(.mas-boundary-note--protocol) {
-    border-left-color: var(--accent-proof);
+    border-left-color: var(--color-rule);
     background:
-      linear-gradient(rgba(34, 211, 238, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-      rgba(34, 211, 238, 0.032);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--color-paper);
     background-size: 28px 28px;
   }
   .article-content :global(.mas-dimension-grid),
@@ -1647,7 +1796,7 @@ const articleJsonLd = {
     background-size: 28px 28px;
   }
   .article-content :global(.mas-dimension) {
-    border-top: 3px solid var(--accent-proof);
+    border-top: 3px solid var(--color-rule);
   }
   .article-content :global(.mas-dimension__number),
   .article-content :global(.mas-comparison-grid section > span),
@@ -1655,7 +1804,7 @@ const articleJsonLd = {
   .article-content :global(.mas-reg-box > span) {
     display: block;
     margin-bottom: 0.75rem;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -1668,7 +1817,9 @@ const articleJsonLd = {
     margin: 0 0 0.7rem;
     color: var(--current-text);
     font-size: 1.08rem;
-    line-height: 1.25;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(.mas-dimension p),
   .article-content :global(.mas-comparison-grid p),
@@ -1703,7 +1854,7 @@ const articleJsonLd = {
     display: block;
     padding: 0.75rem 1rem;
     border-bottom: 1px solid rgba(241, 245, 249, 0.1);
-    color: var(--accent-proof);
+    color: var(--article-dark-muted);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -1717,7 +1868,7 @@ const articleJsonLd = {
   .article-content :global(.mas-scenario) {
     margin: 3rem 0;
     border: 1px solid rgba(17, 17, 17, 0.14);
-    background: var(--current-surface);
+    background: var(--color-paper);
   }
   .article-content :global(.mas-scenario header) {
     padding: 1rem 1.15rem;
@@ -1738,7 +1889,9 @@ const articleJsonLd = {
   .article-content :global(.mas-scenario header h3) {
     margin: 0;
     font-size: 1.2rem;
-    line-height: 1.25;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .article-content :global(.mas-scenario__grid) {
     display: grid;
@@ -1750,7 +1903,7 @@ const articleJsonLd = {
   }
   .article-content :global(.mas-scenario__grid > div + div) {
     border-left: 1px solid var(--current-line);
-    background: rgba(34, 211, 238, 0.035);
+    background: var(--color-surface);
   }
   .article-content :global(.mas-scenario__grid p),
   .article-content :global(.mas-scenario__insight) {
@@ -1772,10 +1925,10 @@ const articleJsonLd = {
     margin: 3.5rem 0 2.5rem;
     padding: clamp(1.35rem, 3vw, 2rem);
     border: 1px solid rgba(241, 245, 249, 0.13);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--article-dark-border);
     background:
-      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
       var(--bg-monolith);
     background-size: 30px 30px;
   }
@@ -1793,14 +1946,18 @@ const articleJsonLd = {
     border-top: 1px solid rgba(241, 245, 249, 0.11);
   }
   .article-content :global(a) {
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: underline;
     text-underline-offset: 4px;
   }
   @media (max-width: 900px) {
     .article-hero-meta {
-      gap: 0.7rem 0.95rem;
-      align-items: flex-start;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .article-hero-meta .article-back-link {
+      grid-column: auto;
     }
     .article-grid {
       grid-template-columns: 1fr;
@@ -1817,11 +1974,15 @@ const articleJsonLd = {
     .article-content :global(h2) {
       font-size: 1.7rem;
       margin: 3rem 0 1.2rem;
-      line-height: 1.2;
+      line-height: var(--type-section-title-line-height-mobile);
+      letter-spacing: var(--type-section-title-letter-spacing);
+      word-spacing: var(--type-section-title-word-spacing);
     }
     .article-content :global(h3) {
       font-size: 1.3rem;
-      line-height: 1.25;
+      line-height: var(--type-card-title-line-height-mobile);
+      letter-spacing: var(--type-card-title-letter-spacing);
+      word-spacing: var(--type-card-title-word-spacing);
     }
     .article-content :global(blockquote) {
       margin: 2.4rem 0;
@@ -1855,7 +2016,7 @@ const articleJsonLd = {
       display: grid;
       grid-template-columns: 1fr;
       border: 1px solid var(--current-border);
-      border-left: 3px solid var(--accent-signal);
+      border-left: 3px solid var(--color-rule);
       background: rgba(255, 255, 255, 0.9);
     }
     .article-content :global(.essay-ledger-table--five .essay-ledger-table__row),
@@ -1897,7 +2058,7 @@ const articleJsonLd = {
     .article-content :global(.score-snapshot-card) {
       padding: 0.95rem;
       border: 1px solid var(--current-border);
-      border-left: 3px solid var(--accent-signal);
+      border-left: 3px solid var(--color-rule);
       background: rgba(255, 255, 255, 0.86);
     }
     .article-content :global(.score-snapshot-card__system) {
@@ -1929,7 +2090,7 @@ const articleJsonLd = {
     }
     .article-content :global(.score-snapshot-card__metrics dt) {
       margin: 0 0 0.2rem;
-      color: var(--accent-signal);
+      color: var(--color-meta);
       font-family: var(--font-mono);
       font-size: 0.6rem;
       font-weight: 800;
@@ -2071,7 +2232,7 @@ const articleJsonLd = {
     .article-content :global(.compare-wrap tr) {
       margin-bottom: 0.9rem;
       border: 1px solid var(--article-panel-border);
-      background: var(--current-surface);
+      background: var(--color-paper);
     }
     .article-content :global(.compare-wrap td) {
       display: block;
@@ -2092,7 +2253,7 @@ const articleJsonLd = {
     .article-content :global(.compare-wrap td::before) {
       display: block;
       margin-bottom: 0.45rem;
-      color: var(--accent-signal);
+      color: var(--color-meta);
       font-family: var(--font-mono);
       font-size: 0.58rem;
       font-weight: 800;
@@ -2111,10 +2272,10 @@ const articleJsonLd = {
     }
     .article-content :global(.compare-wrap td:nth-child(4)::before) {
       content: "MPLP";
-      color: var(--accent-proof);
+      color: var(--color-meta);
     }
     .article-content :global(.compare-wrap .mplp-col) {
-      background: var(--article-proof-grid);
+      background: var(--article-evidence-grid);
       background-size: 28px 28px;
     }
     .article-content :global(.compare-wrap .partial) {
@@ -2149,3 +2310,16 @@ const articleJsonLd = {
     }
   }
 </style>
+
+<script is:inline>
+  const articleProgress = document.querySelector("[data-article-progress]");
+  const updateArticleProgress = () => {
+    if (!articleProgress) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    articleProgress.style.transform = `scaleX(${progress})`;
+    articleProgress.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
+  };
+  updateArticleProgress();
+  window.addEventListener("scroll", updateArticleProgress, { passive: true });
+</script>

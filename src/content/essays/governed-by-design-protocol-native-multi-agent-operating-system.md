@@ -20,8 +20,30 @@ shareDescription: >-
 shareImage: /social/governed-by-design-mas-os-og.png
 shareImageAlt: "Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI"
 publishDate: 2026-06-09
+updatedAt: 2026-08-26
 cluster: protocol-engineering
 projectProof: MPLP
+track: protocol
+contentRole: essay
+publicationClass: technical
+editorialTrack: protocol
+canonicalRoute: /essays/governed-by-design-protocol-native-multi-agent-operating-system/
+canonicalParent: /essays/
+primaryAudience: Architect
+secondaryAudiences:
+  - Builder
+  - Governance
+distinctReaderQuestion: "Which lifecycle semantics belong at the protocol layer of a multi-agent operating system?"
+sourceRefs:
+  - Authored protocol position essay
+  - MPLP project framing
+indexability: index
+nextSteps:
+  - /projects/mplp/
+  - /concepts/protocol-engineering/
+maxClickDepth: 3
+readingTimeMinutes: 15
+evidenceLevel: PROTOCOL POSITION PAPER
 featured: true
 flagship: true
 status: published
@@ -29,9 +51,8 @@ tags:
   - MPLP
   - Cognitive OS
   - Multi-Agent Systems
-  - Agentic AI
   - Protocol Engineering
-  - AI Agent Governance
+  - Lifecycle Governance
 summary: >-
   The next Agentic AI layer is not a better framework. It is a protocol-native
   MAS operating layer for intent versioning, drift detection, confirmation,
@@ -488,5 +509,5 @@ The distinction is not between more logging and less logging. It is between a sy
   <li id="ref-8">European Union, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689">Regulation (EU) 2024/1689</a>. Official text of the EU AI Act, including high-risk AI obligations around risk management, logging, record-keeping, and human oversight.</li>
   <li id="ref-9">Financial Conduct Authority, <a href="https://www.fca.org.uk/firms/innovation/ai-approach">"AI and the FCA: our approach"</a> and <a href="https://www.fca.org.uk/publications/corporate-documents/artificial-intelligence-ai-update-further-governments-response-ai-white-paper">"Artificial Intelligence (AI) update"</a>. FCA materials on safe and responsible adoption, evidence-based supervision, accountability, and governance.</li>
   <li id="ref-10">Monetary Authority of Singapore, <a href="https://www.mas.gov.sg/publications/monographs-or-information-paper/2018/FEAT">"Principles to Promote FEAT in the Use of AI and Data Analytics in Singapore's Financial Sector"</a>. MAS principles for fairness, ethics, accountability, and transparency.</li>
-  <li id="ref-11">Federal Reserve, <a href="https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm">SR 11-7: Guidance on Model Risk Management</a>. Supervisory guidance on model development, implementation, validation, governance, documentation, and controls.</li>
+  <li id="ref-11">Federal Reserve, <a href="https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107.htm">SR 11-7: Guidance on Model Risk Management</a>. Supervisory guidance on model development, implementation, validation, governance, documentation, and controls.</li>
 </ol>

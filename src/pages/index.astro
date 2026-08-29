@@ -1,91 +1,36 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
 import PortraitAnchor from "../components/PortraitAnchor.astro";
-import ProjectProofCard from "../components/ProjectProofCard.astro";
-import CoreArchitectureMap from "../components/CoreArchitectureMap.astro";
+import ReadingFlowDiagram from "../components/ReadingFlowDiagram.astro";
 import {
-  aiAgentLifecycleColumn,
-  homepageActions,
   homepageContent,
+  homepageActions,
   siteConfig,
   projects,
-  siteSemanticBaseline,
-  socialLinks
+  siteSemanticBaseline
 } from "../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd, siteEntityTerms } from "../data/schema";
+import { whitepaperPublications } from "../data/whitepaperPublications";
 
-const allEssays = (await getCollection("essays"))
-  .sort((left, right) =>
-    Number(right.data.flagship) - Number(left.data.flagship) ||
-    right.data.publishDate.getTime() - left.data.publishDate.getTime()
-  );
+const allEssays = (await getCollection("essays", ({ data }) => data.status === "published"))
+  .sort((left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime());
+const latestEssay = allEssays[0];
+const research = whitepaperPublications[0];
+const protocolProject = projects.find((project) => project.slug === "mplp");
+const proofProjects = projects.filter((project) => project.slug !== "mplp").slice(0, 3);
+const lifecycleReadingPath = allEssays
+  .filter((essay) => essay.data.series === "Define The AI Agent Lifecycle" && Number.isFinite(essay.data.seriesOrder))
+  .sort((left, right) => (left.data.seriesOrder ?? 0) - (right.data.seriesOrder ?? 0))
+  .slice(0, 4);
 
-const essaysBySlug = new Map(allEssays.map((essay) => [essay.slug, essay]));
-const readingPathEntries = homepageContent.readingPath
-  .map((entry, index) => {
-    const essay = essaysBySlug.get(entry.slug);
-    return essay ? { ...entry, essay, index } : null;
-  })
-  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 
-const agenticDeliveryFlowRows = [
-  homepageContent.coreThesis.agenticDeliveryFlow.slice(0, 4),
-  homepageContent.coreThesis.agenticDeliveryFlow.slice(4)
-];
-
-const writingTracks = [
-  { name: "Protocol Engineering", desc: "Lifecycle vocabulary, handoff semantics, and delivery grammar for agent systems." },
-  { name: "Reliable Agent Delivery", desc: "How agent systems complete real work — plannable, verifiable, and auditable." },
-  { name: "Agent Governance & Evidence", desc: "Oversight structures, compliance surfaces, and accountability frameworks for autonomous work." },
-  { name: "AI Programming & Delivery Systems", desc: "Runtime architecture, state management, and operating constraints for protocol-aware agents." },
-  { name: "Agent Stack Commentary", desc: "Analysis and perspective on the evolving agent infrastructure landscape." }
-];
-const researchSeriesItems = [
-  {
-    sequence: "01",
-    role: "Foundation",
-    scope: "Global compliance",
-    title: "Global AI Compliance White Paper 2026",
-    description:
-      "Defines Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility governance for AI agent and multi-agent systems.",
-    metadata: ["v0.3.2 Public Research Edition", "485-page PDF"],
-    href: "/research/global-ai-compliance-white-paper-2026/",
-    pdfHref: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf",
-    primary: true
-  },
-  {
-    sequence: "02",
-    role: "Auditability & Assurance",
-    scope: "Evidence specialization",
-    title: "Agentic AI Auditability & Assurance White Paper 2026",
-    description:
-      "Specializes the series into audit evidence chains, AARM, and MRO-to-audit-evidence mapping for enterprise AI governance.",
-    metadata: ["v0.1 Public Research Edition", "118-page PDF"],
-    href: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
-    pdfHref: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf",
-    primary: false
-  },
-  {
-    sequence: "03",
-    role: "Insurability & Risk Transfer",
-    scope: "Risk-transfer evidence",
-    title: "Agentic AI Insurability & Risk Transfer White Paper 2026",
-    description:
-      "A public research edition analyzing agentic AI insurability and risk transfer through lifecycle evidence, insured subject separation, and claim reconstruction boundaries.",
-    metadata: ["v1.0 Public Research Edition", "138-page PDF", "No public DOCX"],
-    href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
-    pdfHref: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf",
-    primary: false
-  }
-];
 const canonicalPath = "/";
 const homepageUrl = absoluteUrl(canonicalPath);
 const homepageDescription =
   "Jearon Wong, Protocol Architect for the Agent Era, defines AI Agent Lifecycle, Agentic Delivery, and MPLP for accountable AI agent work from intent to outcome.";
 const homepageDatePublished = "2026-04-23";
-const homepageDateModified = "2026-05-28";
+const homepageDateModified = siteConfig.homepageLastModified;
 const homepageKeywords = [
   "Jearon Wong",
   "Protocol Architect for the Agent Era",
@@ -213,237 +158,186 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   ogImagePath="/social/jearonwong-og.png"
   ogImageAlt={`${siteSemanticBaseline.identityAnchor}: AI Agent Lifecycle and accountable delivery.`}
 >
-  <!-- 1. Problem + Concept + Author Anchor (Hero) -->
-  <div class="zone-a registry-grid hero-wrapper" style="border-bottom: 1px solid var(--border-registry);">
-    <SiteHeader />
-    
-    <section class="shell hero-section">
-      <div class="split-layout">
-        <div class="hero-content">
-          <div class="hero-eyebrow registry-annotation">
-            <span class="registry-key">{homepageContent.hero.eyebrow.key}</span>
-            <span class="hero-eyebrow-separator">/</span>
-            <span class="registry-value">{homepageContent.hero.eyebrow.value}</span>
-          </div>
-          <h1 class="hero-nameplate">{homepageContent.hero.title}</h1>
-          <p class="hero-subclaim">{homepageContent.hero.subclaim}</p>
-          <p class="hero-body">{homepageContent.hero.body}</p>
-          <div class="hero-author-anchor">
-            <span class="hero-author-name">{homepageContent.hero.authorAnchor}</span>
-            <span class="hero-role-line">{homepageContent.hero.role}</span>
-          </div>
-          
-          <div class="hero-ctas">
-            <a href={homepageActions.thesis.href} class="button button-primary">{homepageContent.hero.primaryCtaLabel}</a>
-            <a href={homepageActions.projects.href} class="button button-outline" style="border: 1px solid var(--border-registry); background: rgba(255,255,255,0.05);">{homepageContent.hero.secondaryCtaLabel}</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <PortraitAnchor />
+  <!-- Research Ledger hero: the thesis stays visible before the records. -->
+  <header class="ledger-banner homepage-ledger-banner">
+    <div class="ledger-hero">
+      <div class="homepage-hero__heading">
+        <span class="prototype-label">PERSONAL RESEARCH LEDGER</span>
+        <h1>{homepageContent.hero.authorAnchor}</h1>
+        <p class="homepage-hero__role">{homepageContent.hero.role}</p>
+      </div>
+      <div class="homepage-hero__portrait">
+        <PortraitAnchor />
+      </div>
+      <div class="homepage-hero__support">
+        <p class="ledger-hero__lead">{siteSemanticBaseline.fieldDefinitionStatement}</p>
+        <p class="homepage-hero__thesis">{siteSemanticBaseline.problemStatement}</p>
+        <p class="ledger-hero__support">{siteSemanticBaseline.mplpProtocolRelation}</p>
+        <div class="prototype-button-row homepage-hero-actions">
+          <a class="prototype-button prototype-button--solid" href={homepageActions.thesis.href}>{homepageActions.thesis.label}</a>
+          <a class="prototype-button prototype-button--ghost" href="/about/">About Jearon Wong</a>
         </div>
       </div>
-    </section>
-  </div>
-
-  <!-- 2. Research Series -->
-  <section class="zone-b research-series-band" aria-labelledby="research-series-title">
-    <div class="shell">
-      <div class="research-series-panel registry-chassis">
-        <div class="research-series-header">
-          <div class="registry-annotation research-series-label">
-            <span class="registry-key">RESEARCH SERIES</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE INDUSTRY SERIES</span>
-          </div>
-          <h2 id="research-series-title">Whitepaper series.</h2>
-          <p class="research-series-thesis">
-            The first three public research editions establish the compliance, auditability, and insurability foundation for agentic lifecycle evidence. MPLP v2.0 object-model consolidation is the next protocol phase; the enterprise implementation white paper and practitioner guides are held until that object model is ready.
-          </p>
-        </div>
-        <ol class="research-series-stack" aria-label="Ordered whitepaper series">
-          {researchSeriesItems.map((item) => (
-            <li class:list={["research-series-item", item.primary && "research-series-item--foundation"]}>
-              <article class="research-series-card">
-                <div class="research-series-marker" aria-label={`Series item ${item.sequence}`}>
-                  <span class="research-series-number">{item.sequence}</span>
-                  <span class="research-series-role">{item.role}</span>
-                </div>
-                <div class="research-series-copy">
-                  <div class="registry-annotation research-series-card-label">
-                    <span class="registry-key">{item.role.toUpperCase()}</span>: <span class="registry-value">{item.scope.toUpperCase()}</span>
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div class="research-series-meta" aria-label={`${item.title} artifact metadata`}>
-                    {item.metadata.map((value) => (
-                      <span>{value}</span>
-                    ))}
-                  </div>
-                  <div class="research-series-actions">
-                    <a href={item.href} class="button button-primary">{item.pdfHref ? "Read paper" : "View editorial status"}</a>
-                    {item.pdfHref ? (
-                      <a href={item.pdfHref} class="button button-outline">Download PDF</a>
-                    ) : (
-                      <span class="button button-outline button-disabled" aria-disabled="true">PDF temporarily unavailable</span>
-                    )}
-                  </div>
-                </div>
-              </article>
-            </li>
-          ))}
-        </ol>
-        <div class="research-series-footer">
-          <a href="/evidence/" class="section-link">View Evidence Registry</a>
-          <a href="/concepts/agentic-lifecycle-governance/" class="section-link">Explore Concept Core</a>
-        </div>
-      </div>
+      <aside class="ledger-hero__rail" aria-label="Ledger orientation">
+        <p>The author defines the field. The ledger records the arguments, protocol path, and proof that follow it.</p>
+        <dl>
+          <dt>Author</dt><dd>{siteConfig.author.name}</dd>
+          <dt>Field</dt><dd>AI Agent Lifecycle</dd>
+          <dt>Category</dt><dd>Agentic Delivery</dd>
+          <dt>Protocol</dt><dd>MPLP</dd>
+          <dt>Proof surfaces</dt><dd>{proofProjects.length} active paths</dd>
+        </dl>
+      </aside>
     </div>
-  </section>
+  </header>
 
-  <!-- 3. Stack Architecture -->
-  <div class="zone-b page-body page-body--stack">
-    <CoreArchitectureMap />
-  </div>
+  <div class="prototype-shell ledger-body homepage-ledger-body">
+    <nav class="ledger-rail" aria-label="Ledger sections">
+      <a href="#thesis">01 / Thesis</a>
+      <a href="#current-signal">02 / Current signal</a>
+      <a href="#protocol-path">03 / Protocol path</a>
+      <a href="#proof-path">04 / Proof path</a>
+      <a href="#research">05 / Selected research</a>
+      <a href="#start-here">06 / Start here</a>
+    </nav>
 
-  <!-- 4. Core Thesis -->
-  <section class="zone-a registry-grid core-thesis-band">
-    <div class="shell core-thesis-layout">
-      <div class="core-thesis-copy">
-        <div class="registry-annotation core-thesis-eyebrow">
-          <span class="registry-key">{homepageContent.coreThesis.eyebrow}</span>
+    <div class="ledger-main">
+      <section class="ledger-section" id="thesis">
+        <div class="ledger-section__heading">
+          <h2>The thesis</h2>
+          <span class="ledger-section__count">Field definition</span>
         </div>
-        <h2>{homepageContent.coreThesis.title}</h2>
-        <p><strong>Most agent systems optimize execution:</strong> {homepageContent.coreThesis.execution.replace("Most agent systems optimize execution: ", "")}</p>
-        <p><strong>My work starts from delivery:</strong> {homepageContent.coreThesis.delivery.replace("My work starts from delivery: ", "")}</p>
-      </div>
-
-      <div class="thesis-compare registry-chassis" aria-label="Task execution versus Agentic Delivery">
-        <div class="compare-track">
-          <span class="compare-label">{homepageContent.coreThesis.taskAgentLabel}</span>
-          <div class="compare-flow">
-            {homepageContent.coreThesis.taskAgentFlow.map((step, index) => (
-              <>
-                <span class="compare-step">{step}</span>
-                {index < homepageContent.coreThesis.taskAgentFlow.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
-              </>
-            ))}
-          </div>
-        </div>
-
-        <div class="compare-track compare-track--delivery">
-          <span class="compare-label">{homepageContent.coreThesis.agenticDeliveryLabel}</span>
-          <div class="compare-flow compare-flow--delivery">
-            {agenticDeliveryFlowRows.map((row, rowIndex) => (
-              <div class:list={["compare-flow-row", rowIndex > 0 && "compare-flow-row--continuation"]}>
-                {row.map((step, index) => (
-                  <>
-                    <span class="compare-step">{step}</span>
-                    {index < row.length - 1 && <span class="compare-arrow" aria-hidden="true">-&gt;</span>}
-                  </>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="zone-b page-body">
-    <!-- 5. AI Agent Lifecycle Category Bridge -->
-    <section class="shell section-rhythm lifecycle-category-bridge">
-      <div class="registry-chassis lifecycle-bridge-panel">
-        <div class="registry-annotation" style="margin-bottom: 0.85rem;">
-          <span class="registry-key">CATEGORY_ENTRY</span>: <span class="registry-value">AI AGENT LIFECYCLE</span>
-        </div>
-        <div class="lifecycle-bridge-grid">
+        <article class="ledger-feature">
           <div>
-            <h2>Start from AI Agent Lifecycle.</h2>
-            <p class="section-desc">{aiAgentLifecycleColumn.relationToAgenticDelivery}</p>
+            <h3><a href={homepageActions.thesis.href}>AI Agent Lifecycle</a></h3>
+            <p>{siteSemanticBaseline.fieldDefinitionStatement}</p>
+            <p class="ledger-feature__support">{siteSemanticBaseline.agenticDeliveryDefinition}</p>
           </div>
-          <div class="lifecycle-bridge-copy">
-            <p>{aiAgentLifecycleColumn.categoryBridge}</p>
-            <div class="lifecycle-bridge-links">
-              <a href={homepageActions.lifecycle.href} class="section-link">{homepageActions.lifecycle.label}</a>
-              <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
-              <a href={homepageActions.proof.href} class="section-link">{homepageActions.proof.label}</a>
-            </div>
+          <div class="ledger-feature__meta">
+            <div class="ledger-meta-row"><span>Problem</span><span>{siteSemanticBaseline.problemStatement}</span></div>
+            <div class="ledger-meta-row"><span>Protocol</span><span>MPLP / {siteSemanticBaseline.projectRoles.mplp}</span></div>
+            <div class="ledger-meta-row"><span>Proof</span><span>{siteSemanticBaseline.projectRoles.cognitiveOS} · {siteSemanticBaseline.projectRoles.soloCrew} · {siteSemanticBaseline.projectRoles.validationLab}</span></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Protocol Path and Proof Path -->
-    <section id="proof" class="shell section-rhythm">
-      <div class="section-header">
-        <h2>Protocol Path and Proof Path</h2>
-        <p class="section-desc">{siteSemanticBaseline.referencePathDefinition}</p>
-        <a href={homepageActions.proof.href} class="section-link">{homepageActions.proof.label}</a>
-      </div>
-      <div class="card-grid">
-        {projects.map(project => (
-          <ProjectProofCard
-            {...project}
-            href={`/projects/${project.slug}/`}
-            compact
-          />
-        ))}
-      </div>
-    </section>
-
-    <!-- 7. Reading Path -->
-    {readingPathEntries.length > 0 && (
-      <section class="shell section-rhythm" style="padding-top: 2rem;">
-      <div class="section-header">
-        <h2>Reading Path</h2>
-        <p class="section-desc">The essays develop the public argument after the Lifecycle mainline is clear.</p>
-        <a href={homepageActions.essays.href} class="section-link">{homepageActions.essays.label}</a>
-      </div>
-        <div class="reading-path-list">
-          {readingPathEntries.map((entry) => (
-            <article class="reading-path-card">
-              <span class="reading-path-index">{String(entry.index + 1).padStart(2, "0")}</span>
-              <div class="reading-path-content">
-                <h3><a href={`/essays/${entry.essay.slug}/`}>{entry.essay.data.title}</a></h3>
-                <p>{entry.note}</p>
-                <a href={`/essays/${entry.essay.slug}/`} class="section-link">Read essay</a>
-              </div>
-            </article>
-          ))}
-        </div>
+        </article>
       </section>
-    )}
 
-    <!-- 8. Writing Tracks -->
-    <section class="shell section-rhythm" style="padding-top: 2rem;">
-      <div class="section-header">
-        <h2>Writing tracks.</h2>
-        <p class="section-desc">Supporting lines of inquiry across protocols, governance, runtime, delivery, and product.</p>
-      </div>
-      <div class="tracks-grid">
-        {writingTracks.map(track => (
-          <div class="track-item">
-            <h4 class="track-name">{track.name}</h4>
-            <p class="track-desc">{track.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+      <ReadingFlowDiagram
+        variant="projects"
+        title="The public argument follows one path."
+        description={siteSemanticBaseline.referencePathDefinition}
+      />
 
-    <!-- 9. Contact / Signal -->
-    <section class="shell section-rhythm quiet-close" style="padding-top: 2rem;">
-      <div class="close-content">
-        <h2>Get in touch.</h2>
-        <p class="section-desc">For industry dialogue, advisory, collaboration, or media.</p>
-        <div class="close-actions">
-          <a href={`mailto:${siteConfig.author.email}`} class="button button-primary" style="background: #111; color: #fff;">{siteConfig.author.email}</a>
-          <div class="close-social">
-            {socialLinks.map(link => (
-              <a href={link.href} target="_blank" rel="noopener noreferrer" class="social-pill">{link.platform}</a>
-            ))}
-          </div>
+      <section class="ledger-section" id="current-signal">
+        <div class="ledger-section__heading">
+          <h2>Current signal</h2>
+          <span class="ledger-section__count">Latest published record</span>
         </div>
-      </div>
-    </section>
+        {latestEssay && (
+          <article class="ledger-feature">
+            <div>
+              <h3><a href={`/essays/${latestEssay.id}/`}>{latestEssay.data.title}</a></h3>
+              <p>{latestEssay.data.description}</p>
+            </div>
+            <div class="ledger-feature__meta">
+              <div class="ledger-meta-row"><span>Class</span><span>{latestEssay.data.publicationClass}</span></div>
+              <div class="ledger-meta-row"><span>Track</span><span>{latestEssay.data.editorialTrack ?? latestEssay.data.track ?? latestEssay.data.cluster}</span></div>
+              <div class="ledger-meta-row"><span>Date</span><span>{latestEssay.data.publishDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" })}</span></div>
+            </div>
+          </article>
+        )}
+      </section>
 
+      <section class="ledger-section" id="protocol-path">
+        <div class="ledger-section__heading">
+          <h2>Protocol path</h2>
+          <span class="ledger-section__count">Open, vendor-neutral protocol</span>
+        </div>
+        {protocolProject && (
+          <article class="ledger-feature">
+            <div>
+              <h3><a href={`/projects/${protocolProject.slug}/`}>{protocolProject.name}</a></h3>
+              <p>{siteSemanticBaseline.mplpFormalDefinition}</p>
+              <p class="ledger-feature__support">{siteSemanticBaseline.mplpProtocolRelation}</p>
+            </div>
+            <div class="ledger-feature__meta">
+              <div class="ledger-meta-row"><span>Role</span><span>{siteSemanticBaseline.projectRoles.mplp}</span></div>
+              <div class="ledger-meta-row"><span>Scope</span><span>Cross-model, cross-runtime lifecycle semantics</span></div>
+              <div class="ledger-meta-row"><span>Boundary</span><span>Protocol foundation, not a complete runtime or certification</span></div>
+            </div>
+          </article>
+        )}
+      </section>
+
+      <section class="ledger-section" id="proof-path">
+        <div class="ledger-section__heading">
+          <h2>Proof path</h2>
+          <span class="ledger-section__count">{proofProjects.length} role-separated records</span>
+        </div>
+        <p class="ledger-section__intro">{homepageContent.proofPath.description}</p>
+        {proofProjects.map((project, index) => (
+          <article class="ledger-record">
+            <span class="ledger-record__index">{String(index + 1).padStart(2, "0")}</span>
+            <div class="ledger-record__title">
+              <a href={`/projects/${project.slug}/`}>{project.name}</a>
+              <span class="ledger-record__role">{project.proofRole}</span>
+            </div>
+            <div class="ledger-record__description">{project.summary} {project.deliveryState}.</div>
+            <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+          </article>
+        ))}
+      </section>
+
+      <section class="ledger-section" id="research">
+        <div class="ledger-section__heading">
+          <h2>Selected research</h2>
+          <span class="ledger-section__count">{whitepaperPublications.length} public editions</span>
+        </div>
+        {research && (
+          <article class="ledger-feature">
+            <div>
+              <h3><a href={research.canonicalPath}>{research.title}</a></h3>
+              <p>{research.oneLinePositioning}</p>
+              <p class="ledger-feature__support">{research.citationUse}</p>
+            </div>
+            <div class="ledger-feature__meta">
+              <div class="ledger-meta-row"><span>Edition</span><span>{research.versionLabel}</span></div>
+              <div class="ledger-meta-row"><span>Role</span><span>{research.artifactRole}</span></div>
+              <div class="ledger-meta-row"><span>Route</span><span>Research ledger</span></div>
+            </div>
+          </article>
+        )}
+      </section>
+
+      <section class="ledger-section" id="start-here">
+        <div class="ledger-section__heading">
+          <h2>Start here</h2>
+          <span class="ledger-section__count">3 routes + 1 sequence</span>
+        </div>
+        {homepageContent.readerRoutes.slice(0, 3).map((route) => (
+          <article class="ledger-record">
+            <span class="ledger-record__kind">{route.eyebrow}</span>
+            <div class="ledger-record__title"><a href={route.href}>{route.title}</a></div>
+            <div class="ledger-record__description">{route.body}</div>
+            <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+          </article>
+        ))}
+        {lifecycleReadingPath.length > 0 && (
+          <article class="ledger-record ledger-reading-path">
+            <span class="ledger-record__kind">Sequence</span>
+            <div class="ledger-reading-path__links">
+              {lifecycleReadingPath.map((essay, index) => (
+                <span class="ledger-reading-path__item">
+                  {index > 0 && <span aria-hidden="true"> / </span>}
+                  <a href={`/essays/${essay.id}/`}>{essay.data.title}</a>
+                </span>
+              ))}
+            </div>
+            <div class="ledger-record__description">Define The AI Agent Lifecycle</div>
+            <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+          </article>
+        )}
+      </section>
+    </div>
   </div>
 </BaseLayout>
 
@@ -452,10 +346,10 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .hero-wrapper {
     position: relative;
     overflow: hidden;
-    min-height: 100svh;
+    min-height: auto;
   }
   .hero-section {
-    min-height: 100svh;
+    min-height: min(88svh, 820px);
     display: flex;
     align-items: center;
     padding-top: clamp(6.75rem, 7.2vw, 7.85rem);
@@ -470,7 +364,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     align-items: flex-start;
     gap: 0.42rem;
     margin-bottom: clamp(1.2rem, 1.8vw, 1.6rem);
-    color: var(--accent-signal);
+    color: var(--text-registry-muted);
     font-size: 0.75rem;
     line-height: 1.55;
     letter-spacing: 0.075em;
@@ -482,18 +376,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     overflow-wrap: break-word;
   }
   .hero-eyebrow-separator {
-    color: rgba(148, 163, 184, 0.62);
-  }
-  .hero-nameplate {
-    font-size: clamp(4.2rem, 6.7vw, 6.15rem);
-    font-weight: 820;
-    letter-spacing: -0.045em;
-    line-height: 0.91;
-    margin: 0 0 clamp(1.3rem, 2vw, 1.8rem);
-    color: var(--text-registry-primary);
-    max-width: 10.8ch;
-    text-wrap: balance;
-    overflow-wrap: normal;
+    color: var(--color-meta-dark);
   }
   .hero-subclaim {
     margin: 0 0 1.45rem;
@@ -501,13 +384,13 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     color: rgba(241, 245, 249, 0.9);
     font-size: clamp(1.35rem, 1.9vw, 1.74rem);
     font-weight: 640;
-    letter-spacing: -0.018em;
+    letter-spacing: 0;
     line-height: 1.18;
   }
   .hero-body {
     max-width: 42ch;
     margin: 0 0 1.8rem;
-    color: rgba(148, 163, 184, 0.84);
+    color: var(--color-meta-dark);
     font-size: clamp(1rem, 1.16vw, 1.08rem);
     line-height: 1.64;
     font-weight: 400;
@@ -523,7 +406,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .hero-author-name {
     font-weight: 740;
     color: var(--text-registry-primary);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     font-size: 1.08rem;
   }
   .hero-role-line {
@@ -531,7 +414,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-size: 0.74rem;
     text-transform: uppercase;
     letter-spacing: 0.065em;
-    color: rgba(148, 163, 184, 0.78);
+    color: var(--color-meta-dark);
     font-weight: 600;
     line-height: 1.45;
     max-width: 44ch;
@@ -540,6 +423,162 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+  }
+
+  /* -- Reader routes -- */
+  .reader-routes-band {
+    padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(3.5rem, 6vw, 6rem);
+    border-bottom: 1px solid var(--current-line);
+  }
+  .reader-roles-band {
+    padding: clamp(2.6rem, 5vw, 4.4rem) 0;
+    border-bottom: 1px solid var(--current-line);
+  }
+  .reader-roles-band h2 {
+    max-width: 20ch;
+    margin: 0.8rem 0 1.6rem;
+    font-size: clamp(1.7rem, 3vw, 2.45rem);
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
+  }
+  .reader-role-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--current-line);
+    border: 1px solid var(--current-line);
+  }
+  .reader-role-card {
+    display: grid;
+    gap: 0.7rem;
+    min-height: 10rem;
+    padding: 1rem;
+    background: var(--current-surface);
+    color: inherit;
+    text-decoration: none;
+  }
+  .reader-role-card:hover {
+    background: var(--color-action-soft);
+  }
+  .reader-role-card span,
+  .reader-role-card em {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-meta);
+  }
+  .reader-role-card strong {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--current-text);
+  }
+  .reader-role-card em {
+    align-self: end;
+    color: var(--current-muted);
+  }
+
+  .reader-routes-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.55fr);
+    gap: clamp(2rem, 7vw, 7rem);
+    align-items: end;
+    margin-bottom: 2.25rem;
+  }
+
+  .reader-routes-header h2 {
+    max-width: 17ch;
+    margin: 0.8rem 0 0;
+    color: var(--current-text);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
+  }
+
+  .reader-routes-header p {
+    max-width: 42ch;
+    margin: 0;
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .reader-route-list {
+    border-top: 1px solid var(--current-line);
+  }
+
+  .reader-route-row {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(10rem, 0.38fr);
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--current-line);
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s ease, padding-inline 0.2s ease;
+  }
+
+  .reader-route-row:hover {
+    padding-inline: 0.8rem;
+    background: var(--color-action-soft);
+  }
+
+  .reader-route-index,
+  .reader-route-eyebrow,
+  .reader-route-action {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .reader-route-index {
+    color: var(--color-meta);
+  }
+
+  .reader-route-copy {
+    display: grid;
+    gap: 0.28rem;
+    min-width: 0;
+  }
+
+  .reader-route-eyebrow {
+    color: var(--color-meta);
+  }
+
+  .reader-route-copy strong {
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .reader-route-copy > span:last-child {
+    max-width: 62ch;
+    color: var(--current-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .reader-route-action {
+    justify-self: end;
+    color: var(--color-action);
+    text-align: right;
+  }
+
+  .reader-route-action span {
+    display: inline-block;
+    margin-left: 0.35rem;
+    transition: transform 0.2s ease;
+  }
+
+  .reader-route-row:hover .reader-route-action span {
+    transform: translateX(3px);
   }
 
   /* -- Research Series -- */
@@ -560,7 +599,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     padding: var(--registry-panel-padding);
     background: #ffffff;
     border: 1px solid rgba(17, 17, 17, 0.1);
-    border-left: 4px solid var(--accent-proof);
+    border-left: 4px solid var(--color-rule);
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
   }
 
@@ -573,8 +612,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     margin: 0;
     color: #111111;
     font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 0.98;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .research-series-thesis {
@@ -622,7 +662,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
 
   .research-series-item--foundation .research-series-card {
     background: #fbfdff;
-    border-left: 4px solid var(--accent-proof);
+    border-left: 4px solid var(--color-rule);
   }
 
   .research-series-marker {
@@ -647,8 +687,8 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   }
 
   .research-series-item--foundation .research-series-number {
-    background: var(--accent-proof);
-    color: #06222a;
+    background: #111418;
+    color: #ffffff;
   }
 
   .research-series-role {
@@ -674,15 +714,16 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   }
 
   .research-series-card-label {
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
 
   .research-series-card h3 {
     margin: 0;
     color: #111111;
     font-size: clamp(1.35rem, 2.2vw, 2rem);
-    line-height: 1.08;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .research-series-card p {
@@ -715,6 +756,18 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     gap: 0.75rem;
   }
 
+  .research-series-count {
+    align-self: center;
+    margin-right: auto;
+    color: #525252;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
   .research-series-actions .button {
     text-align: center;
     text-decoration: none;
@@ -739,8 +792,8 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   }
 
   .research-series-actions .button-outline:hover {
-    border-color: var(--accent-signal);
-    color: var(--accent-signal);
+    border-color: var(--color-action);
+    color: var(--color-action);
   }
 
   .research-series-actions .button-disabled,
@@ -754,8 +807,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   /* ── Sections ── */
   .section-header h2 {
     font-size: clamp(1.8rem, 3.2vw, 2.35rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
     font-weight: 800;
     margin-bottom: 0.6rem;
   }
@@ -774,11 +828,11 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
   .section-link:hover {
-    color: var(--current-text);
+    color: var(--color-action);
   }
   .section-header {
     margin-bottom: 3.5rem;
@@ -791,7 +845,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
 
   .lifecycle-bridge-panel {
     padding: var(--registry-panel-padding);
-    border-left: 2px solid var(--accent-proof);
+    border-left: 2px solid var(--color-rule);
   }
 
   .lifecycle-bridge-grid {
@@ -804,8 +858,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   .lifecycle-bridge-grid h2 {
     margin: 0 0 0.75rem;
     font-size: clamp(1.6rem, 3vw, 2.25rem);
-    line-height: 1.08;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -843,8 +898,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
 
   .core-thesis-copy h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
     margin: 0 0 1.35rem;
     font-weight: 800;
   }
@@ -891,11 +947,11 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
 
   .compare-track--delivery .compare-label {
-    color: var(--accent-proof);
+    color: var(--color-meta);
   }
 
   .compare-flow {
@@ -964,7 +1020,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     gap: 1.25rem;
     background: var(--current-surface);
     border: 1px solid var(--current-border);
-    border-left: 4px solid var(--accent-signal);
+    border-left: 4px solid var(--color-rule);
     border-radius: var(--radius-module);
     padding: var(--registry-card-padding);
   }
@@ -974,15 +1030,16 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
 
   .reading-path-content h3 {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.02em;
-    line-height: 1.18;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    line-height: var(--type-card-title-line-height);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .reading-path-content h3 a {
@@ -991,7 +1048,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
   }
 
   .reading-path-content h3 a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .reading-path-content p {
@@ -1017,7 +1074,7 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     margin-bottom: 0.5rem;
   }
   .track-desc {
@@ -1035,6 +1092,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .close-actions {
     margin-top: 1.5rem;
@@ -1064,8 +1124,8 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     transition: border-color 0.2s ease, color 0.2s ease;
   }
   .social-pill:hover {
-    border-color: var(--accent-signal);
-    color: var(--accent-signal);
+    border-color: var(--color-action);
+    color: var(--color-action);
   }
 
   /* ── Layout ── */
@@ -1085,6 +1145,9 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
 
   /* ── Responsive ── */
   @media (max-width: 1024px) {
+    .reader-role-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     .split-layout {
       gap: 2.75rem;
       grid-template-columns: 1fr;
@@ -1128,9 +1191,32 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     .research-series-role {
       font-size: 0.65rem;
     }
+
+    .reader-routes-header {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .reader-routes-header h2 {
+      max-width: 20ch;
+    }
+
+    .reader-route-row {
+      grid-template-columns: 2.5rem minmax(0, 1fr);
+      gap: 0.85rem;
+    }
+
+    .reader-route-action {
+      grid-column: 2;
+      justify-self: start;
+      text-align: left;
+    }
   }
 
   @media (max-width: 768px) {
+    .reader-role-grid {
+      grid-template-columns: 1fr;
+    }
     .hero-section {
       padding-top: 6rem;
       padding-bottom: 4rem;
@@ -1139,12 +1225,6 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
       gap: 0.34rem;
       margin-bottom: 1rem;
       font-size: 0.68rem;
-    }
-    .hero-nameplate {
-      font-size: clamp(3rem, 13vw, 4rem);
-      line-height: 0.95;
-      max-width: 12ch;
-      letter-spacing: -0.04em;
     }
     .hero-subclaim {
       font-size: clamp(1.08rem, 5vw, 1.24rem);
@@ -1267,6 +1347,232 @@ const homepageBreadcrumbJsonLd = createBreadcrumbJsonLd(homepageUrl, [
     .reading-path-card {
       grid-template-columns: 1fr;
       gap: 0.8rem;
+    }
+  }
+
+  .homepage-ledger-banner .ledger-hero h1 {
+    width: 100%;
+    max-width: none;
+    margin: 0.85rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.65rem, 6.3vw, 5.5rem);
+    font-weight: 650;
+    letter-spacing: var(--type-hero-display-letter-spacing);
+    line-height: var(--type-hero-display-line-height);
+    word-spacing: var(--type-hero-display-word-spacing);
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .homepage-ledger-banner .ledger-hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.6fr) minmax(13.5rem, 0.55fr);
+    grid-template-areas:
+      "heading portrait rail"
+      "support portrait rail";
+    column-gap: clamp(1.5rem, 3.4vw, 3rem);
+    row-gap: 1.5rem;
+    align-items: start;
+    padding-top: clamp(2.75rem, 4.5vw, 3.75rem);
+    padding-bottom: clamp(3rem, 5vw, 4rem);
+  }
+
+  .homepage-hero__heading { grid-area: heading; min-width: 0; }
+  .homepage-hero__support { grid-area: support; min-width: 0; }
+  .homepage-hero__portrait {
+    grid-area: portrait;
+    align-self: center;
+    justify-self: end;
+    width: min(100%, 18.5rem);
+    min-width: 0;
+  }
+  .homepage-ledger-banner .ledger-hero__rail {
+    grid-area: rail;
+    align-self: center;
+  }
+
+  .homepage-hero__role {
+    margin: 0.7rem 0 0;
+    color: #c2cad3;
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+    font-weight: 520;
+    line-height: 1.25;
+  }
+
+  .homepage-hero__thesis {
+    margin: 1.2rem 0 0;
+    color: #f4f7fb;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .ledger-hero__support {
+    max-width: 44ch;
+    margin: 1.35rem 0 0;
+    color: #8f9baa;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .homepage-hero-actions {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1080px) {
+    .homepage-ledger-banner .ledger-hero {
+      display: grid;
+      grid-template-areas:
+        "heading portrait"
+        "support portrait"
+        "rail rail";
+      grid-template-columns: minmax(0, 1fr) minmax(11rem, 0.4fr);
+      column-gap: clamp(1.5rem, 4vw, 2.5rem);
+      padding-bottom: 2.75rem;
+    }
+
+    .homepage-hero__support {
+      margin-top: 0;
+    }
+
+    .homepage-hero__portrait {
+      width: min(100%, 14.5rem);
+    }
+
+    .homepage-ledger-banner .ledger-hero h1 {
+      font-size: clamp(3.25rem, 9vw, 4.9rem);
+      font-weight: 650;
+      line-height: var(--type-hero-display-line-height-mobile);
+      letter-spacing: var(--type-hero-display-letter-spacing);
+      word-spacing: var(--type-hero-display-word-spacing);
+    }
+
+    .homepage-ledger-banner .ledger-hero__rail {
+      margin-top: 0;
+      border-top: 1px solid rgba(244, 247, 251, 0.26);
+      border-left: 0;
+      padding-top: 1.25rem;
+      padding-left: 0;
+    }
+
+    .homepage-ledger-banner .ledger-hero__rail p {
+      max-width: 46ch;
+      margin-bottom: 0;
+    }
+
+    .homepage-ledger-banner .ledger-hero__rail dl {
+      display: none;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .homepage-ledger-banner .ledger-hero {
+      display: grid;
+      grid-template-areas:
+        "heading portrait"
+        "support support";
+      grid-template-columns: minmax(0, 1fr) minmax(6.5rem, 8rem);
+      column-gap: 1rem;
+      row-gap: 1.5rem;
+      padding-top: 2.75rem;
+      padding-bottom: 3.25rem;
+    }
+
+    .homepage-ledger-banner .ledger-hero h1 {
+      font-size: clamp(2.8rem, 13vw, 4.1rem);
+      line-height: var(--type-hero-display-line-height-mobile);
+      letter-spacing: var(--type-hero-display-letter-spacing-mobile);
+      word-spacing: var(--type-hero-display-word-spacing-mobile);
+    }
+
+    .homepage-hero__portrait {
+      align-self: start;
+      width: min(100%, 8rem);
+    }
+
+    .homepage-hero__role {
+      font-size: clamp(1.02rem, 4.8vw, 1.25rem);
+    }
+
+    .homepage-hero-actions {
+      margin-top: 1.5rem;
+    }
+
+    .homepage-ledger-banner .ledger-hero__rail {
+      display: none;
+    }
+  }
+
+  .homepage-ledger-banner .prototype-button--solid {
+    background: #f4f7fb;
+    border-color: #f4f7fb;
+    color: #15191e;
+  }
+
+  .homepage-ledger-banner .prototype-button--solid:hover {
+    background: var(--color-action);
+    border-color: var(--color-action);
+    color: #ffffff;
+  }
+
+  .ledger-section__intro {
+    max-width: 62ch;
+    margin: -0.2rem 0 1.6rem;
+    color: #5c6671;
+    line-height: 1.65;
+  }
+
+  .ledger-feature__support {
+    max-width: 52ch;
+    margin: 1rem 0 0;
+    color: #66717c;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .ledger-record__role {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--prototype-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ledger-reading-path__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.35rem;
+    font-family: var(--font-display);
+    font-size: 0.96rem;
+    font-weight: 540;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+
+  .ledger-reading-path__item a {
+    text-decoration: none;
+  }
+
+  .ledger-reading-path__item a:hover {
+    color: var(--color-action);
+  }
+
+  @media (max-width: 680px) {
+    .homepage-hero-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: min(100%, 22rem);
+    }
+
+    .homepage-hero-actions .prototype-button {
+      width: 100%;
     }
   }
 </style>

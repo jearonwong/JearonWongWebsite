@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../components/ReadingFlowDiagram.astro";
 import { siteConfig } from "../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
@@ -322,11 +324,24 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     title="Evidence Registry / Citation Kit"
     objectType="PAGE_ROLE"
     objectValue="EVIDENCE SHELF"
-    lead="A single citation and evidence shelf for Jearon Wong, MPLP, the Global AI Compliance White Paper 2026, the Agentic AI Auditability & Assurance White Paper 2026, the Agentic AI Insurability & Risk Transfer White Paper 2026, Agentic Lifecycle Governance, and related source surfaces."
+    lead="A citation and evidence shelf for the site's canonical pages, research artifacts, and project records."
   />
 
   <div class="zone-b page-body page-body--standard">
-    <main class="shell evidence-shell">
+    <div class="shell evidence-shell">
+      <ReadingGuide
+        role="EVIDENCE_AND_CITATION"
+        answer="This registry shows which public pages, research artifacts, manifests, checksums, and project records can be cited, and what each surface does not prove."
+        startHref="#registry-title"
+        startLabel="Start with the evidence registry"
+        nextLinks={[{ href: "/research/", label: "Open research editions" }, { href: "/projects/", label: "Follow the project proof path" }]}
+        sections={["Evidence shelf", "Citation format", "Canonical URLs", "Technical artifacts", "Boundary"]}
+      />
+      <ReadingFlowDiagram
+        variant="evidence"
+        title="Evidence is a chain, not a single screenshot."
+        description="Use the source, definition, project record, and review packet together so the claim remains bounded and inspectable."
+      />
       <section class="registry-chassis evidence-intro" aria-labelledby="evidence-intro-title">
         <div>
           <div class="registry-annotation">
@@ -478,7 +493,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           search ranking improvement, indexing, or answer-engine citation.
         </p>
       </section>
-    </main>
+    </div>
   </div>
 </BaseLayout>
 
@@ -495,7 +510,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     padding: var(--registry-panel-padding);
   }
   .evidence-intro {
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
   .evidence-intro h2,
   .section-heading h2,
@@ -503,8 +518,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: clamp(1.45rem, 2.6vw, 2.15rem);
-    line-height: 1.12;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
   .evidence-intro p,
   .two-column-section p,
@@ -527,7 +543,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .quick-links a {
     padding: 0.55rem 0.68rem;
     border: 1px solid var(--current-border);
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-weight: 800;
@@ -564,7 +580,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .evidence-row span,
   .evidence-row em,
   .status-ledger span {
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.68rem;
     font-style: normal;
@@ -591,7 +607,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
   .bibtex-block {
     margin-top: 1rem;
@@ -628,7 +646,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     line-height: 1.5;
   }
   .boundary-panel {
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
   @media (max-width: 900px) {
     .evidence-intro,

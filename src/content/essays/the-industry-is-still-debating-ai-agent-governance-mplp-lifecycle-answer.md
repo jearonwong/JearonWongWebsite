@@ -7,7 +7,7 @@ titleLines:
   - "the Lifecycle Answer."
 subtitle: "The market keeps renaming the same failure — fragmentation, audit gaps, weak HITL accountability, runtime drift, uninsurable agentic risk. MPLP defines the missing layer behind all of them: AI Agent Lifecycle Governance."
 description: "The industry keeps debating AI agent governance as fragmentation, audit gaps, runtime drift, weak HITL accountability, and uninsurable agentic risk. MPLP defines the missing lifecycle governance layer behind them."
-shareTitle: "The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer."
+shareTitle: "MPLP Defines the Lifecycle Answer"
 shareSubtitle: "AI Agent Governance is a lifecycle protocol problem."
 shareDescription: "The market keeps renaming the same failure. MPLP defines the missing lifecycle governance layer behind fragmentation, audit gaps, runtime drift, weak HITL accountability, and uninsurable agentic risk."
 shareImage: /social/mplp-lifecycle-answer-og.png
@@ -20,6 +20,27 @@ images:
     width: 1200
     height: 760
 publishDate: 2026-05-24
+updatedAt: 2026-05-24
+track: lifecycle
+contentRole: essay
+publicationClass: thought
+editorialTrack: lifecycle
+canonicalRoute: /essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/
+canonicalParent: /essays/
+primaryAudience: Governance
+secondaryAudiences:
+  - Architect
+distinctReaderQuestion: "What single lifecycle layer connects fragmented agent governance debates to accountable outcomes?"
+sourceRefs:
+  - Authored lifecycle position essay
+  - MPLP protocol framing
+indexability: index
+nextSteps:
+  - /lifecycle/
+  - /projects/mplp/
+maxClickDepth: 3
+readingTimeMinutes: 12
+evidenceLevel: LIFECYCLE POSITION
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -32,16 +53,11 @@ series: "Define The AI Agent Lifecycle"
 seriesOrder: 6
 status: published
 tags:
-  - AI Agent Governance
+  - Lifecycle Governance
   - MPLP
-  - AI Agent Lifecycle Governance
-  - Agentic AI
   - Auditability
-  - Runtime Governance
   - Agentic Delivery
   - Multi-Agent Systems
-  - Enterprise AI
-  - AI Assurance
 relatedIdeas:
   - ai-agent-lifecycle
   - lifecycle-governance

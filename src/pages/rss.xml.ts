@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { siteConfig } from "../data/site";
 
 export const GET: APIRoute = async (context) => {
-  const essays = (await getCollection("essays")).sort(
+  const essays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
     (left, right) =>
       Number(right.data.flagship) - Number(left.data.flagship) ||
       right.data.publishDate.getTime() - left.data.publishDate.getTime()
@@ -18,7 +18,7 @@ export const GET: APIRoute = async (context) => {
       title: essay.data.title,
       description: essay.data.description,
       pubDate: essay.data.publishDate,
-      link: `/essays/${essay.slug}/`
+      link: `/essays/${essay.id}/`
     }))
   });
 };

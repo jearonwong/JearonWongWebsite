@@ -7,12 +7,12 @@ titleLines:
   - "Conformance"
 subtitle: "Why AI Agent / MAS compliance cannot stop at model governance, and why RCCS-T, MRO, RCCS-M, and ALCS became necessary."
 description: "Jearon Wong explains how studying EU AI Act, GDPR, NIST AI RMF, ISO/IEC 42001, Singapore governance work, W3C provenance standards, and Colorado AI Act led from traditional compliance coverage to Missing Regulatory Objects, RCCS-M, and ALCS."
-shareTitle: "From Model Governance to Agentic Lifecycle Conformance"
+shareTitle: "Agentic Lifecycle Conformance"
 shareSubtitle: "AI Agent / MAS compliance cannot stop at model governance."
 shareDescription: "Jearon Wong explains why agentic work needs lifecycle responsibility compliance, Missing Regulatory Objects, RCCS-M, and ALCS."
-shareImage: /social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png
-shareImageAlt: "LinkedIn Newsletter cover for From Model Governance to Agentic Lifecycle Conformance"
-ogImage: /social/from-model-governance-to-agentic-lifecycle-conformance-newsletter-cover.png
+shareImage: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
+shareImageAlt: "From Model Governance to Agentic Lifecycle Conformance — Jearon Wong"
+ogImage: /social/from-model-governance-to-agentic-lifecycle-conformance-og.png
 images:
   - url: /figures/from-model-governance-to-agentic-lifecycle-conformance.svg
     alt: "Diagram showing the path from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, and systems mapped in the Global AI Compliance White Paper 2026"
@@ -27,6 +27,27 @@ images:
     width: 390
     height: 1840
 publishDate: 2026-05-13
+updatedAt: 2026-05-13
+track: lifecycle
+contentRole: essay
+publicationClass: research-commentary
+editorialTrack: lifecycle
+canonicalRoute: /essays/from-model-governance-to-agentic-lifecycle-conformance/
+canonicalParent: /essays/
+primaryAudience: Governance
+secondaryAudiences:
+  - Architect
+distinctReaderQuestion: "Why is model governance insufficient for agentic lifecycle responsibility and conformance?"
+sourceRefs:
+  - Global AI Compliance White Paper 2026
+  - Authored research commentary
+indexability: index
+nextSteps:
+  - /research/
+  - /concepts/missing-regulatory-objects/
+maxClickDepth: 3
+readingTimeMinutes: 16
+evidenceLevel: RESEARCH ADAPTATION
 cluster: ai-agent-lifecycle
 projectProof: MPLP
 featured: true
@@ -38,17 +59,11 @@ series: "Define The AI Agent Lifecycle"
 seriesOrder: 4
 status: published
 tags:
-  - AI Governance
-  - AI Agents
-  - Agentic AI
-  - AI Compliance
+  - Lifecycle Governance
   - Multi-Agent Systems
-  - MRO
-  - RCCS-T
-  - RCCS-M
-  - ALCS
+  - Evidence Chain
+  - Accepted Outcome
   - MPLP
-  - Global AI Compliance White Paper
 relatedIdeas:
   - ai-agent-lifecycle
   - lifecycle-governance

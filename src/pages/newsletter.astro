@@ -5,11 +5,11 @@ import RegistryPageHero from "../components/RegistryPageHero.astro";
 import { aiAgentLifecycleColumn, contentRouteRoles, newsletterPromise, pageRegistry, siteConfig } from "../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../data/schema";
 
-const essays = await getCollection("essays");
+const essays = await getCollection("essays", ({ data }) => data.status === "published");
 const lifecycleEssays = essays
   .filter((essay) => essay.data.series === aiAgentLifecycleColumn.seriesTitle)
   .sort((left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime());
-const latestEssay = lifecycleEssays[0] ?? essays.find((essay) => essay.slug === aiAgentLifecycleColumn.firstPublishedEssay.slug);
+const latestEssay = lifecycleEssays[0] ?? essays.find((essay) => essay.id === aiAgentLifecycleColumn.firstPublishedEssay.slug);
 const latestEssayCover = latestEssay?.data.images?.[0]?.url ?? aiAgentLifecycleColumn.coverImage;
 const latestEssayCoverAlt = latestEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 const canonicalPath = "/newsletter/";
@@ -88,7 +88,7 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
             The essay sequence now connects the AI Agent Lifecycle origin argument to model governance, Missing Regulatory Objects, RCCS-M, ALCS, and lifecycle responsibility compliance.
           </p>
           {latestEssay && (
-            <a href={`/essays/${latestEssay.slug}/`} class="current-article-link">
+            <a href={`/essays/${latestEssay.id}/`} class="current-article-link">
               <img
                 src={latestEssayCover}
                 alt={latestEssayCoverAlt}
@@ -103,7 +103,7 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
               </span>
             </a>
           )}
-          <a href={aiAgentLifecycleColumn.href} class="column-link">Open the AI Agent Lifecycle field definition</a>
+          <a href={aiAgentLifecycleColumn.href} class="column-link" data-analytics-event="newsletter_open">Open the AI Agent Lifecycle field definition</a>
           <a href="/concepts/" class="column-link column-link--secondary">Open the Concepts map behind the series</a>
         </div>
         <form
@@ -111,6 +111,9 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
           method="post"
           target="popupwindow"
           class="subscribe-form"
+          data-subscribe-form
+          aria-describedby="subscription-status subscription-boundary"
+          data-analytics-event="newsletter_submit"
         >
           <label for="bd-email" class="visually-hidden">Email address</label>
           <input
@@ -119,14 +122,25 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
             id="bd-email"
             placeholder="your@email.com"
             required
+            autocomplete="email"
+            inputmode="email"
+            spellcheck="false"
             class="subscribe-input"
           />
           <button type="submit" class="subscribe-btn">Subscribe</button>
         </form>
+        <p id="subscription-status" class="subscription-status" role="status" aria-live="polite" data-state="ready">
+          Ready to submit. Buttondown will open its confirmation step.
+        </p>
         <div class="registry-annotation" style="margin-top: 1.5rem;">
           <span class="registry-key">FREQUENCY</span>: <span class="registry-value">WHEN THERE IS SUBSTANCE TO REPORT</span>
         </div>
-        <p class="subscribe-boundary">{newsletterPromise.boundary}</p>
+        <p id="subscription-boundary" class="subscribe-boundary">{newsletterPromise.boundary}</p>
+        <div class="subscription-ledger">
+          <div><span>SUBMISSION_FLOW</span><strong>Buttondown receives the form and handles confirmation.</strong></div>
+          <div><span>READER_CONTROL</span><strong>Every issue includes an unsubscribe link managed by Buttondown.</strong></div>
+          <div><span>SUCCESS_SIGNAL</span><strong>This page does not claim delivery until the external form confirms it.</strong></div>
+        </div>
       </article>
 
       <!-- RSS alternative -->
@@ -192,7 +206,7 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     width: 0.36rem;
     height: 0.36rem;
     content: "";
-    background: var(--accent-signal);
+    background: var(--color-meta);
     border-radius: 999px;
   }
   .column-note {
@@ -235,13 +249,13 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     line-height: 1.45;
   }
   .current-article-link:hover strong {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
   .column-link {
     display: inline-flex;
     margin-top: 0.85rem;
     margin-right: 1rem;
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -273,7 +287,7 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     transition: border-color 0.2s ease;
   }
   .subscribe-input:focus {
-    border-color: var(--accent-signal);
+    border-color: var(--color-action);
   }
   .subscribe-input::placeholder {
     color: #94a3b8;
@@ -285,9 +299,9 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    background: var(--accent-signal);
+    background: var(--color-action);
     color: white;
-    border: 1px solid var(--accent-signal);
+    border: 1px solid var(--color-action);
     border-radius: 0 2px 2px 0;
     cursor: pointer;
     transition: opacity 0.2s ease;
@@ -299,6 +313,43 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     margin: 0.8rem 0 0;
     font-size: 0.84rem;
     line-height: 1.55;
+    color: var(--current-muted);
+  }
+  .subscription-status {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-meta);
+  }
+  .subscription-status[data-state="submitted"] {
+    color: var(--color-action);
+  }
+  .subscription-status[data-state="error"] {
+    color: var(--color-danger, #a33a32);
+  }
+  .subscription-ledger {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--current-line);
+  }
+  .subscription-ledger > div {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .subscription-ledger span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: var(--color-meta);
+  }
+  .subscription-ledger strong {
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.5;
     color: var(--current-muted);
   }
   .rss-block {
@@ -325,8 +376,8 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     transition: border-color 0.2s ease;
   }
   .rss-link:hover {
-    border-color: var(--accent-signal);
-    color: var(--accent-signal);
+    border-color: var(--color-action);
+    color: var(--color-action);
   }
   @media (max-width: 640px) {
     .subscribe-block, .rss-block {
@@ -348,3 +399,34 @@ const newsletterBreadcrumbJsonLd = createBreadcrumbJsonLd(newsletterUrl, [
     }
   }
 </style>
+
+<script>
+  const subscribeForms = document.querySelectorAll<HTMLFormElement>("[data-subscribe-form]");
+
+  subscribeForms.forEach((form) => {
+    const status = form.parentElement?.querySelector<HTMLElement>("[data-state]");
+    const emailInput = form.querySelector<HTMLInputElement>("input[type='email']");
+    if (!status || !emailInput) return;
+
+    const updateStatus = (message: string, state: "ready" | "submitted" | "error") => {
+      status.textContent = message;
+      status.dataset.state = state;
+    };
+
+    form.addEventListener("invalid", () => {
+      emailInput.setAttribute("aria-invalid", "true");
+      updateStatus("Unable to submit: enter a valid email address.", "error");
+    }, true);
+
+    emailInput.addEventListener("input", () => {
+      emailInput.removeAttribute("aria-invalid");
+      if (status.dataset.state === "error") {
+        updateStatus("Ready to submit. Buttondown will open its confirmation step.", "ready");
+      }
+    });
+
+    form.addEventListener("submit", () => {
+      updateStatus("Submitted to Buttondown. Complete the confirmation step in the opened window.", "submitted");
+    });
+  });
+</script>

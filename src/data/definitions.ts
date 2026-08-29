@@ -201,7 +201,7 @@ export const definitions: DefinitionEntry[] = [
     related: [
       { label: "Agentic AI Auditability", href: "#agentic-ai-auditability" },
       { label: "Audit Evidence Chain", href: "#audit-evidence-chain" },
-      { label: "Lifecycle Responsibility Objects", href: "#lifecycle-responsibility-objects" }
+      { label: "Lifecycle Responsibility Objects", href: "/concepts/lifecycle-responsibility-objects/" }
     ]
   },
   {
@@ -301,7 +301,7 @@ export const definitions: DefinitionEntry[] = [
     related: [
       { label: "Agentic Risk Object", href: "#agentic-risk-object" },
       { label: "Agentic AI Insurability", href: "#agentic-ai-insurability" },
-      { label: "Authority Boundary", href: "#authority-boundary" }
+      { label: "Authority Boundary", href: "/concepts/authority-boundary/" }
     ]
   },
   {

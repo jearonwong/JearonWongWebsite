@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
 import GAICSourceTrace from "../../components/GAICSourceTrace.astro";
 import { getGaicP1SourceTraceByRoute } from "../../data/gaicP1SourceTrace";
 import {
   getGovernanceMappingBySlug,
-  governanceIndexPath,
-  governanceMappings
+  governanceMappings,
+  isIndexableGovernanceRoute
 } from "../../data/governanceMappings";
 import { siteConfig } from "../../data/site";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../data/schema";
@@ -24,15 +25,19 @@ if (!mapping) {
   throw new Error(`Unknown governance mapping: ${slug}`);
 }
 
-const canonicalPath = `${governanceIndexPath}${mapping.slug}/`;
+const canonicalPath = mapping.canonicalRoute;
 const pageUrl = absoluteUrl(canonicalPath);
 const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
 const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
 const relatedLinks = [
-  { href: governanceIndexPath, label: "Governance index" },
+  { href: mapping.canonicalParent, label: "Governance index" },
   ...mapping.relatedLinks
-];
+]
+  .filter((link, index, links) => links.findIndex((candidate) => candidate.href === link.href) === index)
+  .filter((link) => isIndexableGovernanceRoute(link.href))
+  .slice(0, 5);
+const hasOfficialSource = mapping.sourceRefs.some((source) => source.authority !== "authored-research");
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -52,7 +57,7 @@ const pageJsonLd = {
   breadcrumb: {
     "@id": `${pageUrl}#breadcrumb`
   },
-  citation: absoluteUrl(whitePaperHub)
+  citation: mapping.sourceRefs.map((source) => absoluteUrl(source.url))
 };
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -67,9 +72,13 @@ const articleJsonLd = {
   publisher: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  datePublished: "2026-05-13",
-  dateModified: "2026-05-13",
+  ...(mapping.publishedAt ? { datePublished: mapping.publishedAt } : {}),
+  ...(mapping.updatedAt ? { dateModified: mapping.updatedAt } : {}),
   keywords: mapping.keywords,
+  audience: mapping.primaryAudience.map((audience) => ({
+    "@type": "Audience",
+    audienceType: audience
+  })),
   about: mapping.keywords.map((keyword) => ({
     "@type": "Thing",
     name: keyword
@@ -89,29 +98,24 @@ const articleJsonLd = {
   isPartOf: {
     "@type": "CollectionPage",
     name: "AI Agent Governance and Lifecycle Responsibility",
-    url: absoluteUrl(governanceIndexPath)
+    url: absoluteUrl(mapping.canonicalParent)
   },
   isBasedOn: [
-    {
-      "@type": "TechArticle",
-      name: "Global AI Compliance White Paper 2026",
-      url: absoluteUrl(whitePaperHub)
-    },
+    ...mapping.sourceRefs.map((source) => ({
+      "@type": source.authority === "authored-research" ? "TechArticle" : "CreativeWork",
+      name: source.label,
+      url: absoluteUrl(source.url)
+    })),
     {
       "@type": "WebPage",
       name: "Agentic Lifecycle Governance",
       url: absoluteUrl(conceptCorePath)
-    },
-    ...mapping.sources.map((source) => ({
-      "@type": "CreativeWork",
-      name: source.label,
-      url: source.url
-    }))
+    }
   ]
 };
 const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   { name: "Home", path: "/" },
-  { name: "Governance", path: governanceIndexPath },
+  { name: "Governance", path: mapping.canonicalParent },
   { name: mapping.title, path: canonicalPath }
 ]);
 ---
@@ -120,6 +124,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   title={mapping.seoTitle}
   description={mapping.seoDescription}
   canonicalPath={canonicalPath}
+  noindex={mapping.indexability === "noindex"}
   jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
   ogType="article"
   keywords={mapping.keywords}
@@ -133,7 +138,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     lead={mapping.seoDescription}
   >
     <div class="governance-hero-links">
-      <a href={governanceIndexPath} class="registry-annotation governance-hero-link">
+      <a href={mapping.canonicalParent} class="registry-annotation governance-hero-link">
         <span class="registry-key">BACK_TO</span>: <span class="registry-value">GOVERNANCE</span>
       </a>
       <a href={conceptCorePath} class="registry-annotation governance-hero-link">
@@ -147,6 +152,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <article class="shell governance-detail-shell">
+      <ReadingGuide
+        role="GOVERNANCE_MAPPING"
+        answer={mapping.summary}
+        startHref="#mapping-summary"
+        startLabel="Read the mapping summary"
+        nextLinks={[{ href: mapping.canonicalParent, label: "Return to governance" }, { href: conceptCorePath, label: "Open lifecycle governance" }]}
+        sections={["Summary and boundary", "Lifecycle lens", "Key questions", "Related objects", "Source boundary"]}
+      />
       <aside class="registry-chassis governance-sidebar" aria-label={`${mapping.title} reference`}>
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">MAPPING_RECORD</span>
@@ -164,12 +177,18 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
         </div>
         <div class="sidebar-group">
           <p class="sidebar-label">Source boundary</p>
-          <p class="sidebar-copy">{mapping.sources.length > 0 ? "Official sources consulted where current regulatory or standards context is referenced." : "GAIC author-analytical source only; no external legal or standards claims added."}</p>
+          <p class="sidebar-copy">{hasOfficialSource ? "Official sources consulted where current regulatory or standards context is referenced." : "GAIC author-analytical source only; no external legal or standards claims added."}</p>
+        </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Primary audience</p>
+          <div class="keyword-list">
+            {mapping.primaryAudience.map((audience) => <span>{audience}</span>)}
+          </div>
         </div>
       </aside>
 
       <div class="governance-article">
-        <section class="registry-chassis definition-panel">
+        <section class="registry-chassis definition-panel" id="mapping-summary">
           <div class="registry-annotation" style="margin-bottom: 1rem;">
             <span class="registry-key">SUMMARY</span>
           </div>
@@ -213,9 +232,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
         <section class="governance-section">
           <h2>Source boundary</h2>
           <p>{mapping.sourceBoundary}</p>
-          {mapping.sources.length > 0 && (
+          {mapping.sourceRefs.length > 0 && (
             <div class="source-list">
-              {mapping.sources.map((source) => (
+              {mapping.sourceRefs.map((source) => (
                 <a href={source.url}>
                   <strong>{source.label}</strong>
                   <span>{source.scope}</span>
@@ -256,7 +275,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .governance-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .governance-detail-shell {
@@ -267,7 +286,18 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     max-width: 1080px;
   }
 
+  /* ReadingGuide is a child component with its own Astro scope. Keep it on
+     a full-width row instead of allowing grid auto-placement to narrow it to
+     the reference rail. */
+  .governance-detail-shell > :global(.reading-guide) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
   .governance-sidebar {
+    grid-column: 1;
+    grid-row: 2;
     position: sticky;
     top: 7rem;
     padding: var(--registry-card-padding);
@@ -278,8 +308,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     color: var(--current-text);
     font-size: 1.25rem;
     font-weight: 760;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .sidebar-group {
@@ -324,13 +355,15 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .governance-article {
+    grid-column: 2;
+    grid-row: 2;
     display: grid;
     gap: 2.5rem;
   }
 
   .definition-panel {
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .definition-panel p,
@@ -355,8 +388,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0 0 0.9rem;
     color: var(--current-text);
     font-size: 1.45rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .question-list {
@@ -380,7 +414,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     gap: 0.25rem;
     padding: 0.85rem;
     border: 1px solid var(--current-line);
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
 
@@ -415,7 +449,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     display: inline-flex;
     padding: 0.35rem 0.5rem;
     border: 1px solid var(--current-line);
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 800;
@@ -426,13 +460,20 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .term-link-grid a:hover,
   .source-list a:hover strong {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   @media (max-width: 900px) {
     .governance-detail-shell {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    .governance-detail-shell > :global(.reading-guide),
+    .governance-sidebar,
+    .governance-article {
+      grid-column: auto;
+      grid-row: auto;
     }
 
     .governance-sidebar {

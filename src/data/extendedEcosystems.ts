@@ -2,7 +2,13 @@ export type ExtendedEcosystemSource = {
   label: string;
   url: string;
   note: string;
+  authority: ExtendedEcosystemSourceAuthority;
 };
+
+export type ExtendedEcosystemSourceAuthority =
+  | "official-primary-source"
+  | "official-guidance"
+  | "authored-research";
 
 export type ExtendedEcosystemRecord = {
   slug: string;
@@ -20,7 +26,52 @@ export type ExtendedEcosystemRecord = {
   protocolPath: string;
   boundary: string;
   officialSources: ExtendedEcosystemSource[];
+  sourceRefs: ExtendedEcosystemSource[];
+  contentRole: "ecosystem-mapping";
+  canonicalRoute: string;
+  canonicalParent: string;
+  primaryAudience: string[];
+  publishedAt?: string;
+  updatedAt?: string;
+  indexability: "index" | "noindex";
+  distinctiveQuestion: string;
+  scenario: string;
+  mappingFocus: string;
+  decisionArtifact: string;
+  inputs: string[];
+  outputs: string[];
+  failureModes: string[];
+  evidenceRequired: string[];
+  relatedLinks: Array<{ href: string; label: string }>;
   keywords: string[];
+};
+
+type ExtendedEcosystemSourceDraft = Omit<ExtendedEcosystemSource, "authority"> & {
+  authority?: ExtendedEcosystemSourceAuthority;
+};
+
+type ExtendedEcosystemRecordDraft = Omit<
+  ExtendedEcosystemRecord,
+  | "officialSources"
+  | "sourceRefs"
+  | "contentRole"
+  | "canonicalRoute"
+  | "canonicalParent"
+  | "primaryAudience"
+  | "publishedAt"
+  | "updatedAt"
+  | "indexability"
+  | "distinctiveQuestion"
+  | "scenario"
+  | "mappingFocus"
+  | "decisionArtifact"
+  | "inputs"
+  | "outputs"
+  | "failureModes"
+  | "evidenceRequired"
+  | "relatedLinks"
+> & {
+  officialSources: ExtendedEcosystemSourceDraft[];
 };
 
 export type ExistingEcosystemRoute = {
@@ -58,6 +109,43 @@ const commonRccsAlcs =
 
 const commonProtocolPath =
   "MPLP is one protocol path for expressing lifecycle responsibility semantics around agentic work. It is not required, exclusive, certified, regulator-approved, vendor-affiliated, or already an industry standard.";
+
+const ecosystemRelatedLinksBySlug: Record<string, Array<{ href: string; label: string }>> = {
+  "claude-code": [
+    { href: "/playbooks/ai-coding-agent-auditability/", label: "AI Coding Agent Auditability" },
+    { href: "/projects/cognitive-os/", label: "Cognitive OS runtime path" },
+    { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" }
+  ],
+  qwen: [
+    { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
+    { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited Systems" },
+    { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" }
+  ],
+  "cursor-ai-coding-agents": [
+    { href: "/playbooks/ai-coding-agent-auditability/", label: "AI Coding Agent Auditability" },
+    { href: "/projects/mplp/", label: "MPLP protocol path" },
+    { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+  ],
+  autogen: [
+    { href: "/governance/multi-agent-system-governance/", label: "Multi-Agent System Governance" },
+    { href: "/playbooks/human-role-to-mas-responsibility/", label: "Human Role to MAS Responsibility" }
+  ],
+  mcp: [
+    { href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/", label: "MCP and A2A lifecycle essay" },
+    { href: "/concepts/lifecycle-governed-agent-workflow/", label: "Lifecycle-Governed Agent Workflow" },
+    { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited Systems" }
+  ],
+  a2a: [
+    { href: "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/", label: "MCP and A2A lifecycle essay" },
+    { href: "/governance/multi-agent-system-governance/", label: "Multi-Agent System Governance" },
+    { href: "/concepts/lifecycle-role-decomposition/", label: "Lifecycle Role Decomposition" }
+  ],
+  "semantic-kernel": [
+    { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering" },
+    { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
+    { href: "/research/global-ai-compliance-white-paper-2026/systems/", label: "GAIC-cited Systems" }
+  ]
+};
 
 export const existingExtendedEcosystemRoutes: ExistingEcosystemRoute[] = [
   {
@@ -102,7 +190,7 @@ export const existingExtendedEcosystemRoutes: ExistingEcosystemRoute[] = [
   }
 ];
 
-export const extendedEcosystems: ExtendedEcosystemRecord[] = [
+const extendedEcosystemRecords: ExtendedEcosystemRecordDraft[] = [
   {
     slug: "claude-code",
     name: "Claude Code",
@@ -456,6 +544,238 @@ export const extendedEcosystems: ExtendedEcosystemRecord[] = [
     ]
   }
 ];
+
+type ExtendedEcosystemSpecifics = {
+  primaryAudience: string[];
+  distinctiveQuestion: string;
+  scenario: string;
+  mappingFocus: string;
+  decisionArtifact: string;
+  inputs: string[];
+  outputs: string[];
+  failureModes: string[];
+  evidenceRequired: string[];
+  indexability?: "index" | "noindex";
+  publishedAt?: string;
+  updatedAt?: string;
+};
+
+/**
+ * These fields are deliberately kept per ecosystem. The shared lifecycle
+ * vocabulary is the lens; the scenario, decision artifact, and evidence
+ * boundary are what make each mapping useful as its own reading destination.
+ */
+const ecosystemSpecifics: Record<string, ExtendedEcosystemSpecifics> = {
+  "claude-code": {
+    primaryAudience: ["Engineering leads using coding agents", "Repository owners and reviewers"],
+    distinctiveQuestion:
+      "Can a repository owner reconstruct which coding-agent action crossed the task boundary and who accepted the resulting change?",
+    scenario:
+      "A coding session edits files, runs commands, and proposes a diff across a repository. Review must separate authorized actions from incidental changes before the work is accepted.",
+    mappingFocus:
+      "The useful unit here is the repository change, not the assistant conversation. A reviewer should be able to inspect the task scope, the command boundary, the files touched, and the checks that support acceptance. The mapping therefore treats an agent session as a governed change packet with a beginning, a bounded action set, and an explicit handoff. If a command changes state outside the diff, that side effect belongs in the evidence chain even when the final patch looks clean.",
+    decisionArtifact:
+      "Repository change packet: scoped task, command ledger, diff, verification result, reviewer decision, and rollback pointer.",
+    inputs: ["Repository scope and task intent", "Allowed command and tool boundary", "Diff and verification plan"],
+    outputs: ["Scoped change record", "Command and evidence ledger", "Acceptance or rollback decision"],
+    failureModes: [
+      "A clean diff hides unapproved command side effects",
+      "A chat transcript is mistaken for execution evidence",
+      "A reviewer accepts the artifact without recording responsibility"
+    ],
+    evidenceRequired: [
+      "Task and repository scope",
+      "Commands and tool actions",
+      "Diff, tests, and review decision",
+      "Rollback or remediation record"
+    ]
+  },
+  qwen: {
+    primaryAudience: ["Model platform owners", "Teams designing model substitution controls"],
+    distinctiveQuestion:
+      "When a Qwen model or endpoint changes, can the workflow preserve output provenance and the accepted outcome that followed?",
+    scenario:
+      "A model endpoint is substituted during an agent workflow. The team needs to distinguish the model response from the work product that a responsible role reviewed and accepted.",
+    mappingFocus:
+      "The mapping separates model identity from responsibility for the resulting work. A model response can be useful evidence, but it is not by itself an accepted outcome. The important comparison is between the approved intent before substitution and the reviewable output after substitution. Recording the endpoint, context, tool permissions, and acceptance decision makes a later replay possible without turning model choice into a product ranking.",
+    decisionArtifact:
+      "Model substitution record: model and endpoint identity, approved change scope, affected intent, output provenance, and acceptance decision.",
+    inputs: ["Model and endpoint identity", "Substitution reason and authority", "Prompt, tool, and output context"],
+    outputs: ["Substitution lineage", "Output provenance record", "Review, rollback, or remediation decision"],
+    failureModes: [
+      "A model identifier is stored without the task or authority context",
+      "Model output is treated as the accepted deliverable",
+      "A substitution cannot be replayed when the endpoint changes again"
+    ],
+    evidenceRequired: [
+      "Model and endpoint version reference",
+      "Substitution authorization",
+      "Input and output provenance",
+      "Accepted outcome and follow-up state"
+    ]
+  },
+  "cursor-ai-coding-agents": {
+    primaryAudience: ["Engineering leads using interactive or background agents", "Release and repository reviewers"],
+    distinctiveQuestion:
+      "Can a reviewer tie an interactive or background coding-agent run to one workspace boundary, one change set, and one accepted outcome?",
+    scenario:
+      "An agent works in an editor, CLI, or background workspace and returns a change later. The handoff must show where it ran, what it changed, and which checks made acceptance possible.",
+    mappingFocus:
+      "Interactive and background modes create different handoff conditions. The mapping treats workspace identity and branch state as first-class evidence because a delayed result can otherwise arrive detached from the repository that authorized it. Tests and build output establish verification, while a human or accountable role still records acceptance. This keeps an autonomous run from being confused with a release decision and leaves a recovery path when the handoff is rejected.",
+    decisionArtifact:
+      "Agent handoff record: workspace or branch boundary, task plan, change set, verification evidence, reviewer decision, and recovery path.",
+    inputs: ["Workspace, branch, or handoff boundary", "Task plan and change constraints", "Test, lint, and build expectations"],
+    outputs: ["Traceable handoff", "Evidence-linked change set", "Accepted, rejected, or rollback state"],
+    failureModes: [
+      "Background work arrives without a durable workspace boundary",
+      "A successful check is treated as human acceptance",
+      "Handoff loses the context needed to reproduce or reverse the change"
+    ],
+    evidenceRequired: [
+      "Workspace or branch identity",
+      "Plan and diff",
+      "Test, lint, and build outputs",
+      "Reviewer acceptance and recovery path"
+    ]
+  },
+  autogen: {
+    // Retain the route for existing references, but keep it out of the
+    // indexable registry while its framework-level scope overlaps the A2A
+    // interoperability mapping and the general multi-agent playbook.
+    indexability: "noindex",
+    primaryAudience: ["Multi-agent application architects", "Workflow and operations owners"],
+    distinctiveQuestion:
+      "When agents delegate and terminate work, which role owns the handoff, the evidence, and the accepted outcome?",
+    scenario:
+      "Several agents exchange messages and tools calls before one agent reports completion. The workflow needs a responsibility record that outlives the conversation and identifies who may accept or reopen the result.",
+    mappingFocus:
+      "The key boundary in a multi-agent application is delegation, not message volume. A conversation may show what agents said, yet still leave unclear who had authority to assign the work, who could terminate it, and which role could accept the artifact. This mapping follows the role graph and the termination reason through closure. It treats the final response as a handoff signal that requires an acceptance record, rather than as proof that responsibility has ended. The review should distinguish a planner assigning work, a worker invoking a tool, a critic returning a correction, and an orchestrator deciding that the run is finished. Those transitions are different evidence events even when they share one transcript. A useful closure record names the delegated scope, records whether termination was normal or exceptional, and preserves the route for a human owner to reopen the result. Reviewers can then compare planned delegation with actual message topology, identify an agent that acted outside its role, and decide whether an apparently complete conversation needs escalation. This is the specific gap the mapping addresses in framework-level multi-agent conversations: orchestration can coordinate a task, but it cannot silently become the accepting authority.",
+    decisionArtifact:
+      "Delegation closure record: role graph, delegated scope, message and tool evidence, termination reason, acceptance owner, and remediation state.",
+    inputs: ["Agent roles and delegation authority", "Task and termination conditions", "Inter-agent messages, artifacts, and tool evidence"],
+    outputs: ["Role-linked delegation trail", "Termination classification", "Accepted outcome or escalation record"],
+    failureModes: [
+      "The last speaking agent is assumed to own the result",
+      "Message history cannot distinguish delegation from authorization",
+      "Termination is recorded without an acceptance or remediation owner"
+    ],
+    evidenceRequired: [
+      "Role and delegation scope",
+      "Message and artifact lineage",
+      "Termination or escalation reason",
+      "Human or organizational acceptance record"
+    ]
+  },
+  mcp: {
+    primaryAudience: ["Tool and platform integrators", "Security and workflow owners"],
+    distinctiveQuestion:
+      "When MCP exposes a tool or resource, what separate record proves that its use was authorized for the work and led to an accepted outcome?",
+    scenario:
+      "An AI application invokes an external tool through MCP. Connectivity succeeds, but the workflow still needs to show authority, action scope, evidence, and the outcome a responsible person accepted.",
+    mappingFocus:
+      "MCP answers how an application reaches a tool or resource; it does not answer whether a particular action belongs to the approved work. The mapping keeps those questions separate. It asks for an authorization scope before invocation, records the side effect that actually occurred, and links that effect to an accepted outcome or remediation path. This distinction matters most when a read, write, or external mutation is hidden behind an apparently successful tool call.",
+    decisionArtifact:
+      "Tool-use responsibility record: tool or resource identity, authorization scope, invocation evidence, side-effect status, and accepted outcome.",
+    inputs: ["Tool or resource identity", "Authorized action scope", "Invocation context and side-effect expectations"],
+    outputs: ["Authorization-linked tool trace", "Side-effect and evidence record", "Acceptance or remediation decision"],
+    failureModes: [
+      "A successful connection is mistaken for permission to perform the action",
+      "Tool output is retained without the input authority boundary",
+      "A side effect cannot be linked to rollback or accepted outcome"
+    ],
+    evidenceRequired: [
+      "Tool and resource identity",
+      "Authorization and action scope",
+      "Invocation and side-effect evidence",
+      "Outcome acceptance or remediation closure"
+    ]
+  },
+  a2a: {
+    primaryAudience: ["Interoperability architects", "Owners of delegated agent workflows"],
+    distinctiveQuestion:
+      "When one agent hands work to another through A2A, can the receiving agent's result be accepted without losing the original responsibility boundary?",
+    scenario:
+      "Independent agents discover one another, exchange a task, and return an artifact. The handoff must preserve delegation authority, artifact lineage, review state, and the right to dispute or remediate.",
+    mappingFocus:
+      "Interoperability makes handoffs easier, but it can also make ownership ambiguous. The mapping follows the original delegating role across discovery, task exchange, artifact return, and acceptance. It does not treat an agent card, capability description, or successful response as authorization. The durable record is the cross-agent handoff: who delegated, what was in scope, what came back, and which role could accept, dispute, or reopen it. A reviewer should also preserve the protocol-level identity used for discovery, the task state transitions, and the artifact reference returned by the remote agent. Streaming updates, asynchronous completion, and retries can each change what a human thinks has been delivered. Recording those transitions lets the owner distinguish a capability advertisement from a performed action and a returned artifact from an accepted result. This is why the A2A mapping centers on handoff lineage rather than treating interoperability as a substitute for lifecycle responsibility.",
+    decisionArtifact:
+      "Cross-agent handoff record: delegating role, receiving role, task scope, artifact lineage, return condition, and acceptance or dispute state.",
+    inputs: ["Delegation authority and task scope", "Agent identity and capability context", "Artifacts, messages, and return conditions"],
+    outputs: ["Cross-agent responsibility chain", "Artifact and message lineage", "Acceptance, dispute, or remediation state"],
+    failureModes: [
+      "Discovery is treated as authorization to delegate consequential work",
+      "The returned artifact loses the original task and owner context",
+      "A receiving agent reports completion with no acceptance boundary"
+    ],
+    evidenceRequired: [
+      "Delegating and receiving agent identity",
+      "Task scope and authorization",
+      "Artifact and message lineage",
+      "Return, acceptance, or dispute record"
+    ]
+  },
+  "semantic-kernel": {
+    primaryAudience: ["Enterprise AI platform architects", "Developers composing plugins and agent processes"],
+    distinctiveQuestion:
+      "When plugins, functions, and agents are composed in one process, which execution boundary keeps authority and acceptance attached to the work?",
+    scenario:
+      "A process coordinates model calls, plugins, filters, and human input. The orchestration graph is useful only when each consequential function call can be traced to approved scope and a final acceptance decision.",
+    mappingFocus:
+      "An orchestration SDK can make a process legible without making it accountable. This mapping therefore follows the function and plugin calls that can change the work, then checks where filters, human input, and observability sit in relation to authority. The process record should explain not only that a step ran, but why it was allowed and how its result entered the accepted outcome. That gives enterprise reviewers a bounded execution view without claiming a framework certification.",
+    decisionArtifact:
+      "Process execution record: orchestration graph, plugin and function calls, filter or human checkpoints, evidence, and closure decision.",
+    inputs: ["Process and agent role definition", "Plugin and function authority scope", "Filter, observability, and human-review conditions"],
+    outputs: ["Function-level execution lineage", "Checkpoint and evidence record", "Accepted outcome or remediation closure"],
+    failureModes: [
+      "A plugin call is hidden inside an otherwise successful process",
+      "Observability records execution without proving authority",
+      "Human input is collected but not connected to acceptance or closure"
+    ],
+    evidenceRequired: [
+      "Process and role graph",
+      "Plugin and function invocation trace",
+      "Filter or human checkpoint evidence",
+      "Acceptance and remediation closure"
+    ]
+  }
+};
+
+const authoredLifecycleSource: ExtendedEcosystemSource = {
+  label: "Global AI Compliance White Paper 2026",
+  url: "/research/global-ai-compliance-white-paper-2026/",
+  note:
+    "Author research source for the lifecycle responsibility vocabulary used by this mapping. It is a public research edition, not a standard or certification.",
+  authority: "authored-research"
+};
+
+function normalizeSource(source: ExtendedEcosystemSourceDraft): ExtendedEcosystemSource {
+  return {
+    ...source,
+    authority: source.authority ?? "official-primary-source"
+  };
+}
+
+export const extendedEcosystems: ExtendedEcosystemRecord[] = extendedEcosystemRecords.map((record) => {
+  const specifics = ecosystemSpecifics[record.slug];
+  if (!specifics) {
+    throw new Error(`Missing extended ecosystem publication metadata: ${record.slug}`);
+  }
+
+  const officialSources = record.officialSources.map(normalizeSource);
+  const sourceRefs = [authoredLifecycleSource, ...officialSources];
+
+  return {
+    ...record,
+    ...specifics,
+    officialSources,
+    sourceRefs,
+    relatedLinks: ecosystemRelatedLinksBySlug[record.slug] ?? [],
+    contentRole: "ecosystem-mapping",
+    canonicalRoute: `${extendedEcosystemIndexPath}${record.slug}/`,
+    canonicalParent: extendedEcosystemIndexPath,
+    indexability: specifics.indexability ?? "index"
+  };
+});
 
 export const officialSourceStatusChecks = [
   { status: 200, url: "https://code.claude.com/docs/en/overview" },

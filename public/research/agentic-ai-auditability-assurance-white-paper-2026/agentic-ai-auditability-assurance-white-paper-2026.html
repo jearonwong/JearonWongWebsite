@@ -11,9 +11,28 @@
 <meta name="citation_author" content="Wong, Jearon">
 <meta name="citation_publication_date" content="2026/05">
 <meta name="citation_technical_report_number" content="AIAAWP-2026-v0.1">
+<meta name="citation_series" content="Agentic Lifecycle Governance Industry Series">
+<meta name="document_version" content="v0.1">
+<meta name="publication_status" content="public-research-edition">
 <meta name="citation_language" content="en">
 <meta name="keywords" content="Agentic AI Auditability, AI Agent Auditability, Audit Evidence Chain, Agentic Audit Object, AARM, MRO, Agentic Lifecycle Governance, Enterprise AI Governance">
 <link rel="canonical" href="https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agentic AI Auditability &amp; Assurance White Paper 2026">
+<meta property="og:description" content="A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance">
+<meta property="og:url" content="https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html">
+<meta property="og:site_name" content="Jearon Wong - Protocol Architect for the Agent Era">
+<meta property="og:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+<meta property="og:image:alt" content="Agentic AI Auditability &amp; Assurance White Paper 2026 - Jearon Wong">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jearonwong">
+<meta name="twitter:creator" content="@jearonwong">
+<meta name="twitter:title" content="Agentic AI Auditability &amp; Assurance White Paper 2026">
+<meta name="twitter:description" content="A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance">
+<meta name="twitter:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+<meta name="twitter:image:alt" content="Agentic AI Auditability &amp; Assurance White Paper 2026 - Jearon Wong">
 <title>Agentic AI Auditability &amp; Assurance White Paper 2026 - AIAAWP-2026-v0.1</title>
 <script type="application/ld+json">
 {
@@ -254,6 +273,10 @@ blockquote {
   max-width: 100%;
   border: 1px solid var(--grid);
   background: #fff;
+}
+.table-scroll[data-scroll-region="table"]:focus-visible {
+  outline: 2px solid var(--registry);
+  outline-offset: 3px;
 }
 .table-caption {
   padding: 0.55rem 0.65rem;
@@ -626,7 +649,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>For enterprises, this paper prepares the path to two practitioner guides. Guide 1 will translate auditability into technical architecture for CIO, CTO, platform, security, and engineering teams. Guide 2 will translate auditability into compliance operating-model design for CCO, governance, legal, risk, internal audit, and policy-to-evidence teams. This paper defines what audit-ready means; the later guides will address how to build and govern toward it.</p>
 <p>For audit and assurance firms, this framework can be used as a discussion and readiness structure. It can support evidence request framing, walkthrough scoping, object-model review, and internal method conversations. It does not replace professional methodology, professional judgment, engagement acceptance, independence rules, attestation criteria, assurance standards, or audit procedures. The paper is useful only if its boundary is kept visible.</p>
 <h3 id="executive-orientation-table">Executive Orientation Table</h3>
-<div class="table-block table-scroll"><div class="table-caption">Executive Orientation Table</div><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><div class="table-caption">Executive Orientation Table</div><table>
 <thead><tr><th>Paper element</th><th>What it means</th><th>Source / synthesis status</th><th>Boundary</th></tr></thead>
 <tbody>
 <tr><td>Agentic AI Auditability</td><td>Ability to reconstruct, test, and evidence agentic lifecycle work across authority, responsibility, tools, outcomes, exceptions, and remediation</td><td>author synthesis in this paper grounded by AUD-01, AUD-02, AI-01, AI-08, EVID-01, EVID-02, and GAIC-SOURCE</td><td>Not audit standard, legal proof, or assurance opinion</td></tr>
@@ -660,7 +683,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Validation Lab is also boundary-sensitive. GAIC describes Validation Lab as a non-certifying evidence adjudication example. This paper may use that boundary as an example of third-party evidence review without certification. It must not describe Validation Lab as a certification body, conformity assessment body, regulator, audit firm, assurance provider, legal authority, or proof of compliance.</p>
 <p>The safest reading of this paper is this: it provides a structured way to ask what evidence must exist before agentic AI work can be meaningfully reviewed. It does not determine whether that evidence is sufficient for a particular audit, assurance engagement, legal analysis, regulatory process, insurance underwriting decision, procurement decision, or board conclusion. Those determinations belong to qualified professionals operating under their own methods, scopes, independence requirements, criteria, and legal obligations.</p>
 <h3 id="scope-table">Scope Table</h3>
-<div class="table-block table-scroll"><div class="table-caption">Scope Table</div><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><div class="table-caption">Scope Table</div><table>
 <thead><tr><th>Area</th><th>This paper does</th><th>This paper does not do</th><th>Source / boundary grounding</th></tr></thead>
 <tbody>
 <tr><td>Auditability</td><td>Defines proposed lifecycle evidence objects and readiness questions</td><td>Issue audit opinions or audit procedures</td><td>AUD-01, AUD-02, AUD-03</td></tr>
@@ -771,7 +794,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The Agentic Audit Object therefore contains more than a log. It contains the work unit, the authority boundary, the human role, the agent role, the tool-action record, the evidence pointer, the accepted outcome state, the exception state, the remediation closure state, and the privacy/selective disclosure profile. Those fields may live in different systems. The model is not saying every enterprise must store them in one database. It says that the relationships must be reconstructable.</p>
 <p>This object shift is also where this paper becomes distinct from the Global AI Compliance White Paper 2026. The Global AI Compliance White Paper 2026 identifies the missing regulatory objects for agentic lifecycle governance. This paper asks how those objects become evidence. The same MRO can be read as a governance gap, an engineering object, or an audit evidence object. This paper focuses on the third reading.</p>
 <h3 id="agentic-audit-object-overview">Agentic Audit Object Overview</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead><tr><th>Object component</th><th>Review question</th><th>Evidence examples</th><th>Source / synthesis status</th><th>Boundary</th></tr></thead>
 <tbody>
 <tr><td>Lifecycle work unit</td><td>What work is under review?</td><td>Work unit ID, scope, task intent, lifecycle stage</td><td>author synthesis in this paper grounded by EVID-01 and GAIC-SOURCE</td><td>Not mandatory schema</td></tr>
@@ -2021,7 +2044,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Assurance teams must be especially careful. AARM&#x27;s &quot;Assurance-Ready&quot; level does not mean assurance has been issued or is guaranteed. It means that an evidence architecture may be mature enough to support qualified assurance planning or review, subject to the firm&#x27;s professional standards, criteria, engagement scope, independence, risk assessment, evidence evaluation, and reporting requirements.</p>
 <p>This paper should never be represented as a Big Four methodology. It should never be described as endorsed by Deloitte, PwC, EY, KPMG, ISACA, IIA, IAASB, PCAOB, AICPA, ISO, NIST, OECD, EU institutions, Singapore agencies, ICO, or any source organization. Sources provide context and terminology. They do not approve this framework.</p>
 <h3 id="professional-use-matrix">Professional Use Matrix</h3>
-<div class="table-block table-scroll"><div class="table-caption">Professional Use Matrix</div><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><div class="table-caption">Professional Use Matrix</div><table>
 <thead><tr><th>Use case</th><th>This framework can support</th><th>this paper cannot replace</th><th>Useful objects</th><th>Boundary</th></tr></thead>
 <tbody>
 <tr><td>Readiness conversation</td><td>Shared vocabulary for auditability gaps</td><td>Professional judgment or engagement acceptance</td><td>AARM, evidence chain, object model</td><td>No assurance conclusion</td></tr>
@@ -2057,7 +2080,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>For audit and assurance firms, the next step is method dialogue. This framework can support object-model discussions, readiness scoping, evidence request framing, and lifecycle walkthrough design. It cannot replace professional standards, engagement criteria, independence, evidence evaluation, or reporting.</p>
 <p>For the series, this paper completes the second layer of the 3+3 front half. The Global AI Compliance White Paper 2026 established the compliance object layer. This paper establishes the audit evidence object layer. Guide 1 will translate auditability into technical architecture. Guide 2 will translate auditability into compliance operating model. The later insurability white paper will later ask what evidence and governance structures are needed before insurable risk can be evaluated.</p>
 <p>The object chain is:</p>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead><tr><th>Series layer</th><th>Object layer</th><th>Question</th><th>Boundary</th></tr></thead>
 <tbody>
 <tr><td>Global AI Compliance White Paper 2026</td><td>Compliance Object</td><td>What lifecycle responsibility objects does agentic governance require?</td><td>Not legal compliance proof</td></tr>
@@ -3127,7 +3150,7 @@ th:last-child, td:last-child { border-right: 0; }
 
 <div class="layout-note">Table rendered as semantic row cards to preserve GAIC-style readability across HTML and PDF review surfaces.</div>
 <article class="semantic-row-card">
-<h4>BF-01</h4>
+<h3>BF-01</h3>
 <dl>
 <div><dt>Title</dt><dd>AI agents: Scaling faster than expected</dd></div>
 <div><dt>Organization</dt><dd>Deloitte</dd></div>
@@ -3522,7 +3545,7 @@ th:last-child, td:last-child { border-right: 0; }
 
 <div class="layout-note">Table rendered as semantic row cards to preserve GAIC-style readability across HTML and PDF review surfaces.</div>
 <article class="semantic-row-card">
-<h4>0 Executive Summary</h4>
+<h3>0 Executive Summary</h3>
 <dl>
 <div><dt>Source IDs used</dt><dd>BF-01, BF-02, BF-05, AUD-01, AI-01, EVID-02, GAIC-SOURCE</dd></div>
 <div><dt>Source role</dt><dd>Market context; audit evidence; governance; observability; GAIC source truth</dd></div>
@@ -3678,7 +3701,7 @@ th:last-child, td:last-child { border-right: 0; }
 </section>
 <section class="appendix" id="appendix-citation-map">
 <h2>Appendix Citation Map</h2>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead><tr><th>Appendix</th><th>Source IDs used</th><th>Source role</th><th>Citation risk</th><th>Review note</th></tr></thead>
 <tbody>
 <tr><td>A Evidence Request List</td><td>AUD-01, AUD-02, AUD-04, AUD-05, AUD-06, GAIC-SOURCE</td><td>Evidence/control vocabulary and MRO mapping</td><td>Formal audit-procedure implication</td><td>Keep request list as readiness architecture.</td></tr>

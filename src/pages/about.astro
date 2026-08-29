@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
 import { aboutSpecs, contentRouteRoles, pageRegistry, siteThesis, socialLinks, siteConfig } from "../data/site";
-import { absoluteUrl, createBreadcrumbJsonLd, siteEntityTerms } from "../data/schema";
+import { absoluteUrl, createBreadcrumbJsonLd, siteEntityTermsExtended } from "../data/schema";
 
 const canonicalPath = "/about/";
 const aboutUrl = absoluteUrl(canonicalPath);
@@ -58,7 +59,7 @@ const authoredAndDefined = [
   { label: "Deterministic Delivery", href: "/concepts/deterministic-delivery/", relation: "develops as engineering discipline" },
   { label: "Agentic Delivery", href: "/concepts/agentic-delivery/", relation: "names as delivery category" }
 ];
-const projectProofPaths = [
+const projectPaths = [
   { label: "MPLP", href: "/projects/mplp/", role: "protocol path" },
   { label: "Validation Lab", href: "/projects/validation-lab/", role: "non-certifying evidence adjudication surface" },
   { label: "Cognitive OS", href: "/projects/cognitive-os/", role: "runtime path" },
@@ -83,7 +84,7 @@ const profilePageJsonLd = {
   mainEntity: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  about: siteEntityTerms.map((term) => ({
+  about: siteEntityTermsExtended.map((term) => ({
     "@type": "Thing",
     name: term
   }))
@@ -117,7 +118,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
 ---
 
 <BaseLayout
-  title="About"
+  title={pageRegistry.about.title}
   description={aboutDescription}
   canonicalPath={canonicalPath}
   shareTitle="Jearon Wong — Protocol Architect for the Agent Era"
@@ -137,6 +138,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
 
   <div class="zone-b page-body page-body--standard">
     <section class="shell">
+      <ReadingGuide
+        role="IDENTITY_SHEET"
+        answer={pageRegistry.about.lead}
+        startHref="#known-for-title"
+        startLabel="Start with the author profile"
+        nextLinks={[{ href: "/lifecycle/", label: "Read the lifecycle field" }, { href: "/projects/", label: "Inspect the project paths" }]}
+        sections={["Known for", "Authored surfaces", "Protocol and proof paths", "Boundary"]}
+      />
       <div class="registry-chassis spec-sheet">
         <div class="spec-grid">
           {aboutSpecs.map((item) => (
@@ -173,7 +182,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
             <a href="/projects/mplp/">MPLP protocol path</a>
             <a href="/evidence/">Evidence Registry</a>
             <a href="/concepts/map/">Concepts Map</a>
-            <a href="/projects/">Projects proof path</a>
+            <a href="/projects/">Projects ledger: protocol and proof paths</a>
           </div>
         </div>
 
@@ -213,7 +222,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
           </div>
           <h2 id="projects-title">Protocol path and proof surfaces.</h2>
           <div class="relation-ledger">
-            {projectProofPaths.map((item) => (
+            {projectPaths.map((item) => (
               <a href={item.href} class="relation-row">
                 <span>{item.role}</span>
                 <strong>{item.label}</strong>
@@ -284,7 +293,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     font-family: var(--font-mono);
     font-size: 0.78rem;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-weight: 700;
     letter-spacing: 0.06em;
   }
@@ -310,7 +319,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     color: var(--current-muted);
   }
   .spec-narrative .prose a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
   .spec-narrative .prose a:hover {
@@ -323,7 +332,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     margin-top: 1.35rem;
   }
   .identity-routes a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.74rem;
     font-weight: 800;
@@ -345,6 +354,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     font-size: clamp(1.45rem, 2.6vw, 2.15rem);
     line-height: 1.12;
     letter-spacing: 0;
+    word-spacing: var(--type-section-title-word-spacing);
   }
   .entity-card-grid {
     display: grid;
@@ -371,7 +381,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
   .entity-card:hover,
   .relation-row:hover,
   .boundary-link-list a:hover {
-    border-color: var(--accent-signal);
+    border-color: var(--color-action);
   }
   .relation-ledger {
     display: grid;
@@ -388,7 +398,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     text-decoration: none;
   }
   .relation-row span {
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 800;
@@ -406,7 +416,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     gap: clamp(1.5rem, 4vw, 3rem);
     padding: var(--registry-panel-padding);
     border: 1px solid var(--current-border);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
   .entity-authority-section--boundary p {
     max-width: var(--content-measure);
@@ -414,6 +424,17 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     color: var(--current-muted);
     font-size: 1rem;
     line-height: 1.68;
+  }
+  /* Keep the boundary split and its link rail shrinkable at device widths. */
+  .entity-authority-section--boundary > *,
+  .boundary-link-list,
+  .boundary-link-list a {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .boundary-link-list a {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .boundary-link-list {
     display: grid;
@@ -423,7 +444,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
   .boundary-link-list a {
     padding: 0.72rem 0.85rem;
     border: 1px solid var(--current-border);
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -466,15 +487,22 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     margin-top: var(--space-8);
     padding-top: var(--space-8);
     border-top: 1px solid var(--current-line);
+    min-width: 0;
   }
   .verification-grid {
     display: grid;
     gap: 0;
+    min-width: 0;
+    max-width: 100%;
   }
   .verification-row {
     display: grid;
     grid-template-columns: 160px 1fr;
     gap: 2rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 1rem 1.25rem;
     border-bottom: 1px solid var(--current-line);
     text-decoration: none;
@@ -484,17 +512,21 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(aboutUrl, [
     border-top: 1px solid var(--current-line);
   }
   .verification-row:hover {
-    background: rgba(59, 130, 246, 0.03);
+    background: var(--color-action-soft);
   }
   .verification-key {
+    min-width: 0;
     font-family: var(--font-mono);
     font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
   .verification-value {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--current-muted);

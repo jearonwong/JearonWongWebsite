@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/site-publication-sync.mjs",
+  "sourceOfTruth": [
+    "src/content/essays/",
+    "governance/site-publication-control-record.json",
+    "src/data/siteGovernance.ts"
+  ],
+  "derivedSurfaces": {
+    "synchronize": [
+      "public/generated/publication-manifest.json",
+      "public/generated/publication-impact.json",
+      "public/llms.txt managed publication registry",
+      "public/entity/jearonwong-mplp-gaic-entity-graph.json publication registry"
+    ],
+    "buildAndVerify": [
+      "/essays/ index",
+      "canonical essay routes",
+      "RSS",
+      "sitemap",
+      "JSON-LD",
+      "OG/Twitter metadata",
+      "related content links"
+    ],
+    "manualReview": [
+      "authored article body",
+      "article SVG figures",
+      "white-paper HTML/PDF artwork",
+      "external social previews"
+    ]
+  },
+  "records": [
+    {
+      "slug": "when-an-agent-says-done-who-accepts-the-outcome",
+      "route": "/essays/when-an-agent-says-done-who-accepts-the-outcome/",
+      "title": "When an Agent Says \"Done,\" Who Accepts the Outcome?",
+      "source": "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "governed-by-design-protocol-native-multi-agent-operating-system",
+      "route": "/essays/governed-by-design-protocol-native-multi-agent-operating-system/",
+      "title": "Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI",
+      "source": "src/content/essays/governed-by-design-protocol-native-multi-agent-operating-system.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai",
+      "route": "/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/",
+      "title": "From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI",
+      "source": "src/content/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer",
+      "route": "/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/",
+      "title": "The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.",
+      "source": "src/content/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "defining-intent-drift-in-agentic-workflows",
+      "route": "/essays/defining-intent-drift-in-agentic-workflows/",
+      "title": "Defining Intent Drift in Agentic Workflows",
+      "source": "src/content/essays/defining-intent-drift-in-agentic-workflows.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "from-model-governance-to-agentic-lifecycle-conformance",
+      "route": "/essays/from-model-governance-to-agentic-lifecycle-conformance/",
+      "title": "From Model Governance to Agentic Lifecycle Conformance",
+      "source": "src/content/essays/from-model-governance-to-agentic-lifecycle-conformance.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "agent-orchestration-is-not-delivery",
+      "route": "/essays/agent-orchestration-is-not-delivery/",
+      "title": "Agent Orchestration Is Not Delivery",
+      "source": "src/content/essays/agent-orchestration-is-not-delivery.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "the-industry-misdefined-multi-agent-ai",
+      "route": "/essays/the-industry-misdefined-multi-agent-ai/",
+      "title": "The Industry Misdefined Multi-Agent AI",
+      "source": "src/content/essays/the-industry-misdefined-multi-agent-ai.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "ai-agent-lifecycle-it-was-not-designed-it-grew",
+      "route": "/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/",
+      "title": "AI Agent Lifecycle: It Was Not Designed. It Grew.",
+      "source": "src/content/essays/ai-agent-lifecycle-it-was-not-designed-it-grew.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "agentic-ai-inflection-point-project-delivery",
+      "route": "/essays/agentic-ai-inflection-point-project-delivery/",
+      "title": "The Agentic AI Inflection Point: Project Delivery",
+      "source": "src/content/essays/agentic-ai-inflection-point-project-delivery.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    },
+    {
+      "slug": "mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle",
+      "route": "/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/",
+      "title": "MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?",
+      "source": "src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md",
+      "controlMode": "governed",
+      "impact": {
+        "synchronize": [
+          "publication manifest",
+          "llms.txt managed publication registry"
+        ],
+        "buildDerived": [
+          "essay canonical route",
+          "essays index placement",
+          "RSS",
+          "sitemap",
+          "JSON-LD",
+          "OG/Twitter metadata"
+        ],
+        "updateFromSot": [
+          "llms.txt",
+          "entity graph",
+          "related concept/project surfaces"
+        ],
+        "verifyOnly": [
+          "authored article body",
+          "article SVG figures",
+          "white-paper artifacts"
+        ],
+        "ownerDecisionRequired": [
+          "primary navigation promotion",
+          "homepage flagship promotion",
+          "new definition or stronger public claim"
+        ]
+      }
+    }
+  ]
+}

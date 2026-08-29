@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RegistryPageHero from "../components/RegistryPageHero.astro";
+import { primaryNav, siteConfig } from "../data/site";
+
+const canonicalPath = "/404/";
+---
+
+<BaseLayout
+  title="Page not found"
+  description={`The requested route is not part of the ${siteConfig.author.name} research ledger.`}
+  canonicalPath={canonicalPath}
+  noindex={true}
+>
+  <RegistryPageHero
+    title="Page not found"
+    objectType="HTTP_STATUS"
+    objectValue="404 NOT FOUND"
+    lead="The requested route is not part of the public research ledger. Use a canonical route below to continue."
+  />
+
+  <div class="zone-b page-body page-body--standard">
+    <section class="shell shell--reading page-stack page-stack--tight" aria-labelledby="not-found-title">
+      <article class="registry-chassis not-found-record">
+        <div class="registry-annotation">
+          <span class="registry-key">ROUTE_STATE</span>: <span class="registry-value">NO_CANONICAL_RECORD</span>
+        </div>
+        <h2 id="not-found-title">Choose a canonical reading path.</h2>
+        <p>
+          This address may be outdated, mistyped, or no longer published. The routes below are the maintained
+          entry points for the site's lifecycle analysis, essays, research, projects, and identity record.
+        </p>
+        <nav class="not-found-links" aria-label="Canonical routes">
+          {primaryNav.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+      </article>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found-record {
+    display: grid;
+    gap: 1rem;
+    padding: var(--registry-reading-panel-padding);
+  }
+
+  .not-found-record h2,
+  .not-found-record p {
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  .not-found-record h2 {
+    color: var(--current-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-weight: 650;
+    letter-spacing: 0;
+    line-height: 1.2;
+    word-spacing: 0;
+  }
+
+  .not-found-record p {
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .not-found-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.1rem;
+    margin-top: 0.35rem;
+  }
+
+  .not-found-links a {
+    color: var(--color-action);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .not-found-links a:hover {
+    color: var(--current-text);
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
-import SiteHeader from "./SiteHeader.astro";
 import { absoluteUrl } from "../data/schema";
+import { siteConfig } from "../data/site";
 import type { WhitePaperPublication } from "../data/whitepaperPublications";
 
 interface Props {
@@ -13,6 +13,7 @@ const integrityArtifacts = paper.artifacts.slice(2);
 const additionalIntegrityLinks = "additionalIntegrityLinks" in paper ? paper.additionalIntegrityLinks : [];
 const versionNote = "versionNote" in paper ? paper.versionNote : undefined;
 const statusPanelRows = [
+  { label: "Author", value: siteConfig.author.name },
   { label: "Public status", value: paper.publicStatus },
   { label: "Version", value: paper.versionLabel },
   { label: "Document ID", value: paper.documentId },
@@ -20,12 +21,17 @@ const statusPanelRows = [
   { label: "Artifacts", value: "HTML, PDF, manifest, checksum. No public DOCX." },
   { label: "Boundary", value: paper.releaseState }
 ];
+const decisionRows = [
+  { label: "Suitable for", value: paper.audience },
+  { label: "Reading time", value: `${paper.readingTimeMinutes} minutes` },
+  { label: "Technical depth", value: paper.technicalDepth },
+  { label: "Citation use", value: paper.citationUse }
+];
 ---
 
 <div class="zone-a registry-grid wp-publication-hero-shell">
-  <SiteHeader />
   <section class="shell wp-publication-hero">
-    <div class="wp-publication-hero__copy">
+    <div class="wp-publication-hero__heading">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
@@ -39,12 +45,14 @@ const statusPanelRows = [
         <span class="registry-key">STATUS</span>: <span class="registry-value">{paper.statusLabel}</span>
       </div>
       <h1>{paper.title}</h1>
+    </div>
+    <div class="wp-publication-hero__support">
       <p class="release-subtitle">{paper.subtitle}</p>
       <p class="release-thesis">{paper.oneLinePositioning}</p>
       <p class="release-abstract">{paper.abstract}</p>
       <div class="artifact-actions" aria-label={`${paper.title} primary actions`}>
         {primaryArtifacts.map((artifact, index) => (
-          <a class={index === 0 ? "button button-primary" : "button button-outline"} href={artifact.href}>
+          <a class={index === 0 ? "button button-primary" : "button button-outline"} href={artifact.href} data-analytics-event={artifact.kind === "PDF" ? "research_download" : "research_open"}>
             {artifact.label}
           </a>
         ))}
@@ -68,7 +76,7 @@ const statusPanelRows = [
 </div>
 
 <div class="zone-b page-body page-body--standard">
-  <article class="shell release-stack">
+  <article class="shell release-stack" data-analytics-read="research">
     <section class="release-section release-grid" aria-labelledby={`${paper.id}-overview-title`}>
       <div>
         <div class="registry-annotation section-tag">
@@ -83,6 +91,19 @@ const statusPanelRows = [
             <span>{row.label}</span>
             <strong>{row.value}</strong>
           </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="release-section decision-section" aria-labelledby={`${paper.id}-decision-title`}>
+      <div>
+        <div class="registry-annotation section-tag"><span class="registry-key">DECISION_CONTEXT</span></div>
+        <h2 id={`${paper.id}-decision-title`}>Who this artifact is for.</h2>
+        <p class="section-lead">{paper.changeSummary}</p>
+      </div>
+      <div class="decision-ledger">
+        {decisionRows.map((row) => (
+          <div><span>{row.label}</span><strong>{row.value}</strong></div>
         ))}
       </div>
     </section>
@@ -118,7 +139,7 @@ const statusPanelRows = [
       <p class="section-lead">{paper.artifactNote}</p>
       <div class="artifact-grid">
         {paper.artifacts.map((artifact) => (
-          <a href={artifact.href} class="artifact-card">
+          <a href={artifact.href} class="artifact-card" data-analytics-event={artifact.kind === "PDF" ? "research_download" : "research_open"}>
             <span class="artifact-kind">{artifact.kind}</span>
             <strong>{artifact.label}</strong>
             <span>{artifact.description}</span>
@@ -249,18 +270,46 @@ const statusPanelRows = [
 
 <style>
   .wp-publication-hero-shell {
-    min-height: 84svh;
+    min-height: 84dvh;
     border-bottom: 1px solid var(--border-registry);
   }
 
   .wp-publication-hero {
-    min-height: 84svh;
+    min-height: 84dvh;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+    grid-template-areas:
+      "heading heading"
+      "support rail";
     gap: clamp(2rem, 4vw, 3.5rem);
-    align-items: center;
+    align-items: start;
     padding-top: clamp(6.5rem, 8vw, 7.5rem);
     padding-bottom: clamp(3.5rem, 5vw, 5rem);
+  }
+
+  .wp-publication-hero__heading,
+  .wp-publication-hero__support,
+  .release-meta-panel {
+    min-width: 0;
+  }
+
+  .wp-publication-hero__heading,
+  .wp-publication-hero__support {
+    grid-column: auto;
+  }
+
+  .wp-publication-hero__heading { grid-area: heading; }
+  .wp-publication-hero__support { grid-area: support; }
+  .wp-publication-hero .release-meta-panel { grid-area: rail; }
+
+  .wp-publication-hero__heading > *,
+  .wp-publication-hero__support > * {
+    max-width: 100%;
+  }
+
+  .wp-publication-hero__support p,
+  .meta-line strong {
+    overflow-wrap: break-word;
   }
 
   .breadcrumb {
@@ -281,12 +330,12 @@ const statusPanelRows = [
   }
 
   .breadcrumb a:hover {
-    color: var(--accent-proof);
+    color: var(--color-action);
   }
 
   .status-line {
     margin-bottom: 1.1rem;
-    color: var(--accent-proof);
+    color: var(--text-registry-muted);
   }
 
   .publication-system-strip {
@@ -304,22 +353,26 @@ const statusPanelRows = [
   }
 
   .publication-system-strip strong {
-    color: var(--accent-proof);
+    color: var(--text-registry-primary);
   }
 
   .wp-publication-hero h1 {
-    max-width: 16ch;
+    width: 100%;
+    max-width: none;
     margin: 0;
     color: var(--text-registry-primary);
-    font-size: clamp(2.65rem, 5.6vw, 5.35rem);
-    line-height: 1;
-    letter-spacing: 0;
+    font-size: clamp(var(--type-registry-hero-title-size), 5.2vw, 4.95rem);
+    font-weight: var(--type-registry-hero-title-weight);
+    line-height: var(--type-registry-hero-title-line-height);
+    letter-spacing: var(--type-registry-hero-title-letter-spacing);
+    word-spacing: var(--type-registry-hero-title-word-spacing);
+    overflow-wrap: break-word;
   }
 
   .release-subtitle {
     max-width: 46rem;
     margin: 1.25rem 0 0;
-    color: var(--accent-proof);
+    color: rgba(241, 245, 249, 0.72);
     font-family: var(--font-mono);
     font-size: clamp(0.82rem, 1.1vw, 0.96rem);
     line-height: 1.55;
@@ -367,21 +420,21 @@ const statusPanelRows = [
     gap: 0.45rem;
     padding: 1rem;
     border-bottom: 1px solid var(--border-registry);
-    background: rgba(59, 130, 246, 0.08);
+    background: rgba(255, 255, 255, 0.035);
   }
 
   .meta-panel-heading span {
     font-family: var(--font-mono);
     font-size: 0.68rem;
     letter-spacing: 0.08em;
-    color: var(--accent-proof);
+    color: var(--text-registry-muted);
   }
 
   .meta-panel-heading strong {
     color: var(--current-text);
     font-size: 0.86rem;
     line-height: 1.45;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .meta-line {
@@ -423,12 +476,41 @@ const statusPanelRows = [
     gap: 1.35rem;
     padding: var(--registry-panel-padding);
     background: var(--current-surface);
+    min-width: 0;
   }
 
   .release-grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
     gap: clamp(1.75rem, 4vw, 3.2rem);
     align-items: start;
+  }
+  .decision-section {
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
+    align-items: start;
+  }
+  .decision-ledger {
+    display: grid;
+    gap: 1px;
+    background: var(--current-line);
+    border: 1px solid var(--current-line);
+  }
+  .decision-ledger div {
+    display: grid;
+    gap: 0.45rem;
+    padding: 0.9rem;
+    background: var(--current-surface);
+  }
+  .decision-ledger span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+  }
+  .decision-ledger strong {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--current-text);
   }
 
   .section-tag {
@@ -440,8 +522,9 @@ const statusPanelRows = [
     margin: 0;
     color: var(--current-text);
     font-size: clamp(1.8rem, 3.4vw, 2.8rem);
-    line-height: 1.04;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .section-lead {
@@ -450,6 +533,7 @@ const statusPanelRows = [
     color: var(--current-muted);
     font-size: 1.02rem;
     line-height: 1.72;
+    overflow-wrap: break-word;
   }
 
   .section-heading-row {
@@ -466,13 +550,13 @@ const statusPanelRows = [
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
   }
 
   .section-side-link:hover,
   .secondary-link-row a:hover {
-    color: var(--current-text);
+    color: var(--color-action);
   }
 
   .artifact-grid {
@@ -494,7 +578,7 @@ const statusPanelRows = [
   }
 
   .artifact-card:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .artifact-kind,
@@ -534,15 +618,24 @@ const statusPanelRows = [
   .checksum-table {
     display: grid;
     border-top: 1px solid var(--current-line);
+    min-width: 0;
   }
 
   .status-ledger div,
   .commit-ledger div,
   .checksum-row {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.35rem;
     padding: 0.9rem 0;
     border-bottom: 1px solid var(--current-line);
+    min-width: 0;
+  }
+
+  .commit-ledger div > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .concept-ledger a,
@@ -553,6 +646,7 @@ const statusPanelRows = [
     border-bottom: 1px solid var(--current-line);
     color: var(--current-text);
     text-decoration: none;
+    min-width: 0;
   }
 
   .concept-ledger a {
@@ -562,7 +656,7 @@ const statusPanelRows = [
 
   .concept-ledger a:hover,
   .series-ledger a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .series-ledger span {
@@ -608,19 +702,21 @@ const statusPanelRows = [
     margin: 0;
     color: var(--current-text);
     line-height: 1.5;
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   .identity-ledger a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .boundary-panel,
   .manifest-note {
     padding: 1.25rem;
-    border-left: 3px solid var(--accent-caution);
-    background: rgba(245, 158, 11, 0.08);
+    border-left: 3px solid var(--color-rule);
+    background: var(--color-rule-soft);
   }
 
   .boundary-panel strong,
@@ -651,7 +747,7 @@ const statusPanelRows = [
   .checksum-row code {
     color: var(--current-text);
     font-size: 0.76rem;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .non-goal-list {
@@ -663,7 +759,7 @@ const statusPanelRows = [
   }
 
   .notice-section {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   @media (max-width: 980px) {
@@ -671,6 +767,13 @@ const statusPanelRows = [
     .release-grid,
     .integrity-grid {
       grid-template-columns: 1fr;
+    }
+
+    .wp-publication-hero {
+      grid-template-areas:
+        "heading"
+        "support"
+        "rail";
     }
 
     .wp-publication-hero-shell,
@@ -684,8 +787,89 @@ const statusPanelRows = [
   }
 
   @media (max-width: 620px) {
+    .wp-publication-hero {
+      padding-top: 6.1rem;
+      padding-bottom: 3rem;
+    }
+
+    .breadcrumb {
+      flex-wrap: wrap;
+      line-height: 1.5;
+    }
+
+    .publication-system-strip {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 0.45rem 0.65rem;
+      line-height: 1.45;
+    }
+
+    .wp-publication-hero h1 {
+      max-width: 100%;
+      font-size: clamp(2.15rem, 10.4vw, 2.75rem);
+      line-height: var(--type-registry-hero-title-line-height-mobile);
+      letter-spacing: var(--type-registry-hero-title-letter-spacing);
+      word-spacing: var(--type-registry-hero-title-word-spacing);
+    }
+
+    .release-subtitle {
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .release-thesis,
+    .release-abstract {
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .artifact-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
     .artifact-grid {
       grid-template-columns: 1fr;
+    }
+
+    .release-stack {
+      gap: var(--space-3);
+    }
+
+    .release-section {
+      width: 100%;
+      padding: var(--registry-card-padding);
+    }
+
+    .decision-section {
+      grid-template-columns: 1fr;
+    }
+
+    .release-section h2 {
+      max-width: min(100%, 16ch);
+      font-size: clamp(1.45rem, 8.2vw, 2rem);
+      line-height: var(--type-section-title-line-height-mobile);
+      letter-spacing: var(--type-section-title-letter-spacing);
+      word-spacing: var(--type-section-title-word-spacing);
+    }
+
+    .section-lead,
+    .citation-block {
+      font-size: 0.96rem;
+      line-height: 1.66;
+    }
+
+    .concept-ledger a {
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+
+    .artifact-card,
+    .boundary-panel,
+    .manifest-note {
+      padding: var(--registry-supporting-card-padding);
     }
 
     .identity-ledger div {

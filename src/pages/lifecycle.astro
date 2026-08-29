@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectProofCard from "../components/ProjectProofCard.astro";
 import RegistryPageHero from "../components/RegistryPageHero.astro";
 import SocialShare from "../components/SocialShare.astro";
+import SemanticEvidenceBand from "../components/SemanticEvidenceBand.astro";
+import ReadingFlowDiagram from "../components/ReadingFlowDiagram.astro";
+import ReadingGuide from "../components/ReadingGuide.astro";
 import {
   getProjectBySlug,
   lifecyclePageContent,
@@ -107,29 +110,46 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   <RegistryPageHero
     title={lifecyclePageContent.hero.title}
     subtitle={lifecyclePageContent.hero.subtitle}
+    scale="display"
     objectType={pageRegistry.lifecycle.objectType}
     objectValue={pageRegistry.lifecycle.objectValue}
     leadLines={lifecyclePageContent.hero.leadLines}
+    compactLead={true}
     class="lifecycle-judgment-hero"
   >
     <div class="lifecycle-hero-links" aria-label="Lifecycle route links">
       <a href="/projects/mplp/" class="registry-annotation lifecycle-hero-link">
         <span class="registry-key">PROTOCOL_PATH</span>: <span class="registry-value">MPLP</span>
       </a>
-      <a href="/projects/" class="registry-annotation lifecycle-hero-link">
-        <span class="registry-key">PROOF_PATH</span>: <span class="registry-value">COGNITIVE OS / SOLOCREW / VALIDATION LAB</span>
-      </a>
       <a href="/essays/" class="registry-annotation lifecycle-hero-link">
         <span class="registry-key">PUBLIC_ARGUMENTS</span>: <span class="registry-value">ESSAYS</span>
-      </a>
-      <a href="/definitions/" class="registry-annotation lifecycle-hero-link">
-        <span class="registry-key">DEFINITIONS</span>: <span class="registry-value">CITATION ANCHORS</span>
       </a>
     </div>
   </RegistryPageHero>
 
   <div class="zone-b page-body lifecycle-body">
     <div class="shell lifecycle-shell">
+      <ReadingGuide
+        role="FIELD_DEFINITION"
+        answer={siteSemanticBaseline.fieldDefinitionStatement}
+        startHref="#lifecycle-field-definition"
+        startLabel="Read the field definition"
+        nextLinks={[{ href: "/projects/mplp/", label: "Follow the protocol path" }, { href: "/essays/", label: "Read the public arguments" }]}
+        sections={["Thesis", "Field definition", "Dynamic agent reality", "Governance primitives", "Proof path"]}
+      />
+      <SemanticEvidenceBand
+        definition={siteSemanticBaseline.fieldDefinitionStatement}
+        boundary="Author-defined category framing; not a certification, legal-compliance, regulator, or procurement standard."
+        evidence="Lifecycle source boundary links the GAIC white paper, Concept Core, definitions, and the MPLP project path."
+        citation="Cite the AI Agent Lifecycle field page together with the GAIC white paper when discussing governance objects."
+        updated="2026-08-26"
+        sourceLevel="AUTHORED_FIELD_DEFINITION"
+      />
+      <ReadingFlowDiagram
+        variant="lifecycle"
+        title="The lifecycle is the unit of accountability."
+        description="The field moves from intent through activation, process, and project state to an accepted outcome with responsibility and evidence still attached."
+      />
       <section class="registry-chassis lifecycle-thesis-band">
         <div class="registry-annotation lifecycle-section-tag">
           <span class="registry-key">01_THE_THESIS</span>
@@ -138,7 +158,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
         <p>{lifecyclePageContent.thesis.body}</p>
       </section>
 
-      <section class="registry-chassis definition-band">
+      <section class="registry-chassis definition-band" id="lifecycle-field-definition">
         <div class="definition-band__header">
           <div class="registry-annotation lifecycle-section-tag">
             <span class="registry-key">02_FIELD_DEFINITION</span>
@@ -319,22 +339,22 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     min-width: 0;
     align-items: flex-start;
     flex-wrap: wrap;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     text-decoration: none;
   }
 
   .lifecycle-hero-link .registry-value,
   .lifecycle-section-tag .registry-key {
     min-width: 0;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .lifecycle-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .lifecycle-body {
-    padding: var(--space-page-y) 0;
+    padding: clamp(3.5rem, 5vw, 4.5rem) 0 6rem;
   }
 
   .lifecycle-shell {
@@ -351,9 +371,23 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     min-width: 0;
   }
 
+  :global(.lifecycle-judgment-hero .ledger-hero) {
+    padding-top: 3.5rem;
+    padding-bottom: 3.25rem;
+  }
+
+  :global(.lifecycle-judgment-hero .registry-page-hero__title) {
+    margin-top: 0.75rem;
+    margin-bottom: 1.1rem;
+  }
+
   :global(.lifecycle-judgment-hero .registry-page-hero__title),
   :global(.lifecycle-judgment-hero .registry-page-hero__lead-line) {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+  }
+
+  :global(.lifecycle-judgment-hero .registry-page-hero__lead) {
+    line-height: 1.42;
   }
 
   .lifecycle-section-tag {
@@ -371,7 +405,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   }
 
   .lifecycle-thesis-band {
-    border-left: 4px solid var(--accent-signal);
+    border-left: 4px solid var(--color-meta);
     background: #111111;
     color: #f1f5f9;
     --current-surface: #111111;
@@ -390,8 +424,9 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: clamp(1.65rem, 3vw, 2.35rem);
-    line-height: 1.06;
-    letter-spacing: -0.02em;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .lifecycle-thesis-band p {
@@ -406,7 +441,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     display: grid;
     grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     gap: 3rem;
-    border-top: 2px solid var(--accent-proof);
+    border-top: 2px solid var(--color-rule);
     min-width: 0;
   }
 
@@ -437,7 +472,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
 
   .sharp-line {
     padding-left: var(--space-2);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     font-weight: 760;
   }
 
@@ -456,7 +491,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     font-weight: 800;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    color: var(--accent-signal);
+    color: var(--color-meta);
   }
 
   .not-merely-ledger div {
@@ -476,11 +511,11 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--current-text);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .lifecycle-source-boundary {
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     min-width: 0;
   }
 
@@ -512,7 +547,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   }
 
   .dynamic-reality-band {
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     min-width: 0;
   }
 
@@ -567,7 +602,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     line-height: 1.7;
     text-transform: uppercase;
     min-width: 0;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .ledger-panel {
@@ -579,11 +614,11 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
 
   .ledger-panel--scope,
   .ledger-panel--protocol {
-    border-top: 2px solid var(--accent-proof);
+    border-top: 2px solid var(--color-rule);
   }
 
   .ledger-panel--runtime {
-    border-top: 2px solid var(--accent-caution);
+    border-top: 2px solid var(--color-rule);
   }
 
   .governance-primitives,
@@ -622,7 +657,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent-proof);
+    color: var(--color-meta);
     letter-spacing: 0.08em;
   }
 
@@ -631,7 +666,8 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     color: var(--current-text);
     font-size: 1.05rem;
     line-height: 1.25;
-    letter-spacing: -0.01em;
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .primitive-row p {
@@ -644,7 +680,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   .pairing-band {
     display: grid;
     gap: 0.35rem;
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .pairing-band p {
@@ -653,7 +689,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     font-size: clamp(1.12rem, 2vw, 1.5rem);
     font-weight: 800;
     line-height: 1.25;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
   }
 
   .proof-path-grid {
@@ -664,7 +700,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   }
 
   .closing-anchor {
-    border-left: 4px solid var(--accent-signal);
+    border-left: 4px solid var(--color-rule);
   }
 
   .closing-anchor p {
@@ -672,7 +708,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     font-size: clamp(1.3rem, 3vw, 2rem);
     line-height: 1.22;
     font-weight: 840;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   @media (max-width: 980px) {
@@ -694,8 +730,18 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
   }
 
   @media (max-width: 640px) {
+    :global(.lifecycle-judgment-hero .ledger-hero) {
+      padding-top: 2.75rem;
+      padding-bottom: 2.5rem;
+    }
+
+    :global(.lifecycle-judgment-hero .registry-page-hero__lead) {
+      font-size: 0.95rem;
+      line-height: 1.42;
+    }
+
     .lifecycle-body {
-      padding: var(--space-section-y-mobile) 0;
+      padding: 3rem 0 4.5rem;
     }
 
     .lifecycle-shell {
@@ -740,7 +786,7 @@ const lifecycleBreadcrumbJsonLd = createBreadcrumbJsonLd(lifecycleUrl, [
     }
 
     :global(.lifecycle-judgment-hero .registry-page-hero__title) {
-      max-width: 13ch;
+      max-width: 100%;
       white-space: normal;
     }
 

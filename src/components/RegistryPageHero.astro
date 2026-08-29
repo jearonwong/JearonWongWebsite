@@ -1,5 +1,6 @@
 ---
-import SiteHeader from "./SiteHeader.astro";
+import RegistryValue from "./RegistryValue.astro";
+import { siteConfig } from "../data/site";
 
 interface Props {
   title: string;
@@ -9,6 +10,8 @@ interface Props {
   objectValue?: string;
   lead?: string;
   leadLines?: string[];
+  compactLead?: boolean;
+  scale?: "display" | "entry";
   zone?: string;
   class?: string;
 }
@@ -21,79 +24,153 @@ const {
   objectValue,
   lead,
   leadLines,
+  compactLead = false,
+  scale = "entry",
   zone = "zone-a",
   class: className = ""
 } = Astro.props;
 
 const displayTitleLines = titleLines?.length
   ? titleLines.map((line, index) => ({
-      line,
+      line: line.trim(),
       isFraming: index === 0 && titleLines.length > 1 && line.trim().endsWith(":")
     }))
   : null;
 const displayLeadLines = leadLines?.length ? leadLines : null;
 ---
 
-<div class:list={[zone, "registry-grid", "registry-page-hero", className]}>
-  <SiteHeader />
-  <div class="shell registry-page-hero__shell">
-    {objectType && objectValue && (
-      <div class="registry-annotation registry-page-hero__annotation">
-        <span class="registry-key">{objectType}</span>: <span class="registry-value">{objectValue}</span>
-      </div>
-    )}
-    <h1 class:list={["registry-page-hero__title", displayTitleLines && "has-title-lines"]}>
-      {displayTitleLines ? (
-        displayTitleLines.map(({ line, isFraming }) => (
-          <span
-            class:list={["registry-page-hero__title-line", isFraming && "registry-page-hero__title-line--framing"]}
-            data-title-role={isFraming ? "framing" : "main"}
-          >
-            {line}
-          </span>
-        ))
-      ) : (
-        title
+<div class:list={[zone, "registry-page-hero", "ledger-banner", `registry-page-hero--${scale}`, className]}>
+  <div class="ledger-hero registry-page-hero__shell">
+    <div class="registry-page-hero__heading">
+      {objectType && objectValue && (
+        <div class="registry-annotation registry-page-hero__annotation">
+          <span class="registry-key">{objectType}</span>: <RegistryValue value={objectValue} class="registry-value" />
+        </div>
       )}
-    </h1>
-    {subtitle && <p class="registry-page-hero__subtitle">{subtitle}</p>}
-    {(lead || displayLeadLines) && (
-      <p class:list={["lead", "registry-page-hero__lead", displayLeadLines && "has-lead-lines"]}>
-        {displayLeadLines ? (
-          displayLeadLines.map((line) => <span class="registry-page-hero__lead-line">{line}</span>)
+      <h1 class:list={["registry-page-hero__title", displayTitleLines && "has-title-lines"]}>
+        {displayTitleLines ? (
+          displayTitleLines.map(({ line, isFraming }) => (
+            <span
+              class:list={["registry-page-hero__title-line", isFraming && "registry-page-hero__title-line--framing"]}
+              data-title-role={isFraming ? "framing" : "main"}
+            >
+              {line}
+            </span>
+          ))
         ) : (
-          lead
+          title.trim()
         )}
-      </p>
-    )}
-    <slot />
+      </h1>
+    </div>
+    <div class="registry-page-hero__support">
+      {subtitle && <p class="registry-page-hero__subtitle">{subtitle}</p>}
+      {(lead || displayLeadLines) && (
+        <div class:list={["lead", "registry-page-hero__lead", displayLeadLines && "has-lead-lines"]}>
+          {displayLeadLines ? (
+          compactLead && displayLeadLines.length > 4 ? (
+            <>
+              {displayLeadLines.slice(0, 4).map((line) => <span class="registry-page-hero__lead-line">{line}</span>)}
+              <details class="registry-page-hero__lead-more">
+                <summary>Read the full field statement</summary>
+                {displayLeadLines.slice(4).map((line) => <span class="registry-page-hero__lead-line">{line}</span>)}
+              </details>
+            </>
+          ) : displayLeadLines.map((line) => <span class="registry-page-hero__lead-line">{line}</span>)
+          ) : (
+            lead
+          )}
+        </div>
+      )}
+      <slot />
+    </div>
+    <aside class="ledger-hero__rail" aria-label="Page orientation">
+      <p>{subtitle ?? "Research, essays, projects, and evidence share one reading order."}</p>
+      <dl>
+        <dt>Author</dt><dd><RegistryValue value={siteConfig.author.name} /></dd>
+        <dt>Primary source</dt><dd><RegistryValue value={objectType ?? "Public record"} /></dd>
+        <dt>Current route</dt><dd><RegistryValue value={objectValue ?? title} /></dd>
+        <dt>Reading mode</dt><dd><RegistryValue value="Research ledger" /></dd>
+      </dl>
+    </aside>
   </div>
 </div>
 
 <style>
-  .registry-page-hero {
-    padding-top: clamp(7rem, 10vw, 8.25rem);
-    padding-bottom: clamp(4.4rem, 7vw, 5.25rem);
-    border-bottom: 1px solid var(--border-registry);
+  .registry-page-hero { position: relative; overflow: hidden; border-bottom: 1px solid rgba(244, 247, 251, 0.17); }
+
+  .registry-page-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 1px;
+    background: var(--color-rule);
+    pointer-events: none;
   }
 
+  .registry-page-hero__shell,
+  .registry-page-hero__heading,
+  .registry-page-hero__support,
+  .registry-page-hero .ledger-hero__rail { min-width: 0; }
+  .registry-page-hero__shell { position: relative; }
+
+  .registry-page-hero.ledger-banner .prototype-nav { border-color: rgba(244, 247, 251, 0.17); }
+  .registry-page-hero.ledger-banner .prototype-nav__link,
+  .registry-page-hero.ledger-banner .prototype-nav__brand { color: #d1dae5; }
+  .registry-page-hero.ledger-banner .prototype-nav__link:hover,
+  .registry-page-hero.ledger-banner .prototype-nav__link.is-active { color: #fff; }
+
+  .registry-page-hero .ledger-hero {
+    width: min(calc(100vw - 3rem), 1240px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+    grid-template-areas:
+      "heading heading"
+      "support rail";
+    column-gap: clamp(2.5rem, 6vw, 4rem);
+    row-gap: 2rem;
+    padding: 4.75rem 0 5.25rem;
+  }
+
+  .registry-page-hero__heading { grid-area: heading; }
+  .registry-page-hero__support { grid-area: support; }
+
   .registry-page-hero__annotation {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: 0;
     margin-bottom: 1.35rem;
+    overflow-wrap: break-word;
+  }
+
+  .registry-page-hero__annotation .registry-key,
+  .registry-page-hero__annotation .registry-value {
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   .registry-page-hero__title {
-    font-size: var(--type-registry-hero-title-size);
-    font-weight: var(--type-registry-hero-title-weight);
-    letter-spacing: var(--type-registry-hero-title-letter-spacing);
-    line-height: var(--type-registry-hero-title-line-height);
-    margin: 0 0 1.45rem;
-    max-width: min(100%, 17em);
+    width: 100%;
+    max-width: none;
+    margin: 1.2rem 0 1.7rem;
+    font-family: var(--font-display);
+    font-size: var(--type-hero-entry);
+    font-weight: 720;
+    letter-spacing: var(--type-hero-entry-letter-spacing);
+    line-height: var(--type-hero-entry-line-height);
+    word-spacing: var(--type-hero-entry-word-spacing);
     text-wrap: balance;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
   }
+
+  .registry-page-hero--display .registry-page-hero__title { font-size: var(--type-hero-display); line-height: var(--type-hero-display-line-height); letter-spacing: var(--type-hero-display-letter-spacing); word-spacing: var(--type-hero-display-word-spacing); }
 
   .registry-page-hero__title-line {
     display: block;
+    line-height: inherit;
   }
 
   .registry-page-hero__title .registry-page-hero__title-line[data-title-role="framing"] {
@@ -102,41 +179,66 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     font-weight: var(--type-registry-hero-title-framing-weight) !important;
     letter-spacing: 0 !important;
     line-height: var(--type-registry-hero-title-framing-line-height) !important;
-    color: rgba(241, 245, 249, 0.82);
+    word-spacing: var(--type-registry-hero-title-word-spacing);
+    color: rgba(244, 247, 251, 0.82);
     max-width: min(100%, 24em);
   }
 
   .registry-page-hero__subtitle {
-    max-width: min(100%, var(--lead-measure));
+    max-width: 39ch;
     margin: 0 0 0.9rem;
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 2.2vw, 1.3rem);
-    font-weight: 640;
-    letter-spacing: 0;
-    line-height: 1.35;
-    color: var(--current-text);
-    overflow-wrap: anywhere;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: var(--type-body-line-height);
+    letter-spacing: var(--type-body-letter-spacing);
+    word-spacing: var(--type-body-word-spacing);
+    color: var(--color-meta-dark);
+    overflow-wrap: break-word;
   }
 
   .registry-page-hero__lead {
-    width: min(100%, var(--lead-measure));
+    width: min(100%, 39ch);
     max-width: none;
-    font-size: clamp(1.05rem, 1.2vw, 1.18rem);
-    color: rgba(226, 232, 240, 0.68);
-    border-left: 2px solid rgba(59, 130, 246, 0.32);
-    padding-left: var(--registry-compact-padding);
-    line-height: 1.62;
-    overflow-wrap: anywhere;
+    font-size: 1.05rem;
+    color: var(--color-meta-dark);
+    border-left: 0;
+    padding-left: 0;
+    line-height: var(--type-body-line-height);
+    letter-spacing: var(--type-body-letter-spacing);
+    word-spacing: var(--type-body-word-spacing);
+    overflow-wrap: break-word;
   }
 
   .registry-page-hero__lead-line {
     display: block;
   }
 
+  .registry-page-hero__lead-more { margin-top: 0.7rem; }
+  .registry-page-hero__lead-more summary { width: fit-content; color: var(--color-meta-dark); cursor: pointer; font-family: var(--font-mono); font-size: var(--type-meta); letter-spacing: var(--type-control-letter-spacing); line-height: var(--type-control-line-height); word-spacing: var(--type-control-word-spacing); text-transform: uppercase; }
+  .registry-page-hero__lead-more summary:hover { color: #fff; }
+  .registry-page-hero__lead-more[open] summary { margin-bottom: 0.55rem; color: var(--color-action); }
+
+  .registry-page-hero .ledger-hero__rail {
+    grid-area: rail;
+    align-self: end;
+    border-left: 1px solid rgba(244, 247, 251, 0.26);
+    padding-left: 1.5rem;
+  }
+  .registry-page-hero .ledger-hero__rail p { max-width: 26ch; margin: 0 0 1.25rem; color: var(--color-meta-dark); font-family: var(--font-display); font-size: 1.08rem; letter-spacing: var(--type-body-letter-spacing); line-height: 1.45; word-spacing: var(--type-body-word-spacing); }
+  .registry-page-hero .ledger-hero__rail dl { display: grid; grid-template-columns: var(--hud-meta-columns); gap: 0.62rem 1rem; margin: 0; font-family: var(--font-mono); font-size: var(--type-meta); line-height: var(--type-meta-line-height); letter-spacing: var(--type-meta-letter-spacing); word-spacing: var(--type-meta-word-spacing); text-transform: uppercase; }
+  .registry-page-hero .ledger-hero__rail dt { color: var(--color-meta-dark); }
+  .registry-page-hero .ledger-hero__rail dd { margin: 0; color: #eef2f6; overflow-wrap: normal; word-break: normal; }
+
   @media (max-width: 768px) {
-    .registry-page-hero {
-      padding-top: 6.75rem;
-      padding-bottom: 3.5rem;
+    .registry-page-hero .ledger-hero {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "support"
+        "rail";
+      gap: 2rem;
+      padding: 3.75rem 0 3.5rem;
+      width: calc(100vw - 2rem);
     }
 
     .registry-page-hero__annotation {
@@ -144,8 +246,13 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     }
 
     .registry-page-hero__title {
-      font-size: var(--type-registry-hero-title-size-mobile);
-      line-height: var(--type-registry-hero-title-line-height-mobile);
+      font-size: var(--type-hero-entry-mobile);
+      line-height: var(--type-hero-entry-line-height-mobile);
+      letter-spacing: var(--type-hero-entry-letter-spacing-mobile);
+      word-spacing: var(--type-hero-entry-word-spacing-mobile);
+      /* Keep normal word breaks first; split only when a product or route token exceeds the track. */
+      overflow-wrap: break-word;
+      text-wrap: wrap;
       margin-bottom: 1.15rem;
       max-width: 100%;
     }
@@ -153,20 +260,53 @@ const displayLeadLines = leadLines?.length ? leadLines : null;
     .registry-page-hero__title .registry-page-hero__title-line[data-title-role="framing"] {
       font-size: var(--type-registry-hero-title-framing-size-mobile) !important;
       line-height: var(--type-registry-hero-title-framing-line-height-mobile) !important;
+      letter-spacing: 0 !important;
+      word-spacing: var(--type-registry-hero-title-word-spacing);
       max-width: 100%;
     }
 
     .registry-page-hero__subtitle {
       max-width: 100%;
       margin-bottom: 0.75rem;
-      font-size: clamp(0.95rem, 4vw, 1.12rem);
+      font-size: 1rem;
+      line-height: var(--type-body-line-height);
+      letter-spacing: var(--type-body-letter-spacing);
+      word-spacing: var(--type-body-word-spacing);
+      overflow-wrap: break-word;
     }
 
     .registry-page-hero__lead {
       font-size: 1rem;
-      line-height: 1.6;
-      padding-left: var(--space-2);
+      line-height: var(--type-body-line-height);
+      letter-spacing: var(--type-body-letter-spacing);
+      word-spacing: var(--type-body-word-spacing);
+      padding-left: 0;
       width: 100%;
+      overflow-wrap: break-word;
     }
+
+    .registry-page-hero--display .registry-page-hero__title { font-size: var(--type-hero-display-mobile); line-height: var(--type-hero-display-line-height-mobile); letter-spacing: var(--type-hero-display-letter-spacing-mobile); word-spacing: var(--type-hero-display-word-spacing-mobile); }
+
+    .registry-page-hero .ledger-hero__rail dl { display: none; }
+    .registry-page-hero .ledger-hero__rail p { margin-bottom: 0; }
+  }
+
+  @media (max-width: 420px) {
+    .registry-page-hero__title {
+      /* Keep normal word breaks first; split only when a long concept token exceeds the track. */
+      font-size: clamp(2rem, 10vw, 3.65rem);
+      max-width: 100%;
+      line-height: var(--type-hero-entry-line-height-mobile);
+      letter-spacing: var(--type-hero-entry-letter-spacing-mobile);
+      word-spacing: var(--type-hero-entry-word-spacing-mobile);
+      overflow-wrap: break-word;
+    }
+
+    .registry-page-hero__lead {
+      font-size: 0.98rem;
+      line-height: var(--type-body-line-height);
+    }
+
+    .registry-page-hero .ledger-hero__rail { padding-left: 1rem; }
   }
 </style>

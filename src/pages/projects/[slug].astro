@@ -5,8 +5,9 @@ import SocialShare from "../../components/SocialShare.astro";
 import {
   getConceptBySlug,
   getProjectBySlug,
-  getProjectGraphPosition,
+  getProjectPathPosition,
   getTheoryClusterName,
+  getTheoryClusterSlug,
   homepageActions,
   siteConfig,
   siteSemanticBaseline
@@ -26,7 +27,7 @@ if (!project) {
   throw new Error(`Unknown project record: ${slug}`);
 }
 
-const adjacentProofs = (project.adjacentProofs ?? []).reduce<
+const adjacentProjects = (project.adjacentProjects ?? []).reduce<
   Array<NonNullable<ReturnType<typeof getProjectBySlug>>>
 >((acc, relatedSlug) => {
   const adjacent = getProjectBySlug(relatedSlug);
@@ -37,10 +38,15 @@ const relatedConcepts = (project.relatedConcepts ?? [])
   .map((conceptSlug) => getConceptBySlug(conceptSlug))
   .filter((concept): concept is NonNullable<typeof concept> => Boolean(concept));
 const sourceLinks = project.sourceLinks ?? [];
-const graphPosition = getProjectGraphPosition(project.slug);
-const previousProof = graphPosition.previous;
-const nextProof = graphPosition.next;
+const graphPosition = getProjectPathPosition(project.slug);
+const previousProject = graphPosition.previous;
+const nextProject = graphPosition.next;
 const isMplpProject = project.slug === "mplp";
+const projectRoleLabel = isMplpProject ? "PROTOCOL_ROLE" : "PROOF_ROLE";
+const projectRoleValue = isMplpProject ? "LIFECYCLE PROTOCOL PATH" : project.proofRole;
+const projectRecordStatement = isMplpProject
+  ? `${project.name} is the protocol record in the site thesis chain.`
+  : `${project.name} is a proof object in the site thesis chain.`;
 const mplpDefinitionRows = [
   {
     label: "Protocol identity",
@@ -177,13 +183,13 @@ const projectJsonLd = {
   canonicalPath={`/projects/${project.slug}/`}
   jsonLd={[projectWebPageJsonLd, projectJsonLd, projectBreadcrumbJsonLd]}
   keywords={projectKeywords}
-  ogImagePath="/social/jearonwong-og.png"
-  ogImageAlt={`${project.name} — ${project.status} in the Agentic Delivery protocol path and proof path`}
+  ogImagePath="/social/og-projects.png"
+  ogImageAlt={`${project.name} — ${project.status} project record`}
 >
   <RegistryPageHero
     title={project.name}
-    objectType="PROOF_ROLE"
-    objectValue={project.proofRole}
+    objectType={projectRoleLabel}
+    objectValue={projectRoleValue}
     lead={project.summary}
   >
     <div class="project-hero-links">
@@ -203,7 +209,7 @@ const projectJsonLd = {
           <div class="registry-annotation" style="margin-bottom: 0.9rem;">
             <span class="registry-key">WHAT_THIS_IS</span>
           </div>
-          <h2 class="proof-panel-title">{project.name} is a proof object in the site thesis chain.</h2>
+          <h2 class="proof-panel-title">{projectRecordStatement}</h2>
           <p class="proof-panel-body">{project.whatItIs}</p>
         </article>
 
@@ -218,9 +224,23 @@ const projectJsonLd = {
 
       <section class="registry-chassis proof-claim">
         <div class="registry-annotation" style="margin-bottom: 1rem;">
-          <span class="registry-key">WHAT_THIS_PROVES</span>: <span class="registry-value">{project.proofRole}</span>
+          <span class="registry-key">{isMplpProject ? "WHAT_THIS_DEFINES" : "WHAT_THIS_PROVES"}</span>: <span class="registry-value">{projectRoleValue}</span>
         </div>
         <p class="proof-claim-text">{project.proves}</p>
+      </section>
+
+      <section class="registry-chassis project-status-ledger" aria-labelledby="project-status-title">
+        <div class="registry-annotation" style="margin-bottom: 1rem;">
+          <span class="registry-key">STATUS_LEDGER</span>
+        </div>
+        <h2 id="project-status-title">Current delivery and evidence state.</h2>
+        <div class="status-ledger-grid">
+          <div><span>Delivery state</span><strong>{project.deliveryState}</strong></div>
+          <div><span>Maturity</span><strong>{project.maturity}</strong></div>
+          <div><span>Owned evidence</span><strong>{project.evidenceState}</strong></div>
+          <div><span>External signal</span><strong>{project.externalEvidenceState}</strong></div>
+          <div><span>Next decision</span><strong>{project.nextDecision}</strong></div>
+        </div>
       </section>
 
       {(project.boundary || sourceLinks.length > 0) && (
@@ -297,7 +317,7 @@ const projectJsonLd = {
           </div>
           <div class="link-stack">
             {(project.relatedIdeas ?? []).map((ideaSlug) => (
-              <a href={`/theories/#${ideaSlug}`} class="chain-link">
+              <a href={`/theories/#${getTheoryClusterSlug(ideaSlug)}`} class="chain-link">
                 {getTheoryClusterName(ideaSlug)}
               </a>
             ))}
@@ -321,10 +341,10 @@ const projectJsonLd = {
 
         <article class="registry-chassis proof-panel">
           <div class="registry-annotation" style="margin-bottom: 0.9rem;">
-            <span class="registry-key">ADJACENT_PROOFS</span>
+            <span class="registry-key">{isMplpProject ? "ADJACENT_PATHS" : "ADJACENT_PROOFS"}</span>
           </div>
           <div class="link-stack">
-            {adjacentProofs.map((adjacent) => (
+            {adjacentProjects.map((adjacent) => (
               <a href={`/projects/${adjacent.slug}/`} class="chain-link">
                 {adjacent.name}
               </a>
@@ -355,21 +375,21 @@ const projectJsonLd = {
         <div class="link-stack">
           <a href="/lifecycle/" class="chain-link">Return to the AI Agent Lifecycle mainline</a>
           <a href="/essays/" class="chain-link">Read the essay sequence</a>
-          <a href="/projects/" class="chain-link">Back to the proof room</a>
-          {previousProof && (
-            <a href={`/projects/${previousProof.slug}/`} class="chain-link">
-              Previous proof: {previousProof.name}
+          <a href="/projects/" class="chain-link">Back to the project ledger</a>
+          {previousProject && (
+            <a href={`/projects/${previousProject.slug}/`} class="chain-link">
+              Previous project: {previousProject.name}
             </a>
           )}
-          {nextProof && (
-            <a href={`/projects/${nextProof.slug}/`} class="chain-link">
-              Next proof: {nextProof.name}
+          {nextProject && (
+            <a href={`/projects/${nextProject.slug}/`} class="chain-link">
+              Next project: {nextProject.name}
             </a>
           )}
         </div>
-        {(previousProof || nextProof) && (
+        {(previousProject || nextProject) && (
           <p class="next-step-note">
-            The proof graph is easier to read in sequence: lifecycle protocol, runtime path, delivery proof path, then evidence adjudication.
+            The project path is easier to read in sequence: lifecycle protocol, runtime path, delivery proof path, then evidence adjudication.
           </p>
         )}
       </section>
@@ -396,7 +416,7 @@ const projectJsonLd = {
   }
 
   .hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .proof-shell {
@@ -422,8 +442,9 @@ const projectJsonLd = {
   .proof-panel-title {
     margin: 0 0 0.9rem;
     font-size: 1.4rem;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
     color: var(--current-text);
   }
 
@@ -436,14 +457,14 @@ const projectJsonLd = {
 
   .proof-claim {
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .project-boundary-panel {
     display: grid;
     gap: 1rem;
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
   }
 
   .proof-claim-text {
@@ -453,6 +474,42 @@ const projectJsonLd = {
     color: var(--current-text);
     max-width: 64ch;
   }
+  .project-status-ledger {
+    padding: var(--registry-panel-padding);
+    border-left: 3px solid var(--color-rule);
+  }
+  .project-status-ledger h2 {
+    margin: 0 0 1.2rem;
+    font-size: 1.45rem;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
+  }
+  .status-ledger-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--current-line);
+    border: 1px solid var(--current-line);
+  }
+  .status-ledger-grid > div {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0.9rem;
+    background: var(--current-surface);
+  }
+  .status-ledger-grid span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--current-muted);
+  }
+  .status-ledger-grid strong {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--current-text);
+  }
 
   .project-boundary-panel p {
     margin: 0;
@@ -461,12 +518,17 @@ const projectJsonLd = {
     line-height: 1.68;
     max-width: 68rem;
   }
+  @media (max-width: 640px) {
+    .status-ledger-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
   .protocol-entity-panel {
     display: grid;
     gap: 1.35rem;
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .protocol-entity-heading {
@@ -480,8 +542,9 @@ const projectJsonLd = {
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: clamp(1.45rem, 2.6vw, 2.15rem);
-    line-height: 1.12;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .protocol-entity-heading p,
@@ -497,7 +560,7 @@ const projectJsonLd = {
     align-self: end;
     padding: 0.7rem 0.85rem;
     border: 1px solid var(--current-border);
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 800;
@@ -522,7 +585,7 @@ const projectJsonLd = {
   }
 
   .protocol-definition-ledger span {
-    color: var(--accent-proof);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 800;
@@ -553,7 +616,9 @@ const projectJsonLd = {
     margin: 0;
     color: var(--current-text);
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .protocol-link-list,
@@ -568,13 +633,20 @@ const projectJsonLd = {
   .protocol-tag-list span {
     padding: 0.42rem 0.55rem;
     border: 1px solid var(--current-border);
-    color: var(--accent-signal);
     font-family: var(--font-mono);
     font-size: 0.66rem;
     font-weight: 800;
     line-height: 1.25;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .protocol-link-list a {
+    color: var(--color-action);
+  }
+
+  .protocol-tag-list span {
+    color: var(--color-meta);
   }
 
   .project-source-links {
@@ -614,7 +686,7 @@ const projectJsonLd = {
   }
 
   .chain-link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     text-decoration: none;
     font-size: 0.95rem;
   }
@@ -648,6 +720,9 @@ const projectJsonLd = {
 
     .proof-panel-title {
       font-size: 1.22rem;
+      line-height: var(--type-card-title-line-height-mobile);
+      letter-spacing: var(--type-card-title-letter-spacing);
+      word-spacing: var(--type-card-title-word-spacing);
     }
 
     .proof-panel-body,

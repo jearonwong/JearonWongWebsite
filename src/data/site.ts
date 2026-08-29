@@ -1,3 +1,5 @@
+export { controlledTaxonomy, controlledTags, taxonomyAliases, taxonomyRouteByTag } from "./taxonomy";
+
 export const siteSemanticBaseline = {
   identityAnchor: "Jearon Wong — Protocol Architect for the Agent Era",
   problemStatement: "Execution is not Delivery.",
@@ -13,6 +15,14 @@ export const siteSemanticBaseline = {
     "Regulatory and Enterprise Governance for AI agents is the translation layer between external AI governance baselines, internal control language, and lifecycle responsibility evidence. It is a governance crosswalk, not legal advice, certification, audit opinion, or procurement recommendation.",
   mplpDefinition:
     "MPLP is the lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable.",
+  mplpFormalDefinition:
+    "MPLP is an open, vendor-neutral lifecycle protocol for AI agent systems.",
+  mplpMarketPositioning:
+    "MPLP is an open lifecycle and evidence protocol for governed multi-agent systems.",
+  mplpProtocolRelation:
+    "MPLP is the protocol path within the Agentic Delivery argument. It preserves lifecycle responsibility, authority, evidence, and outcome semantics across models, frameworks, runtimes, and vendors.",
+  mplpBoundary:
+    "MPLP is a protocol specification and protocol foundation, not a complete Agent OS, runtime, platform, certification program, regulator, legal-compliance proof, insurance approval, or required implementation.",
   cognitiveOSDefinition:
     "Cognitive OS is a protocol-native runtime path for state, activation, projection, constraints, and evidence capture.",
   soloCrewDefinition:
@@ -110,6 +120,7 @@ export const siteConfig = {
   description:
     "Jearon Wong is the Protocol Architect for the Agent Era, defining AI Agent Lifecycle, Agentic Lifecycle Governance, MPLP, and AI agent governance for accountable work from intent to accepted outcome.",
   siteUrl: "https://www.jearonwong.com",
+  homepageLastModified: "2026-08-28",
   socialImagePath: "/social/jearonwong-og.png",
   xHandle: "@jearonwong",
   thesis: siteSemanticBaseline.agenticDeliveryDefinition,
@@ -139,11 +150,11 @@ export const siteThesis = {
   technicalGap:
     "MCP connects tools. A2A connects agents. Agentic Delivery names the missing layer between execution and accountable outcomes.",
   stackProof: [
-    { name: "MPLP", role: siteSemanticBaseline.projectRoles.mplp },
     { name: "Cognitive OS", role: siteSemanticBaseline.projectRoles.cognitiveOS },
     { name: "SoloCrew", role: siteSemanticBaseline.projectRoles.soloCrew },
     { name: "Validation Lab", role: siteSemanticBaseline.projectRoles.validationLab }
-  ]
+  ],
+  protocolPath: [{ name: "MPLP", role: siteSemanticBaseline.projectRoles.mplp }]
 };
 
 export const aiAgentLifecycleColumn = {
@@ -277,7 +288,7 @@ export const lifecyclePageContent = {
       "The market built static governance for dynamic agents. That is the foundational failure.",
       "The dominant market routes, from AWS, Google, Microsoft, Salesforce, IBM, and LangChain, often begin by defining agents, assigning tools, setting policies, routing workflows, and observing execution.",
       "These systems may be useful. They still do not define dynamic lifecycle governance for accountable agent work.",
-      "MPLP governs agent work as a dynamic lifecycle."
+      "MPLP specifies lifecycle semantics for governing agent work as a dynamic lifecycle."
     ],
     sourceNote:
       "This page names public market routes as category references. The source-backed breakdown belongs in the Agentic Delivery essay series."
@@ -538,8 +549,8 @@ export const contentRouteRoles = {
     job: "Define the conceptual map behind reliable AI agent work delivery."
   },
   projects: {
-    question: "What proves the thesis?",
-    job: "Show the concrete proof path that makes the thesis inspectable without closing the category."
+    question: "Which project paths make the thesis inspectable?",
+    job: "Show the protocol path and concrete proof paths that make the thesis inspectable without closing the category."
   },
   governance: {
     question: "What conditions make agent work accountable?",
@@ -582,7 +593,7 @@ export const contentUpdateProtocol = {
     update: [
       "projects data",
       "homepage stack map if the change is major",
-      "proof graph order if a role changes",
+      "project path order if a role changes",
       "related ideas",
       "newsletter description if public updates become relevant"
     ]
@@ -595,6 +606,51 @@ export const contentUpdateProtocol = {
       "governance lead and modules",
       "playbooks lead and modules",
       "newsletter promise"
+    ]
+  },
+  whenPlaybookChanged: {
+    update: [
+      "playbook contentRole, canonicalRoute, canonicalParent, audience, sourceRefs, and indexability",
+      "playbooks index cards and ItemList JSON-LD",
+      "governance and concept inbound links",
+      "duplicate-content and thin-page audit",
+      "llms.txt, sitemap, RSS, and entity graph impact report when the route is indexable"
+    ]
+  },
+  whenGovernanceMappingChanged: {
+    update: [
+      "governance mapping sourceRefs, authority, audience, canonical route, and indexability",
+      "governance index groups and ItemList JSON-LD",
+      "related concepts, evidence, research, and playbook links",
+      "source-qualified boundary language and title/description uniqueness",
+      "llms.txt and entity graph impact report when a canonical route or core term changes"
+    ]
+  },
+  whenEcosystemMappingChanged: {
+    update: [
+      "ecosystem source basis, officialSources, distinctive question, scenario, and evidence requirements",
+      "extended ecosystem index grouping and canonical parent links",
+      "duplicate-content, source-status, and noindex audit",
+      "related playbook, concept, and GAIC system links",
+      "sitemap, llms.txt, entity graph, and JSON-LD impact report"
+    ]
+  },
+  whenTaxonomyChanged: {
+    update: [
+      "src/data/taxonomy.ts controlled tags and aliases",
+      "published essay frontmatter tags and essay filter labels",
+      "canonical concept/project/research route mapping",
+      "tag coverage and alias failure audit",
+      "related links, llms.txt, entity graph, and search-index impact review"
+    ]
+  },
+  whenRouteMetadataChanges: {
+    update: [
+      "title, description, shareTitle, twitterTitle, canonical, robots, JSON-LD, and breadcrumbs",
+      "navigation exposure, parent return link, next actions, and click-depth contract",
+      "sitemap, RSS, llms.txt, entity graph, and OG asset references",
+      "duplicate metadata and canonical/noindex audit",
+      "desktop/mobile browser verification on the changed route"
     ]
   }
 };
@@ -650,6 +706,66 @@ export const homepageContent = {
     primaryCtaLabel: "Open the field analysis",
     secondaryCtaLabel: "Inspect the Proof Path"
   },
+  readerRoutes: [
+    {
+      index: "01",
+      eyebrow: "ORIENT",
+      title: "Understand the field",
+      body: "Start with the AI Agent Lifecycle definition and the argument that execution alone is not delivery.",
+      href: "/lifecycle/",
+      label: "Open the field definition"
+    },
+    {
+      index: "02",
+      eyebrow: "ARGUE",
+      title: "Read the arguments",
+      body: "Follow the essays from real engineering failure boundaries to lifecycle governance and accepted outcomes.",
+      href: "/essays/",
+      label: "Read the essays"
+    },
+    {
+      index: "03",
+      eyebrow: "INSPECT",
+      title: "Trace the proof path",
+      body: "See how MPLP, Cognitive OS, SoloCrew, and Validation Lab divide protocol, runtime, delivery, and evidence roles.",
+      href: "/projects/",
+      label: "Inspect the projects"
+    },
+    {
+      index: "04",
+      eyebrow: "CITE",
+      title: "Use the reference layer",
+      body: "Use stable concepts, definitions, evidence records, and research artifacts when you need a precise source.",
+      href: "/definitions/",
+      label: "Open definitions"
+    }
+  ],
+  readerRoleRoutes: [
+    {
+      role: "Builder",
+      question: "How do I make agent work repeatable?",
+      href: "/playbooks/harness-engineering-for-ai-agents/",
+      label: "Open the builder path"
+    },
+    {
+      role: "Architect",
+      question: "Where do protocol and runtime responsibilities meet?",
+      href: "/projects/mplp/",
+      label: "Open the architecture path"
+    },
+    {
+      role: "Governance",
+      question: "What must remain authorizable and reviewable?",
+      href: "/governance/",
+      label: "Open the governance path"
+    },
+    {
+      role: "Decision-maker",
+      question: "What is evidenced, and what is still pending?",
+      href: "/projects/",
+      label: "Open the decision path"
+    }
+  ],
   coreThesis: {
     eyebrow: "CORE_THESIS",
     title: "Execution is not Delivery.",
@@ -667,7 +783,7 @@ export const homepageContent = {
     headline: "Agentic Delivery Stack",
     summary: siteSemanticBaseline.agenticDeliveryDefinition,
     detail: siteSemanticBaseline.agenticDeliveryStackDefinition,
-    closingLine: "Secondary reference architecture. MPLP is the protocol path.",
+    closingLine: "Secondary reference architecture. MPLP is the protocol path; the remaining layers are runtime, delivery, and evidence surfaces.",
     core: {
       label: "CORE THESIS",
       title: "Delivery, not isolated execution",
@@ -700,6 +816,20 @@ export const homepageContent = {
         description: "Evidence packs, review, challenge, comparison, and ruleset-based adjudication."
       }
     ]
+  },
+  protocolPath: {
+    eyebrow: "PROTOCOL PATH",
+    title: "MPLP",
+    formalDefinition: siteSemanticBaseline.mplpFormalDefinition,
+    relation: siteSemanticBaseline.mplpProtocolRelation,
+    boundary: siteSemanticBaseline.mplpBoundary,
+    href: "/projects/mplp/"
+  },
+  proofPath: {
+    eyebrow: "PROOF PATH",
+    title: "Concrete delivery and evidence surfaces",
+    description: siteSemanticBaseline.referencePathDefinition,
+    href: "/projects/"
   },
   readingPath: [
     {
@@ -778,6 +908,12 @@ export interface ProjectEntry {
   name: string;
   slug: string;
   status: string;
+  maturity: "in-development" | "research" | "planned" | "evidence-surface";
+  deliveryState: string;
+  evidenceState: string;
+  externalEvidenceState: string;
+  nextDecision: string;
+  audiences: string[];
   summary: string;
   proof: string;
   proofRole: string;
@@ -788,7 +924,7 @@ export interface ProjectEntry {
   relatedIdeas?: string[];
   relatedConcepts?: string[];
   relatedEssays?: Array<{ href: string; label: string }>;
-  adjacentProofs?: string[];
+  adjacentProjects?: string[];
   boundary?: string;
   sourceLinks?: SourceAnchorLink[];
   evidence?: {
@@ -1865,22 +2001,58 @@ export const primaryNav = [
   { href: "/essays/", label: "Essays" },
   { href: "/research/", label: "Research" },
   { href: "/projects/", label: "Projects" },
-  { href: "/about/", label: "About" },
-  { href: "/newsletter/", label: "Newsletter" }
+  { href: "/about/", label: "About" }
 ];
 
 export const secondaryNav = [
   { href: "/concepts/", label: "Concepts" },
   { href: "/definitions/", label: "Definitions" },
   { href: "/evidence/", label: "Evidence" },
-  { href: "/theories/", label: "Ideas" },
   { href: "/governance/", label: "Governance" },
   { href: "/playbooks/", label: "Playbooks" },
+  { href: "/theories/", label: "Ideas" },
   { href: "/mapping/extended-ecosystem/", label: "Ecosystem Mapping" },
   { href: "/newsletter/", label: "Newsletter" },
   { href: "/contact/", label: "Contact" },
   { href: "/rss.xml", label: "RSS" }
 ];
+
+export const secondaryNavGroups = [
+  {
+    key: "reference",
+    label: "Reference",
+    items: [
+      { href: "/concepts/", label: "Concepts" },
+      { href: "/definitions/", label: "Definitions" },
+      { href: "/evidence/", label: "Evidence" }
+    ]
+  },
+  {
+    key: "methods",
+    label: "Methods",
+    items: [
+      { href: "/governance/", label: "Governance" },
+      { href: "/playbooks/", label: "Playbooks" }
+    ]
+  },
+  {
+    key: "context",
+    label: "Context",
+    items: [
+      { href: "/theories/", label: "Ideas" },
+      { href: "/mapping/extended-ecosystem/", label: "Ecosystem Mapping" }
+    ]
+  },
+  {
+    key: "utility",
+    label: "Utility",
+    items: [
+      { href: "/newsletter/", label: "Newsletter" },
+      { href: "/contact/", label: "Contact" },
+      { href: "/rss.xml", label: "RSS" }
+    ]
+  }
+] as const;
 
 export const pageRegistry = {
   about: {
@@ -2051,13 +2223,24 @@ export const theoryClusters = [
   }
 ];
 
+/**
+ * Historical idea slugs are accepted as inputs, but links must resolve to the
+ * canonical cluster anchor. Keeping the mapping in slug space prevents a
+ * display label from being accidentally emitted as a fragment identifier.
+ */
 export const theoryClusterAliases: Record<string, string> = {
-  "reliable-ai-agent-work-delivery": "Agentic Delivery",
-  "agent-governance": "Lifecycle Governance"
+  "reliable-ai-agent-work-delivery": "agentic-delivery",
+  "agent-governance": "lifecycle-governance",
+  "accepted-outcome": "evidence-accepted-outcome"
 };
 
+export function getTheoryClusterSlug(slug: string) {
+  return theoryClusters.some((cluster) => cluster.slug === slug) ? slug : theoryClusterAliases[slug] ?? slug;
+}
+
 export function getTheoryClusterName(slug: string) {
-  return theoryClusters.find((cluster) => cluster.slug === slug)?.name ?? theoryClusterAliases[slug] ?? slug;
+  const canonicalSlug = getTheoryClusterSlug(slug);
+  return theoryClusters.find((cluster) => cluster.slug === canonicalSlug)?.name ?? slug;
 }
 
 export const projects: ProjectEntry[] = [
@@ -2065,17 +2248,23 @@ export const projects: ProjectEntry[] = [
     name: "MPLP",
     slug: "mplp",
     status: "Lifecycle Protocol",
-    summary: "Lifecycle protocol path for Agentic Delivery.",
-    proof: siteSemanticBaseline.mplpDefinition,
+    maturity: "in-development",
+    deliveryState: "In development",
+    evidenceState: "Owned protocol and repository evidence",
+    externalEvidenceState: "External adoption evidence pending",
+    nextDecision: "Consolidate the v2.0 object model before widening the public protocol surface.",
+    audiences: ["Architect", "Governance", "Builder"],
+    summary: siteSemanticBaseline.mplpFormalDefinition,
+    proof: siteSemanticBaseline.mplpProtocolRelation,
     proofRole: "LIFECYCLE PROTOCOL PATH",
     whatItIs:
-      "MPLP is one protocol path for representing lifecycle responsibility objects around agentic work: intent, context, plan, confirmation, trace, evidence, accepted outcome, dispute, remediation, and closure.",
+      `${siteSemanticBaseline.mplpFormalDefinition} It represents lifecycle responsibility objects around agentic work: intent, context, plan, confirmation, trace, evidence, accepted outcome, dispute, remediation, and closure.`,
     problem:
       "Most agent systems still move from prompt to output without a disciplined way to describe lifecycle state, handoff boundaries, or completion artifacts.",
     proves:
       "MPLP shows how context, planning, confirmation, trace, governance, and evidence can be expressed as lifecycle protocol records so Agentic Delivery can become explicit, governable, and auditable. This is design-path evidence, not certification, legal compliance proof, regulator approval, required implementation, or procurement guidance.",
     shareDescription:
-      "MPLP is one lifecycle protocol path for making Agentic Delivery explicit, governable, and auditable. It is not certification, legal compliance proof, regulator approval, or a required implementation.",
+      `${siteSemanticBaseline.mplpFormalDefinition} It is one protocol path for making Agentic Delivery explicit, governable, and auditable. It is not certification, legal compliance proof, regulator approval, or a required implementation.`,
     relatedIdeas: ["protocol-engineering", "lifecycle-governance", "accountable-work"],
     relatedConcepts: [
       "ai-agent-lifecycle",
@@ -2098,7 +2287,7 @@ export const projects: ProjectEntry[] = [
         label: "MCP/A2A lifecycle governance essay"
       }
     ],
-    adjacentProofs: ["cognitive-os", "validation-lab"],
+    adjacentProjects: ["cognitive-os", "validation-lab"],
     boundary:
       "Boundary: MPLP is one protocol path for lifecycle responsibility semantics. It is not certification, legal compliance proof, regulator-approved guidance, a required implementation, procurement guidance, vendor endorsement, or an already established industry standard.",
     sourceLinks: [
@@ -2134,6 +2323,12 @@ export const projects: ProjectEntry[] = [
     name: "Cognitive OS",
     slug: "cognitive-os",
     status: "Runtime Path",
+    maturity: "in-development",
+    deliveryState: "Runtime path in development",
+    evidenceState: "Owned project evidence",
+    externalEvidenceState: "External runtime evidence pending",
+    nextDecision: "Bind runtime state and evidence capture to the protocol path without implying universal production readiness.",
+    audiences: ["Architect", "Builder"],
     summary: "Runtime path for protocol-native agent work.",
     proof: siteSemanticBaseline.cognitiveOSDefinition,
     proofRole: "RUNTIME PATH",
@@ -2142,7 +2337,8 @@ export const projects: ProjectEntry[] = [
       "A protocol vocabulary alone does not keep agent work reliable if runtime state, permissions, and working conditions are still implicit or weakly controlled.",
     proves:
       "Cognitive OS keeps the runtime claim bounded: it explores how state, activation, projection, constraints, and evidence capture can make protocol-native work operational.",
-    shareDescription: siteSemanticBaseline.cognitiveOSDefinition,
+    shareDescription:
+      `${siteSemanticBaseline.cognitiveOSDefinition} This remains an in-development runtime path; external runtime evidence is pending.`,
     relatedIdeas: ["agentic-delivery", "project-lifecycle-vs-task-execution", "protocol-engineering"],
     relatedConcepts: ["context-drift", "lifecycle-governed-agent-workflow", "lifecycle-evidence"],
     relatedEssays: [
@@ -2155,7 +2351,7 @@ export const projects: ProjectEntry[] = [
         label: "Lifecycle-governed workflow essay"
       }
     ],
-    adjacentProofs: ["mplp", "solocrew"],
+    adjacentProjects: ["mplp", "solocrew"],
     evidence: {
       repo: "https://github.com/Coregentis/Cognitive_OS",
       repoLabel: "Cognitive_OS"
@@ -2165,6 +2361,12 @@ export const projects: ProjectEntry[] = [
     name: "SoloCrew",
     slug: "solocrew",
     status: "Delivery Proof Path",
+    maturity: "in-development",
+    deliveryState: "Proof path in development",
+    evidenceState: "Owner project evidence",
+    externalEvidenceState: "External commercial proof pending",
+    nextDecision: "Document repeatable delivery loops before making a broader commercial claim.",
+    audiences: ["Builder", "Decision-maker"],
     summary: "Delivery proof path for one-person-company AI operations.",
     proof: siteSemanticBaseline.soloCrewDefinition,
     proofRole: "DELIVERY PROOF PATH",
@@ -2173,7 +2375,8 @@ export const projects: ProjectEntry[] = [
       "Systems ideas can remain abstract unless they show up inside a real operating loop that someone can use, inspect, and iterate on day to day.",
     proves:
       "SoloCrew tests how Agentic Delivery can become a concrete operating path for one-person-company work without claiming the category is closed or commercially proven.",
-    shareDescription: siteSemanticBaseline.soloCrewDefinition,
+    shareDescription:
+      `${siteSemanticBaseline.soloCrewDefinition} This remains an in-development delivery proof path; external commercial proof is pending.`,
     relatedIdeas: ["agentic-delivery", "accountable-work", "protocol-engineering"],
     relatedConcepts: ["agentic-delivery", "lifecycle-role-decomposition", "lifecycle-governed-agent-workflow", "confirmation-boundary"],
     relatedEssays: [
@@ -2186,7 +2389,7 @@ export const projects: ProjectEntry[] = [
         label: "Lifecycle-governed workflow essay"
       }
     ],
-    adjacentProofs: ["cognitive-os", "validation-lab"],
+    adjacentProjects: ["cognitive-os", "validation-lab"],
     evidence: {
       repo: "https://github.com/Coregentis/SoloCrew",
       repoLabel: "SoloCrew"
@@ -2196,6 +2399,12 @@ export const projects: ProjectEntry[] = [
     name: "Validation Lab",
     slug: "validation-lab",
     status: "Evidence Adjudication",
+    maturity: "evidence-surface",
+    deliveryState: "Adjudication surface in development",
+    evidenceState: "Owned project and evidence records",
+    externalEvidenceState: "External validation or certification not claimed",
+    nextDecision: "Keep adjudication deterministic and evidence-bound while the acceptance model evolves.",
+    audiences: ["Governance", "Decision-maker", "Architect"],
     summary: "MPLP evidence adjudication surface.",
     proof: siteSemanticBaseline.validationLabDefinition,
     proofRole: "EVIDENCE ADJUDICATION",
@@ -2223,7 +2432,7 @@ export const projects: ProjectEntry[] = [
         label: "Agentic Delivery project lifecycle essay"
       }
     ],
-    adjacentProofs: ["mplp", "solocrew"],
+    adjacentProjects: ["mplp", "solocrew"],
     boundary:
       "Boundary: Validation Lab is non-certifying evidence adjudication. It is not a certification body, regulator approval, legal compliance proof, vendor endorsement, procurement recommendation, or guarantee that an agent system is compliant.",
     sourceLinks: [
@@ -2251,7 +2460,7 @@ export const projects: ProjectEntry[] = [
   }
 ];
 
-export const proofGraphOrder = ["mplp", "cognitive-os", "solocrew", "validation-lab"] as const;
+export const projectPathOrder = ["mplp", "cognitive-os", "solocrew", "validation-lab"] as const;
 
 export function getProjectByName(name: string) {
   return projects.find((project) => project.name === name);
@@ -2261,10 +2470,10 @@ export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
 
-export function getProjectGraphPosition(slug: string) {
-  const index = proofGraphOrder.indexOf(slug as (typeof proofGraphOrder)[number]);
-  const previousSlug = index > 0 ? proofGraphOrder[index - 1] : null;
-  const nextSlug = index >= 0 && index < proofGraphOrder.length - 1 ? proofGraphOrder[index + 1] : null;
+export function getProjectPathPosition(slug: string) {
+  const index = projectPathOrder.indexOf(slug as (typeof projectPathOrder)[number]);
+  const previousSlug = index > 0 ? projectPathOrder[index - 1] : null;
+  const nextSlug = index >= 0 && index < projectPathOrder.length - 1 ? projectPathOrder[index + 1] : null;
 
   return {
     index,
@@ -2410,6 +2619,20 @@ export interface PlaybookEntry {
   title: string;
   seoTitle: string;
   seoDescription: string;
+  contentRole: "applied-playbook" | "vendor-support";
+  canonicalRoute: string;
+  canonicalParent: string;
+  primaryAudience: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  sourceRefs: PlaybookLink[];
+  distinctiveQuestion: string;
+  scenario: string;
+  inputs: string[];
+  outputs: string[];
+  failureModes: string[];
+  evidenceRequired: string[];
+  indexability: "index" | "noindex";
   definition: string;
   insufficiency: string;
   checklist: string[];
@@ -2423,27 +2646,6 @@ export interface PlaybookEntry {
   sourceDiscipline?: string;
 }
 
-const commonGaicPlaybookLinks: PlaybookLink[] = [
-  { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
-  { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
-  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
-  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
-  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
-  { href: "/concepts/rccs-m/", label: "RCCS-M" },
-  { href: "/concepts/alcs/", label: "ALCS" }
-];
-
-const commonEngineeringPracticeLinks: PlaybookLink[] = [
-  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
-  { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
-  { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
-  { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
-  { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
-  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-  { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
-];
-
 export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "ai-agent-rollback-verification",
@@ -2451,6 +2653,22 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     seoTitle: "AI Agent Rollback and Verification",
     seoDescription:
       "A lifecycle governance playbook for making AI agent rollback, verification, evidence chains, accepted outcomes, and remediation closure inspectable.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/ai-agent-rollback-verification/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "Engineering and assurance teams reviewing consequential agent changes",
+    sourceRefs: [
+      { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
+      { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    distinctiveQuestion: "Can a consequential agent action be unwound to a known responsibility and acceptance state?",
+    scenario: "A deployed agent action must be reversed after review finds that its accepted outcome no longer holds.",
+    inputs: ["Original intent and accepted outcome", "Rollback trigger and authority scope", "Action and verification evidence"],
+    outputs: ["Reversible lifecycle state", "Verified rollback record", "Remediation closure decision"],
+    failureModes: ["Retry is mistaken for rollback", "Artifact is reverted without restoring responsibility state", "Rollback evidence or closure owner is missing"],
+    evidenceRequired: ["Original action trace", "Rollback authorization", "Post-rollback verification", "Remediation closure record"],
+    indexability: "index",
     definition:
       "AI agent rollback and verification is the practice of making agent work reversible enough to inspect, dispute, remediate, and close without reducing rollback to a retry or a version-history restore.",
     insufficiency:
@@ -2479,8 +2697,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
-      ...commonEngineeringPracticeLinks,
+      { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
+      { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
       { href: "/projects/mplp/", label: "MPLP protocol path" }
     ],
     keywords: [
@@ -2498,6 +2717,22 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     seoTitle: "AI Coding Agent Auditability",
     seoDescription:
       "A lifecycle governance playbook for making AI coding agent work reviewable, reversible, test-evidenced, and accepted by accountable human roles.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/ai-coding-agent-auditability/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "Engineering leads and reviewers accepting coding-agent changes",
+    sourceRefs: [
+      { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+      { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    distinctiveQuestion: "Can a reviewer connect a coding agent's diff and tests to the authorized task and accepted outcome?",
+    scenario: "A coding agent opens a change that must be reviewed, tested, accepted, or rolled back without relying on chat history alone.",
+    inputs: ["Task intent and constraints", "Plan and code diff", "Test, typecheck, and build results"],
+    outputs: ["Reviewable change record", "Evidence-linked acceptance", "Rollback and remediation path"],
+    failureModes: ["Incidental edits fall outside the approved plan", "CI status is treated as acceptance", "Human acceptance and rollback scope are not recorded"],
+    evidenceRequired: ["Prompt or task record", "Diff and test artifacts", "Reviewer decision", "Rollback instructions"],
+    indexability: "index",
     definition:
       "AI coding agent auditability means coding-agent work remains inspectable from prompt or task intent through plan, code diff, tests, human review, accepted outcome, rollback path, and remediation.",
     insufficiency:
@@ -2526,14 +2761,11 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This playbook is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
       { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
       { href: "/concepts/verifiable-ai-agents/", label: "Verifiable AI Agents" },
-      { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
       { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-      { href: "/concepts/confirmation-boundary/", label: "Confirmation Boundary" }
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
     ],
     keywords: [
       "AI coding agent auditability",
@@ -2547,9 +2779,25 @@ export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "human-role-to-mas-responsibility",
     title: "Human Role to Multi-Agent Responsibility Mapping",
-    seoTitle: "Human Role to Multi-Agent Responsibility Mapping",
+    seoTitle: "Human Role to MAS Responsibility",
     seoDescription:
       "A governance playbook for mapping human roles, delegated authority, accepted outcome ownership, dispute handling, and remediation in multi-agent systems.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/human-role-to-mas-responsibility/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "Architects assigning responsibility across people and multi-agent workflows",
+    sourceRefs: [
+      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
+      { href: "/concepts/lifecycle-role-decomposition/", label: "Lifecycle Role Decomposition" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
+    ],
+    distinctiveQuestion: "Which human role remains accountable when work crosses agents, tools, projects, and review states?",
+    scenario: "A multi-agent workflow delegates a task across role boundaries and needs explicit ownership for acceptance, dispute, and remediation.",
+    inputs: ["Human role catalogue", "Delegation and authority scope", "Cross-agent handoff points"],
+    outputs: ["Responsibility map", "Named acceptance and remediation owners", "Reuse boundary record"],
+    failureModes: ["Human-in-the-loop is named without a role", "Agent labels are mistaken for accountability", "Dispute ownership disappears at handoff"],
+    evidenceRequired: ["Role-to-object mapping", "Delegation record", "Acceptance owner", "Dispute and remediation assignment"],
+    indexability: "index",
     definition:
       "Human role to multi-agent responsibility mapping is the practice of translating human work roles into lifecycle responsibility objects before agent roles execute or delegate work.",
     insufficiency:
@@ -2577,7 +2825,6 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This playbook is an analytical governance guide. It is not legal advice, certification, legal compliance proof, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
       { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
       { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
       { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
@@ -2595,9 +2842,24 @@ export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "openai-agent-governance",
     title: "Lifecycle Governance Checklist for OpenAI Agent Workflows",
-    seoTitle: "Lifecycle Governance Checklist for OpenAI Agent Workflows",
+    seoTitle: "OpenAI Agent Workflow Governance",
     seoDescription:
       "An independent lifecycle governance checklist for workflows built with OpenAI tooling, focused on intent, tool authority, evidence chains, accepted outcomes, rollback, remediation, and substitution.",
+    contentRole: "vendor-support",
+    canonicalRoute: "/governance/vendor-runtime-substitution-conformance/",
+    canonicalParent: "/governance/",
+    primaryAudience: "Teams comparing lifecycle controls across model or runtime substitutions",
+    sourceRefs: [
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
+      { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" }
+    ],
+    distinctiveQuestion: "Which lifecycle records must survive when an OpenAI-based workflow is substituted or reviewed?",
+    scenario: "A workflow built with OpenAI tooling changes model, tool, runtime, or harness and needs continuity evidence.",
+    inputs: ["Workflow intent and authority scope", "Substitution event", "Existing evidence and acceptance state"],
+    outputs: ["Vendor-neutral substitution questions", "Continuity evidence checklist", "Canonical conformance mapping"],
+    failureModes: ["Vendor name is treated as a governance control", "Product documentation substitutes for acceptance evidence", "Substitution impact is not recorded"],
+    evidenceRequired: ["Substitution record", "Authority approval", "Evidence continuity check", "Accepted outcome review"],
+    indexability: "noindex",
     definition:
       "Lifecycle governance for OpenAI agent workflows means applying lifecycle responsibility questions to workflows built with OpenAI tooling: what was intended, what tool authority was granted, what evidence was captured, what outcome was accepted, and how rollback or remediation would occur.",
     insufficiency:
@@ -2629,10 +2891,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     sourceDiscipline:
       "No current OpenAI feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
     ],
     keywords: [
       "OpenAI agent governance",
@@ -2646,9 +2907,24 @@ export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "anthropic-agent-governance",
     title: "Lifecycle Governance Checklist for Anthropic / Claude Agent Workflows",
-    seoTitle: "Lifecycle Governance Checklist for Anthropic / Claude Agent Workflows",
+    seoTitle: "Anthropic Agent Workflow Governance",
     seoDescription:
       "An independent lifecycle governance checklist for Anthropic / Claude agent workflows, focused on authority, evidence, accepted outcomes, rollback, remediation, and substitution.",
+    contentRole: "vendor-support",
+    canonicalRoute: "/governance/vendor-runtime-substitution-conformance/",
+    canonicalParent: "/governance/",
+    primaryAudience: "Teams comparing lifecycle controls across model or runtime substitutions",
+    sourceRefs: [
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
+    ],
+    distinctiveQuestion: "Which lifecycle records must survive when an Anthropic or Claude-based workflow is substituted or reviewed?",
+    scenario: "A workflow using Anthropic or Claude tooling changes model, tool, runtime, or harness and needs continuity evidence.",
+    inputs: ["Workflow intent and authority scope", "Substitution event", "Existing evidence and acceptance state"],
+    outputs: ["Vendor-neutral substitution questions", "Continuity evidence checklist", "Canonical conformance mapping"],
+    failureModes: ["Vendor name is treated as a governance control", "Product documentation substitutes for acceptance evidence", "Substitution impact is not recorded"],
+    evidenceRequired: ["Substitution record", "Authority approval", "Evidence continuity check", "Accepted outcome review"],
+    indexability: "noindex",
     definition:
       "Lifecycle governance for Anthropic / Claude agent workflows means applying lifecycle responsibility questions to workflows built with Anthropic or Claude tooling without treating model capability, prompting, or tool use as a complete governance layer.",
     insufficiency:
@@ -2680,10 +2956,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     sourceDiscipline:
       "No current Anthropic or Claude feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
     ],
     keywords: [
       "Anthropic agent governance",
@@ -2697,9 +2972,24 @@ export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "deepseek-agent-governance",
     title: "Lifecycle Governance Checklist for DeepSeek-Based Agent Workflows",
-    seoTitle: "Lifecycle Governance Checklist for DeepSeek-Based Agent Workflows",
+    seoTitle: "DeepSeek Agent Workflow Governance",
     seoDescription:
       "An independent lifecycle governance checklist for DeepSeek-based agent workflows, focused on lifecycle responsibility, evidence, accepted outcomes, rollback, remediation, and substitution.",
+    contentRole: "vendor-support",
+    canonicalRoute: "/governance/vendor-runtime-substitution-conformance/",
+    canonicalParent: "/governance/",
+    primaryAudience: "Teams comparing lifecycle controls across model or runtime substitutions",
+    sourceRefs: [
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    distinctiveQuestion: "Which lifecycle records must survive when a DeepSeek-based workflow is substituted or reviewed?",
+    scenario: "A workflow using DeepSeek tooling or models changes its model, tool, runtime, or harness and needs continuity evidence.",
+    inputs: ["Workflow intent and authority scope", "Substitution event", "Existing evidence and acceptance state"],
+    outputs: ["Vendor-neutral substitution questions", "Continuity evidence checklist", "Canonical conformance mapping"],
+    failureModes: ["Model selection is treated as a governance control", "Output review substitutes for lifecycle evidence", "Substitution impact is not recorded"],
+    evidenceRequired: ["Substitution record", "Authority approval", "Evidence continuity check", "Accepted outcome review"],
+    indexability: "noindex",
     definition:
       "Lifecycle governance for DeepSeek-based agent workflows means applying lifecycle responsibility questions to workflows that use DeepSeek tooling or models without treating model selection as a complete governance answer.",
     insufficiency:
@@ -2731,10 +3021,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     sourceDiscipline:
       "No current DeepSeek feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-      { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" }
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
     ],
     keywords: [
       "DeepSeek agent governance",
@@ -2748,9 +3037,24 @@ export const appliedPlaybooks: PlaybookEntry[] = [
   {
     slug: "kimi-agent-governance",
     title: "Lifecycle Governance Checklist for Kimi-Based Agent Workflows",
-    seoTitle: "Lifecycle Governance Checklist for Kimi-Based Agent Workflows",
+    seoTitle: "Kimi Agent Workflow Governance",
     seoDescription:
       "An independent lifecycle governance checklist for Kimi-based agent workflows, focused on evidence chains, authority boundaries, accepted outcomes, rollback, remediation, and substitution.",
+    contentRole: "vendor-support",
+    canonicalRoute: "/governance/vendor-runtime-substitution-conformance/",
+    canonicalParent: "/governance/",
+    primaryAudience: "Teams comparing lifecycle controls across model or runtime substitutions",
+    sourceRefs: [
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
+      { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" }
+    ],
+    distinctiveQuestion: "Which lifecycle records must survive when a Kimi-based workflow is substituted or reviewed?",
+    scenario: "A workflow using Moonshot AI or Kimi tooling changes model, tool, runtime, or harness and needs continuity evidence.",
+    inputs: ["Workflow intent and authority scope", "Substitution event", "Existing evidence and acceptance state"],
+    outputs: ["Vendor-neutral substitution questions", "Continuity evidence checklist", "Canonical conformance mapping"],
+    failureModes: ["Vendor name is treated as a governance control", "Workflow usefulness is mistaken for accountability", "Substitution impact is not recorded"],
+    evidenceRequired: ["Substitution record", "Authority approval", "Evidence continuity check", "Accepted outcome review"],
+    indexability: "noindex",
     definition:
       "Lifecycle governance for Kimi-based agent workflows means applying lifecycle responsibility questions to workflows built with Moonshot AI / Kimi tooling without treating model use or workflow execution as complete governance.",
     insufficiency:
@@ -2782,10 +3086,9 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     sourceDiscipline:
       "No current Moonshot AI or Kimi feature claims are cited or relied on in this page; vendor-specific details are intentionally avoided.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
+      { href: "/governance/vendor-runtime-substitution-conformance/", label: "Vendor and Runtime Substitution Conformance" },
       { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" }
     ],
     keywords: [
       "Kimi agent governance",
@@ -2802,6 +3105,22 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     seoTitle: "Harness Engineering for AI Agents",
     seoDescription:
       "A definition-first playbook for Harness Engineering: wrapping AI agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, deterministic delivery, and accepted outcome.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/harness-engineering-for-ai-agents/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "Runtime and platform engineers designing agent execution boundaries",
+    sourceRefs: [
+      { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
+      { href: "/concepts/rollbackable-agent-workflows/", label: "Rollbackable Agent Workflows" },
+      { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" }
+    ],
+    distinctiveQuestion: "What execution boundaries must surround an agent so intent becomes reviewable, reversible delivery?",
+    scenario: "A runtime team wraps model calls and tools with context, authority, evidence, confirmation, rollback, and acceptance state.",
+    inputs: ["Agent intent and context", "Tool and authority policy", "Plan, confirmation, and trace hooks"],
+    outputs: ["Harness boundary specification", "Evidence capture points", "Rollback and acceptance transitions"],
+    failureModes: ["Prompt quality is treated as execution governance", "Tool authority is implicit", "Runtime state cannot be replayed or remediated"],
+    evidenceRequired: ["Context and authority configuration", "Plan/confirm/trace records", "Rollback verification", "Accepted outcome record"],
+    indexability: "index",
     definition:
       "Harness Engineering is the discipline of wrapping agent execution with lifecycle boundaries: context boundary, authority boundary, evidence capture, plan/confirm/trace records, rollback, remediation, configuration, and accepted outcome. It is the execution boundary layer behind Deterministic Delivery, not a replacement for prompt quality.",
     insufficiency:
@@ -2831,13 +3150,11 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
-      ...commonEngineeringPracticeLinks,
       { href: "/playbooks/prompt-engineering-vs-harness-engineering/", label: "Prompt Engineering vs Harness Engineering" },
       { href: "/playbooks/agentic-delivery-architecture-checklist/", label: "Agentic Delivery Architecture Checklist" },
       { href: "/concepts/lifecycle-responsibility-objects/", label: "Lifecycle Responsibility Objects" },
-      { href: "/projects/mplp/", label: "MPLP protocol path" },
-      { href: "/projects/cognitive-os/", label: "Cognitive OS runtime path" }
+      { href: "/projects/cognitive-os/", label: "Cognitive OS runtime path" },
+      { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" }
     ],
     keywords: [
       "Harness Engineering",
@@ -2855,6 +3172,22 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     seoTitle: "Prompt Engineering vs Harness Engineering",
     seoDescription:
       "A lifecycle governance playbook explaining why prompt engineering controls intent expression while Harness Engineering controls execution boundaries, evidence, rollback, and accepted outcome.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/prompt-engineering-vs-harness-engineering/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "AI engineering leads separating prompt design from runtime controls",
+    sourceRefs: [
+      { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" }
+    ],
+    distinctiveQuestion: "Which responsibilities belong in prompts, and which must be enforced by the execution harness?",
+    scenario: "An AI team reviews a workflow where prompt instructions are strong but tool authority, evidence, rollback, and acceptance remain implicit.",
+    inputs: ["Prompt intent and constraints", "Harness policy and tool scope", "Required evidence and acceptance criteria"],
+    outputs: ["Prompt-versus-harness responsibility split", "Control placement decisions", "Evidence and rollback requirements"],
+    failureModes: ["Prompt text is treated as an audit record", "Acceptance is delegated to model output", "Rollback is attempted through another prompt"],
+    evidenceRequired: ["Prompt version and intent", "Harness policy snapshot", "Tool authorization trace", "Acceptance and remediation record"],
+    indexability: "index",
     definition:
       "Prompt Engineering improves how intent is expressed to a model. Harness Engineering governs the execution boundary around agent work: context, authority, tools, evidence, plan/confirm/trace, rollback, remediation, configuration, and accepted outcome.",
     insufficiency:
@@ -2884,11 +3217,10 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This playbook is an author-analytical governance guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, procurement recommendation, or a claim that prompt engineering is obsolete.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
-      ...commonEngineeringPracticeLinks,
       { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" },
       { href: "/concepts/ai-agent-lifecycle/", label: "AI Agent Lifecycle" },
-      { href: "/projects/mplp/", label: "MPLP protocol path" }
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
+      { href: "/concepts/lifecycle-evidence/", label: "Lifecycle Evidence" }
     ],
     keywords: [
       "Prompt Engineering vs Harness Engineering",
@@ -2906,6 +3238,22 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     seoTitle: "Agentic Delivery Architecture Checklist",
     seoDescription:
       "A practical architecture checklist for accountable AI agent workflows: intent, context, authority, tools, evidence, accepted outcome, rollback, substitution, and human responsibility.",
+    contentRole: "applied-playbook",
+    canonicalRoute: "/playbooks/agentic-delivery-architecture-checklist/",
+    canonicalParent: "/playbooks/",
+    primaryAudience: "Solution architects reviewing agentic delivery designs before implementation",
+    sourceRefs: [
+      { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
+      { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
+      { href: "/concepts/lifecycle-role-decomposition/", label: "Lifecycle Role Decomposition" }
+    ],
+    distinctiveQuestion: "Does the proposed agent architecture make every responsibility boundary explicit before implementation?",
+    scenario: "An architecture review checks a planned agent workflow for context, authority, tools, evidence, acceptance, rollback, substitution, and human ownership.",
+    inputs: ["Architecture diagram and workflow scope", "Role and authority assignments", "Evidence, acceptance, and rollback criteria"],
+    outputs: ["Boundary-by-boundary review record", "Open risk and remediation list", "Implementation acceptance criteria"],
+    failureModes: ["Execution graph is mistaken for accountability", "Cross-project context is unbounded", "No owner is assigned for acceptance or remediation"],
+    evidenceRequired: ["Architecture decision record", "Authority and context matrix", "Evidence plan", "Review disposition"],
+    indexability: "index",
     definition:
       "The Agentic Delivery Architecture Checklist is a practical checklist for designing agent workflows toward accountable delivery. It turns Deterministic Delivery into architecture questions across intent, context, authority, tools, evidence, accepted outcome, rollback, substitution, and human responsibility.",
     insufficiency:
@@ -2939,8 +3287,6 @@ export const appliedPlaybooks: PlaybookEntry[] = [
     boundary:
       "This checklist is an author-analytical architecture guide. It is not legal advice, legal compliance proof, certification, regulator-approved guidance, vendor ranking, or procurement recommendation.",
     relatedLinks: [
-      ...commonGaicPlaybookLinks,
-      ...commonEngineeringPracticeLinks,
       { href: "/playbooks/harness-engineering-for-ai-agents/", label: "Harness Engineering for AI Agents" },
       { href: "/playbooks/prompt-engineering-vs-harness-engineering/", label: "Prompt Engineering vs Harness Engineering" },
       { href: "/concepts/lifecycle-role-decomposition/", label: "Lifecycle Role Decomposition" },

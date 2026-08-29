@@ -11,9 +11,28 @@
   <meta name="citation_author" content="Wong, Jearon">
   <meta name="citation_publication_date" content="2026/05">
   <meta name="citation_technical_report_number" content="AIIRWP-2026-v1.0">
+  <meta name="citation_series" content="Agentic Lifecycle Governance Industry Series">
+  <meta name="document_version" content="v1.0">
+  <meta name="publication_status" content="public-research-edition">
   <meta name="citation_language" content="en">
   <meta name="keywords" content="Agentic AI Insurability, AI Risk Transfer, Insured Legal Subject, Agentic Risk Object, Claim Evidence Chain, Lifecycle Evidence, Underwriting Reviewability, Agentic Lifecycle Governance, AI Agent Lifecycle">
   <link rel="canonical" href="https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Agentic AI Insurability &amp; Risk Transfer White Paper 2026">
+  <meta property="og:description" content="A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer">
+  <meta property="og:url" content="https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html">
+  <meta property="og:site_name" content="Jearon Wong - Protocol Architect for the Agent Era">
+  <meta property="og:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+  <meta property="og:image:alt" content="Agentic AI Insurability &amp; Risk Transfer White Paper 2026 - Jearon Wong">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jearonwong">
+  <meta name="twitter:creator" content="@jearonwong">
+  <meta name="twitter:title" content="Agentic AI Insurability &amp; Risk Transfer White Paper 2026">
+  <meta name="twitter:description" content="A Lifecycle Evidence Guide for Underwriting, Claims, and Enterprise Risk Transfer">
+  <meta name="twitter:image" content="https://www.jearonwong.com/social/jearonwong-og.png">
+  <meta name="twitter:image:alt" content="Agentic AI Insurability &amp; Risk Transfer White Paper 2026 - Jearon Wong">
   <title>Agentic AI Insurability &amp; Risk Transfer White Paper 2026 - AIIRWP-2026-v1.0</title>
   <script type="application/ld+json">
 {
@@ -258,6 +277,10 @@ blockquote {
   max-width: 100%;
   border: 1px solid var(--grid);
   background: #fff;
+}
+.table-scroll[data-scroll-region="table"]:focus-visible {
+  outline: 2px solid var(--registry);
+  outline-offset: 3px;
 }
 .table-caption {
   padding: 0.55rem 0.65rem;
@@ -629,7 +652,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The Agentic AI Auditability &#x26; Assurance White Paper 2026, asks how agentic systems become auditable. It develops the Audit Evidence Chain and related auditability concepts. That matters because logs alone are not enough. A log can show that an API was called. It may not show whether the call was authorized, whether the output was accepted, whether a human reviewer understood the boundary, whether a vendor dependency changed, whether an exception was escalated, or whether remediation closed the risk. [9]</p>
 <p>this paper translates those ideas into insurability reasoning, but only after starting with the insurance market. That sequence is deliberate. If the paper began with governance objects, it would risk sounding like it is declaring insurance categories by theory. It does not. The market reality comes first: some AI risks are covered, some bounded, some silent, some cyber-linked, some warranty-like, some aggregation-sensitive, and some not yet cleanly named. Only after that reality is visible does compliance and auditability vocabulary become useful.</p>
 <p>The relationship can be summarized this way:</p>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Layer</th>
@@ -701,7 +724,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The second principle is that evidence must be separated from conclusion. Logs, traces, prompts, outputs, API records, and cloud usage records may be useful. They do not by themselves determine coverage, causation, liability, or claim outcome. They are inputs into reconstruction. For an agentic workflow, useful evidence must connect what happened technically to who had authority, who reviewed or accepted the outcome, which dependency participated, what policy line is implicated, and what remediation closed or failed to close the event. NIST and CISA incident response materials support the importance of structured timelines, response coordination, containment, recovery, and remediation records, but they do not turn those records into claim approval. [10] [11]</p>
 <p>The third principle is that market signal is not market consensus. A product page, filing description, broker report, or industry research paper can show that a category is emerging or being bounded. It cannot be stretched into a universal statement that AI is covered, excluded, insurable, uninsurable, accepted, or rejected. The market is not making one decision about AI. It is sorting AI into narrower objects.</p>
 <p>That sorting changes enterprise preparation. If a company wants to discuss risk transfer for an agentic workflow, it should not begin with a slide listing model names. It should begin with the insurance transfer question stack:</p>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Question</th>
@@ -760,7 +783,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Those are not one question. They are three different insurance conversations. The fact that each contains "AI" does not make them interchangeable.</p>
 <p>The following matrix is the evidence spine for Part I. It is intentionally framed as signal, not conclusion.</p>
 <h4 class="table-caption" id="t-02-01---ai-insurance-split-market-signal-matrix">T-02-01 - AI Insurance Split-Market Signal Matrix</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Market signal</th>
@@ -942,7 +965,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Workflow completion is also insufficient. Enterprise software loves completed states: ticket closed, refund processed, email sent, pull request merged, alert resolved. Insurance review cares less about whether the workflow completed and more about whether the completed work can be reconstructed as a loss-relevant object. A workflow can complete successfully and still create the wrong legal, financial, professional, cyber, or customer consequence.</p>
 <p>The Insurable Agentic Risk Object therefore works as a bridge. It sits between market categories and technical systems. It does not replace a policy. It helps the policy conversation ask better questions.</p>
 <h4 class="table-caption" id="t-04-01---insurance-object-shift">T-04-01 - Insurance Object Shift</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Traditional insurance object</th>
@@ -1016,7 +1039,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The compliance white paper's responsibility object and authority boundary concepts help name those states. the auditability and assurance white paper's audit evidence chain helps keep records from becoming disconnected artifacts. But again, these are analytical supports, not insurance standards. They help the risk reviewer ask whether continuity exists. They do not determine coverage, liability, claim outcome, or premium. [20] [21]</p>
 <p>The responsibility map should include humans, agents, tools, vendors, processors, projects, and remediation owners. It should also include the absence of a responsible role. An empty cell is not a formatting problem. It is a risk signal.</p>
 <h4 class="table-caption" id="t-05-01---responsibility-continuity-map">T-05-01 - Responsibility Continuity Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Lifecycle transition</th>
@@ -1107,7 +1130,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Ninth is substitution conformance. If a model, tool, vendor, runtime, data source, or cloud dependency changes, the evidence should show whether the work remained within the same authority, evidence, privacy, and accepted-outcome boundaries. A silent substitution can make a previously reviewed workflow a different risk object.</p>
 <p>Logs and traces appear in several categories, but they are not the category. A trace without authority is sequence without permission. A log without role mapping is activity without responsibility. A runtime dashboard without accepted outcome is motion without business consequence. A tool-call record without remediation history is action without closure.</p>
 <h4 class="table-caption" id="t-06-01---underwriting-evidence-request-model">T-06-01 - Underwriting Evidence Request Model</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Evidence category</th>
@@ -1233,7 +1256,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Fifth: what evidence links the sequence? The pack should connect prompts, outputs, logs, tool calls, approvals, vendor records, data snapshots, exception history, incident timeline, and remediation records. It should also identify missing evidence.</p>
 <p>Sixth: what privacy treatment applies? Claim evidence can include sensitive customer data, employee records, proprietary models, privileged communications, source code, security secrets, and vendor confidential information. A useful pack needs redaction, access controls, and source pointers, not uncontrolled data dumping.</p>
 <h4 class="table-caption" id="t-07-01---claim-evidence-pack-components">T-07-01 - Claim Evidence Pack Components</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Component</th>
@@ -1351,7 +1374,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The tenth pattern is no dispute or remediation closure. The enterprise notices a failure, patches something, and moves on. Months later it cannot show who owned the fix, whether it was retested, whether residual risk was accepted, whether the workflow was reauthorized, or whether the customer impact was closed. The loss may be over operationally, but not reconstructable.</p>
 <p>These patterns often appear together. Fully opaque execution tends to create weak evidence chains. Weak evidence chains make human responsibility harder to show. Weak responsibility makes tool-action consequences harder to explain. Tool-action ambiguity makes claim reconstruction harder. Poor remediation closure makes renewal evidence weaker.</p>
 <h4 class="table-caption" id="t-08-01---hard-to-insure-agentic-risk-patterns">T-08-01 - Hard-to-Insure Agentic Risk Patterns</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Pattern</th>
@@ -1466,7 +1489,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The sixteenth is incident, dispute, and remediation closure. A loss event does not end when a ticket is closed. Reviewers may need to know what was contained, what was fixed, who rechecked it, whether the workflow was reauthorized, what residual risk remained, and whether affected parties or business processes were closed out.</p>
 <p>NIST AI RMF and NAIC insurer-governance materials are useful context here because they show the broader movement toward governance, mapping, risk management, documentation, controls, validation, and third-party oversight. They do not turn MROs into insurance standards, and they do not prove coverage or underwriting acceptance. [29] [30]</p>
 <h4 class="table-caption" id="t-09-01---mro-to-insurability-translation-map">T-09-01 - MRO-to-Insurability Translation Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>MRO</th>
@@ -1614,7 +1637,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Remediation closure becomes the post-loss state. The record should show what was contained, fixed, retested, reauthorized, monitored, or left open. It should also show who accepted residual risk.</p>
 <p>Privacy treatment becomes part of evidence quality. A claim evidence chain that exposes unnecessary personal data, secrets, privileged materials, or vendor confidential information can create a second risk problem. Evidence must be reconstructable and controlled.</p>
 <h4 class="table-caption" id="t-10-01---auditability-to-claim-reconstruction-crosswalk">T-10-01 - Auditability-to-Claim-Reconstruction Crosswalk</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>the auditability and assurance white paper auditability concept</th>
@@ -1704,7 +1727,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Property and business interruption may appear when agentic systems affect operational continuity, cloud services, supply chain, code deployment, or physical systems. Beazley and cloud-related cyber examples show that AI/cloud services can enter product-specific cyber or business interruption contexts. Those examples should not be generalized beyond their terms.</p>
 <p>The same event can straddle several of these lines. That is why this paper insists on the risk object. A line-of-business question cannot be answered if the enterprise cannot name the work unit, authority, tool action, accepted outcome, affected data, external consequence, dependency chain, incident timeline, remediation closure, and missing evidence.</p>
 <h4 class="table-caption" id="t-11-01---insurance-line-ambiguity-map">T-11-01 - Insurance Line Ambiguity Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Potential insurance line</th>
@@ -1798,7 +1821,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Reinsurers care about aggregation because an apparently diversified book can contain hidden common dependencies. Enterprises should care for the same reason inside the firm. A risk leader may think ten workflows create ten separate exposures. In practice, they may create one concentrated dependency repeated ten times.</p>
 <p>Dependency mapping and substitution conformance make aggregation visible. They do not solve it automatically. A dependency map should identify shared models, runtime layers, cloud services, APIs, tool connectors, data sources, processors, subprocessors, prompt libraries, authentication services, and evidence repositories. Substitution records should show when those dependencies changed, which work units were affected, and whether authority, privacy, evidence, and accepted-outcome boundaries remained intact.</p>
 <h4 class="table-caption" id="t-12-01---agentic-aggregation-risk-map">T-12-01 - Agentic Aggregation Risk Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Aggregation vector</th>
@@ -1895,7 +1918,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Third-party evidence creates a special problem. A vendor may hold model logs, runtime records, security events, cloud usage, monitoring data, or subprocessor details. The enterprise may need those records for reconstruction but may not have them by default. Processor and subprocessor mapping therefore belongs in the insurance evidence conversation. It is not only a privacy or procurement exercise.</p>
 <p>Privacy-preserving third-party validation may become useful when direct disclosure is too sensitive. A reviewer may need assurance that evidence exists and supports a fact without receiving raw data. That can mean selective disclosure, controlled review rooms, redacted extracts, attestations limited to existence and integrity, or source-pointer verification. This paper does not define a validation standard. It identifies the evidence problem.</p>
 <h4 class="table-caption" id="t-13-01---insurance-evidence-vs-privacy-control-map">T-13-01 - Insurance Evidence vs Privacy Control Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Evidence need</th>
@@ -2008,7 +2031,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>A broker may use it to translate enterprise AI operations into risk-transfer language. A risk engineer may use it to understand exposures, controls, dependencies, and reconstruction gaps. An underwriter may use it to ask better questions, subject to that insurer's own appetite, forms, guidelines, and judgment. A reinsurer may use it to see dependency concentration and aggregation shapes. Counsel may use it to preserve boundaries between evidence, privilege, legal advice, and coverage review. Enterprise risk teams may use it to make internal risk ownership visible.</p>
 <p>None of those uses means the architecture is required, accepted, sufficient, or price-relevant. source research supports the general proposition that AI risk review may need exposure inventory, authority scope, dependencies, and evidence readiness, drawing on Aon, NAIC, NIST AI RMF, Geneva Association, Swiss Re, QBE, the compliance white paper, and the auditability and assurance white paper. The exact use by any insurer remains external. [43] [44] [45]</p>
 <h4 class="table-caption" id="t-14-01---underwriting-evidence-architecture-components">T-14-01 - Underwriting Evidence Architecture Components</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Component</th>
@@ -2113,7 +2136,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>This inventory helps risk discussion because it separates exposure units before they are bundled into broad claims like "AI use," "GenAI," or "agent platform." It also connects back to the earlier insurable agentic risk object and insurance line ambiguity analysis. The inventory tells the reviewer which object is being discussed and what kinds of line questions may arise.</p>
 <p>It still does not create insurability. A clean inventory can support discussion, but actual insurance outcomes depend on policy language, underwriting appetite, limits, exclusions, loss history, controls, insured profile, jurisdiction, and the facts of the event.</p>
 <h4 class="table-caption" id="t-15-01---agentic-exposure-inventory-template">T-15-01 - Agentic Exposure Inventory Template</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Exposure dimension</th>
@@ -2218,7 +2241,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The twelfth is cross-project reuse. A component reused across many contexts can spread exposure. A model or tool that was reviewed for one workflow may not be reviewable in another without reauthorization. Reuse matters because it changes object boundaries.</p>
 <p>These variables are still incomplete without policy language, line of coverage, insured profile, jurisdiction, market appetite, loss history, controls, exclusions, limits, sublimits, deductibles, retention, and the underwriter's own framework. A variable dictionary is therefore only a way to organize the conversation.</p>
 <h4 class="table-caption" id="t-16-01---non-pricing-exposure-variables">T-16-01 - Non-Pricing Exposure Variables</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Variable</th>
@@ -2335,7 +2358,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The useful frame is before execution, during execution, and after execution.</p>
 <p>Before execution, the enterprise defines work unit, authority, role, data, tool, dependency, and evidence expectations. During execution, it records action, confirmation, exception, and outcome. After execution, it records incident, remediation, substitution, closure, and renewal change. This dynamic lifecycle record is what keeps the reviewed object from going stale.</p>
 <h4 class="table-caption" id="t-17-01---renewal-and-change-evidence-register">T-17-01 - Renewal and Change Evidence Register</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Change category</th>
@@ -2438,7 +2461,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The tenth is a dependency map. This should show shared models, cloud services, APIs, identity providers, data processors, tool connectors, evidence systems, and vendors across work units. For reinsurers and portfolio-minded reviewers, dependency concentration can be as important as individual workflow design.</p>
 <p>The eleventh is a missing-evidence register. This is where the enterprise shows intellectual honesty. It should say what is missing, why, who controls it, whether it is recoverable, whether it is redacted, whether retention expired, and whether remediation is planned.</p>
 <h4 class="table-caption" id="t-18-01---optional-reviewer-evidence-request-structure">T-18-01 - Optional Reviewer Evidence Request Structure</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Request area</th>
@@ -2558,7 +2581,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The tenth layer is remediation action and closure state. Was the workflow disabled, permission changed, account corrected, affected party notified, customer reimbursed, code rolled back, model endpoint reverted, prompt updated, human review strengthened, or vendor ticket resolved? Was the work unit retested and reauthorized? Was residual risk accepted? Closure is a lifecycle state, not a settlement.</p>
 <p>The final layer is missing evidence. Missing evidence should not be hidden inside narrative. It should be named. Vendor-held logs, expired retention, redacted records without source pointers, missing approval screens, overwritten prompts, unjoined payment records, unavailable cloud usage data, and unclear version history all shape what can and cannot be reconstructed.</p>
 <h4 class="table-caption" id="t-19-01---agentic-claim-reconstruction-map">T-19-01 - Agentic Claim Reconstruction Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Reconstruction layer</th>
@@ -2673,7 +2696,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>An evidence gap register should therefore include the missing item, why it is missing, who may control it, whether it is recoverable, whether the absence affects reconstruction, whether a privacy or privilege constraint applies, and whether future remediation is planned. The register should not be written as an accusation. It should be written as a map of uncertainty.</p>
 <p>NIST and CISA sources support the value of incident tracking, coordination, recovery, and remediation records. SEC cyber disclosure rules support governance and material incident disclosure context for public companies, but they do not turn an evidence gap into a securities, coverage, or liability conclusion. [49] [50] [52]</p>
 <h4 class="table-caption" id="t-20-01---dispute-and-evidence-gap-register">T-20-01 - Dispute and Evidence Gap Register</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Dispute type</th>
@@ -2775,7 +2798,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The eighth boundary is privacy or regulatory investigation versus operational event. A prompt, memory, log, tool payload, customer record, employee record, or evidence pack may contain personal or regulated data. The claim file may need source pointers and redaction controls, but privacy/legal conclusions remain outside this paper.</p>
 <p>Aon materials support the general reality that AI risk can touch cyber, E&#x26;O, professional liability, crime, D&#x26;O, governance, employment, and other enterprise risk lines. source research on silent exposure uses that market context to explain why line ambiguity matters. Neither source permits a universal coverage conclusion. [53] [56]</p>
 <h4 class="table-caption" id="t-21-01---coverage-boundary-question-map">T-21-01 - Coverage Boundary Question Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Boundary question</th>
@@ -2878,7 +2901,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The ninth stage is retest and reauthorization. A fix should not only be made. It should be tested against the relevant work-unit scenario and reauthorized by an accountable owner. Reauthorization is not regulatory approval or insurer approval. It is an internal lifecycle state.</p>
 <p>The tenth stage is residual-risk acceptance. Some risk remains after remediation. The question is whether the organization names it, owns it, monitors it, and carries it into renewal and future review.</p>
 <h4 class="table-caption" id="t-22-01---post-loss-remediation-evidence-map">T-22-01 - Post-Loss Remediation Evidence Map</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Remediation stage</th>
@@ -2994,7 +3017,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The ninth input is the reviewer-facing request package. The next time a broker, risk engineer, counsel, internal reviewer, or underwriter asks for evidence, the package should reflect what the organization learned. It should not be a static template that ignores observed failure.</p>
 <p>Different users will use this feedback differently. Enterprise risk teams use it to own the internal risk story. Engineering teams use it to improve controls and evidence capture. Counsel uses it to preserve legal boundaries. Brokers and risk engineers may use it to frame future conversations. Underwriters may ask their own questions under their own forms, appetite, and judgment. None of those uses converts the loop into a market-wide standard.</p>
 <h4 class="table-caption" id="t-23-01---claims-to-renewal-feedback-loop">T-23-01 - Claims-to-Renewal Feedback Loop</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Post-loss signal</th>
@@ -3104,7 +3127,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The final layer is renewal and change feedback. Agentic risk changes. The object should carry what has changed: new tools, new authority, changed model/vendor/runtime, changed data classes, changed human review, incidents, near misses, remediation, unresolved gaps, and dependency concentration. The feedback loop makes the object current enough for future review.</p>
 <p>This model differs from model governance because it is not centered on a model asset. It differs from cyber event logging because it is not centered only on access, credential, network, or resource-use traces. It differs from raw traces because it gives those traces responsibility semantics. It differs from an audit evidence chain because it is oriented toward insurability reasoning, not audit sufficiency. It differs from an underwriting checklist because it is not a required submission model. It differs from a claim file because it does not decide notice, coverage, causation, damages, settlement, or claim payment.</p>
 <h4 class="table-caption" id="t-24-01---agentic-insurability-object-model">T-24-01 - Agentic Insurability Object Model</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Object layer</th>
@@ -3212,7 +3235,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The compliance and auditability white papers provide analytical foundations for this reasoning. The compliance white paper helps describe lifecycle governance objects, authority, evidence partitioning, accepted outcome, substitution, and remediation closure. The auditability and assurance white paper helps distinguish raw traces from evidence chains and auditability from sufficiency. Neither converts a reasoning state into insurance proof. [57]</p>
 <p>External market and governance sources explain why this matters. Public insurance sources show a split market; governance and incident sources show the need for documentation, controls, and reconstruction; aggregation sources show why dependency visibility matters. They do not endorse this model or turn it into a market standard. [58] [59] [60] [61]</p>
 <h4 class="table-caption" id="t-25-01---non-scoring-insurability-reasoning-model">T-25-01 - Non-Scoring Insurability Reasoning Model</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Reasoning state</th>
@@ -3281,7 +3304,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>For claims and incident-response teams, the takeaway is continuity. A technical timeline, incident ticket, vendor notice, security alert, or model trace may be necessary. None is sufficient alone. Claim reconstruction needs the bounded work unit and its responsibility semantics. Incident response sources support the importance of structured response, recovery, remediation, and tracking, but they do not decide insurance outcomes. [60]</p>
 <p>For implementation leaders, the takeaway is architecture. If agentic work is designed without authority boundaries, evidence pointers, privacy profiles, dependency records, accepted outcome states, exception paths, remediation closure, and change registers, the insurance-facing review problem is already being built into the system.</p>
 <h4 class="table-caption" id="t-26-01---audience-takeaway-matrix">T-26-01 - Audience Takeaway Matrix</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Audience</th>
@@ -3393,7 +3416,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>The compliance and auditability white papers are analytical foundations, not external insurance facts. The compliance white paper helps describe lifecycle governance objects. The auditability and assurance white paper helps describe audit evidence chains. This paper uses both to build insurability reasoning. It does not say the compliance white paper or the auditability and assurance white paper makes a system insurable, coverage-ready, underwriting-ready, claim-ready, certified, insurer accepted, or legally sufficient. [57]</p>
 <p>The model names also require discipline. Agentic Insurability Object Model and Agentic Insurability Reasoning Model are authored analytical constructs. They can organize questions. They cannot score, certify, approve, validate, bind, insure, price, settle, or rank.</p>
 <h4 class="table-caption" id="t-27-01---final-non-claim-boundary-register">T-27-01 - Final Non-Claim Boundary Register</h4>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Restricted claim</th>
@@ -3569,7 +3592,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix A provides a compact reference version of the Agentic Insurability Object Model introduced in Chapter 24 and supported by Chapters 4, 5, 6, 7, 9, 14, 19, 22, and 23. It is intended to help a reader see the loss-relevant agentic work object as a bounded analytical unit rather than as a general AI system, a raw log set, or a governance program.</p>
 <p>This appendix references body tables T-04-01, T-05-01, T-06-01, T-07-01, T-09-01, T-14-01, T-19-01, T-22-01, T-23-01, and T-24-01.</p>
 <h3 id="reference-object-layers">Reference Object Layers</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Object layer</th>
@@ -3682,7 +3705,7 @@ th:last-child, td:last-child { border-right: 0; }
 </table></div>
 <h3 id="minimal-object-card">Minimal Object Card</h3>
 <p>An appendix-level object card may later summarize the object model in a shorter form:</p>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Card field</th>
@@ -3735,7 +3758,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix B provides a compact reference version of the non-scoring Agentic Insurability Reasoning Model from Chapter 25. It supports Chapters 8, 10, 13, 14, 18, 21, 23, and 24 by describing reviewability states without ranking, scoring, certifying, or predicting an insurance outcome.</p>
 <p>This appendix references body tables T-08-01, T-10-01, T-13-01, T-14-01, T-18-01, T-21-01, T-23-01, T-24-01, and T-25-01.</p>
 <h3 id="non-scoring-reasoning-states">Non-Scoring Reasoning States</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Reasoning state</th>
@@ -3804,7 +3827,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix C provides an optional analytical structure for evidence a reviewer might ask to see when discussing agentic AI risk. It supports Chapters 6, 14, 15, 16, 17, and 18 and references T-06-01, T-14-01, T-15-01, T-16-01, T-17-01, and T-18-01.</p>
 <p>This appendix is deliberately framed as an optional request structure, not as a checklist or condition for insurance.</p>
 <h3 id="optional-evidence-request-categories">Optional Evidence Request Categories</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -3901,7 +3924,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix D provides a reference structure for organizing post-loss reconstruction and evidence gaps. It supports Chapters 7, 10, 19, 20, 22, and 23 and references T-07-01, T-10-01, T-19-01, T-20-01, T-22-01, and T-23-01.</p>
 <p>The register is designed to make evidence questions visible after an agentic AI incident. It does not decide legal liability, coverage, settlement, claim payment, or claim approval.</p>
 <h3 id="claim-reconstruction-fields">Claim Reconstruction Fields</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -3998,7 +4021,7 @@ th:last-child, td:last-child { border-right: 0; }
 </tbody>
 </table></div>
 <h3 id="evidence-gap-register">Evidence Gap Register</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Evidence gap</th>
@@ -4065,7 +4088,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix E maps recurring coverage-boundary questions that agentic AI incidents can raise. It supports Chapters 3, 7, 11, 19, 20, and 21 and references T-07-01, T-11-01, T-19-01, T-20-01, and T-21-01.</p>
 <p>The purpose is to preserve questions, not answer them. Policy wording, facts, jurisdiction, notice, exclusions, limits, sublimits, deductibles, causation, loss category, and claim handling remain external to this paper.</p>
 <h3 id="coverage-boundary-question-categories">Coverage-Boundary Question Categories</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -4141,7 +4164,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix F consolidates source-use and claim-boundary notes for the appendices and the revised body. It supports Front Matter and Chapters 1-28.</p>
 <p>The revised body preserves source refs <code>[1]</code> through <code>[62]</code>. This appendix does not create new source IDs, add unsupported external factual claims, or use rejected v0.2 as source truth.</p>
 <h3 id="source-group-notes">Source Group Notes</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Source group</th>
@@ -4204,7 +4227,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix G provides a consolidated non-claim language register for future QA and drafting control. It supports Front Matter and Chapters 6, 7, 16, 18, 19, 21, 24, 25, 27, and 28, and it references T-27-01.</p>
 <p>This appendix is a publication guardrail only. It is not legal advice.</p>
 <h3 id="restricted-claim-register">Restricted Claim Register</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Restricted claim</th>
@@ -4355,7 +4378,7 @@ th:last-child, td:last-child { border-right: 0; }
 <p>Appendix H inventories body tables and flags future layout risk before any artifact planning. It supports Chapters 2 and 4-27 and references T-02-01 and T-04-01 through T-27-01.</p>
 <p>This appendix is a source-level layout-risk register. The public research edition package exposes HTML, PDF, manifest, and checksum artifacts, while DOCX distribution and external approval status remain unauthorized.</p>
 <h3 id="table-inventory">Table Inventory</h3>
-<div class="table-block table-scroll"><table>
+<div class="table-block table-scroll" role="region" tabindex="0" aria-label="Scrollable data table" data-scroll-region="table"><table>
 <thead>
 <tr>
 <th>Table ID</th>

@@ -1,0 +1,135 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PrototypeNav from "../../../components/PrototypeNav.astro";
+import "../../../styles/prototypes.css";
+import { homepageContent, siteConfig, siteSemanticBaseline, siteThesis } from "../../../data/site";
+import { whitepaperPublications } from "../../../data/whitepaperPublications";
+
+const essays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
+  (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
+);
+const latestEssay = essays[0];
+const research = whitepaperPublications[0];
+const signalItems = {
+  thesis: {
+    label: "Thesis",
+    title: homepageContent.hero.title,
+    summary: homepageContent.hero.subclaim,
+    detail: homepageContent.hero.body,
+    href: "/lifecycle/",
+    action: "Open the field definition"
+  },
+  essay: {
+    label: "Latest essay",
+    title: latestEssay?.data.title ?? "Essays",
+    summary: latestEssay?.data.description ?? siteConfig.supportLine,
+    detail: "The public arguments behind AI Agent Lifecycle, Agentic Delivery, and lifecycle governance.",
+    href: latestEssay ? `/essays/${latestEssay.id}/` : "/essays/",
+    action: "Read the essay"
+  },
+  research: {
+    label: "Research",
+    title: research.title,
+    summary: research.abstract,
+    detail: research.citationUse,
+    href: research.canonicalPath,
+    action: "Open the research record"
+  },
+  proof: {
+    label: "Proof path",
+    title: "Agentic Delivery Stack",
+    summary: siteThesis.stackDefinition,
+    detail: siteSemanticBaseline.referencePathDefinition,
+    href: "/projects/",
+    action: "Inspect the projects"
+  }
+} as const;
+---
+
+<BaseLayout
+  title="Split Signal Prototype"
+  description="A split identity and signal UI prototype for Jearon Wong's personal research site."
+  canonicalPath="/prototypes/split-signal/"
+  noindex={true}
+  showSiteHeader={false}
+>
+  <div class="prototype-page prototype-signal">
+    <div class="signal-layout">
+      <aside class="signal-identity">
+        <PrototypeNav active="signal" />
+        <div class="signal-identity__content">
+          <div>
+            <span class="prototype-label">C / Split Signal</span>
+            <h1>{siteConfig.author.name}</h1>
+            <p class="signal-identity__lead">{siteConfig.author.role}. {siteConfig.supportLine}</p>
+          </div>
+          <div class="signal-identity__footer">
+            <span>Fixed identity</span>
+            <span>{siteSemanticBaseline.problemStatement}</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="signal-panel">
+        <div class="signal-panel__top">
+          <span class="signal-panel__mode">Current signal / choose a view</span>
+          <div class="signal-panel__tabs" role="tablist" aria-label="Signal views">
+            {Object.entries(signalItems).map(([key, item], index) => (
+              <button
+                class:list={["signal-tab", index === 0 && "is-active"]}
+                type="button"
+                role="tab"
+                aria-selected={index === 0 ? "true" : "false"}
+                data-signal-tab={key}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <section class="signal-panel__body" data-signal-panel>
+          <span class="prototype-label" data-signal-label>{signalItems.thesis.label}</span>
+          <h2 data-signal-title>{signalItems.thesis.title}</h2>
+          <p class="signal-panel__summary" data-signal-summary>{signalItems.thesis.summary}</p>
+          <div class="signal-panel__detail">
+            <p data-signal-detail>{signalItems.thesis.detail}</p>
+            <a data-signal-link href={signalItems.thesis.href}>{signalItems.thesis.action} <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="signal-panel__marker">The identity is stable. The signal changes with the work.</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ signalItems }}>
+  const tabs = document.querySelectorAll("[data-signal-tab]");
+  const label = document.querySelector("[data-signal-label]");
+  const title = document.querySelector("[data-signal-title]");
+  const summary = document.querySelector("[data-signal-summary]");
+  const detail = document.querySelector("[data-signal-detail]");
+  const link = document.querySelector("[data-signal-link]");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const key = tab.getAttribute("data-signal-tab");
+      const item = key ? signalItems[key] : null;
+      if (!item) return;
+      tabs.forEach((entry) => {
+        const active = entry === tab;
+        entry.classList.toggle("is-active", active);
+        entry.setAttribute("aria-selected", String(active));
+      });
+      if (label) label.textContent = item.label;
+      if (title) title.textContent = item.title;
+      if (summary) summary.textContent = item.summary;
+      if (detail) detail.textContent = item.detail;
+      if (link) {
+        link.setAttribute("href", item.href);
+        link.innerHTML = `${item.action} <span aria-hidden="true">↗</span>`;
+      }
+    });
+  });
+</script>

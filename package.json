@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "files": [
+    "dist/**",
+    "public/**",
+    "README.md"
+  ],
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "clean:astro": "rm -rf .astro node_modules/.astro dist",
@@ -10,18 +15,45 @@
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "audit:publication": "node scripts/site-publication-audit.mjs",
+    "audit:ia": "node scripts/site-information-architecture-audit.mjs",
+    "audit:editorial": "node scripts/site-editorial-audit.mjs",
+    "audit:content": "node scripts/site-content-quality-audit.mjs",
+    "audit:content-quality": "node scripts/site-content-quality-audit.mjs",
+    "audit:package-surface": "node scripts/site-package-surface-audit.mjs",
+    "audit:security": "node scripts/site-security-headers-audit.mjs",
+    "audit:visual": "node scripts/site-visual-system-audit.mjs",
+    "assets:og": "node scripts/generate-site-og-assets.mjs",
+    "assets:og:check": "node scripts/generate-site-og-assets.mjs --check",
+    "publication:plan": "node scripts/site-publication-plan.mjs",
+    "publication:sync": "node scripts/site-publication-sync.mjs",
+    "publication:verify": "node scripts/site-generated-drift-audit.mjs",
+    "audit:impact": "node scripts/site-change-impact.mjs",
+    "audit:routes": "node scripts/site-route-matrix.mjs",
+    "publication:closeout": "npm run publication:verify && node scripts/site-publication-receipt.mjs --out dist/publication-receipt.json",
+    "audit:all": "npm run typecheck && npm run lint && npm run build && npm run publication:verify && npm run assets:og:check && npm run audit:publication && npm run audit:ia && npm run audit:editorial && npm run audit:content && npm run audit:package-surface && npm run audit:security && npm run audit:visual",
+    "audit:governance": "npm run audit:all",
     "lint": "eslint . --ext .js,.mjs,.astro"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.7.12"
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.9"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
-    "eslint": "^9.25.1",
+    "@astrojs/check": "^0.9.10",
+    "eslint": "^9.39.5",
     "eslint-plugin-astro": "^1.3.1",
+    "sharp": "^0.35.4",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.59.0"
+    "typescript-eslint": "^8.68.0"
+  },
+  "overrides": {
+    "fast-xml-parser": "^5.11.1",
+    "fast-xml-builder": "^1.3.1",
+    "svgo": "^4.1.0",
+    "minimatch@3.1.5": {
+      "brace-expansion": "^1.1.18"
+    }
   }
 }

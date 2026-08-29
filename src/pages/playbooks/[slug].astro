@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../components/ReadingGuide.astro";
 import {
   appliedPlaybooks,
   getAppliedPlaybookBySlug,
@@ -20,11 +21,10 @@ if (!playbook) {
   throw new Error(`Unknown playbook: ${slug}`);
 }
 
-const canonicalPath = `/playbooks/${playbook.slug}/`;
-const pageUrl = `${siteConfig.siteUrl}${canonicalPath}`;
+const routePath = `/playbooks/${playbook.slug}/`;
+const canonicalPath = playbook.canonicalRoute;
+const pageUrl = `${siteConfig.siteUrl}${routePath}`;
 const conceptCorePath = "/concepts/agentic-lifecycle-governance/";
-const whitePaperHub = "/research/global-ai-compliance-white-paper-2026/";
-const extendedEcosystemPath = "/mapping/extended-ecosystem/";
 const governancePath = "/governance/";
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -39,7 +39,7 @@ const pageJsonLd = {
   mainEntity: {
     "@id": `${pageUrl}#article`
   },
-  citation: `${siteConfig.siteUrl}${whitePaperHub}`
+  citation: playbook.sourceRefs.map((source) => `${siteConfig.siteUrl}${source.href}`)
 };
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -54,25 +54,18 @@ const articleJsonLd = {
   publisher: {
     "@id": `${siteConfig.siteUrl}#person`
   },
-  datePublished: "2026-05-12",
-  dateModified: "2026-05-14",
+  ...(playbook.publishedAt ? { datePublished: playbook.publishedAt } : {}),
+  ...(playbook.updatedAt ? { dateModified: playbook.updatedAt } : {}),
   keywords: playbook.keywords,
   about: playbook.keywords.map((keyword) => ({
     "@type": "Thing",
     name: keyword
   })),
-  isBasedOn: [
-    {
-      "@type": "TechArticle",
-      name: "Global AI Compliance White Paper 2026",
-      url: `${siteConfig.siteUrl}${whitePaperHub}`
-    },
-    {
-      "@type": "WebPage",
-      name: "Agentic Lifecycle Governance",
-      url: `${siteConfig.siteUrl}${conceptCorePath}`
-    }
-  ]
+  isBasedOn: playbook.sourceRefs.map((source) => ({
+    "@type": "CreativeWork",
+    name: source.label,
+    url: `${siteConfig.siteUrl}${source.href}`
+  }))
 };
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -95,7 +88,7 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 3,
       name: playbook.title,
-      item: pageUrl
+      item: `${siteConfig.siteUrl}${routePath}`
     }
   ]
 };
@@ -105,6 +98,7 @@ const breadcrumbJsonLd = {
   title={playbook.seoTitle}
   description={playbook.seoDescription}
   canonicalPath={canonicalPath}
+  noindex={playbook.indexability === "noindex"}
   jsonLd={[pageJsonLd, articleJsonLd, breadcrumbJsonLd]}
   ogType="article"
   keywords={playbook.keywords}
@@ -124,37 +118,28 @@ const breadcrumbJsonLd = {
       <a href={conceptCorePath} class="registry-annotation playbook-hero-link">
         <span class="registry-key">CONCEPT_CORE</span>: <span class="registry-value">AGENTIC LIFECYCLE GOVERNANCE</span>
       </a>
-      <a href={extendedEcosystemPath} class="registry-annotation playbook-hero-link">
-        <span class="registry-key">R3F_LAYER</span>: <span class="registry-value">EXTENDED ECOSYSTEM</span>
-      </a>
-      <a href="/concepts/deterministic-delivery/" class="registry-annotation playbook-hero-link">
-        <span class="registry-key">R3G_LAYER</span>: <span class="registry-value">DETERMINISTIC DELIVERY</span>
-      </a>
-      <a href={governancePath} class="registry-annotation playbook-hero-link">
-        <span class="registry-key">R3H_LAYER</span>: <span class="registry-value">REGULATORY GOVERNANCE</span>
-      </a>
     </div>
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
     <article class="shell playbook-detail-shell">
+      <ReadingGuide
+        role="APPLIED_PLAYBOOK"
+        answer={playbook.definition}
+        startHref="#playbook-definition"
+        startLabel="Read the playbook definition"
+        nextLinks={[{ href: "/playbooks/", label: "Return to playbooks" }, { href: governancePath, label: "Open governance mappings" }]}
+        sections={["Definition", "Scenario", "Inputs and outputs", "Failure modes", "Evidence required", "Sources"]}
+      />
       <aside class="registry-chassis playbook-sidebar" aria-label={`${playbook.title} reference`}>
         <div class="registry-annotation" style="margin-bottom: 1rem;">
           <span class="registry-key">PLAYBOOK_RECORD</span>
         </div>
         <p class="sidebar-title">{playbook.title}</p>
         <div class="sidebar-group">
-          <p class="sidebar-label">Core routes</p>
+          <p class="sidebar-label">Topic routes</p>
           <div class="sidebar-links">
-            <a href={conceptCorePath}>Agentic Lifecycle Governance</a>
-            <a href={whitePaperHub}>Global AI Compliance White Paper 2026</a>
-            <a href={extendedEcosystemPath}>Extended Ecosystem Mapping</a>
-            <a href={governancePath}>Regulatory and Enterprise Governance</a>
-            <a href="/concepts/missing-regulatory-objects/">Missing Regulatory Objects</a>
-            <a href="/concepts/rccs-m/">RCCS-M</a>
-            <a href="/concepts/alcs/">ALCS</a>
-            <a href="/concepts/deterministic-delivery/">Deterministic Delivery</a>
-            <a href="/concepts/agent-architecture-governance/">Agent Architecture Governance</a>
+            {playbook.relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
           </div>
         </div>
         <div class="sidebar-group">
@@ -168,7 +153,7 @@ const breadcrumbJsonLd = {
       </aside>
 
       <div class="playbook-article">
-        <section class="registry-chassis definition-panel">
+        <section class="registry-chassis definition-panel" id="playbook-definition">
           <div class="registry-annotation" style="margin-bottom: 1rem;">
             <span class="registry-key">DEFINITION</span>
           </div>
@@ -181,19 +166,31 @@ const breadcrumbJsonLd = {
         </section>
 
         <section class="playbook-section source-context-section">
-          <h2>White paper source context</h2>
+          <h2>Source context</h2>
           <p>
-            This playbook is a practical reading of the GAIC white paper's lifecycle-responsibility
-            argument. For this route, the relevant responsibility objects are {playbook.relatedMros.join(", ")}.
-            RCCS-M and ALCS are used as source vocabulary for governance coverage and lifecycle coherence;
-            this page does not add scores or become legal advice, certification, procurement guidance, or a
-            vendor assessment.
+            This {playbook.contentRole === "vendor-support" ? "support route" : "playbook"} applies lifecycle-responsibility
+            questions to the stated scenario. Its relevant responsibility objects are {playbook.relatedMros.join(", ")}.
+            The page is an author-analytical guide and does not add scores, legal conclusions, certification, or vendor assessment.
           </p>
-          <div class="source-context-links" aria-label="White paper source context links">
-            <a href={whitePaperHub}>GAIC white paper</a>
-            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#mro-overview`}>MRO overview</a>
-            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#rccs-m`}>RCCS-M source anchor</a>
-            <a href={`${whitePaperHub}global-ai-compliance-white-paper-2026.html#alcs`}>ALCS source anchor</a>
+          <div class="source-context-links" aria-label="Playbook source links">
+            {playbook.sourceRefs.map((source) => <a href={source.href}>{source.label}</a>)}
+          </div>
+        </section>
+
+        <section class="playbook-section" id="playbook-scenario">
+          <h2>Scenario and distinctive question</h2>
+          <p><strong>Question:</strong> {playbook.distinctiveQuestion}</p>
+          <p><strong>Scenario:</strong> {playbook.scenario}</p>
+        </section>
+
+        <section class="playbook-section playbook-io-grid">
+          <div>
+            <h2>Inputs</h2>
+            <ul>{playbook.inputs.map((item) => <li>{item}</li>)}</ul>
+          </div>
+          <div>
+            <h2>Outputs</h2>
+            <ul>{playbook.outputs.map((item) => <li>{item}</li>)}</ul>
           </div>
         </section>
 
@@ -204,6 +201,16 @@ const breadcrumbJsonLd = {
               <li>{item}</li>
             ))}
           </ol>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Failure modes to test</h2>
+          <ul>{playbook.failureModes.map((item) => <li>{item}</li>)}</ul>
+        </section>
+
+        <section class="playbook-section">
+          <h2>Evidence required for review</h2>
+          <ul>{playbook.evidenceRequired.map((item) => <li>{item}</li>)}</ul>
         </section>
 
         <section class="playbook-section">
@@ -238,6 +245,13 @@ const breadcrumbJsonLd = {
           <p>{playbook.boundary}</p>
         </section>
 
+        {playbook.indexability === "noindex" && (
+          <section class="playbook-section support-route-note">
+            <h2>Support route</h2>
+            <p>This vendor-qualified page is retained for existing links and is not an indexable canonical publication. Continue at <a href={playbook.canonicalRoute}>Vendor and Runtime Substitution Conformance</a>.</p>
+          </section>
+        )}
+
         <section class="relation-grid" aria-label={`${playbook.title} related links`}>
           <article class="registry-chassis relation-panel">
             <div class="registry-annotation" style="margin-bottom: 0.9rem;">
@@ -269,7 +283,7 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .playbook-detail-shell {
@@ -280,7 +294,17 @@ const breadcrumbJsonLd = {
     max-width: 1080px;
   }
 
+  /* Keep the reading orientation above the two-column reference/article
+     layout; the component owns a different Astro scope than this page. */
+  .playbook-detail-shell > :global(.reading-guide) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
   .playbook-sidebar {
+    grid-column: 1;
+    grid-row: 2;
     position: sticky;
     top: 7rem;
     padding: var(--registry-card-padding);
@@ -292,8 +316,9 @@ const breadcrumbJsonLd = {
     color: var(--current-text);
     font-size: 1.25rem;
     font-weight: 760;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .sidebar-group {
@@ -320,7 +345,7 @@ const breadcrumbJsonLd = {
   }
 
   .sidebar-links a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-size: 0.86rem;
     line-height: 1.35;
     text-decoration: none;
@@ -338,13 +363,15 @@ const breadcrumbJsonLd = {
   }
 
   .playbook-article {
+    grid-column: 2;
+    grid-row: 2;
     display: grid;
     gap: 2.5rem;
   }
 
   .definition-panel {
     padding: var(--registry-panel-padding);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .definition-panel p,
@@ -364,13 +391,33 @@ const breadcrumbJsonLd = {
     border-bottom: 1px solid var(--current-line);
   }
 
+  .playbook-io-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .playbook-section ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .playbook-section ul li {
+    color: var(--current-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .playbook-section h2,
   .relation-panel h2 {
     margin: 0 0 0.9rem;
     color: var(--current-text);
     font-size: 1.45rem;
-    line-height: 1.18;
-    letter-spacing: -0.02em;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .checklist {
@@ -394,7 +441,7 @@ const breadcrumbJsonLd = {
   }
 
   .source-context-section {
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
     padding-left: var(--registry-card-padding);
   }
 
@@ -406,7 +453,7 @@ const breadcrumbJsonLd = {
   }
 
   .source-context-links a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.74rem;
     font-weight: 800;
@@ -416,7 +463,7 @@ const breadcrumbJsonLd = {
   }
 
   .vendor-boundary {
-    border-left: 3px solid var(--accent-signal);
+    border-left: 3px solid var(--color-rule);
     padding-left: var(--registry-card-padding);
   }
 
@@ -425,7 +472,7 @@ const breadcrumbJsonLd = {
   }
 
   .boundary-section {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
     padding-left: var(--registry-card-padding);
   }
 
@@ -444,7 +491,7 @@ const breadcrumbJsonLd = {
   }
 
   .term-link-grid a {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 800;
@@ -464,8 +511,20 @@ const breadcrumbJsonLd = {
       grid-template-columns: 1fr;
     }
 
+    .playbook-detail-shell > :global(.reading-guide),
+    .playbook-sidebar,
+    .playbook-article {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
     .playbook-sidebar {
       position: static;
+    }
+
+    .playbook-io-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 

@@ -1,0 +1,127 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PrototypeNav from "../../../components/PrototypeNav.astro";
+import "../../../styles/prototypes.css";
+import { projects, siteConfig, siteSemanticBaseline, siteThesis } from "../../../data/site";
+import { whitepaperPublications } from "../../../data/whitepaperPublications";
+
+const essays = (await getCollection("essays", ({ data }) => data.status === "published")).sort(
+  (left, right) => right.data.publishDate.getTime() - left.data.publishDate.getTime()
+);
+const latestEssay = essays[0];
+const research = whitepaperPublications[0];
+const projectRows = projects.slice(0, 4);
+---
+
+<BaseLayout
+  title="Research Ledger Prototype"
+  description="A publication-first UI prototype for Jearon Wong's personal research site."
+  canonicalPath="/prototypes/research-ledger/"
+  noindex={true}
+  showSiteHeader={false}
+>
+  <div class="prototype-page prototype-ledger">
+    <header class="ledger-banner">
+      <PrototypeNav active="ledger" />
+      <div class="ledger-hero">
+        <div>
+          <span class="prototype-label">B / Research Ledger</span>
+          <h1>Trace the work.</h1>
+          <p class="ledger-hero__lead">{siteConfig.supportLine}</p>
+        </div>
+        <aside class="ledger-hero__rail" aria-label="Ledger orientation">
+          <p>Research, essays, projects, and evidence share one reading order.</p>
+          <dl>
+            <dt>Primary source</dt><dd>Authored research</dd>
+            <dt>Current signal</dt><dd>{latestEssay ? "Published essay" : "No essay"}</dd>
+            <dt>Protocol path</dt><dd>{siteSemanticBaseline.projectRoles.mplp}</dd>
+          </dl>
+        </aside>
+      </div>
+    </header>
+
+    <div class="prototype-shell ledger-body">
+      <nav class="ledger-rail" aria-label="Ledger sections">
+        <a href="#current-signal">01 / Current signal</a>
+        <a href="#research">02 / Research</a>
+        <a href="#projects">03 / Project ledger</a>
+        <a href="#reference">04 / Reference layer</a>
+      </nav>
+
+      <div class="ledger-main">
+        <section class="ledger-section" id="current-signal">
+          <div class="ledger-section__heading">
+            <h2>Current signal</h2>
+            <span class="ledger-section__count">Latest published record</span>
+          </div>
+          {latestEssay && (
+            <article class="ledger-feature">
+              <div>
+                <h3><a href={`/essays/${latestEssay.id}/`}>{latestEssay.data.title}</a></h3>
+                <p>{latestEssay.data.description}</p>
+              </div>
+              <div class="ledger-feature__meta">
+                <div class="ledger-meta-row"><span>Class</span><span>{latestEssay.data.publicationClass}</span></div>
+                <div class="ledger-meta-row"><span>Track</span><span>{latestEssay.data.editorialTrack ?? latestEssay.data.track ?? latestEssay.data.cluster}</span></div>
+                <div class="ledger-meta-row"><span>Date</span><span>{latestEssay.data.publishDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" })}</span></div>
+              </div>
+            </article>
+          )}
+        </section>
+
+        <section class="ledger-section" id="research">
+          <div class="ledger-section__heading">
+            <h2>Research</h2>
+            <span class="ledger-section__count">01 public edition</span>
+          </div>
+          <article class="ledger-feature">
+            <div>
+              <h3><a href={research.canonicalPath}>{research.title}</a></h3>
+              <p>{research.abstract}</p>
+            </div>
+            <div class="ledger-feature__meta">
+              <div class="ledger-meta-row"><span>Edition</span><span>{research.versionLabel}</span></div>
+              <div class="ledger-meta-row"><span>Role</span><span>{research.artifactRole}</span></div>
+              <div class="ledger-meta-row"><span>Use</span><span>{research.citationUse}</span></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="ledger-section" id="projects">
+          <div class="ledger-section__heading">
+            <h2>Project ledger</h2>
+            <span class="ledger-section__count">{projectRows.length} proof paths</span>
+          </div>
+          {projectRows.map((project, index) => (
+            <article class="ledger-record">
+              <span class="ledger-record__index">{String(index + 1).padStart(2, "0")}</span>
+              <div class="ledger-record__title"><a href={`/projects/${project.slug}/`}>{project.name}</a></div>
+              <div class="ledger-record__description">{project.summary} {project.deliveryState}.</div>
+              <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+            </article>
+          ))}
+        </section>
+
+        <section class="ledger-section" id="reference">
+          <div class="ledger-section__heading">
+            <h2>Reference layer</h2>
+            <span class="ledger-section__count">Stable source routes</span>
+          </div>
+          <div class="ledger-record">
+            <span class="ledger-record__kind">Concepts</span>
+            <div class="ledger-record__title"><a href="/concepts/">Core terms</a></div>
+            <div class="ledger-record__description">{siteThesis.conceptDefinition}</div>
+            <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="ledger-record">
+            <span class="ledger-record__kind">Evidence</span>
+            <div class="ledger-record__title"><a href="/evidence/">Evidence shelf</a></div>
+            <div class="ledger-record__description">Owned-canonical, authored-analysis, project, and source-qualified mapping surfaces.</div>
+            <span class="ledger-record__arrow" aria-hidden="true">↗</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

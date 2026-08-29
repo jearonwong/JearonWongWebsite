@@ -112,8 +112,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
 <BaseLayout
   title="Systems Discussed in the Global AI Compliance White Paper 2026"
+  metadataTitle="GAIC Systems Mapping"
   description={metaDescription}
-  shareTitle="Systems Discussed in the Global AI Compliance White Paper 2026"
+  shareTitle="GAIC Systems Mapping"
   shareDescription={metaDescription}
   twitterTitle="Systems Discussed in GAIC 2026"
   twitterDescription={metaDescription}
@@ -139,7 +140,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
-    <main class="shell systems-shell">
+    <div class="shell systems-shell">
       <section class="registry-chassis systems-intro" aria-labelledby="systems-intro-title">
         <div>
           <div class="registry-annotation">
@@ -208,7 +209,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           R3F layer is source-qualified and not GAIC-scored.
         </p>
       </section>
-    </main>
+    </div>
   </div>
 </BaseLayout>
 
@@ -225,7 +226,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .systems-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .systems-shell {
@@ -242,7 +243,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
     gap: clamp(1.5rem, 4vw, 3rem);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .systems-intro h2,
@@ -251,8 +252,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: clamp(1.55rem, 2.8vw, 2.25rem);
-    line-height: 1.1;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .systems-intro p,
@@ -281,7 +283,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .systems-intro__links a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .system-group {
@@ -307,7 +309,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     flex-wrap: wrap;
     gap: 0.6rem;
     justify-content: space-between;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.66rem;
     font-weight: 800;
@@ -319,8 +321,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: clamp(1.25rem, 2vw, 1.65rem);
-    line-height: 1.12;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .system-card h3 a {
@@ -372,11 +375,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   .concept-chip-row a:hover,
   .system-card h3 a:hover,
   .system-card__link:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .system-card__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -394,7 +397,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .systems-boundary {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   @media (max-width: 860px) {

@@ -3,14 +3,27 @@ export const governanceIndexPath = "/governance/";
 export const regulatoryGovernanceBoundary =
   "These pages provide author-analytical lifecycle governance mappings. They are not legal advice, legal compliance proof, certification, regulator-approved guidance, procurement recommendation, vendor ranking, or official standards-body guidance.";
 
+export type GovernanceSourceAuthority =
+  | "authored-research"
+  | "official-primary-source"
+  | "official-guidance";
+
 export interface GovernanceSource {
   label: string;
   url: string;
   scope: string;
+  authority: GovernanceSourceAuthority;
 }
 
 export interface GovernanceMapping {
   slug: string;
+  contentRole: "governance-mapping";
+  canonicalRoute: string;
+  canonicalParent: string;
+  primaryAudience: string[];
+  publishedAt?: string;
+  updatedAt?: string;
+  indexability: "index" | "noindex";
   title: string;
   seoTitle: string;
   seoDescription: string;
@@ -23,26 +36,14 @@ export interface GovernanceMapping {
   rccsAlcs: string;
   enterpriseUse: string;
   sourceBoundary: string;
-  sources: GovernanceSource[];
+  sourceRefs: GovernanceSource[];
   relatedLinks: Array<{ href: string; label: string }>;
   keywords: string[];
 }
 
 const commonGovernanceLinks = [
   { href: "/concepts/agentic-lifecycle-governance/", label: "Agentic Lifecycle Governance" },
-  { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" },
-  { href: "/research/agentic-ai-auditability-assurance-white-paper-2026/", label: "Agentic AI Auditability & Assurance White Paper 2026" },
-  { href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/", label: "Agentic AI Insurability & Risk Transfer White Paper 2026" },
-  { href: "/concepts/missing-regulatory-objects/", label: "Missing Regulatory Objects" },
-  { href: "/concepts/rccs-m/", label: "RCCS-M" },
-  { href: "/concepts/alcs/", label: "ALCS" },
-  { href: "/concepts/lifecycle-evidence/", label: "Evidence Chain" },
-  { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
-  { href: "/concepts/accepted-outcome/", label: "Accepted Outcome" },
-  { href: "/concepts/deterministic-delivery/", label: "Deterministic Delivery" },
-  { href: "/concepts/agent-architecture-governance/", label: "Agent Architecture Governance" },
-  { href: "/projects/mplp/", label: "MPLP protocol path" },
-  { href: "/playbooks/", label: "Applied Playbooks" }
+  { href: "/research/global-ai-compliance-white-paper-2026/", label: "Global AI Compliance White Paper 2026" }
 ];
 
 export const officialGovernanceSources = {
@@ -50,51 +51,92 @@ export const officialGovernanceSources = {
     label: "Regulation (EU) 2024/1689, Artificial Intelligence Act",
     url: "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32024R1689",
     scope:
-      "Official EU legal text used as regulatory context for cautious lifecycle mapping. It is not converted into legal advice."
+      "Official EU legal text used as regulatory context for cautious lifecycle mapping. It is not converted into legal advice.",
+    authority: "official-primary-source"
   },
   gdpr: {
     label: "Regulation (EU) 2016/679, General Data Protection Regulation",
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
     scope:
-      "Official EU legal text used as privacy and personal-data context for evidence-chain and retention mapping."
+      "Official EU legal text used as privacy and personal-data context for evidence-chain and retention mapping.",
+    authority: "official-primary-source"
   },
   edpbAutomatedDecisionMaking: {
     label: "EDPB automated decision-making and profiling guidance",
     url: "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/automated-decision-making-and-profiling_en",
     scope:
-      "Official EDPB guidance context for GDPR automated decision-making and profiling. It is not used to create legal conclusions."
+      "Official EDPB guidance context for GDPR automated decision-making and profiling. It is not used to create legal conclusions.",
+    authority: "official-guidance"
   },
   nistAiRmf: {
     label: "NIST AI Risk Management Framework 1.0",
     url: "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
     scope:
-      "Official NIST AI RMF source used for voluntary risk-management context and Govern, Map, Measure, Manage mapping."
+      "Official NIST AI RMF source used for voluntary risk-management context and Govern, Map, Measure, Manage mapping.",
+    authority: "official-primary-source"
   },
   nistAiRmfOverview: {
     label: "NIST AI Risk Management Framework overview",
     url: "https://www.nist.gov/itl/ai-risk-management-framework",
     scope:
-      "Official NIST overview noting the AI RMF is intended for voluntary use across AI design, development, use, and evaluation."
+      "Official NIST overview noting the AI RMF is intended for voluntary use across AI design, development, use, and evaluation.",
+    authority: "official-guidance"
   },
   iso42001: {
     label: "ISO/IEC 42001:2023 official ISO overview",
     url: "https://www.iso.org/standard/42001",
     scope:
-      "Official ISO overview used for AI management system context. It is not used as certification advice."
+      "Official ISO overview used for AI management system context. It is not used as certification advice.",
+    authority: "official-primary-source"
   },
   imdaGenAi: {
     label: "Singapore IMDA Model AI Governance Framework for Generative AI",
     url: "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2024/public-consult-model-ai-governance-framework-genai",
     scope:
-      "Official IMDA governance context used only as a comparative governance signal, not as legal or regulatory authority."
+      "Official IMDA governance context used only as a comparative governance signal, not as legal or regulatory authority.",
+    authority: "official-guidance"
   }
 } satisfies Record<string, GovernanceSource>;
 
-export const governanceMappings: GovernanceMapping[] = [
+export const gaicGovernanceSource = {
+  label: "Global AI Compliance White Paper 2026",
+  url: "/research/global-ai-compliance-white-paper-2026/",
+  scope:
+    "Author research source for lifecycle responsibility objects, MRO, RCCS-M, and ALCS. It is a public research edition, not legal advice, certification, or an adopted professional standard.",
+  authority: "authored-research"
+} satisfies GovernanceSource;
+
+const primaryAudienceByCategory: Record<string, string[]> = {
+  "Lifecycle governance": ["AI governance leaders", "Enterprise architects", "Agent platform owners"],
+  "MAS governance": ["Multi-agent architects", "Governance leaders", "Engineering leads"],
+  "Enterprise governance": ["Enterprise control owners", "Risk leaders", "Platform architects"],
+  "Compliance mapping": ["Compliance leaders", "Legal reviewers", "AI platform owners"],
+  "Regulatory mapping": ["Risk leaders", "Legal reviewers", "Product governance teams"],
+  "Privacy mapping": ["Privacy leaders", "Security architects", "AI platform owners"],
+  "Risk framework mapping": ["AI risk leaders", "Model risk teams", "Enterprise architects"],
+  "Management system mapping": ["AI management system owners", "Audit teams", "Governance leaders"],
+  "Responsibility mapping": ["Operating model owners", "Engineering leads", "Governance leaders"],
+  "Evidence governance": ["Audit teams", "Privacy leaders", "Platform architects"],
+  "Substitution governance": ["Procurement leaders", "Platform architects", "Model risk teams"],
+  "Incident governance": ["Operations leaders", "Trust and safety teams", "Governance leaders"]
+};
+
+type GovernanceMappingRecord = Omit<
+  GovernanceMapping,
+  "contentRole" | "canonicalRoute" | "canonicalParent" | "primaryAudience" | "indexability"
+> &
+  Partial<
+    Pick<
+      GovernanceMapping,
+      "contentRole" | "canonicalRoute" | "canonicalParent" | "primaryAudience" | "indexability"
+    >
+  >;
+
+const governanceMappingRecords: GovernanceMappingRecord[] = [
   {
     slug: "ai-agent-governance",
     title: "AI Agent Governance",
-    seoTitle: "AI Agent Governance and Lifecycle Responsibility",
+    seoTitle: "AI Agent Governance Lifecycle Mapping",
     seoDescription:
       "AI Agent Governance maps delegated agent work to lifecycle responsibility objects: authority boundaries, evidence chains, accepted outcomes, rollback, remediation, RCCS-M, and ALCS.",
     category: "Lifecycle governance",
@@ -125,10 +167,11 @@ export const governanceMappings: GovernanceMapping[] = [
       "Enterprise teams can use this page as a vocabulary bridge between AI governance programs and the work-specific evidence expected from agentic systems.",
     sourceBoundary:
       "This page relies on GAIC as the author-analytical source for lifecycle responsibility objects, MRO, RCCS-M, and ALCS. It does not make a specific legal or standards compliance claim, certify any system, or state that MPLP is required.",
-    sources: [],
+    sourceRefs: [gaicGovernanceSource],
     relatedLinks: [
       { href: "/concepts/ai-agent-governance/", label: "AI Agent Governance concept bridge" },
       { href: "/ai-agent-governance/", label: "AI Agent Governance field bridge" },
+      { href: "/concepts/authority-boundary/", label: "Authority Boundary" },
       ...commonGovernanceLinks
     ],
     keywords: [
@@ -176,7 +219,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Enterprise teams can use this page to distinguish MAS orchestration from MAS accountability before deploying multi-agent workflows across departments or projects.",
     sourceBoundary:
       "This page is grounded in GAIC lifecycle responsibility language and does not claim that a particular MAS architecture is legally sufficient.",
-    sources: [],
+    sourceRefs: [gaicGovernanceSource],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/playbooks/human-role-to-mas-responsibility/", label: "Human Role to MAS Responsibility" },
@@ -224,7 +267,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Enterprise teams can use this as a routing page for control owners, audit teams, model risk teams, security teams, and product leaders translating agent execution into governance evidence.",
     sourceBoundary:
       "This page provides enterprise control mapping language and does not replace internal audit, legal, security, privacy, or compliance review.",
-    sources: [officialGovernanceSources.iso42001, officialGovernanceSources.nistAiRmfOverview],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.iso42001, officialGovernanceSources.nistAiRmfOverview],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/governance/ai-agent-evidence-retention/", label: "AI Agent Evidence Retention" },
@@ -274,7 +317,8 @@ export const governanceMappings: GovernanceMapping[] = [
       "Compliance teams can use this page as a non-legal concept map for deciding what evidence to ask engineering, product, model risk, privacy, and operations teams to produce.",
     sourceBoundary:
       "Specific legal compliance conclusions are outside this site. Legal and compliance counsel should review jurisdiction-specific obligations.",
-    sources: [
+    sourceRefs: [
+      gaicGovernanceSource,
       officialGovernanceSources.euAiAct,
       officialGovernanceSources.gdpr,
       officialGovernanceSources.nistAiRmf,
@@ -324,7 +368,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Risk, compliance, product, and engineering teams can use this as a discussion map before legal counsel reviews actual EU AI Act obligations for a specific system and role.",
     sourceBoundary:
       "EU AI Act references are source-qualified to the official Regulation text. This page does not provide legal interpretation or compliance advice.",
-    sources: [officialGovernanceSources.euAiAct, officialGovernanceSources.gdpr, officialGovernanceSources.edpbAutomatedDecisionMaking],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.euAiAct, officialGovernanceSources.gdpr, officialGovernanceSources.edpbAutomatedDecisionMaking],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/governance/gdpr-agentic-ai-evidence/", label: "GDPR and Agentic AI Evidence" },
@@ -349,32 +393,32 @@ export const governanceMappings: GovernanceMapping[] = [
       "A cautious lifecycle governance mapping for GDPR and agentic AI evidence: evidence minimization, data subject rights, processor chains, privacy-preserving validation, and retention boundaries.",
     category: "Privacy mapping",
     summary:
-      "GDPR and Agentic AI Evidence frames the tension between preserving enough evidence to review agent work and minimizing personal data exposure across lifecycle records.",
+      "GDPR and Agentic AI Evidence is a privacy crosswalk for agentic work. It follows personal data through purpose, controller and processor boundaries, rights requests, redaction, and disclosure decisions, asking what evidence can remain reviewable without becoming an unbounded personal-data store.",
     boundary: regulatoryGovernanceBoundary,
     lifecycleLens:
-      "The lifecycle lens asks how evidence chain, retention, minimization, data subject rights, processor responsibility, and validation can coexist without treating raw logs as governance.",
+      "The lifecycle lens follows a data subject's information through collection, agent action, evidence capture, review, disclosure, and deletion. It separates privacy review questions from the lifecycle records that make an action attributable, without deciding lawful basis or retention periods.",
     keyQuestions: [
-      "What personal data enters the evidence chain, and why is it needed?",
-      "Can evidence be minimized, partitioned, redacted, or hashed while preserving reviewability?",
-      "How are data subject rights considered when evidence is retained for replay, dispute, or remediation?",
-      "Which controller, processor, or subprocessors touch the evidence chain?",
-      "What legal review is needed before retaining or disclosing agentic evidence?"
+      "What purpose and data category justify each personal-data element entering an evidence chain?",
+      "Which controller, processor, or subprocessor owns each handoff, and where is that allocation recorded?",
+      "Can a rights-request workflow locate, redact, restrict, or delete evidence without destroying the review trail?",
+      "What pseudonymization, hashing, or redaction manifest preserves attribution while reducing exposure?",
+      "Which disclosure, transfer, and retention decisions require a privacy or legal review artifact?"
     ],
     relatedObjects: [
-      "Evidence Chain",
-      "Evidence Minimization",
-      "Evidence Partitioning",
-      "Processor Chain",
+      "Purpose Limitation Record",
+      "Data Subject Rights Request",
+      "Controller / Processor Allocation",
+      "Redaction Manifest",
       "Privacy-Preserving Validation",
-      "Retention Boundary"
+      "Disclosure Boundary"
     ],
     rccsAlcs:
-      "RCCS-M is relevant because privacy obligations need lifecycle objects for evidence partitioning, processor chains, and data subject rights reconciliation. ALCS is relevant because evidence must remain coherent without excessive retention.",
+      "RCCS-M is relevant because privacy analysis needs explicit objects for purpose, rights, processor allocation, redaction, and disclosure boundaries. ALCS is relevant because those records must remain coherent when evidence is reviewed, restricted, disputed, or removed.",
     enterpriseUse:
-      "Privacy, security, legal, and platform teams can use this page to discuss evidence retention requirements before designing agent traces, audit records, or validation packs.",
+      "Privacy, security, legal, and platform teams can use this page to define a reviewable privacy evidence pack: data inventory, purpose record, processor handoff, rights-request status, redaction decision, and disclosure boundary.",
     sourceBoundary:
       "GDPR references are source-qualified to official EU and EDPB sources. This page does not decide lawful basis, retention periods, data subject request handling, or cross-border transfer rules.",
-    sources: [officialGovernanceSources.gdpr, officialGovernanceSources.edpbAutomatedDecisionMaking],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.gdpr, officialGovernanceSources.edpbAutomatedDecisionMaking],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/governance/ai-agent-evidence-retention/", label: "AI Agent Evidence Retention" },
@@ -382,11 +426,12 @@ export const governanceMappings: GovernanceMapping[] = [
     ],
     keywords: [
       "GDPR and agentic AI evidence",
-      "AI agent evidence retention",
+      "purpose limitation record",
+      "data subject rights request",
+      "controller processor allocation",
+      "redaction manifest",
       "privacy preserving validation",
-      "processor chain",
-      "data subject rights",
-      "evidence minimization"
+      "disclosure boundary"
     ]
   },
   {
@@ -424,7 +469,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Risk teams can use this page to translate voluntary NIST AI RMF language into engineering questions for agentic systems without implying NIST endorsement.",
     sourceBoundary:
       "NIST AI RMF is cited as official NIST source context. The mapping is author-analytical and not official NIST guidance.",
-    sources: [officialGovernanceSources.nistAiRmf, officialGovernanceSources.nistAiRmfOverview],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.nistAiRmf, officialGovernanceSources.nistAiRmfOverview],
     relatedLinks: commonGovernanceLinks,
     keywords: [
       "NIST AI RMF and agentic lifecycle governance",
@@ -439,7 +484,7 @@ export const governanceMappings: GovernanceMapping[] = [
   {
     slug: "iso-42001-agentic-ai",
     title: "ISO/IEC 42001 and Agentic AI Management Systems",
-    seoTitle: "ISO/IEC 42001 and Agentic AI Management Systems",
+    seoTitle: "ISO/IEC 42001 and Agentic AI",
     seoDescription:
       "A cautious mapping between ISO/IEC 42001 AI management system language and agentic AI lifecycle responsibility objects, governance profiles, audit evidence, remediation, and continuous improvement.",
     category: "Management system mapping",
@@ -469,7 +514,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Organizations can use this page as a vocabulary bridge between AI management systems and agentic lifecycle evidence before consulting qualified standards, audit, legal, and compliance advisers.",
     sourceBoundary:
       "ISO/IEC 42001 is cited through the official ISO overview. This page does not provide certification, audit, implementation, or conformity advice.",
-    sources: [officialGovernanceSources.iso42001],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.iso42001],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/concepts/configurable-agent-governance/", label: "Configurable Agent Governance" },
@@ -487,7 +532,7 @@ export const governanceMappings: GovernanceMapping[] = [
   {
     slug: "human-role-responsibility-mapping",
     title: "Human Role Responsibility Mapping",
-    seoTitle: "Human Role Responsibility Mapping for AI Agents",
+    seoTitle: "Human Role Responsibility Mapping",
     seoDescription:
       "Human Role Responsibility Mapping connects human roles to delegated authority, accepted outcome ownership, dispute ownership, remediation ownership, and cross-project reuse in AI agent systems.",
     category: "Responsibility mapping",
@@ -518,7 +563,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Enterprise teams can use this page to separate accountable role ownership from generic HITL, approval, or review language.",
     sourceBoundary:
       "This page is an author-analytical responsibility-mapping guide and does not assign legal liability or employment responsibility.",
-    sources: [],
+    sourceRefs: [gaicGovernanceSource],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/playbooks/human-role-to-mas-responsibility/", label: "Human Role to MAS Responsibility" },
@@ -541,33 +586,33 @@ export const governanceMappings: GovernanceMapping[] = [
       "AI Agent Evidence Retention maps evidence chains, logs, evidence minimization, retention boundaries, privacy tension, replay, dispute, remediation, and lifecycle evidence partitioning.",
     category: "Evidence governance",
     summary:
-      "AI Agent Evidence Retention distinguishes evidence chains from raw logs. The goal is to preserve enough lifecycle proof for review, replay, dispute, and remediation without retaining unnecessary sensitive data.",
+      "AI Agent Evidence Retention is an engineering record-design page. It distinguishes a bounded evidence pack from raw logs and asks how retention schedules, content-addressed snapshots, replay envelopes, access ledgers, and deletion receipts preserve lifecycle proof without turning storage into an uncontrolled data hoard.",
     boundary: regulatoryGovernanceBoundary,
     lifecycleLens:
-      "The lifecycle lens asks what evidence must survive, what can be minimized, what must be partitioned, who can access it, and when retention should close.",
+      "The lifecycle lens treats retention as a state transition: capture, classify, minimize, seal, retrieve, dispute, remediate, expire, and verify deletion. It asks which evidence tier survives each transition and which role can authorize access or closure.",
     keyQuestions: [
-      "Which evidence is necessary to support a delivery claim?",
-      "Which raw logs are excessive, sensitive, stale, or irrelevant?",
-      "How is evidence partitioned across roles, vendors, processors, and reviewers?",
-      "Can the work be replayed or disputed without exposing unnecessary personal data?",
-      "What retention and deletion questions require privacy/legal review?"
+      "Which signed or content-addressed records are necessary to support the delivery and acceptance claim?",
+      "What raw traces can be sampled, summarized, or discarded after the evidence pack is sealed?",
+      "Which storage tier, access ledger, and partition key protect evidence across roles and vendor boundaries?",
+      "Can a replay envelope reconstruct the decision path without restoring an entire log archive?",
+      "What expiration event produces a verifiable deletion receipt and a clear closure owner?"
     ],
     relatedObjects: [
-      "Evidence Chain",
-      "Evidence Minimization",
-      "Retention Boundary",
-      "Evidence Partitioning",
-      "Replay",
-      "Dispute",
-      "Remediation"
+      "Evidence Pack",
+      "Retention Schedule",
+      "Content-Addressed Snapshot",
+      "Replay Envelope",
+      "Access Ledger",
+      "Deletion Receipt",
+      "Remediation Closure"
     ],
     rccsAlcs:
-      "RCCS-M is relevant because evidence retention must express lifecycle objects rather than preserve undifferentiated logs. ALCS is relevant because evidence must stay coherent through review, dispute, remediation, and closure.",
+      "RCCS-M is relevant because retention requires explicit evidence-pack, access, replay, and deletion objects instead of undifferentiated logs. ALCS is relevant because those objects must stay coherent through review, dispute, remediation, expiry, and closure.",
     enterpriseUse:
-      "Privacy, security, audit, and platform teams can use this page to design evidence packs that are reviewable without becoming uncontrolled data hoards.",
+      "Privacy, security, audit, and platform teams can use this page to design a storage contract with evidence tiers, retrieval authority, replay boundaries, expiration events, and deletion receipts before operating an agent trace service.",
     sourceBoundary:
       "This page does not define lawful retention periods or data subject rights handling. Privacy and legal teams should review jurisdiction-specific requirements.",
-    sources: [officialGovernanceSources.gdpr],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.gdpr],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/governance/gdpr-agentic-ai-evidence/", label: "GDPR and Agentic AI Evidence" },
@@ -575,11 +620,12 @@ export const governanceMappings: GovernanceMapping[] = [
     ],
     keywords: [
       "AI Agent Evidence Retention",
-      "AI agent logs",
-      "Evidence Chain",
-      "evidence minimization",
-      "retention boundary",
-      "privacy preserving validation",
+      "evidence pack",
+      "retention schedule",
+      "content addressed snapshot",
+      "replay envelope",
+      "access ledger",
+      "deletion receipt",
       "lifecycle evidence partitioning"
     ]
   },
@@ -616,7 +662,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Procurement, platform, model risk, and architecture teams can use this page as a non-procurement governance checklist for substitution planning.",
     sourceBoundary:
       "This page does not recommend vendors or rank substitution options. It only names lifecycle continuity questions.",
-    sources: [],
+    sourceRefs: [gaicGovernanceSource],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/mapping/extended-ecosystem/", label: "Extended Ecosystem Mapping" },
@@ -635,7 +681,7 @@ export const governanceMappings: GovernanceMapping[] = [
   {
     slug: "incident-dispute-remediation-closure",
     title: "Incident, Dispute, and Remediation Closure for AI Agents",
-    seoTitle: "Incident, Dispute, and Remediation Closure for AI Agents",
+    seoTitle: "Incident and Remediation Closure",
     seoDescription:
       "Incident, Dispute, and Remediation Closure for AI Agents maps incident handling, disputes, rollback, accepted outcome reversal, evidence chain, owner responsibility, and lifecycle closure records.",
     category: "Incident governance",
@@ -665,7 +711,7 @@ export const governanceMappings: GovernanceMapping[] = [
       "Operations, trust and safety, security, product, and governance teams can use this page to design closure records that survive beyond ticket status.",
     sourceBoundary:
       "This page is not an incident-response standard, legal notification guide, or regulator reporting procedure.",
-    sources: [officialGovernanceSources.nistAiRmfOverview, officialGovernanceSources.imdaGenAi],
+    sourceRefs: [gaicGovernanceSource, officialGovernanceSources.nistAiRmfOverview, officialGovernanceSources.imdaGenAi],
     relatedLinks: [
       ...commonGovernanceLinks,
       { href: "/playbooks/ai-agent-rollback-verification/", label: "AI Agent Rollback and Verification" },
@@ -681,6 +727,30 @@ export const governanceMappings: GovernanceMapping[] = [
     ]
   }
 ];
+
+/**
+ * Add route and indexing metadata in one place so a mapping cannot silently
+ * drift from the governance information architecture. Dates remain optional:
+ * a page is not assigned a publication date unless an authoritative record
+ * exists in this SOT.
+ */
+export const governanceMappings: GovernanceMapping[] = governanceMappingRecords.map((mapping) => ({
+  ...mapping,
+  contentRole: mapping.contentRole ?? "governance-mapping",
+  canonicalRoute: mapping.canonicalRoute ?? `${governanceIndexPath}${mapping.slug}/`,
+  canonicalParent: mapping.canonicalParent ?? governanceIndexPath,
+  primaryAudience: mapping.primaryAudience ?? primaryAudienceByCategory[mapping.category] ?? ["AI governance readers"],
+  indexability: mapping.indexability ?? "index"
+}));
+
+export const indexableGovernanceMappings = governanceMappings.filter(
+  (mapping) => mapping.indexability === "index"
+);
+
+export function isIndexableGovernanceRoute(href: string) {
+  const mapping = governanceMappings.find((candidate) => candidate.canonicalRoute === href);
+  return !mapping || mapping.indexability === "index";
+}
 
 export function getGovernanceMappingBySlug(slug: string) {
   return governanceMappings.find((mapping) => mapping.slug === slug);

@@ -1,11 +1,14 @@
 ---
 import "../styles/global.css";
+import "../styles/prototypes.css";
+import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { createPersonJsonLd, createWebsiteJsonLd } from "../data/schema";
 import { siteConfig } from "../data/site";
 
 interface Props {
   title?: string;
+  metadataTitle?: string;
   description?: string;
   shareTitle?: string;
   shareSubtitle?: string;
@@ -20,6 +23,7 @@ interface Props {
   ogImageAlt?: string;
   twitterImagePath?: string;
   keywords?: string[] | string;
+  showSiteHeader?: boolean;
   metaTags?: Array<{
     name?: string;
     property?: string;
@@ -29,6 +33,7 @@ interface Props {
 
 const {
   title = siteConfig.title,
+  metadataTitle,
   description = siteConfig.description,
   shareTitle,
   shareDescription,
@@ -42,20 +47,49 @@ const {
   ogImageAlt = `${siteConfig.author.name} — ${siteConfig.author.role}`,
   twitterImagePath,
   keywords,
+  showSiteHeader = true,
   metaTags = []
 } = Astro.props;
 
-const pageTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.title}`;
+const authorName = siteConfig.author.name;
+const normalizeTitle = (value: string) => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (!normalized) return authorName;
+
+  // Page and share titles are authored in their route records. Keep those
+  // words intact and add the site identity only when it is not already there.
+  if (normalized.toLowerCase().includes(authorName.toLowerCase())) return normalized;
+  return `${normalized} | ${authorName}`;
+};
 const canonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 const ogImageUrl = new URL(ogImagePath, siteConfig.siteUrl).toString();
 const twitterImageUrl = new URL(twitterImagePath ?? ogImagePath, siteConfig.siteUrl).toString();
+const compactMetaDescription = (value: string, maxLength = 160) => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+  const clipped = normalized.slice(0, maxLength - 3).replace(/\s+\S*$/, "").trim();
+  return `${clipped}...`;
+};
+const metaDescription = compactMetaDescription(description);
 const keywordsContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;
-const socialTitle = shareTitle ?? pageTitle;
+const authoredShareTitle = shareTitle === siteConfig.title && title !== siteConfig.title ? title : shareTitle;
+const metadataSource = metadataTitle ?? authoredShareTitle ?? title;
+const pageTitle = normalizeTitle(metadataSource);
+const socialTitle = normalizeTitle(authoredShareTitle ?? title);
 const socialDescription = shareDescription ?? description;
-const twitterCardTitle = twitterTitle ?? shareTitle ?? pageTitle;
+const authoredTwitterTitle = twitterTitle === siteConfig.title && title !== siteConfig.title ? title : twitterTitle;
+const twitterCardTitle = normalizeTitle(authoredTwitterTitle ?? authoredShareTitle ?? title);
 const twitterCardDescription = twitterDescription ?? shareDescription ?? description;
-const websiteJsonLd = JSON.stringify(createWebsiteJsonLd());
-const personJsonLd = JSON.stringify(createPersonJsonLd());
+const analyticsEndpoint = import.meta.env.PUBLIC_ANALYTICS_ENDPOINT ?? "";
+const safeJsonLd = (value: unknown) =>
+  JSON.stringify(value)
+    .replaceAll("<", "\\u003c")
+    .replaceAll(">", "\\u003e")
+    .replaceAll("&", "\\u0026")
+    .replaceAll("\\u2028", "\\u2028")
+    .replaceAll("\\u2029", "\\u2029");
+const websiteJsonLd = safeJsonLd(createWebsiteJsonLd());
+const personJsonLd = safeJsonLd(createPersonJsonLd());
 ---
 
 <!doctype html>
@@ -64,7 +98,7 @@ const personJsonLd = JSON.stringify(createPersonJsonLd());
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     {keywordsContent && <meta name="keywords" content={keywordsContent} />}
     {metaTags.map((tag) => (
       tag.name ? (
@@ -102,31 +136,27 @@ const personJsonLd = JSON.stringify(createPersonJsonLd());
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="preload"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-    <link rel="canonical" href={canonicalUrl} />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+   />
+   <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
     <link rel="alternate" type="application/rss+xml" title={`${siteConfig.title} RSS`} href="/rss.xml" />
     <script is:inline type="application/ld+json" set:html={websiteJsonLd}></script>
     <script is:inline type="application/ld+json" set:html={personJsonLd}></script>
     {jsonLd.map((entry) => (
-      <script is:inline type="application/ld+json" set:html={JSON.stringify(entry)}></script>
+      <script is:inline type="application/ld+json" set:html={safeJsonLd(entry)}></script>
     ))}
+    <script is:inline src="/scripts/site-analytics.js" data-analytics-endpoint={analyticsEndpoint} defer></script>
   </head>
-  <body class="zone-b">
+  <body class="zone-b site-body">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <main id="main-content" class="page-content">
-      <slot />
+    {showSiteHeader && <div class="site-chrome"><SiteHeader /></div>}
+    <main id="main-content" class="page-content" tabindex="-1">
+      <div class="site-ledger-shell prototype-ledger">
+        <slot />
+      </div>
     </main>
     <SiteFooter />
   </body>

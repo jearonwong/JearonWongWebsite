@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import RegistryPageHero from "../../../components/RegistryPageHero.astro";
+import ReadingGuide from "../../../components/ReadingGuide.astro";
+import ReadingFlowDiagram from "../../../components/ReadingFlowDiagram.astro";
 import GAICSourceTrace from "../../../components/GAICSourceTrace.astro";
 import { absoluteUrl, createBreadcrumbJsonLd } from "../../../data/schema";
 import { gaicSystems } from "../../../data/gaicSystems";
@@ -16,6 +18,12 @@ import { siteConfig } from "../../../data/site";
 const canonicalPath = extendedEcosystemIndexPath;
 const pageUrl = absoluteUrl(canonicalPath);
 const gaicSourceTrace = getGaicP1SourceTraceByRoute(canonicalPath);
+const indexableEcosystems = extendedEcosystems.filter(
+  (ecosystem) => ecosystem.indexability === "index"
+);
+const supportEcosystems = extendedEcosystems.filter(
+  (ecosystem) => ecosystem.indexability === "noindex"
+);
 const metaDescription =
   "Independent lifecycle governance mappings for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems.";
 const keywords = [
@@ -57,11 +65,11 @@ const itemListJsonLd = {
   "@type": "ItemList",
   "@id": `${pageUrl}#extended-ecosystem-list`,
   name: "Extended Ecosystem Lifecycle Governance Mapping",
-  itemListElement: extendedEcosystems.map((ecosystem, index) => ({
+  itemListElement: indexableEcosystems.map((ecosystem, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: ecosystem.name,
-    url: absoluteUrl(`${canonicalPath}${ecosystem.slug}/`)
+    url: absoluteUrl(ecosystem.canonicalRoute)
   }))
 };
 const pageJsonLd = {
@@ -97,8 +105,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
 <BaseLayout
   title="Extended Ecosystem Lifecycle Governance Mapping"
+  metadataTitle="Extended Ecosystem Mapping"
   description={metaDescription}
-  shareTitle="Extended Ecosystem Lifecycle Governance Mapping"
+  shareTitle="Extended Ecosystem Mapping"
   shareDescription={metaDescription}
   twitterTitle="Extended Ecosystem Mapping"
   twitterDescription={metaDescription}
@@ -115,7 +124,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     lead="Independent lifecycle governance checklists for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems."
   >
     <div class="ecosystem-hero-links">
-      {primaryLinks.map((link) => (
+      {primaryLinks.slice(0, 2).map((link) => (
         <a href={link.href} class="registry-annotation ecosystem-hero-link">
           <span class="registry-key">LINK</span>: <span class="registry-value">{link.label}</span>
         </a>
@@ -124,7 +133,20 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   </RegistryPageHero>
 
   <div class="zone-b page-body page-body--standard">
-    <main class="shell ecosystem-shell">
+    <div class="shell ecosystem-shell">
+      <ReadingGuide
+        role="ECOSYSTEM_CONTEXT"
+        answer="Source-qualified mappings place tools, runtimes, and standards context beside the lifecycle governance questions they can inform."
+        startHref="#ecosystem-intro-title"
+        startLabel="Read the mapping boundary"
+        nextLinks={[{ href: "/playbooks/", label: "Open applied playbooks" }, { href: "/concepts/map/", label: "Open the concepts map" }]}
+        sections={["Mapping boundary", "Applied playbooks", "Extended mappings", "GAIC systems"]}
+      />
+      <ReadingFlowDiagram
+        variant="governance"
+        title="Context informs the lifecycle; it does not replace it."
+        description="Use ecosystem mappings as source-qualified context, then return to the canonical lifecycle and evidence surfaces."
+      />
       <section class="registry-chassis ecosystem-intro" aria-labelledby="ecosystem-intro-title">
         <div>
           <div class="registry-annotation">
@@ -183,23 +205,59 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
           </p>
         </div>
         <div class="ecosystem-card-grid">
-          {extendedEcosystems.map((ecosystem) => (
+          {indexableEcosystems.map((ecosystem) => (
             <article class="registry-chassis ecosystem-card">
               <div class="ecosystem-card__topline">
                 <span>{ecosystem.category}</span>
-                <span>{ecosystem.sourceStatus}</span>
+                <span>{ecosystem.sourceRefs.length} source refs</span>
               </div>
-              <h3><a href={`${canonicalPath}${ecosystem.slug}/`}>{ecosystem.name}</a></h3>
+              <h3><a href={ecosystem.canonicalRoute}>{ecosystem.name}</a></h3>
               <p>{ecosystem.summary}</p>
               <div class="ecosystem-card__question">
-                <strong>Lifecycle governance question</strong>
-                <span>{ecosystem.lifecycleQuestion}</span>
+                <strong>Distinctive question</strong>
+                <span>{ecosystem.distinctiveQuestion}</span>
               </div>
-              <a href={`${canonicalPath}${ecosystem.slug}/`} class="ecosystem-card__link">Open mapping</a>
+              <div class="ecosystem-card__decision">
+                <strong>Decision artifact</strong>
+                <span>{ecosystem.decisionArtifact}</span>
+              </div>
+              <div class="ecosystem-card__audience">
+                <strong>Primary reader</strong>
+                <span>{ecosystem.primaryAudience.join(" / ")}</span>
+              </div>
+              <a href={ecosystem.canonicalRoute} class="ecosystem-card__link">Open mapping</a>
             </article>
           ))}
         </div>
       </section>
+
+      {supportEcosystems.length > 0 && (
+        <section class="ecosystem-group ecosystem-support" aria-labelledby="support-mappings-title">
+          <div class="registry-section-heading">
+            <div class="registry-annotation">
+              <span class="registry-key">GROUP_02B</span>: <span class="registry-value">SUPPORT_ROUTES</span>
+            </div>
+            <h2 id="support-mappings-title">Support routes retained for continuity.</h2>
+            <p>
+              These routes remain available for existing references while their scope is consolidated
+              with a canonical mapping. They are followable support pages, not separate indexable
+              publications.
+            </p>
+          </div>
+          <div class="ecosystem-card-grid ecosystem-card-grid--support">
+            {supportEcosystems.map((ecosystem) => (
+              <article class="registry-chassis ecosystem-card ecosystem-card--support">
+                <div class="ecosystem-card__topline">
+                  <span>{ecosystem.name}</span>
+                  <span>Support route</span>
+                </div>
+                <p>{ecosystem.distinctiveQuestion}</p>
+                <a href={ecosystem.canonicalRoute} class="ecosystem-card__link">Open support mapping</a>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section class="ecosystem-group" aria-labelledby="gaic-systems-title">
         <div class="registry-section-heading">
@@ -235,7 +293,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
       </section>
 
       {gaicSourceTrace && <GAICSourceTrace trace={gaicSourceTrace} />}
-    </main>
+    </div>
   </div>
 </BaseLayout>
 
@@ -252,7 +310,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .ecosystem-hero-link:hover .registry-value {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .ecosystem-shell {
@@ -269,7 +327,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
     gap: clamp(1.5rem, 4vw, 3rem);
-    border-left: 3px solid var(--accent-proof);
+    border-left: 3px solid var(--color-rule);
   }
 
   .ecosystem-intro h2,
@@ -278,8 +336,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0.85rem 0 0;
     color: var(--current-text);
     font-size: 2rem;
-    line-height: 1.1;
-    letter-spacing: 0;
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    word-spacing: var(--type-section-title-word-spacing);
   }
 
   .ecosystem-intro p,
@@ -307,12 +366,17 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .ecosystem-intro__links a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .ecosystem-group {
     display: grid;
     gap: 1.35rem;
+  }
+
+  .ecosystem-support {
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--current-line);
   }
 
   .ecosystem-card-grid {
@@ -328,12 +392,21 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     padding: var(--registry-card-padding);
   }
 
+  .ecosystem-card--support {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .ecosystem-card--support .ecosystem-card__topline {
+    grid-column: 1 / -1;
+  }
+
   .ecosystem-card__topline {
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
     justify-content: space-between;
-    color: var(--accent-signal);
+    color: var(--color-meta);
     font-family: var(--font-mono);
     font-size: 0.66rem;
     font-weight: 800;
@@ -345,8 +418,9 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     margin: 0;
     color: var(--current-text);
     font-size: 1.5rem;
-    line-height: 1.12;
-    letter-spacing: 0;
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    word-spacing: var(--type-card-title-word-spacing);
   }
 
   .ecosystem-card h3 a {
@@ -369,6 +443,14 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     border-top: 1px solid var(--current-line);
   }
 
+  .ecosystem-card__decision,
+  .ecosystem-card__audience {
+    display: grid;
+    gap: 0.35rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--current-line);
+  }
+
   .ecosystem-card__question strong {
     color: var(--current-text);
     font-family: var(--font-mono);
@@ -377,8 +459,24 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     text-transform: uppercase;
   }
 
+  .ecosystem-card__decision strong,
+  .ecosystem-card__audience strong {
+    color: var(--current-text);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .ecosystem-card__decision span,
+  .ecosystem-card__audience span {
+    color: var(--current-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
   .ecosystem-card__link {
-    color: var(--accent-signal);
+    color: var(--color-action);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 800;
@@ -397,7 +495,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
 
   .ecosystem-card h3 a:hover,
   .ecosystem-card__link:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .related-system-strip {
@@ -419,11 +517,11 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
   }
 
   .related-system-strip a:hover {
-    color: var(--accent-signal);
+    color: var(--color-action);
   }
 
   .ecosystem-boundary {
-    border-left: 3px solid var(--accent-caution);
+    border-left: 3px solid var(--color-rule);
   }
 
   @media (max-width: 860px) {
@@ -436,10 +534,20 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd(pageUrl, [
     .ecosystem-boundary h2,
     .registry-section-heading h2 {
       font-size: 1.55rem;
+      line-height: var(--type-section-title-line-height-mobile);
+      letter-spacing: var(--type-section-title-letter-spacing);
+      word-spacing: var(--type-section-title-word-spacing);
     }
 
     .ecosystem-card h3 {
       font-size: 1.25rem;
+      line-height: var(--type-card-title-line-height-mobile);
+      letter-spacing: var(--type-card-title-letter-spacing);
+      word-spacing: var(--type-card-title-word-spacing);
+    }
+
+    .ecosystem-card--support {
+      grid-template-columns: 1fr;
     }
   }
 </style>

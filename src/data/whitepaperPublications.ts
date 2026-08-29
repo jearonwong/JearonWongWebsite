@@ -11,6 +11,11 @@ export const whitepaperPublications = [
       "A lifecycle governance foundation for AI agent and multi-agent compliance.",
     abstract:
       "A public edition defining Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.",
+    audience: "Architects, governance leads, and researchers mapping lifecycle responsibility.",
+    readingTimeMinutes: 90,
+    technicalDepth: "Deep technical and governance reference",
+    citationUse: "Use for definitions, object-model discussion, and lifecycle governance framing.",
+    changeSummary: "Public research edition consolidating the MRO, RCCS-M, ALCS, and MPLP relationship.",
     canonicalPath: "/research/global-ai-compliance-white-paper-2026/",
     assetBase: "/research/global-ai-compliance-white-paper-2026",
     documentId: "GACWP-2026-v0.3.2-FRC-R3",
@@ -53,7 +58,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html",
         description: "Responsive web-reading edition",
         mediaType: "text/html",
-        sha256: "4d24358d0f3a4b78f7239a8cffbda2c54bec17419d6c4e9992eccd49925bace4"
+        sha256: "9a76d4e97ba19827e7975c03a19115747f6fe58364542761a0f9ffed38999afb"
       },
       {
         kind: "PDF",
@@ -69,7 +74,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "5d9ef1611a422afab92c8c937b9309ea6932a6ac8e64a928ed63e538be3ecedf"
+        sha256: "51a20ef0626f94a2886c57d67034be11a3d98dc4f24f97d1f5687bda050b1817"
       },
       {
         kind: "SHA256",
@@ -77,7 +82,7 @@ export const whitepaperPublications = [
         href: "/research/global-ai-compliance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "2393ebd32ed9e4f00bc527a329dfd52a861b60801437571d68a8b9e148e3f7e7"
+        sha256: "a9091786b069dfc7376c61d558d0a23533497b8c15f6195e2404a1ce88935c95"
       }
     ],
     additionalIntegrityLinks: [
@@ -147,6 +152,11 @@ export const whitepaperPublications = [
       "A lifecycle evidence guide for auditability, assurance boundaries, and enterprise AI governance.",
     abstract:
       "A public research edition defining agentic AI auditability, lifecycle evidence, audit evidence chains, AARM, MRO-to-audit-evidence mapping, and enterprise AI governance boundaries.",
+    audience: "Audit, assurance, security, and enterprise AI governance readers.",
+    readingTimeMinutes: 55,
+    technicalDepth: "Applied technical and assurance reference",
+    citationUse: "Use for audit-object, evidence-chain, and assurance-boundary citations.",
+    changeSummary: "First public research edition establishing the auditability and assurance companion to GAIC.",
     canonicalPath: "/research/agentic-ai-auditability-assurance-white-paper-2026/",
     assetBase: "/research/agentic-ai-auditability-assurance-white-paper-2026",
     documentId: "AIAAWP-2026-v0.1",
@@ -188,7 +198,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "996a07049b0588ba3c53c44501fcbaf8a67d8c84375a42167037134fc1fa69c4"
+        sha256: "163a5aa4c307222adda7eaef49c3cb2fa06dc9c8a856dd140ed285dff089f9df"
       },
       {
         kind: "PDF",
@@ -204,7 +214,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "cadbf8e3429333e18ed54867f99af2b747f499c1ca92c3c3eca879d70b3bee15"
+        sha256: "1b7a66da31e050c145c923fe20bdf33fc295c052f361007904722c7a179900d1"
       },
       {
         kind: "SHA256",
@@ -212,7 +222,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "9d84c3286a5683673ff8ebb20f5d02c2a73b1a1cd7298792e2f31cbedbeecce4"
+        sha256: "ff495b01cec9db124cb7b2c0032db50d4d05a3db5c2ebb95f6d78a30b378500e"
       }
     ],
     overview:
@@ -271,6 +281,11 @@ export const whitepaperPublications = [
       "A lifecycle evidence guide for risk-transfer analysis, claim reconstruction, and underwriting-facing reviewability.",
     abstract:
       "A public research edition analyzing agentic AI insurability and risk transfer through lifecycle evidence, insured subject and risk object separation, underwriting reviewability, and claim reconstruction boundaries.",
+    audience: "Risk, insurance, governance, and architecture readers assessing evidence requirements.",
+    readingTimeMinutes: 50,
+    technicalDepth: "Applied technical and risk-transfer reference",
+    citationUse: "Use for insured-subject, claim-evidence, and risk-transfer research framing.",
+    changeSummary: "Public research edition separating risk-transfer reasoning from insurance advice or underwriting claims.",
     canonicalPath: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/",
     assetBase: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026",
     documentId: "AIIRWP-2026-v1.0",
@@ -311,7 +326,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html",
         description: "Responsive web-reading artifact",
         mediaType: "text/html",
-        sha256: "e99607ca2d53b9cc5d841bd216d56771d2b6d2ab7882666002e16e512404937d"
+        sha256: "bb1f248e97d9d195cc3a0ae1e8c21e4614168be66e2b7495c103c57f91af6a22"
       },
       {
         kind: "PDF",
@@ -327,7 +342,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json",
         description: "Public artifact manifest",
         mediaType: "application/json",
-        sha256: "54fd96475f652c2805059fbe6fb7fef4dfaa6a7106bcc571f3681df911565cd7"
+        sha256: "e8ad119ad667d5d86b19b20a95d1dc25e22926c57beb08e1adb7792cb0a1ce99"
       },
       {
         kind: "SHA256",
@@ -335,7 +350,7 @@ export const whitepaperPublications = [
         href: "/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256",
         description: "Public artifact checksum file",
         mediaType: "text/plain",
-        sha256: "61d4867213410657d2028d45bb076efc33d1d3020d2ea2be0889453a8db7bf2d"
+        sha256: "f9388ca1cf901b7a0dca713c04140b52f7dd126903d8db908612d3bb1fe29d4b"
       }
     ],
     overview:

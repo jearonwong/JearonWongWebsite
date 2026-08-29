@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PrototypeNav from "../../components/PrototypeNav.astro";
+import "../../styles/prototypes.css";
+import { siteConfig } from "../../data/site";
+---
+
+<BaseLayout
+  title="UI Prototypes"
+  description="Three isolated UI directions for the Jearon Wong personal research site."
+  canonicalPath="/prototypes/"
+  noindex={true}
+  showSiteHeader={false}
+>
+  <div class="prototype-page prototype-index">
+    <PrototypeNav />
+    <div class="prototype-shell">
+      <header class="prototype-index__hero">
+        <span class="prototype-label">Frontend study / 03 directions</span>
+        <h1>One thesis. Three reading modes.</h1>
+        <p>
+          An isolated set of homepage directions for {siteConfig.author.name}. The source language stays fixed;
+          only the information density, hierarchy, and first journey change.
+        </p>
+      </header>
+      <nav class="prototype-index__list" aria-label="Prototype directions">
+        <a class="prototype-index__item" href="/prototypes/quiet-thesis/">
+          <span class="prototype-index__number">A</span>
+          <h2>Quiet Thesis</h2>
+          <p>Author-first and spacious. One argument leads; the reference layer waits until it is needed.</p>
+          <span class="prototype-index__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="prototype-index__item" href="/prototypes/research-ledger/">
+          <span class="prototype-index__number">B</span>
+          <h2>Research Ledger</h2>
+          <p>Publication-first and scannable. Essays, research, projects, and evidence read like a maintained index.</p>
+          <span class="prototype-index__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="prototype-index__item" href="/prototypes/split-signal/">
+          <span class="prototype-index__number">C</span>
+          <h2>Split Signal</h2>
+          <p>Identity stays fixed on the left while the right side rotates the most important current signal.</p>
+          <span class="prototype-index__arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</BaseLayout>
