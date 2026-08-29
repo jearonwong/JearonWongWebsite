@@ -829,12 +829,12 @@ const articleJsonLd = {
     margin: 3rem 0;
     padding: 1.25rem;
     background:
-      linear-gradient(var(--color-rule-dark) 1px, transparent 1px),
-      linear-gradient(90deg, var(--color-rule-dark) 1px, transparent 1px),
-      var(--bg-monolith);
+      linear-gradient(var(--color-rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-rule-soft) 1px, transparent 1px),
+      var(--surface-paper);
     background-size: 28px 28px;
-    border: 1px solid rgba(17, 17, 17, 0.18);
-    color: var(--text-registry-primary);
+    border: 1px solid var(--color-rule);
+    color: var(--current-text);
   }
   .article-content :global(.protocol-layer) {
     display: grid;
@@ -842,13 +842,13 @@ const articleJsonLd = {
     align-items: center;
     gap: 0.55rem 1.5rem;
     padding: 1rem 1.15rem;
-    background: rgba(255, 255, 255, 0.045);
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    border-left: 3px solid var(--color-rule-dark);
+    background: rgba(17, 20, 24, 0.025);
+    border: 1px solid var(--color-rule-soft);
+    border-left: 3px solid var(--color-rule);
   }
   .article-content :global(.protocol-layer--governance) {
-    border-left-color: var(--color-rule-dark);
-    background: var(--color-rule-dark);
+    border-left-color: var(--color-rule);
+    background: rgba(17, 20, 24, 0.06);
   }
   .article-content :global(.protocol-layer__label) {
     font-family: var(--font-mono);
@@ -856,20 +856,23 @@ const articleJsonLd = {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--article-dark-muted);
+    color: var(--color-meta);
   }
   .article-content :global(.protocol-layer--governance .protocol-layer__label) {
-    color: var(--article-dark-muted);
+    color: var(--color-meta);
   }
   .article-content :global(.protocol-layer strong) {
+    color: var(--current-text);
+    font-family: var(--font-display);
     font-size: 1rem;
+    font-weight: 760;
     line-height: 1.35;
   }
   .article-content :global(.protocol-layer span:not(.protocol-layer__label)),
   .article-content :global(.protocol-layer small) {
     grid-column: 2;
     margin: 0;
-    color: rgba(241, 245, 249, 0.72);
+    color: var(--current-muted);
     font-size: 0.9rem;
     line-height: 1.45;
   }

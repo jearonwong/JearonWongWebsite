@@ -417,8 +417,10 @@ const semanticEvidenceBandPath = path.join(root, "src", "components", "SemanticE
 const readingFlowDiagramPath = path.join(root, "src", "components", "ReadingFlowDiagram.astro");
 const gaicSourceTracePath = path.join(root, "src", "components", "GAICSourceTrace.astro");
 const essaysIndexPath = path.join(root, "src", "pages", "essays", "index.astro");
+const essayRecordRendererPath = path.join(root, "src", "pages", "essays", "[slug].astro");
 const portraitPath = path.join(root, "src", "components", "PortraitAnchor.astro");
 const siteDataPath = path.join(root, "src", "data", "site.ts");
+const essayContentPath = path.join(root, "src", "content", "essays");
 const portraitWidths = [320, 480, 640];
 const globalCss = exists(globalCssPath) ? read(globalCssPath) : "";
 const requiredLedgerColorTokens = [
@@ -526,6 +528,49 @@ for (const file of productionSourceFiles) {
       );
     }
   }
+}
+
+// Inline article diagrams are publication assets too. Keep their markup and
+// renderer contract explicit so a dark legacy block cannot bypass the SVG
+// media audit simply because it lives in Markdown.
+for (const file of collectFiles(essayContentPath, (candidate) => /\.(?:md|mdx)$/.test(candidate))) {
+  const source = read(file);
+  for (const match of source.matchAll(/<div\b[^>]*class=["'][^"']*\bprotocol-stack-diagram\b[^"']*["'][^>]*>/gi)) {
+    const tag = match[0];
+    const index = match.index ?? 0;
+    for (const [attribute, expected] of [
+      ["data-visual-system", "research-ledger-b"],
+      ["data-media-category", "article-figure-inline"],
+      ["data-palette", "neutral-structure-functional-blue-semantic-exceptions"],
+      ["data-visual-revision", "article-figure-b"]
+    ]) {
+      const value = attributeValue(tag, attribute);
+      if (value !== expected) {
+        recordSourceViolation(
+          "inline-article-figure-contract",
+          file,
+          source,
+          index,
+          `${attribute} must be ${expected} on protocol-stack-diagram (found ${value || "missing"})`
+        );
+      }
+    }
+  }
+}
+
+const essayRendererSource = exists(essayRecordRendererPath) ? maskComments(read(essayRecordRendererPath)) : "";
+const protocolStackRule = cssRules(essayRecordRendererPath, essayRendererSource)
+  .find((rule) => rule.selector.includes(".protocol-stack-diagram"));
+if (!protocolStackRule) {
+  fail("article renderer is missing the protocol-stack-diagram visual rule");
+} else if (/var\(--bg-monolith\)|var\(--color-rule-dark\)|rgba\(255\s*,\s*255\s*,\s*255/i.test(protocolStackRule.body)) {
+  recordSourceViolation(
+    "legacy-inline-article-figure-shell",
+    essayRecordRendererPath,
+    read(essayRecordRendererPath),
+    protocolStackRule.bodyOffset,
+    "protocol-stack-diagram must use the light Research Ledger surface and neutral structure tokens"
+  );
 }
 
 for (const violation of sourceViolations) {

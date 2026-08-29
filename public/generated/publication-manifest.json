@@ -39,7 +39,7 @@
         "Intent Drift"
       ],
       "source": "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md",
-      "bodySha256": "31af40c359c03c2597abb3037ba2ce6f3c5b34bd27dbd5d6f524ac12d6f63ea1",
+      "bodySha256": "4c9bfc699930d78b785f15b54fede2d9a941dea4d12dc4ea19d38e4c359f1ed2",
       "controlMode": "governed",
       "control": {
         "waveId": "essay-2026-08-25-when-agent-says-done",
@@ -799,7 +799,7 @@
         "MPLP"
       ],
       "source": "src/content/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle.md",
-      "bodySha256": "6eb9f68494b451a17ad19c634d2cffd950d77f0c343bc293f16a41fc4765e013",
+      "bodySha256": "d5e024455e7c5ca6941fbd7b054e71026c8383a02a775e0fbf580f27a8a7021d",
       "controlMode": "governed",
       "control": {
         "waveId": "essay-control-mcp-a2a-lifecycle-governance",

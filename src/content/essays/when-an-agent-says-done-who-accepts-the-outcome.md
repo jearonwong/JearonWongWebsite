@@ -200,7 +200,7 @@ That cross-layer continuity is the problem I am trying to make explicit. It is a
 
 The lifecycle has to preserve more than activity. It has to preserve meaning and responsibility across the transitions where meaning is most likely to be lost. I now read those transitions as a small registry of states and handoff conditions:
 
-<div class="protocol-stack-diagram" aria-label="Accountable agent lifecycle registry">
+<div class="protocol-stack-diagram" aria-label="Accountable agent lifecycle registry" data-visual-system="research-ledger-b" data-media-category="article-figure-inline" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <div class="protocol-layer protocol-layer--application">
     <span class="protocol-layer__label">01 / Intent</span>
     <strong>Versioned scope and materiality</strong>

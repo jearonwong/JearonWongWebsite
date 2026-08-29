@@ -183,7 +183,7 @@ This does not eliminate drift by itself. But it makes drift detectable, because 
 
 One useful way to map the emerging agent protocol stack is:
 
-<div class="protocol-stack-diagram" aria-label="Emerging agent protocol stack">
+<div class="protocol-stack-diagram" aria-label="Emerging agent protocol stack" data-visual-system="research-ledger-b" data-media-category="article-figure-inline" data-palette="neutral-structure-functional-blue-semantic-exceptions" data-visual-revision="article-figure-b">
   <div class="protocol-layer protocol-layer--application">
     <span class="protocol-layer__label">Application Layer</span>
     <strong>Product logic, workflow, UX</strong>
