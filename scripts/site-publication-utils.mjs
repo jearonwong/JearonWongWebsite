@@ -18,7 +18,7 @@ const scalarKeys = new Set([
   "title", "description", "publishDate", "updatedAt", "status", "cluster", "projectProof",
   "publicationClass", "editorialTrack", "track", "canonicalRoute", "canonicalParent",
   "primaryAudience", "distinctReaderQuestion", "indexability", "maxClickDepth", "featured", "flagship", "series", "seriesOrder",
-  "subtitle", "shareTitle", "shareSubtitle", "shareDescription", "shareImage", "shareImageAlt", "ogImage", "ogImageAlt",
+  "subtitle", "shareTitle", "shareImageTitle", "shareSubtitle", "shareDescription", "shareImage", "shareImageAlt", "ogImage", "ogImageAlt",
   "summary", "evidenceLevel", "readingTimeMinutes"
 ]);
 const listKeys = new Set(["nextSteps", "secondaryAudiences", "sourceRefs", "tags", "relatedIdeas", "relatedProjects", "titleLines"]);

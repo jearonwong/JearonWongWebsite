@@ -20,6 +20,8 @@ const columnCover = spotlightEssay?.data.shareImage ?? spotlightEssay?.data.ogIm
 const columnCoverAlt = spotlightEssay?.data.shareImageAlt ?? spotlightEssay?.data.images?.[0]?.alt ?? aiAgentLifecycleColumn.coverImageAlt;
 const columnCoverWidth = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 1200 : spotlightEssay?.data.images?.[0]?.width ?? 1200;
 const columnCoverHeight = spotlightEssay?.data.shareImage || spotlightEssay?.data.ogImage ? 630 : spotlightEssay?.data.images?.[0]?.height ?? 630;
+const columnCoverHref = spotlightEssay ? `/essays/${spotlightEssay.id}/` : aiAgentLifecycleColumn.href;
+const columnCoverLabel = spotlightEssay ? `Read ${spotlightEssay.data.title}` : `Open ${aiAgentLifecycleColumn.categoryTitle}`;
 const getEssayTrack = (essay: (typeof essays)[number]) => {
   if (essay.data.series === aiAgentLifecycleColumn.seriesTitle) return "lifecycle";
   if (essay.data.editorialTrack) return essay.data.editorialTrack;
@@ -121,8 +123,8 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
           <span class="registry-key">COLUMN</span>: <span class="registry-value">{aiAgentLifecycleColumn.seriesTitle.toUpperCase()}</span>
         </div>
         <div class="lifecycle-spotlight-grid">
-          {spotlightEssay && (
-            <a href={`/essays/${spotlightEssay.id}/`} class="spotlight-cover" aria-label={`Read ${spotlightEssay.data.title}`}>
+          {columnCover && (
+            <a href={columnCoverHref} class="spotlight-cover" aria-label={columnCoverLabel}>
               <img
                 src={columnCover}
                 alt={columnCoverAlt}
@@ -138,14 +140,13 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
             <p class="spotlight-copy">Execution is not Delivery. These essays develop the argument. Use /lifecycle/ for the theory entry; use this page for the writing order.</p>
             {spotlightEssay && (
               <div class="current-essay">
-                <span class="current-essay-label">Latest published column essay</span>
+                <span class="current-essay-label">Latest entry</span>
                 <h3><a href={`/essays/${spotlightEssay.id}/`}>{spotlightEssay.data.title}</a></h3>
-                <p>{spotlightEssay.data.description}</p>
               </div>
             )}
           </div>
           <div class="spotlight-actions">
-            <p>{aiAgentLifecycleColumn.nextEssayDirection}</p>
+            <span class="spotlight-actions-label">Continue the sequence</span>
             <a href={aiAgentLifecycleColumn.href} class="spotlight-link">Open Lifecycle mainline</a>
             <a href="/concepts/" class="spotlight-link">Concepts reference</a>
             {firstColumnEssay && <a href={`/essays/${firstColumnEssay.id}/`} class="spotlight-link">Read essay 01</a>}
@@ -308,34 +309,37 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   }
   .lifecycle-spotlight-grid {
     display: grid;
-    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr) minmax(240px, 0.58fr);
-    gap: 2rem;
+    grid-template-columns: minmax(390px, 1.05fr) minmax(0, 1.16fr) minmax(220px, 0.76fr);
+    gap: clamp(1.5rem, 2.2vw, 2.25rem);
     align-items: start;
   }
   .spotlight-cover {
     display: block;
+    aspect-ratio: 1200 / 630;
+    overflow: hidden;
     border: 1px solid var(--current-line);
-    background: #111111;
+    background: var(--current-surface);
     text-decoration: none;
   }
   .spotlight-cover img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
   }
   .spotlight-main {
     min-width: 0;
   }
   .spotlight-title {
     margin: 0 0 0.7rem;
-    font-size: 1.8rem;
+    font-size: 1.55rem;
     line-height: var(--type-section-title-line-height);
     letter-spacing: var(--type-section-title-letter-spacing);
     word-spacing: var(--type-section-title-word-spacing);
     color: var(--current-text);
   }
   .spotlight-copy,
-  .spotlight-relation,
-  .spotlight-actions p {
+  .spotlight-relation {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.65;
@@ -348,12 +352,22 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   .spotlight-actions {
     display: grid;
     align-content: start;
-    gap: 1rem;
+    gap: 0.9rem;
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--current-line);
+  }
+  .spotlight-actions-label {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-meta);
   }
   .current-essay {
-    margin-top: var(--space-3);
-    padding-top: var(--space-3);
-    border-top: 1px solid var(--current-line);
+    margin-top: var(--space-4);
   }
   .current-essay-label,
   .foundation-label {
@@ -379,12 +393,6 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
   }
   .current-essay h3 a:hover {
     color: var(--color-action);
-  }
-  .current-essay p {
-    margin: 0;
-    color: var(--current-muted);
-    font-size: 0.92rem;
-    line-height: 1.58;
   }
   .foundation-strip {
     display: grid;
@@ -508,6 +516,22 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     max-width: 62ch;
     margin: 0;
   }
+  @media (max-width: 1080px) and (min-width: 901px) {
+    .lifecycle-spotlight-grid {
+      grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1fr);
+    }
+    .spotlight-actions {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding-top: var(--space-3);
+      padding-left: 0;
+      border-top: 1px solid var(--current-line);
+      border-left: 0;
+    }
+    .spotlight-actions-label {
+      grid-column: 1 / -1;
+    }
+  }
   @media (max-width: 900px) {
     .lifecycle-spotlight {
       padding: var(--registry-card-padding);
@@ -515,6 +539,9 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     .lifecycle-spotlight-grid {
       grid-template-columns: 1fr;
       gap: 1.4rem;
+    }
+    .spotlight-cover {
+      max-width: 42rem;
     }
     .spotlight-title {
       font-size: 1.45rem;
@@ -524,6 +551,12 @@ const essaysBreadcrumbJsonLd = createBreadcrumbJsonLd(essaysUrl, [
     }
     .foundation-strip {
       grid-template-columns: 1fr;
+    }
+    .spotlight-actions {
+      padding-top: var(--space-3);
+      padding-left: 0;
+      border-top: 1px solid var(--current-line);
+      border-left: 0;
     }
     .essay-record {
       grid-template-columns: 1fr;

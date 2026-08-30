@@ -6,7 +6,7 @@
       <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
     <style>
-      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 64px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
+      .display { fill: #f4f7fb; font-family: Outfit, Inter, sans-serif; font-size: 53px; font-weight: 760; letter-spacing: 0; word-spacing: 0.015em; }
       .mono { fill: #96a0aa; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: 0; word-spacing: 0.018em; }
       .mono-bright { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 15px; font-weight: 700; letter-spacing: 0; word-spacing: 0.018em; }
       .route { fill: #f4f7fb; font-family: 'JetBrains Mono', Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0; word-spacing: 0; }
@@ -26,8 +26,9 @@
   <text x="72" y="142" class="mono">PAGE_ROLE</text>
   <text x="171" y="142" class="mono">:</text>
   <text x="193" y="142" class="mono-bright">ESSAY / LIFECYCLE</text>
-  <text x="72" y="240" class="display">When an Agent Says</text>
-    <text x="72" y="310" class="display">Done</text>
+  <text x="72" y="220" class="display">When an Agent Says</text>
+    <text x="72" y="280" class="display">&quot;Done,&quot; Who Accepts</text>
+    <text x="72" y="340" class="display">the Outcome?</text>
 
   <line x1="844" y1="142" x2="844" y2="394" stroke="#ffffff" stroke-opacity="0.18"/>
   <text x="880" y="176" class="mono">AUTHOR</text>

@@ -39,7 +39,7 @@
         "Intent Drift"
       ],
       "source": "src/content/essays/when-an-agent-says-done-who-accepts-the-outcome.md",
-      "bodySha256": "4c9bfc699930d78b785f15b54fede2d9a941dea4d12dc4ea19d38e4c359f1ed2",
+      "bodySha256": "24d5a8dad9383a1763dbd1db5e827b0480abf9a09f8ae4b735a714ff136cc5a9",
       "controlMode": "governed",
       "control": {
         "waveId": "essay-2026-08-25-when-agent-says-done",

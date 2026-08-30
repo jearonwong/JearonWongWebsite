@@ -2033,7 +2033,7 @@
         "width": 1200,
         "height": 630
       },
-      "sha256": "6d6b378c7ab2e0d7bcc368c5c5b6e8829caa7ad2e4a2e38c292a7f637a8fa979",
+      "sha256": "48b6131dfc15a8b68ed1683b38abd81de858347a2d719316ed7c801205043d52",
       "visualSystem": null,
       "paletteMode": "raster-derived",
       "manualReview": false,
@@ -2050,7 +2050,7 @@
         "width": 1200,
         "height": 630
       },
-      "sha256": "de386c0d1b11d0b92f719f57d67a0a034973a774173cb68bcffa8a442b528c95",
+      "sha256": "c491f39fa9b703be0593232ff5b4a87f5a2154e4719ae1abd4390033b9da21b4",
       "visualSystem": "research-ledger-b",
       "paletteMode": "neutral-structure-functional-blue",
       "manualReview": false,

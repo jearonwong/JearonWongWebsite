@@ -13,6 +13,7 @@ const essays = defineCollection({
     subtitle: z.string().optional(),
     description: z.string(),
     shareTitle: z.string().optional(),
+    shareImageTitle: z.string().optional(),
     shareSubtitle: z.string().optional(),
     shareDescription: z.string().optional(),
     shareImage: z.string().optional(),

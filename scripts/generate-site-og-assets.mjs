@@ -127,7 +127,7 @@ const essayRecords = loadEssays()
   .map(({ slug, data }) => {
     const imageFile = data.shareImage.replace(/^\/social\//, "").replace(/\.png$/i, "");
     const track = normalizeText(data.editorialTrack || data.track || "general").toUpperCase();
-    const title = normalizeText(data.shareTitle || data.title);
+    const title = normalizeText(data.shareImageTitle || data.shareTitle || data.title);
     const summary = normalizeText(data.shareSubtitle || data.shareDescription || data.description);
     return {
       file: imageFile,

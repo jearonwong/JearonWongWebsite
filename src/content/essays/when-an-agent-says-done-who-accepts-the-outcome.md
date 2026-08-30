@@ -6,6 +6,7 @@ titleLines:
 subtitle: "Execution can complete. Delivery still needs an accepting role."
 description: "An Agent can complete its execution while the work remains unaccepted. A first-person field essay from building MPLP and its Development Runtime about Intent change, evidence, authority, and the lifecycle decision that turns execution into delivery."
 shareTitle: "When an Agent Says Done"
+shareImageTitle: 'When an Agent Says "Done," Who Accepts the Outcome?'
 shareSubtitle: "Execution can complete. Delivery still needs an accepting role."
 shareDescription: "A first-person field essay on why execution completion is not delivery, why a receipt is evidence rather than authority, and why AcceptedOutcome must be a lifecycle responsibility decision."
 shareImage: /social/when-an-agent-says-done-og.png
