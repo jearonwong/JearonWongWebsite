@@ -1,6 +1,6 @@
 # Jearon Wong — Protocol Architect for the Agent Era
 
-Site: https://www.jearonwong.com/
+Site: [Jearon Wong](https://www.jearonwong.com/)
 
 Jearon Wong is the Protocol Architect for the Agent Era.
 
@@ -25,7 +25,7 @@ Jearon Wong is the Protocol Architect for the Agent Era.
 - Applied layer: Applied Agentic Governance Playbooks.
 - Engineering practice layer: Deterministic Delivery and Agent Architecture Governance.
 - Regulatory and enterprise governance layer: AI Agent Governance, AI Agent Compliance, enterprise agent governance, regulatory-source mappings, evidence retention, substitution conformance, and incident/dispute/remediation closure.
-- Visible navigation: Concepts Map / Entity Mesh at https://www.jearonwong.com/concepts/map/.
+- Visible navigation: [Concepts Map / Entity Mesh](https://www.jearonwong.com/concepts/map/).
 - GAIC-Cited Systems: source-qualified, non-ranking lifecycle governance mappings for systems discussed in the Global AI Compliance White Paper 2026.
 - Extended Ecosystem Mapping: source-qualified, non-scored lifecycle governance mappings for Claude Code, Qwen, Cursor / AI coding agents, MCP, A2A, and Semantic Kernel. Vendor-specific support aliases remain noindex and are excluded from this public index.
 
@@ -63,211 +63,211 @@ This file is a concise content map for AI crawlers and readers. It does not guar
 
 ## Start Here
 
-- Homepage: https://www.jearonwong.com/
-- Start here orientation hub: https://www.jearonwong.com/start-here/
+- [Homepage](https://www.jearonwong.com/)
+- [Start here orientation hub](https://www.jearonwong.com/start-here/)
   Role: first-visit route through the AI Agent Lifecycle field definition, Agentic Delivery category, MPLP protocol path, project proof paths, evidence registry, and public arguments.
-- Jearon Wong canonical profile: https://www.jearonwong.com/about/
-- AI Agent Lifecycle field definition: https://www.jearonwong.com/lifecycle/
-- Research: https://www.jearonwong.com/research/
-- Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
-- Agentic AI Auditability & Assurance White Paper 2026: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/
-- Agentic AI Insurability & Risk Transfer White Paper 2026: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
-- Agentic Lifecycle Governance Concept Core: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
-- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
-- Evidence Registry / Citation Kit: https://www.jearonwong.com/evidence/
-- Machine-readable entity graph JSON: https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json
-- MPLP canonical protocol entity page: https://www.jearonwong.com/projects/mplp/
-- Applied Agentic Governance Playbooks: https://www.jearonwong.com/playbooks/
-- Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
-- Deterministic Delivery: https://www.jearonwong.com/concepts/deterministic-delivery/
-- Agent Architecture Governance: https://www.jearonwong.com/concepts/agent-architecture-governance/
-- Concepts index: https://www.jearonwong.com/concepts/
-- Essays registry: https://www.jearonwong.com/essays/
-- Projects ledger — protocol and proof paths: https://www.jearonwong.com/projects/
+- [Jearon Wong canonical profile](https://www.jearonwong.com/about/)
+- [AI Agent Lifecycle field definition](https://www.jearonwong.com/lifecycle/)
+- [Research](https://www.jearonwong.com/research/)
+- [Global AI Compliance White Paper 2026](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/)
+- [Agentic AI Auditability & Assurance White Paper 2026](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/)
+- [Agentic AI Insurability & Risk Transfer White Paper 2026](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/)
+- [Agentic Lifecycle Governance Concept Core](https://www.jearonwong.com/concepts/agentic-lifecycle-governance/)
+- [Concepts Map / Entity Mesh](https://www.jearonwong.com/concepts/map/)
+- [Evidence Registry / Citation Kit](https://www.jearonwong.com/evidence/)
+- [Machine-readable entity graph JSON](https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json)
+- [MPLP canonical protocol entity page](https://www.jearonwong.com/projects/mplp/)
+- [Applied Agentic Governance Playbooks](https://www.jearonwong.com/playbooks/)
+- [Extended Ecosystem Lifecycle Governance Mapping](https://www.jearonwong.com/mapping/extended-ecosystem/)
+- [Deterministic Delivery](https://www.jearonwong.com/concepts/deterministic-delivery/)
+- [Agent Architecture Governance](https://www.jearonwong.com/concepts/agent-architecture-governance/)
+- [Concepts index](https://www.jearonwong.com/concepts/)
+- [Essays registry](https://www.jearonwong.com/essays/)
+- [Projects ledger — protocol and proof paths](https://www.jearonwong.com/projects/)
 
 ## Entity Authority Surfaces
 
-- Jearon Wong canonical profile: https://www.jearonwong.com/about/
+- [Jearon Wong canonical profile](https://www.jearonwong.com/about/)
   Role: owned-canonical Person entity surface. It links Jearon Wong to MPLP, the Global AI Compliance White Paper 2026, Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Deterministic Delivery, Agentic Delivery, Validation Lab, Cognitive OS, SoloCrew, Concepts Map, and Evidence Registry. It does not claim regulator approval, vendor endorsement, external adoption, indexing, or answer-engine citation.
-- MPLP canonical protocol entity page: https://www.jearonwong.com/projects/mplp/
+- [MPLP canonical protocol entity page](https://www.jearonwong.com/projects/mplp/)
   Role: owned/project protocol entity surface. MPLP is an open, vendor-neutral lifecycle protocol for AI agent systems and one protocol path for lifecycle responsibility semantics. It is not a complete Agent OS, runtime, platform, certification program, legal compliance proof, required implementation, regulator-approved standard, vendor endorsement, official compatibility claim, or procurement guidance.
-- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
+- [Concepts Map / Entity Mesh](https://www.jearonwong.com/concepts/map/)
   Role: visible human-and-machine entity graph surface. It exposes safe relationship edges such as authored, created, defines, introduces, maps_to, supports, is_one_protocol_path_for, is_evidence_surface_for, and interprets_under_lifecycle_governance. It does not publish arbitrary relationship weights.
-- Evidence Registry / Citation Kit: https://www.jearonwong.com/evidence/
+- [Evidence Registry / Citation Kit](https://www.jearonwong.com/evidence/)
   Role: citation and evidence shelf for owned-canonical, authored-analysis, project, source-qualified mapping, and pending-external-evidence surfaces. External citations, backlinks, Search Console/Bing submission, and answer-engine citations remain pending unless separately recorded.
-- Machine-readable entity graph JSON: https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json
+- [Machine-readable entity graph JSON](https://www.jearonwong.com/entity/jearonwong-mplp-gaic-entity-graph.json)
   Role: public JSON artifact for the Jearon Wong / MPLP / three-whitepaper entity graph. Document IDs remain available inside the artifact, but public descriptions lead with formal paper names. It contains no numeric weights, endorsement/adoption claims, legal compliance proof, insurance advice, coverage opinion, underwriting standard, insurer acceptance, coverage-ready status, underwriting-ready status, official compatibility claims, vendor authority claims, production-verification claims, certification claims, or external approval claims.
 
 ## White Papers
 
-- Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/
+- [Global AI Compliance White Paper 2026](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/)
   v0.3.2 Public Research Edition. Technical Report ID: GACWP-2026-v0.3.2-FRC-R3. Recommended citation: Jearon Wong. Global AI Compliance White Paper 2026: From Model Governance to Agentic Lifecycle Conformance. Technical Report GACWP-2026-v0.3.2-FRC-R3, May 2026. Defines Missing Regulatory Objects, RCCS-T, RCCS-M, ALCS, and lifecycle responsibility for AI agent and multi-agent governance.
-  PDF: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf
-  HTML: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html
+  [PDF](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.pdf)
+  [HTML](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/global-ai-compliance-white-paper-2026.html)
   Public distribution: HTML and PDF only.
-  Current manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/manifest.json
-  Historical publication-candidate seal manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json
-  Public PDF metadata manifest: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json
+  [Current manifest](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/manifest.json)
+  [Historical publication-candidate seal manifest](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/publication-candidate-manifest.json)
+  [Public PDF metadata manifest](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/public-pdf-metadata-reseal-manifest.json)
   Boundary: author-analytical governance models and protocol-level concepts; not legal advice, legal compliance proof, certification, regulator-approved benchmark, vendor ranking, or procurement recommendation.
-- Agentic AI Auditability & Assurance White Paper 2026: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/
+- [Agentic AI Auditability & Assurance White Paper 2026](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/)
   v0.1 Public Research Edition. Document ID: AIAAWP-2026-v0.1. Recommended citation: Jearon Wong. Agentic AI Auditability & Assurance White Paper 2026: A Lifecycle Evidence Guide for Audit, Assurance, and Enterprise AI Governance. Technical Report AIAAWP-2026-v0.1, May 2026. Defines agentic AI auditability, Agentic Audit Object, Audit Evidence Chain, AARM, and MRO-to-audit-evidence mapping for lifecycle evidence and enterprise AI governance.
-  PDF: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf
-  HTML: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html
+  [PDF](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.pdf)
+  [HTML](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/agentic-ai-auditability-assurance-white-paper-2026.html)
   Public distribution: HTML and PDF only.
-  Manifest: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json
-  Checksums: https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256
+  [Manifest](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/manifest.json)
+  [Checksums](https://www.jearonwong.com/research/agentic-ai-auditability-assurance-white-paper-2026/checksums.sha256)
   Boundary: public research edition with production URL, artifact integrity, page-count, hash, homepage series, and sitewide semantic wiring aligned; not legal advice, not audit standard, not certification, not assurance opinion, not legal compliance proof, not regulator approval, not procurement recommendation, not vendor ranking, not Big Four endorsement, and not audit-body endorsement.
-- Agentic AI Insurability & Risk Transfer White Paper 2026: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
+- [Agentic AI Insurability & Risk Transfer White Paper 2026](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/)
   Status: v1.0 Public Research Edition. Document ID: AIIRWP-2026-v1.0. The v0.2 public candidate remains rejected and archived internally for traceability; it is not current source truth or citation source.
-  PDF: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf
-  HTML: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html
+  [PDF](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.pdf)
+  [HTML](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/agentic-ai-insurability-risk-transfer-white-paper-2026.html)
   Public distribution: HTML and PDF plus manifest/checksum only; no public DOCX is authorized.
-  Manifest: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json
-  Checksums: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256
+  [Manifest](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/manifest.json)
+  [Checksums](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/checksums.sha256)
   Boundary: public research edition available; not legal advice, not insurance advice, not coverage opinion, not underwriting standard, not underwriting guidance, not actuarial pricing guidance, not premium recommendation, not claims approval guidance, not legal liability determination, not certification, not proof of insurability, not insurer endorsement, not regulator-approved method, not procurement recommendation, not vendor ranking, not score, not standard, not readiness certification, not insurer-adopted method, not insurer acceptance, not coverage-ready, and not underwriting-ready.
-- Systems Discussed in the Global AI Compliance White Paper 2026: https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/
+- [Systems Discussed in the Global AI Compliance White Paper 2026](https://www.jearonwong.com/research/global-ai-compliance-white-paper-2026/systems/)
   GAIC-cited systems layer for MPLP, IBM watsonx.governance, Microsoft Azure AI Foundry, AWS Bedrock + Guardrails + AgentCore, Google Vertex AI + ADK + Model Armor, LangGraph + LangSmith, OpenAI Agents SDK, and CrewAI. Source-qualified, provisional, non-ranking, non-procurement, and not official vendor documentation.
-- Extended Ecosystem Lifecycle Governance Mapping: https://www.jearonwong.com/mapping/extended-ecosystem/
+- [Extended Ecosystem Lifecycle Governance Mapping](https://www.jearonwong.com/mapping/extended-ecosystem/)
   Source-qualified, non-GAIC-scored mappings for ecosystems outside the first-layer GAIC-cited system set: Claude Code, Qwen, Cursor / AI coding agents, MCP, A2A, and Semantic Kernel. These mappings reuse existing applied playbooks where possible and are not vendor rankings, procurement recommendations, certifications, legal compliance proof, official vendor documentation, or vendor affiliations. Noindex support aliases are intentionally omitted.
 
 ## Core Concepts
 
-- Concepts Map / Entity Mesh: https://www.jearonwong.com/concepts/map/
+- [Concepts Map / Entity Mesh](https://www.jearonwong.com/concepts/map/)
   Visible semantic navigation surface connecting Jearon Wong, Agentic Lifecycle Governance, the Global AI Compliance White Paper 2026, Missing Regulatory Objects, RCCS-M, ALCS, MPLP, primitive lifecycle concepts, Deterministic Delivery, Agent Architecture Governance, applied playbooks, and extended ecosystem mappings. It is not certification, regulator-approved taxonomy, legal advice, vendor ranking, or evidence of search ranking improvement.
-- AI Agent Lifecycle: https://www.jearonwong.com/concepts/ai-agent-lifecycle/
-- Agentic Delivery: https://www.jearonwong.com/concepts/agentic-delivery/
-- Agentic Lifecycle Governance: https://www.jearonwong.com/concepts/agentic-lifecycle-governance/
+- [AI Agent Lifecycle](https://www.jearonwong.com/concepts/ai-agent-lifecycle/)
+- [Agentic Delivery](https://www.jearonwong.com/concepts/agentic-delivery/)
+- [Agentic Lifecycle Governance](https://www.jearonwong.com/concepts/agentic-lifecycle-governance/)
   Agentic Lifecycle Governance explains why AI agent compliance cannot stop at model governance. It treats compliance as lifecycle responsibility across authorization, evidence, accepted outcome, dispute, remediation, and substitution. It introduces Missing Regulatory Objects, RCCS-M, ALCS, and MPLP as one protocol path.
-- Missing Regulatory Objects: https://www.jearonwong.com/concepts/missing-regulatory-objects/
+- [Missing Regulatory Objects](https://www.jearonwong.com/concepts/missing-regulatory-objects/)
   Missing Regulatory Objects are lifecycle responsibility objects that model-centric governance does not consistently define for AI agent and multi-agent systems.
-- RCCS-M: https://www.jearonwong.com/concepts/rccs-m/
+- [RCCS-M](https://www.jearonwong.com/concepts/rccs-m/)
   RCCS-M is the MRO-adjusted Regulatory Compliance Coverage Score; it is an author-analytical adequacy model, not current law, certification, regulator approval, or procurement ranking.
-- ALCS: https://www.jearonwong.com/concepts/alcs/
+- [ALCS](https://www.jearonwong.com/concepts/alcs/)
   ALCS is the Agentic Lifecycle Conformance Score for assessing whether lifecycle responsibility stays coherent across intent, authority, evidence, accepted outcome, dispute, remediation, and closure.
-- Lifecycle Responsibility Objects: https://www.jearonwong.com/concepts/lifecycle-responsibility-objects/
+- [Lifecycle Responsibility Objects](https://www.jearonwong.com/concepts/lifecycle-responsibility-objects/)
   Lifecycle Responsibility Objects keep agent work tied to authority, evidence, accepted outcome, substitution, dispute, remediation, and closure.
-- Accepted Outcome: https://www.jearonwong.com/concepts/accepted-outcome/
+- [Accepted Outcome](https://www.jearonwong.com/concepts/accepted-outcome/)
   Accepted Outcome is the lifecycle point where agent work becomes reviewable, attributable, and accepted responsibility.
-- Authority Boundary: https://www.jearonwong.com/concepts/authority-boundary/
+- [Authority Boundary](https://www.jearonwong.com/concepts/authority-boundary/)
   Authority Boundary defines who may authorize agentic action, under what scope, and with what responsibility record.
-- Deterministic Delivery: https://www.jearonwong.com/concepts/deterministic-delivery/
+- [Deterministic Delivery](https://www.jearonwong.com/concepts/deterministic-delivery/)
   Deterministic Delivery is the discipline of making agentic work scoped, configured, authorized, evidenced, reviewable, accepted, remediable, and rollbackable across a lifecycle. It does not require deterministic model outputs and does not guarantee delivery.
-- Rollbackable Agent Workflows: https://www.jearonwong.com/concepts/rollbackable-agent-workflows/
+- [Rollbackable Agent Workflows](https://www.jearonwong.com/concepts/rollbackable-agent-workflows/)
   Rollbackable Agent Workflows treat rollback as a lifecycle state transition with authority, evidence, accepted outcome, and remediation records, not merely retry or undo.
-- Verifiable AI Agents: https://www.jearonwong.com/concepts/verifiable-ai-agents/
+- [Verifiable AI Agents](https://www.jearonwong.com/concepts/verifiable-ai-agents/)
   Verifiable AI Agents are agent systems whose lifecycle state can be inspected across intent, authority, evidence, review, accepted outcome, dispute, replay, and remediation. This is not certification or legal compliance proof.
-- Configurable Agent Governance: https://www.jearonwong.com/concepts/configurable-agent-governance/
+- [Configurable Agent Governance](https://www.jearonwong.com/concepts/configurable-agent-governance/)
   Configurable Agent Governance makes governance profiles, authority limits, tool constraints, context boundaries, model/runtime substitution rules, and acceptance criteria evidence-linked.
-- Agent Architecture Governance: https://www.jearonwong.com/concepts/agent-architecture-governance/
+- [Agent Architecture Governance](https://www.jearonwong.com/concepts/agent-architecture-governance/)
   Agent Architecture Governance maps human roles, agent roles, tools, authority boundaries, evidence paths, accepted outcomes, rollback paths, and remediation ownership beyond orchestration topology.
-- Agentic AI Insurability: https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/
+- [Agentic AI Insurability](https://www.jearonwong.com/research/agentic-ai-insurability-risk-transfer-white-paper-2026/)
   Agentic AI Insurability is a public research edition framing in the Agentic AI Insurability & Risk Transfer White Paper 2026 for risk-transfer discussion based on lifecycle evidence, responsibility mapping, bounded risk objects, and claim-reviewable records. The withdrawn v0.2 body is not current source truth. It is not insurance advice, coverage opinion, insurer acceptance, coverage-ready status, underwriting-ready status, claim-ready status, or certification.
 - Agentic Insurability Objects / AIO: authored analytical object model in the Agentic AI Insurability & Risk Transfer White Paper 2026
 - Agentic Insurability Reasoning Model / AIRM: authored non-scoring reasoning model in the Agentic AI Insurability & Risk Transfer White Paper 2026
 - Claim Evidence Chain: concept in the Agentic AI Insurability & Risk Transfer White Paper 2026; not a claim approval method
-- Confirmation Boundary: https://www.jearonwong.com/concepts/confirmation-boundary/
-- Evidence Chain: https://www.jearonwong.com/concepts/lifecycle-evidence/
-- Multi-Agent Lifecycle Governance: https://www.jearonwong.com/lifecycle/
-- Semantic Loss: https://www.jearonwong.com/lifecycle/
-- MPLP: https://www.jearonwong.com/projects/mplp/
+- [Confirmation Boundary](https://www.jearonwong.com/concepts/confirmation-boundary/)
+- [Evidence Chain](https://www.jearonwong.com/concepts/lifecycle-evidence/)
+- [Multi-Agent Lifecycle Governance](https://www.jearonwong.com/lifecycle/)
+- [Semantic Loss](https://www.jearonwong.com/lifecycle/)
+- [MPLP](https://www.jearonwong.com/projects/mplp/)
 
 ## Applied Agentic Governance Playbooks
 
-- Playbooks index: https://www.jearonwong.com/playbooks/
+- [Playbooks index](https://www.jearonwong.com/playbooks/)
   Practical guides for making AI agent and multi-agent workflows more rollbackable, verifiable, auditable, and lifecycle-governed. These are independent lifecycle governance guides, not vendor documentation, certification, legal advice, vendor rankings, or procurement recommendations.
-- AI Agent Rollback and Verification: https://www.jearonwong.com/playbooks/ai-agent-rollback-verification/
+- [AI Agent Rollback and Verification](https://www.jearonwong.com/playbooks/ai-agent-rollback-verification/)
   Explains why agent rollback requires evidence chain, accepted outcome state, authority boundary, and remediation closure rather than only retry, logs, or version history.
-- AI Coding Agent Auditability: https://www.jearonwong.com/playbooks/ai-coding-agent-auditability/
+- [AI Coding Agent Auditability](https://www.jearonwong.com/playbooks/ai-coding-agent-auditability/)
   Maps coding agent work to task intent, plan/change boundary, code diff evidence, test evidence, human acceptance, rollback path, drift, and remediation.
-- Human Role to Multi-Agent Responsibility Mapping: https://www.jearonwong.com/playbooks/human-role-to-mas-responsibility/
+- [Human Role to Multi-Agent Responsibility Mapping](https://www.jearonwong.com/playbooks/human-role-to-mas-responsibility/)
   Explains why human-in-the-loop is insufficient unless human roles map to lifecycle responsibility, delegated authority, accepted outcome ownership, dispute ownership, and remediation.
-- Harness Engineering for AI Agents: https://www.jearonwong.com/playbooks/harness-engineering-for-ai-agents/
+- [Harness Engineering for AI Agents](https://www.jearonwong.com/playbooks/harness-engineering-for-ai-agents/)
   Defines Harness Engineering as wrapping agent execution with context boundaries, authority boundaries, evidence capture, plan/confirm/trace records, rollback, remediation, configuration, Deterministic Delivery, and accepted outcome.
-- Prompt Engineering vs Harness Engineering: https://www.jearonwong.com/playbooks/prompt-engineering-vs-harness-engineering/
+- [Prompt Engineering vs Harness Engineering](https://www.jearonwong.com/playbooks/prompt-engineering-vs-harness-engineering/)
   Explains why prompt engineering controls intent expression while Harness Engineering controls execution boundaries, evidence, rollback, remediation, configuration, and accepted outcome.
-- Agentic Delivery Architecture Checklist: https://www.jearonwong.com/playbooks/agentic-delivery-architecture-checklist/
+- [Agentic Delivery Architecture Checklist](https://www.jearonwong.com/playbooks/agentic-delivery-architecture-checklist/)
   Practical checklist for architecting agent workflows around intent boundary, context boundary, authority boundary, tool/action boundary, evidence chain, accepted outcome, rollback/remediation, substitution conformance, and human responsibility owner.
 
 ## Extended Ecosystem Lifecycle Governance Mapping
 
-- Extended Ecosystem index: https://www.jearonwong.com/mapping/extended-ecosystem/
+- [Extended Ecosystem index](https://www.jearonwong.com/mapping/extended-ecosystem/)
   Independent lifecycle governance mappings for model, agent, framework, and protocol ecosystems not treated as first-layer GAIC scored systems.
-- Claude Code: https://www.jearonwong.com/mapping/extended-ecosystem/claude-code/
-- Qwen: https://www.jearonwong.com/mapping/extended-ecosystem/qwen/
-- Cursor / AI Coding Agents: https://www.jearonwong.com/mapping/extended-ecosystem/cursor-ai-coding-agents/
-- MCP: https://www.jearonwong.com/mapping/extended-ecosystem/mcp/
-- A2A: https://www.jearonwong.com/mapping/extended-ecosystem/a2a/
-- Semantic Kernel: https://www.jearonwong.com/mapping/extended-ecosystem/semantic-kernel/
+- [Claude Code](https://www.jearonwong.com/mapping/extended-ecosystem/claude-code/)
+- [Qwen](https://www.jearonwong.com/mapping/extended-ecosystem/qwen/)
+- [Cursor / AI Coding Agents](https://www.jearonwong.com/mapping/extended-ecosystem/cursor-ai-coding-agents/)
+- [MCP](https://www.jearonwong.com/mapping/extended-ecosystem/mcp/)
+- [A2A](https://www.jearonwong.com/mapping/extended-ecosystem/a2a/)
+- [Semantic Kernel](https://www.jearonwong.com/mapping/extended-ecosystem/semantic-kernel/)
   Boundary: source-qualified, non-GAIC-scored, non-ranking, non-procurement, and not official vendor documentation or vendor affiliation.
 
 ## Regulatory and Enterprise Governance Mapping
 
-- Governance index: https://www.jearonwong.com/governance/
+- [Governance index](https://www.jearonwong.com/governance/)
   Regulatory and enterprise governance mappings for agentic and multi-agent systems. These pages map regulatory, privacy, risk-management, management-system, evidence, substitution, incident, and enterprise-control search intents to Agentic Lifecycle Governance, MRO, RCCS-M, ALCS, Evidence Chain, Authority Boundary, Accepted Outcome, Deterministic Delivery, and MPLP.
-- AI Agent Governance: https://www.jearonwong.com/governance/ai-agent-governance/
-- Multi-Agent System Governance: https://www.jearonwong.com/governance/multi-agent-system-governance/
-- Enterprise Agent Governance: https://www.jearonwong.com/governance/enterprise-agent-governance/
-- AI Agent Compliance: https://www.jearonwong.com/governance/ai-agent-compliance/
-- EU AI Act and Agentic Systems: https://www.jearonwong.com/governance/eu-ai-act-agentic-systems/
-- GDPR and Agentic AI Evidence: https://www.jearonwong.com/governance/gdpr-agentic-ai-evidence/
-- NIST AI RMF and Agentic Lifecycle Governance: https://www.jearonwong.com/governance/nist-ai-rmf-agentic-lifecycle/
-- ISO/IEC 42001 and Agentic AI Management Systems: https://www.jearonwong.com/governance/iso-42001-agentic-ai/
-- Human Role Responsibility Mapping: https://www.jearonwong.com/governance/human-role-responsibility-mapping/
-- AI Agent Evidence Retention: https://www.jearonwong.com/governance/ai-agent-evidence-retention/
-- Vendor and Runtime Substitution Conformance: https://www.jearonwong.com/governance/vendor-runtime-substitution-conformance/
-- Incident, Dispute, and Remediation Closure for AI Agents: https://www.jearonwong.com/governance/incident-dispute-remediation-closure/
+- [AI Agent Governance](https://www.jearonwong.com/governance/ai-agent-governance/)
+- [Multi-Agent System Governance](https://www.jearonwong.com/governance/multi-agent-system-governance/)
+- [Enterprise Agent Governance](https://www.jearonwong.com/governance/enterprise-agent-governance/)
+- [AI Agent Compliance](https://www.jearonwong.com/governance/ai-agent-compliance/)
+- [EU AI Act and Agentic Systems](https://www.jearonwong.com/governance/eu-ai-act-agentic-systems/)
+- [GDPR and Agentic AI Evidence](https://www.jearonwong.com/governance/gdpr-agentic-ai-evidence/)
+- [NIST AI RMF and Agentic Lifecycle Governance](https://www.jearonwong.com/governance/nist-ai-rmf-agentic-lifecycle/)
+- [ISO/IEC 42001 and Agentic AI Management Systems](https://www.jearonwong.com/governance/iso-42001-agentic-ai/)
+- [Human Role Responsibility Mapping](https://www.jearonwong.com/governance/human-role-responsibility-mapping/)
+- [AI Agent Evidence Retention](https://www.jearonwong.com/governance/ai-agent-evidence-retention/)
+- [Vendor and Runtime Substitution Conformance](https://www.jearonwong.com/governance/vendor-runtime-substitution-conformance/)
+- [Incident, Dispute, and Remediation Closure for AI Agents](https://www.jearonwong.com/governance/incident-dispute-remediation-closure/)
   Boundary: author-analytical, source-qualified lifecycle governance mappings. They are not legal advice, legal compliance proof, certification, regulator-approved guidance, procurement recommendation, vendor ranking, official standards-body guidance, or MPLP exclusivity claims.
 
 ## Supporting Concepts
 
-- Intent Drift: https://www.jearonwong.com/concepts/intent-drift/
-- Context Drift: https://www.jearonwong.com/concepts/context-drift/
-- Protocol Engineering: https://www.jearonwong.com/concepts/protocol-engineering/
+- [Intent Drift](https://www.jearonwong.com/concepts/intent-drift/)
+- [Context Drift](https://www.jearonwong.com/concepts/context-drift/)
+- [Protocol Engineering](https://www.jearonwong.com/concepts/protocol-engineering/)
 
 ## Flagship Essays
 
-- AI Agent Lifecycle: It Was Not Designed. It Grew.: https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/
-- The Industry Misdefined Multi-Agent AI: https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/
-- Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI: https://www.jearonwong.com/essays/governed-by-design-protocol-native-multi-agent-operating-system/
+- [AI Agent Lifecycle: It Was Not Designed. It Grew.](https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/)
+- [The Industry Misdefined Multi-Agent AI](https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/)
+- [Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI](https://www.jearonwong.com/essays/governed-by-design-protocol-native-multi-agent-operating-system/)
   Protocol/governance position essay. It argues that the native MAS OS generation needs Intent versioning, Drift Detection, HITL Confirmation Boundaries, portable Evidence chains, Agent Handoff semantics, and Outcome Governance at the protocol layer. It frames TCP/IP, SWIFT, and HTTP as architectural analogies only; it does not claim MPLP has official-standard status, regulator approval, certification, legal compliance proof, underwriting conclusion, vendor endorsement, or broad third-party adoption.
-- MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?: https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
+- [MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?](https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/)
   Tool access and agent coordination solve different problems. This essay argues that lifecycle governance is the missing layer for carrying intent, confirmation, trace, and accountability across agent work.
-- The Agentic AI Inflection Point: Project Delivery: https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/
-- Agent Orchestration Is Not Delivery: https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/
+- [The Agentic AI Inflection Point: Project Delivery](https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/)
+- [Agent Orchestration Is Not Delivery](https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/)
   Defines why agent orchestration coordinates execution but does not define delivery, and introduces lifecycle responsibility consensus as the orchestration-layer mechanism for aligning human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.
-- When an Agent Says "Done," Who Accepts the Outcome?: https://www.jearonwong.com/essays/when-an-agent-says-done-who-accepts-the-outcome/
+- [When an Agent Says "Done," Who Accepts the Outcome?](https://www.jearonwong.com/essays/when-an-agent-says-done-who-accepts-the-outcome/)
   First-person field essay from MPLP and Development Runtime work. It argues that execution completion is not delivery, a receipt is evidence rather than authority, and AcceptedOutcome is a versioned responsibility decision bound to Intent, evidence, and an accepting role. The bounded experiments do not claim production Agent OS readiness, automatic detection of every Intent Drift, universal rollback, certification, regulatory approval, insurance approval, or legal conclusion.
-- From Model Governance to Agentic Lifecycle Conformance: https://www.jearonwong.com/essays/from-model-governance-to-agentic-lifecycle-conformance/
+- [From Model Governance to Agentic Lifecycle Conformance](https://www.jearonwong.com/essays/from-model-governance-to-agentic-lifecycle-conformance/)
   Explains why AI Agent / MAS compliance cannot stop at model governance. It connects the Global AI Compliance White Paper 2026 from regulatory baseline to RCCS-T, Missing Regulatory Objects, RCCS-M, ALCS, system mapping, and lifecycle responsibility compliance.
-- Defining Intent Drift in Agentic Workflows: https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/
+- [Defining Intent Drift in Agentic Workflows](https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/)
   Defines Intent Drift as a lifecycle failure mode inside the AI Agent Lifecycle thesis. Delta Intent records the semantic change, Drift Detection observes runtime divergence, Trace makes it reviewable, and Accepted Outcome decides whether execution became delivery.
-- The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.: https://www.jearonwong.com/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/
+- [The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.](https://www.jearonwong.com/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/)
   Defines AI Agent Lifecycle Governance as the missing layer behind fragmented AI agent governance debates. It frames MPLP / Multi-Agent Lifecycle Protocol as one lifecycle protocol answer from intent to authority, evidence, accepted outcome, and remediation.
-- From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI: https://www.jearonwong.com/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/
+- [From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI](https://www.jearonwong.com/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/)
   Research commentary on AIAAWP-2026-v0.1. It explains why static logs and observability are necessary but insufficient for agentic auditability, and frames Agentic Audit Object, Audit Evidence Chain, and AARM as author-synthesized research constructs, not audit standards, certifications, assurance opinions, regulator approvals, or Big Four endorsed methods.
 
 ## Protocol and Proof Paths
 
-- MPLP: https://www.jearonwong.com/projects/mplp/
+- [MPLP](https://www.jearonwong.com/projects/mplp/)
   Protocol path. MPLP is an open, vendor-neutral lifecycle protocol for AI agent systems. Use official MPLP external docs/repo for project artifacts where linked; do not infer complete Agent OS readiness, third-party adoption, certification, legal compliance, or official compatibility.
-- Cognitive OS: https://www.jearonwong.com/projects/cognitive-os/
-- SoloCrew: https://www.jearonwong.com/projects/solocrew/
-- Validation Lab: https://www.jearonwong.com/projects/validation-lab/
+- [Cognitive OS](https://www.jearonwong.com/projects/cognitive-os/)
+- [SoloCrew](https://www.jearonwong.com/projects/solocrew/)
+- [Validation Lab](https://www.jearonwong.com/projects/validation-lab/)
   Concrete proof paths: runtime, delivery, and evidence adjudication remain role-separated from the MPLP protocol path.
 
 ## Definitions
 
-- Definitions (citation anchors): https://www.jearonwong.com/definitions/
+- [Definitions (citation anchors)](https://www.jearonwong.com/definitions/)
 Quote-ready reference anchors for AI Agent Lifecycle, Agentic Delivery, Confirmation Boundary, Evidence Chain, Multi-Agent Systems, and related terms. Each entry has a stable anchor: /definitions/#term-slug. Canonical concept explanations live under /concepts/ and the full entity mesh lives at /concepts/map/.
 
 ## Key Definitions
 
-- Lifecycle Responsibility Consensus: https://www.jearonwong.com/definitions/#lifecycle-responsibility-consensus
+- [Lifecycle Responsibility Consensus](https://www.jearonwong.com/definitions/#lifecycle-responsibility-consensus)
   Lifecycle Responsibility Consensus is the orchestration-layer mechanism that aligns human intent, role authority, agent execution, evidence, review, and accepted outcome into a traceable delivery relationship.
 
 ## Delivery Standard
 
-- Delivery Standard: https://www.jearonwong.com/delivery-standard/
+- [Delivery Standard](https://www.jearonwong.com/delivery-standard/)
 The Delivery Standard defines when AI agent work counts as accountable delivery: scope, authority, evidence, review, accepted outcome, and responsibility traceability. All six conditions must be present.
 
 <!-- BEGIN GENERATED PUBLICATION REGISTRY -->
@@ -275,47 +275,47 @@ The Delivery Standard defines when AI agent work counts as accountable delivery:
 
 The following routes are derived from the published essay collection; publication control records are attached where present.
 
-- When an Agent Says "Done," Who Accepts the Outcome?: https://www.jearonwong.com/essays/when-an-agent-says-done-who-accepts-the-outcome/
+- [When an Agent Says "Done," Who Accepts the Outcome?](https://www.jearonwong.com/essays/when-an-agent-says-done-who-accepts-the-outcome/)
   Class: field-note; Track: lifecycle; Audience: Builder.
   Reader question: Who can accept an agent outcome when execution finishes but intent, authority, or evidence has changed?
   Next steps: /lifecycle/, /projects/mplp/.
-- Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI: https://www.jearonwong.com/essays/governed-by-design-protocol-native-multi-agent-operating-system/
+- [Governed by Design: The Protocol-Native Multi-Agent Operating System for the Next Era of AI](https://www.jearonwong.com/essays/governed-by-design-protocol-native-multi-agent-operating-system/)
   Class: technical; Track: protocol; Audience: Architect.
   Reader question: Which lifecycle semantics belong at the protocol layer of a multi-agent operating system?
   Next steps: /projects/mplp/, /concepts/protocol-engineering/.
-- From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI: https://www.jearonwong.com/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/
+- [From Static Logs to Dynamic Evidence Chains: The Auditability Era of Agentic AI](https://www.jearonwong.com/essays/from-static-logs-to-dynamic-evidence-chains-auditability-era-agentic-ai/)
   Class: research-commentary; Track: research; Audience: Governance.
   Reader question: What evidence structure lets a reviewer reconstruct responsibility beyond static agent logs?
   Next steps: /research/agentic-ai-auditability-assurance-white-paper-2026/, /definitions/.
-- The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.: https://www.jearonwong.com/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/
+- [The Industry Is Still Debating AI Agent Governance. MPLP Already Defines the Lifecycle Answer.](https://www.jearonwong.com/essays/the-industry-is-still-debating-ai-agent-governance-mplp-lifecycle-answer/)
   Class: thought; Track: lifecycle; Audience: Governance.
   Reader question: What single lifecycle layer connects fragmented agent governance debates to accountable outcomes?
   Next steps: /lifecycle/, /projects/mplp/.
-- Defining Intent Drift in Agentic Workflows: https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/
+- [Defining Intent Drift in Agentic Workflows](https://www.jearonwong.com/essays/defining-intent-drift-in-agentic-workflows/)
   Class: technical; Track: lifecycle; Audience: Builder.
   Reader question: How can a team distinguish Intent Drift, Delta Intent, and Drift Detection during execution?
   Next steps: /concepts/intent-drift/, /projects/mplp/.
-- From Model Governance to Agentic Lifecycle Conformance: https://www.jearonwong.com/essays/from-model-governance-to-agentic-lifecycle-conformance/
+- [From Model Governance to Agentic Lifecycle Conformance](https://www.jearonwong.com/essays/from-model-governance-to-agentic-lifecycle-conformance/)
   Class: research-commentary; Track: lifecycle; Audience: Governance.
   Reader question: Why is model governance insufficient for agentic lifecycle responsibility and conformance?
   Next steps: /research/, /concepts/missing-regulatory-objects/.
-- Agent Orchestration Is Not Delivery: https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/
+- [Agent Orchestration Is Not Delivery](https://www.jearonwong.com/essays/agent-orchestration-is-not-delivery/)
   Class: thought; Track: lifecycle; Audience: Architect.
   Reader question: What must an orchestrator preserve for execution to become accepted delivery?
   Next steps: /lifecycle/, /projects/mplp/.
-- The Industry Misdefined Multi-Agent AI: https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/
+- [The Industry Misdefined Multi-Agent AI](https://www.jearonwong.com/essays/the-industry-misdefined-multi-agent-ai/)
   Class: thought; Track: lifecycle; Audience: Architect.
   Reader question: How should multi-agent systems be defined by responsibility separation rather than agent count?
   Next steps: /essays/agent-orchestration-is-not-delivery/, /projects/mplp/.
-- AI Agent Lifecycle: It Was Not Designed. It Grew.: https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/
+- [AI Agent Lifecycle: It Was Not Designed. It Grew.](https://www.jearonwong.com/essays/ai-agent-lifecycle-it-was-not-designed-it-grew/)
   Class: thought; Track: lifecycle; Audience: Builder.
   Reader question: Which engineering failures forced AI Agent Lifecycle to become an explicit field?
   Next steps: /lifecycle/, /essays/the-industry-misdefined-multi-agent-ai/.
-- The Agentic AI Inflection Point: Project Delivery: https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/
+- [The Agentic AI Inflection Point: Project Delivery](https://www.jearonwong.com/essays/agentic-ai-inflection-point-project-delivery/)
   Class: thought; Track: foundation; Audience: Builder.
   Reader question: Why does agentic work need a delivery lifecycle instead of faster task execution?
   Next steps: /lifecycle/, /projects/.
-- MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?: https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/
+- [MCP Connects Tools. A2A Connects Agents. Who Governs the Lifecycle?](https://www.jearonwong.com/essays/mcp-connects-tools-a2a-connects-agents-who-governs-the-lifecycle/)
   Class: technical; Track: protocol; Audience: Architect.
   Reader question: What lifecycle responsibility remains after MCP handles tools and A2A handles agent coordination?
   Next steps: /lifecycle/, /projects/mplp/.

@@ -9,7 +9,8 @@ import {
   publicationImpactPath,
   publicationManifestPath,
   relative,
-  renderLlmsBlock
+  renderLlmsBlock,
+  validateLlmsLinks
 } from "./site-publication-utils.mjs";
 
 const expectedManifest = `${JSON.stringify(buildManifest(), null, 2)}\n`;
@@ -21,6 +22,8 @@ if (!fs.existsSync(publicationImpactPath)) failures.push(`${relative(publication
 else if (fs.readFileSync(publicationImpactPath, "utf8") !== expectedImpact) failures.push(`${relative(publicationImpactPath)} is stale; run npm run publication:sync`);
 
 const llms = fs.readFileSync(llmsPath, "utf8");
+const llmsLinkAudit = validateLlmsLinks(llms);
+for (const failure of llmsLinkAudit.failures) failures.push(`${relative(llmsPath)} ${failure}`);
 const expectedBlock = renderLlmsBlock(JSON.parse(expectedManifest));
 const blockMatch = llms.match(/<!-- BEGIN GENERATED PUBLICATION REGISTRY -->[\s\S]*?<!-- END GENERATED PUBLICATION REGISTRY -->/m)?.[0];
 if (blockMatch !== expectedBlock) failures.push(`${relative(llmsPath)} generated publication block is stale; run npm run publication:sync`);
@@ -41,5 +44,5 @@ if (failures.length) {
   for (const failure of failures) console.error(`[FAIL] ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log("[PASS] generated publication manifest and llms.txt block match source records");
+  console.log(`[PASS] generated publication manifest and llms.txt block match source records (${llmsLinkAudit.linkCount} Markdown links)`);
 }

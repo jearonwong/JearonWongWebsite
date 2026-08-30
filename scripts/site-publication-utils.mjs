@@ -293,13 +293,28 @@ export function buildEntityPublicationRegistry(manifest) {
 export function renderLlmsBlock(manifest) {
   const lines = [llmsStartMarker, "## Published Publication Registry (generated)", "", "The following routes are derived from the published essay collection; publication control records are attached where present.", ""];
   for (const record of manifest.records) {
-    lines.push(`- ${record.title}: https://www.jearonwong.com${record.route}`);
+    const canonicalUrl = `https://www.jearonwong.com${record.route}`;
+    lines.push(`- [${record.title}](${canonicalUrl})`);
     lines.push(`  Class: ${record.publicationClass}; Track: ${record.editorialTrack}; Audience: ${record.primaryAudience || "not specified"}.`);
     lines.push(`  Reader question: ${record.distinctReaderQuestion}`);
     lines.push(`  Next steps: ${record.nextSteps.join(", ")}.`);
   }
   lines.push("", llmsEndMarker);
   return lines.join("\n");
+}
+
+export function validateLlmsLinks(source) {
+  const markdownLinkPattern = /\[[^\]\n]+\]\((https?:\/\/[^)\s]+)\)/g;
+  const markdownLinks = [...source.matchAll(markdownLinkPattern)];
+  const withoutMarkdownLinks = source.replace(markdownLinkPattern, "");
+  const bareUrls = withoutMarkdownLinks.match(/https?:\/\/[^\s<>()]+/g) ?? [];
+  const failures = [];
+  if (!/^#\s+\S/m.test(source)) failures.push("must contain a level-one Markdown heading");
+  if (markdownLinks.length === 0) failures.push("must contain at least one absolute Markdown link");
+  if (bareUrls.length > 0) {
+    failures.push(`contains ${bareUrls.length} bare URL(s); wrap every absolute URL in Markdown link syntax`);
+  }
+  return { linkCount: markdownLinks.length, bareUrls, failures };
 }
 
 export function replaceManagedLlmsBlock(source, block) {

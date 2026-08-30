@@ -2,6 +2,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { validateLlmsLinks } from "./site-publication-utils.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -402,13 +403,23 @@ if (!exists(dist)) {
   const llms = path.join(root, "public", "llms.txt");
   if (exists(llms)) {
     const llmsText = read(llms);
+    const sourceLinkAudit = validateLlmsLinks(llmsText);
+    for (const failure of sourceLinkAudit.failures) fail(`public/llms.txt ${failure}`);
+    const builtLlms = path.join(dist, "llms.txt");
+    if (!exists(builtLlms)) {
+      fail("dist/llms.txt is missing from the built public surface");
+    } else {
+      const builtLinkAudit = validateLlmsLinks(read(builtLlms));
+      for (const failure of builtLinkAudit.failures) fail(`dist/llms.txt ${failure}`);
+      if (read(builtLlms) !== llmsText) fail("dist/llms.txt differs from public/llms.txt");
+    }
     for (const slug of canonicalEssaySlugs) {
       if (!llmsText.includes(`/essays/${slug}/`)) fail(`published essay missing from llms.txt: ${slug}`);
     }
     for (const slug of legacySlugs) {
       if (llmsText.includes(`/essays/${slug}/`)) fail(`legacy essay remains in llms.txt: ${slug}`);
     }
-    pass("llms legacy route drift checked");
+    pass(`llms Markdown-link and legacy-route contracts checked (${sourceLinkAudit.linkCount} links)`);
   }
 
   const evidencePage = path.join(dist, "evidence", "index.html");

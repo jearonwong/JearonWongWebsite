@@ -81,7 +81,7 @@ Every new article must satisfy:
 | OG/Twitter | Correct image, title, description, canonical URL |
 | RSS | Generated through content collection |
 | Sitemap | Generated through build |
-| `llms.txt` | Updated for flagship or governance-significant articles |
+| `llms.txt` | Updated for flagship or governance-significant articles; every absolute URL uses Markdown link syntax (`[label](https://...)`) so crawlers and answer engines can parse the public route graph |
 | Audit doc | Required for significant publication waves |
 
 If `/essays/` displays section headings but empty logs, the publication is blocked.
